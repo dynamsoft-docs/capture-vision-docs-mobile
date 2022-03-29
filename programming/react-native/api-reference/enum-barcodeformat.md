@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumBarcodeFormat of React-Native Dynamsoft Capture Vision
-description: EnumBarcodeFormat, the first group of barcode format enumeration
+description: The first group enumeration of the barcode formats
 keywords: Barcode format, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
