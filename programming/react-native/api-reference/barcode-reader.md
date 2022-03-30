@@ -23,7 +23,7 @@ breadcrumbText: Barcode Reader class
 | [`outputDBRRuntimeSettings`](#outputdbrruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`startBarcodeScanning`](#startbarcodescanning) | Start the barcode decoding thread. |
 | [`stopBarcodeScanning`](#stopbarcodescanning) | Stop the barcode decoding thread. |
-| [`addFrameListener`](#addframelistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
+| [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 
 ## initLicense
 
@@ -185,7 +185,7 @@ stopScanning(): Promise<void>
 await reader.stopBarcodeScanning();
 ```
 
-## addFrameListener
+## addResultListener
 
 Specifies an event handler that fires after the library finishes scanning a frame.
 
