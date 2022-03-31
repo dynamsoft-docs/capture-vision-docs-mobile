@@ -30,7 +30,7 @@ breadcrumbText: Barcode Reader class
 Initialize the license of Dynamsoft Capture Vision.
 
 ```js
-static initlicense(license: string): Promise<void>
+static initLicense(license: String): Promise<any>;
 ```
 
 **Parameters**
@@ -40,10 +40,11 @@ static initlicense(license: string): Promise<void>
 **Code Snippet**
 
 ```js
-try{
-  await reader.initLicense("Put-Your-License-Here");
-}catch(ex){
-  // If the license is not activated, throw an exception.
+try {
+  await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
+} catch (e) {
+  // Catch and log the error message when license activation is failed.
+  console.log(e + "License Verification message" + e.code)
 }
 ```
 
@@ -62,7 +63,7 @@ A barcode reader instance.
 **Code Snippet**
 
 ```js
-let reader = await DynamsoftBarcodeReader.createInstance();
+this.reader = await DynamsoftBarcodeReader.createInstance();
 ```
 
 ## getVersion
@@ -80,7 +81,7 @@ The Version of `DynamsoftBarcodeReader`.
 **Code Snippet**
 
 ```js
-let dbrVersion = await reader.getVersion();
+let dbrVersion = await this.reader.getVersion();
 ```
 
 ## getRuntimeSettings
@@ -88,7 +89,7 @@ let dbrVersion = await reader.getVersion();
 Get the current runtime settings of `DynamsoftBarcodeReader`.
 
 ```js
-getRuntimeSettings(): Promise<DBRRuntimeSettings
+getRuntimeSettings(): Promise<DBRRuntimeSettings>;
 ```
 
 **Return Value**
@@ -98,7 +99,7 @@ An object that stores the runtime settings.
 **Code Snippet**
 
 ```js
-let settings = await reader.getRuntimeSettings();
+let settings: DBRRuntimeSettings = await this.reader.getRuntimeSettings();
 ```
 
 ## updateRuntimeSettings
@@ -106,7 +107,7 @@ let settings = await reader.getRuntimeSettings();
 Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
 
 ```js
-updateRuntimeSettings(settings: RuntimeSettings | string | EnumPresetTemplate): Promise<void>
+updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTemplate | String): Promise<boolean>;
 ```
 
 **Parameters**
@@ -120,9 +121,10 @@ updateRuntimeSettings(settings: RuntimeSettings | string | EnumPresetTemplate): 
 **Code Snippet**
 
 ```js
-let settings = await reader.getRuntimeSettings();
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
-await reader.updateRuntimeSettings(settings);
+let settings: DBRRuntimeSettings = await this.reader.getRuntimeSettings();
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
+settings.expectedBarcodeCount = 1;
+await this.reader.updateRuntimeSettings(settings);
 ```
 
 ## resetRuntimeSettings
@@ -130,13 +132,13 @@ await reader.updateRuntimeSettings(settings);
 Reset the barcode decoding settings.
 
 ```js
-resetRuntimeSettings(): Promise<void>
+resetRuntimeSettings(): Promise<boolean>;
 ```
 
 **Code Snippet**
 
 ```js
-await reader.resetRuntimeSettings();
+await this.reader.resetRuntimeSettings();
 ```
 
 ## outputRuntimeSettingsToString
@@ -144,7 +146,7 @@ await reader.resetRuntimeSettings();
 Output the barcode decoding settings to string.
 
 ```js
-outputRuntimeSettingsToString(): Promise<string>
+outputRuntimeSettingsToString(): Promise<String>;
 ```
 
 **Return Value**
@@ -154,7 +156,7 @@ A string that stores the barcode decoding settings. The barcode settings string 
 **Code Snippet**
 
 ```js
-let settingString = await reader.outputRuntimeSettingsToString();
+let settingString = await this.reader.outputRuntimeSettingsToString();
 ```
 
 ## startScanning
@@ -168,7 +170,7 @@ startScanning(): Promise<void>
 **Code Snippet**
 
 ```js
-await reader.startScanning();
+await this.reader.startScanning();
 ```
 
 ## stopScanning
@@ -182,7 +184,7 @@ stopScanning(): Promise<void>
 **Code Snippet**
 
 ```js
-await reader.stopScanning();
+await this.reader.stopScanning();
 ```
 
 ## addResultListener
@@ -190,15 +192,20 @@ await reader.stopScanning();
 Specifies an event handler that fires after the library finishes scanning a frame.
 
 ```js
-
+addResultListener(listener: PropTypes.func): void;
 ```
 
 **Parameters**
 
-**Return Value**
+`listener`: The event listener that handles callback when barcode result is returned by the library.
 
 **Code Snippet**
 
 ```js
-
+this.reader.addResultListener((results: TextResult[]) => {
+  this.setState({results: results})
+  if (results && results.length > 0) {
+    console.log(results[0].barcodeText, results[0].localizationResult.angle, results.length)
+  }
+})
 ```
