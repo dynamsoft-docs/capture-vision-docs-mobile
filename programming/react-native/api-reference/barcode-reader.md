@@ -17,10 +17,10 @@ breadcrumbText: Barcode Reader class
  |
 | [`createInstance`](#createinstance) | Create a barcode reader instance. |
 | [`getVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
-| [`getDBRRuntimeSettings`](#getdbrruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
-| [`updateDBRRuntimeSettings`](#updatedbrruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a DBRRuntimeSettings struct or a template. |
-| [`resetDBRRuntimeSettings`](#resetdbrruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
-| [`outputDBRRuntimeSettings`](#outputdbrruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
+| [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
+| [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
+| [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
+| [`outputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`startBarcodeScanning`](#startbarcodescanning) | Start the barcode decoding thread. |
 | [`stopBarcodeScanning`](#stopbarcodescanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
@@ -83,7 +83,7 @@ The Version of `DynamsoftBarcodeReader`.
 let dbrVersion = await reader.getVersion();
 ```
 
-## getDBRRuntimeSettings
+## getRuntimeSettings
 
 Get the current runtime settings of `DynamsoftBarcodeReader`.
 
@@ -98,12 +98,12 @@ An object that stores the runtime settings.
 **Code Snippet**
 
 ```js
-let settings = await reader.getDBRRuntimeSettings();
+let settings = await reader.getRuntimeSettings();
 ```
 
-## updateDBRRuntimeSettings
+## updateRuntimeSettings
 
-Update the barcode decoding settings with a DBRRuntimeSettings struct or a template.
+Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
 
 ```js
 updateRuntimeSettings(settings: RuntimeSettings | string | EnumPresetTemplate): Promise<void>
@@ -120,12 +120,12 @@ updateRuntimeSettings(settings: RuntimeSettings | string | EnumPresetTemplate): 
 **Code Snippet**
 
 ```js
-let settings = await reader.getDBRRuntimeSettings();
+let settings = await reader.getRuntimeSettings();
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
-await reader.updateDBRRuntimeSettings(settings);
+await reader.updateRuntimeSettings(settings);
 ```
 
-## resetDBRRuntimeSettings
+## resetRuntimeSettings
 
 Reset the barcode decoding settings.
 
@@ -136,10 +136,10 @@ resetRuntimeSettings(): Promise<void>
 **Code Snippet**
 
 ```js
-await reader.resetDBRRuntimeSettings();
+await reader.resetRuntimeSettings();
 ```
 
-## outputDBRRuntimeSettings
+## outputRuntimeSettingsToString
 
 Output the barcode decoding settings to string.
 
@@ -149,15 +149,15 @@ outputRuntimeSettingsToString(): Promise<string>
 
 **Return Value**
 
-A string that stores the barcode decoding settings. The barcode settings string can be applied to debug on barcode decoding settings.
+A string that stores the barcode decoding settings. The barcode settings string can be applied to debug barcode decoding settings.
 
 **Code Snippet**
 
 ```js
-let settingString = await reader.outputDBRRuntimeSettings();
+let settingString = await reader.outputRuntimeSettingsToString();
 ```
 
-## startBarcodeScanning
+## startScanning
 
 Start the barcode decoding thread.
 
@@ -168,10 +168,10 @@ startScanning(): Promise<void>
 **Code Snippet**
 
 ```js
-await reader.startBarcodeScanning();
+await reader.startScanning();
 ```
 
-## stopBarcodeScanning
+## stopScanning
 
 Stop the barcode decoding thread.
 
@@ -182,7 +182,7 @@ stopScanning(): Promise<void>
 **Code Snippet**
 
 ```js
-await reader.stopBarcodeScanning();
+await reader.stopScanning();
 ```
 
 ## addResultListener

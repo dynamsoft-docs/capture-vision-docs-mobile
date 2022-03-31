@@ -34,11 +34,17 @@ breadcrumbText: Index
 | [`stopBarcodeScanning`](#stopbarcodescanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 
-## Inferfaces
+## Interfaces
 
-* [DBRRuntimeSettings](interface-dbr-runtimesettings.md)
-* [Region](interface-region.md)
-* [BarcodeResult](interface-barcoderesult.md)
-* [LocalizationResult](interface-localizationresult.md)
+| Interfaces | Description |
+| ---------- | ----------- |
+| [DBRRuntimeSettings](interface-dbr-runtimesettings.md) |  |
+| [BarcodeResult](interface-barcoderesult.md) |  |
+| [LocalizationResult](interface-localizationresult.md) |  |
+| [Region](interface-region.md) |  |
 
 ## Enumerations
+
+* [EnumBarcodeFormat](enum-barcodeformat.md)
+* [EnumBarcodeFormat_2](enum-barcodeformat2.md)
+* [EnumDBRPresetTemplate](enum-dbr-presettemplate.md)

@@ -10,3 +10,19 @@ breadcrumbText: Region
 ---
 
 # Region
+
+Interface `Region`.
+
+```js
+export interface Region {
+    regionBottom: number;
+    regionRight: number;
+    regionLeft: number;
+    regionTop: number;
+    regionMeasuredByPercentage: number | boolean;
+}
+```
+
+## Related APIs
+
+- [`DynamsoftCameraView.scanRegion`](camera-view.md#scanregion)
