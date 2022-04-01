@@ -202,10 +202,24 @@ addResultListener(listener: PropTypes.func): void;
 **Code Snippet**
 
 ```js
+state = {
+  results: null
+};
 this.reader.addResultListener((results: TextResult[]) => {
   this.setState({results: results})
-  if (results && results.length > 0) {
-    console.log(results[0].barcodeText, results[0].localizationResult.angle, results.length)
-  }
 })
+componentDidMount() {
+  (async () => {
+    try {
+      await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
+    } catch (e) {
+      console.log(e.code);
+    }
+    this.reader = await DynamsoftBarcodeReader.createInstance();
+    await this.reader.startScanning();
+    this.reader.addResultListener((results: TextResult[]) => {
+      this.setState({results: results});
+    });
+  })();
+}
 ```
