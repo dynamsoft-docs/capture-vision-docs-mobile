@@ -3,4 +3,5 @@ tree_file_list:
   - sidelist-introduction.html
   - sidelist-programming.html
   - sidelist-release-notes.html
+  - sidelist-license-activation.html
   - sidelist-programming/programming-react-native.html

@@ -44,7 +44,7 @@ try {
   await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
 } catch (e) {
   // Catch and log the error message when license activation is failed.
-  console.log(e + "License Verification message" + e.code)
+  console.log(e.code)
 }
 ```
 

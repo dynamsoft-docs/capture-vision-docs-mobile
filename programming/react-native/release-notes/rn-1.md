@@ -10,3 +10,9 @@ breadcrumbText: 1.x
 ---
 
 # Release Notes for React Native SDK - 1.x
+
+## 1.0.0 (04/01/2022)
+
+### HighLights
+
+{%- include release-notes/product-highlight-1.0.0.md -%}
