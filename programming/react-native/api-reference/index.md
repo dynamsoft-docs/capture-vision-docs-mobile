@@ -22,13 +22,15 @@ breadcrumbText: API Index
 
 | Interfaces | Description |
 | ---------- | ----------- |
-| [DBRRuntimeSettings](interface-dbr-runtime-settings.md) |  |
-| [BarcodeResult](interface-barcode-result.md) |  |
-| [BarcodeLocationResult](interface-barcode-location-result.md) |  |
-| [Region](interface-region.md) |  |
+| [DBRRuntimeSettings](interface-dbr-runtime-settings.md) | Interface of Barcode settings. |
+| [BarcodeResult](interface-barcode-result.md) | Interface of barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
+| [BarcodeLocationResult](interface-barcode-location-result.md) | The location result of the detected barcodes. |
+| [Region](interface-region.md) | The interface of region. Users can configure region of interest. |
 
 ## Enumerations
 
-* [EnumBarcodeFormat](enum-barcodeformat.md)
-* [EnumBarcodeFormat_2](enum-barcodeformat2.md)
-* [EnumDBRPresetTemplate](enum-dbr-presettemplate.md)
+| Interfaces | Description |
+| ---------- | ----------- |
+| [EnumBarcodeFormat](enum-barcodeformat.md) | The enumeration stores the first group of barcode formats. |
+| [EnumBarcodeFormat_2](enum-barcodeformat2.md) | The enumeration stores the second group of barcode formats. |
+| [EnumDBRPresetTemplate](enum-dbr-presettemplate.md) | The enumeration stores the preset barcode decoding templates. |
