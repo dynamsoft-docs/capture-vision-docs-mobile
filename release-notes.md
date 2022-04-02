@@ -17,7 +17,7 @@ breadcrumbText: Release Notes
 
 ### HighLights
 
-{%- include release-notes/product-highlight-2.1.0.md -%}
+{%- include release-notes/product-highlight-1.0.0.md -%}
 
 | Versions | Available Editions |
 | -------- | ------------------ |
