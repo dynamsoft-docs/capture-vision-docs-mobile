@@ -29,3 +29,10 @@ export interface BarcodeResult {
     barcodeLocation: BarcodeLocationResult;
 }
 ```
+
+## Related API(s)
+
+- [`DynamsoftBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
+- [Interfaces `BarcodeLocationResult`](interface-barcode-location-result.md)
+- [Interface `Quadrilateral`](interface-quadrilateral.md)
+- [Interface `Point`](interface-point.md)
