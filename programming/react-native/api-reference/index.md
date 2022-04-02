@@ -6,7 +6,7 @@ keywords: API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Index
+breadcrumbText: API Index
 ---
 
 # Dynamsoft

@@ -6,7 +6,7 @@ keywords: index, capture vision
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Index
+breadcrumbText: React Native Index
 ---
 
 # Documentation - React Native
