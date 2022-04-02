@@ -86,19 +86,8 @@
                 var curHref = window.location.href.toLowerCase()
                 $('.editionName').html('React-Native');
                 $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dcv/dcv-rn-1.0.0.zip?ver=latest');
-                $('.dceThanksDownloading').show();
+                $('.dcvThanksDownloading').show();
                 $('.downloadlink')[0].click();
-                // if (curHref.indexOf('/android/') > -1) {
-                //     $('.editionName').html('Android');
-                //     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-android-2.1.3.zip?ver=latest');
-                //     $('.dceThanksDownloading').show();
-                //     $('.downloadlink')[0].click();
-                // } else if (curHref.indexOf('/objectivec-swift/') > -1) {
-                //     $('.editionName').html('iOS');
-                //     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-ios-2.1.3.zip?ver=latest');
-                //     $('.dceThanksDownloading').show();
-                //     $('.downloadlink')[0].click();
-                // }
             }
 
             $('#txtSearch').keydown(function(e) { 

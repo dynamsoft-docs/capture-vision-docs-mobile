@@ -11,4 +11,9 @@ breadcrumbText: Introduction
 
 # Introduction
 
-This is an introduction.
+Dynamsoft Capture Vision is a combined package of the following Dynamsoft products:
+
+- Dynamsoft Barcode Reader
+- Dynamsoft Label Recognizer
+- Dynamsoft Document Normalizer
+- Dynamsoft Camera Enhancer
