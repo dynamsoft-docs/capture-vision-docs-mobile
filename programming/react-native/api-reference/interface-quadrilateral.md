@@ -24,6 +24,6 @@ export interface Quadrilateral {
 
 ## Related API(s)
 
-- [Interface `BarcodeResult`](interface-barcode-result.md)
-- [Interfaces `BarcodeLocationResult`](interface-barcode-location-result.md)
-- [Interface `Point`](interface-point.md)
+- [`Interface BarcodeResult`](interface-barcode-result.md)
+- [`Interfaces BarcodeLocationResult`](interface-barcode-location-result.md)
+- [`Interface Point`](interface-point.md)

@@ -27,6 +27,6 @@ export interface BarcodeLocationResult {
 //# sourceMappingURL=BarcodeLocationResult.d.ts.map
 ```
 
-- [Interfaces `BarcodeResult`](interface-barcode-result.md)
-- [Interface `Quadrilateral`](interface-quadrilateral.md)
-- [Interface `Point`](interface-point.md)
+- [`Interfaces BarcodeResult`](interface-barcode-result.md)
+- [`Interface Quadrilateral`](interface-quadrilateral.md)
+- [`Interface Point`](interface-point.md)

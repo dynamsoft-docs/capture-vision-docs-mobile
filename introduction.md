@@ -13,7 +13,6 @@ breadcrumbText: Introduction
 
 Dynamsoft Capture Vision combines the features of the following Dynamsoft products:
 
-- <a href = "" target="_blank">Dynamsoft Barcode Reader</a> for barcode decoding.
-- <a href = "" target="_blank">Dynamsoft Label Recognizer</a> for label recognizing.
-- <a href = "" target="_blank">Dynamsoft Document Normalizer</a> for document detection and normalization.
-- <a href = "" target="_blank">Dynamsoft Camera Enhancer</a> for delpoy camera module.
+- <a href = "https://www.dynamsoft.com/barcode-reader/overview/" target="_blank">Dynamsoft Barcode Reader</a> for barcode decoding.
+- <a href = "https://www.dynamsoft.com/label-recognition/overview/" target="_blank">Dynamsoft Label Recognizer</a> for label recognizing.
+- <a href = "https://www.dynamsoft.com/camera-enhancer/docs/" target="_blank">Dynamsoft Camera Enhancer</a> for delpoying camera module.

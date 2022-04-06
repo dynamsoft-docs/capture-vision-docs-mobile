@@ -50,7 +50,7 @@ render() {
 
 ## isScanRegionVisible
 
-A property that indicates whether the `scanRegion` is visible.
+A property that indicates whether the [`scanRegion`](#scanregion) is visible.
 
 ```js
 isScanRegionVisible: boolean;
@@ -58,7 +58,7 @@ isScanRegionVisible: boolean;
 
 **Code Snippet**
 
-View code snippet in the `scanRegion` section.
+View code snippet in the [`scanRegion`](#scanregion) section.
 
 ## isOverlayVisible
 
@@ -70,4 +70,4 @@ isOverlayVisible: boolean;
 
 **Code Snippet**
 
-View code snippet in the `scanRegion` section.
+View code snippet in the [`scanRegion`](#scanregion) section.

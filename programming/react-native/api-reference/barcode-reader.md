@@ -21,8 +21,8 @@ breadcrumbText: Barcode Reader class
 | [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
 | [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
 | [`outputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
-| [`startBarcodeScanning`](#startbarcodescanning) | Start the barcode decoding thread. |
-| [`stopBarcodeScanning`](#stopbarcodescanning) | Stop the barcode decoding thread. |
+| [`startScanning`](#startscanning) | Start the barcode decoding thread. |
+| [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 
 ## initLicense
@@ -30,7 +30,7 @@ breadcrumbText: Barcode Reader class
 Initialize the license of Dynamsoft Capture Vision.
 
 ```js
-static initLicense(license: String): Promise<any>;
+static initLicense(license: String): Promise<void>;
 ```
 
 **Parameters**
