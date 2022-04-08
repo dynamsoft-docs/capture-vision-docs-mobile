@@ -6,7 +6,7 @@ keywords:  Capture Vision, React Native, Release Notes
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-breadcrumbText: RN Release Notes
+breadcrumbText: Release Notes
 ---
 
 # Release Notes - React Native
