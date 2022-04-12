@@ -29,3 +29,9 @@ enum EnumBarcodeFormat_2 {
     BF_NULL = 0x00 // Disable all barcode formats in group 1.
 }
 ```
+
+## Related API(s)
+
+- [`DynamsoftBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
+- [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md)
+- [`EnumBarcodeFormat`](enum-barcode-format.md)

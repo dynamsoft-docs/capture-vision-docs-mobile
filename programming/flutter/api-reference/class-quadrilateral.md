@@ -22,6 +22,6 @@ class Quadrilateral {
 
 ## Related API(s)
 
-- [`Interface BarcodeResult`](interface-barcode-result.md)
-- [`Interfaces BarcodeLocationResult`](interface-barcode-location-result.md)
-- [`Interface Point`](interface-point.md)
+- [`Class BarcodeResult`](class-barcode-result.md)
+- [`Class BarcodeLocationResult`](class-barcode-location-result.md)
+- [`Class Point`](class-point.md)

@@ -92,7 +92,7 @@ Future<DBRRuntimeSettings> getRuntimeSettings()
 
 **Return Value**
 
-An object that stores the runtime settings.
+An object of [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) that stores the runtime settings.
 
 **Code Snippet**
 
@@ -108,7 +108,7 @@ try {
 
 ## updateRuntimeSettings
 
-Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
+Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct or a template.
 
 ```dart
 Future<void> updateRuntimeSettings({required DBRRuntimeSettings settings})
@@ -142,7 +142,7 @@ Future<void> updateRuntimeSettingsFromTemplate({required EnumDBRPresetTemplate t
 
 **Parameters**
 
-`template`: An enumeration member of EnumDBRPresetTemplate.
+`template`: An enumeration member of [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md).
 
 **Code Snippet**
 
@@ -260,9 +260,9 @@ Specifies an event handler that fires after the library finishes scanning a fram
 Stream<List<BarcodeResult>> addResultlistener()
 ```
 
-**Parameters**
+**Return Value**
 
-`listener`: The event listener that handles callback when barcode result is returned by the library.
+Stream that stores a list of [`BarcodeResult`](class-barcode-result.md)
 
 **Code Snippet**
 

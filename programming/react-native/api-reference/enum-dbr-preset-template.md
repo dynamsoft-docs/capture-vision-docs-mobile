@@ -24,3 +24,7 @@ enum EnumPresetTemplate{
     IMAGE_DEFAULT = 6 // The default image barcode decoding settings.
 }
 ```
+
+## Related API(s)
+
+- [`DynamsoftBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
