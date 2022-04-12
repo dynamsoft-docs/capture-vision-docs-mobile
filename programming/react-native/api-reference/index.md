@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: The index of React Native Dynamsoft Capture Vision API reference
+title: The index of React Native API reference
 description: This page is the index of React Native API reference
 keywords: API reference
 needAutoGenerateSidebar: true
@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: API Index
 ---
 
-# Dynamsoft
+# React Native API Reference
 
 ## Classes
 
@@ -25,6 +25,8 @@ breadcrumbText: API Index
 | [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) | Interface of Barcode settings. |
 | [`BarcodeResult`](interface-barcode-result.md) | Interface of barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
 | [`BarcodeLocationResult`](interface-barcode-location-result.md) | The location result of the detected barcodes. |
+| [`Quadrilateral`](class-quadrilateral.md) | The interface that stores the vertex coordinates of a quadrilateral.|
+| [`Point`](class-point.md) | The interface that stores the x and y coordinates of the point. |
 | [`Region`](interface-region.md) | The interface of region. Users can configure region of interest. |
 
 ## Enumerations

@@ -14,28 +14,18 @@ breadcrumbText: Region
 Interface `Region`.
 
 ```dart
-export interface Region {
-    /**
-     * The y coordinate of the Top border of the region.
-     */
-    regionTop: number;
-    /**
-     * The y coordinate of the Bottom border of the region.
-     */
-    regionBottom: number;
-    /**
-     * The x coordinate of the left border of the region.
-     */
-    regionLeft: number;
-    /**
-     * The x coordinate of the right border of the region.
-     */
-    regionRight: number;
-    /**
-     * If measured by percentage, the above values will be recognized as percentage (1 to 100).
-     * Otherwise, the above values will be recognized as pixel length.
-     */
-    regionMeasuredByPercentage: number | boolean;
+class Region extends Serializer {
+    /// The y coordinate of the Top border of the region.
+    final int regionTop;
+    /// The y coordinate of the Bottom border of the region.
+    final int regionBottom;
+    /// The x coordinate of the left border of the region.
+    final int regionLeft;
+    /// The x coordinate of the right border of the region.
+    final int regionRight;
+    /// If measured by percentage, the above values will be recognized as percentage (1 to 100).
+    /// Otherwise, the above values will be recognized as pixel length.
+    final bool regionMeasuredByPercentage;
 }
 ```
 

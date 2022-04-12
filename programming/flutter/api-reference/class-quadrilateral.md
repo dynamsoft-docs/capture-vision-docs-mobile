@@ -14,11 +14,9 @@ breadcrumbText: Quadrilateral
 Interface `Quadrilateral`.
 
 ```dart
-export interface Quadrilateral {
-    /**
-     * The vertex coordinates of the quadrilateral.
-     */
-    points: Point[];
+class Quadrilateral {
+    /// The vertex coordinates of the quadrilateral.
+    final List<Point> points;
 }
 ```
 
