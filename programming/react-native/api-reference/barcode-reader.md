@@ -192,7 +192,7 @@ await this.reader.stopScanning();
 Specifies an event handler that fires after the library finishes scanning a frame.
 
 ```js
-addResultListener(listener: PropTypes.func): void;
+addResultListener(listener: (results: TextResult[]) => void): void;
 ```
 
 **Parameters**
