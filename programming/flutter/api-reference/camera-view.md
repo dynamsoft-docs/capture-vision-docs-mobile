@@ -41,7 +41,8 @@ isScanRegionVisible(bool isVisible)
 
 ```dart
 _cameraView.isScanRegionVisible = true;
-``
+```
+
 ## isOverlayVisible
 
 A property that indicates whether the `overlays` are visible.
