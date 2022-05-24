@@ -40,7 +40,7 @@ The following attributes of the output image can be adjusted:
 - Contrast
 - Brightness
 
-In addition, the
+In addition, UI configuration APIs are available to
 
 ### Label Recognizing
 
