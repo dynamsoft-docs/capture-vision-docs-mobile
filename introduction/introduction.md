@@ -11,19 +11,27 @@ breadcrumbText: Introduction
 
 # Introduction to Dynamsoft Capture Vision
 
-Dynamsoft Capture Vision (DCV) is an SDK that integrates the key features of Dynamsoft Barcode Reader (DBR), Dynamsoft Label Recognizer (DLR) and Dynamsoft Document Normalizer (DDN) for cross-platform development.
+Dynamsoft Capture Vision (DCV) is an SDK designed for users to quickly embed barcode decoding, document scanning and label text recognizing features to a cross-platform application. A build-in camera view is available for users to capture and display the video streaming for image processing.
 
 ## Key Features
 
 ### Barcode Decoding
 
-- Supports all common barcode symbologies.
-- Quick access to basic barcode decoding settings.
-- Advanced parameter settings are available.
+DCV enables users to scan barcodes from static images or video streaming.
+
+#### High Coverage on Barcode Symbologies
+
+The supported barcode symbologies cover the majority of industries such as retail, commodity, drivers' license, etc.
+
+#### Performance
+
+- Speed: DCV is able to scan 500+ barcodes per minutes.
+- Read Rate: DCV can easily recognize the barcode even if they are curved, wrinkled, incompleted. The challenging environments like dark, shadowed or glaring can also be overcome.
+- Accuracy: The decoded barcode results are evaluated and filtered before output. Users can add additional filter conditions to make the output result even more accurate.
 
 ### Document Scanning
 
-<a href = "https://www.dynamsoft.com/label-recognition/overview/" target="_blank">`DynamsoftDocumentNormalizer`</a> is the library designed to detect quads such as document/table boundaries, etc. from images, and perform document normalization on the images in the detected quads. The detectable areas include but are not limited to:
+DCV can detect quad areas such as the boundaries of document pages and tables from images, and perform document normalization on the images in the detected quads. The detectable areas include but are not limited to:
 
 - Document pages
 - Tables
@@ -39,8 +47,6 @@ The following attributes of the output image can be adjusted:
 - Colour mode
 - Contrast
 - Brightness
-
-In addition, UI configuration APIs are available to
 
 ### Label Recognizing
 
