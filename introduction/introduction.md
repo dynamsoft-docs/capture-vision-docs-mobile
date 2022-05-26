@@ -50,7 +50,7 @@ The following attributes of the output image can be adjusted:
 
 ### Label Recognizing
 
-Powered by <a href = "https://www.dynamsoft.com/label-recognition/overview/" target="_blank">`DynamsoftLabelRecognizer`</a> algorithm, DCV is able to extract text areas from an image and recognize the extracted characters. Different from the traditional OCR, DLR algorithm is specified on the symbolized text areas such as:
+The label recognizing feature of DCV is designed to extract text areas from an image and recognize the extracted characters. Different from the traditional OCR, DLR algorithm is specified on the symbolized text areas such as:
 
 - Price tags
 - Inventory labels
@@ -63,11 +63,29 @@ Models, modes and templates are available to improve the recognition rate.
 
 ## SDK Modules
 
-| Module | Introduction |
-| ------ | ------------ |
-| `DynamsoftCameraView` | This module intergates the features of <a href = "https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">`DynamsoftCameraEnhancer`</a>. It helps you to quickly deploy a camera module for video capture. |
-| `DynamsoftBarcodeReader` | This module intergates the main features of <a href = "https://www.dynamsoft.com/barcode-reader/overview/" target="_blank">`DynamsoftBarcodeReader`</a>. You can use this module to read barcodes from image or video streaming. |
-| `DynamsoftLabelRecognizer` | This module intergates the main features of <a href = "https://www.dynamsoft.com/label-recognition/overview/" target="_blank">`DynamsoftLabelRecognizer`</a>. You can use this module to recognize text from labels. (Currently not supported) |
+### DynamsoftCameraView
+
+`DynamsoftCameraView` is the module that enable users to quickly deploy a camera view to capture and display the video streaming.
+
+### DynamsoftBarcodeReader
+
+`DynamsoftBarcodeReader` is the module that supports barcode decoding feature. Users can specify barcode formats, control the start/stop of the barcode decoding thread, obtain barcode decoding results or upload advanced parameter controls via the module.
+
+### DynamsoftDocumentNormalizer
+
+> Note:
+>
+> DynamsoftDocumentNormalizer module is not available in v1.0 release.
+
+`DynamsoftDocumentNormalizer` is the module that supports document scanning feature. The module includes the boundary detection algorithm and APIs that enable users to configure detection and normalization settings or upload advanced parameter settings.
+
+### DynamsoftLabelRecognizer
+
+> Note:
+>
+> DynamsoftLabelRecognizer module is not available in v1.0 release.
+
+`DynamsoftLabelRecognizer` is the module that supports the label text recognition feature. When working with `DynamsoftLabelRecognizer`, users can improve the performance on localizating the text area or recognizing text by switching the recognition modes, modules and templates.
 
 ## Programming
 
