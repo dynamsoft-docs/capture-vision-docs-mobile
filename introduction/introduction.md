@@ -92,29 +92,14 @@ Models, modes and templates are available to improve the recognition rate.
 
 ## SDK Modules
 
-### DynamsoftCameraView
-
-`DynamsoftCameraView` is the module that enable users to quickly deploy a camera view to capture and display the video streaming. Users can add basic UI elements on the view to improve the interactivity of the view.
-
-### DynamsoftBarcodeReader
-
-`DynamsoftBarcodeReader` is the module that supports barcode decoding feature. Users can specify barcode formats, control the start/stop of the barcode decoding thread, obtain barcode decoding results or upload advanced parameter controls via the module.
-
-### DynamsoftDocumentNormalizer
+- `DynamsoftCameraView`: The module that enable users to quickly deploy a camera view to capture and display the video streaming. Users can add basic UI elements on the view to improve the interactivity of the view.
+- `DynamsoftBarcodeReader`: The module that supports barcode decoding feature. Users can specify barcode formats, control the start/stop of the barcode decoding thread, obtain barcode decoding results or upload advanced parameter controls via the module.
+- `DynamsoftDocumentNormalizer`: The module that supports document scanning feature. The module includes the boundary detection algorithm and APIs that enable users to configure detection and normalization settings or upload advanced parameter settings.
+- `DynamsoftLabelRecognizer`: The module that supports the label text recognition feature. When working with `DynamsoftLabelRecognizer`, users can improve the performance on localizating the text area or recognizing text by switching the recognition modes, modules and templates.
 
 > Note:
 >
-> DynamsoftDocumentNormalizer module is not available in v1.0 release.
-
-`DynamsoftDocumentNormalizer` is the module that supports document scanning feature. The module includes the boundary detection algorithm and APIs that enable users to configure detection and normalization settings or upload advanced parameter settings.
-
-### DynamsoftLabelRecognizer
-
-> Note:
->
-> DynamsoftLabelRecognizer module is not available in v1.0 release.
-
-`DynamsoftLabelRecognizer` is the module that supports the label text recognition feature. When working with `DynamsoftLabelRecognizer`, users can improve the performance on localizating the text area or recognizing text by switching the recognition modes, modules and templates.
+> `DynamsoftDocumentNormalizer` and `DynamsoftLabelRecognizer` are not available in 1.0 version.
 
 ## Scenarios
 
