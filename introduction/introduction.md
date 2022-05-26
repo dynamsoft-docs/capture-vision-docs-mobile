@@ -94,7 +94,7 @@ Models, modes and templates are available to improve the recognition rate.
 
 ### DynamsoftCameraView
 
-`DynamsoftCameraView` is the module that enable users to quickly deploy a camera view to capture and display the video streaming.
+`DynamsoftCameraView` is the module that enable users to quickly deploy a camera view to capture and display the video streaming. Users can add basic UI elements on the view to improve the interactivity of the view.
 
 ### DynamsoftBarcodeReader
 
