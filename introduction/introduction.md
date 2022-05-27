@@ -53,6 +53,7 @@ When work with DCV, there are some build-in UI elements can help users to improv
    <p>Highlight Barcodes</p>
 </div>
 
+<!--
 ### Document Scanning
 
 DCV can detect quad areas such as the boundaries of document pages and tables from images, and perform document normalization on the images in the detected quads. The detectable areas include but are not limited to:
@@ -89,17 +90,21 @@ The label recognizing feature of DCV is designed to extract text areas from an i
 - ID cards
 
 Models, modes and templates are available to improve the recognition rate.
+-->
 
 ## SDK Modules
 
 - `DynamsoftCameraView`: The module that enable users to quickly deploy a camera view to capture and display the video streaming. Users can add basic UI elements on the view to improve the interactivity of the view.
 - `DynamsoftBarcodeReader`: The module that supports barcode decoding feature. Users can specify barcode formats, control the start/stop of the barcode decoding thread, obtain barcode decoding results or upload advanced parameter controls via the module.
+
+<!--
 - `DynamsoftDocumentNormalizer`: The module that supports document scanning feature. The module includes the boundary detection algorithm and APIs that enable users to configure detection and normalization settings or upload advanced parameter settings.
 - `DynamsoftLabelRecognizer`: The module that supports the label text recognition feature. When working with this module, users can improve the performance on localizating the text area or recognizing text by switching the recognition modes, modules and templates.
 
 > Note:
 >
 > `DynamsoftDocumentNormalizer` and `DynamsoftLabelRecognizer` are not available in 1.0 version.
+-->
 
 ## Scenarios
 
@@ -113,8 +118,7 @@ The following feature of DCV can be applied to retail scenarios:
 
 ### Driver's License Recognition
 
-- If there is a barcode on the Driver's license, DCV can recognize and parse the driver's info via the barcode decode result.
-- For the driver's licenses without barcodes, DCV can locate, recognize and extract the driver's info directly from the text info.
+PDF417 symbology is used for storing personal information on US driver licenses. It comprises critical information about the cardholder, such as their name, gender, date of birth, height, etc. With the help of DCV barcode decoding feature, user can easily capture, recognize and parse the driver's information from the PDF417 barcode on mobile devices.
 
 ### VIN Scanning
 
