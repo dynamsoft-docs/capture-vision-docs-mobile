@@ -17,7 +17,7 @@ Dynamsoft Capture Vision (DCV) is an SDK designed for users to quickly embed bar
 
 ### Barcode Decoding
 
-DCV barcode reading feature enables users to scan barcodes from static images or video streaming.
+The barcode decoding feature of DCV is designed to be excellent on the performance and user-friendly on development. When working with DCV, users can easily deploy image or video barcode decoding functionality in cross-platform applications. Various processing parameters enable users to adjust performance on different usage scenarios. The following paragraphs will provide a brief overview on the barcode decoding feature.
 
 #### Supported Barcode Symbologies
 
@@ -120,7 +120,7 @@ The following feature of DCV can be applied to retail scenarios:
 
 DCV provides multiple solutions on recognizing Vehicle Identification Numbers (VINs). Generally when the VIN is accompanied with a barcode, barcode decoding feature is the highest solution on collecting the VIN data. When the VIN barcode is not available, user can still use the label recognition module to obtain the vehicle information.
 
-## Programming
+## Supported Platforms
 
 | Language | Platform |
 | -------- | -------- |
