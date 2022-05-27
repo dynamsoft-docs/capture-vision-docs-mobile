@@ -110,19 +110,15 @@ Models, modes and templates are available to improve the recognition rate.
 
 ### Retail
 
-The following feature of DCV can be applied to retail scenarios:
-
-- Detect the labels on the commodities
-- Quickly scan the barcodes on the labels
-- Extract and parse the main content of the labels
+The supported barcode symbologies of DCV covers nearly all the barcodes that are used in retail industry. Powered with a robust barcode decoding algorithm, DCV users will experience a high efficiency barcode scanning when processing the retail barcodes.
 
 ### Driver's License Recognition
 
 PDF417 symbology is used for storing personal information on US driver licenses. It comprises critical information about the cardholder, such as their name, gender, date of birth, height, etc. With the help of DCV barcode decoding feature, user can easily capture, recognize and parse the driver's information from the PDF417 barcode on mobile devices.
 
-### VIN Scanning
+### Tough Barcodes
 
-DCV provides multiple solutions on recognizing Vehicle Identification Numbers (VINs). Generally when the VIN is accompanied with a barcode, barcode decoding feature is the highest solution on collecting the VIN data. When the VIN barcode is not available, user can still use the label recognition module to obtain the vehicle information.
+Various of advanced parameters are available for users to customize the barcode decoding process. With these customizations, DCV will tries it best to optimize the image information so that the barcodes can finally be localized and decoded even if they are damaged, wrinkled or incompleted.
 
 ## Supported Platforms
 
