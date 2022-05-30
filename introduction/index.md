@@ -11,7 +11,7 @@ breadcrumbText: Introduction
 
 # Introduction to Dynamsoft Capture Vision
 
-Dynamsoft Capture Vision (DCV) is an SDK designed for users to quickly embed barcode decoding, document scanning and label text recognizing features to a cross-platform application. A build-in camera view is available for users to capture and display the video streaming for image processing.
+Dynamsoft Capture Vision (DCV) is an SDK designed for users to quickly embed data capture features like barcode decoding to a cross-platform application. A build-in camera view is available for users to capture and display the video streaming for data capturing.
 
 ## Key Features
 
