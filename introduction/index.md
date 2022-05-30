@@ -11,7 +11,7 @@ breadcrumbText: Introduction
 
 # Introduction to Dynamsoft Capture Vision
 
-Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific functional products, which cover object capturing, content understanding, interactive viewing. (1) To capture documents and labels, Dynamsoft Web Twain (DWT) and Dynamsoft Camera Enchancer (DCE) are to get images from scanners and cameras respectively. (2) To understand the content, Dynamsoft Barcode Reader (DBR), Dynamsoft Document Normalizaer (DDN) and Dynamsoft Label Recognizer (DLR) are to read barcodes, structures and texts. (3) To view, edit and output the result of last steps, DWT and DCE provide some basic viewing and editing functions. An advanced viewer is on the way. DCV is in the progress to mount the funciontal products. At present, DCV 1.0 includes DDN and DCE.
+Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific functional products, which cover object capturing, content understanding, interactive viewing. (1) To capture documents and labels, Dynamsoft Web Twain (DWT) and Dynamsoft Camera Enchancer (DCE) are to get images from scanners and cameras respectively. (2) To understand the content, Dynamsoft Barcode Reader (DBR), Dynamsoft Document Normalizaer (DDN) and Dynamsoft Label Recognizer (DLR) are to read barcodes, structures and texts. (3) To view, edit and output the result of last steps, DWT and DCE provide some basic viewing and editing functions. An advanced viewer is on the way. DCV is in the progress to mount the funciontal products. At present, DCV 1.0 includes DBR and DCE.
 
 ## Key Features
 
