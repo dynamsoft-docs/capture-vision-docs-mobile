@@ -43,6 +43,7 @@ jobs:
         run: |
           cd /home/ubuntu
           [ -d DCVDocPreview ] && rm -rf DCVDocPreview
+          [ -d capture-vision-docs-mobile-preview ] && rm -rf capture-vision-docs-mobile-preview
           [ ! -d DCVDocPreview ] && mkdir -p DCVDocPreview
           cd capture-vision-docs-mobile-preview && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile-preview/* ./DCVDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDocPreview/
