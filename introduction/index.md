@@ -19,7 +19,7 @@ Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific fun
 
 The barcode decoding feature of DCV is powered by Dynamsoft Barcode Reader (DBR). DBR is a robust SDK that enable users to quickly deploy barcode scanning functionality on all common barcodes such as 1D, QR, PDF417, etc. When working on the barcode scanning, there are various processing parameters available for users to adjust performance on different usage scenarios.
 
-- <a href="https://www.dynamsoft.com/barcode-reader/introduction/?ver=latest" target="_blank">Read More about Dynamsoft Barcode Reader.</a>
+<a href="https://www.dynamsoft.com/barcode-reader/introduction/?ver=latest" target="_blank">Read More about Dynamsoft Barcode Reader.</a>
 
 ### Dynamsoft Camera Enhancer
 
@@ -33,6 +33,8 @@ Dynamsoft Camera Enhancer is an SDK that includes camera control, camera enhance
    <p><img src="assets/highlight-barcode.gif" alt="barcode" width="25%" /></p>
    <p>Highlight Barcodes</p>
 </div>
+
+<a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">Read More about Dynamsoft Camera Enhancer.</a>
 
 ## SDK Modules
 
