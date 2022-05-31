@@ -42,7 +42,7 @@ The functional products are re-encapsulated and presented as the components of D
 
 ### DynamsoftCameraView
 
-`DynamsoftCameraView` is the UI component, which includes the full feature of DCE. When using the DCE-powered camera view, users can add the following configurations to the view:
+`DynamsoftCameraView` is the UI component that includes the full feature of DCE. When using the DCE-powered camera view, users can add the following configurations to the view:
 
 - Control the camera (open/close).
 - Change the Basic properties of the camera such as resolution, focus points.
@@ -52,7 +52,7 @@ The functional products are re-encapsulated and presented as the components of D
 
 ### DynamsoftBarcodeReader
 
-The module that supports barcode decoding feature. Working with this module, users can:
+`DynamsoftBarcodeReader` is the module that included the full feature of DBR. It powers the barcode decoding feature of DCV. When working with this module, users can:
 
 - Specify barcode format.
 - Change basic barcode decoding settings.
