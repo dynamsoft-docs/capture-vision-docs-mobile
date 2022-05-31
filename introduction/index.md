@@ -38,7 +38,7 @@ Dynamsoft Camera Enhancer (DCE) is an SDK that includes camera control, camera e
 
 ## SDK Components
 
-The functional products are re-encapsulation and presented as the components of DCV.
+The functional products are re-encapsulated and presented as the components of DCV.
 
 ### DynamsoftCameraView
 
