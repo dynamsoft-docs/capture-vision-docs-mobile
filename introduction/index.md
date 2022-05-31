@@ -46,6 +46,7 @@ The functional products are re-encapsulation and presented as the components of 
 
 - Control the camera (open/close).
 - Change the Basic properties of the camera such as resolution, focus points.
+- Enable or disable the enhanced features such as frame sharpness filter, sensor filter, fast mode, etc.
 - Set a scan region that determines the region of interest.
 - Add graphic elements on the UI view to enhance the interaction. For example, highlight the barcode or detected quad areas.
 
