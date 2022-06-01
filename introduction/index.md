@@ -62,7 +62,7 @@ The functional products are re-encapsulated and presented as the components of D
 
 ### Intergrate Multiple Features
 
-When extracting the content, the result or intermediate result of one Dynamsoft product might benefits the processing of another product. For example:
+When processing an image and reading its content, the result or intermediate result of one Dynamsoft product might benefits the processing of another product. For example:
 
 - The localization result of a barcode can support the localization of label text.
 - Quad detection result produced by DDN might help the localization of label text.
