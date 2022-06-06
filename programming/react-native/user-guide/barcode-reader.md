@@ -11,9 +11,62 @@ breadcrumbText: Guide of Barcode Reader
 
 # Getting Started with Barcode Reader
 
-On this page you will learn how to create a helloWorld react native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
+## Requirements
 
-## Initialize Project and Include the Library
+### React-native
+
+- Supported Version: 0.60 or higher
+
+### Android
+
+- Supported OS: <a href="https://developer.android.com/about/versions/lollipop" target="_blank">Android 5.0 (API Level 21)</a> or higher.
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+
+### iOS
+
+- Supported OS: **iOS 9.0** or higher.
+- Supported ABI: **arm64** and **x86_64**.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
+
+## Installation
+
+### Add the SDK
+
+Run this command:
+
+```bash
+yarn add dynamsoft-capture-vision-react-native@1.0.0
+```
+
+This will add a line to `dependencies` in your package.json file:
+
+```json
+"dependencies": {
+    "dynamsoft-capture-vision-react-native": "1.0.0"
+}
+```
+
+### Import the SDK
+
+Now in your JavaScript code, you can use:
+
+```js
+import {
+    DynamsoftBarcodeReader,
+    DynamsoftCameraView,
+    BarcodeResult,
+    EnumDBRPresetTemplate,
+    EnumBarcodeFormat,
+    DBRRuntimeSettings
+} from 'dynamsoft-capture-vision-react-native';
+```
+
+## Build your Barcode Scanner App
+
+On this page you will learn how to create a HelloWorld react native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
+
+### Initialize Project and Include the Library
 
 1. Create a new React Native project
 
@@ -26,7 +79,7 @@ On this page you will learn how to create a helloWorld react native barcode scan
     ```json
     "dependencies": {
         "react": "17.0.2",
-        "react-native": "0.61.5",
+        "react-native": "0.65.0",
         "dynamsoft-capture-vision-react-native": "^1.0.0"
     }
     ```
@@ -45,9 +98,9 @@ On this page you will learn how to create a helloWorld react native barcode scan
 
 Now Dynamsoft Capture Vision is added to your project.
 
-## Add Configurations for Barcode Decoding
+### Add Configurations for Barcode Decoding
 
-1. In `App.js` include the following libaries:
+1. In `App.js` include the following libraries:
 
     ```js
     import React from 'react';
@@ -110,7 +163,7 @@ Now Dynamsoft Capture Vision is added to your project.
     }
     ```
 
-5. Render the `DynamsoftCameraView` componment.
+5. Render the `DynamsoftCameraView` component.
 
     ```js
     render() {
@@ -144,7 +197,11 @@ Now Dynamsoft Capture Vision is added to your project.
     }
     ```
 
-## Run the Project
+### Configure Camera Permissions
+
+You need to set the "Privacy - Camera Usage Description" field in the Info.plist file for iOS.
+
+### Run the Project
 
 <div class="sample-code-prefix"></div>
 >- Run Android on Windows
