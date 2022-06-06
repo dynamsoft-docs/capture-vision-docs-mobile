@@ -1,4 +1,4 @@
-repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-mobile
+repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-mobile/blob/main
 repository: dynamsoft-docs/capture-vision-docs-mobile
 docFullPath: https://www.dynamsoft.com/capture-vision/docs
 firstLevelUrl: /capture-vision/docs
@@ -10,6 +10,8 @@ productName: Dynamsoft Capture Vision
 programming: /capture-vision/docs/programming/
 
 license: /capture-vision/docs/license/
+
+introduction: /capture-vision/docs/introduction/
 
 react-native: /capture-vision/docs/programming/react-native/
 rn-api: /capture-vision/docs/programming/react-native/api-reference/
