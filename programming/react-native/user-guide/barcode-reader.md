@@ -203,28 +203,34 @@ You need to set the "Privacy - Camera Usage Description" field in the Info.plist
 
 ### Run the Project
 
-<div class="sample-code-prefix"></div>
->- Run Android on Windows
->- Run iOS on macOS
->
->1. 
+#### Run Android on Windows
+
 In the commend lines, go to your project folder and run the following commend:
+
 ```bash
 npx react-native run-android
 ```
-2. 
+
+#### Run iOS on macOS
+
 In the commend lines, go to the iOS folder in your project:
+
 ```bash
 cd ios
 ```
+
 Use pod install to include the libaries:
+
 ```bash
 pod install
 ```
+
 Go back to the project folder and run the project:
+
 ```bash
 cd ..
 ```
+
 ```bash
 npx react-native run-ios
 ```
