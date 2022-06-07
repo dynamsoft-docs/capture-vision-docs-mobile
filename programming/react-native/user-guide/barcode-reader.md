@@ -13,7 +13,7 @@ breadcrumbText: Guide of Barcode Reader
 
 ## Requirements
 
-### React-native
+### React Native
 
 - Supported Version: 0.60 or higher
 
@@ -21,13 +21,13 @@ breadcrumbText: Guide of Barcode Reader
 
 - Supported OS: <a href="https://developer.android.com/about/versions/lollipop" target="_blank">Android 5.0 (API Level 21)</a> or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommanded).
 
 ### iOS
 
-- Supported OS: **iOS 9.0** or higher.
+- Supported OS: **iOS 10.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommanded).
 
 ## Installation
 
@@ -62,7 +62,7 @@ import {
 } from 'dynamsoft-capture-vision-react-native';
 ```
 
-## Build your Barcode Scanner App
+## Build Your Barcode Scanner App
 
 On this page you will learn how to create a HelloWorld react native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
 
@@ -205,7 +205,7 @@ You need to set the "Privacy - Camera Usage Description" field in the Info.plist
 
 #### Run Android on Windows
 
-In the commend lines, go to your project folder and run the following commend:
+In the command lines, go to your project folder and run the following command:
 
 ```bash
 npx react-native run-android
@@ -213,13 +213,13 @@ npx react-native run-android
 
 #### Run iOS on macOS
 
-In the commend lines, go to the iOS folder in your project:
+In the command lines, go to the iOS folder in your project:
 
 ```bash
 cd ios
 ```
 
-Use pod install to include the libaries:
+Use pod install to include the libraries:
 
 ```bash
 pod install
