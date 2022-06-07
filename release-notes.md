@@ -21,4 +21,4 @@ breadcrumbText: Release Notes
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 1.0.0 | [React-Native]({{site.react-native}}release-notes/rn-1.md#100-04012022) |
+| 1.0.0 | [React-Native]({{site.rn-release-notes}}rn-1.html#100-04012022) |
