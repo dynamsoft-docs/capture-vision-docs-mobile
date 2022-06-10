@@ -21,13 +21,13 @@ breadcrumbText: Guide of Barcode Reader
 
 - Supported OS: <a href="https://developer.android.com/about/versions/lollipop" target="_blank">Android 5.0 (API Level 21)</a> or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommanded).
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
 ### iOS
 
 - Supported OS: **iOS 10.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommanded).
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
 ## Installation
 
@@ -64,7 +64,7 @@ import {
 
 ## Build Your Barcode Scanner App
 
-On this page you will learn how to create a HelloWorld react native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
+On this page you will learn how to create a HelloWorld React Native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
 
 ### Initialize Project and Include the Library
 

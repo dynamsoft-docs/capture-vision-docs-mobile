@@ -11,17 +11,17 @@ breadcrumbText: Introduction
 
 # Introduction to Dynamsoft Capture Vision
 
-Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific functional products, which cover object capturing, content understanding, interactive viewing.
+Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific functional products, which cover object capturing, content understanding, and interactive viewing.
 
-1. To capture documents and labels, Dynamsoft Web TWAIN (DWT) and Dynamsoft Camera Enchancer (DCE) are to get images from scanners and cameras respectively.
-2. To understand the content, Dynamsoft Barcode Reader (DBR), Dynamsoft Document Normalizaer (DDN) and Dynamsoft Label Recognizer (DLR) are to read barcodes, structures and texts.
-3. To view, edit and output the result of last steps, DWT and DCE provide some basic viewing and editing functions. An advanced viewer is on the way. DCV is in the progress to mount the funciontal products. At present, DCV 1.0 includes DBR and DCE.
+1. To capture documents and labels, Dynamsoft Web TWAIN (DWT) and Dynamsoft Camera Enhancer (DCE) are to get images from scanners and cameras respectively.
+2. To understand the content, Dynamsoft Barcode Reader (DBR), Dynamsoft Document Normalizer (DDN) and Dynamsoft Label Recognizer (DLR) are to read barcodes, structures and texts.
+3. To view, edit and output the result of the last steps, DWT and DCE provide some basic viewing and editing functions. An advanced viewer is on the way. DCV is in the progress to mount the functional products. At present, DCV 1.0 includes DBR and DCE.
 
 ## Functional Products
 
 ### Dynamsoft Barcode Reader
 
-The barcode decoding feature of DCV is powered by Dynamsoft Barcode Reader (DBR). DBR is a robust SDK that enable users to quickly deploy barcode scanning functionality on all common barcodes such as 1D, QR, PDF417, etc. When working on the barcode scanning, there are various processing parameters available for users to adjust performance on different usage scenarios.
+The barcode decoding feature of DCV is powered by Dynamsoft Barcode Reader (DBR). DBR is a robust SDK that enables users to quickly deploy barcode scanning functionality on all common barcodes such as 1D, QR, PDF417, etc. When working on the barcode scanning, there are various processing parameters available for users to adjust performance in different usage scenarios.
 
 <a href="https://www.dynamsoft.com/barcode-reader/introduction/?ver=latest" target="_blank">Read More about Dynamsoft Barcode Reader.</a>
 
@@ -29,7 +29,7 @@ The barcode decoding feature of DCV is powered by Dynamsoft Barcode Reader (DBR)
 
 Dynamsoft Camera Enhancer (DCE) is an SDK that includes camera control, camera enhancements and basic UI configuration features.
 
-- Camera Control: The camera control features includes the selection of camera, open/close camera, change the resolution, etc.
+- Camera Control: The camera control features include the selection of the camera, open/close the camera, changing the resolution, etc.
 - Camera Enhancements: Advanced features like sharpness filter, sensor filter, enhanced focus, etc. They either improve the quality of camera output or promote the interaction.
 - UI Configuration: A build-in camera view is available for users to display and control the video streaming. Additional UI elements can be added to improve the visual effects of the output results of other Dynamsoft products. For example, the barcode decoding result can be highlighted on the camera view.
 
@@ -52,7 +52,7 @@ The functional products are re-encapsulated and presented as the components of D
 - Change the Basic properties of the camera such as resolution, focus points.
 - Enable or disable the enhanced features such as frame sharpness filter, sensor filter, fast mode, etc.
 - Set a scan region that determines the region of interest.
-- Add graphic elements on the UI view to enhance the interaction. For example, highlight the barcode or detected quad areas.
+- Add graphic elements to the UI view to enhance the interaction. For example, highlight the barcode or detected quad areas.
 
 ### DynamsoftBarcodeReader
 
@@ -66,18 +66,18 @@ The functional products are re-encapsulated and presented as the components of D
 
 ### Integrate Multiple Features
 
-When processing an image and reading its content, the result or intermediate result of one Dynamsoft product might benefits the processing of another product. For example:
+When processing an image and reading its content, the result or intermediate result of one Dynamsoft product might benefit the processing of another product. For example:
 
 - The localization result of a barcode can support the localization of label text.
-- Quad detection result produced by DDN might help the localization of label text.
-- Recognizing the text in a normalized document area will be more efficiency.
+- Quad detection results produced by DDN might help the localization of label text.
+- Recognizing the text in a normalized document area will be more efficient.
 - When processing the barcodes in document pages, the scanned documents and the barcode results can be saved together.
 
-For the above scenarios, DCV takes the advantages of the aggregated features from other Dynamsoft products. When multiple features of Dynamsoft products are required, DCV will be the best choice for users to work with.
+For the above scenarios, DCV takes the advantage of the aggregated features from other Dynamsoft products. When multiple features of Dynamsoft products are required, DCV will be the best choice for users to work with.
 
 ### Cross-Platform Mobile App
 
-Instead of developing native applications for both Android and iOS platform, creating a cross-platform application will be more efficiency. Developers who are working on mobile applications don't need to create a new project for another platform since the code can be reused on both Android and iOS. For users who are going to create a brand new cross-platform application, DCV will shortern the period of development, which reduce the cost. DCV is designed to support the majority of competitive mobile frameworks so that users will also be able to embed DCV features into their existing cross-platform projects.
+Instead of developing native applications for both Android and iOS platforms, creating a cross-platform application will be more efficient. Developers who are working on mobile applications don't need to create a new project for another platform since the code can be reused on both Android and iOS. For users who are going to create a brand new cross-platform application, DCV will shorten the period of development, which reduces the cost. DCV is designed to support the majority of competitive mobile frameworks so that users will also be able to embed DCV features into their existing cross-platform projects.
 
 ## Supported Platforms
 
