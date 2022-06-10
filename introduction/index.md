@@ -64,7 +64,7 @@ The functional products are re-encapsulated and presented as the components of D
 
 ## Key Features
 
-### Intergrate Multiple Features
+### Integrate Multiple Features
 
 When processing an image and reading its content, the result or intermediate result of one Dynamsoft product might benefits the processing of another product. For example:
 
