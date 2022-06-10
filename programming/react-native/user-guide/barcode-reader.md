@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Getting Started with Barcode Reader
+title: Getting Started with Barcode Reader - Dynamsoft Capture Vision React Native Edition
 description: This page is the user guide of Dynamsoft Capture Vision - Barcode Reader module
 keywords: User guide, Barcode Reader
 needAutoGenerateSidebar: true
@@ -64,7 +64,7 @@ import {
 
 ## Build Your Barcode Scanner App
 
-On this page you will learn how to create a HelloWorld React Native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
+On this page, you will learn how to create a HelloWorld React Native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
 
 ### Initialize Project and Include the Library
 

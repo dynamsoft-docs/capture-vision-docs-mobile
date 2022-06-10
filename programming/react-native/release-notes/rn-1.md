@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Capture Vision - React Native Release Notes
+title: Release Notes - React Native - Dynamsoft Capture Vision
 description: This is the release notes of Dynamsoft Capture Vision - React Native Edition.
 keywords:  Capture Vision, React Native, Release Notes
 needAutoGenerateSidebar: true

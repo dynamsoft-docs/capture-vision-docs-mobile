@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: The index of React Native API reference
+title: API Reference - Dynamsoft Capture Vision React Native Edition
 description: This page is the index of React Native API reference
 keywords: API reference
 needAutoGenerateSidebar: true

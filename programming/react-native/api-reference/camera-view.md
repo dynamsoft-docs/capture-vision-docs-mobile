@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Camera View Class of React-Native Dynamsoft Capture Vision
+title: Camera View Class - Dynamsoft Capture Vision React Native Edition
 description: This page is the API reference of Camera View class
 keywords: Camera view, API reference
 needAutoGenerateSidebar: true

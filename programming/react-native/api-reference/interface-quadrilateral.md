@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Interface Quadrilateral of React-Native Dynamsoft Capture Vision
+title: Interface Quadrilateral - Dynamsoft Capture Vision React Native Edition
 description: The interface of DBR runtime settings
 keywords: Interface Quadrilateral, API reference
 needAutoGenerateSidebar: true

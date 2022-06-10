@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Capture Vision - Index of React Native Release Notes
+title: Release Notes Index - React Native - Dynamsoft Capture Vision
 description: This is the index of React Native release notes.
 keywords:  Capture Vision, React Native, Release Notes
 needAutoGenerateSidebar: true

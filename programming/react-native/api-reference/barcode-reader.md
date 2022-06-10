@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Barcode Reader Class of Dynamsoft Capture Vision React-Native Edition
+title: Barcode Reader Class - Dynamsoft Capture Vision React Native Edition
 description: This page is the API reference of Barcode Reader class
 keywords: Barcode, API reference
 needAutoGenerateSidebar: true

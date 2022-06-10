@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Interface BarcodeResult of React-Native Dynamsoft Capture Vision
+title: Interface BarcodeResult - Dynamsoft Capture Vision React Native Edition
 description: The interface of BarcodeResult result
 keywords: Interface BarcodeResult, API reference
 needAutoGenerateSidebar: true

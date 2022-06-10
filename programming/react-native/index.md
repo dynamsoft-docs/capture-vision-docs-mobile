@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Index of Dynamsoft Capture Vision React-Native edition
+title: Index of Dynamsoft Capture Vision React Native Edition
 description: This page is the index of Dynamsoft Capture Vision - React-Native edition
 keywords: index, capture vision
 needAutoGenerateSidebar: true

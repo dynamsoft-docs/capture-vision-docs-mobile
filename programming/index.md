@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Capture Vision - Programming Index
+title: Programming Index of Dynamsoft Capture Vision
 description: This is the Index Page of Dynamsoft Capture Vision - Programming.
 keywords:  Capture Vision, Programming Index
 needAutoGenerateSidebar: true

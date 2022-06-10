@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Interface Region of React-Native Dynamsoft Capture Vision
+title: Interface Region - Dynamsoft Capture Vision React Native Edition
 description: The interface of region
 keywords: Interface Region, API reference
 needAutoGenerateSidebar: true
