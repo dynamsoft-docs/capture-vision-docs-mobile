@@ -11,6 +11,6 @@ breadcrumbText: Programming Index
 
 # Programming
 
-Learn how to use Dynamsoft Capture Vision in different programming languages:
+Learn how to use Dynamsoft Capture Vision in different programming frameworks:
 
 - [React Native](react-native/index.md)
