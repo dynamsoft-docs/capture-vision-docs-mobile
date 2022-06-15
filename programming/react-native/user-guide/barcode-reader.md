@@ -76,13 +76,13 @@ Install the library with NPM or YARN
     yarn install
     ```
 
-Alternatively, you can include the library by installing it directly via `npm` or `yarn` in the terminal as such
-
-```bash
-npm install dynamsoft-capture-vision-react-native@1.0.0
-
-yarn add dynamsoft-capture-vision-react-native@1.0.0
-```
+> Alternatively, you can include the library by installing it directly via `npm` or `yarn` in the terminal as such
+> 
+> ```bash
+> npm install dynamsoft-capture-vision-react-native@1.0.0
+> 
+> yarn add dynamsoft-capture-vision-react-native@1.0.0
+> ```
 
 ### Configure the Barcode Reader
 
