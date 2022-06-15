@@ -9,7 +9,20 @@ noTitleIndex: true
 breadcrumbText: Guide of Barcode Reader
 ---
 
-# Getting Started with Barcode Reader
+# Dynamsoft Capture Vision - Barcode Reader User Guide
+
+In this guide, we will explore the Barcode Reader module of the Dynamsoft Capture Vision library.
+
+<span style="font-size:20px">Table of Contents</span>
+
+* [Getting Started with the Barcode Reader](#getting-started-with-the-barcode-reader)
+    * [Initialize the Project](#initialize-the-project)
+    * [Include the Barcode Reader Library](#include-the-barcode-reader-library)
+    * [Configure the Barcode Reader](#configure-the-barcode-reader)
+    * [Rendering the DynamsoftCameraView UI](#rendering-the-dynamsoftcameraview-ui)
+  * [Customize the UI](#customize-the-ui-optional)
+* [Customizing the Barcode Reader](#customizing-the-barcode-reader)
+* [API Documentation](#api-documentation)
 
 ## Requirements
 
@@ -29,52 +42,19 @@ breadcrumbText: Guide of Barcode Reader
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
-## Installation
+## Getting Started with the Barcode Reader
 
-### Add the SDK
+### Initialize the Project
 
-Run this command:
-
-```bash
-yarn add dynamsoft-capture-vision-react-native@1.0.0
-```
-
-This will add a line to `dependencies` in your package.json file:
-
-```json
-"dependencies": {
-    "dynamsoft-capture-vision-react-native": "1.0.0"
-}
-```
-
-### Import the SDK
-
-Now in your JavaScript code, you can use:
-
-```js
-import {
-    DynamsoftBarcodeReader,
-    DynamsoftCameraView,
-    BarcodeResult,
-    EnumDBRPresetTemplate,
-    EnumBarcodeFormat,
-    DBRRuntimeSettings
-} from 'dynamsoft-capture-vision-react-native';
-```
-
-## Build Your Barcode Scanner App
-
-On this page, you will learn how to create a HelloWorld React Native barcode scanner with `Dynamsoft Capture Vision` - `Barcode Reader` module.
-
-### Initialize Project and Include the Library
-
-1. Create a new React Native project
+Create a new React Native project
 
     ```bash
     npx react-native init helloBarcodeReader
     ```
 
-2. In the **package.json** of your react native project, add the following dependencies:
+### Include the Barcode Reader Library
+
+In the **package.json** of your React Native project, add the following dependencies:
 
     ```json
     "dependencies": {
@@ -84,7 +64,7 @@ On this page, you will learn how to create a HelloWorld React Native barcode sca
     }
     ```
 
-3. Install the library with NPM or YARN
+Install the library with NPM or YARN
 
     ```bash
     npm install
@@ -96,9 +76,15 @@ On this page, you will learn how to create a HelloWorld React Native barcode sca
     yarn install
     ```
 
-Now Dynamsoft Capture Vision is added to your project.
+Alternatively, you can include the library by installing it directly via `npm` or `yarn` in the terminal as such
 
-### Add Configurations for Barcode Decoding
+```bash
+npm install dynamsoft-capture-vision-react-native@1.0.0
+
+yarn add dynamsoft-capture-vision-react-native@1.0.0
+```
+
+### Configure the Barcode Reader
 
 1. In `App.js` include the following libraries:
 
@@ -115,7 +101,7 @@ Now Dynamsoft Capture Vision is added to your project.
     } from 'dynamsoft-capture-vision-react-native';
     ```
 
-2. Add `state` to your component. In the state, add a `results` value. In the following steps, we will store the newly decoded barcodes to the `results`.
+2. Next in `App.js`, let's define the `state` to your component. In the `state`, add a `results` value, initialized to null. In the following steps, we will store the newly decoded barcodes to `results`.
 
     ```js
     class App extends React.Component {
@@ -126,7 +112,7 @@ Now Dynamsoft Capture Vision is added to your project.
     export default App;
     ```
 
-3. In `componentDidMount`, add the following code to enable barcode decoding.
+3. Next is the `componentDidMount` implementation. First up is adding the code to enable barcode decoding:
 
     ```js
     componentDidMount() {
@@ -152,7 +138,7 @@ Now Dynamsoft Capture Vision is added to your project.
     }
     ```
 
-4. In `componentWillUnmount`, add code to stop the barcode decoding thread and remove the result listener.
+4. After implementing `componentDidMount`, `componentWillUnmount` will then include code to stop the barcode decoding thread and remove the result listener.
 
     ```js
     async componentWillUnmount() {
@@ -163,7 +149,9 @@ Now Dynamsoft Capture Vision is added to your project.
     }
     ```
 
-5. Render the `DynamsoftCameraView` component.
+### Rendering the DynamsoftCameraView UI
+
+Lastly, let's create the `DynamsoftCameraView` UI componment in the `render` function.
 
     ```js
     render() {
@@ -200,6 +188,10 @@ Now Dynamsoft Capture Vision is added to your project.
 ### Configure Camera Permissions
 
 You need to set the "Privacy - Camera Usage Description" field in the Info.plist file for iOS.
+
+## Customizing the Barcode Reader
+
+There are several ways in which you can customize the Barcode Reader - but what they all have in common is that each involves the [`updateRuntimeSettings`](../api-reference/barcode-reader.md#updateruntimesettings) method. There are currently three methods in which you can update the runtime settings.
 
 ### Run the Project
 

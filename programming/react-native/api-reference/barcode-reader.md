@@ -116,15 +116,19 @@ updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTempl
 
 - An object that stores barcode reader runtime settings.
 - A JSON string that stores the barcode reader template.
-- An enumeration member of EnumPresetTemplate
+- An enumeration member of [EnumPresetTemplate](../api-reference/enum-dbr-preset-template.md)
 
 **Code Snippet**
 
 ```js
+/* How to update runtime settings using runtime settings object */
 let settings: DBRRuntimeSettings = await this.reader.getRuntimeSettings();
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
 settings.expectedBarcodeCount = 1;
 await this.reader.updateRuntimeSettings(settings);
+
+/* How to update using one of the preset templates */
+await this.reader.updateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
 ```
 
 ## resetRuntimeSettings
