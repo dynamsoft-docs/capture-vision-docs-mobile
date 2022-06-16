@@ -15,16 +15,19 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 <span style="font-size:20px">Table of Contents</span>
 
+* [System Requirements](#system-requirements)
 * [Getting Started with the Barcode Reader](#getting-started-with-the-barcode-reader)
     * [Initialize the Project](#initialize-the-project)
     * [Include the Barcode Reader Library](#include-the-barcode-reader-library)
     * [Configure the Barcode Reader](#configure-the-barcode-reader)
-    * [Rendering the DynamsoftCameraView UI](#rendering-the-dynamsoftcameraview-ui)
-  * [Customize the UI](#customize-the-ui-optional)
+    * [Rendering the UI](#rendering-the-ui)
 * [Customizing the Barcode Reader](#customizing-the-barcode-reader)
-* [API Documentation](#api-documentation)
+    * [Using the settings templates](#using-the-settings-templates)
+    * [Using the DBRRuntimeSettings interface](#using-the-dbrruntimesettings-interface)
+    * [Customizing the scan region](#customizing-the-scan-region)
+* [Run the Project](#run-the-project)
 
-## Requirements
+## System Requirements
 
 ### React Native
 
@@ -83,6 +86,18 @@ Install the library with NPM or YARN
 > 
 > yarn add dynamsoft-capture-vision-react-native@1.0.0
 > ```
+
+**For iOS**: In the terminal, go to the `ios` folder in your project:
+
+```bash
+cd ios
+```
+
+Then, use `pod install` to include the cocoapods libraries necessary to run the app on iOS:
+
+```bash
+pod install
+```
 
 ### Configure the Barcode Reader
 
@@ -149,7 +164,7 @@ Install the library with NPM or YARN
     }
     ```
 
-### Rendering the DynamsoftCameraView UI
+### Rendering the UI
 
 Lastly, let's create the `DynamsoftCameraView` UI componment in the `render` function.
 
@@ -187,42 +202,77 @@ Lastly, let's create the `DynamsoftCameraView` UI componment in the `render` fun
 
 ### Configure Camera Permissions
 
-You need to set the "Privacy - Camera Usage Description" field in the Info.plist file for iOS.
+You need to set the "Privacy - Camera Usage Description" field in the Info.plist file for iOS. If this property is not set, the iOS application will fail at runtime. In order to set this property, you might need to use Xcode and open the corresponding xcworkspace located in the `ios` folder.
 
 ## Customizing the Barcode Reader
 
 There are several ways in which you can customize the Barcode Reader - but what they all have in common is that each involves the [`updateRuntimeSettings`](../api-reference/barcode-reader.md#updateruntimesettings) method. There are currently three methods in which you can update the runtime settings.
 
-### Run the Project
+### Using the settings templates
 
-#### Run Android on Windows
+DBR offers a number of preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example:
 
-In the command lines, go to your project folder and run the following command:
+`await this.reader.updateDBRRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);`
+
+### Using the DBRRuntimeSettings interface
+
+The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timout. For more info on each, please refer to [`DBRRuntimeSettings`](../api-reference/interface-dbr-runtime-settings.md). Here is a quick exmaple:
+
+```js
+let settings: DBRRuntimeSettings = await this.reader.getDBRRuntimeSettings();
+// Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
+// Set the expected barcode count to 1 can maximize the barcode decoding speed.
+settings.expectedBarcodesCount = 0;
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
+await this.reader.updateDBRRuntimeSettings(settings)
+```
+
+### Customizing the scan region
+
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface as well as the [`DynamsoftCameraView`](../api-reference/camera-view.md) component.
+
+First, the region must be defined using the Region interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
+
+```js
+let region: Region;        
+let barcode_text = "";
+region = {
+    regionTop: 30,
+    regionLeft: 15,
+    regionBottom: 70,
+    regionRight: 85,
+    regionMeasuredByPercentage: true
+}
+...
+        <DynamsoftCameraView
+            style={{
+                flex: 1,
+            }}
+            ref = {(ref)=>{this.scanner = ref}}
+            overlayVisible={true}
+            scanRegionVisible={true}
+            scanRegion={region}
+        >
+```
+
+## Run the Project
+
+### Run Android on Windows
+
+In the command line interface (we recommend using Powershell), go to your project folder and run the following command:
 
 ```bash
 npx react-native run-android
 ```
 
-#### Run iOS on macOS
+### Run iOS on macOS
 
-In the command lines, go to the iOS folder in your project:
-
-```bash
-cd ios
-```
-
-Use pod install to include the libraries:
-
-```bash
-pod install
-```
-
-Go back to the project folder and run the project:
-
-```bash
-cd ..
-```
+In the terminal, go to the project folder in your project:
 
 ```bash
 npx react-native run-ios
 ```
+
+> Note: The application needs to run on a physical device rather than a simulator as it requires the use of the camera. If you try running it on a simulator, you will most likely run into a number of errors/failures. 
+> On iOS, in order to run the React Native app on a physical device you will need to install the [`ios-deploy`](https://www.npmjs.com/package/ios-deploy) library. Afterwards, you can run the react native app from the terminal as such `npx react-native run-ios --device` assuming it's the only device connected to the Mac.
+> Alternatively on iOS, you can simply open the xcworkspace of the project found in the `ios` folder using Xcode and run the sample on your connected iOS device from there. The advantage that this offers is that it is easier to deal with the developer signatures for deployment in there.
