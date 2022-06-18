@@ -15,52 +15,52 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 <span style="font-size:20px">Table of Contents</span>
 
-* [System Requirements](#system-requirements)
-* [Installation](#installation)
-* [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
-  * [Initialize the Project](#initialize-the-project)
-  * [Include the Library](#include-the-library)
-  * [Configure the Barcode Reader](#configure-the-barcode-reader)
-  * [Rendering the UI](#rendering-the-ui)
-  * [Configure Camera Permissions](#configure-camera-permissions)
-  * [Run the Project](#run-the-project)
-* [Customizing the Barcode Reader](#customizing-the-barcode-reader)
-  * [Using the settings templates](#using-the-settings-templates)
-  * [Using the DBRRuntimeSettings interface](#using-the-dbrruntimesettings-interface)
-  * [Customizing the scan region](#customizing-the-scan-region)
+- [System Requirements](#system-requirements)
+- [Installation](#installation)
+- [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
+  - [Initialize the Project](#initialize-the-project)
+  - [Include the Library](#include-the-library)
+  - [Configure the Barcode Reader](#configure-the-barcode-reader)
+  - [Rendering the UI](#rendering-the-ui)
+  - [Configure Camera Permissions](#configure-camera-permissions)
+  - [Run the Project](#run-the-project)
+- [Customizing the Barcode Reader](#customizing-the-barcode-reader)
+  - [Using the settings templates](#using-the-settings-templates)
+  - [Using the DBRRuntimeSettings interface](#using-the-dbrruntimesettings-interface)
+  - [Customizing the scan region](#customizing-the-scan-region)
 
 ## System Requirements
 
 ### React Native
 
-* Supported Version: 0.60 or higher
+- Supported Version: 0.60 or higher
 
 ### Android
 
-* Supported OS: Android 5.0 (API Level 21) or higher.
-* Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-* Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
-* JDK: 1.8+
+- Supported OS: Android 5.0 (API Level 21) or higher.
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+- JDK: 1.8+
 
 ### iOS
 
-* Supported OS: **iOS 10.0** or higher.
-* Supported ABI: **arm64** and **x86_64**.
-* Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended), CocoaPods 1.11.0+.
+- Supported OS: **iOS 10.0** or higher.
+- Supported ABI: **arm64** and **x86_64**.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended), CocoaPods 1.11.0+.
 
 ### Others
 
-* Node: 16.15.1 recommended
+- Node: 16.15.1 recommended
 
 ## Installation
 
-* **yarn**
+- **yarn**
 
   ```bash
   yarn add dynamsoft-capture-vision-react-native
   ```
 
-* **npm**
+- **npm**
 
   ```bash
   npm install dynamsoft-capture-vision-react-native
