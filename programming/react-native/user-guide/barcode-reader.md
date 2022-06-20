@@ -140,9 +140,9 @@ componentDidMount() {
         // The barcode reader will scan the barcodes continuously before you trigger stopScanning.
         await this.reader.startScanning();
         // Add a result listener. The result listener will handle callback when barcode result is returned. 
-        this.reader.addResultListener((results: BarcodeResult[]) => {
+        this.reader.addResultListener((results) => {
             // Update the newly detected barcode results to the state.
-            this.setState({results: results});
+            this.setState({results});
         });
     })();
 }
@@ -166,8 +166,8 @@ Lastly, let's create the `DynamsoftCameraView` UI component in the `render` func
 ```js
 render() {
     // Add code to fetch barcode text and format from the BarcodeResult
-    let results: BarcodeResult[] = this.state.results;
-    let resultBoxText: String = "";
+    let results = this.state.results;
+    let resultBoxText = "";
     if (results && results.length>0){
         for (let i=0;i<results.length;i++){
             resultBoxText+=results[i].barcodeFormatString+"\n"+results[i].barcodeText+"\n";
@@ -221,7 +221,7 @@ npx react-native run-ios
 >
 >- The application needs to run on a physical device rather than a simulator as it requires the use of the camera. If you try running it on a simulator, you will most likely run into a number of errors/failures.
 >- On iOS, in order to run the React Native app on a physical device you will need to install the [`ios-deploy`](https://www.npmjs.com/package/ios-deploy) library. Afterwards, you can run the react native app from the terminal as such `npx react-native run-ios --device` assuming it's the only device connected to the Mac.
->- Alternatively on iOS, you can simply open the xcworkspace of the project found in the `ios` folder using Xcode and run the sample on your connected iOS device from there. The advantage that this offers is that it is easier to deal with the developer signatures for deployment in there.
+>- Alternatively on iOS, you can simply open the `xcworkspace` of the project found in the `ios` folder using Xcode and run the sample on your connected iOS device from there. The advantage that this offers is that it is easier to deal with the developer signatures for deployment in there.
 
 ## Customizing the Barcode Reader
 
@@ -238,12 +238,15 @@ DBR offers several preset templates for different popular scenarios. To prioriti
 The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to [`DBRRuntimeSettings`](../api-reference/interface-dbr-runtime-settings.md). Here is a quick example:
 
 ```js
-let settings: DBRRuntimeSettings = await this.reader.getDBRRuntimeSettings();
+// Get the current runtime settings of the barcode reader.
+let settings = await this.reader.getDBRRuntimeSettings();
 // Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
 // Set the expected barcode count to 1 can maximize the barcode decoding speed.
 settings.expectedBarcodesCount = 0;
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
-await this.reader.updateDBRRuntimeSettings(settings)
+// Set the barcode formats to read.
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX;
+// Apply the new settings to the barcode reader.
+await this.reader.updateDBRRuntimeSettings(settings);
 ```
 
 ### Customizing the scan region
@@ -253,9 +256,9 @@ You can also limit the scan region of the SDK so that it doesn't exhaust resourc
 First, the region must be defined using the Region interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
 
 ```js
-let region: Region;        
 let barcode_text = "";
-region = {
+// Define the scan region.
+let region = {
     regionTop: 30,
     regionLeft: 15,
     regionBottom: 70,
