@@ -196,7 +196,7 @@ await this.reader.stopScanning();
 Specifies an event handler that fires after the library finishes scanning a frame.
 
 ```js
-addResultListener(listener: (results: TextResult[]) => void): void;
+addResultListener(listener: (results: BarcodeResult[]) => void): void;
 ```
 
 **Parameters**
@@ -209,7 +209,7 @@ addResultListener(listener: (results: TextResult[]) => void): void;
 state = {
   results: null
 };
-this.reader.addResultListener((results: TextResult[]) => {
+this.reader.addResultListener((results: BarcodeResult[]) => {
   this.setState({results: results})
 })
 componentDidMount() {
@@ -221,7 +221,7 @@ componentDidMount() {
     }
     this.reader = await DynamsoftBarcodeReader.createInstance();
     await this.reader.startScanning();
-    this.reader.addResultListener((results: TextResult[]) => {
+    this.reader.addResultListener((results: BarcodeResult[]) => {
       this.setState({results: results});
     });
   })();

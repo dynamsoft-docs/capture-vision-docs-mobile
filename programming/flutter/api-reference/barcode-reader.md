@@ -271,5 +271,5 @@ late final DynamsoftBarcodeReader _barcodeReader;
 await DynamsoftBarcodeReader.initLicense(license: '**********');
 _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 _barcodeReader.startScanning();
-_barcodeReader.addResultlistener().listen((List<TextResult> res) {});
+_barcodeReader.addResultlistener().listen((List<BarcodeResult> res) {});
 ```
