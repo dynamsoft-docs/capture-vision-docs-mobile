@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Interface DBRRuntimeSettings of React-Native Dynamsoft Capture Vision
+title: Interface DBRRuntimeSettings - Dynamsoft Capture Vision React Native Edition
 description: The interface of DBR runtime settings
 keywords: Interface DBRRuntimeSettings, API reference
 needAutoGenerateSidebar: true
@@ -37,3 +37,5 @@ export interface DBRRuntimeSettings {
 ## Related API(s)
 
 - [`updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
+- [`EnumBarcodeFormat`](enum-barcode-format.md)
+- [`EnumBarcodeFormat_2`](enum-barcode-format2.md)

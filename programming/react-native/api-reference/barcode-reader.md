@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Barcode Reader Class of React-Native Dynamsoft Capture Vision
+title: Barcode Reader Class - Dynamsoft Capture Vision React Native Edition
 description: This page is the API reference of Barcode Reader class
 keywords: Barcode, API reference
 needAutoGenerateSidebar: true
@@ -21,8 +21,8 @@ breadcrumbText: Barcode Reader class
 | [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
 | [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
 | [`outputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
-| [`startBarcodeScanning`](#startbarcodescanning) | Start the barcode decoding thread. |
-| [`stopBarcodeScanning`](#stopbarcodescanning) | Stop the barcode decoding thread. |
+| [`startScanning`](#startscanning) | Start the barcode decoding thread. |
+| [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 
 ## initLicense
@@ -30,7 +30,7 @@ breadcrumbText: Barcode Reader class
 Initialize the license of Dynamsoft Capture Vision.
 
 ```js
-static initLicense(license: String): Promise<any>;
+static initLicense(license: String): Promise<void>;
 ```
 
 **Parameters**
@@ -44,7 +44,7 @@ try {
   await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
 } catch (e) {
   // Catch and log the error message when license activation is failed.
-  console.log(e + "License Verification message" + e.code)
+  console.log(e.code)
 }
 ```
 
@@ -116,15 +116,19 @@ updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTempl
 
 - An object that stores barcode reader runtime settings.
 - A JSON string that stores the barcode reader template.
-- An enumeration member of EnumPresetTemplate
+- An enumeration member of [EnumPresetTemplate](../api-reference/enum-dbr-preset-template.md)
 
 **Code Snippet**
 
 ```js
+/* How to update runtime settings using runtime settings object */
 let settings: DBRRuntimeSettings = await this.reader.getRuntimeSettings();
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
 settings.expectedBarcodeCount = 1;
 await this.reader.updateRuntimeSettings(settings);
+
+/* How to update using one of the preset templates */
+await this.reader.updateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
 ```
 
 ## resetRuntimeSettings
@@ -192,7 +196,7 @@ await this.reader.stopScanning();
 Specifies an event handler that fires after the library finishes scanning a frame.
 
 ```js
-addResultListener(listener: PropTypes.func): void;
+addResultListener(listener: (results: TextResult[]) => void): void;
 ```
 
 **Parameters**

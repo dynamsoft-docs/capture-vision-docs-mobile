@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumPresetTemplate of React-Native Dynamsoft Capture Vision
+title: EnumPresetTemplate - Dynamsoft Capture Vision React Native Edition
 description: The enumeration of preset template
 keywords: Preset template, API reference
 needAutoGenerateSidebar: true
@@ -24,3 +24,7 @@ enum EnumPresetTemplate{
     IMAGE_DEFAULT = 6 // The default image barcode decoding settings.
 }
 ```
+
+## Related API(s)
+
+- [`DynamsoftBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)

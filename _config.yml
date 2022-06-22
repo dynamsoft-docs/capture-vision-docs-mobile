@@ -1,4 +1,4 @@
-repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-mobile
+repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-mobile/blob/main
 repository: dynamsoft-docs/capture-vision-docs-mobile
 docFullPath: https://www.dynamsoft.com/capture-vision/docs
 firstLevelUrl: /capture-vision/docs
@@ -7,18 +7,21 @@ frontPageFolder: /capture-vision/docs/
 
 productName: Dynamsoft Capture Vision
 
-introduction: /capture-vision/docs/introduction/
 programming: /capture-vision/docs/programming/
 
-react-native: /capture-vision/docs/react-native/
-rn-api: /capture-vision/docs/react-native/api-reference/
-rn-release-notes: /capture-vision/docs/react-native/release-notes/
-rn-guide: /capture-vision/docs/react-native/user-guide/
+license: /capture-vision/docs/license/
 
-flutter: /capture-vision/docs/flutter/
-flutter-api: /capture-vision/docs/flutter/api-reference/
-flutter-release-notes: /capture-vision/docs/flutter/release-notes/
-flutter-guide: /capture-vision/docs/flutter/user-guide/
+introduction: /capture-vision/docs/introduction/
+
+react-native: /capture-vision/docs/programming/react-native/
+rn-api: /capture-vision/docs/programming/react-native/api-reference/
+rn-release-notes: /capture-vision/docs/programming/react-native/release-notes/
+rn-guide: /capture-vision/docs/programming/react-native/user-guide/
+
+flutter: /capture-vision/docs/programming/flutter/
+flutter-api: /capture-vision/docs/programming/flutter/api-reference/
+flutter-release-notes: /capture-vision/docs/programming/flutter/release-notes/
+flutter-guide: /capture-vision/docs/programming/flutter/user-guide/
 
 assets: /capture-vision/docs/assets/
 edit_icon: /capture-vision/docs/assets/img-icon/edit-icon.png

@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: The index of React Native Dynamsoft Capture Vision API reference
+title: API Reference - Dynamsoft Capture Vision React Native Edition
 description: This page is the index of React Native API reference
 keywords: API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Index
+breadcrumbText: API Index
 ---
 
-# Dynamsoft
+# React Native API Reference
 
 ## Classes
 
@@ -22,13 +22,17 @@ breadcrumbText: Index
 
 | Interfaces | Description |
 | ---------- | ----------- |
-| [DBRRuntimeSettings](interface-dbr-runtime-settings.md) |  |
-| [BarcodeResult](interface-barcode-result.md) |  |
-| [BarcodeLocationResult](interface-barcode-location-result.md) |  |
-| [Region](interface-region.md) |  |
+| [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) | Interface of Barcode settings. |
+| [`BarcodeResult`](interface-barcode-result.md) | Interface of barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
+| [`BarcodeLocationResult`](interface-barcode-location-result.md) | The location result of the detected barcodes. |
+| [`Quadrilateral`](class-quadrilateral.md) | The interface that stores the vertex coordinates of a quadrilateral.|
+| [`Point`](class-point.md) | The interface that stores the x and y coordinates of the point. |
+| [`Region`](interface-region.md) | The interface of region. Users can configure region of interest. |
 
 ## Enumerations
 
-* [EnumBarcodeFormat](enum-barcodeformat.md)
-* [EnumBarcodeFormat_2](enum-barcodeformat2.md)
-* [EnumDBRPresetTemplate](enum-dbr-presettemplate.md)
+| Interfaces | Description |
+| ---------- | ----------- |
+| [`EnumBarcodeFormat`](enum-barcode-format.md) | The enumeration stores the first group of barcode formats. |
+| [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration stores the second group of barcode formats. |
+| [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |

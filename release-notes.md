@@ -13,12 +13,12 @@ breadcrumbText: Release Notes
 
 ## 1.0.0
 
-> First released: 04/01/2022
+> First released: 06/14/2022
 
 ### HighLights
 
-{%- include release-notes/product-highlight-2.1.0.md -%}
+{%- include release-notes/product-highlight-1.0.0.md -%}
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 1.0.0 | [React-Native]({{site.react-native}}) |
+| 1.0.0 | [React-Native]({{site.rn-release-notes}}rn-1.html#100-04012022) |

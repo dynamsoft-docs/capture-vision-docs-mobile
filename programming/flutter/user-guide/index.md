@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: User Guide - Dynamsoft Capture Vision React Native Edition
+title: The user guide of React Native Dynamsoft Capture Vision
 description: This page is the user guide of Dynamsoft Capture Vision
 keywords: User guide
 needAutoGenerateSidebar: true

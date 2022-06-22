@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumBarcodeFormat_2 of React-Native Dynamsoft Capture Vision
+title: EnumBarcodeFormat_2 - Dynamsoft Capture Vision React Native Edition
 description: The second group enumeration of the barcode formats.
 keywords: Barcode format, API reference
 needAutoGenerateSidebar: true
@@ -29,3 +29,9 @@ enum EnumBarcodeFormat_2 {
     BF_NULL = 0x00 // Disable all barcode formats in group 1.
 }
 ```
+
+## Related API(s)
+
+- [`DynamsoftBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
+- [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md)
+- [`EnumBarcodeFormat`](enum-barcode-format.md)

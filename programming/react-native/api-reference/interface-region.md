@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Interface Region of React-Native Dynamsoft Capture Vision
+title: Interface Region - Dynamsoft Capture Vision React Native Edition
 description: The interface of region
 keywords: Interface Region, API reference
 needAutoGenerateSidebar: true
@@ -15,14 +15,30 @@ Interface `Region`.
 
 ```js
 export interface Region {
-    regionBottom: number;
-    regionRight: number;
-    regionLeft: number;
+    /**
+     * The y coordinate of the Top border of the region.
+     */
     regionTop: number;
+    /**
+     * The y coordinate of the Bottom border of the region.
+     */
+    regionBottom: number;
+    /**
+     * The x coordinate of the left border of the region.
+     */
+    regionLeft: number;
+    /**
+     * The x coordinate of the right border of the region.
+     */
+    regionRight: number;
+    /**
+     * If measured by percentage, the above values will be recognized as percentage (1 to 100).
+     * Otherwise, the above values will be recognized as pixel length.
+     */
     regionMeasuredByPercentage: number | boolean;
 }
 ```
 
-## Related APIs
+## Related API(s)
 
 - [`DynamsoftCameraView.scanRegion`](camera-view.md#scanregion)

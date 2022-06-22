@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Index of Dynamsoft Capture Vision React Native Edition
-description: This page is the index of Dynamsoft Capture Vision - React-Native edition
+title: Index of Dynamsoft Capture Vision Flutter edition
+description: This page is the index of Dynamsoft Capture Vision - Flutter edition
 keywords: index, capture vision
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: React Native Index
+breadcrumbText: Flutter Index
 ---
 
-# Documentation - React Native
+# Documentation - Flutter
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ breadcrumbText: React Native Index
 
 ## Samples
 
-- <a href = "https://github.com/Dynamsoft/capture-vision-react-native-samples" target="_blank">Dynamsoft Capture Vision - React Native HelloWorld</a>
+- <a href = "https://github.com/Dynamsoft/capture-vision-flutter-samples" target="_blank">Dynamsoft Capture Vision - Flutter HelloWorld</a>
 
 ## API Reference
 
@@ -26,4 +26,4 @@ breadcrumbText: React Native Index
 
 ## Release Notes
 
-- [Version 1.x](release-notes/rn-1.md)
+- [Version 1.x](release-notes/flutter-1.md)
