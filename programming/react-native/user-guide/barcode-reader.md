@@ -271,9 +271,11 @@ let region = {
 }
 ...
         <DynamsoftCameraView
-            style={{
-                flex: 1
-            }}
+            style={
+                {
+                    flex: 1
+                }
+            }
             ref = {(ref)=>{this.scanner = ref}}
             overlayVisible={true}
             scanRegionVisible={true}
