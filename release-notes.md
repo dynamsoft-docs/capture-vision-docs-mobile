@@ -13,7 +13,7 @@ breadcrumbText: Release Notes
 
 ## 1.0.0
 
-> First released: 06/14/2022
+> First released: 06/23/2022
 
 ### HighLights
 
@@ -21,4 +21,4 @@ breadcrumbText: Release Notes
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 1.0.0 | [React-Native]({{site.rn-release-notes}}rn-1.html#100-04012022) |
+| 1.0.0 | [React-Native]({{site.rn-release-notes}}rn-1.html#100-06232022) |
