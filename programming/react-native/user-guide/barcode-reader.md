@@ -176,20 +176,24 @@ render() {
     // Render DynamsoftCameraView componment.
     return (
         <DynamsoftCameraView
-            style={{
-                flex: 1,
-            }}
+            style={
+                {
+                    flex: 1,
+                }
+            }
             ref = {(ref)=>{this.scanner = ref}}
             isOverlayVisible={true}
         >
             // Add a text box to display the barcode result.
-            <Text style={{
-                flex: 0.9,
-                marginTop: 100,
-                textAlign: "center",
-                color: "white",
-                fontSize: 18,
-            }}>{results && results.length > 0 ? resultBoxText : "No Barcode Detected"}</Text>
+            <Text style={
+                {
+                    flex: 0.9,
+                    marginTop: 100,
+                    textAlign: "center",
+                    color: "white",
+                    fontSize: 18,
+                }
+            }>{results && results.length > 0 ? resultBoxText : "No Barcode Detected"}</Text>
         </DynamsoftCameraView>
     );
 }
