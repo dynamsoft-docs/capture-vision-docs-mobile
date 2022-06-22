@@ -23,7 +23,7 @@ scanRegion: any;
 
 **Code Snippet**
 
-```js
+```jsx
 render() {
     let region: Region
     region = {
@@ -36,7 +36,7 @@ render() {
     return (
         <DynamsoftCameraView
             style={{
-                flex: 1,
+                flex: 1
             }}
             ref = {(ref)=>{this.scanner = ref}}
             isOverlayVisible={true}

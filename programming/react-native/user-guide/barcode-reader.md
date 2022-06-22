@@ -163,7 +163,7 @@ async componentWillUnmount() {
 
 Lastly, let's create the `DynamsoftCameraView` UI component in the `render` function.
 
-```js
+```jsx
 render() {
     // Add code to fetch barcode text and format from the BarcodeResult
     let results = this.state.results;
@@ -178,7 +178,7 @@ render() {
         <DynamsoftCameraView
             style={
                 {
-                    flex: 1,
+                    flex: 1
                 }
             }
             ref = {(ref)=>{this.scanner = ref}}
@@ -259,7 +259,7 @@ You can also limit the scan region of the SDK so that it doesn't exhaust resourc
 
 First, the region must be defined using the Region interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
 
-```js
+```jsx
 let barcode_text = "";
 // Define the scan region.
 let region = {
@@ -271,9 +271,11 @@ let region = {
 }
 ...
         <DynamsoftCameraView
-            style={{
-                flex: 1,
-            }}
+            style={
+                {
+                    flex: 1
+                }
+            }
             ref = {(ref)=>{this.scanner = ref}}
             overlayVisible={true}
             scanRegionVisible={true}
