@@ -131,7 +131,7 @@ componentDidMount() {
         try {
             await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
         } catch (e) {
-            console.log(e.code);
+            console.log(e);
         }
         // Create a barcode reader instance.
         this.reader = await DynamsoftBarcodeReader.createInstance();
