@@ -11,10 +11,11 @@ breadcrumbText: Barcode Reader class
 
 # DynamsoftBarcodeReader Class
 
+A barcode reader object accesses to a camera via DynamsoftCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
+
 | Methods | Description |
 | ------- | ----------- |
-| [`initLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision.
- |
+| [`initLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision. |
 | [`createInstance`](#createinstance) | Create a barcode reader instance. |
 | [`getVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
@@ -27,7 +28,7 @@ breadcrumbText: Barcode Reader class
 
 ## initLicense
 
-Initialize the license of Dynamsoft Capture Vision.
+Initialize the license of Dynamsoft Capture Vision - Barcode Reader Module.
 
 ```js
 static initLicense(license: String): Promise<void>;
@@ -44,13 +45,13 @@ try {
   await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
 } catch (e) {
   // Catch and log the error message when license activation is failed.
-  console.log(e.code)
+  console.log(e)
 }
 ```
 
 ## createInstance
 
-Staticly create a barcode reader instance.
+Create a barcode reader instance.
 
 ```js
 static createInstance(): Promise<DynamsoftBarcodeReader>
@@ -71,7 +72,7 @@ this.reader = await DynamsoftBarcodeReader.createInstance();
 Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
 
 ```js
-getVersion():string Promise<String>
+getVersion(): Promise<string>
 ```
 
 **Return Value**
@@ -89,7 +90,7 @@ let dbrVersion = await this.reader.getVersion();
 Get the current runtime settings of `DynamsoftBarcodeReader`.
 
 ```js
-getRuntimeSettings(): Promise<DBRRuntimeSettings>;
+getRuntimeSettings(): Promise<DBRRuntimeSettings>
 ```
 
 **Return Value**
@@ -99,7 +100,7 @@ An object that stores the runtime settings.
 **Code Snippet**
 
 ```js
-let settings: DBRRuntimeSettings = await this.reader.getRuntimeSettings();
+let settings = await this.reader.getRuntimeSettings();
 ```
 
 ## updateRuntimeSettings
@@ -107,7 +108,7 @@ let settings: DBRRuntimeSettings = await this.reader.getRuntimeSettings();
 Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
 
 ```js
-updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTemplate | String): Promise<boolean>;
+updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTemplate | String): Promise<boolean>
 ```
 
 **Parameters**
@@ -121,14 +122,14 @@ updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTempl
 **Code Snippet**
 
 ```js
+/* How to update using one of the preset templates */
+await this.reader.updateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
+
 /* How to update runtime settings using runtime settings object */
-let settings: DBRRuntimeSettings = await this.reader.getRuntimeSettings();
+let settings = await this.reader.getRuntimeSettings();
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
 settings.expectedBarcodeCount = 1;
 await this.reader.updateRuntimeSettings(settings);
-
-/* How to update using one of the preset templates */
-await this.reader.updateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
 ```
 
 ## resetRuntimeSettings
@@ -136,7 +137,7 @@ await this.reader.updateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST)
 Reset the barcode decoding settings.
 
 ```js
-resetRuntimeSettings(): Promise<boolean>;
+resetRuntimeSettings(): Promise<boolean>
 ```
 
 **Code Snippet**
@@ -150,7 +151,7 @@ await this.reader.resetRuntimeSettings();
 Output the barcode decoding settings to string.
 
 ```js
-outputRuntimeSettingsToString(): Promise<String>;
+outputRuntimeSettingsToString(): Promise<string>
 ```
 
 **Return Value**
@@ -196,7 +197,7 @@ await this.reader.stopScanning();
 Specifies an event handler that fires after the library finishes scanning a frame.
 
 ```js
-addResultListener(listener: (results: BarcodeResult[]) => void): void;
+addResultListener(listener: (results: BarcodeResult[]) => void): void
 ```
 
 **Parameters**
@@ -209,20 +210,17 @@ addResultListener(listener: (results: BarcodeResult[]) => void): void;
 state = {
   results: null
 };
-this.reader.addResultListener((results: BarcodeResult[]) => {
-  this.setState({results: results})
-})
 componentDidMount() {
   (async () => {
     try {
       await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
     } catch (e) {
-      console.log(e.code);
+      console.log(e);
     }
     this.reader = await DynamsoftBarcodeReader.createInstance();
     await this.reader.startScanning();
-    this.reader.addResultListener((results: BarcodeResult[]) => {
-      this.setState({results: results});
+    this.reader.addResultListener((results) => {
+      this.setState({results});
     });
   })();
 }
