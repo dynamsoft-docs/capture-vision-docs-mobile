@@ -28,7 +28,7 @@ The UI component of Dynamsoft Capture Vision. It provides the following function
 The property for users to specify the region of interest.
 
 ```js
-scanRegion: any;
+scanRegion: Region;
 ```
 
 **Code Snippet**
