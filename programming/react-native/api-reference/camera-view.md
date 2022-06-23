@@ -11,7 +11,17 @@ breadcrumbText: Camera View class
 
 # DynamsoftCameraView Class
 
-The component class of Dynamsoft Capture Vision.
+The UI component of Dynamsoft Capture Vision. It provides the following functions:
+
+- Implement basic camera control like open, close, etc.
+- Define the scan area where barcode reading is performed.
+- Display the video preview, overlay, scan region etc.
+
+| Property | Description |
+| ------- | ----------- |
+| [`scanRegion`](#scanregion) | The property for users to specify the region of interest. |
+| [`scanRegionVisible`](#scanregionvisible) | A property that indicates whether the [`scanRegion`](#scanregion) is visible. |
+| [`overlayVisible`](#overlayvisible) | A property that indicates whether the `overlays` are visible. |
 
 ## scanRegion
 
@@ -25,8 +35,7 @@ scanRegion: any;
 
 ```jsx
 render() {
-    let region: Region
-    region = {
+    let region = {
         regionTop: 0,
         regionLeft: 10,
         regionBottom: 55,
@@ -39,8 +48,8 @@ render() {
                 flex: 1
             }}
             ref = {(ref)=>{this.scanner = ref}}
-            isOverlayVisible={true}
-            isScanRegionVisible={true}
+            overlayVisible={true}
+            scanRegionVisible={true}
             scanRegion={region}
         >
         </DynamsoftCameraView>
@@ -48,24 +57,24 @@ render() {
 }
 ```
 
-## isScanRegionVisible
+## scanRegionVisible
 
 A property that indicates whether the [`scanRegion`](#scanregion) is visible.
 
 ```js
-isScanRegionVisible: boolean;
+scanRegionVisible: boolean;
 ```
 
 **Code Snippet**
 
 View code snippet in the [`scanRegion`](#scanregion) section.
 
-## isOverlayVisible
+## overlayVisible
 
 A property that indicates whether the `overlays` are visible.
 
 ```js
-isOverlayVisible: boolean;
+overlayVisible: boolean;
 ```
 
 **Code Snippet**

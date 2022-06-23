@@ -11,7 +11,17 @@ breadcrumbText: Camera View class
 
 # DynamsoftCameraView Class
 
-The component class of Dynamsoft Capture Vision.
+The UI component of Dynamsoft Capture Vision. It provides the following functions:
+
+- Implement basic camera control like open, close, etc.
+- Define the scan area where barcode reading is performed.
+- Display the video preview, overlay, scan region etc.
+
+| Property | Description |
+| ------- | ----------- |
+| [`scanRegion`](#scanregion) | The property for users to specify the region of interest. |
+| [`scanRegionVisible`](#scanregionvisible) | A property that indicates whether the [`scanRegion`](#scanregion) is visible. |
+| [`overlayVisible`](#overlayvisible) | A property that indicates whether the `overlays` are visible. |
 
 ## scanRegion
 
@@ -29,30 +39,30 @@ Region scanRegion = Region(regionTop: 20, regionBottom: 80, regionLeft: 20, regi
 _cameraView.scanRegion = scanRegion;
 ```
 
-## isScanRegionVisible
+## scanRegionVisible
 
 A property that indicates whether the [`scanRegion`](#scanregion) is visible.
 
 ```dart
-isScanRegionVisible(bool isVisible)
+scanRegionVisible(bool isVisible)
 ```
 
 **Code Snippet**
 
 ```dart
-_cameraView.isScanRegionVisible = true;
+_cameraView.scanRegionVisible = true;
 ```
 
-## isOverlayVisible
+## overlayVisible
 
 A property that indicates whether the `overlays` are visible.
 
 ```dart
-isOverlayVisible(bool isVisible)
+overlayVisible(bool isVisible)
 ```
 
 **Code Snippet**
 
 ```dart
-_cameraView.isOverlayVisible = true;
+_cameraView.overlayVisible = true;
 ```

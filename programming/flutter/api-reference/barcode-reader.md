@@ -11,6 +11,8 @@ breadcrumbText: Barcode Reader class
 
 # DynamsoftBarcodeReader Class
 
+A barcode reader object accesses to a camera via DynamsoftCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
+
 | Methods | Description |
 | ------- | ----------- |
 | [`initLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision.
