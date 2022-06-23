@@ -28,7 +28,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Using the settings templates](#using-the-settings-templates)
   - [Using the DBRRuntimeSettings interface](#using-the-dbrruntimesettings-interface)
   - [Customizing the scan region](#customizing-the-scan-region)
-- [Get a license Key]()
+- [Licensing](#licensing)
 
 ## System Requirements
 
@@ -284,7 +284,7 @@ let region = {
         >
 ```
 
-### Get a License Key
+## Licensing
 
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
 - A time-limited public trial license is available for every new device for the first use of Dynamsoft Capture Vision.
