@@ -28,7 +28,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Using the Settings Templates](#using-the-settings-templates)
   - [Using the DBRRuntimeSettings Interface](#using-the-dbrruntimesettings-interface)
   - [Customizing the Scan Region](#customizing-the-scan-region)
-- [Get a License Key]()
+- [Get a License Key](#get-a-license-key)
 
 ## System Requirements
 
@@ -39,5 +39,3 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 ## Customizing the Barcode Reader
 
 ## Get a License Key
-
-##
