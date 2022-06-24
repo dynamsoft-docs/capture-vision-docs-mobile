@@ -185,7 +185,7 @@ render() {
             ref = {(ref)=>{this.scanner = ref}}
             overlayVisible={true}
         >
-            // Add a text box to display the barcode result.
+            {/*Add a text box to display the barcode result.*/}
             <Text style={
                 {
                     flex: 0.9,
