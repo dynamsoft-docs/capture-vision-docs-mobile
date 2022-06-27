@@ -74,8 +74,6 @@ Create a new Flutter project
 flutter create simple_barcode_scanner
 ```
 
-> Note:
-
 ### Include the Library
 
 View the [installation section](#installation) for how to add the library. In **main.dart** of your project, import the library.
