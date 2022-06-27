@@ -49,8 +49,17 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ## Installation
 
+In **pubspec.yaml** add the library of `DynamsoftCaptureVision`
+
+```dart
+dev_dependencies:    
+  dynamsoft_capture_vision_flutter: ^1.0.0
+```
+
+Use the following command to add the library to your project:
+
 ```bash
-flutter pub get 
+flutter pub get
 ```
 
 ## Build Your Barcode Scanner App
@@ -62,14 +71,14 @@ Now you will learn how to create a simple barcode scanner using Dynamsoft Captur
 Create a new Flutter project
 
 ```bash
-flutter create SimpleBarcodeScanner
+flutter create simple_barcode_scanner
 ```
 
 > Note:
 
 ### Include the Library
 
-In **main.dart** of your project, import the library.
+View the [installation section](#installation) for how to add the library. In **main.dart** of your project, import the library.
 
 ```dart
 import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
@@ -179,17 +188,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ### Configure Camera Permissions
 
+Before you run the project on iOS devices, you have to add the camera permission first. You can use the following steps to add the camera permission.
+
+1. In the **ios** folder of your project, find **Runner.xcworkspace**. Open it.
+2. In the **info.plist** of the project, add **Privacy - Camera Usage Description**.
+
 ### Run the Project
 
-#### Run Android on Windows
-
-Use the following command to run your simple_barcode_scanner project.
+In terminal, go to the project folder and run the following command:
 
 ```bash
 flutter run
 ```
 
-#### Run iOS on macOS
+> Notes: You might have to add `minSdkVersion 21` in your build.gradle(app) before running the project on Android devices.
 
 ## Customizing the Barcode Reader
 
