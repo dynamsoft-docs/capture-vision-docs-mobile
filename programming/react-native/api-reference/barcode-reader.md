@@ -25,6 +25,7 @@ A barcode reader object accesses to a camera via DynamsoftCameraView object at n
 | [`startScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
+| [`removeAllResultListeners`](#removeallresultlisteners) | Remove all existing result listener. |
 
 ## initLicense
 
@@ -223,5 +224,23 @@ componentDidMount() {
       this.setState({results});
     });
   })();
+}
+```
+
+## removeAllResultListeners
+
+Remove all existing result listener.
+
+```js
+removeAllResultListeners(): void;
+```
+
+**Code Snippet**
+
+```js
+async componentWillUnmount() {
+  ...
+  // Remove the result listener when your component is unmount.
+  this.reader.removeAllResultListeners()
 }
 ```

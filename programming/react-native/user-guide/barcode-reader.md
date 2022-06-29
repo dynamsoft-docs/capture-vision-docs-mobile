@@ -185,7 +185,7 @@ render() {
             ref = {(ref)=>{this.scanner = ref}}
             overlayVisible={true}
         >
-            // Add a text box to display the barcode result.
+            {/*Add a text box to display the barcode result.*/}
             <Text style={
                 {
                     flex: 0.9,
@@ -236,7 +236,9 @@ There are several ways in which you can customize the Barcode Reader - but what 
 
 DBR offers several preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example:
 
-`await this.reader.updateDBRRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);`
+```js
+await this.reader.updateDBRRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
+```
 
 ### Using the DBRRuntimeSettings interface
 
@@ -289,4 +291,4 @@ let region = {
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
 - A time-limited public trial license is available for every new device for the first use of Dynamsoft Capture Vision.
 - If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
-- [Contact Us](https://www.dynamsoft.com/company/contact/)  to purchase a full license
+- [Contact Us](https://www.dynamsoft.com/company/contact/)  to purchase a full license.
