@@ -129,7 +129,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _configDBR() async {
-
     /// Create an instance of barcode reader.
     _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 
