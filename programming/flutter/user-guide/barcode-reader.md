@@ -82,6 +82,26 @@ View the [installation section](#installation) for how to add the library. In **
 import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
 ```
 
+### License Activation
+
+The barcode reading module of Dynamsoft Capture Vision needs a valid license to work. In the **main()** function, add the following code to activate the license.
+
+```dart
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Put your license here.
+  final String licenseKey = '';
+  // Initialize the license so that you can use full feature of the Barcode Reader module.
+  try {
+    await DynamsoftBarcodeReader.initLicense(license: licenseKey);
+  } catch (e) {
+    print(e);
+  }
+
+  runApp(const MyApp());
+}
+```
+
 ### Configure the Barcode Reader
 
 In this section, we are going to work on the **_MyHomePageState** class in the newly created project to add the barcode decoding feature.
@@ -109,9 +129,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _configDBR() async {
-    
-    await DynamsoftBarcodeReader.initLicense(license: "Put Your License Key Here!");
-
     /// Create an instance of barcode reader.
     _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 
@@ -199,7 +216,10 @@ In terminal, go to the project folder and run the following command:
 flutter run
 ```
 
-> Notes: You might have to add `minSdkVersion 21` in your build.gradle(app) before running the project on Android devices.
+> Notes:
+>
+> - When running Android, you might have to add `minSdkVersion 21` in your build.gradle(app) before running the project on Android devices.
+> - When running iOS, you might have to open the Xcode and go to the **Deployment Info** section of the project to switch the iOS version to 10.0+.
 
 ## Customizing the Barcode Reader
 

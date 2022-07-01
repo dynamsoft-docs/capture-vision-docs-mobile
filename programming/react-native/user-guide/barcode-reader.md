@@ -18,6 +18,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 - [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
+  - [Set up Development Environment](#set-up-development-environment)
   - [Initialize the Project](#initialize-the-project)
   - [Include the Library](#include-the-library)
   - [Configure the Barcode Reader](#configure-the-barcode-reader)
@@ -71,6 +72,10 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision SDK.
 
+### Set up Development Environment
+
+If you are a beginner on React Native, please follow the guide on <a href="https://reactnative.dev/docs/environment-setup" target="_blank">React Native official website</a> to set up the development environment.
+
 ### Initialize the Project
 
 Create a new React Native project.
@@ -83,7 +88,19 @@ npx react-native init SimpleBarcodeScanner
 
 ### Include the Library
 
-Add the SDK to your new project. Please read the [Installation](#installation) section for more details. Once the SDK is added, you will see a reference to it in the **package.json**.
+Add the SDK to your new project. Once the SDK is added, you will see a reference to it in the **package.json**.
+
+- **yarn**
+
+  ```bash
+  yarn add dynamsoft-capture-vision-react-native
+  ```
+
+- **npm**
+
+  ```bash
+  npm install dynamsoft-capture-vision-react-native
+  ```
 
 For iOS, you must install the necessary native frameworks from cocoapods to run the application. In order to do this, the `pod install` command needs to be run as such:
 
@@ -105,10 +122,7 @@ import {Text} from 'react-native';
 import {
     DynamsoftBarcodeReader,
     DynamsoftCameraView,
-    BarcodeResult,
-    EnumDBRPresetTemplate,
-    EnumBarcodeFormat,
-    DBRRuntimeSettings
+    EnumBarcodeFormat
 } from 'dynamsoft-capture-vision-react-native';
 ```
 
@@ -126,37 +140,47 @@ export default App;
 Next is the `componentDidMount` implementation. First up is adding the code to start barcode decoding:
 
 ```js
-componentDidMount() {
-    (async () => {
-        // Initialize the license so that you can use full feature of the Barcode Reader module.
-        try {
-            await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
-        } catch (e) {
-            console.log(e);
-        }
-        // Create a barcode reader instance.
-        this.reader = await DynamsoftBarcodeReader.createInstance();
-        // Enable video barcode scanning.
-        // If the camera is opened, the barcode reader will start the barcode decoding thread when you triggered the startScanning.
-        // The barcode reader will scan the barcodes continuously before you trigger stopScanning.
-        await this.reader.startScanning();
-        // Add a result listener. The result listener will handle callback when barcode result is returned. 
-        this.reader.addResultListener((results) => {
-            // Update the newly detected barcode results to the state.
-            this.setState({results});
-        });
-    })();
+class App extends React.Component {
+    ...
+    componentDidMount() {
+        (async () => {
+            // Initialize the license so that you can use full feature of the Barcode Reader module.
+            try {
+                await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+            } catch (e) {
+                console.log(e);
+            }
+            // Create a barcode reader instance.
+            this.reader = await DynamsoftBarcodeReader.createInstance();
+
+            // Add a result listener. The result listener will handle callback when barcode result is returned. 
+            this.reader.addResultListener((results) => {
+                // Update the newly detected barcode results to the state.
+                this.setState({results});
+            });
+
+            // Enable video barcode scanning.
+            // If the camera is opened, the barcode reader will start the barcode decoding thread when you triggered the startScanning.
+            // The barcode reader will scan the barcodes continuously before you trigger stopScanning.
+            this.reader.startScanning();
+        })();
+    }
+    ...
 }
 ```
 
 After implementing `componentDidMount`, `componentWillUnmount` will then include code to stop the barcode decoding and remove the result listener.
 
 ```js
-async componentWillUnmount() {
-    // Stop the barcode decoding thread when your component is unmount.
-    await this.reader.stopScanning();
-    // Remove the result listener when your component is unmount.
-    this.reader.removeAllResultListeners();
+class App extends React.Component {
+    ...
+    async componentWillUnmount() {
+        // Stop the barcode decoding thread when your component is unmount.
+        await this.reader.stopScanning();
+        // Remove the result listener when your component is unmount.
+        this.reader.removeAllResultListeners();
+    }
+    ...
 }
 ```
 
@@ -165,38 +189,41 @@ async componentWillUnmount() {
 Lastly, let's create the `DynamsoftCameraView` UI component in the `render` function.
 
 ```jsx
-render() {
-    // Add code to fetch barcode text and format from the BarcodeResult
-    let results = this.state.results;
-    let resultBoxText = "";
-    if (results && results.length>0){
-        for (let i=0;i<results.length;i++){
-            resultBoxText+=results[i].barcodeFormatString+"\n"+results[i].barcodeText+"\n";
-        }
-    }
-    // Render DynamsoftCameraView componment.
-    return (
-        <DynamsoftCameraView
-            style={
-                {
-                    flex: 1
-                }
+class App extends React.Component {
+    ...
+    render() {
+        // Add code to fetch barcode text and format from the BarcodeResult
+        let results = this.state.results;
+        let resultBoxText = "";
+        if (results && results.length>0){
+            for (let i=0;i<results.length;i++){
+                resultBoxText+=results[i].barcodeFormatString+"\n"+results[i].barcodeText+"\n";
             }
-            ref = {(ref)=>{this.scanner = ref}}
-            overlayVisible={true}
-        >
-            {/*Add a text box to display the barcode result.*/}
-            <Text style={
-                {
-                    flex: 0.9,
-                    marginTop: 100,
-                    textAlign: "center",
-                    color: "white",
-                    fontSize: 18,
+        }
+        // Render DynamsoftCameraView componment.
+        return (
+            <DynamsoftCameraView
+                style={
+                    {
+                        flex: 1
+                    }
                 }
-            }>{results && results.length > 0 ? resultBoxText : "No Barcode Detected"}</Text>
-        </DynamsoftCameraView>
-    );
+                ref = {(ref)=>{this.scanner = ref}}
+                overlayVisible={true}
+            >
+                {/*Add a text box to display the barcode result.*/}
+                <Text style={
+                    {
+                        flex: 0.9,
+                        marginTop: 100,
+                        textAlign: "center",
+                        color: "white",
+                        fontSize: 18,
+                    }
+                }>{results && results.length > 0 ? resultBoxText : "No Barcode Detected"}</Text>
+            </DynamsoftCameraView>
+        );
+    }
 }
 ```
 
@@ -237,7 +264,13 @@ There are several ways in which you can customize the Barcode Reader - but what 
 DBR offers several preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example:
 
 ```js
-await this.reader.updateDBRRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
+componentDidMount() {
+    ...
+    (async () => {
+        await this.reader.updateDBRRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
+    })();
+    ...
+}
 ```
 
 ### Using the DBRRuntimeSettings interface
@@ -245,15 +278,19 @@ await this.reader.updateDBRRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIR
 The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to [`DBRRuntimeSettings`](../api-reference/interface-dbr-runtime-settings.md). Here is a quick example:
 
 ```js
-// Get the current runtime settings of the barcode reader.
-let settings = await this.reader.getDBRRuntimeSettings();
-// Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
-// Set the expected barcode count to 1 can maximize the barcode decoding speed.
-settings.expectedBarcodesCount = 0;
-// Set the barcode formats to read.
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX;
-// Apply the new settings to the barcode reader.
-await this.reader.updateDBRRuntimeSettings(settings);
+componentDidMount() {
+    (async () => {
+        // Get the current runtime settings of the barcode reader.
+        let settings = await this.reader.getDBRRuntimeSettings();
+        // Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
+        // Set the expected barcode count to 1 can maximize the barcode decoding speed.
+        settings.expectedBarcodesCount = 0;
+        // Set the barcode formats to read.
+        settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX;
+        // Apply the new settings to the barcode reader.
+        await this.reader.updateDBRRuntimeSettings(settings);
+    })();
+}
 ```
 
 ### Customizing the scan region
@@ -263,27 +300,35 @@ You can also limit the scan region of the SDK so that it doesn't exhaust resourc
 First, the region must be defined using the Region interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
 
 ```jsx
-let barcode_text = "";
-// Define the scan region.
-let region = {
-    regionTop: 30,
-    regionLeft: 15,
-    regionBottom: 70,
-    regionRight: 85,
-    regionMeasuredByPercentage: true
-}
-...
-        <DynamsoftCameraView
-            style={
-                {
-                    flex: 1
+class App extends React.Component {
+    render() {
+        let barcode_text = "";
+        // Define the scan region.
+        let region = {
+            regionTop: 30,
+            regionLeft: 15,
+            regionBottom: 70,
+            regionRight: 85,
+            regionMeasuredByPercentage: true
+        }
+        ...
+        return (
+            <DynamsoftCameraView
+                style={
+                    {
+                        flex: 1
+                    }
                 }
-            }
-            ref = {(ref)=>{this.scanner = ref}}
-            overlayVisible={true}
-            scanRegionVisible={true}
-            scanRegion={region}
-        >
+                ref = {(ref)=>{this.scanner = ref}}
+                overlayVisible={true}
+                scanRegionVisible={true}
+                scanRegion={region}
+            >
+            ...
+            </DynamsoftCameraView>
+        );
+    }
+}
 ```
 
 ### Get a License Key

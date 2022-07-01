@@ -11,8 +11,21 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.0 (07/01/2022)
+
+### Highlights
+
+{%- include release-notes/product-highlight-1.1.0.md -%}
+
+### Changelog
+
+#### New
+
+- Added a new property `torchState` and a new enumeration `EnumTorchState`. User can turn on/off the torchlight by changing the value of `torchState`.
+- Added a new property `torchButton` and interface `TorchButton`, `Rect`.  for users to configure the torch button on the UI.
+
 ## 1.0.0 (06/23/2022)
 
-### HighLights
+### Highlights
 
 {%- include release-notes/product-highlight-1.0.0.md -%}
