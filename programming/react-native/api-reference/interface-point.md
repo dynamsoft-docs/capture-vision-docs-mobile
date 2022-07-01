@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Interface Point - Dynamsoft Capture Vision React Native Edition
-description: The interface of DBR runtime settings
+description: The interface of Point
 keywords: Interface Point, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
