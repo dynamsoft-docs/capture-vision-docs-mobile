@@ -11,7 +11,7 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
-## 1.1.0 (07/12/2022)
+## 1.1.0 (07/01/2022)
 
 ### Highlights
 

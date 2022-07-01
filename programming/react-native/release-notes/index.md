@@ -11,5 +11,5 @@ breadcrumbText: Release Notes
 
 # Release Notes - React Native
 
-- [1.1.0 (07/12/2022)](rn-1.md#100-07122022)
+- [1.1.0 (07/01/2022)](rn-1.md#100-07012022)
 - [1.0.0 (06/23/2022)](rn-1.md#100-06232022)
