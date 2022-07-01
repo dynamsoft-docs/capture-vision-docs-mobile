@@ -18,6 +18,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 - [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
+  - [Set up Development Environment](#set-up-development-environment)
   - [Initialize the Project](#initialize-the-project)
   - [Include the Library](#include-the-library)
   - [Configure the Barcode Reader](#configure-the-barcode-reader)
