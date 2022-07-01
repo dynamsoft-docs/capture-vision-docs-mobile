@@ -109,7 +109,7 @@ let settings = await this.reader.getRuntimeSettings();
 Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
 
 ```js
-updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTemplate | String): Promise<boolean>
+updateRuntimeSettings(settings: DBRRuntimeSettings | EnumDBRPresetTemplate | String): Promise<boolean>
 ```
 
 **Parameters**
