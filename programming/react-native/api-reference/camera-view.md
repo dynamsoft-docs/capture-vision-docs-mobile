@@ -103,7 +103,7 @@ torchState={EnumTorchState.OFF}
 
 ## torchButton
 
-The property that indicates how the torch button will be displayed. The torch button can be displayed on the UI to control the state of torch light. View interface [TorchButton](interface-torch-button.md) to see all available properties for torch button configuration.
+The property that indicates how the torch button will be displayed. The torch button can be displayed on the UI to control the state of torch light. View [interface TorchButton](interface-torch-button.md) to see all available properties for torch button configuration.
 
 ```js
 torchButton: TorchButton;
