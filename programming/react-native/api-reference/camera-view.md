@@ -119,12 +119,14 @@ let rect = {
     height:100
 }
 ...
-torchButton={{
-    location: rect,
-    visible: true,
-    //When the flashlight is on, the button will appear as this image.
-    torchOnImageBase64: "Put Your Base64 String Here",
-    //When the flashlight is off, the button will appear as this image.
-    torchOffImageBase64: "Put Your Base64 String Here"
-}}
+torchButton={
+    {
+        location: rect,
+        visible: true,
+        //When the flashlight is on, the button will appear as this image.
+        torchOnImageBase64: "Put Your Base64 String Here",
+        //When the flashlight is off, the button will appear as this image.
+        torchOffImageBase64: "Put Your Base64 String Here"
+    }
+}
 ```
