@@ -11,7 +11,7 @@ breadcrumbText: EnumTorchState
 
 # EnumTorchState
 
-`EnumTorchState` is the enumeration of preset barcode setting templates.
+`EnumTorchState` is the enumeration for available torch (flash) states.
 
 ```js
 enum EnumTorchState{

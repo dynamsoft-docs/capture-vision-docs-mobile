@@ -22,7 +22,7 @@ breadcrumbText: 1.x
 #### New
 
 - Added a new property [`torchState`](../api-reference/camera-view.md#torchstate) and a new enumeration [`EnumTorchState`](../api-reference/enum-torch-state.md). User can turn on/off the torchlight by changing the value of [`torchState`](../api-reference/camera-view.md#torchstate).
-- Added a new property [`torchButton`](../api-reference/camera-view.md#torchbutton) and interface [`TorchButton`](../api-reference/interface-torch-button.md), [`Rect`](../api-reference/interface-rect.md) for users to configure the torch button on the UI.
+- Added a new property [`torchButton`](../api-reference/camera-view.md#torchbutton) and two new interfaces, [`TorchButton`](../api-reference/interface-torch-button.md) and [`Rect`](../api-reference/interface-rect.md), for users to configure the torch button on the UI.
 
 ## 1.0.0 (06/23/2022)
 
