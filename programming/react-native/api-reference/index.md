@@ -28,6 +28,8 @@ breadcrumbText: API Index
 | [`Quadrilateral`](class-quadrilateral.md) | The interface that stores the vertex coordinates of a quadrilateral.|
 | [`Point`](class-point.md) | The interface that stores the x and y coordinates of the point. |
 | [`Region`](interface-region.md) | The interface of region. Users can configure region of interest. |
+| [`Rect`](interface-rect.md) | The interface of rect. |
+| [`TorchButton`](interface-torch-button.md) | The interface of torch button. It includes the properities that determines the location, visibility and image of the torch button. |
 
 ## Enumerations
 
@@ -36,3 +38,4 @@ breadcrumbText: API Index
 | [`EnumBarcodeFormat`](enum-barcode-format.md) | The enumeration stores the first group of barcode formats. |
 | [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration stores the second group of barcode formats. |
 | [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
+| [`EnumTorchState`](enum-torch-state.md) | The enumeration of torch state. |

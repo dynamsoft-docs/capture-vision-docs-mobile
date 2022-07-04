@@ -21,10 +21,11 @@ A barcode reader object accesses to a camera via DynamsoftCameraView object at n
 | [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
 | [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
 | [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
-| [`outputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
+| [`outputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`startScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
+| [`removeAllResultListeners`](#removeallresultlisteners) | Remove all existing result listener. |
 
 ## initLicense
 
@@ -108,7 +109,7 @@ let settings = await this.reader.getRuntimeSettings();
 Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
 
 ```js
-updateRuntimeSettings(settings: DBRRuntimeSettings | number | EnumDBRPresetTemplate | String): Promise<boolean>
+updateRuntimeSettings(settings: DBRRuntimeSettings | EnumDBRPresetTemplate | String): Promise<boolean>
 ```
 
 **Parameters**
@@ -223,5 +224,23 @@ componentDidMount() {
       this.setState({results});
     });
   })();
+}
+```
+
+## removeAllResultListeners
+
+Remove all existing result listener.
+
+```js
+removeAllResultListeners(): void;
+```
+
+**Code Snippet**
+
+```js
+async componentWillUnmount() {
+  ...
+  // Remove the result listener when your component is unmount.
+  this.reader.removeAllResultListeners()
 }
 ```
