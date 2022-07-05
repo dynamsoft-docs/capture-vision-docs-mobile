@@ -32,9 +32,10 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ## System Requirements
 
-### Flutter
+### Flutter & Dart
 
-- Supported Versions: 2.0.0 or higher.
+- Flutter version: >=2.0.0
+- Dart version: >=2.12.0 <3.0.0
 
 ### Android
 
@@ -66,7 +67,7 @@ dependencies:
 
 ## Build Your Barcode Scanner App
 
-Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision SDK.
+Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Flutter SDK.
 
 ### Initialize the Project
 
@@ -135,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 
     /// Receive the barcode decoding results and store the result in object decodeResults
-    _barcodeReader.addResultlistener().listen((List<BarcodeResult> res) {
+    _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {
       if (mounted) {
         setState(() {
           this.decodeResults = res;
@@ -147,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _barcodeReader.startScanning();
 
     /// When overlayVisible is set to true, the decoded barcodes will be highlighted with overlays.
-    _cameraView.isOverlayVisible = true;
+    _cameraView.overlayVisible = true;
   }
 }
 ```
