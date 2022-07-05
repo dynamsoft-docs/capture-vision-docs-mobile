@@ -206,10 +206,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ### Configure Camera Permissions
 
-Before you run the project on iOS devices, you have to add the camera permission first. You can use the following steps to add the camera permission.
+Before you run the project on iOS devices, you have to add the camera permission first.
 
-1. In the **ios** folder of your project, find **Runner.xcworkspace**. Open it.
-2. In the **info.plist** of the project, add **Privacy - Camera Usage Description**.
+In the project folder, go to file **ios/Runner/info.plist**, add the following code for requesting camera permission.
+
+```xml
+<plist version="1.0">
+<dict>
+  ...
+  <key>NSCameraUsageDescription</key>
+  <string>Request your authorization.</string>
+  ...
+</dict>
+```
 
 ### Run the Project
 
@@ -219,10 +228,39 @@ In terminal, go to the project folder and run the following command:
 flutter run
 ```
 
-> Notes:
->
-> - When running Android, you might have to add `minSdkVersion 21` in your build.gradle(app) before running the project on Android devices.
-> - When running iOS, you might have to open the Xcode and go to the **Deployment Info** section of the project to switch the iOS version to 10.0+.
+#### Run Android on Windows
+
+Go to the file **build.gradle(app)**, add the following code in 
+
+```java
+android {
+   defaultConfig {
+      ...
+      minSdkVersion 21
+      ...
+   }
+}
+```
+
+In the root of your project run the following command to build and install the app:
+
+```bash
+flutter run
+```
+
+#### Run iOS on macOS
+
+Go to the **podfile** in **ios** folder and add the following code at the top of the file:
+
+```objc
+platform:ios, '10.0'
+```
+
+In the root of your project run the following command to build and install the app:
+
+```bash
+flutter run
+```
 
 ## Customizing the Barcode Reader
 
@@ -244,9 +282,9 @@ currentSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
 currentSettings.expectedBarcodeCount = 10;
 currentSettings.timeout = 500;
 try {
-  await _barcodeReader.updateRuntimeSettings(settings: currentSettings);
+   await _barcodeReader.updateRuntimeSettings(settings: currentSettings);
 } catch (e) {
-  print('error = $e');
+   print('error = $e');
 }
 ```
 
