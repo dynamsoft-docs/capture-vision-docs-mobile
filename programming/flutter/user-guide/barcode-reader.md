@@ -69,6 +69,10 @@ dependencies:
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Flutter SDK.
 
+### Set up Development Environment
+
+If you are a beginner with Flutter, please follow the guide on the <a href="https://docs.flutter.dev/get-started/install" target="_blank">Flutter official website</a> to set up the development environment.
+
 ### Initialize the Project
 
 Create a new Flutter project
