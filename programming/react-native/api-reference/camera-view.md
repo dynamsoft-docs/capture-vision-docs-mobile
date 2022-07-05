@@ -88,15 +88,13 @@ View code snippet in the [`scanRegion`](#scanregion) section.
 The property that indicates whether the torch (flash) is toggled on or off. It can be set via one of the [EnumTorchState](enum-torch-state.md) options.
 
 ```js
-torchState: string | number;
+torchState: number;
 ```
 
 **Code Snippet**
 
 ```js
 // The following data can be assigned to the torchState
-torchState={"on"}
-torchState={"off"}
 torchState={EnumTorchState.ON}
 torchState={EnumTorchState.OFF}
 ```
