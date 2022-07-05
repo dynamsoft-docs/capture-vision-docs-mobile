@@ -29,7 +29,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Using the settings templates](#using-the-settings-templates)
   - [Using the DBRRuntimeSettings interface](#using-the-dbrruntimesettings-interface)
   - [Customizing the scan region](#customizing-the-scan-region)
-- [Get a license Key](#get-a-license-key)
+- [Licensing](#licensing)
 
 ## System Requirements
 
@@ -74,7 +74,7 @@ Now you will learn how to create a simple barcode scanner using Dynamsoft Captur
 
 ### Set up Development Environment
 
-If you are a beginner on React Native, please follow the guide on <a href="https://reactnative.dev/docs/environment-setup" target="_blank">React Native official website</a> to set up the development environment.
+If you are a beginner with React Native, please follow the guide on the <a href="https://reactnative.dev/docs/environment-setup" target="_blank">React Native official website</a> to set up the development environment.
 
 ### Initialize the Project
 
@@ -331,7 +331,7 @@ class App extends React.Component {
 }
 ```
 
-### Get a License Key
+## Licensing
 
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
 - A time-limited public trial license is available for every new device for the first use of Dynamsoft Capture Vision.
