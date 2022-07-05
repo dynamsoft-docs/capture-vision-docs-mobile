@@ -222,12 +222,6 @@ In the project folder, go to file **ios/Runner/info.plist**, add the following c
 
 ### Run the Project
 
-In terminal, go to the project folder and run the following command:
-
-```bash
-flutter run
-```
-
 #### Run Android on Windows
 
 Go to the file **build.gradle(app)**, add the following code in 
