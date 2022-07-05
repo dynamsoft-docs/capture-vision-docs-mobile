@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: Guide of Barcode Reader
 ---
 
-# Dynamsoft Capture Vision - Barcode Reader User Guide
+# Dynamsoft Capture Vision - Barcode Reader for React Native User Guide
 
 In this guide, we will explore the Barcode Reader module of the Dynamsoft Capture Vision library.
 
@@ -52,7 +52,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ### Others
 
-- Node: 16.15.1 recommended
+- Node: 16.15.1+ recommended
 
 ## Installation
 
@@ -84,7 +84,7 @@ Create a new React Native project.
 npx react-native init SimpleBarcodeScanner
 ```
 
->Note: This sample uses react 17.0.2 and react-native 0.65.0.
+>Note: This sample uses React 17.0.2 and React Native 0.65.0.
 
 ### Include the Library
 
@@ -102,7 +102,7 @@ Add the SDK to your new project. Once the SDK is added, you will see a reference
   npm install dynamsoft-capture-vision-react-native
   ```
 
-For iOS, you must install the necessary native frameworks from cocoapods to run the application. In order to do this, the `pod install` command needs to be run as such:
+For iOS, you can install the necessary native frameworks from cocoapods by running the `pod install` command as below:
 
 ```bash
 cd ios
@@ -126,7 +126,7 @@ import {
 } from 'dynamsoft-capture-vision-react-native';
 ```
 
-Next in `App.js`, let's define the `state` to your component. In the `state`, add a `results` variable, initialized to null. In the following steps, we will store the newly decoded barcodes to `results`.
+Next in `App.js`, let's define the `state` to your component. In the `state`, add a `results` variable, initialized to `null`. In the following steps, we will store the newly decoded barcodes to `results`.
 
 ```js
 class App extends React.Component {
@@ -235,7 +235,7 @@ You need to set the "Privacy - Camera Usage Description" field in the `Info.plis
 
 #### Run Android on Windows
 
-In the command line interface (we recommend using Powershell), go to your project folder and run the following command:
+In the command line interface (Powershell recommended), go to your project folder and run the following command:
 
 ```bash
 npx react-native run-android
