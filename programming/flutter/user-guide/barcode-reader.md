@@ -9,9 +9,9 @@ noTitleIndex: true
 breadcrumbText: Guide of Barcode Reader
 ---
 
-# Dynamsoft Capture Vision - Barcode Reader User Guide
+# Dynamsoft Capture Vision - Barcode Reader for Flutter User Guide
 
-In this guide, we will explore the Barcode Reader module of the Dynamsoft Capture Vision library.
+In this guide, we will explore the Barcode Reader module of the Dynamsoft Capture Vision library for Flutter.
 
 ## Table of Contents
 
@@ -58,7 +58,7 @@ Run the following command:
 flutter pub add dynamsoft_capture_vision_flutter
 ```
 
-This will add a line like this to your package's pubspec.yaml (and run an implicit flutter pub get):
+This will add a line like this to your package's `pubspec.yaml` (and run an implicit flutter pub get):
 
 ```dart
 dependencies:
@@ -75,7 +75,7 @@ If you are a beginner with Flutter, please follow the guide on the <a href="http
 
 ### Initialize the Project
 
-Create a new Flutter project
+Create a new Flutter project.
 
 ```bash
 flutter create simple_barcode_scanner
@@ -91,7 +91,7 @@ import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutte
 
 ### License Activation
 
-The barcode reading module of Dynamsoft Capture Vision needs a valid license to work. In the **main()** function, add the following code to activate the license.
+The barcode reading module of Dynamsoft Capture Vision needs a valid license to work. In the `main()` function, add the following code to activate the license:
 
 ```dart
 void main() async {
@@ -111,7 +111,7 @@ void main() async {
 
 ### Configure the Barcode Reader
 
-In this section, we are going to work on the **_MyHomePageState** class in the newly created project to add the barcode decoding feature.
+In this section, we are going to work on the `_MyHomePageState` class in the newly created project to add the barcode decoding feature.
 
 Define the following attributes:
 
@@ -125,7 +125,7 @@ List<BarcodeResult> decodeRes = [];
 - `cameraView`: The camera view that displays the video streaming.
 - `decodeResults`: An object that will be used to receive and stores barcode decoding result.
 
-Add in the **initState** add an **async** method to initialize the barcode reader.
+Add in `initState` an `async` method to initialize the barcode reader.
 
 ```dart
 class _MyHomePageState extends State<MyHomePage> {
@@ -179,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ### Build the Widget
 
-Modify the **build** method to display the decode barcode results on the widget.
+Modify the `build` method to display the decode barcode results on the widget.
 
 ```dart
 class _MyHomePageState extends State<MyHomePage> {
@@ -210,9 +210,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ### Configure Camera Permissions
 
-Before you run the project on iOS devices, you have to add the camera permission first.
+Before you run the project on iOS devices, you need to add the camera permission first.
 
-In the project folder, go to file **ios/Runner/info.plist**, add the following code for requesting camera permission.
+In the project folder, go to file `ios/Runner/info.plist`, add the following code for requesting camera permission:
 
 ```xml
 <plist version="1.0">
@@ -228,7 +228,7 @@ In the project folder, go to file **ios/Runner/info.plist**, add the following c
 
 #### Run Android on Windows
 
-Go to the file **build.gradle(app)**, add the following code in 
+Go to the file `build.gradle(app)`, add the following code: 
 
 ```java
 android {
@@ -264,7 +264,7 @@ flutter run
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to EnumPresetTemplate. Here is a quick example:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
 
 ```dart
 await _barcodeReader.updateRuntimeSettingsFromTemplate(template: EnumDBRPresetTemplate.VIDEO_READ_RATE_FIRST );
@@ -272,7 +272,7 @@ await _barcodeReader.updateRuntimeSettingsFromTemplate(template: EnumDBRPresetTe
 
 ### Using the DBRRuntimeSettings Interface
 
-The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to DBRRuntimeSettings. Here is a quick example:
+The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to `DBRRuntimeSettings`. Here is a quick example:
 
 ```dart
 DBRRuntimeSettings currentSettings = await _barcodeReader.getRuntimeSettings();
@@ -288,9 +288,9 @@ try {
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the Region interface as well as the DynamsoftCameraView component.
+You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` interface as well as the `DynamsoftCameraView` component.
 
-First, the region must be defined using the Region interface. In this example, we demonstrate how the region is first defined in the render() function and then assigned to the scanRegion parameter of the DynamsoftCameraView component:
+First, the region must be defined using the `Region` interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
 
 ```dart
 final DynamsoftCameraView _cameraView = DynamsoftCameraView();
@@ -303,4 +303,4 @@ _cameraView.scanRegion = scanRegion;
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
 - A time-limited public trial license is available for every new device for the first use of Dynamsoft Capture Vision.
 - If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
-- [Contact Us](https://www.dynamsoft.com/company/contact/)  to purchase a full license.
+- [Contact Us](https://www.dynamsoft.com/company/contact/) to purchase a full license.
