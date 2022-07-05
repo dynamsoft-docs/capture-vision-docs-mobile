@@ -25,8 +25,8 @@ breadcrumbText: API Index
 | [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) | Interface of Barcode settings. |
 | [`BarcodeResult`](interface-barcode-result.md) | Interface of barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
 | [`BarcodeLocationResult`](interface-barcode-location-result.md) | The location result of the detected barcodes. |
-| [`Quadrilateral`](class-quadrilateral.md) | The interface that stores the vertex coordinates of a quadrilateral.|
-| [`Point`](class-point.md) | The interface that stores the x and y coordinates of the point. |
+| [`Quadrilateral`](interface-quadrilateral.md) | The interface that stores the vertex coordinates of a quadrilateral.|
+| [`Point`](interface-point.md) | The interface that stores the x and y coordinates of the point. |
 | [`Region`](interface-region.md) | The interface of region. Users can configure region of interest. |
 | [`Rect`](interface-rect.md) | The interface of rect. |
 | [`TorchButton`](interface-torch-button.md) | The interface of torch button. It includes the properities that determines the location, visibility and image of the torch button. |
