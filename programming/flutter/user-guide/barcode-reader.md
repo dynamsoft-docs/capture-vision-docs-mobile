@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {
       if (mounted) {
         setState(() {
-          this.decodeResults = res;
+          decodeResults = res;
         });
       }
     });
@@ -160,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ...
   /// Get listItem
   Widget listItem(BuildContext context, int index) {
-    BarcodeResult res = this.decodeResults[index];
+    BarcodeResult res = decodeResults[index];
 
     return ListTileTheme(
         textColor: Colors.white,
@@ -194,8 +194,8 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             height: 200,
             child: ListView.builder(
-              itemBuilder: this.listItem,
-              itemCount: this.decodeResults.length,
+              itemBuilder: listItem,
+              itemCount: decodeResults.length,
             ),
           ),
         ],
