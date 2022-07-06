@@ -11,6 +11,13 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.1 (07/06/2022)
+
+### Fixed
+
+- Fixed a bug that might cause a crash when using the library in React Native 0.69.0+.
+- Fixed a bug that `torchState` might not be set correctly.
+
 ## 1.1.0 (07/01/2022)
 
 ### Highlights
