@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: Guide of Barcode Reader
 ---
 
-# Dynamsoft Capture Vision - Barcode Reader for React Native User Guide
+# Barcode Reader User Guide for React Native
 
 In this guide, we will explore the Barcode Reader module of the Dynamsoft Capture Vision library.
 
