@@ -11,7 +11,7 @@ breadcrumbText: BarcodeLocationResult
 
 # BarcodeLocationResult
 
-Class `BarcodeLocationResult`. The location of a quadrilateral area. It can be the location of a decoded barcode, a recognized label or a deteced document area
+Class `BarcodeLocationResult`. The location of a quadrilateral area which indicates the location of the detected barcode.
 
 ```dart
 class BarcodeLocationResult {

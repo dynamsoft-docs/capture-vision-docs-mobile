@@ -11,7 +11,7 @@ breadcrumbText: BarcodeLocationResult
 
 # BarcodeLocationResult
 
-Interface `BarcodeLocationResult`. The location of a quadrilateral area. It can be the location of a decoded barcode, a recognized label or a deteced document area
+Interface `BarcodeLocationResult`. The location of a quadrilateral area which indicates the location of the detected barcode.
 
 ```js
 export interface BarcodeLocationResult {
