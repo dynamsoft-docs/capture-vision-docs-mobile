@@ -33,4 +33,4 @@ breadcrumbText: Release Notes
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 1.0.0 | [React-Native]({{site.rn-release-notes}}rn-1.html#100-06232022) |
+| 1.0.0 | [React-Native]({{site.rn-release-notes}}rn-1.html#100-06232022) / [flutter]({{site.flutter-release-notes}}flutter-1.html#100-07122022) |

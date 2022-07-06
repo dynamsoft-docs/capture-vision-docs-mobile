@@ -11,7 +11,7 @@ breadcrumbText: 1.x
 
 # Release Notes for Flutter SDK - 1.x
 
-## 1.0.0 (04/01/2022)
+## 1.0.0 (07/12/2022)
 
 ### HighLights
 
