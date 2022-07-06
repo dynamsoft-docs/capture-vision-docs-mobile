@@ -127,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 - `barcodeReader`: The object that implements the barcode decoding feature. Users can configure barcode decoding settings via this object.
 - `cameraView`: The camera view that displays the video streaming.
-- `decodeResults`: An object that will be used to receive and stores barcode decoding result.
+- `decodeResults`: An object that will be used to receive and store barcode decoding results.
 
 Add **_configDBR** method to initialize the barcode reader:
 
