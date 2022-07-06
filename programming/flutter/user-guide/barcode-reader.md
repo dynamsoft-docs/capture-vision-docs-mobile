@@ -118,7 +118,7 @@ List<BarcodeResult> decodeRes = [];
 
 - `barcodeReader`: The object that implements barcode decoding feature. Users can configure barcode decoding settings via this object.
 - `cameraView`: The camera view that displays the video streaming.
-- `decodeResults`: An object that will be used to receive and stores barcode decoding result.
+- `decodeResults`: An object that will be used to receive and store barcode decoding results.
 
 Add in the **initState** add an **async** method to initialize the barcode reader.
 
