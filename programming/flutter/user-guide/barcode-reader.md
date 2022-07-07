@@ -1,12 +1,12 @@
 ---
 layout: default-layout
 title: Getting Started with Barcode Reader
-description: This page is the user guide of Dynamsoft Capture Vision - Barcode Reader module
-keywords: User guide, Barcode Reader
+description: This is the user guide of Dynamsoft Capture Vision Flutter edition - Barcode Reader module
+keywords: User guide, Barcode Reader, Flutter, Capture Vision, Dynamsoft
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Guide of Barcode Reader
+breadcrumbText: Guide of Dynamsoft Barcode Reader Flutter
 ---
 
 # Barcode Reader User Guide for Flutter
@@ -85,7 +85,7 @@ flutter create simple_barcode_scanner
 
 ### Include the Library
 
-View the [installation section](#installation) for how to add the library. In **main.dart** of your project, import the library.
+View the [installation section](#installation) on how to add the library. In **main.dart** of your project, import the library.
 
 ```dart
 import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
@@ -93,7 +93,7 @@ import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutte
 
 ### License Activation
 
-The barcode reading module of Dynamsoft Capture Vision needs a valid license to work. In the `main()` function, add the following code to activate the license:
+The barcode reading module of Dynamsoft Capture Vision needs a valid license to work. Please refer to the [Licensing](#licensing) section for more info on how to obtain a license. In the `main()` function, add the following code to activate the license:
 
 ```dart
 void main() async {
@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 - `barcodeReader`: The object that implements the barcode decoding feature. Users can configure barcode decoding settings via this object.
-- `cameraView`: The camera view that displays the video streaming.
+- `cameraView`: The camera view that displays the video stream (from a camera input).
 - `decodeResults`: An object that will be used to receive and store barcode decoding results.
 
 Add **_configDBR** method to initialize the barcode reader:
@@ -254,7 +254,7 @@ flutter run
 
 #### Run iOS on macOS
 
-Go to the **podfile** in **ios** folder and add the following code at the top of the file:
+Go to the **Podfile** in **ios** folder and add the following code at the top of the file:
 
 ```objc
 platform:ios, '10.0'
@@ -296,7 +296,7 @@ try {
 
 You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` interface as well as the `DynamsoftCameraView` component.
 
-First, the region must be defined using the `Region` interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
+First, let's define the `DynamsoftCameraView` object. Next, we will define the region using the `Region` interface. In this example, we define a rectangular `Region` whose dimensions are measured as a percentage of the total dimensions. It is then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
 
 ```dart
 final DynamsoftCameraView _cameraView = DynamsoftCameraView();
