@@ -16,7 +16,7 @@ breadcrumbText: 1.x
 ### Fixed
 
 - Fixed a bug that might cause a crash when using the library in React Native 0.69.0+.
-- Fixed a bug that `torchState` might not be set correctly.
+- Fixed a bug that [`torchState`](../api-reference/camera-view.md#torchstate) might not be set correctly.
 
 ## 1.1.0 (07/01/2022)
 
