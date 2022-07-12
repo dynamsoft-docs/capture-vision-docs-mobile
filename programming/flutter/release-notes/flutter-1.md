@@ -13,6 +13,4 @@ breadcrumbText: 1.x
 
 ## 1.0.0 (07/12/2022)
 
-### HighLights
-
 {%- include release-notes/product-highlight-1.0.0.md -%}
