@@ -27,6 +27,11 @@ The following code snippets are using the public trial license to initialize the
 
 Open the **App.js** file. In componentDidMount, add the following code:
 
+<div class="sample-code-prefix"></div>
+>- React Native
+>- Flutter
+>
+>1. 
 ```js
 componentDidMount() {
    (async () => {
@@ -40,5 +45,13 @@ componentDidMount() {
          console.log(e)
       }
    })();
+}
+```
+2. 
+```dart
+try {
+   await DynamsoftBarcodeReader.initLicense(license: 'Put-Your-License-Here');
+} catch (e) {
+   print('license error = $e');
 }
 ```
