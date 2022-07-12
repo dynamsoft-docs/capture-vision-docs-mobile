@@ -16,7 +16,7 @@ Interface `Quadrilateral`.
 ```dart
 class Quadrilateral {
     /// The vertex coordinates of the quadrilateral.
-    final List<Point> points;
+    List<Point> points;
 }
 ```
 

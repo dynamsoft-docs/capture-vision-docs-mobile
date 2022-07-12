@@ -1,9 +1,6 @@
 
 
-- The Dynamsoft Capture Vision v1.0 is released. The features of the following functional products are included:
-  - DynamsoftBarcodeReader Module
-  - DynamsoftCameraView Module
-- Dynamsoft Capture Vision 1.0 is available for the following platforms:
-  - React Native
-  - Flutter
+- Dynamsoft Capture Vision (DCV) is an aggregating SDK of a series of specific functional products. In 1.0 version, The following products are included:
+  - Dynamsoft Camera Enhancer (DCE): Provides camera enhancements and UI configuration APIs.
+  - Dynamsoft Barcode Reader (DBR): Provides barcode decoding algorithm and APIs.
 
