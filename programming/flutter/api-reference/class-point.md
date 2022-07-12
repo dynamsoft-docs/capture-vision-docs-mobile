@@ -16,10 +16,10 @@ Class `Point`.
 ```dart
 class Point {
     /// The x coordinates of the point.
-    final int x;
+    int x;
 
     /// The y coordinates of the point.
-    final int y;
+    int y;
 }
 ```
 

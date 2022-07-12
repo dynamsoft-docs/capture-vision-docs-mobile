@@ -42,7 +42,11 @@ static Future<bool> initLicense({required String license})
 **Code Snippet**
 
 ```dart
-await DynamsoftBarcodeReader.initLicense(license: 'Put-Your-License-Here');
+try {
+    await DynamsoftBarcodeReader.initLicense(license: 'Put-Your-License-Here');
+} catch (e) {
+    print('license error = $e');
+}
 ```
 
 ## createInstance
@@ -69,7 +73,7 @@ _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
 
 ```dart
-Future<String> getVersion()
+Future<String?> getVersion()
 ```
 
 **Return Value**
@@ -203,7 +207,7 @@ try {
 Output the barcode decoding settings to string.
 
 ```dart
-Future<String> outputRuntimeSettingsToString()
+Future<String?> outputRuntimeSettingsToString()
 ```
 
 **Return Value**
@@ -273,5 +277,5 @@ late final DynamsoftBarcodeReader _barcodeReader;
 await DynamsoftBarcodeReader.initLicense(license: '**********');
 _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 _barcodeReader.startScanning();
-_barcodeReader.addResultlistener().listen((List<BarcodeResult> res) {});
+_barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {});
 ```

@@ -16,16 +16,16 @@ Interface `Region`.
 ```dart
 class Region extends Serializer {
     /// The y coordinate of the Top border of the region.
-    final int regionTop;
+    int regionTop;
     /// The y coordinate of the Bottom border of the region.
-    final int regionBottom;
+    int regionBottom;
     /// The x coordinate of the left border of the region.
-    final int regionLeft;
+    int regionLeft;
     /// The x coordinate of the right border of the region.
-    final int regionRight;
+    int regionRight;
     /// If measured by percentage, the above values will be recognized as percentage (1 to 100).
     /// Otherwise, the above values will be recognized as pixel length.
-    final bool regionMeasuredByPercentage;
+    bool regionMeasuredByPercentage;
 }
 ```
 
