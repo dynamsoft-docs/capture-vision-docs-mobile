@@ -11,7 +11,7 @@ breadcrumbText: API Index
 
 # Xamarin API Reference
 
-## Name Space DCVXamarin
+## namespace DCVXamarin
 
 ### Primary Classess/Interfaces
 
@@ -42,14 +42,14 @@ breadcrumbText: API Index
 | [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration stores the second group of barcode formats. |
 | [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
 
-## Name Space DCVXamarin.Droid
+## namespace DCVXamarin.Droid
 
 | Classes | Description |
 | ------- | ----------- |
 | [`CameraEnhancer`](camera-enhancer.md) | Implements ICameraEnhancer on Android. |
 | [`BarcodeRader`](barcode-reader.md) | Implements IBarcodeReader on Android. |
 
-## Name Space DCVXamarin.iOS
+## namespace DCVXamarin.iOS
 
 | Classes | Description |
 | ------- | ----------- |

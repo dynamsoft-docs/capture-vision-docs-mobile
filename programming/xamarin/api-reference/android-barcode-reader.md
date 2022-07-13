@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: BarcodeReader Class under Name space Xamarin.Droid
+title: BarcodeReader Class under namespace Xamarin.Droid
 description: BarcodeReader class of Xamarin.Droid implements the IBarcodeReader interface on Android.
 keywords: BarcodeReader, API reference, Xamarin.Droid
 needAutoGenerateSidebar: true

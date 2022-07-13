@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CameraEnhancer Class under Name space Xamarin.iOS
+title: CameraEnhancer Class under namespace Xamarin.iOS
 description: CameraEnhancer class of Xamarin.iOS implements the ICameraEnhancer interface on iOS.
 keywords: CameraEnhancer, API reference, Xamarin.iOS
 needAutoGenerateSidebar: true

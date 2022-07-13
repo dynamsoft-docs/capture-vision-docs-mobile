@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: BarcodeReader Class under Name space Xamarin.iOS
+title: BarcodeReader Class under namespace Xamarin.iOS
 description: BarcodeReader class of Xamarin.iOS implements the IBarcodeReader interface on iOS.
 keywords: BarcodeReader, API reference, Xamarin.iOS
 needAutoGenerateSidebar: true

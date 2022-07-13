@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CameraEnhancer Class under Name space Xamarin.Droid
+title: CameraEnhancer Class under namespace Xamarin.Droid
 description: CameraEnhancer class of Xamarin.Droid implements the ICameraEnhancer interface on Android.
 keywords: CameraEnhancer, API reference, Xamarin.Droid
 needAutoGenerateSidebar: true

@@ -23,7 +23,7 @@ interface ICameraEnhancer
     width: 100%;
   }
   .markdown-body > table tr th:first-child {
-    width: 20%;
+    width: 30%;
   }
 </style>
 
@@ -39,9 +39,7 @@ interface ICameraEnhancer
 | -------- | ----------- |
 | [`ScanRegionVisible`](#scanregionvisible) | A property that indicates whether the `ScanRegion` is visible. |
 
-## Method Detail
-
-### SetScanRegion
+## SetScanRegion
 
 Specify a region of interest.
 
@@ -69,7 +67,7 @@ App.camera.SetScanRegion(scanRegion);
 
 - [Region](class-region.md)
 
-### Open
+## Open
 
 Open the camera.
 
@@ -77,7 +75,7 @@ Open the camera.
 void Open();
 ```
 
-### Close
+## Close
 
 Close the camera.
 
@@ -85,7 +83,7 @@ Close the camera.
 void Close();
 ```
 
-### TurnOnTorch
+## TurnOnTorch
 
 Turn on the torch.
 
@@ -93,7 +91,7 @@ Turn on the torch.
 void TurnOnTorch();
 ```
 
-### TurnOffTorch
+## TurnOffTorch
 
 Turn off the torch.
 
@@ -101,9 +99,7 @@ Turn off the torch.
 void TurnOffTorch();
 ```
 
-## Property Detail
-
-### ScanRegionVisible
+## ScanRegionVisible
 
 A property that indicates whether the [`ScanRegion`](#scanregion) is visible.
 
