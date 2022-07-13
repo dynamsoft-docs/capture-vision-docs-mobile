@@ -25,14 +25,13 @@ breadcrumbText: License Activation
 
 The following code snippets are using the public trial license to initialize the license. You can replace the public trial license with your own license key.
 
-Open the **App.js** file. In componentDidMount, add the following code:
-
 <div class="sample-code-prefix"></div>
 >- React Native
 >- Flutter
 >
 >1. 
 ```js
+// Open the **App.js** file. In componentDidMount, add the following code:
 componentDidMount() {
    (async () => {
       try {
@@ -45,9 +44,12 @@ componentDidMount() {
 ```
 2. 
 ```dart
-try {
-   await DynamsoftBarcodeReader.initLicense(license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9');
-} catch (e) {
-   print('license error = $e');
+void main() async {
+   WidgetsFlutterBinding.ensureInitialized();
+   try {
+      await DynamsoftBarcodeReader.initLicense(license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9');
+   } catch (e) {
+      print('license error = $e');
+   }
 }
 ```
