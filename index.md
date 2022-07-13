@@ -15,5 +15,6 @@ breadcrumbText: Index
 - [Programming](programming/index.md)
   - [React Native](programming/react-native/index.md)
   - [Flutter](programming/flutter/index.md)
+  - [Xamarin.Forms](programming/xamarin/index.md)
 - [Release Notes](release-notes.md)
 - [License Activation](license/set-full-license.md)

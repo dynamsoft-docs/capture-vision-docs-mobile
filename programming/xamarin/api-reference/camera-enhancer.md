@@ -17,22 +17,31 @@ The interface `ICameraEnhancer` provides camera and camera related hardware cont
 interface ICameraEnhancer
 ```
 
-| Property | Description |
+| Method | Description |
 | ------- | ----------- |
 | [`SetScanRegion`](#setscanregion) | The property for users to specify the region of interest. |
-| [`ScanRegionVisible`](#scanregionvisible) | A property that indicates whether the [`ScanRegion`](#scanregion) is visible. |
 | [`Open`](#open) | Open the camera. |
 | [`Close`](#close) | Close the camera. |
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-## ScanRegion
+| Property | Description |
+| -------- | ----------- |
+| [`ScanRegionVisible`](#scanregionvisible) | A property that indicates whether the `ScanRegion` is visible. |
 
-The property for users to specify the region of interest.
+## Method Detail
+
+### SetScanRegion
+
+Specify a region of interest.
 
 ```c#
-Region ScanRegion;
+void SetScanRegion(Region scanRegion);
 ```
+
+**Parameters**
+
+`scanRegion`: An object of `Region` class. It contains the properitirs that indicates the location of the region. View more in [`Region`](class-region.md).
 
 **Code Snippet**
 
@@ -50,15 +59,7 @@ App.camera.SetScanRegion(scanRegion);
 
 - [Region](class-region.md)
 
-## ScanRegionVisible
-
-A property that indicates whether the [`ScanRegion`](#scanregion) is visible.
-
-```c#
-bool ScanRegionVisible;
-```
-
-## Open
+### Open
 
 Open the camera.
 
@@ -66,7 +67,7 @@ Open the camera.
 void Open();
 ```
 
-## Close
+### Close
 
 Close the camera.
 
@@ -74,7 +75,7 @@ Close the camera.
 void Close();
 ```
 
-## TurnOnTorch
+### TurnOnTorch
 
 Turn on the torch.
 
@@ -82,10 +83,20 @@ Turn on the torch.
 void TurnOnTorch();
 ```
 
-## TurnOffTorch
+### TurnOffTorch
 
 Turn off the torch.
 
 ```c#
 void TurnOffTorch();
+```
+
+## Property Detail
+
+### ScanRegionVisible
+
+A property that indicates whether the [`ScanRegion`](#scanregion) is visible.
+
+```c#
+bool ScanRegionVisible;
 ```

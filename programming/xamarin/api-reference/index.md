@@ -19,7 +19,7 @@ breadcrumbText: API Index
 | ------- | ----------- |
 | [`IBarcodeReader`](barcode-reader.md) | The interface that contains barcode decoding related APIs. |
 | [`ICameraEnhancer`](camera-enhancer.md) | The interface that contains camera control and camera enhancements related APIs. |
-| [CameraView](camera-view.md) | The class that helps you deploy a camera view for displaying and processing the video stream. You can also add basic UI elements on the view. |
+| [`CameraView`](camera-view.md) | The class that helps you deploy a camera view for displaying and processing the video stream. You can also add basic UI elements on the view. |
 
 ### Auxiliary Classess/Interfaces
 
@@ -30,9 +30,9 @@ breadcrumbText: API Index
 | [`BarcodeResult`](class-barcode-result.md) | The class that stores the barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
 | [`BarcodeLocationResult`](class-barcode-location-result.md) | The class that stores the location result of the detected barcodes. |
 | [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) | The class that stores barcode decoding settings. |
-| [TorchButton](class-torch-button.md) | The class stores the torch button configurations. |
-| [ILicenseVerificationListener](interface-license-verification-listener.md) | The listener for users to receive license verification message from the license server. |
-| [IBarcodeResultListener](interface-barcode-result-listener.md) | The listener for users to receive the decoded barcode results. |
+| [`TorchButton`](class-torch-button.md) | The class stores the torch button configurations. |
+| [`ILicenseVerificationListener`](interface-license-verification-listener.md) | The listener for users to receive license verification message from the license server. |
+| [`IBarcodeResultListener`](interface-barcode-result-listener.md) | The listener for users to receive the decoded barcode results. |
 
 ### Enumerations
 
