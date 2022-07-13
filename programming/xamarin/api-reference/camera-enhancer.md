@@ -17,6 +17,8 @@ The interface `ICameraEnhancer` provides camera and camera related hardware cont
 interface ICameraEnhancer
 ```
 
+<style>table {width: 100%;}</style>
+
 | Method | Description |
 | ------- | ----------- |
 | [`SetScanRegion`](#setscanregion) | The property for users to specify the region of interest. |

@@ -17,7 +17,7 @@ A barcode reader object accesses to a camera via DynamsoftCameraView object at n
 interface IBarcodeReader
 ```
 
-| Methods | Description |
+| Method | Description |
 | ------- | ----------- |
 | [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision.
  |
