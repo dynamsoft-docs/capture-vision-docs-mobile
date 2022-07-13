@@ -22,6 +22,9 @@ interface ICameraEnhancer
     display: table;
     width: 100%;
   }
+  .markdown-body > table tr th:first-child {
+    width: 20%;
+  }
 </style>
 
 | Method | Description |
