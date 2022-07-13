@@ -17,7 +17,12 @@ The interface `ICameraEnhancer` provides camera and camera related hardware cont
 interface ICameraEnhancer
 ```
 
-<style>table {width: 100%;}</style>
+<style>
+  .markdown-body > table {
+    display: table;
+    width: 100%;
+  }
+</style>
 
 | Method | Description |
 | ------- | ----------- |
