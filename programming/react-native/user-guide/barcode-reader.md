@@ -231,6 +231,8 @@ class App extends React.Component {
 
 You need to set the "Privacy - Camera Usage Description" field in the `Info.plist` file for iOS. If this property is not set, the iOS application will fail at runtime. In order to set this property, you might need to use Xcode and open the corresponding `.xcworkspace` located in the `ios` folder. Once open, you can edit the `Info.plist` to include this property.
 
+>You can download a similar source code from [Here](https://github.com/Dynamsoft/capture-vision-react-native-samples/archive/refs/heads/main.zip).
+
 ### Run the Project
 
 #### Run Android on Windows
