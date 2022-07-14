@@ -230,6 +230,8 @@ In the project folder, go to file `ios/Runner/info.plist`, add the following cod
 </dict>
 ```
 
+>You can download a silimar source code from [Here](https://github.com/Dynamsoft/capture-vision-flutter-samples/archive/refs/heads/main.zip).
+
 ### Run the Project
 
 #### Run Android on Windows
