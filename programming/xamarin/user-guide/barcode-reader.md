@@ -67,10 +67,19 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 ### Initialize the Project
 
+#### Visual Studio
+
 1. Open the Visual Studio and select **Create a new project**.
 2. Select **Mobile App (Xamarin.Forms)** and click **Next**.
 3. Here we name the project **SimpleBarcodeScanner**. Select a location for the project and click **Create**.
 4. Select Blank and click **Create**.
+
+#### Vidual Studio for Mac
+
+1. Open the Visual Studio and select **New**.
+2. Select **Multiplatform > App > Blank App > c#** and click **Next**.
+3. Name the project **SimpleBarcodeScanner** and click **Next**.
+4. Select a location for the project and click **Create**.
 
 ### Include the Library
 
