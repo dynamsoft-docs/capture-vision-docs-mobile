@@ -153,13 +153,22 @@ namespace SimpleBarcodeScanner
 
 ```
 
-### Configure the Barcode Reader
+### Configure the CameraView
 
-In this section, we are going to add configurations for barcode decoding in the **MainPage** of the project.
+In the **MainPage.xaml** add the `CameraView`:
 
-#### Setup the Barcode Decoding Thread
+```xml
+<StackLayout>
+    <local:CameraView Camera="Rear"
+            OverlayVisible="true"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
+</StackLayout>
+```
 
-Open the MainPage.xaml.cs and add the following code:
+### Open the Camera and Start Barcode Decoding
+
+In this section, we are going to add code to start barcode decoding in the **MainPage** of the project. Open the **MainPage.xaml.cs** and add the following code:
 
 ```c#
 namespace SimpleBarcodeScanner
@@ -194,7 +203,9 @@ namespace SimpleBarcodeScanner
 }
 ```
 
-#### Receive and Display the Results
+### Obtaining Barcode Results
+
+Since you have configured on the barcode decoding thread, the library will start decoding from the video steam when the **MainPage** appears. You can use interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`. Continue working on the **MainPage.xaml.cs** to add configurations of `IBarcodeResultListener`.
 
 ```c#
 namespace SimpleBarcodeScanner
@@ -213,15 +224,19 @@ namespace SimpleBarcodeScanner
         {
             // Here is an example code on how to display the barcode results on the view.
             string newBarcodeText = "";
+            // The parameter 'barcodeResults' is an Array of BarcodeResult object.
+            // Parse the 'barcodeResults' when it is not null.
             if (barcodeResults != null && barcodeResults.Length>0)
             {
                 for (int i=0; i<barcodeResults.Length; i++)
                 {
                     {
+                        //The BarcodeText property of BarcodeResult is the string of barcode text result.
                         newBarcodeText += barcodeResults[i].BarcodeText;
                         newBarcodeText += "; ";
                     }
                 }
+                // On UI thread, refresh the previously prepared label with new barcode results.
                 Device.BeginInvokeOnMainThread(()=> {
                     barcodeResultLabel.Text = newBarcodeText;
                 });
@@ -231,13 +246,32 @@ namespace SimpleBarcodeScanner
 }
 ```
 
-### Configure the CameraView
+In **MainPage.xaml**, add a label for displaying the barcode results
+
+```xml
+<StackLayout>
+    <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
+</StackLayout>
+```
 
 ### Run the Project
 
 #### Run Android on Windows
 
+Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
+
+<div align="center">
+    <p><img src="../assets/xamarin-run.png" width="70%" alt="run"></p>
+    <p>Run Your Project</p>
+</div>
+
 #### Run iOS on macOS
+
+1. Right click on the **SimpleBarcodeReader.iOS** and select **Set As Startup Project**.
+2. In the menu, select and click **Run > Start Debugging**.
+
+> Note:
+> Please view the official website for how to run iOS on Windows or run Android on macOS
 
 ## Customizing the Barcode Reader
 
