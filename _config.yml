@@ -23,6 +23,11 @@ flutter-api: /capture-vision/docs/programming/flutter/api-reference/
 flutter-release-notes: /capture-vision/docs/programming/flutter/release-notes/
 flutter-guide: /capture-vision/docs/programming/flutter/user-guide/
 
+xamarin: /capture-vision/docs/programming/xamarin/
+xamarin-api: /capture-vision/docs/programming/xamarin/api-reference/
+xamarin-release-notes: /capture-vision/docs/programming/xamarin/release-notes/
+xamarin-guide: /capture-vision/docs/programming/xamarin/user-guide/
+
 assets: /capture-vision/docs/assets/
 edit_icon: /capture-vision/docs/assets/img-icon/edit-icon.png
 smile_icon: /capture-vision/docs/assets/img-icon/icon-smile.png

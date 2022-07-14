@@ -71,6 +71,8 @@ dependencies:
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Flutter SDK.
 
+>Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-flutter-samples/tree/main/barcode_reader_simple_sample)
+
 ### Set up Development Environment
 
 If you are a beginner with Flutter, please follow the guide on the <a href="https://docs.flutter.dev/get-started/install" target="_blank">Flutter official website</a> to set up the development environment.
@@ -265,6 +267,8 @@ In the root of your project run the following command to build and install the a
 ```bash
 flutter run
 ```
+
+>Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-flutter-samples/tree/main/barcode_reader_simple_sample)
 
 ## Customizing the Barcode Reader
 
