@@ -165,7 +165,6 @@ class App extends React.Component {
             this.reader.startScanning();
         })();
     }
-    ...
 }
 ```
 
@@ -180,7 +179,6 @@ class App extends React.Component {
         // Remove the result listener when your component is unmount.
         this.reader.removeAllResultListeners();
     }
-    ...
 }
 ```
 
