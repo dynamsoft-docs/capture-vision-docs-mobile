@@ -260,8 +260,39 @@ In **MainPage.xaml**, add a label for displaying the barcode results
 ```xml
 <StackLayout>
     <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
+    ...
 </StackLayout>
 ```
+
+### Add Camera Permission
+
+#### Android
+
+Add the following code in **MainActivity.cs** for requesting camera permission on Android devices.
+
+```c#
+namespace SimpleBarcodeScanner.Droid
+{
+    ...
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            ...
+            Permissions.RequestAsync<Permissions.Camera>();
+        }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            ...
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+}
+```
+
+#### iOS
+
+Add **Privacy - Camera Usage Description** and your message to the **info.plist** of your project.
 
 ### Run the Project
 
@@ -274,13 +305,10 @@ Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
     <p>Run Your Project</p>
 </div>
 
-#### Run iOS on macOS
+#### Run iOS & Android on macOS
 
-1. Right click on the **SimpleBarcodeReader.iOS** and select **Set As Startup Project**.
+1. Right click on the **SimpleBarcodeReader.iOS** or **SimpleBarcodeReader.Android** and select **Set As Startup Project**.
 2. In the menu, select and click **Run > Start Debugging**.
-
-> Note:
-> Please view the official website for how to run iOS on Windows or run Android on macOS
 
 ## Customizing the Barcode Reader
 
@@ -289,6 +317,7 @@ Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
 DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
 
 ```c#
+BarcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST);
 ```
 
 ### Using the DBRRuntimeSettings Interface
@@ -296,6 +325,11 @@ DBR offers several preset templates for different popular scenarios. For example
 The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to `DBRRuntimeSettings`. Here is a quick example:
 
 ```c#
+DBRRuntimeSettings settings = BarcodeReader.GetRuntimeSettings();
+settings.BarcodeFormatIds = EnumBarcodeFormat.BF_ONED;
+settings.ExpectedBarcodeCount = 0;
+settings.Timeout = 1000;
+BarcodeReader.UpdateRuntimeSettings(settings);
 ```
 
 ### Customizing the Scan Region
@@ -309,6 +343,13 @@ How to set scan region:
 - Use the `Region` you created as the parameter to active `SetScanRegion` method of `ICameraEnhancer`.
 
 ```c#
+DCVXamarin.Region region = new DCVXamarin.Region();
+region.RegionTop = 30;
+region.RegionBottom = 70;
+region.RegionLeft = 15;
+region.RegionRight = 85;
+region.RegionMeasuredByPercentage = 1;
+Camera.SetScanRegion(region);
 ```
 
 ## Licensing
