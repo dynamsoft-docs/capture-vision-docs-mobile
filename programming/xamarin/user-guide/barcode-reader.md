@@ -57,7 +57,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ## Installation
 
-In the **NuGet Package Manager** of your project, search for **DCVXamarin** and install the package.
+In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **DCVXamarin**. Select all the modules of your project and click **install**.
 
 ## Build Your Barcode Scanner App
 
