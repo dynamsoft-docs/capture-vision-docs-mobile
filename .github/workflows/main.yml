@@ -50,8 +50,9 @@ jobs:
           cd /home/ubuntu
           [ ! -d DCVDocPreview ] && mkdir -p DCVDocPreview
           [ ! -d capture-vision-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile-preview          
+          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
           cd capture-vision-docs-mobile-preview && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile-preview/* ./DCVDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDocPreview/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCPDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocPreview/_config.yml
           cd DCVDocPreview && bundle exec jekyll build --incremental
