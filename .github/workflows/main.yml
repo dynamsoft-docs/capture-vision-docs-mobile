@@ -45,6 +45,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a set of commands using the runners shell
+      - name: clear space
+        run: |
+          cd /home/ubuntu 
+          [ -d DCVDocPreview ] && rm -rf DCVDocPreview
+          [ -d capture-vision-docs-mobile-preview ] && rm -rf capture-vision-docs-mobile-preview
+          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
+          cd /home/ubuntu
+
       - name: Build the site
         run: |
           cd /home/ubuntu
