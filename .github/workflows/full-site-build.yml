@@ -43,7 +43,9 @@ jobs:
         run: |
           cd /home/ubuntu
           [ -d DCVDocPreview ] && rm -rf DCVDocPreview
+          [ -d capture-vision-docs-mobile-preview ] && rm -rf capture-vision-docs-mobile-preview
           [ ! -d DCVDocPreview ] && mkdir -p DCVDocPreview
+          [ ! -d capture-vision-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/capture-vision-docs-mobile.git capture-vision-docs-mobile-preview
           cd capture-vision-docs-mobile-preview && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile-preview/* ./DCVDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
