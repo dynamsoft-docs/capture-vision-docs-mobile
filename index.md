@@ -1,5 +1,5 @@
 ---
-layout: default-layout
+layout: home-page
 title: Dynamsoft Capture Vision - Index
 description: This is the Index Page of Dynamsoft Capture Vision.
 keywords:  Capture Vision, Index
@@ -11,10 +11,18 @@ breadcrumbText: Index
 
 # Dynamsoft Capture Vision
 
-- [Introduction](introduction/index.md)
-- [Programming](programming/index.md)
-  - [React Native](programming/react-native/index.md)
-  - [Flutter](programming/flutter/index.md)
-  - [Xamarin](programming/xamarin/index.md)
-- [Release Notes](release-notes.md)
-- [License Activation](license/set-full-license.md)
+* [Introduction](introduction/index.md)
+
+<hr>
+DEVELOPMENT
+<hr>
+
+* [React Native](programming/react-native/index.md)
+* [Flutter](programming/flutter/index.md)
+* [Xamarin](programming/xamarin/index.md)
+
+<hr>
+USEFUL RESOURCES
+<hr>
+
+* [License Activation](license/set-full-license.md)
