@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Interface ICameraEnhancer of Dynamsoft Capture Vision Xamarin Edition
-description: This page is the API reference of Interface ICameraEnhancer
-keywords: Interface ICameraEnhancer, API reference
+title: Interface IDCVCameraEnhancer of Dynamsoft Capture Vision Xamarin Edition
+description: This page is the API reference of Interface IDCVCameraEnhancer
+keywords: Interface IDCVCameraEnhancer, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: ICameraEnhancer
+breadcrumbText: IDCVCameraEnhancer
 ---
 
-# Interface ICameraEnhancer
+# Interface IDCVCameraEnhancer
 
-The interface `ICameraEnhancer` provides camera and camera related hardware controlling APIs.
+The interface `IDCVCameraEnhancer` provides camera and camera related hardware controlling APIs.
 
 ```c#
-interface ICameraEnhancer
+interface IDCVCameraEnhancer
 ```
 
 <style>
