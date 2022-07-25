@@ -1,24 +1,24 @@
 ---
 layout: default-layout
-title: BarcodeReader Class under namespace Xamarin.iOS
-description: BarcodeReader class of Xamarin.iOS implements the IBarcodeReader interface on iOS.
-keywords: BarcodeReader, API reference, Xamarin.iOS
+title: DCVBarcodeReader Class under namespace Xamarin.iOS
+description: DCVBarcodeReader class of Xamarin.iOS implements the IDCVBarcodeReader interface on iOS.
+keywords: DCVBarcodeReader, API reference, Xamarin.iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Xamarin.iOS - BarcodeReader
+breadcrumbText: Xamarin.iOS - DCVBarcodeReader
 ---
 
-# BarcodeReader - DCVXamarin.iOS
+# DCVBarcodeReader - DCVXamarin.iOS
 
-`BarcodeReader` class of DCVXamarin.iOS implements interface `IBarcodeReader` on iOS.
+`DCVBarcodeReader` class of DCVXamarin.iOS implements interface `IDCVBarcodeReader` on iOS.
 
 ```c#
 namespace DCVXamarin.Droid
 {
-    public class BarcodeReaderService : Java.Lang.Object, IBarcodeReader, ITextResultListener, IJavaObject, IDisposable, IJavaPeerable, IDBRLicenseVerificationListener
+    public class DCVBarcodeReaderService : Java.Lang.Object, IDCVBarcodeReader, ITextResultListener, IJavaObject, IDisposable, IJavaPeerable, IDBRLicenseVerificationListener
     {
-        public BarcodeReaderService();
+        public DCVBarcodeReaderService();
         // Methods for license Activation
         public void InitLicense(string license, ILicenseVerificationListener listener);
         public void DBRLicenseVerificationCallback(bool p0, Java.Lang.Exception p1);
@@ -42,4 +42,12 @@ namespace DCVXamarin.Droid
         public void ResetRuntimeSettings();
     }
 }
+```
+
+**Code Snippet**
+
+```c#
+DCVCameraEnhancer dce = new DCVCameraEnhancer();
+DCVBarcodeReader dbr = new DCVBarcodeReader();
+LoadApplication(new App(dce, dbr));
 ```

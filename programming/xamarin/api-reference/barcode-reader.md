@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Interface IBarcodeReader of Dynamsoft Capture Vision Xamarin Edition
-description: This page is the API reference of Interface IBarcodeReader
-keywords: Interface IBarcodeReader, API reference
+title: Interface IDCVBarcodeReader of Dynamsoft Capture Vision Xamarin Edition
+description: This page is the API reference of Interface IDCVBarcodeReader
+keywords: Interface IDCVBarcodeReader, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Interface IBarcodeReader
+breadcrumbText: Interface IDCVBarcodeReader
 ---
 
-# Interface IBarcodeReader
+# Interface IDCVBarcodeReader
 
 A barcode reader object accesses to a camera via DynamsoftCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
 
 ```c#
-interface IBarcodeReader
+interface IDCVBarcodeReader
 ```
 
 | Method | Description |
@@ -125,7 +125,7 @@ App.barcodeReader.UpdateRuntimeSettings(settings);
 Update the barcode decoding settings with a preset template.
 
 ```c#
-void updateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate template)
+void UpdateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate template)
 ```
 
 **Parameters**
@@ -143,7 +143,7 @@ App.barcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SINGLE_BARCO
 Update the barcode decoding settings with a JSON template.
 
 ```c#
-void updateRuntimeSettingsFromTemplate(string jsonTemplate)
+void UpdateRuntimeSettingsFromTemplate(string jsonTemplate)
 ```
 
 **Parameters**
@@ -161,7 +161,7 @@ App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds
 Reset the barcode decoding settings to default value.
 
 ```c#
-void resetRuntimeSettings()
+void ResetRuntimeSettings()
 ```
 
 ## OutputRuntimeSettingsToString
@@ -197,7 +197,17 @@ void StopScanning()
 Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered.
 
 ```c#
-void SetCameraEnhancer()
+void SetCameraEnhancer(IDCVCameraEnhancer dce);
+```
+
+**Parameters**
+
+`dce`: An instance of `IDCVCameraEnhancer`.
+
+**Code Snippet**
+
+```c#
+App.dbr.SetCameraEnhancer(App.dce);
 ```
 
 ## AddResultListener

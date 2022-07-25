@@ -29,3 +29,11 @@ namespace DCVXamarin.Droid
     }
 }
 ```
+
+**Code Snippet**
+
+```c#
+DCVCameraEnhancer dce = new DCVCameraEnhancer(context: this);
+DCVBarcodeReader dbr = new DCVBarcodeReader();
+LoadApplication(new App(dce, dbr));
+```

@@ -1,24 +1,24 @@
 ---
 layout: default-layout
-title: CameraEnhancer Class under namespace Xamarin.iOS
-description: CameraEnhancer class of Xamarin.iOS implements the ICameraEnhancer interface on iOS.
-keywords: CameraEnhancer, API reference, Xamarin.iOS
+title: DCVCameraEnhancer Class under namespace Xamarin.iOS
+description: DCVCameraEnhancer class of Xamarin.iOS implements the IDCVCameraEnhancer interface on iOS.
+keywords: DCVCameraEnhancer, API reference, Xamarin.iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Xamarin.iOS - CameraEnhancer
+breadcrumbText: Xamarin.iOS - DCVCameraEnhancer
 ---
 
-# CameraEnhancer - DCVXamarin.iOS
+# DCVCameraEnhancer - DCVXamarin.iOS
 
-`CameraEnhancer` class of DCVXamarin.iOS implements interface `ICameraEnhancer` on iOS.
+`DCVCameraEnhancer` class of DCVXamarin.iOS implements interface `IDCVCameraEnhancer` on iOS.
 
 ```c#
 namespace DCVXamarin.iOS
 {
-    public class CameraEnhancer : ICameraEnhancer
+    public class DCVCameraEnhancer : IDCVCameraEnhancer
     {
-        public CameraEnhancer();
+        public DCVCameraEnhancer();
 
         public void SetScanRegion(Region region);
         public void ScanRegionVisible(bool isVisible);
@@ -28,4 +28,12 @@ namespace DCVXamarin.iOS
         public void TurnOffTorch();
     }
 }
+```
+
+**Code Snippet**
+
+```c#
+DCVCameraEnhancer dce = new DCVCameraEnhancer();
+DCVBarcodeReader dbr = new DCVBarcodeReader();
+LoadApplication(new App(dce, dbr));
 ```

@@ -21,8 +21,8 @@ breadcrumbText: Xamarin Index
 
 ## API Reference
 
-- [DynamsoftCameraView class](api-reference/camera-view.md)
-- [DynamsoftBarcodeReader class](api-reference/barcode-reader.md)
+- [IDCVCameraEnhancer class](api-reference/camera-view.md)
+- [IDCVBarcodeReader class](api-reference/barcode-reader.md)
 
 ## Release Notes
 

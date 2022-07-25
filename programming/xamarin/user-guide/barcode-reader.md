@@ -87,28 +87,27 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 Add NuGet package **DCVXamarin** to your project. You can view the [installation section](#installation) on how to add the library.
 
-### Initialize IBarcodeReader and ICameraEnhancer
+### Initialize IDCVBarcodeReader and IDCVCameraEnhancer
 
 You have to initialize the follow two interfaces to decode barcodes with the library.
 
-- `IBarcodeReader`: The interface that defines barcode decoding APIs. This is the interface to set up barcode decoding configurations.
-- `ICameraEnhancer`: The interface that defines camera controlling APIs. This is the module for you to set up a camera module to capture video stream.
+- `IDCVBarcodeReader`: The interface that defines barcode decoding APIs. This is the interface to set up barcode decoding configurations.
+- `IDCVCameraEnhancer`: The interface that defines camera controlling APIs. This is the module for you to set up a camera module to capture video stream.
 
-In **App.xaml.cs**, add the following code to initialize the IBarcodeReader and ICameraEnhancer.
+In **App.xaml.cs**, add the following code to initialize the IDCVBarcodeReader and IDCVCameraEnhancer.
 
 ```c#
 namespace SimpleBarcodeScanner
 {
     public partial class App : Application, ILicenseVerificationListener
     {
-        public static ICameraEnhancer Camera;
-        public static IBarcodeReader BarcodeReader;
-        public App(ICameraEnhancer dce, IBarcodeReader dbr)
+        public static IDCVCameraEnhancer camera;
+        public static IDCVBarcodeReader barcodeReader;
+        public App(IDCVCameraEnhancer dce, IDCVBarcodeReader dbr)
         {
             InitializeComponent();
-            Camera = dce;
-            BarcodeReader = dbr;
-
+            camera = dce;
+            barcodeReader = dbr;
             MainPage = new MainPage();
         }
     }
@@ -120,7 +119,13 @@ namespace SimpleBarcodeScanner
 Open the **MainActivity.cs** in **SimpleBarcodeScanner.Android** folder. Change the code of `LoadApplication` to:
 
 ```c#
-LoadApplication(new App(new CameraEnhancer(), new BarcodeReader()));
+protected override void OnCreate(Bundle savedInstanceState)
+{
+    base.OnCreate(savedInstanceState);
+    DCVCameraEnhancer dce = new DCVCameraEnhancer(context: this);
+    DCVBarcodeReader dbr = new DCVBarcodeReader();
+    LoadApplication(new App(dce, dbr));
+}
 ```
 
 #### Implement the Interfaces for iOS
@@ -128,7 +133,14 @@ LoadApplication(new App(new CameraEnhancer(), new BarcodeReader()));
 Open the **AppDelegate.cs** in **SimpleBarcodeScanner.iOS** folder. Change the code of `LoadApplication` to:
 
 ```c#
-LoadApplication(new App(new CameraEnhancer(), new BarcodeReader()));
+public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+{
+    global::Xamarin.Forms.Forms.Init();
+    DCVCameraEnhancer dce = new DCVCameraEnhancer();
+    DCVBarcodeReader dbr = new DCVBarcodeReader();
+    LoadApplication(new App(dce, dbr));
+    return base.FinishedLaunching(app, options);
+}
 ```
 
 ### License Activation
@@ -143,11 +155,11 @@ namespace SimpleBarcodeScanner
     // Add ILicenseVerificationListener to the class and implement LicenseVerificationCallback.
     public partial class App : Application, ILicenseVerificationListener
     {
-        public App(ICameraEnhancer dce, IBarcodeReader dbr)
+        public App(IDCVCameraEnhancer dce, IDCVBarcodeReader dbr)
         {
             ...
             // Initialize the license of barcode reader module.
-            BarcodeReader.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
+            barcodeReader.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
             ...
         }
 
@@ -170,10 +182,11 @@ In the **MainPage.xaml** add the `CameraView`:
 
 ```xml
 <StackLayout>
-    <local:CameraView Camera="Rear"
-            OverlayVisible="true"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand" />
+    <local:CameraView
+        OverlayVisible="True"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand" >
+    </local:CameraView>
 </StackLayout>
 ```
 
@@ -190,25 +203,25 @@ namespace SimpleBarcodeScanner
         {
             InitializeComponent();
             // Bind the CameraEnhancer to the BarcodeReader so that it can continuously obtain video stream from the camera for barcode decoding.
-            App.BarcodeReader.SetCameraEnhancer(App.Camera);
+            App.barcodeReader.SetCameraEnhancer(App.camera);
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             // Open the camera the the view appears.
-            App.Camera.Open();
+            App.camera.Open();
             // Start barcode decoding thread when the view appears.
-            App.BarcodeReader.StartScanning();
+            App.barcodeReader.StartScanning();
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
             // Close the camera the the view appears.
-            App.Camera.Close();
+            App.camera.Close();
             // Stop barcode decoding thread when the view appears.
-            App.BarcodeReader.StopScanning();
+            App.barcodeReader.StopScanning();
         }
     }
 }
@@ -227,7 +240,7 @@ namespace SimpleBarcodeScanner
         public MainPage()
         {
             ...
-            App.BarcodeReader.AddResultlistener(this);
+            App.barcodeReader.AddResultlistener(this);
         }
         ...
         // Implement the BarcodeResultCallback so that you can receive the barcode results when the barcodes are decoded.
@@ -327,22 +340,22 @@ BarcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
 The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to `DBRRuntimeSettings`. Here is a quick example:
 
 ```c#
-DBRRuntimeSettings settings = BarcodeReader.GetRuntimeSettings();
+DBRRuntimeSettings settings = barcodeReader.GetRuntimeSettings();
 settings.BarcodeFormatIds = EnumBarcodeFormat.BF_ONED;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 1000;
-BarcodeReader.UpdateRuntimeSettings(settings);
+barcodeReader.UpdateRuntimeSettings(settings);
 ```
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `ICameraEnhancer` component.
+You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `IDCVCameraEnhancer` interface.
 
 How to set scan region:
 
 - Define a `Region` object via class Region.
 - Configure the value of `Region`.
-- Use the `Region` you created as the parameter to active `SetScanRegion` method of `ICameraEnhancer`.
+- Use the `Region` you created as the parameter to active `SetScanRegion` method of `IDCVCameraEnhancer`.
 
 ```c#
 DCVXamarin.Region region = new DCVXamarin.Region();
@@ -351,7 +364,7 @@ region.RegionBottom = 70;
 region.RegionLeft = 15;
 region.RegionRight = 85;
 region.RegionMeasuredByPercentage = 1;
-Camera.SetScanRegion(region);
+camera.SetScanRegion(region);
 ```
 
 ## Licensing

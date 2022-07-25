@@ -39,4 +39,4 @@ namespace DCVXamarin
 
 ## Related API(s)
 
-- [`ICameraEnhancer.ScanRegion`](camera-enhancer.md#scanregion)
+- [`IDCVCameraEnhancer.ScanRegion`](camera-enhancer.md#scanregion)

@@ -17,8 +17,8 @@ breadcrumbText: API Index
 
 | Classes | Description |
 | ------- | ----------- |
-| [`IBarcodeReader`](barcode-reader.md) | The interface that contains barcode decoding related APIs. |
-| [`ICameraEnhancer`](camera-enhancer.md) | The interface that contains camera control and camera enhancements related APIs. |
+| [`IDCVBarcodeReader`](barcode-reader.md) | The interface that contains barcode decoding related APIs. |
+| [`IDCVCameraEnhancer`](camera-enhancer.md) | The interface that contains camera control and camera enhancements related APIs. |
 | [`CameraView`](camera-view.md) | The class that helps you deploy a camera view for displaying and processing the video stream. You can also add basic UI elements on the view. |
 
 ### Auxiliary Classess/Interfaces
@@ -46,12 +46,12 @@ breadcrumbText: API Index
 
 | Classes | Description |
 | ------- | ----------- |
-| [`CameraEnhancer`](camera-enhancer.md) | Implements ICameraEnhancer on Android. |
-| [`BarcodeRader`](barcode-reader.md) | Implements IBarcodeReader on Android. |
+| [`DCVCameraEnhancer`](android-camera-enhancer.md) | Implements IDCVCameraEnhancer on Android. |
+| [`DCVBarcodeRader`](android-barcode-reader.md) | Implements IDCVBarcodeReader on Android. |
 
 ## namespace DCVXamarin.iOS
 
 | Classes | Description |
 | ------- | ----------- |
-| [`CameraEnhancer`](camera-enhancer.md) | Implements ICameraEnhancer on iOS. |
-| [`BarcodeRader`](barcode-reader.md) | Implements IBarcodeReader on iOS. |
+| [`DCVCameraEnhancer`](ios-camera-enhancer.md) | Implements IDCVCameraEnhancer on iOS. |
+| [`DCVBarcodeRader`](ios-barcode-reader.md) | Implements IDCVBarcodeReader on iOS. |
