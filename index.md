@@ -25,4 +25,4 @@ DEVELOPMENT
 USEFUL RESOURCES
 <hr>
 
-* [License Activation](license/set-full-license.md)
+* [License Activation](license/index.md)
