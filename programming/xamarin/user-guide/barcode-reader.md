@@ -37,10 +37,8 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 ### Xamarin
 
 - NETStandard.Library 2.0+
-- Xamarin.Essentials
-- Xamarin.Forms
-- Xamarin.iOS
-- Xamarin.Android
+- Xamarin.Forms 4.6.0.967+ (5.0.0.2012+ suggested)
+- Xamarin.Essentials: 1.3.1+ (1.4.0+ suggested)
 
 ### Android
 
