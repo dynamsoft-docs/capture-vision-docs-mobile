@@ -265,7 +265,7 @@ There are several ways in which you can customize the Barcode Reader - but what 
 
 ### Using the settings templates
 
-DBR offers several preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example:
+Dynamsoft barcode reader offers several preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example:
 
 ```js
 componentDidMount() {
@@ -301,7 +301,7 @@ componentDidMount() {
 
 You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface as well as the [`DynamsoftCameraView`](../api-reference/camera-view.md) component.
 
-First, the region must be defined using the Region interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
+First, the region must be defined using the `Region` interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
 
 ```jsx
 class App extends React.Component {
@@ -338,6 +338,6 @@ class App extends React.Component {
 ## Licensing
 
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
-- A time-limited public trial license is available for every new device for the first use of Dynamsoft Capture Vision.
-- If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
-- [Contact Us](https://www.dynamsoft.com/company/contact/)  to purchase a full license.
+- A one-day trial license is available by default for every new device to try Dynamsoft Capture Vision.
+- You can <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile&utm_source=docs" target="_blank"> request a 30-day free trial license</a> via Dynamsoft customer portal for further evaluation.
+- [Contact us](https://www.dynamsoft.com/company/contact/) to purchase a full license.
