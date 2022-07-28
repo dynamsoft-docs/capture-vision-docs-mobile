@@ -37,19 +37,19 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 ### Xamarin
 
 - NETStandard.Library 2.0+
-- Xamarin.Forms 4.6.0.967+ (5.0.0.2012+ suggested)
-- Xamarin.Essentials: 1.3.1+ (1.4.0+ suggested)
+- Xamarin.Forms 4.6.0.967+ (5.0.0.2478+ Recommended)
+- Xamarin.Essentials: 1.3.1+ (1.4.0+ Recommended)
 
 ### Android
 
-- Supported OS: Android 6.0 (API Level 23) or higher.
+- Supported OS: **Android 5.0** (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
 - Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 - JDK: 1.8+
 
 ### iOS
 
-- Supported OS: **iOS 12.0** or higher.
+- Supported OS: **iOS 9.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Xcode 10 and above.
 
