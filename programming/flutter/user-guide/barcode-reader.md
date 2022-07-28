@@ -311,6 +311,6 @@ _cameraView.scanRegion = scanRegion;
 ## Licensing
 
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
-- A time-limited public trial license is available for every new device for the first use of Dynamsoft Capture Vision.
-- If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
-- [Contact Us](https://www.dynamsoft.com/company/contact/) to purchase a full license.
+- A one-day trial license is available by default for every new device to try Dynamsoft Capture Vision.
+- You can <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile&utm_source=docs" target="_blank"> request a 30-day free trial license</a> via Dynamsoft customer portal for further evaluation.
+- [Contact us](https://www.dynamsoft.com/company/contact/) to purchase a full license.
