@@ -180,11 +180,11 @@ In the **MainPage.xaml** add the `CameraView`:
 
 ```xml
 <StackLayout>
-    <local:CameraView
+    <local:DCVCameraView
         OverlayVisible="True"
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand" >
-    </local:CameraView>
+    </local:DCVCameraView>
 </StackLayout>
 ```
 
