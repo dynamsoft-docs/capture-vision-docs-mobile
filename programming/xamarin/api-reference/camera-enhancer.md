@@ -35,10 +35,6 @@ interface IDCVCameraEnhancer
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-| Property | Description |
-| -------- | ----------- |
-| [`ScanRegionVisible`](#scanregionvisible) | A property that indicates whether the `ScanRegion` is visible. |
-
 ## SetScanRegion
 
 Specify a region of interest.
@@ -97,12 +93,4 @@ Turn off the torch.
 
 ```c#
 void TurnOffTorch();
-```
-
-## ScanRegionVisible
-
-A property that indicates whether the [`ScanRegion`](#scanregion) is visible.
-
-```c#
-bool ScanRegionVisible;
 ```

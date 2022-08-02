@@ -27,8 +27,8 @@ interface IDCVBarcodeReader
 | [`OutputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`StartScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`StopScanning`](#stopscanning) | Stop the barcode decoding thread. |
+| [`SetCameraEnhancer`](#bindcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
 | [`AddResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
-| [`SetCameraEnhancer`](#bindcameraenhancer) | Specifies an event handler that fires after the library finishes scanning a frame. |
 
 ## InitLicense
 
