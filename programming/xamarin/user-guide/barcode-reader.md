@@ -21,10 +21,13 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Set up Development Environment](#set-up-development-environment)
   - [Initialize the Project](#initialize-the-project)
   - [Include the Library](#include-the-library)
+  - [Initialize IDCVBarcodeReader and IDCVCameraEnhancer](#initialize-idcvbarcodereader-and-idcvcameraenhancer)
   - [License Activation](#license-activation)
-  - [Configure the Barcode Reader](#configure-the-barcode-reader)
-  - [Build the Widget](#build-the-widget)
-  - [Configure Camera Permissions](#configure-camera-permissions)
+  - [Add a Button for Start Scanning](#add-a-button-for-start-scanning)
+  - [Configure the CameraView](#configure-the-cameraview)
+  - [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
+  - [Obtaining Barcode Results](#obtaining-barcode-results)
+  - [Add Camera Permission](#add-camera-permission)
   - [Run the Project](#run-the-project)
 - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
   - [Using the Settings Templates](#using-the-settings-templates)
@@ -108,7 +111,7 @@ namespace SimpleBarcodeScanner
             InitializeComponent();
             camera = dce;
             barcodeReader = dbr;
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
     }
 }

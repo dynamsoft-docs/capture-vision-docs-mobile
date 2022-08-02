@@ -28,6 +28,7 @@ The following code snippets are using the public trial license to initialize the
 <div class="sample-code-prefix"></div>
 >- React Native
 >- Flutter
+>- Xamarin.Forms
 >
 >1. 
 ```js
@@ -50,6 +51,28 @@ void main() async {
       await DynamsoftBarcodeReader.initLicense(license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9');
    } catch (e) {
       print('license error = $e');
+   }
+}
+```
+3. 
+```c#
+public partial class App : Application, ILicenseVerificationListener
+{
+   public static IDCVBarcodeReader barcodeReader;
+   public static IDCVCameraEnhancer camera;
+   public App(IDCVCameraEnhancer dce, IDCVBarcodeReader dbr)
+   {
+          InitializeComponent();
+          camera = dce;
+          barcodeReader = dbr;
+          barcodeReader.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
+   }
+   public void LicenseVerificationCallback(bool isSuccess, string msg)
+   {
+          if (!isSuccess)
+          {
+             System.Console.WriteLine(msg);
+          }
    }
 }
 ```
