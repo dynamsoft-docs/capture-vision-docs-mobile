@@ -217,18 +217,25 @@ async void OnStartScanningButtonClicked(object sender, EventArgs e)
 
 ### Configure the CameraView
 
-Create a new Xamarin.Forms content page in the project.
-
-In the **ScanningPage.xaml** add the `CameraView`:
+Create a new Xamarin.Forms content page in the project and name it "ScanningPage". In the **ScanningPage.xaml** add the `CameraView`:
 
 ```xml
-<StackLayout>
-    <local:DCVCameraView
-        OverlayVisible="True"
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand" >
-    </local:DCVCameraView>
-</StackLayout>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dynamsoft = "clr-namespace:DCVXamarin;assembly=DCVXamarin"
+             x:Class="dbr.ScanningPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
+            <!-- Add DCECameraView. -->
+            <dynamsoft:DCVCameraView OverlayVisible="True"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand" >
+            </dynamsoft:DCVCameraView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
 ```
 
 ### Open the Camera and Start Barcode Decoding
@@ -236,6 +243,8 @@ In the **ScanningPage.xaml** add the `CameraView`:
 In this section, we are going to add code to start barcode decoding in the **ScanningPage** of the project. Open the **ScanningPage.xaml.cs** and add the following code:
 
 ```c#
+using DCVXamarin;
+
 namespace SimpleBarcodeScanner
 {
     public partial class ScanningPage : ContentPage
@@ -270,7 +279,18 @@ namespace SimpleBarcodeScanner
 
 ### Obtaining Barcode Results
 
-Since you have configured on the barcode decoding thread, the library will start decoding from the video steam when the **ScanningPage** appears. You can use interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`. Continue working on the **ScanningPage.xaml.cs** to add configurations of `IBarcodeResultListener`.
+Since you have configured on the barcode decoding thread, the library will start decoding from the video steam when the **ScanningPage** appears. You can use interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`.
+
+In **ScanningPage.xaml**, add a label for displaying the barcode results
+
+```xml
+<StackLayout>
+    <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
+    ...
+</StackLayout>
+```
+
+In **ScanningPage.xaml.cs**, add configurations of `IBarcodeResultListener`.
 
 ```c#
 namespace SimpleBarcodeScanner
@@ -311,15 +331,6 @@ namespace SimpleBarcodeScanner
 }
 ```
 
-In **ScanningPage.xaml**, add a label for displaying the barcode results
-
-```xml
-<StackLayout>
-    <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
-    ...
-</StackLayout>
-```
-
 ### Add Camera Permission
 
 #### Android
@@ -327,6 +338,8 @@ In **ScanningPage.xaml**, add a label for displaying the barcode results
 Add the following code in **MainActivity.cs** for requesting camera permission on Android devices.
 
 ```c#
+using Xamarin.Essentials;
+
 namespace SimpleBarcodeScanner.Droid
 {
     ...
@@ -335,6 +348,7 @@ namespace SimpleBarcodeScanner.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             ...
+            // Add camera permission.
             Permissions.RequestAsync<Permissions.Camera>();
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
