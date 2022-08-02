@@ -19,8 +19,7 @@ interface IDCVBarcodeReader
 
 | Method | Description |
 | ------- | ----------- |
-| [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision.
- |
+| [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision. |
 | [`GetVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`GetRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
 | [`UpdateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
@@ -92,7 +91,7 @@ An object of [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) that stores t
 
 ```c#
 DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
-settings.BarcodeFormatIds = EnumBarcodeFormat.Code128 | EnumBarcodeFormat.Qrcode;
+settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 300;
 App.barcodeReader.UpdateRuntimeSettings(settings);
