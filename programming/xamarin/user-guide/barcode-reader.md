@@ -95,9 +95,11 @@ You have to initialize the follow two interfaces to decode barcodes with the lib
 In **App.xaml.cs**, add the following code to initialize the IDCVBarcodeReader and IDCVCameraEnhancer.
 
 ```c#
+using DCVXamarin;
+
 namespace SimpleBarcodeScanner
 {
-    public partial class App : Application, ILicenseVerificationListener
+    public partial class App : Application
     {
         public static IDCVCameraEnhancer camera;
         public static IDCVBarcodeReader barcodeReader;
@@ -106,7 +108,7 @@ namespace SimpleBarcodeScanner
             InitializeComponent();
             camera = dce;
             barcodeReader = dbr;
-            ScanningPage = new ScanningPage();
+            MainPage = new MainPage();
         }
     }
 }
@@ -117,12 +119,23 @@ namespace SimpleBarcodeScanner
 Open the **MainActivity.cs** in **SimpleBarcodeScanner.Android** folder. Change the code of `LoadApplication` to:
 
 ```c#
-protected override void OnCreate(Bundle savedInstanceState)
+using DCVXamarin.Droid;
+
+namespace dbr.Droid
 {
-    base.OnCreate(savedInstanceState);
-    DCVCameraEnhancer dce = new DCVCameraEnhancer(context: this);
-    DCVBarcodeReader dbr = new DCVBarcodeReader();
-    LoadApplication(new App(dce, dbr));
+    ...
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            DCVCameraEnhancer dce = new DCVCameraEnhancer(context: this);
+            DCVBarcodeReader dbr = new DCVBarcodeReader();
+            LoadApplication(new App(dce, dbr));
+            ...
+        }
+        ...
+    }
 }
 ```
 
@@ -131,13 +144,22 @@ protected override void OnCreate(Bundle savedInstanceState)
 Open the **AppDelegate.cs** in **SimpleBarcodeScanner.iOS** folder. Change the code of `LoadApplication` to:
 
 ```c#
-public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+using DCVXamarin.iOS;
+
+namespace dbr.iOS
 {
-    global::Xamarin.Forms.Forms.Init();
-    DCVCameraEnhancer dce = new DCVCameraEnhancer();
-    DCVBarcodeReader dbr = new DCVBarcodeReader();
-    LoadApplication(new App(dce, dbr));
-    return base.FinishedLaunching(app, options);
+    ...
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    {
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        {
+            global::Xamarin.Forms.Forms.Init();
+            DCVCameraEnhancer dce = new DCVCameraEnhancer();
+            DCVBarcodeReader dbr = new DCVBarcodeReader();
+            LoadApplication(new App(dce, dbr));
+            return base.FinishedLaunching(app, options);
+        }
+    }
 }
 ```
 
@@ -194,6 +216,8 @@ async void OnStartScanningButtonClicked(object sender, EventArgs e)
 ```
 
 ### Configure the CameraView
+
+Create a new Xamarin.Forms content page in the project.
 
 In the **ScanningPage.xaml** add the `CameraView`:
 
