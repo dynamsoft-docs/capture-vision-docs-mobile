@@ -106,7 +106,7 @@ namespace SimpleBarcodeScanner
             InitializeComponent();
             camera = dce;
             barcodeReader = dbr;
-            MainPage = new MainPage();
+            ScanningPage = new ScanningPage();
         }
     }
 }
@@ -174,9 +174,28 @@ namespace SimpleBarcodeScanner
 
 ```
 
+### Add a Button for Start Scanning
+
+In the **MainPage.xaml**, add the following code:
+
+```xml
+<StackLayout>
+    <Button x:Name="startScanning" Text="Start Scanning" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnStartScanningButtonClicked" />
+</StackLayout>
+```
+
+In the **MainPage.xaml.cs**, add the following code:
+
+```c#
+async void OnStartScanningButtonClicked(object sender, EventArgs e)
+{
+    await Navigation.PushAsync(new ScanningPage());
+}
+```
+
 ### Configure the CameraView
 
-In the **MainPage.xaml** add the `CameraView`:
+In the **ScanningPage.xaml** add the `CameraView`:
 
 ```xml
 <StackLayout>
@@ -190,14 +209,14 @@ In the **MainPage.xaml** add the `CameraView`:
 
 ### Open the Camera and Start Barcode Decoding
 
-In this section, we are going to add code to start barcode decoding in the **MainPage** of the project. Open the **MainPage.xaml.cs** and add the following code:
+In this section, we are going to add code to start barcode decoding in the **ScanningPage** of the project. Open the **ScanningPage.xaml.cs** and add the following code:
 
 ```c#
 namespace SimpleBarcodeScanner
 {
-    public partial class MainPage : ContentPage
+    public partial class ScanningPage : ContentPage
     {
-        public MainPage()
+        public ScanningPage()
         {
             InitializeComponent();
             // Bind the CameraEnhancer to the BarcodeReader so that it can continuously obtain video stream from the camera for barcode decoding.
@@ -227,15 +246,15 @@ namespace SimpleBarcodeScanner
 
 ### Obtaining Barcode Results
 
-Since you have configured on the barcode decoding thread, the library will start decoding from the video steam when the **MainPage** appears. You can use interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`. Continue working on the **MainPage.xaml.cs** to add configurations of `IBarcodeResultListener`.
+Since you have configured on the barcode decoding thread, the library will start decoding from the video steam when the **ScanningPage** appears. You can use interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`. Continue working on the **ScanningPage.xaml.cs** to add configurations of `IBarcodeResultListener`.
 
 ```c#
 namespace SimpleBarcodeScanner
 {
-    // Add IBarcodeResultListener to your MainPage so that you can receive the barcode results.
-    public partial class MainPage : ContentPage, IBarcodeResultListener
+    // Add IBarcodeResultListener to your ScanningPage so that you can receive the barcode results.
+    public partial class ScanningPage : ContentPage, IBarcodeResultListener
     {
-        public MainPage()
+        public ScanningPage()
         {
             ...
             App.barcodeReader.AddResultlistener(this);
@@ -268,7 +287,7 @@ namespace SimpleBarcodeScanner
 }
 ```
 
-In **MainPage.xaml**, add a label for displaying the barcode results
+In **ScanningPage.xaml**, add a label for displaying the barcode results
 
 ```xml
 <StackLayout>
