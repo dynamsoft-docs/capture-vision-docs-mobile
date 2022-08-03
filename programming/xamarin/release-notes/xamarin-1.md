@@ -11,7 +11,7 @@ breadcrumbText: 1.x
 
 # Release Notes for Xamarin SDK - 1.x
 
-## 1.0.0 (07/12/2022)
+## 1.0.0 (08/04/2022)
 
 ### HighLights
 
