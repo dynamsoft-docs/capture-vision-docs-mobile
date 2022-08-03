@@ -19,7 +19,7 @@ breadcrumbText: API Index
 | ------- | ----------- |
 | [`IDCVBarcodeReader`](barcode-reader.md) | The interface that contains barcode decoding related APIs. |
 | [`IDCVCameraEnhancer`](camera-enhancer.md) | The interface that contains camera control and camera enhancements related APIs. |
-| [`CameraView`](camera-view.md) | The class that helps you deploy a camera view for displaying and processing the video stream. You can also add basic UI elements on the view. |
+| [`CameraView`](camera-view.md) | The class that helps you deploy a camera view for displaying and processing the video stream. The view also allows for basic UI customization. |
 
 ### Auxiliary Classess/Interfaces
 

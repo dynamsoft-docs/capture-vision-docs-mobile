@@ -19,7 +19,7 @@ interface IDCVBarcodeReader
 
 | Method | Description |
 | ------- | ----------- |
-| [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision. |
+| [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Barcode Reader. |
 | [`GetVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`GetRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
 | [`UpdateRuntimeSettings`](#updateruntimesettingsdbrruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct. |
@@ -33,7 +33,7 @@ interface IDCVBarcodeReader
 
 ## InitLicense
 
-Initialize the license of Dynamsoft Capture Vision.
+Initialize the license of Dynamsoft Barcode Reader.
 
 ```c#
 void InitLicense(string licenseKey, ILicenseVerificationListener listener)
