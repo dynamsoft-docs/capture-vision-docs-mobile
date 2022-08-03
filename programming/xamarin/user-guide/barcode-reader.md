@@ -58,7 +58,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ## Installation
 
-In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **DCVXamarin**. Select all the modules of your project and click **install**.
+In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.CaptureVision.Xamarin.Forms**. Select all the modules of your project and click **install**.
 
 ## Build Your Barcode Scanner App
 
@@ -413,7 +413,7 @@ How to set scan region:
 
 - Define a `Region` object via class Region.
 - Configure the value of `Region`.
-- Use the `Region` you created as the parameter to active `SetScanRegion` method of `IDCVCameraEnhancer`.
+- Assign the `Region` to the `ScanRegion` property of `IDCVCameraEnhancer`.
 
 ```c#
 DCVXamarin.Region region = new DCVXamarin.Region();
@@ -422,8 +422,9 @@ region.RegionBottom = 70;
 region.RegionLeft = 15;
 region.RegionRight = 85;
 region.RegionMeasuredByPercentage = 1;
-camera.SetScanRegion(region);
+camera.ScanRegion(region);
 ```
+
 
 ## Licensing
 

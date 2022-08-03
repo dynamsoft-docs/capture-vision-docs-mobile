@@ -18,14 +18,16 @@ namespace DCVXamarin.Droid
 {
     public class DCVCameraEnhancer : Object, IDCVCameraEnhancer
     {
-        public DCVCameraEnhancer();
+        public DCVCameraEnhancer(Activity context);
 
-        public void SetScanRegion(Region region);
-        public void ScanRegionVisible(bool isVisible);
+        public Region ScanRegion { get; set; }
+
+        public void Close();
+        public Region GetScanRegion();
         public void Open();
-        public void Close();        
-        public void TurnOnTorch();
+        public void SetScanRegion(Region region);
         public void TurnOffTorch();
+        public void TurnOnTorch();
     }
 }
 ```

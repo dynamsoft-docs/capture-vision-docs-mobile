@@ -22,12 +22,13 @@ interface IDCVBarcodeReader
 | [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision. |
 | [`GetVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`GetRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
-| [`UpdateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
+| [`UpdateRuntimeSettings`](#updateruntimesettingsdbrruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct. |
+| [`UpdateRuntimeSettings`](#updateruntimesettingsenumpresettemplate) | Update the runtime settings of `DynamsoftBarcodeReader` with a preset template. |
 | [`ResetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
 | [`OutputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`StartScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`StopScanning`](#stopscanning) | Stop the barcode decoding thread. |
-| [`SetCameraEnhancer`](#bindcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
+| [`SetCameraEnhancer`](#setcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
 | [`AddResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 
 ## InitLicense
@@ -113,7 +114,7 @@ void UpdateRuntimeSettings(DBRRuntimeSettings settings)
 
 ```c#
 DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
-settings.BarcodeFormatIds = EnumBarcodeFormat.Code128 | EnumBarcodeFormat.Qrcode;
+settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 300;
 App.barcodeReader.UpdateRuntimeSettings(settings);

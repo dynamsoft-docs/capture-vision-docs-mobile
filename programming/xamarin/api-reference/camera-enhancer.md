@@ -29,18 +29,18 @@ interface IDCVCameraEnhancer
 
 | Method | Description |
 | ------- | ----------- |
-| [`SetScanRegion`](#setscanregion) | The property for users to specify the region of interest. |
+| [`ScanRegion`](#scanregion) | The property for users to specify the region of interest. |
 | [`Open`](#open) | Open the camera. |
 | [`Close`](#close) | Close the camera. |
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-## SetScanRegion
+## ScanRegion
 
 Specify a region of interest.
 
 ```c#
-void SetScanRegion(Region scanRegion);
+Region ScanRegion { get; set; }
 ```
 
 **Parameters**
@@ -56,7 +56,7 @@ scanRegion.RegionBottom = 70;
 scanRegion.RegionLeft = 15;
 scanRegion.RegionRight = 85;
 scanRegion.RegionMeasuredByPercentage = 1;
-App.camera.SetScanRegion(scanRegion);
+camera.ScanRegion = scanRegion;
 ```
 
 **Related APIs**

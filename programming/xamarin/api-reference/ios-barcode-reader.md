@@ -20,7 +20,7 @@ namespace DCVXamarin.iOS
     {
         public DCVBarcodeReader();
 
-        public void AddResultlistener(IBarcodeResultListener listener);
+        public void AddResultListener(IBarcodeResultListener listener);
         public void DBRLicenseVerificationCallback(bool isSuccess, NSError error);
         public DBRRuntimeSettings GetRuntimeSettings();
         public string GetVersion();

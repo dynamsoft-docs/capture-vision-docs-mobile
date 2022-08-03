@@ -20,12 +20,14 @@ namespace DCVXamarin.iOS
     {
         public DCVCameraEnhancer();
 
-        public void SetScanRegion(Region region);
-        public void ScanRegionVisible(bool isVisible);
-        public void Open();
+        public Region ScanRegion { get; set; }
+
         public void Close();
-        public void TurnOnTorch();
+        public Region GetScanRegion();
+        public void Open();
+        public void SetScanRegion(Region region);
         public void TurnOffTorch();
+        public void TurnOnTorch();
     }
 }
 ```
