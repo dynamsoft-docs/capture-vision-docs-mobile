@@ -64,6 +64,8 @@ In the **NuGet Package Manager>Manage Packages for Solution** of your project, s
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Xamarin SDK.
 
+>Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples/tree/main/BarcodeReaderSimpleSample).
+
 ### Set up Development Environment
 
 If you are a beginner with Xamarin, please follow the guide on the <a href="https://dotnet.microsoft.com/en-us/learn/xamarin/hello-world-tutorial/install" target="_blank">Xamarin official website</a> to set up the development environment.
@@ -424,7 +426,6 @@ region.RegionRight = 85;
 region.RegionMeasuredByPercentage = 1;
 camera.ScanRegion(region);
 ```
-
 
 ## Licensing
 
