@@ -227,7 +227,7 @@ Create a new Xamarin.Forms content page in the project and name it "ScanningPage
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dynamsoft = "clr-namespace:DCVXamarin;assembly=DCVXamarin"
-             x:Class="dbr.ScanningPage">
+             x:Class="SimpleBarcodeScanner.ScanningPage">
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
