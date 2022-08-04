@@ -31,10 +31,9 @@ jobs:
         run: |
           cd /home/ubuntu
           [ ! -d DCVDoc ] && mkdir -p DCVDoc
-          [ ! -d capture-vision-docs-mobile ] && git clone --depth 1 --branch main https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile
           cd capture-vision-docs-mobile && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile/* ./DCVDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDoc/
-          cd DCVDoc && bundle exec jekyll build --incremental
+          cd DCVDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DCVDoc/_site/ ./www.dynamsoft.com/capture-vision/docs/ prod
 
   Build-Preview:
@@ -45,16 +44,25 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a set of commands using the runners shell
+      - name: clear space
+        run: |
+          cd /home/ubuntu 
+          [ -d DCVDocPreview ] && rm -rf DCVDocPreview
+          [ -d capture-vision-docs-mobile-preview ] && rm -rf capture-vision-docs-mobile-preview
+          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
+          cd /home/ubuntu
+
       - name: Build the site
         run: |
           cd /home/ubuntu
           [ ! -d DCVDocPreview ] && mkdir -p DCVDocPreview
           [ ! -d capture-vision-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile-preview          
+          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
           cd capture-vision-docs-mobile-preview && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile-preview/* ./DCVDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDocPreview/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCVDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocPreview/_config.yml
-          cd DCVDocPreview && bundle exec jekyll build --incremental
+          cd DCVDocPreview && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0

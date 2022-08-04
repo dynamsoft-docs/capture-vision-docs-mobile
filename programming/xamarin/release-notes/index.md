@@ -11,4 +11,4 @@ breadcrumbText: Release Notes
 
 # Release Notes - Xamarin
 
-- [1.0.0 (07/12/2022)](xamarin-1.md#100-07122022)
+- [1.0.0 (08/04/2022)](xamarin-1.md#100-08042022)

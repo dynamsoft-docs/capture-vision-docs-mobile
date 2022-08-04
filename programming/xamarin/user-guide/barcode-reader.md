@@ -21,10 +21,13 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Set up Development Environment](#set-up-development-environment)
   - [Initialize the Project](#initialize-the-project)
   - [Include the Library](#include-the-library)
+  - [Initialize IDCVBarcodeReader and IDCVCameraEnhancer](#initialize-idcvbarcodereader-and-idcvcameraenhancer)
   - [License Activation](#license-activation)
-  - [Configure the Barcode Reader](#configure-the-barcode-reader)
-  - [Build the Widget](#build-the-widget)
-  - [Configure Camera Permissions](#configure-camera-permissions)
+  - [Add a Button to Start Scanning](#add-a-button-to-start-scanning)
+  - [Configure the CameraView](#configure-the-cameraview)
+  - [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
+  - [Obtaining Barcode Results](#obtaining-barcode-results)
+  - [Add Camera Permission](#add-camera-permission)
   - [Run the Project](#run-the-project)
 - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
   - [Using the Settings Templates](#using-the-settings-templates)
@@ -37,29 +40,31 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 ### Xamarin
 
 - NETStandard.Library 2.0+
-- Xamarin.Essentials
-- Xamarin.Forms
+- Xamarin.Forms 5.0.0.2478+
+- Xamarin.Essentials: 1.3.1+ (1.4.0+ Recommended)
 
 ### Android
 
-- Supported OS: Android 5.0 (API Level 21) or higher.
+- Supported OS: **Android 5.0** (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
 - Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 - JDK: 1.8+
 
 ### iOS
 
-- Supported OS: **iOS 10.0** or higher.
+- Supported OS: **iOS 9.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended), CocoaPods 1.11.0+.
+- Development Environment: Xcode 10 and above.
 
 ## Installation
 
-In the **NuGet Package Manager** of your project, search for **DCVXamarin** and install the package.
+In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.CaptureVision.Xamarin.Forms**. Select all the modules of your project and click **install**.
 
 ## Build Your Barcode Scanner App
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Xamarin SDK.
+
+>Note: You can get the full source code of a similar project: <a href="https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples/tree/main/BarcodeReaderSimpleSample" target="_blank">Barcode Reader Simple Sample</a>.
 
 ### Set up Development Environment
 
@@ -67,38 +72,48 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 ### Initialize the Project
 
+#### Visual Studio
+
 1. Open the Visual Studio and select **Create a new project**.
 2. Select **Mobile App (Xamarin.Forms)** and click **Next**.
-3. Here we name the project **SimpleBarcodeScanner**. Select a location for the project and click **Create**.
-4. Select Blank and click **Create**.
+3. Name the project **SimpleBarcodeScanner**. Select a location for the project and click **Create**.
+4. Select **Blank** and click **Create**.
+
+#### Visual Studio for Mac
+
+1. Open Visual Studio and select **New**.
+2. Select **Multiplatform > App > Blank App > C#** and click **Next**.
+3. Name the project **SimpleBarcodeScanner** and click **Next**.
+4. Select a location for the project and click **Create**.
 
 ### Include the Library
 
 Add NuGet package **DCVXamarin** to your project. You can view the [installation section](#installation) on how to add the library.
 
-### Initialize IBarcodeReader and ICameraEnhancer
+### Initialize IDCVBarcodeReader and IDCVCameraEnhancer
 
-You have to initialize the follow two interfaces to decode barcodes with the library.
+You have to initialize the following two interfaces to decode barcodes with the library.
 
-- `IBarcodeReader`: The interface that defines barcode decoding APIs. This is the interface to set up barcode decoding configurations.
-- `ICameraEnhancer`: The interface that defines camera controlling APIs. This is the module for you to set up a camera module to capture video stream.
+- `IDCVBarcodeReader`: The interface that defines barcode decoding APIs and helps set up barcode decoding configurations.
+- `IDCVCameraEnhancer`: The interface that defines camera controlling APIs and helps you to set up a camera module to capture the video stream.
 
-In **App.xaml.cs**, add the following code to initialize the IBarcodeReader and ICameraEnhancer.
+In **App.xaml.cs**, add the following code to initialize the `IDCVBarcodeReader` and `IDCVCameraEnhancer` objects.
 
 ```c#
+using DCVXamarin;
+
 namespace SimpleBarcodeScanner
 {
-    public partial class App : Application, ILicenseVerificationListener
+    public partial class App : Application
     {
-        public static ICameraEnhancer Camera;
-        public static IBarcodeReader BarcodeReader;
-        public App(ICameraEnhancer dce, IBarcodeReader dbr)
+        public static IDCVCameraEnhancer camera;
+        public static IDCVBarcodeReader barcodeReader;
+        public App(IDCVCameraEnhancer dce, IDCVBarcodeReader dbr)
         {
             InitializeComponent();
-            Camera = dce;
-            BarcodeReader = dbr;
-
-            MainPage = new MainPage();
+            camera = dce;
+            barcodeReader = dbr;
+            MainPage = new NavigationPage(new MainPage());
         }
     }
 }
@@ -109,7 +124,24 @@ namespace SimpleBarcodeScanner
 Open the **MainActivity.cs** in **SimpleBarcodeScanner.Android** folder. Change the code of `LoadApplication` to:
 
 ```c#
-LoadApplication(new App(new CameraEnhancer(), new BarcodeReader()));
+using DCVXamarin.Droid;
+
+namespace dbr.Droid
+{
+    ...
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            DCVCameraEnhancer dce = new DCVCameraEnhancer(context: this);
+            DCVBarcodeReader dbr = new DCVBarcodeReader();
+            LoadApplication(new App(dce, dbr));
+            ...
+        }
+        ...
+    }
+}
 ```
 
 #### Implement the Interfaces for iOS
@@ -117,7 +149,23 @@ LoadApplication(new App(new CameraEnhancer(), new BarcodeReader()));
 Open the **AppDelegate.cs** in **SimpleBarcodeScanner.iOS** folder. Change the code of `LoadApplication` to:
 
 ```c#
-LoadApplication(new App(new CameraEnhancer(), new BarcodeReader()));
+using DCVXamarin.iOS;
+
+namespace dbr.iOS
+{
+    ...
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    {
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        {
+            global::Xamarin.Forms.Forms.Init();
+            DCVCameraEnhancer dce = new DCVCameraEnhancer();
+            DCVBarcodeReader dbr = new DCVBarcodeReader();
+            LoadApplication(new App(dce, dbr));
+            return base.FinishedLaunching(app, options);
+        }
+    }
+}
 ```
 
 ### License Activation
@@ -132,11 +180,12 @@ namespace SimpleBarcodeScanner
     // Add ILicenseVerificationListener to the class and implement LicenseVerificationCallback.
     public partial class App : Application, ILicenseVerificationListener
     {
-        public App(ICameraEnhancer dce, IBarcodeReader dbr)
+        public App(IDCVCameraEnhancer dce, IDCVBarcodeReader dbr)
         {
             ...
-            // Initialize the license of barcode reader module.
-            BarcodeReader.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
+            // Initialize the license of barcode reader module. Please note that the following license is a public trial.
+            barcodeReader.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
+            // You can add any extra barcode reader settings configurations after the license initialization
             ...
         }
 
@@ -153,51 +202,82 @@ namespace SimpleBarcodeScanner
 
 ```
 
-### Configure the CameraView
+### Add a Button to Start Scanning
 
-In the **MainPage.xaml** add the `CameraView`:
+In the **MainPage.xaml**, add the following code:
 
 ```xml
 <StackLayout>
-    <local:CameraView Camera="Rear"
-            OverlayVisible="true"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand" />
+    <Button x:Name="startScanning" Text="Start Scanning" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnStartScanningButtonClicked" />
 </StackLayout>
+```
+
+In the **MainPage.xaml.cs**, add the following code:
+
+```c#
+async void OnStartScanningButtonClicked(object sender, EventArgs e)
+{
+    await Navigation.PushAsync(new ScanningPage());
+}
+```
+
+### Configure the CameraView
+
+Create a new Xamarin.Forms content page in the project and name it *ScanningPage*. In the **ScanningPage.xaml** add the `CameraView`:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dynamsoft = "clr-namespace:DCVXamarin;assembly=DCVXamarin"
+             x:Class="SimpleBarcodeScanner.ScanningPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
+            <!-- Add DCECameraView. -->
+            <dynamsoft:DCVCameraView OverlayVisible="True"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand" >
+            </dynamsoft:DCVCameraView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
 ```
 
 ### Open the Camera and Start Barcode Decoding
 
-In this section, we are going to add code to start barcode decoding in the **MainPage** of the project. Open the **MainPage.xaml.cs** and add the following code:
+In this section, we are going to add code to start barcode decoding in the **ScanningPage** of the project. Open the **ScanningPage.xaml.cs** and add the following code:
 
 ```c#
+using DCVXamarin;
+
 namespace SimpleBarcodeScanner
 {
-    public partial class MainPage : ContentPage
+    public partial class ScanningPage : ContentPage
     {
-        public MainPage()
+        public ScanningPage()
         {
             InitializeComponent();
             // Bind the CameraEnhancer to the BarcodeReader so that it can continuously obtain video stream from the camera for barcode decoding.
-            App.BarcodeReader.SetCameraEnhancer(App.Camera);
+            App.barcodeReader.SetCameraEnhancer(App.camera);
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             // Open the camera the the view appears.
-            App.Camera.Open();
+            App.camera.Open();
             // Start barcode decoding thread when the view appears.
-            App.BarcodeReader.StartScanning();
+            App.barcodeReader.StartScanning();
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
             // Close the camera the the view appears.
-            App.Camera.Close();
+            App.camera.Close();
             // Stop barcode decoding thread when the view appears.
-            App.BarcodeReader.StopScanning();
+            App.barcodeReader.StopScanning();
         }
     }
 }
@@ -205,18 +285,29 @@ namespace SimpleBarcodeScanner
 
 ### Obtaining Barcode Results
 
-Since you have configured on the barcode decoding thread, the library will start decoding from the video steam when the **MainPage** appears. You can use interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`. Continue working on the **MainPage.xaml.cs** to add configurations of `IBarcodeResultListener`.
+With the barcode decoding thread now configured, the library will start decoding from the video steam when the **ScanningPage** appears. You can use the interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`.
+
+In **ScanningPage.xaml**, add a label for displaying the barcode results
+
+```xml
+<StackLayout>
+    <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
+    ...
+</StackLayout>
+```
+
+In **ScanningPage.xaml.cs**, add configurations of `IBarcodeResultListener`.
 
 ```c#
 namespace SimpleBarcodeScanner
 {
-    // Add IBarcodeResultListener to your MainPage so that you can receive the barcode results.
-    public partial class MainPage : ContentPage, IBarcodeResultListener
+    // Add IBarcodeResultListener to your ScanningPage so that you can receive the barcode results.
+    public partial class ScanningPage : ContentPage, IBarcodeResultListener
     {
-        public MainPage()
+        public ScanningPage()
         {
             ...
-            App.BarcodeReader.AddResultlistener(this);
+            App.barcodeReader.AddResultlistener(this);
         }
         ...
         // Implement the BarcodeResultCallback so that you can receive the barcode results when the barcodes are decoded.
@@ -246,13 +337,38 @@ namespace SimpleBarcodeScanner
 }
 ```
 
-In **MainPage.xaml**, add a label for displaying the barcode results
+### Add Camera Permission
 
-```xml
-<StackLayout>
-    <Label x:Name="barcodeResultLabel" Text="No Barcode detected"></Label>
-</StackLayout>
+#### Android
+
+Add the following code in **MainActivity.cs** for requesting camera permission on Android devices.
+
+```c#
+using Xamarin.Essentials;
+
+namespace SimpleBarcodeScanner.Droid
+{
+    ...
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            ...
+            // Add camera permission.
+            Permissions.RequestAsync<Permissions.Camera>();
+        }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            ...
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+}
 ```
+
+#### iOS
+
+Add **Privacy - Camera Usage Description** and your message to the **info.plist** of your project.
 
 ### Run the Project
 
@@ -265,21 +381,19 @@ Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
     <p>Run Your Project</p>
 </div>
 
-#### Run iOS on macOS
+#### Run iOS & Android on macOS
 
-1. Right click on the **SimpleBarcodeReader.iOS** and select **Set As Startup Project**.
+1. Right click on the **SimpleBarcodeReader.iOS** or **SimpleBarcodeReader.Android** and select **Set As Startup Project**.
 2. In the menu, select and click **Run > Start Debugging**.
-
-> Note:
-> Please view the official website for how to run iOS on Windows or run Android on macOS
 
 ## Customizing the Barcode Reader
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```c#
+BarcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST);
 ```
 
 ### Using the DBRRuntimeSettings Interface
@@ -287,24 +401,36 @@ DBR offers several preset templates for different popular scenarios. For example
 The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to `DBRRuntimeSettings`. Here is a quick example:
 
 ```c#
+DBRRuntimeSettings settings = barcodeReader.GetRuntimeSettings();
+settings.BarcodeFormatIds = EnumBarcodeFormat.BF_ONED;
+settings.ExpectedBarcodeCount = 0;
+settings.Timeout = 1000;
+barcodeReader.UpdateRuntimeSettings(settings);
 ```
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `ICameraEnhancer` component.
+You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `IDCVCameraEnhancer` interface.
 
 How to set scan region:
 
 - Define a `Region` object via class Region.
 - Configure the value of `Region`.
-- Use the `Region` you created as the parameter to active `SetScanRegion` method of `ICameraEnhancer`.
+- Assign the `Region` to the `ScanRegion` property of the `IDCVCameraEnhancer` object.
 
 ```c#
+DCVXamarin.Region region = new DCVXamarin.Region();
+region.RegionTop = 30;
+region.RegionBottom = 70;
+region.RegionLeft = 15;
+region.RegionRight = 85;
+region.RegionMeasuredByPercentage = 1;
+camera.ScanRegion(region);
 ```
 
 ## Licensing
 
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
-- A time-limited public trial license is available for every new device for the first use of Dynamsoft Capture Vision.
-- If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
-- [Contact Us](https://www.dynamsoft.com/company/contact/) to purchase a full license.
+- A one-day trial license is available by default for every new device to try Dynamsoft Capture Vision.
+- You can <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile&utm_source=docs" target="_blank"> request a 30-day free trial license</a> via Dynamsoft customer portal for further evaluation.
+- [Contact us](https://www.dynamsoft.com/company/contact/) to purchase a full license.

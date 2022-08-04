@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Interface ICameraEnhancer of Dynamsoft Capture Vision Xamarin Edition
-description: This page is the API reference of Interface ICameraEnhancer
-keywords: Interface ICameraEnhancer, API reference
+title: Interface IDCVCameraEnhancer of Dynamsoft Capture Vision Xamarin Edition
+description: This page is the API reference of Interface IDCVCameraEnhancer
+keywords: Interface IDCVCameraEnhancer, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: ICameraEnhancer
+breadcrumbText: IDCVCameraEnhancer
 ---
 
-# Interface ICameraEnhancer
+# Interface IDCVCameraEnhancer
 
-The interface `ICameraEnhancer` provides camera and camera related hardware controlling APIs.
+The interface `IDCVCameraEnhancer` provides camera and camera related hardware controlling APIs.
 
 ```c#
-interface ICameraEnhancer
+interface IDCVCameraEnhancer
 ```
 
 <style>
@@ -29,22 +29,18 @@ interface ICameraEnhancer
 
 | Method | Description |
 | ------- | ----------- |
-| [`SetScanRegion`](#setscanregion) | The property for users to specify the region of interest. |
+| [`ScanRegion`](#scanregion) | The property for users to specify the region of interest. |
 | [`Open`](#open) | Open the camera. |
 | [`Close`](#close) | Close the camera. |
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 
-| Property | Description |
-| -------- | ----------- |
-| [`ScanRegionVisible`](#scanregionvisible) | A property that indicates whether the `ScanRegion` is visible. |
-
-## SetScanRegion
+## ScanRegion
 
 Specify a region of interest.
 
 ```c#
-void SetScanRegion(Region scanRegion);
+Region ScanRegion { get; set; }
 ```
 
 **Parameters**
@@ -60,7 +56,7 @@ scanRegion.RegionBottom = 70;
 scanRegion.RegionLeft = 15;
 scanRegion.RegionRight = 85;
 scanRegion.RegionMeasuredByPercentage = 1;
-App.camera.SetScanRegion(scanRegion);
+camera.ScanRegion = scanRegion;
 ```
 
 **Related APIs**
@@ -97,12 +93,4 @@ Turn off the torch.
 
 ```c#
 void TurnOffTorch();
-```
-
-## ScanRegionVisible
-
-A property that indicates whether the [`ScanRegion`](#scanregion) is visible.
-
-```c#
-bool ScanRegionVisible;
 ```

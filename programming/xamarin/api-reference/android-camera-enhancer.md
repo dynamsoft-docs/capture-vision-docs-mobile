@@ -1,31 +1,41 @@
 ---
 layout: default-layout
-title: CameraEnhancer Class under namespace Xamarin.Droid
-description: CameraEnhancer class of Xamarin.Droid implements the ICameraEnhancer interface on Android.
-keywords: CameraEnhancer, API reference, Xamarin.Droid
+title: DCVCameraEnhancer Class under namespace Xamarin.Droid
+description: DCVCameraEnhancer class of Xamarin.Droid implements the IDCVCameraEnhancer interface on Android.
+keywords: DCVCameraEnhancer, API reference, Xamarin.Droid
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Xamarin.Droid - CameraEnhancer
+breadcrumbText: Xamarin.Droid - DCVCameraEnhancer
 ---
 
-# CameraEnhancer - DCVXamarin.Droid
+# DCVCameraEnhancer - DCVXamarin.Droid
 
-`CameraEnhancer` class of DCVXamarin.Droid implements interface `ICameraEnhancer` on Android.
+`DCVCameraEnhancer` class of DCVXamarin.Droid implements interface `IDCVCameraEnhancer` on Android.
 
 ```c#
 namespace DCVXamarin.Droid
 {
-    public class CameraEnhancer : Object, ICameraEnhancer
+    public class DCVCameraEnhancer : Object, IDCVCameraEnhancer
     {
-        public CameraEnhancer();
+        public DCVCameraEnhancer(Activity context);
 
-        public void SetScanRegion(Region region);
-        public void ScanRegionVisible(bool isVisible);
+        public Region ScanRegion { get; set; }
+
+        public void Close();
+        public Region GetScanRegion();
         public void Open();
-        public void Close();        
-        public void TurnOnTorch();
+        public void SetScanRegion(Region region);
         public void TurnOffTorch();
+        public void TurnOnTorch();
     }
 }
+```
+
+**Code Snippet**
+
+```c#
+DCVCameraEnhancer dce = new DCVCameraEnhancer(context: this);
+DCVBarcodeReader dbr = new DCVBarcodeReader();
+LoadApplication(new App(dce, dbr));
 ```

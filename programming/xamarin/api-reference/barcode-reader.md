@@ -1,39 +1,39 @@
 ---
 layout: default-layout
-title: Interface IBarcodeReader of Dynamsoft Capture Vision Xamarin Edition
-description: This page is the API reference of Interface IBarcodeReader
-keywords: Interface IBarcodeReader, API reference
+title: Interface IDCVBarcodeReader of Dynamsoft Capture Vision Xamarin Edition
+description: This page is the API reference of Interface IDCVBarcodeReader
+keywords: Interface IDCVBarcodeReader, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: Interface IBarcodeReader
+breadcrumbText: Interface IDCVBarcodeReader
 ---
 
-# Interface IBarcodeReader
+# Interface IDCVBarcodeReader
 
 A barcode reader object accesses to a camera via DynamsoftCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
 
 ```c#
-interface IBarcodeReader
+interface IDCVBarcodeReader
 ```
 
 | Method | Description |
 | ------- | ----------- |
-| [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision.
- |
+| [`InitLicense`](#initlicense) | Initialize the license of Dynamsoft Barcode Reader. |
 | [`GetVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`GetRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
-| [`UpdateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
+| [`UpdateRuntimeSettings`](#updateruntimesettingsdbrruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct. |
+| [`UpdateRuntimeSettings`](#updateruntimesettingsenumpresettemplate) | Update the runtime settings of `DynamsoftBarcodeReader` with a preset template. |
 | [`ResetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
 | [`OutputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`StartScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`StopScanning`](#stopscanning) | Stop the barcode decoding thread. |
+| [`SetCameraEnhancer`](#setcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
 | [`AddResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
-| [`SetCameraEnhancer`](#bindcameraenhancer) | Specifies an event handler that fires after the library finishes scanning a frame. |
 
 ## InitLicense
 
-Initialize the license of Dynamsoft Capture Vision.
+Initialize the license of Dynamsoft Barcode Reader.
 
 ```c#
 void InitLicense(string licenseKey, ILicenseVerificationListener listener)
@@ -92,7 +92,7 @@ An object of [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) that stores t
 
 ```c#
 DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
-settings.BarcodeFormatIds = EnumBarcodeFormat.Code128 | EnumBarcodeFormat.Qrcode;
+settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 300;
 App.barcodeReader.UpdateRuntimeSettings(settings);
@@ -114,7 +114,7 @@ void UpdateRuntimeSettings(DBRRuntimeSettings settings)
 
 ```c#
 DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
-settings.BarcodeFormatIds = EnumBarcodeFormat.Code128 | EnumBarcodeFormat.Qrcode;
+settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 300;
 App.barcodeReader.UpdateRuntimeSettings(settings);
@@ -125,7 +125,7 @@ App.barcodeReader.UpdateRuntimeSettings(settings);
 Update the barcode decoding settings with a preset template.
 
 ```c#
-void updateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate template)
+void UpdateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate template)
 ```
 
 **Parameters**
@@ -143,7 +143,7 @@ App.barcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SINGLE_BARCO
 Update the barcode decoding settings with a JSON template.
 
 ```c#
-void updateRuntimeSettingsFromTemplate(string jsonTemplate)
+void UpdateRuntimeSettingsFromTemplate(string jsonTemplate)
 ```
 
 **Parameters**
@@ -161,7 +161,7 @@ App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds
 Reset the barcode decoding settings to default value.
 
 ```c#
-void resetRuntimeSettings()
+void ResetRuntimeSettings()
 ```
 
 ## OutputRuntimeSettingsToString
@@ -197,7 +197,17 @@ void StopScanning()
 Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered.
 
 ```c#
-void SetCameraEnhancer()
+void SetCameraEnhancer(IDCVCameraEnhancer dce);
+```
+
+**Parameters**
+
+`dce`: An instance of `IDCVCameraEnhancer`.
+
+**Code Snippet**
+
+```c#
+App.dbr.SetCameraEnhancer(App.dce);
 ```
 
 ## AddResultListener

@@ -22,7 +22,7 @@ namespace DCVXamarin
         public int Angle { get; set; }
         
         // The coordinates of the quadrilateral points.
-        public Quadrilateral Quadrilateral { get; set; }
+        public Quadrilateral Location { get; set; }
     }
 }
 ```
