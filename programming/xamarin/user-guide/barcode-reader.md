@@ -23,7 +23,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Include the Library](#include-the-library)
   - [Initialize IDCVBarcodeReader and IDCVCameraEnhancer](#initialize-idcvbarcodereader-and-idcvcameraenhancer)
   - [License Activation](#license-activation)
-  - [Add a Button for Start Scanning](#add-a-button-for-start-scanning)
+  - [Add a Button to Start Scanning](#add-a-button-to-start-scanning)
   - [Configure the CameraView](#configure-the-cameraview)
   - [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
   - [Obtaining Barcode Results](#obtaining-barcode-results)
