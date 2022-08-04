@@ -88,7 +88,7 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 ### Include the Library
 
-Add NuGet package **DCVXamarin** to your project. You can view the [installation section](#installation) on how to add the library.
+Add NuGet package **Dynamsoft.CaptureVision.Xamarin.Forms** to your project. You can view the [installation section](#installation) on how to add the library.
 
 ### Initialize IDCVBarcodeReader and IDCVCameraEnhancer
 
