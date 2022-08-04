@@ -30,6 +30,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
+          [ -d DCVDoc ] && rm -rf DCVDoc
           [ ! -d DCVDoc ] && mkdir -p DCVDoc
           cd capture-vision-docs-mobile && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile/* ./DCVDoc/
           cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCVDoc/
