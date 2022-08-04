@@ -76,13 +76,13 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 1. Open the Visual Studio and select **Create a new project**.
 2. Select **Mobile App (Xamarin.Forms)** and click **Next**.
-3. Here we name the project **SimpleBarcodeScanner**. Select a location for the project and click **Create**.
-4. Select Blank and click **Create**.
+3. Name the project **SimpleBarcodeScanner**. Select a location for the project and click **Create**.
+4. Select **Blank** and click **Create**.
 
-#### Vidual Studio for Mac
+#### Visual Studio for Mac
 
-1. Open the Visual Studio and select **New**.
-2. Select **Multiplatform > App > Blank App > c#** and click **Next**.
+1. Open Visual Studio and select **New**.
+2. Select **Multiplatform > App > Blank App > C#** and click **Next**.
 3. Name the project **SimpleBarcodeScanner** and click **Next**.
 4. Select a location for the project and click **Create**.
 
@@ -92,12 +92,12 @@ Add NuGet package **DCVXamarin** to your project. You can view the [installation
 
 ### Initialize IDCVBarcodeReader and IDCVCameraEnhancer
 
-You have to initialize the follow two interfaces to decode barcodes with the library.
+You have to initialize the following two interfaces to decode barcodes with the library.
 
-- `IDCVBarcodeReader`: The interface that defines barcode decoding APIs. This is the interface to set up barcode decoding configurations.
-- `IDCVCameraEnhancer`: The interface that defines camera controlling APIs. This is the module for you to set up a camera module to capture video stream.
+- `IDCVBarcodeReader`: The interface that defines barcode decoding APIs and helps set up barcode decoding configurations.
+- `IDCVCameraEnhancer`: The interface that defines camera controlling APIs and helps you to set up a camera module to capture the video stream.
 
-In **App.xaml.cs**, add the following code to initialize the IDCVBarcodeReader and IDCVCameraEnhancer.
+In **App.xaml.cs**, add the following code to initialize the `IDCVBarcodeReader` and `IDCVCameraEnhancer` objects.
 
 ```c#
 using DCVXamarin;
@@ -183,8 +183,9 @@ namespace SimpleBarcodeScanner
         public App(IDCVCameraEnhancer dce, IDCVBarcodeReader dbr)
         {
             ...
-            // Initialize the license of barcode reader module.
+            // Initialize the license of barcode reader module. Please note that the following license is a public trial.
             barcodeReader.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
+            // You can add any extra barcode reader settings configurations after the license initialization
             ...
         }
 
@@ -201,7 +202,7 @@ namespace SimpleBarcodeScanner
 
 ```
 
-### Add a Button for Start Scanning
+### Add a Button to Start Scanning
 
 In the **MainPage.xaml**, add the following code:
 
@@ -222,7 +223,7 @@ async void OnStartScanningButtonClicked(object sender, EventArgs e)
 
 ### Configure the CameraView
 
-Create a new Xamarin.Forms content page in the project and name it "ScanningPage". In the **ScanningPage.xaml** add the `CameraView`:
+Create a new Xamarin.Forms content page in the project and name it *ScanningPage*. In the **ScanningPage.xaml** add the `CameraView`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -284,7 +285,7 @@ namespace SimpleBarcodeScanner
 
 ### Obtaining Barcode Results
 
-Since you have configured on the barcode decoding thread, the library will start decoding from the video steam when the **ScanningPage** appears. You can use interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`.
+With the barcode decoding thread now configured, the library will start decoding from the video steam when the **ScanningPage** appears. You can use the interface `IBarcodeResultListener` to obtain the decoded `BarcodeResults`.
 
 In **ScanningPage.xaml**, add a label for displaying the barcode results
 
@@ -389,7 +390,7 @@ Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```c#
 BarcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST);
@@ -415,7 +416,7 @@ How to set scan region:
 
 - Define a `Region` object via class Region.
 - Configure the value of `Region`.
-- Assign the `Region` to the `ScanRegion` property of `IDCVCameraEnhancer`.
+- Assign the `Region` to the `ScanRegion` property of the `IDCVCameraEnhancer` object.
 
 ```c#
 DCVXamarin.Region region = new DCVXamarin.Region();
