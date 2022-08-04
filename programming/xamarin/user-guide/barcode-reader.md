@@ -23,7 +23,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Include the Library](#include-the-library)
   - [Initialize IDCVBarcodeReader and IDCVCameraEnhancer](#initialize-idcvbarcodereader-and-idcvcameraenhancer)
   - [License Activation](#license-activation)
-  - [Add a Button for Start Scanning](#add-a-button-for-start-scanning)
+  - [Add a Button to Start Scanning](#add-a-button-to-start-scanning)
   - [Configure the CameraView](#configure-the-cameraview)
   - [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
   - [Obtaining Barcode Results](#obtaining-barcode-results)
@@ -64,7 +64,7 @@ In the **NuGet Package Manager>Manage Packages for Solution** of your project, s
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Xamarin SDK.
 
->Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples/tree/main/BarcodeReaderSimpleSample).
+>Note: You can get the full source code of a similar project: <a href="https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples/tree/main/BarcodeReaderSimpleSample" target="_blank">Barcode Reader Simple Sample</a>.
 
 ### Set up Development Environment
 
@@ -88,7 +88,7 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 ### Include the Library
 
-Add NuGet package **DCVXamarin** to your project. You can view the [installation section](#installation) on how to add the library.
+Add NuGet package **Dynamsoft.CaptureVision.Xamarin.Forms** to your project. You can view the [installation section](#installation) on how to add the library.
 
 ### Initialize IDCVBarcodeReader and IDCVCameraEnhancer
 
