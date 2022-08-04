@@ -27,7 +27,7 @@ jobs:
           [ -d DCVDoc ] && rm -rf DCVDoc
           [ ! -d DCVDoc ] && mkdir -p DCVDoc
           cd capture-vision-docs-mobile && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile/* ./DCVDoc/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDoc/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCVDoc/
           cd DCVDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DCVDoc/_site/ ./www.dynamsoft.com/capture-vision/docs/ prod
          
@@ -47,7 +47,7 @@ jobs:
           [ ! -d DCVDocPreview ] && mkdir -p DCVDocPreview
           [ ! -d capture-vision-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile-preview
           cd capture-vision-docs-mobile-preview && git pull && cd .. && cp -rfp ./capture-vision-docs-mobile-preview/* ./DCVDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCVDocPreview/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DCVDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocPreview/_config.yml
           cd DCVDocPreview && bundle exec jekyll build
