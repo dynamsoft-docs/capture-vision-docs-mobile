@@ -88,7 +88,7 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 ### Include the Library
 
-Add NuGet package **DCVXamarin** to your project. You can view the [installation section](#installation) on how to add the library.
+Add NuGet package **Dynamsoft.CaptureVision.Xamarin.Forms** to your project. You can view the [installation section](#installation) on how to add the library.
 
 ### Initialize IDCVBarcodeReader and IDCVCameraEnhancer
 
@@ -126,7 +126,7 @@ Open the **MainActivity.cs** in **SimpleBarcodeScanner.Android** folder. Change 
 ```c#
 using DCVXamarin.Droid;
 
-namespace dbr.Droid
+namespace SimpleBarcodeScanner.Droid
 {
     ...
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
@@ -151,7 +151,7 @@ Open the **AppDelegate.cs** in **SimpleBarcodeScanner.iOS** folder. Change the c
 ```c#
 using DCVXamarin.iOS;
 
-namespace dbr.iOS
+namespace SimpleBarcodeScanner.iOS
 {
     ...
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate

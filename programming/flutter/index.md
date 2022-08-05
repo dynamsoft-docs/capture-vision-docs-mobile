@@ -17,7 +17,7 @@ breadcrumbText: Flutter Index
 
 ## Samples
 
-- <a href = "https://github.com/Dynamsoft/capture-vision-flutter-samples" target="_blank">Dynamsoft Capture Vision - Flutter HelloWorld</a>
+- <a href = "https://github.com/Dynamsoft/capture-vision-flutter-samples" target="_blank">Dynamsoft Capture Vision - Flutter barcode_reader_simple_sample</a>
 
 ## API Reference
 
