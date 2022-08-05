@@ -126,7 +126,7 @@ Open the **MainActivity.cs** in **SimpleBarcodeScanner.Android** folder. Change 
 ```c#
 using DCVXamarin.Droid;
 
-namespace dbr.Droid
+namespace SimpleBarcodeScanner.Droid
 {
     ...
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
@@ -151,7 +151,7 @@ Open the **AppDelegate.cs** in **SimpleBarcodeScanner.iOS** folder. Change the c
 ```c#
 using DCVXamarin.iOS;
 
-namespace dbr.iOS
+namespace SimpleBarcodeScanner.iOS
 {
     ...
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
