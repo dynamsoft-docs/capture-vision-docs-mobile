@@ -17,7 +17,7 @@ breadcrumbText: Xamarin Index
 
 ## Samples
 
-- <a href = "https://github.com/Dynamsoft/capture-vision-xamarin-samples" target="_blank">Dynamsoft Capture Vision - Xamarin HelloWorld</a>
+- <a href = "https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples" target="_blank">Dynamsoft Capture Vision - Xamarin HelloWorld</a>
 
 ## API Reference
 
