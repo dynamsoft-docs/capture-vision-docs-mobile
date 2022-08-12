@@ -18,6 +18,11 @@ rn-api: /capture-vision/docs/programming/react-native/api-reference/
 rn-release-notes: /capture-vision/docs/programming/react-native/release-notes/
 rn-guide: /capture-vision/docs/programming/react-native/user-guide/
 
+cordova: /capture-vision/docs/programming/cordova/
+cordova-api: /capture-vision/docs/programming/cordova/api-reference/
+cordova-release-notes: /capture-vision/docs/programming/cordova/release-notes/
+cordova-guide: /capture-vision/docs/programming/cordova/user-guide/
+
 flutter: /capture-vision/docs/programming/flutter/
 flutter-api: /capture-vision/docs/programming/flutter/api-reference/
 flutter-release-notes: /capture-vision/docs/programming/flutter/release-notes/
