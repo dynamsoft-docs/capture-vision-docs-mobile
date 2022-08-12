@@ -26,7 +26,7 @@ breadcrumbText: API Index
 | [`BarcodeLocationResult`](interface-barcode-location-result.md) | The interface that indicates the location result of the detected barcodes. |
 | [`BarcodeResult`](interface-barcode-result.md) | The interface that indicates the barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
 | [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) | The interface that indicates barcode decoding settings. |
-| [Point](interface-point.md) | The interface that indicates the x and y coordinates of a point. |
+| [`Point`](interface-point.md) | The interface that indicates the x and y coordinates of a point. |
 | [`Quadrilateral`](interface-quadrilateral.md) | The interface that indicates the vertex coordinates of a quadrilateral.|
 | [`Rect`](interface-rect.md) | The interface that indicates the vertex coordinates of a rectangle. |
 | [`Region`](interface-region.md) | The interface that indicates the region information. Users can configure region of interest. |
