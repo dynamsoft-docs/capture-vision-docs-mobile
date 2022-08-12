@@ -66,7 +66,7 @@ Now you will learn how to create a simple barcode scanner using Dynamsoft Captur
 
 ### Set up Development Environment
 
-If you are a beginner with Cordova, please follow the guide on the <a href="" target="_blank">Cordova official website</a> to set up the development environment.
+If you are a beginner with Cordova, please follow the guide on the <a href="https://cordova.apache.org/docs/en/11.x/guide/cli/index.html" target="_blank">Cordova official website</a> to set up the development environment.
 
 ### Initialize the Project
 
