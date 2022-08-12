@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Class TorchButton of Dynamsoft Capture Vision Cordova Edition
+title: Interface TorchButton of Dynamsoft Capture Vision Cordova Edition
 description: The interface of TorchButton
 keywords: Interface TorchButton, API reference
 needAutoGenerateSidebar: true
@@ -11,7 +11,7 @@ breadcrumbText: TorchButton
 
 # TorchButton
 
-Class `TorchButton` stores the torch button configurations.
+Interface `TorchButton` stores the torch button configurations.
 
 ```js
 export interface TorchButton {
@@ -34,3 +34,8 @@ export interface TorchButton {
     torchOffImageBase64: string;
 }
 ```
+
+## Related API(s)
+
+- [`DCVCameraView.setTorchButton`](camera-view.md#settorchbutton)
+- [`Interface TorchButton`](interface-torch-button.md)

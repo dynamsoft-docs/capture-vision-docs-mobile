@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Class BarcodeResult of Dynamsoft Capture Vision Cordova Edition
-description: The class of BarcodeResult result
-keywords: Class BarcodeResult, API reference
+title: Interface BarcodeResult of Dynamsoft Capture Vision Cordova Edition
+description: The interface of BarcodeResult
+keywords: Interface BarcodeResult, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -11,7 +11,7 @@ breadcrumbText: BarcodeResult
 
 # BarcodeResult
 
-Class `BarcodeResult`. The return value when a barcode is detected. It stores the barcode information including barcode text and barcode formats.
+Interface `BarcodeResult`. It stores the barcode information including barcode text and barcode formats.
 
 ```js
 export interface BarcodeResult {
@@ -29,6 +29,4 @@ export interface BarcodeResult {
 ## Related API(s)
 
 - [`DynamsoftBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
-- [`Class BarcodeLocationResult`](class-barcode-location-result.md)
-- [`Class Quadrilateral`](class-quadrilateral.md)
-- [`Class Point`](class-point.md)
+- [`Interface BarcodeLocationResult`](interface-barcode-location-result.md)

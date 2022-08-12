@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Class DBRRuntimeSettings of Dynamsoft Capture Vision Cordova Edition
-description: The class of DBR runtime settings
-keywords: Class DBRRuntimeSettings, API reference
+title: Interface DBRRuntimeSettings of Dynamsoft Capture Vision Cordova Edition
+description: The interface of DBR runtime settings
+keywords: Interface DBRRuntimeSettings, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -11,7 +11,7 @@ breadcrumbText: DBRRuntimeSettings
 
 # DBRRuntimeSettings
 
-Class `DBRRuntimeSettings`. It stores the basic barcode decoding settings when using Dynamsoft Barcode Reader.
+Interface `DBRRuntimeSettings`. It stores the basic barcode decoding settings when using Dynamsoft Barcode Reader.
 
 ```js
 export interface DBRRuntimeSettings {

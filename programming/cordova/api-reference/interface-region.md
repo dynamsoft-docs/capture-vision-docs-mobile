@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Class Region of Dynamsoft Capture Vision Cordova Edition
-description: The Class of region
-keywords: Class Region, API reference
+title: Interface Region of Dynamsoft Capture Vision Cordova Edition
+description: The interface of region
+keywords: Interface Region, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -11,7 +11,7 @@ breadcrumbText: Region
 
 # Region
 
-Class `Region`.
+Interface `Region`.
 
 ```js
 export interface Region {

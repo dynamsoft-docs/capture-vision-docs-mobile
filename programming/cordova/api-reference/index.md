@@ -11,47 +11,31 @@ breadcrumbText: API Index
 
 # Cordova API Reference
 
-## namespace DCVCordova
-
-### Primary Classess/Interfaces
+## Primary Classess
 
 | Classes | Description |
 | ------- | ----------- |
-| [`IDCVBarcodeReader`](barcode-reader.md) | The interface that contains barcode decoding related APIs. |
-| [`IDCVCameraEnhancer`](camera-enhancer.md) | The interface that contains camera control and camera enhancements related APIs. |
-| [`CameraView`](camera-view.md) | The class that helps you deploy a camera view for displaying and processing the video stream. The view also allows for basic UI customization. |
+| [`DCVBarcodeReader`](barcode-reader.md) | The class that contains barcode decoding related APIs. |
+| [`DCVCameraEnhancer`](camera-enhancer.md) | The class that contains camera control and camera enhancements related APIs. |
+| [`DCVCameraView`](camera-view.md) | The class that helps you deploy a camera view for displaying and processing the video stream. The view also allows for basic UI customization. |
 
-### Auxiliary Classess/Interfaces
+## Interfaces
 
 | Classes | Description |
 | ------- | ----------- |
-| [`Region`](class-region.md) | The class that stores the region information. Users can configure region of interest. |
-| [`Quadrilateral`](class-quadrilateral.md) | The class that stores the vertex coordinates of the quadrilateral.|
-| [`BarcodeResult`](class-barcode-result.md) | The class that stores the barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
-| [`BarcodeLocationResult`](class-barcode-location-result.md) | The class that stores the location result of the detected barcodes. |
-| [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) | The class that stores barcode decoding settings. |
-| [`TorchButton`](class-torch-button.md) | The class stores the torch button configurations. |
-| [`ILicenseVerificationListener`](interface-license-verification-listener.md) | The listener for users to receive license verification message from the license server. |
-| [`IBarcodeResultListener`](interface-barcode-result-listener.md) | The listener for users to receive the decoded barcode results. |
+| [`BarcodeLocationResult`](interface-barcode-location-result.md) | The interface that indicates the location result of the detected barcodes. |
+| [`BarcodeResult`](interface-barcode-result.md) | The interface that indicates the barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
+| [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) | The interface that indicates barcode decoding settings. |
+| [Point](interface-point.md) | The interface that indicates the x and y coordinates of a point. |
+| [`Quadrilateral`](interface-quadrilateral.md) | The interface that indicates the vertex coordinates of a quadrilateral.|
+| [`Rect`](interface-rect.md) | The interface that indicates the vertex coordinates of a rectangle. |
+| [`Region`](interface-region.md) | The interface that indicates the region information. Users can configure region of interest. |
+| [`TorchButton`](interface-torch-button.md) | The interface indicates the torch button configurations. |
 
 ### Enumerations
 
 | Enumerations | Description |
 | ------------ | ----------- |
-| [`EnumBarcodeFormat`](enum-barcode-format.md) | The enumeration stores the first group of barcode formats. |
-| [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration stores the second group of barcode formats. |
-| [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
-
-## namespace DCVCordova.Droid
-
-| Classes | Description |
-| ------- | ----------- |
-| [`DCVCameraEnhancer`](android-camera-enhancer.md) | Implements IDCVCameraEnhancer on Android. |
-| [`DCVBarcodeRader`](android-barcode-reader.md) | Implements IDCVBarcodeReader on Android. |
-
-## namespace DCVCordova.iOS
-
-| Classes | Description |
-| ------- | ----------- |
-| [`DCVCameraEnhancer`](ios-camera-enhancer.md) | Implements IDCVCameraEnhancer on iOS. |
-| [`DCVBarcodeRader`](ios-barcode-reader.md) | Implements IDCVBarcodeReader on iOS. |
+| [`EnumBarcodeFormat`](enum-barcode-format.md) | The enumeration indicates the first group of barcode formats. |
+| [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration indicates the second group of barcode formats. |
+| [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration indicates the preset barcode decoding templates. |

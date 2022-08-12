@@ -54,5 +54,5 @@ export enum EnumBarcodeFormat {
 ## Related API(s)
 
 - [`IBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettingsdbrruntimesettings)
-- [`DBRRuntimeSettings`](class-dbr-runtime-settings.md)
+- [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md)
 - [`EnumBarcodeFormat_2`](enum-barcode-format2.md)
