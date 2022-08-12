@@ -21,8 +21,9 @@ breadcrumbText: Cordova Index
 
 ## API Reference
 
-- [IDCVCameraEnhancer class](api-reference/camera-view.md)
-- [IDCVBarcodeReader class](api-reference/barcode-reader.md)
+- [DCVCameraEnhancer class](api-reference/camera-enhancer.md)
+- [DCVCameraView class](api-reference/camera-view.md)
+- [DCVBarcodeReader class](api-reference/barcode-reader.md)
 
 ## Release Notes
 
