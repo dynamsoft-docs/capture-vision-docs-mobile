@@ -14,12 +14,13 @@ breadcrumbText: DCVCameraEnhancer
 The interface `DCVCameraEnhancer` provides camera and camera related hardware controlling APIs.
 
 ```js
+class DCVCameraEnhancer
 ```
 
 | Method | Description |
 | ------ | ----------- |
 | [`createInstance`](#createinstance) | Create an instance of `DCVCameraEnhancer`. |
-| [`setScanRegion`](#scanregion) | The property for users to specify the region of interest. |
+| [`setScanRegion`](#setscanregion) | Specify the region of interest. |
 | [`open`](#open) | Open the camera. |
 | [`close`](#close) | Close the camera. |
 | [`turnOnTorch`](#turnontorch) | Turn on the torch. |
