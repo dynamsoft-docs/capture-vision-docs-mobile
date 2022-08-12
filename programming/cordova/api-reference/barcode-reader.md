@@ -118,8 +118,8 @@ updateRuntimeSettings(settings: String | DBRRuntimeSettings | EnumDBRPresetTempl
 
 ```js
 // Update runtime settings from a DBRRuntimeSettings object.
-let settings = await dbr.getDBRRuntimeSettings();
-settings.expectedBarcodeCount = 5;
+let settings = await dbr.getRuntimeSettings()
+settings.expectedBarcodesCount = 5;
 settings.timeout = 1000;
 dbr.updateRuntimeSettings(settings)
 // Update runtime settings from a preset template
