@@ -45,6 +45,7 @@ An instance of `DCVBarcodeReader`.
 **Code Snippet**
 
 ```js
+dbr = await Dynamsoft.DCVBarcodeReader.createInstance()
 ```
 
 ## initLicense
@@ -62,6 +63,11 @@ static initLicense(license: String): Promise<void>;
 **Code Snippet**
 
 ```js
+try {
+    await Dynamsoft.DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+} catch (e) {
+    console.log(e)
+}
 ```
 
 ## getVersion
@@ -91,6 +97,7 @@ An object of [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) that stores t
 **Code Snippet**
 
 ```js
+let settings = await dbr.getDBRRuntimeSettings();
 ```
 
 ## updateRuntimeSettings
@@ -110,7 +117,15 @@ updateRuntimeSettings(settings: String | DBRRuntimeSettings | EnumDBRPresetTempl
 **Code Snippet**
 
 ```js
-//App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}");
+// Update runtime settings from a DBRRuntimeSettings object.
+let settings = await dbr.getDBRRuntimeSettings();
+settings.expectedBarcodeCount = 5;
+settings.timeout = 1000;
+dbr.updateRuntimeSettings(settings)
+// Update runtime settings from a preset template
+dbr.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.VIDEO_SPEED_FIRST)
+// Update runtime settings from a JSON template.
+dbr.updateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}")
 ```
 
 ## resetRuntimeSettings
@@ -162,4 +177,17 @@ addResultListener(listener: (results: BarcodeResult[]) => void): void;
 The following code snippet shows how to use barcode reader module to decode from video stream.
 
 ```js
+dbr.setTextResultListener((results) => {
+    const resultElement = document.getElementById('show_result');
+    var resultStr = ""
+    if (results && results.length > 0) {
+        for (i = 0; i < results.length; i++) {
+            resultStr=resultStr + results[i].barcodeFormatString+":"+results[i].barcodeText+'\n'
+        }
+        resultElement.innerHTML = (resultStr)
+    } else {
+        resultElement.innerHTML = "No barcode detected in this frame."
+    }
+    document.querySelector('#camera_view').appendChild(resultElement)
+})
 ```

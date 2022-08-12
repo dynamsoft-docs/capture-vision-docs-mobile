@@ -28,9 +28,10 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
     - [Include the Library](#include-the-library)
     - [Initialize the Camera Module](#initialize-the-camera-module)
     - [Configure the Barcode Reader Module](#configure-the-barcode-reader-module)
+    - [Configure Camera Permissions](#configure-camera-permissions)
     - [Run the Project](#run-the-project)
-      - [Run Android on Windows](#run-android-on-windows)
-      - [Run iOS & Android on macOS](#run-ios--android-on-macos)
+      - [Run Android on Windows or macOS](#run-android-on-windows-or-macos)
+      - [Run iOS on macOS](#run-ios-on-macos)
   - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
     - [Using the Settings Templates](#using-the-settings-templates)
     - [Using the DBRRuntimeSettings Interface](#using-the-dbrruntimesettings-interface)
@@ -195,38 +196,35 @@ The Barcode Reader module of DynamsoftCapture Vision needs a valid license to wo
     }
     ```
 
+### Configure Camera Permissions
+
+You need to set the **Privacy - Camera Usage Description** field in the **Info.plist** file for iOS. If this property is not set, the iOS application will fail at runtime. In order to set this property, you have to use Xcode to open the **platforms/ios/SimpleBarcodeScanner.xcworkspace**. Once open, you can edit the **Info.plist** to include this property.
+
 ### Run the Project
 
-#### Run Android on Windows
+#### Run Android on Windows or macOS
 
-Add the platform first.
+1. Add the platform first with the following command.
 
-```bash
-cordova platform add android
-```
+    ```bash
+    cordova platform add android
+    ```
 
-Run the Project.
+2. Run the Project with the following command.
 
-```bash
-cordova run
-```
+    ```bash
+    cordova run
+    ```
 
-#### Run iOS & Android on macOS
+#### Run iOS on macOS
 
-Add the platform first.
+1. Add the platform first.
 
-```bash
-// Add iOS
-cordova platform add ios
-// Add Android
-cordova platform add android
-```
+    ```bash
+    cordova platform add ios
+    ```
 
-Run the Project.
-
-```bash
-cordova run
-```
+2. Open the **platforms/ios/SimpleBarcodeScanner.xcworkspace** with xcode. Configure for the signing and run the project from xcode.
 
 ## Customizing the Barcode Reader
 
@@ -235,6 +233,7 @@ cordova run
 DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```js
+dbr.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
 ```
 
 ### Using the DBRRuntimeSettings Interface
@@ -242,6 +241,15 @@ DBR offers several preset templates for different popular scenarios. For example
 The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to `DBRRuntimeSettings`. Here is a quick example:
 
 ```js
+// Get the current runtime settings of the barcode reader.
+let settings = await this.reader.getDBRRuntimeSettings();
+// Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
+// Set the expected barcode count to 1 can maximize the barcode decoding speed.
+settings.expectedBarcodesCount = 0;
+// Set the barcode formats to read.
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX;
+// Apply the new settings to the barcode reader.
+await this.reader.updateDBRRuntimeSettings(settings);
 ```
 
 ### Customizing the Scan Region
@@ -255,6 +263,13 @@ How to set scan region:
 - Assign the `Region` to the `ScanRegion` property of the `IDCVCameraEnhancer` object.
 
 ```js
+dce.setScanRegion({
+    regionLeft: 15,
+    regionRight: 85,
+    regionTop: 30,
+    regionBottom: 70,
+    regionMeasuredByPercentage: true
+})
 ```
 
 ## Licensing

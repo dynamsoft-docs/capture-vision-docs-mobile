@@ -27,4 +27,4 @@ export enum EnumDBRPresetTemplate {
 
 ## Related API(s)
 
-- [`DynamsoftBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
+- [`DCVBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)

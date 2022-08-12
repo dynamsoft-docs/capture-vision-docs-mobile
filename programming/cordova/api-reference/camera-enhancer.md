@@ -41,6 +41,7 @@ An instance of `DCVCameraEnhancer`.
 **Code Snippet**
 
 ```js
+dce = await Dynamsoft.DCVCameraEnhancer.createInstance()
 ```
 
 ## setScanRegion
@@ -58,6 +59,13 @@ setScanRegion(region: Region): Promise<void>;
 **Code Snippet**
 
 ```js
+dce.setScanRegion({
+    regionLeft: 15,
+    regionRight: 85,
+    regionTop: 30,
+    regionBottom: 70,
+    regionMeasuredByPercentage: true
+})
 ```
 
 **Related APIs**

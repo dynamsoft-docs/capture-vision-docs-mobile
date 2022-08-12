@@ -28,5 +28,5 @@ export interface BarcodeResult {
 
 ## Related API(s)
 
-- [`DynamsoftBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
+- [`DCVBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
 - [`Interface BarcodeLocationResult`](interface-barcode-location-result.md)

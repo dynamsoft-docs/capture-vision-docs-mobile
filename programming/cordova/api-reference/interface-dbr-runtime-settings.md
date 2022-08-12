@@ -31,6 +31,6 @@ export interface DBRRuntimeSettings {
 
 ## Related API(s)
 
-- [`updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
+- [`DCVBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
 - [`EnumBarcodeFormat`](enum-barcode-format.md)
 - [`EnumBarcodeFormat_2`](enum-barcode-format2.md)

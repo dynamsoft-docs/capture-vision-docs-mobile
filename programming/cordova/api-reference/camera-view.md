@@ -33,11 +33,27 @@ bindToHtmlElement(element:HTMLElement): void;
 
 **Parameters**
 
-`element`: A HTML `<div>` for displaying `DCVCameraView`
+`element`: A HTML `<div>` for displaying `DCVCameraView`.
 
 **Code Snippet**
 
+Create an HTML element first.
+
+```html
+<div id="camera_view" style="width: 100vw; height: 100vh; z-index: -1;">
+    <div id="show_result" style="position: fixed; width: 100vw; bottom: 10vh;  text-align:center; color: white; "></div>
+</div>
+```
+
+Get and bind the HTML element to DCVCameraView
+
 ```js
+// Get the HTML element.
+const cameraViewElement = document.getElementById("camera_view")
+// Create an instance of the camera view.
+var cameraView = new Dynamsoft.DCVCameraView()
+// Bind the camera view instance with the HTML element.
+cameraView.bindCameraViewToElement(cameraViewElement)
 ```
 
 ## setOverlayVisible
@@ -55,6 +71,7 @@ setOverlayVisible(vis:boolean): void;
 **Code Snippet**
 
 ```js
+cameraView.setOverlayVisible(true)
 ```
 
 ## setTorchButton
@@ -71,5 +88,40 @@ setTorchButton(btn:TorchButton): void;
 
 **Code Snippet**
 
+You can simply display a torch button on the top-left corner of the view.
+
 ```js
+cameraView.setTorchButton({
+    visible:true
+})
+```
+
+You can change the size and the position of the torch button.
+
+```js
+cameraView.setTorchButton({
+    location: {
+        x: 100,
+        y: 100,
+        width: 100,
+        height: 100
+    },
+    visible:true
+})
+```
+
+You can also change the image of the torch button.
+
+```js
+cameraView.setTorchButton({
+    location: {
+        x: 100,
+        y: 100,
+        width: 100,
+        height: 100
+    },
+    visible:true,
+    torchOnImageBase64: "Put your base64 string here. This image will be displayed when the torch is on.",
+    torchOffImageBase64: "Put your base64 string here. This image will be displayed when the torch is off."
+})
 ```
