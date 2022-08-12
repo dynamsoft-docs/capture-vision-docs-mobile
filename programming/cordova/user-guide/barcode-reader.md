@@ -26,9 +26,8 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
     - [Set up Development Environment](#set-up-development-environment)
     - [Initialize the Project](#initialize-the-project)
     - [Include the Library](#include-the-library)
-    - [Add Camera Permission](#add-camera-permission)
-      - [Android](#android-1)
-      - [iOS](#ios-1)
+    - [Initialize the Camera Module](#initialize-the-camera-module)
+    - [Configure the Barcode Reader Module](#configure-the-barcode-reader-module)
     - [Run the Project](#run-the-project)
       - [Run Android on Windows](#run-android-on-windows)
       - [Run iOS & Android on macOS](#run-ios--android-on-macos)
@@ -64,7 +63,7 @@ cordova plugin add dynamsoft-capture-vision-cordova
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Cordova SDK.
 
->Note: You can get the full source code of a similar project: <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples/tree/main/BarcodeReaderSimpleSample" target="_blank">Barcode Reader Simple Sample</a>.
+>Note: Instead of following this guide, you can also initialize a project with this template to get started: <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples/tree/main/BarcodeReaderSimpleSample" target="_blank">Barcode Reader Simple Sample</a>.
 
 ### Set up Development Environment
 
@@ -84,19 +83,150 @@ cordova create SimpleBarcodeScanner
 cordova plugin add dynamsoft-capture-vision-cordova
 ```
 
-### Add Camera Permission
+### Initialize the Camera Module
 
-#### Android
+Dynamsoft Capture Vision provides a build-in camera module for you to capture and display the video stream. The following two classes are used when initializing the camera module:
 
-#### iOS
+- `DCVCameraEnhancer`: The class that provides camera controlling APIs.
+- `DCVCameraView`: The class of camera view. The camera view will display the video stream and other UI elements.
 
-Add **Privacy - Camera Usage Description** and your message to the **info.plist** of your project.
+1. Find the **www/index.html** file in your project. Replace the original content with the following code:
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+        <body style="margin: 0;">
+            <div id="camera_view" style="width: 100vw; height: 100vh; z-index: -1;">
+                <div id="show_result" style="position: fixed; width: 100vw; bottom: 10vh;  text-align:center; color: white; "></div>
+            </div>
+            <script src="cordova.js"></script>
+            <script src="js/startup.js"></script>
+        </body>
+    </html>
+    ```
+
+2. Open **www/index.js**, add code to initialize DCVCameraEnhancer and DCVCameraView
+
+    ```js
+    // Register the event of device ready.
+    document.addEventListener('deviceready', onDeviceReady, false);
+    // Create a object of DCVCameraEnhancer.
+    var dcvCameraEnhancer
+    // Get the camera_view <div> we created in the previous step.
+    const cameraViewElement = document.getElementById("camera_view")
+
+    async function onDeviceReady() {
+        // Create the instance of DCVCameraEnhancer.
+        dcvCameraEnhancer = await Dynamsoft.DCVCameraEnhancer.createInstance()
+        // Create the instance of DCVCameraView.
+        var cameraView = new Dynamsoft.DCVCameraView()
+        // Bind the instance of DCVCameraView with the div you created before.
+        cameraView.bindCameraViewToElement(cameraViewElement)
+    }
+    ```
+
+### Configure the Barcode Reader Module
+
+The Barcode Reader module of DynamsoftCapture Vision needs a valid license to work.
+
+1. Add the following code in **www/index.js** to initialize the license of Barcode Reader module
+
+    ```js
+    async function onDeviceReady() {
+        ...
+        // Here we use a public trial key as an example.
+        try {
+            await Dynamsoft.DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    ```
+
+2. Initialize the barcode reader module. Register a result listener for obtaining the barcode results.
+
+    ```js
+    async function onDeviceReady() {
+        ...
+        // Create the instance of DCVBarcodeReader.
+        dcvBarcodeReader = await Dynamsoft.DCVBarcodeReader.createInstance()
+        dcvBarcodeReader.setTextResultListener((results) => {
+            const resultElement = document.getElementById('show_result');
+            var resultStr = ""
+            if (results && results.length > 0) {
+                for (i = 0; i < results.length; i++) {
+                    resultStr=resultStr + results[i].barcodeFormatString+":"+results[i].barcodeText+'\n'
+                }
+                resultElement.innerHTML = (resultStr)
+            } else {
+                resultElement.innerHTML = "No barcode detected in this frame."
+            }
+            document.querySelector('#camera_view').appendChild(resultElement)
+        })
+    }
+    ```
+
+3. Open the camera and start barcode scanning. You will receive the barcode results from the result listener.
+
+    ```js
+    async function onDeviceReady() {
+        ...
+        dcvCameraEnhancer.open()
+        dcvBarcodeReader.startScanning()
+    }
+    ```
+
+4. Register the event listener of `onResume` and `onPasue` so that the library can stop/restart barcode decoding when the app is pasue/resume.
+
+    ```js
+    document.addEventListener('resume', onResume, false);
+    document.addEventListener('pause', onPause, false);
+
+    ...
+
+    function onResume() {
+        dcvCameraEnhancer.open()
+        dcvBarcodeReader.startScanning()
+    }
+
+    function onPause() {
+        dcvCameraEnhancer.close()
+        dcvBarcodeReader.stopScanning()
+    }
+    ```
 
 ### Run the Project
 
 #### Run Android on Windows
 
+Add the platform first.
+
+```bash
+cordova platform add android
+```
+
+Run the Project.
+
+```bash
+cordova run
+```
+
 #### Run iOS & Android on macOS
+
+Add the platform first.
+
+```bash
+// Add iOS
+cordova platform add ios
+// Add Android
+cordova platform add android
+```
+
+Run the Project.
+
+```bash
+cordova run
+```
 
 ## Customizing the Barcode Reader
 
