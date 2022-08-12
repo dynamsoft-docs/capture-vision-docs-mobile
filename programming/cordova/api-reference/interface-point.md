@@ -3,8 +3,8 @@ layout: default-layout
 title: Interface Point of Dynamsoft Capture Vision Cordova Edition
 description: The Interface of region
 keywords: Interface Point, API reference
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needAutoGenerateSidebar: false
+needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: Point
 ---

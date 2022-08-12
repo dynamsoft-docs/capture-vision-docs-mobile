@@ -3,8 +3,8 @@ layout: default-layout
 title: Interface Rect of Dynamsoft Capture Vision Cordova Edition
 description: The interface of region
 keywords: Interface Rect, API reference
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needAutoGenerateSidebar: false
+needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: Rect
 ---

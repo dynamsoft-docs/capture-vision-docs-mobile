@@ -3,8 +3,8 @@ layout: default-layout
 title: Interface Quadrilateral of Dynamsoft Capture Vision Cordova Edition
 description: The interface of DBR runtime settings
 keywords: Interface Quadrilateral, API reference
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needAutoGenerateSidebar: false
+needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: Quadrilateral
 ---

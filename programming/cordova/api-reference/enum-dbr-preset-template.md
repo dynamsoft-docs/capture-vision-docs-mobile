@@ -3,8 +3,8 @@ layout: default-layout
 title: EnumPresetTemplate of Dynamsoft Capture Vision Cordova Edition
 description: The enumeration of preset template
 keywords: Preset template, API reference
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needAutoGenerateSidebar: false
+needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: EnumPresetTemplate
 ---

@@ -32,7 +32,7 @@ breadcrumbText: API Index
 | [`Region`](interface-region.md) | The interface that indicates the region information. Users can configure region of interest. |
 | [`TorchButton`](interface-torch-button.md) | The interface indicates the torch button configurations. |
 
-### Enumerations
+## Enumerations
 
 | Enumerations | Description |
 | ------------ | ----------- |
