@@ -25,7 +25,7 @@ class DCVCameraView
 
 ## bindToHtmlElement
 
-Bind DCVCameraView to a HTML element.
+Bind `DCVCameraView` to a HTML element.
 
 ```js
 bindToHtmlElement(element:HTMLElement): void;
