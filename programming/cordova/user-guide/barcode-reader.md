@@ -40,8 +40,8 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ### Cordova
 
-- android@9.0.0+ (10.1.1+ recommended)
-- iOS@6.2.0+
+- Cordova Android: 9.0.0+ (10.1.1+ recommended)
+- Cordova iOS: 6.2.0
 
 ### Android
 
@@ -89,6 +89,8 @@ cordova create SimpleBarcodeScanner
 ```
 
 ### Include the Library
+
+Use the following command to include the library.
 
 ```bash
 cordova plugin add dynamsoft-capture-vision-cordova
