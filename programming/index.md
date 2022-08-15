@@ -16,3 +16,4 @@ Learn how to use Dynamsoft Capture Vision in different programming frameworks:
 - [React Native](react-native/index.md)
 - [Flutter](flutter/index.md)
 - [Xamarin](xamarin/index.md)
+- [Cordova](cordova/index.md)
