@@ -40,9 +40,21 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ### Cordova
 
+- android@9.0.0+ (10.1.1+ recommended)
+- iOS@6.2.0+
+
 ### Android
 
+- Supported OS: Android 5.0 (API Level 21) or higher.
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+- JDK: 1.8+
+
 ### iOS
+
+- Supported OS: **iOS 11.0** or higher.
+- Supported ABI: **arm64** and **x86_64**.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended), CocoaPods 1.11.0+.
 
 ## Installation
 
