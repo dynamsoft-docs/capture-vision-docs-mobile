@@ -18,6 +18,9 @@ export interface BarcodeResult {
     // The barcode text.
     barcodeText: string;
 
+    // The ArrayBuffer of the barcode text.
+    barcodeByte: ArrayBuffer;
+
     // Barcode type in string.
     barcodeFormatString: string;
     
