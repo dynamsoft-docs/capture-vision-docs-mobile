@@ -113,7 +113,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
                 <div id="show_result" style="position: fixed; width: 100vw; bottom: 10vh;  text-align:center; color: white; "></div>
             </div>
             <script src="cordova.js"></script>
-            <script src="js/startup.js"></script>
+            <script src="js/index.js"></script>
         </body>
     </html>
     ```
@@ -134,7 +134,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
         // Create the instance of DCVCameraView.
         var cameraView = new Dynamsoft.DCVCameraView()
         // Bind the instance of DCVCameraView with the div you created before.
-        cameraView.bindCameraViewToElement(cameraViewElement)
+        cameraView.bindToHtmlElement(cameraViewElement)
     }
     ```
 
