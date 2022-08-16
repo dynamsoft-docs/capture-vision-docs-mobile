@@ -163,7 +163,7 @@ The Barcode Reader module of DynamsoftCapture Vision needs a valid license to wo
         ...
         // Create the instance of DCVBarcodeReader.
         dcvBarcodeReader = await Dynamsoft.DCVBarcodeReader.createInstance()
-        dcvBarcodeReader.setTextResultListener((results) => {
+        dcvBarcodeReader.addResultListener((results) => {
             const resultElement = document.getElementById('show_result');
             var resultStr = ""
             if (results && results.length > 0) {
@@ -254,14 +254,14 @@ The SDK also supports a more granular control over the individual runtime settin
 
 ```js
 // Get the current runtime settings of the barcode reader.
-let settings = await this.reader.getRuntimeSettings();
+let settings = await reader.getRuntimeSettings();
 // Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
 // Set the expected barcode count to 1 can maximize the barcode decoding speed.
 settings.expectedBarcodesCount = 0;
 // Set the barcode formats to read.
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX;
 // Apply the new settings to the barcode reader.
-await this.reader.updateRuntimeSettings(settings);
+await reader.updateRuntimeSettings(settings);
 ```
 
 ### Customizing the Scan Region
