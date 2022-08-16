@@ -20,8 +20,8 @@ class DCVCameraView
 | Property | Description |
 | -------- | ----------- |
 | [`bindToHtmlElement`](#bindtohtmlelement) | Bind DCVCameraView to a HTML element. |
-| [`setOverlayVisible`](#overlayvisible) | A property that indicates whether the `overlays` are visible. |
-| [`setTorchButton`](#torchbutton) | A property that determines whether a torch button will be displayed on the `DCVCameraView` and how the torch button will be displayed. |
+| [`setOverlayVisible`](#setoverlayvisible) | A property that indicates whether the `overlays` are visible. |
+| [`setTorchButton`](#settorchbutton) | A property that determines whether a torch button will be displayed on the `DCVCameraView` and how the torch button will be displayed. |
 
 ## bindToHtmlElement
 

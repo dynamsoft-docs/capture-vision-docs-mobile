@@ -20,12 +20,12 @@ interface DCVBarcodeReader
 | Method | Description |
 | ------- | ----------- |
 | [`createInstance`](#createinstance) | Create an instance of `DCVBarcodeReader`. |
-| [`initLicense`](#initLicense) | Initialize the license of Dynamsoft Barcode Reader. |
+| [`initLicense`](#initlicense) | Initialize the license of Dynamsoft Barcode Reader. |
 | [`getVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
 | [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a DBRRuntimeSettings object, a preset template or a JSON String. |
 | [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
-| [`outputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
+| [`outputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`startScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
@@ -97,7 +97,7 @@ An object of [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) that stores t
 **Code Snippet**
 
 ```js
-let settings = await dbr.getDBRRuntimeSettings();
+let settings = await dbr.getRuntimeSettings();
 ```
 
 ## updateRuntimeSettings
@@ -164,7 +164,7 @@ Stop the barcode decoding thread.
 stopScanning(): void;
 ```
 
-## AddResultListener
+## addResultListener
 
 Specifies an event handler that fires after the library finishes scanning a frame.
 
@@ -177,7 +177,7 @@ addResultListener(listener: (results: BarcodeResult[]) => void): void;
 The following code snippet shows how to use barcode reader module to decode from video stream.
 
 ```js
-dbr.setTextResultListener((results) => {
+dbr.addResultListener((results) => {
     const resultElement = document.getElementById('show_result');
     var resultStr = ""
     if (results && results.length > 0) {

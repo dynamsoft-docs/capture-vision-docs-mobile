@@ -70,7 +70,7 @@ dce.setScanRegion({
 
 **Related APIs**
 
-- [Region](class-region.md)
+- [Region](interface-region.md)
 
 ## open
 

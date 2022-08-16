@@ -254,14 +254,14 @@ The SDK also supports a more granular control over the individual runtime settin
 
 ```js
 // Get the current runtime settings of the barcode reader.
-let settings = await this.reader.getDBRRuntimeSettings();
+let settings = await this.reader.getRuntimeSettings();
 // Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
 // Set the expected barcode count to 1 can maximize the barcode decoding speed.
 settings.expectedBarcodesCount = 0;
 // Set the barcode formats to read.
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX;
 // Apply the new settings to the barcode reader.
-await this.reader.updateDBRRuntimeSettings(settings);
+await this.reader.updateRuntimeSettings(settings);
 ```
 
 ### Customizing the Scan Region
