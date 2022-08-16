@@ -121,7 +121,7 @@ cameraView.setTorchButton({
         height: 100
     },
     visible:true,
-    torchOnImageBase64: "Put your base64 string here. This image will be displayed when the torch is on.",
-    torchOffImageBase64: "Put your base64 string here. This image will be displayed when the torch is off."
+    torchOnImage: "Put your file path here. This image will be displayed when the torch is on.",
+    torchOffImage: "Put your file path here. This image will be displayed when the torch is off."
 })
 ```

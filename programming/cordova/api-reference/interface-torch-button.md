@@ -28,10 +28,12 @@ export interface TorchButton {
     visible: boolean;
 
     // When the torch is on, this image will be displayed as the torch image.
-    torchOnImageBase64: string;
+    // Input the file path to specify the torch image.
+    torchOnImage: string;
     
     // When the torch is off, this image will be displayed as the torch image.
-    torchOffImageBase64: string;
+    // Input the file path to specify the torch image.
+    torchOffImage: string;
 }
 ```
 
