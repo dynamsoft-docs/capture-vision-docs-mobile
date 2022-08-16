@@ -16,7 +16,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 ## Table of Contents
 
 - [System Requirements](#system-requirements)
-  - [Cordova](#cordova)
+  - [Cordova Platforms](#cordova-platforms)
   - [Android](#android)
   - [iOS](#ios)
 - [Installation](#installation)
