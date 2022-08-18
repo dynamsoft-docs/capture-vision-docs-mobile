@@ -11,7 +11,7 @@ breadcrumbText: DCVCameraView
 
 # Class DCVCameraView
 
-`DCVCameraView` is the class that used to display the view of camera and related UI elements.
+`DCVCameraView` is used to provide a UI for the camera display and any related UI elements.
 
 ```c#
 class DCVCameraView

@@ -58,13 +58,13 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ## Installation
 
-- Install from GitHub
+- **Github**
 
 ```bash
 cordova plugin add https://github.com/Dynamsoft/capture-vision-cordova
 ```
 
-- Install from npm
+- **npm**
 
 ```bash
 cordova plugin add dynamsoft-capture-vision-cordova
@@ -72,7 +72,7 @@ cordova plugin add dynamsoft-capture-vision-cordova
 
 ## Build Your Barcode Scanner App
 
-Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Cordova SDK.
+Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision for Cordova.
 
 >Note: Instead of following this guide, you can also initialize a project with this template to get started: <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples/tree/main/BarcodeReaderSimpleSample" target="_blank">Barcode Reader Simple Sample</a>.
 
@@ -100,8 +100,8 @@ cordova plugin add dynamsoft-capture-vision-cordova
 
 Dynamsoft Capture Vision provides a build-in camera module for you to capture and display the video stream. The following two classes are used when initializing the camera module:
 
-- `DCVCameraEnhancer`: The class that provides camera controlling APIs.
-- `DCVCameraView`: The class of camera view. The camera view will display the video stream and other UI elements.
+- [`DCVCameraEnhancer`](../api-reference/camera-enhancer.md): The class that provides camera controlling APIs. Please visit the link to learn more.
+- [`DCVCameraView`](../api-reference/camera-view.md): The camera view that will display the video stream and other UI elements. Please visit the link to learn more.
 
 1. Find the **www/index.html** file in your project. Replace the original content with the following code:
 
@@ -118,7 +118,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
     </html>
     ```
 
-2. Open **www/index.js**, add code to initialize DCVCameraEnhancer and DCVCameraView
+2. Open **www/index.js** and add code to initialize DCVCameraEnhancer and DCVCameraView
 
     ```js
     // Register the event of device ready.
@@ -140,9 +140,9 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
 
 ### Configure the Barcode Reader Module
 
-The Barcode Reader module of DynamsoftCapture Vision needs a valid license to work.
+The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to work.
 
-1. Add the following code in **www/index.js** to initialize the license of Barcode Reader module
+1. Add the following code in **www/index.js** to initialize the license of the Barcode Reader module
 
     ```js
     async function onDeviceReady() {
@@ -189,7 +189,7 @@ The Barcode Reader module of DynamsoftCapture Vision needs a valid license to wo
     }
     ```
 
-4. Register the event listener of `onResume` and `onPasue` so that the library can stop/restart barcode decoding when the app is pasue/resume.
+4. Register the event listeners `onResume` and `onPasue` so that the library can stop/restart barcode decoding when the user pauses or resumes the feature.
 
     ```js
     document.addEventListener('resume', onResume, false);
@@ -236,13 +236,13 @@ You need to set the **Privacy - Camera Usage Description** field in the **Info.p
     cordova platform add ios
     ```
 
-2. Open the **platforms/ios/SimpleBarcodeScanner.xcworkspace** with xcode. Configure for the signing and run the project from xcode.
+2. Open the **platforms/ios/SimpleBarcodeScanner.xcworkspace** with xcode. Complete the *Signing & Capabilities* section of the project configuration via Xcode to avoid any signature errors during build.
 
 ## Customizing the Barcode Reader
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example of prioritizing read rate for image-based decoding:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumDBRPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```js
 dbr.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
@@ -250,7 +250,7 @@ dbr.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
 
 ### Using the DBRRuntimeSettings Interface
 
-The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to `DBRRuntimeSettings`. Here is a quick example:
+The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to [`DBRRuntimeSettings`](../api-reference/interface-dbr-runtime-settings.md). Here is a quick example:
 
 ```js
 // Get the current runtime settings of the barcode reader.
@@ -266,16 +266,16 @@ await reader.updateRuntimeSettings(settings);
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `DCVCameraEnhancer` class.
+You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface along with the `DCVCameraEnhancer` class.
 
 How to set scan region:
 
-- Define a `Region` object via class Region.
+- Define a `Region` object.
 - Configure the value of `Region`.
-- Assign the `Region` to the `ScanRegion` property of the `IDCVCameraEnhancer` object.
+- Assign the `Region` to the `ScanRegion` property of the `DCVCameraEnhancer` object.
 
 ```js
-dce.setScanRegion({
+dcvCameraEnhancer.setScanRegion({
     regionLeft: 15,
     regionRight: 85,
     regionTop: 30,
