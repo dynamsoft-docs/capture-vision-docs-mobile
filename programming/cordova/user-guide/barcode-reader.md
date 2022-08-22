@@ -224,6 +224,12 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
     cordova run android
     ```
 
+> You might meet issues on gradle path if it is the first time to run Cordova on your Windows system. The following steps will help you on solving this issue:
+>
+> - Open **Environment Variables**
+> - Look for **Path** in the **System variables**, open it.
+> - Click **New** and add the path of your gradle bin folder to the environment variables. For exmaple: "C:\Users\admin\.gradle\wrapper\dists\gradle-6.4-all\gradle-6.4\bin".
+
 #### Run iOS on macOS
 
 1. Add the platform first.
