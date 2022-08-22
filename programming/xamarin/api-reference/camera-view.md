@@ -11,7 +11,7 @@ breadcrumbText: DCVCameraView
 
 # Class DCVCameraView
 
-`DCVCameraView` is used to provide a UI for the camera display and any related UI elements.
+`DCVCameraView` is used to provide a UI for the camera display and any related UI elements. `DCVCameraView` extends the [`View` class](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.view?view=xamarin-forms) which is where the `HorizontalOptions` and `VerticalOptions` come from.
 
 ```c#
 class DCVCameraView
