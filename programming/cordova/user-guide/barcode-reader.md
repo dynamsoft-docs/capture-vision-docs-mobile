@@ -16,9 +16,6 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 ## Table of Contents
 
 - [System Requirements](#system-requirements)
-  - [Cordova Platforms](#cordova-platforms)
-  - [Android](#android)
-  - [iOS](#ios)
 - [Installation](#installation)
 - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
   - [Set up Development Environment](#set-up-development-environment)
@@ -28,8 +25,6 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Configure the Barcode Reader Module](#configure-the-barcode-reader-module)
   - [Configure Camera Permissions](#configure-camera-permissions)
   - [Run the Project](#run-the-project)
-    - [Run Android on Windows or macOS](#run-android-on-windows-or-macos)
-    - [Run iOS on macOS](#run-ios-on-macos)
 - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
   - [Using the Settings Templates](#using-the-settings-templates)
   - [Using the DBRRuntimeSettings Interface](#using-the-dbrruntimesettings-interface)
