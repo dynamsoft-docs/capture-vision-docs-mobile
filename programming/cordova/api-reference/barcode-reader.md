@@ -11,7 +11,7 @@ breadcrumbText: Class DCVBarcodeReader
 
 # Class DCVBarcodeReader
 
-A barcode reader object accesses to a camera via `DynamsoftCameraView` object at native level, then perform continuous barcode scanning on the incoming frames.
+`DCVBarcodeReader` accesses the camera via a `DynamsoftCameraView` object at the native level, then perform continuous barcode scanning on the incoming frames.
 
 ```js
 interface DCVBarcodeReader
@@ -50,7 +50,7 @@ dbr = await Dynamsoft.DCVBarcodeReader.createInstance()
 
 ## initLicense
 
-Initialize the license of Barcode Reader module.
+Initialize the license of the Barcode Reader module.
 
 ```js
 static initLicense(license: String): Promise<void>;  

@@ -15,7 +15,7 @@ A barcode reader object accesses to a camera via DynamsoftCameraView object at n
 
 | Methods | Description |
 | ------- | ----------- |
-| [`initLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision. |
+| [`initLicense`](#initlicense) | Initialize the license of the Dynamsoft Barcode Reader module. |
 | [`createInstance`](#createinstance) | Create a barcode reader instance. |
 | [`getVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
