@@ -245,7 +245,7 @@ You need to set the **Privacy - Camera Usage Description** field in the **Info.p
 DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumDBRPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```js
-dbr.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
+dcvBarcodeReader.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
 ```
 
 ### Using the DBRRuntimeSettings Interface
