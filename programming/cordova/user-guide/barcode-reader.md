@@ -147,6 +147,8 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
         var cameraView = new Dynamsoft.DCVCameraView()
         // Bind the instance of DCVCameraView with the div you created before.
         cameraView.bindToHtmlElement(cameraViewElement)
+        // Display overlays on the detected barcodes.
+        cameraView.setOverlayVisible(true)
     }
     ```
 
