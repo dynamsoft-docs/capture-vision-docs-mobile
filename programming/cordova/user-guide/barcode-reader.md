@@ -228,7 +228,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
 >
 > - Open **Environment Variables**
 > - Look for **Path** in the **System variables**, open it.
-> - Click **New** and add the path of your gradle bin folder to the environment variables. For exmaple: "C:\Users\admin\.gradle\wrapper\dists\gradle-6.4-all\gradle-6.4\bin".
+> - Click **New** and add the path of your gradle bin folder to the environment variables. For exmaple: "C:\Users\admin\\.gradle\wrapper\dists\gradle-6.4-all\gradle-6.4\bin".
 
 #### Run iOS on macOS
 
