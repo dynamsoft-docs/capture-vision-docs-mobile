@@ -21,6 +21,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Set up Development Environment](#set-up-development-environment)
   - [Initialize the Project](#initialize-the-project)
   - [Include the Library](#include-the-library)
+  - [Initialize the License](#initialize-the-license)
   - [Initialize the Camera Module](#initialize-the-camera-module)
   - [Configure the Barcode Reader Module](#configure-the-barcode-reader-module)
   - [Configure Camera Permissions](#configure-camera-permissions)
@@ -91,6 +92,25 @@ Use the following command to include the library.
 cordova plugin add dynamsoft-capture-vision-cordova
 ```
 
+### Initialize the License
+
+The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to work. Add the following code in **www/index.js** to initialize the license of the Barcode Reader module
+
+```js
+// Register the event of device ready.
+document.addEventListener('deviceready', onDeviceReady, false)
+
+async function onDeviceReady() {
+    ...
+    // Here we use a public trial key as an example.
+    try {
+        await Dynamsoft.DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
+    } catch (e) {
+        console.log(e)
+    }
+}
+```
+
 ### Initialize the Camera Module
 
 Dynamsoft Capture Vision provides a build-in camera module for you to capture and display the video stream. The following two classes are used when initializing the camera module:
@@ -113,12 +133,9 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
     </html>
     ```
 
-2. Open **www/index.js** and add code to initialize DCVCameraEnhancer and DCVCameraView
+2. Open **www/index.js** and add code to initialize `DCVCameraEnhancer` and `DCVCameraView`
 
     ```js
-    // Register the event of device ready.
-    document.addEventListener('deviceready', onDeviceReady, false);
-    // Create a object of DCVCameraEnhancer.
     var dcvCameraEnhancer
     // Get the camera_view <div> we created in the previous step.
     const cameraViewElement = document.getElementById("camera_view")
@@ -135,31 +152,17 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
 
 ### Configure the Barcode Reader Module
 
-The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to work.
-
-1. Add the following code in **www/index.js** to initialize the license of the Barcode Reader module
+1. Initialize the barcode reader module. Register a result listener for obtaining the barcode results.
 
     ```js
-    async function onDeviceReady() {
-        ...
-        // Here we use a public trial key as an example.
-        try {
-            await Dynamsoft.DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
-        } catch (e) {
-            console.log(e)
-        }
-    }
-    ```
-
-2. Initialize the barcode reader module. Register a result listener for obtaining the barcode results.
-
-    ```js
+    ...
+    var dcvBarcodeReader
     async function onDeviceReady() {
         ...
         // Create the instance of DCVBarcodeReader.
         dcvBarcodeReader = await Dynamsoft.DCVBarcodeReader.createInstance()
         dcvBarcodeReader.addResultListener((results) => {
-            const resultElement = document.getElementById('show_result');
+            const resultElement = document.getElementById('show_result')
             var resultStr = ""
             if (results && results.length > 0) {
                 for (i = 0; i < results.length; i++) {
@@ -174,7 +177,7 @@ The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to w
     }
     ```
 
-3. Open the camera and start barcode scanning. You will receive the barcode results from the result listener.
+2. Open the camera and start barcode scanning. You will receive the barcode results from the result listener.
 
     ```js
     async function onDeviceReady() {
@@ -184,11 +187,11 @@ The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to w
     }
     ```
 
-4. Register the event listeners `onResume` and `onPasue` so that the library can stop/restart barcode decoding when the user pauses or resumes the feature.
+3. Register the event listeners `onResume` and `onPasue` so that the library can stop/restart barcode decoding when the user pauses or resumes the feature.
 
     ```js
-    document.addEventListener('resume', onResume, false);
-    document.addEventListener('pause', onPause, false);
+    document.addEventListener('resume', onResume, false)
+    document.addEventListener('pause', onPause, false)
 
     ...
 
@@ -203,10 +206,6 @@ The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to w
     }
     ```
 
-### Configure Camera Permissions
-
-You need to set the **Privacy - Camera Usage Description** field in the **Info.plist** file for iOS. If this property is not set, the iOS application will fail at runtime. In order to set this property, you have to use Xcode to open the **platforms/ios/SimpleBarcodeScanner.xcworkspace**. Once open, you can edit the **Info.plist** to include this property.
-
 ### Run the Project
 
 #### Run Android on Windows or macOS
@@ -220,7 +219,7 @@ You need to set the **Privacy - Camera Usage Description** field in the **Info.p
 2. Run the Project with the following command.
 
     ```bash
-    cordova run
+    cordova run android
     ```
 
 #### Run iOS on macOS
@@ -249,14 +248,14 @@ The SDK also supports a more granular control over the individual runtime settin
 
 ```js
 // Get the current runtime settings of the barcode reader.
-let settings = await reader.getRuntimeSettings();
+let settings = await reader.getRuntimeSettings()
 // Set the expected barcode count to 0 when you are not sure how many barcodes you are scanning.
 // Set the expected barcode count to 1 can maximize the barcode decoding speed.
-settings.expectedBarcodesCount = 0;
+settings.expectedBarcodesCount = 0
 // Set the barcode formats to read.
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX;
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_DATAMATRIX
 // Apply the new settings to the barcode reader.
-await reader.updateRuntimeSettings(settings);
+await reader.updateRuntimeSettings(settings)
 ```
 
 ### Customizing the Scan Region
