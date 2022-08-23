@@ -11,4 +11,4 @@ breadcrumbText: Release Notes
 
 # Release Notes - Cordova
 
-- [1.0.0 (08/04/2022)](cordova-1.md#100-08042022)
+- [1.0.0 (08/23/2022)](cordova-1.md#100-08232022)
