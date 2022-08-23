@@ -14,7 +14,7 @@ breadcrumbText: Class DCVBarcodeReader
 `DCVBarcodeReader` accesses the camera via a `DynamsoftCameraView` object at the native level, then perform continuous barcode scanning on the incoming frames.
 
 ```js
-interface DCVBarcodeReader
+class DCVBarcodeReader
 ```
 
 | Method | Description |
