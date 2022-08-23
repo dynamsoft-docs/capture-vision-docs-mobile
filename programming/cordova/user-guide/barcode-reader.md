@@ -118,7 +118,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
 - [`DCVCameraEnhancer`](../api-reference/camera-enhancer.md): The class that provides camera controlling APIs. Please visit the link to learn more.
 - [`DCVCameraView`](../api-reference/camera-view.md): The camera view that will display the video stream and other UI elements. Please visit the link to learn more.
 
-1. Find the **www/index.html** file in your project. Replace the original content with the following code:
+1. Find the **www/js/index.html** file in your project. Replace the original content with the following code:
 
     ```html
     <!DOCTYPE html>
