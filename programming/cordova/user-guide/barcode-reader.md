@@ -24,7 +24,6 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Initialize the License](#initialize-the-license)
   - [Initialize the Camera Module](#initialize-the-camera-module)
   - [Configure the Barcode Reader Module](#configure-the-barcode-reader-module)
-  - [Configure Camera Permissions](#configure-camera-permissions)
   - [Run the Project](#run-the-project)
 - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
   - [Using the Settings Templates](#using-the-settings-templates)
