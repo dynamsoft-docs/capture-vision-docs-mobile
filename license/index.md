@@ -29,6 +29,7 @@ The following code snippets are using the public trial license to initialize the
 >- React Native
 >- Flutter
 >- Xamarin.Forms
+>- Cordova
 >
 >1. 
 ```js
@@ -74,5 +75,13 @@ public partial class App : Application, ILicenseVerificationListener
              System.Console.WriteLine(msg);
           }
    }
+}
+```
+4. 
+```js
+try {
+   await Dynamsoft.DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+} catch (e) {
+   console.log(e)
 }
 ```

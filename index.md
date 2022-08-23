@@ -20,6 +20,7 @@ DEVELOPMENT
 * [React Native](programming/react-native/index.md)
 * [Flutter](programming/flutter/index.md)
 * [Xamarin](programming/xamarin/index.md)
+* [Cordova](programming/cordova/index.md)
 
 <hr>
 USEFUL RESOURCES

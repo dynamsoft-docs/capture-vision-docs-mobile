@@ -11,7 +11,7 @@ breadcrumbText: IDCVCameraEnhancer
 
 # Interface IDCVCameraEnhancer
 
-The interface `IDCVCameraEnhancer` provides camera and camera related hardware controlling APIs.
+The interface `IDCVCameraEnhancer` provides camera and related hardware controlling APIs.
 
 ```c#
 interface IDCVCameraEnhancer
@@ -45,7 +45,7 @@ Region ScanRegion { get; set; }
 
 **Parameters**
 
-`scanRegion`: An object of `Region` class. It contains the properitirs that indicates the location of the region. View more in [`Region`](class-region.md).
+`scanRegion`: An object of [`Region`](class-region.md) class which indicates the location of the region.
 
 **Code Snippet**
 

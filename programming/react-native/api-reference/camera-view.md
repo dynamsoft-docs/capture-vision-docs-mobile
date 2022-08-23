@@ -20,10 +20,10 @@ The UI component of Dynamsoft Capture Vision. It provides the following function
 | Property | Description |
 | ------- | ----------- |
 | [`scanRegion`](#scanregion) | The property for users to specify the region of interest. |
-| [`scanRegionVisible`](#scanregionvisible) | A property that indicates whether the [`scanRegion`](#scanregion) is visible. |
+| [`scanRegionVisible`](#scanregionvisible) | A property that determines whether the [`scanRegion`](#scanregion) is visible. |
 | [`overlayVisible`](#overlayvisible) | A property that indicates whether the `overlays` are visible. |
-| [`torchState`](#torchstate) | The property that indicates the state if torch light. |
-| [`torchButton`](#torchbutton) | The property that indicates how the torch button will be displayed. |
+| [`torchState`](#torchstate) | The property that indicates the state of the torch light. |
+| [`torchButton`](#torchbutton) | The property that defines how the torch button will be displayed. |
 
 ## scanRegion
 
@@ -61,7 +61,7 @@ render() {
 
 ## scanRegionVisible
 
-A property that indicates whether the [`scanRegion`](#scanregion) is visible.
+A property that defines whether the [`scanRegion`](#scanregion) is visible.
 
 ```js
 scanRegionVisible: boolean;
@@ -105,7 +105,7 @@ torchState={"on"}
 
 ## torchButton
 
-The property that indicates how the torch button will be displayed. The torch button can be displayed on the UI to control the state of torch light. View [interface TorchButton](interface-torch-button.md) to see all available properties for torch button configuration.
+The property that defines how the torch button will be displayed. The torch button can be displayed on the UI to control the state of torch light. View [interface TorchButton](interface-torch-button.md) to see all available properties for torch button configuration.
 
 ```js
 torchButton: TorchButton;
