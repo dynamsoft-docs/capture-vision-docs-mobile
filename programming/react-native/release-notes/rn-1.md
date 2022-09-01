@@ -11,6 +11,18 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.4 (08/09/2022)
+
+- Fixed a bug that might cause a crash when using the library in React Native 0.69.0+.
+
+## 1.1.3 (08/04/2022)
+
+- Minor changes on `DynamsoftCameraView` class.
+
+## 1.1.2 (07/21/2022)
+
+- Fixed a bug in Barcode Reader module that could cause App Store rejection when Build Options - Enable BitCode is set to Yes for an app.
+
 ## 1.1.1 (07/06/2022)
 
 ### Fixed
