@@ -9,5 +9,4 @@ permalink: /faq/index.html
 
 # FAQ Index
 
-1. [How to fix building errors related to IOS archetecture?](How-to-fix-building-errors-related-to-IOS-archetecture.md)
-
+1. [How to Solve "Building for iOS Simulator, but linking in dylib built for iOS"](exclude-architectures.md)
