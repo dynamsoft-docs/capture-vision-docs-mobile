@@ -4,9 +4,11 @@ title: How to fix building errors related to IOS archetecture?
 keywords: Dynamsoft Barcode Reader, FAQ, IOS, Mobile, building error, archetecture, arm64
 description: How to fix building errors related to IOS archetecture?
 needAutoGenerateSidebar: false
+noTitleIndex: true
+breadcrumbText: Exclude Architecture
 ---
 
-## How to Solve "Building for iOS Simulator, but linking in dylib built for iOS"
+# How to Solve "Building for iOS Simulator, but linking in dylib built for iOS"
 
 [<< Back to FAQ index](index.md)
 
