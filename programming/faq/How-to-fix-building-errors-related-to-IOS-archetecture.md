@@ -14,9 +14,7 @@ Dynamsoft framework can be used to build an app for arm64 iOS. If you build the 
 > Note -If you migrate your app from old versions to Xcode 12 or higher, the error message is likely to pop up.
 
 <span style="color:red">
-```
 "Building for iOS Simulator, but linking in dylib built for iOS, file '/ios/Pods/DynamsoftBarcodeReader/DynamsoftBarcodeReader.framework/DynamsoftBarcodeReader' for architecture arm64"
-```
 </span>.
 
 
