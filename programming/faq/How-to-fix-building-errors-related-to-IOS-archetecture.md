@@ -25,8 +25,11 @@ To fix the error:
 If the error message still exists, please make one of the following changes:
 
 Switch from framework to xcframeworks
+
 Or
+
 Excluded Architectures -> Debug -> Any iPhone simulator -> arm64
+
 Or
 
 ```
