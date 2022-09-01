@@ -27,19 +27,25 @@ if still not working, please make one of the following changes:
 1. change framework to xcframeworks
 2. Excluded Architectures -> Debug -> Any iPhone simulator -> arm64
 3. 
-Podfile:
-post_install do |installer|
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-  end
-end
+```
+    Podfile:
+    post_install do |installer|
+      installer.pods_project.build_configurations.each do |config|
+        config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+      end
+    end
+```
 4. 
-post_install do |installer|
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "uname -m"
-  end
-end
+```
+    post_install do |installer|
+      installer.pods_project.build_configurations.each do |config|
+        config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "uname -m"
+      end
+    end
+```
 5. 
-podspec:
-s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+```
+    podspec:
+    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+```
