@@ -23,7 +23,7 @@ ld: "Building for iOS Simulator, but linking in dylib built for iOS, file '/ios/
 2. Set Build Settings > Archetectures > Build Active Architecture Only to YES and choose iPhone device run
 3. Set Build Settings > Archetectures > Architectures -> $(ARCHS_STANDARD)
 
-If the error message still exists, please make one of the following changes:
+**If the error message still exists, please make one of the following changes:**
 
 Switch from framework to xcframeworks
 
