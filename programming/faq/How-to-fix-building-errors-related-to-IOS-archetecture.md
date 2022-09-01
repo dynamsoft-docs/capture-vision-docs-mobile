@@ -24,11 +24,11 @@ To fix the error:
 
 If the error message still exists, please make one of the following changes:
 
-1. change framework to xcframeworks
+Switch from framework to xcframeworks
 Or
-2. Excluded Architectures -> Debug -> Any iPhone simulator -> arm64
+Excluded Architectures -> Debug -> Any iPhone simulator -> arm64
 Or
-3. 
+
 ```
     Podfile:
     post_install do |installer|
@@ -38,7 +38,7 @@ Or
     end
 ```
 Or
-4. 
+
 ```
     post_install do |installer|
       installer.pods_project.build_configurations.each do |config|
@@ -47,7 +47,7 @@ Or
     end
 ```
 Or
-5. 
+ 
 ```
     podspec:
     s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
