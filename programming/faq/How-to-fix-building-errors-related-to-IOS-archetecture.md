@@ -17,7 +17,7 @@ ld: "Building for iOS Simulator, but linking in dylib built for iOS, file '/ios/
 
 > Note -If you migrate your app from old versions to Xcode 12 or higher, the error message is likely to pop up.  
 
-
+<br />
 
 **To fix the error:**  
 
@@ -25,7 +25,7 @@ ld: "Building for iOS Simulator, but linking in dylib built for iOS, file '/ios/
 2. Set Build Settings > Archetectures > Build Active Architecture Only to YES and choose iPhone device run  
 3. Set Build Settings > Archetectures > Architectures -> $(ARCHS_STANDARD)  
 
-
+<br />
 
 **If the error message still exists, please make one of the following changes:**  
 
