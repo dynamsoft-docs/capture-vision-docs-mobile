@@ -10,28 +10,28 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-Dynamsoft framework can be used to build an app for arm64 iOS. If you build the app for arm64 simulator, the following error message may pop up:
+Dynamsoft framework can be used to build an app for arm64 iOS. If you build the app for arm64 simulator, the following error message may pop up:  
 
 
-ld: "Building for iOS Simulator, but linking in dylib built for iOS, file '/ios/Pods/DynamsoftBarcodeReader/DynamsoftBarcodeReader.framework/DynamsoftBarcodeReader' for architecture arm64"
+ld: "Building for iOS Simulator, but linking in dylib built for iOS, file '/ios/Pods/DynamsoftBarcodeReader/DynamsoftBarcodeReader.framework/DynamsoftBarcodeReader' for architecture arm64"  
 
-> Note -If you migrate your app from old versions to Xcode 12 or higher, the error message is likely to pop up.
+> Note -If you migrate your app from old versions to Xcode 12 or higher, the error message is likely to pop up.  
 
-**To fix the error:**
+**To fix the error:**  
 
-1. Set Build Settings > Build Options > VALIDATE_WORKSPACE to "YES" and then rebuild your project
-2. Set Build Settings > Archetectures > Build Active Architecture Only to YES and choose iPhone device run
-3. Set Build Settings > Archetectures > Architectures -> $(ARCHS_STANDARD)
+1. Set Build Settings > Build Options > VALIDATE_WORKSPACE to "YES" and then rebuild your project  
+2. Set Build Settings > Archetectures > Build Active Architecture Only to YES and choose iPhone device run  
+3. Set Build Settings > Archetectures > Architectures -> $(ARCHS_STANDARD)  
 
-**If the error message still exists, please make one of the following changes:**
+**If the error message still exists, please make one of the following changes:**  
 
-Switch from framework to xcframeworks
+Switch from framework to xcframeworks  
 
-Or
+Or  
 
-Excluded Architectures -> Debug -> Any iPhone simulator -> arm64
+Excluded Architectures -> Debug -> Any iPhone simulator -> arm64  
 
-Or
+Or  
 
 ```
     Podfile:
@@ -40,8 +40,8 @@ Or
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
       end
     end
-```
-Or
+```  
+Or  
 
 ```
     post_install do |installer|
@@ -49,8 +49,8 @@ Or
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "uname -m"
       end
     end
-```
-Or
+```  
+Or  
  
 ```
     podspec:
