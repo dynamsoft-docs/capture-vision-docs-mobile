@@ -31,7 +31,7 @@ class BarcodeResult {
 
 ## Related API(s)
 
-- [`DCVBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
+- [`DCVBarcodeReader.receiveResultStream`](barcode-reader.md#receiveresultstream)
 - [`Class BarcodeLocationResult`](class-barcode-location-result.md)
 - [`Class Quadrilateral`](class-quadrilateral.md)
 - [`Class Point`](class-point.md)

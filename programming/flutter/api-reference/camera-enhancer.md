@@ -22,6 +22,25 @@ The class provides camera control APIs.
 | [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`setScanRegion`](#setscanregion) | The property for users to specify the region of interest. |
 
+## createInstance
+
+Create a camera enhancer instance.
+
+```dart
+static Future<DCVCameraEnhancer> createInstance() async;
+```
+
+**Return Value**
+
+A camera enhancer instance.
+
+**Code Snippet**
+
+```dart
+late final DCVCameraEnhancer _cameraEnhancer;
+_cameraEnhancer = await DCVCameraEnhancer.createInstance();
+```
+
 ## open
 
 Open the camera.
@@ -85,7 +104,7 @@ Future setScanRegion(Region scanRegion)
 **Code Snippet**
 
 ```dart
-final DCVCameraEnhancer _cameraEnhancer = DCVCameraEnhancer();
+final DCVCameraEnhancer _cameraEnhancer = await DCVCameraEnhancer.createInstance();
 Region scanRegion = Region(regionTop: 20, regionBottom: 80, regionLeft: 20, regionRight: 80, regionMeasuredByPercentage: true);
-_cameraEnhancer.scanRegion = scanRegion;
+_cameraEnhancer.setScanRegion(scanRegion);
 ```

@@ -46,9 +46,9 @@ Dynamsoft Camera Enhancer (DCE) is an SDK that includes camera control, camera e
 
 The functional products are re-encapsulated and presented as the components of DCV.
 
-### DynamsoftCameraView
+### DCVCameraView
 
-`DynamsoftCameraView` is the UI component that includes the full feature of DCE. When using the DCE-powered camera view, users can add the following configurations to the view:
+`DCVCameraView` is the UI component that includes the full feature of DCE. When using the DCE-powered camera view, users can add the following configurations to the view:
 
 - Control the camera (open/close).
 - Change the Basic properties of the camera such as resolution, focus points.
@@ -56,9 +56,9 @@ The functional products are re-encapsulated and presented as the components of D
 - Set a scan region that determines the region of interest.
 - Add graphic elements to the UI view to enhance the interaction. For example, highlight the barcode or detected quad areas.
 
-### DynamsoftBarcodeReader
+### DCVBarcodeReader
 
-`DynamsoftBarcodeReader` is the module that included the full feature of DBR. It powers the barcode decoding feature of DCV. When working with this module, users can:
+`DCVBarcodeReader` is the module that included the full feature of DBR. It powers the barcode decoding feature of DCV. When working with this module, users can:
 
 - Specify barcode format.
 - Change basic barcode decoding settings.

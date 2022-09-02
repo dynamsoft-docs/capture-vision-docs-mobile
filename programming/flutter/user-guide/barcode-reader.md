@@ -122,15 +122,15 @@ Add the following instance variables:
 ```dart
 class _MyHomePageState extends State<MyHomePage> {
   late final DCVBarcodeReader _barcodeReader;
+  late final DCVCameraEnhancer _cameraEnhancer;
   final DCVCameraView _cameraView = DCVCameraView();
-  final DCVCameraEnhancer _cameraEnhancer = DCVCameraEnhancer();
   List<BarcodeResult> decodeResults = [];
 }
 ```
 
-- `barcodeReader`: The object that implements the barcode decoding feature. Users can configure barcode decoding settings via this object.
-- `cameraView`: The camera view that displays the video stream (from a camera input).
-- `cameraView`: The object that enables you to control the camera.
+- `_barcodeReader`: The object that implements the barcode decoding feature. Users can configure barcode decoding settings via this object.
+- `_cameraView`: The camera view that displays the video stream (from a camera input).
+- `_cameraEnhancer`: The object that enables you to control the camera.
 - `decodeResults`: An object that will be used to receive and store barcode decoding results.
 
 Add **_configDBR** method to initialize the barcode reader:
@@ -147,6 +147,11 @@ class _MyHomePageState extends State<MyHomePage> {
   _configDBR() async {
     /// Create an instance of barcode reader.
     _barcodeReader = await DCVBarcodeReader.createInstance();
+    /// Create an instance of camera enhancer.
+    _cameraEnhancer = await DCVCameraEnhancer.createInstance();
+
+    /// When overlayVisible is set to true, the decoded barcodes will be highlighted with overlays.
+    _cameraView.overlayVisible = true;
 
     /// Receive the barcode decoding results and store the result in object decodeResults
     _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {
@@ -161,9 +166,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
     /// Start barcode decoding when the widget is created.
     _barcodeReader.startScanning();
-
-    /// When overlayVisible is set to true, the decoded barcodes will be highlighted with overlays.
-    _cameraView.overlayVisible = true;
   }
 }
 ```
@@ -241,7 +243,7 @@ In the project folder, go to file `ios/Runner/info.plist`, add the following cod
 
 Go to the file **build.gradle(app)**, update the `minSdkVersion` to 21.
 
-```gradle 
+```gradle
 android {
    defaultConfig {
       ...
@@ -280,7 +282,7 @@ flutter run
 DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
 
 ```dart
-await _barcodeReader.updateRuntimeSettingsFromTemplate(template: EnumDBRPresetTemplate.VIDEO_READ_RATE_FIRST );
+await _barcodeReader.updateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate.VIDEO_READ_RATE_FIRST );
 ```
 
 ### Using the DBRRuntimeSettings Interface
@@ -293,7 +295,7 @@ currentSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
 currentSettings.expectedBarcodeCount = 10;
 currentSettings.timeout = 500;
 try {
-   await _barcodeReader.updateRuntimeSettings(settings: currentSettings);
+   await _barcodeReader.updateRuntimeSettings(currentSettings);
 } catch (e) {
    print('error = $e');
 }
@@ -301,14 +303,14 @@ try {
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` interface as well as the `DynamsoftCameraView` component.
+You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `DCVCameraEnhancer` class.
 
-First, let's define the `DynamsoftCameraView` object. Next, we will define the region using the `Region` interface. In this example, we define a rectangular `Region` whose dimensions are measured as a percentage of the total dimensions. It is then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
+First, let's create an instance of `DCVCameraEnhancer`. Next, we will create a scan region using the `Region` class. In this example, we define a rectangular `Region` whose dimensions are measured as a percentage of the total dimensions. Finally call the `setScanRegion` method to apply the scan region:
 
 ```dart
-final DynamsoftCameraView _cameraView = DynamsoftCameraView();
+final DCVCameraEnhancer _cameraEnhancer = await DCVCameraEnhancer.createInstance();
 Region scanRegion = Region(regionTop: 20, regionBottom: 80, regionLeft: 20, regionRight: 80, regionMeasuredByPercentage: true);
-_cameraView.scanRegion = scanRegion;
+_cameraEnhancer.setScanRegion(scanRegion);
 ```
 
 ## Licensing

@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: Camera View class
 ---
 
-# DCVCameraView Class
+# DynamsoftCameraView Class
 
 The UI component of Dynamsoft Capture Vision. It provides the following functions:
 
@@ -24,7 +24,6 @@ The UI component of Dynamsoft Capture Vision. It provides the following function
 | [`overlayVisible`](#overlayvisible) | A property that indicates whether the `overlays` are visible. |
 | [`torchState`](#torchstate) | The property that indicates the state of the torch light. |
 | [`torchButton`](#torchbutton) | The property that defines how the torch button will be displayed. |
-| [`cameraPosition`](#cameraposition) | The property for selecting front-facing or back-facing camera. |
 
 ## scanRegion
 
@@ -46,7 +45,7 @@ render() {
         regionMeasuredByPercentage: true
     }
     return (
-        <DCVCameraView
+        <DynamsoftCameraView
             style={{
                 flex: 1
             }}
@@ -55,7 +54,7 @@ render() {
             scanRegionVisible={true}
             scanRegion={region}
         >
-        </DCVCameraView>
+        </DynamsoftCameraView>
     );
 }
 ```
@@ -132,20 +131,4 @@ torchButton={
         torchOffImageBase64: "Put Your Base64 String Here"
     }
 }
-```
-
-## cameraPosition
-
-The property for selecting front-facing or back-facing camera. It can be set via one of the [EnumCameraPosition](enum-camera-position.md) options.
-
-```js
-cameraPosition: EnumCameraPosition;
-```
-
-**Code Snippet**
-
-```js
-// The following data can be assigned to the torchState
-cameraPosition={EnumCameraPosition.CP_BACK}
-cameraPosition={EnumCameraPosition.CP_FRONT}
 ```

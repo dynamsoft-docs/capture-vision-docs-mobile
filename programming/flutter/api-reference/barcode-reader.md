@@ -24,7 +24,7 @@ A barcode reader object accesses to a camera via `DCVCameraView` object at nativ
 | [`outputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DCVBarcodeReader` to string. |
 | [`startScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
-| [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
+| [`receiveResultStream`](#receiveresultstream) | Receive the stream to listen all the barcode results after the library finishes scanning a frame. |
 | [`decodeFile`](#decodefile) | Decode barcodes from an image file. |
 | [`enableResultVerification`](#enableresultverification) | Enable result verification. The output result will be double-checked to make sure the accuracy. |
 
@@ -33,7 +33,7 @@ A barcode reader object accesses to a camera via `DCVCameraView` object at nativ
 Initialize the license of Dynamsoft Capture Vision.
 
 ```dart
-static Future<bool> initLicense({String license})
+static Future<bool> initLicense(String license)
 ```
 
 **Parameters**
@@ -44,7 +44,7 @@ static Future<bool> initLicense({String license})
 
 ```dart
 try {
-    await DCVBarcodeReader.initLicense(license: 'Put-Your-License-Here');
+    await DCVBarcodeReader.initLicense('Put-Your-License-Here');
 } catch (e) {
     print('license error = $e');
 }
@@ -52,7 +52,7 @@ try {
 
 ## createInstance
 
-Staticly create a barcode reader instance.
+Create a barcode reader instance.
 
 ```dart
 static Future<DCVBarcodeReader> createInstance() async
@@ -118,7 +118,7 @@ try {
 Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct or a template.
 
 ```dart
-Future<void> updateRuntimeSettings({DBRRuntimeSettings settings})
+Future<void> updateRuntimeSettings(DBRRuntimeSettings settings)
 ```
 
 **Parameters**
@@ -133,7 +133,7 @@ _barcodeReader = await DCVBarcodeReader.createInstance();
 try {
   DBRRuntimeSettings settings = await _barcodeReader.getRuntimeSettings();
   // Configure your barcode settings.
-  await _barcodeReader.updateRuntimeSettings(settings: settings);
+  await _barcodeReader.updateRuntimeSettings(settings);
 } catch (e) {
   print('error = $e');
 }
@@ -144,7 +144,7 @@ try {
 Update the barcode decoding settings with a preset template.
 
 ```dart
-Future<void> updateRuntimeSettingsFromTemplate({EnumDBRPresetTemplate template}) 
+Future<void> updateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate template) 
 ```
 
 **Parameters**
@@ -156,7 +156,7 @@ Future<void> updateRuntimeSettingsFromTemplate({EnumDBRPresetTemplate template})
 ```dart
 late final DCVBarcodeReader _barcodeReader;
 _barcodeReader = await DCVBarcodeReader.createInstance();
-await _barcodeReader.updateRuntimeSettingsFromTemplate(template: EnumDBRPresetTemplate.DEFAULT);
+await _barcodeReader.updateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate.DEFAULT);
 ```
 
 ## updateRuntimeSettingsFromJson
@@ -164,7 +164,7 @@ await _barcodeReader.updateRuntimeSettingsFromTemplate(template: EnumDBRPresetTe
 Update the barcode decoding settings with a JSON template.
 
 ```dart
-Future<void> updateRuntimeSettingsFromJson({String jsonString})
+Future<void> updateRuntimeSettingsFromJson(String jsonString)
 ```
 
 **Parameters**
@@ -177,7 +177,7 @@ Future<void> updateRuntimeSettingsFromJson({String jsonString})
 late final DCVBarcodeReader _barcodeReader;
 _barcodeReader = await DCVBarcodeReader.createInstance();
 try {
-  await _barcodeReader.updateRuntimeSettingsFromJson(jsonString: '**********');
+  await _barcodeReader.updateRuntimeSettingsFromJson('**********');
 } catch (e) {
   print('error = $e');
 }
@@ -259,12 +259,12 @@ _barcodeReader = await DCVBarcodeReader.createInstance();
 await _barcodeReader.stopScanning();
 ```
 
-## addResultListener
+## receiveResultStream
 
-Specifies an event handler that fires after the library finishes scanning a frame.
+Receive the stream to listen all the barcode results after the library finishes scanning a frame.
 
 ```dart
-Stream<List<BarcodeResult>> addResultlistener()
+Stream<List<BarcodeResult>> receiveResultStream()
 ```
 
 **Return Value**
@@ -275,7 +275,6 @@ Stream that stores a list of [`BarcodeResult`](class-barcode-result.md)
 
 ```dart
 late final DCVBarcodeReader _barcodeReader;
-await DCVBarcodeReader.initLicense(license: '**********');
 _barcodeReader = await DCVBarcodeReader.createInstance();
 _barcodeReader.startScanning();
 _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {});
@@ -297,7 +296,6 @@ Future<List<BarcodeResult>> decodeFile(String path)
 
 ```dart
 late final DCVBarcodeReader _barcodeReader;
-await DCVBarcodeReader.initLicense(license: '**********');
 _barcodeReader = await DCVBarcodeReader.createInstance();
 final result = await _barcodeReader.decodeFile("Your file path");
 ```
@@ -318,7 +316,6 @@ Future enableResultVerification(bool isEnable)
 
 ```dart
 late final DCVBarcodeReader _barcodeReader;
-await DCVBarcodeReader.initLicense(license: '**********');
 _barcodeReader = await DCVBarcodeReader.createInstance();
 _barcodeReader.enableResultVerification(true);
 ```

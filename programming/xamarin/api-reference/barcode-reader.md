@@ -11,7 +11,7 @@ breadcrumbText: Interface IDCVBarcodeReader
 
 # Interface IDCVBarcodeReader
 
-A barcode reader object accesses to a camera via DynamsoftCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
+A barcode reader object accesses to a camera via DCVCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
 
 ```c#
 interface IDCVBarcodeReader
@@ -20,12 +20,12 @@ interface IDCVBarcodeReader
 | Method | Description |
 | ------- | ----------- |
 | [`InitLicense`](#initlicense) | Initialize the license of the Dynamsoft Barcode Reader module. |
-| [`GetVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
-| [`GetRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
-| [`UpdateRuntimeSettings`](#updateruntimesettingsdbrruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct. |
-| [`UpdateRuntimeSettings`](#updateruntimesettingsenumpresettemplate) | Update the runtime settings of `DynamsoftBarcodeReader` with a preset template. |
-| [`ResetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
-| [`OutputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
+| [`GetVersion`](#getversion) | Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
+| [`GetRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DCVBarcodeReader`. |
+| [`UpdateRuntimeSettings`](#updateruntimesettingsdbrruntimesettings) | Update the runtime settings of `DCVBarcodeReader` with a `DBRRuntimeSettings` struct. |
+| [`UpdateRuntimeSettings`](#updateruntimesettingsenumpresettemplate) | Update the runtime settings of `DCVBarcodeReader` with a preset template. |
+| [`ResetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DCVBarcodeReader` to default. |
+| [`OutputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DCVBarcodeReader` to string. |
 | [`StartScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`StopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`SetCameraEnhancer`](#setcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
@@ -66,7 +66,7 @@ public partial class DBRRendererPage : ContentPage, ILicenseVerificationListener
 
 ## GetVersion
 
-Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
+Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
 
 ```c#
 string GetVersion()
@@ -74,11 +74,11 @@ string GetVersion()
 
 **Return Value**
 
-The Version of `DynamsoftBarcodeReader`.
+The Version of `DCVBarcodeReader`.
 
 ## GetRuntimeSettings
 
-Get the current runtime settings of `DynamsoftBarcodeReader`.
+Get the current runtime settings of `DCVBarcodeReader`.
 
 ```c#
 DBRRuntimeSettings GetRuntimeSettings()

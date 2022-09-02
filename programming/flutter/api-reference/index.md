@@ -15,7 +15,7 @@ breadcrumbText: API Index
 
 | Classes | Description |
 | ------- | ----------- |
-| [`DCVCameraView`](camera-view.md) | The componment class that helps you quickly deploy a camera module and capture video input for barcodes, labels or documents scanning. |
+| [`DCVCameraView`](camera-view.md) | The component class that helps you quickly deploy a camera module and capture video input for barcodes, labels or documents scanning. |
 | [`DCVBarcodeReader`](barcode-reader.md) | The functional class that contains barcode decoding related APIs. |
 | [`DCVCameraEnhancer`](camera-enhancer.md) | The functional class that contains camera controlling APIs. |
 
@@ -37,3 +37,4 @@ breadcrumbText: API Index
 | [`EnumBarcodeFormat`](enum-barcode-format.md) | The enumeration stores the first group of barcode formats. |
 | [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration stores the second group of barcode formats. |
 | [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
+| [`EnumCameraPosition`](enum-camera-position.md) | It is the enumeration for user to select camera. |

@@ -23,7 +23,7 @@ The UI component of Dynamsoft Capture Vision. It displays the video streaming an
 A property that indicates whether the `overlays` are visible.
 
 ```dart
-overlayVisible(bool isVisible)
+set overlayVisible(bool isVisible)
 ```
 
 **Code Snippet**
@@ -37,5 +37,5 @@ _cameraView.overlayVisible = true;
 The property for users to define a torch button. Users can define the location, image and visibility of the button.
 
 ```dart
-torchButton(TorchButton torchButton)
+set torchButton(TorchButton torchButton)
 ```
