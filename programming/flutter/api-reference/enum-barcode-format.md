@@ -53,6 +53,6 @@ class EnumBarcodeFormat{
 
 ## Related API(s)
 
-- [`DynamsoftBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
+- [`DCVBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
 - [`DBRRuntimeSettings`](class-dbr-runtime-settings.md)
 - [`EnumBarcodeFormat_2`](enum-barcode-format2.md)

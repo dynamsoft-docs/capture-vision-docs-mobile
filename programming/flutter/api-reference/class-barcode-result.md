@@ -18,6 +18,9 @@ class BarcodeResult {
   /// The barcode text.
   final String barcodeText;
 
+  /// The byte of barcode text.
+  final Uint8List barcodeBytes;
+
   /// Barcode type in string.
   final String barcodeFormatString;
 
@@ -28,7 +31,7 @@ class BarcodeResult {
 
 ## Related API(s)
 
-- [`DynamsoftBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
+- [`DCVBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
 - [`Class BarcodeLocationResult`](class-barcode-location-result.md)
 - [`Class Quadrilateral`](class-quadrilateral.md)
 - [`Class Point`](class-point.md)

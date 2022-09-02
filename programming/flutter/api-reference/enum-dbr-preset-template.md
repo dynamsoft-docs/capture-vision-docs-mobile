@@ -27,4 +27,4 @@ enum EnumPresetTemplate{
 
 ## Related API(s)
 
-- [`DynamsoftBarcodeReader.updateRuntimeSettingsFromTemplate`](barcode-reader.md#updateruntimesettingsfromtemplate)
+- [`DCVBarcodeReader.updateRuntimeSettingsFromTemplate`](barcode-reader.md#updateruntimesettingsfromtemplate)

@@ -64,7 +64,7 @@ This will add a line like this to your package's `pubspec.yaml` (and run an impl
 
 ```dart
 dependencies:
-   dynamsoft_capture_vision_flutter: ^1.1.0
+   dynamsoft_capture_vision_flutter: ^1.0.0
 ```
 
 ## Build Your Barcode Scanner App
@@ -104,7 +104,7 @@ void main() async {
   const String licenseKey = '';
   // Initialize the license so that you can use full feature of the Barcode Reader module.
   try {
-    await DCVBarcodeReader.initLicense(license: licenseKey);
+    await DynamsoftBarcodeReader.initLicense(license: licenseKey);
   } catch (e) {
     print(e);
   }
@@ -121,16 +121,14 @@ Add the following instance variables:
 
 ```dart
 class _MyHomePageState extends State<MyHomePage> {
-  late final DCVBarcodeReader _barcodeReader;
-  final DCVCameraView _cameraView = DCVCameraView();
-  final DCVCameraEnhancer _cameraEnhancer = DCVCameraEnhancer();
+  late final DynamsoftBarcodeReader _barcodeReader;
+  final DynamsoftCameraView _cameraView = DynamsoftCameraView();
   List<BarcodeResult> decodeResults = [];
 }
 ```
 
 - `barcodeReader`: The object that implements the barcode decoding feature. Users can configure barcode decoding settings via this object.
 - `cameraView`: The camera view that displays the video stream (from a camera input).
-- `cameraView`: The object that enables you to control the camera.
 - `decodeResults`: An object that will be used to receive and store barcode decoding results.
 
 Add **_configDBR** method to initialize the barcode reader:
@@ -146,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _configDBR() async {
     /// Create an instance of barcode reader.
-    _barcodeReader = await DCVBarcodeReader.createInstance();
+    _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 
     /// Receive the barcode decoding results and store the result in object decodeResults
     _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {
@@ -156,8 +154,6 @@ class _MyHomePageState extends State<MyHomePage> {
         });
       }
     });
-
-    _cameraEnhancer.open();
 
     /// Start barcode decoding when the widget is created.
     _barcodeReader.startScanning();

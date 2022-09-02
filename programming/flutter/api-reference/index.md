@@ -15,8 +15,9 @@ breadcrumbText: API Index
 
 | Classes | Description |
 | ------- | ----------- |
-| [`DynamsoftCameraView`](camera-view.md) | The componment class that helps you quickly deploy a camera module and capture video input for barcodes, labels or documents scanning. |
-| [`DynamsoftBarcodeReader`](barcode-reader.md) | The functional class that contains barcode decoding related APIs. |
+| [`DCVCameraView`](camera-view.md) | The componment class that helps you quickly deploy a camera module and capture video input for barcodes, labels or documents scanning. |
+| [`DCVBarcodeReader`](barcode-reader.md) | The functional class that contains barcode decoding related APIs. |
+| [`DCVCameraEnhancer`](camera-enhancer.md) | The functional class that contains camera controlling APIs. |
 
 ## Auxiliary Classes
 
