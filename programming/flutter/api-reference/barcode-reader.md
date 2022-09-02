@@ -25,6 +25,7 @@ A barcode reader object accesses to a camera via `DCVCameraView` object at nativ
 | [`startScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
+| [`decodeFile`](#decodefile) | Decode barcodes from an image file. |
 | [`enableResultVerification`](#enableresultverification) | Enable result verification. The output result will be double-checked to make sure the accuracy. |
 
 ## initLicense
@@ -278,6 +279,27 @@ await DCVBarcodeReader.initLicense(license: '**********');
 _barcodeReader = await DCVBarcodeReader.createInstance();
 _barcodeReader.startScanning();
 _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {});
+```
+
+## decodeFile
+
+Decode barcodes from an image file.
+
+```dart
+Future<List<BarcodeResult>> decodeFile(String path)
+```
+
+**Parameters**
+
+`path`: The Path of the image file.
+
+**Code Snippet**
+
+```dart
+late final DCVBarcodeReader _barcodeReader;
+await DCVBarcodeReader.initLicense(license: '**********');
+_barcodeReader = await DCVBarcodeReader.createInstance();
+final result = await _barcodeReader.decodeFile("Your file path");
 ```
 
 ## enableResultVerification
