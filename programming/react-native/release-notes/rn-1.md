@@ -11,6 +11,20 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.5 (09/08/2022)
+
+### New
+
+- Added a new method [`decodeFile`](../api-reference/barcode-reader.md#decodefile) in Barcode Reader module to decode barcodes from an image file.
+- Added a new property [`barcodeBytes`](../api-reference/class-barcode-result.md) in `BarcodeResult` to output the base64 string of the barcode.
+- Added a new property [`cameraPosition`](../api-reference/camera-view.md#cameraposition) in `DCVCameraView` class for users to switch between front-facing camera and back-facing camera.
+- Added an enumeration [`EnumCameraPosition`](../api-reference/enum-camera-position.md).
+
+### Changes
+
+- Renamed `DynamsoftBarcodeReader` class to [`DCVBarcodeReader`](../api-reference/barcode-reader.md).
+- Renamed `DynamsoftCameraView` class to [`DCVCameraView`](../api-reference/camera-view.md).
+
 ## 1.1.4 (08/09/2022)
 
 - Fixed a bug that might cause a crash when using the library in React Native 0.69.0+.
