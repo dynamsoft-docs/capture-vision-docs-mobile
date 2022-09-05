@@ -85,6 +85,15 @@ Turn on the torch.
 Future turnOnTorch()
 ```
 
+**Code Snippet**
+
+```dart
+// Turn on the torch
+_cameraEnhancer.turnOnTorch();
+// Turn off the torch
+_cameraEnhancer.turnOffTorch();
+```
+
 ## turnOffTorch
 
 Turn off the torch.

@@ -141,7 +141,32 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _configDBR();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    _cameraEnhancer.close();
+    _barcodeReader.stopScanning();
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+
+    switch (state) {
+      case AppLifecycleState.resumed:
+        _barcodeReader.startScanning();
+        _cameraEnhancer.open();
+        break;
+      case AppLifecycleState.inactive:
+        _cameraEnhancer.close();
+        _barcodeReader.stopScanning();
+        break;
+    }
   }
 
   _configDBR() async {
@@ -162,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
       }
     });
 
-    _cameraEnhancer.open();
+    await _cameraEnhancer.open();
 
     /// Start barcode decoding when the widget is created.
     _barcodeReader.startScanning();
@@ -181,7 +206,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return ListTileTheme(
         textColor: Colors.white,
-        // tileColor: Colors.green,
         child: ListTile(
           title: Text(res.barcodeFormatString),
           subtitle: Text(res.barcodeText),
@@ -219,22 +243,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ));
   }
 }
-```
-
-### Configure Camera Permissions
-
-Before you run the project on iOS devices, you need to add the camera permission first.
-
-In the project folder, go to file `ios/Runner/info.plist`, add the following code for requesting camera permission:
-
-```xml
-<plist version="1.0">
-<dict>
-  ...
-  <key>NSCameraUsageDescription</key>
-  <string>Request your authorization.</string>
-  ...
-</dict>
 ```
 
 ### Run the Project
@@ -312,6 +320,15 @@ final DCVCameraEnhancer _cameraEnhancer = await DCVCameraEnhancer.createInstance
 Region scanRegion = Region(regionTop: 20, regionBottom: 80, regionLeft: 20, regionRight: 80, regionMeasuredByPercentage: true);
 _cameraEnhancer.setScanRegion(scanRegion);
 ```
+
+### Others
+
+View the API reference to see how to use other features of Dynamsoft Capture Vision:
+
+- [Switch to front-facing camera](../api-reference/camera-enhancer.md#selectcamera)
+- Torch control
+  - [Turn on/off torch](../api-reference/camera-enhancer.md#turnontorch)
+  - [Add a torch button](../api-reference/camera-view.md#torchbutton)
 
 ## Licensing
 
