@@ -39,3 +39,12 @@ The property for users to define a torch button. Users can define the location, 
 ```dart
 set torchButton(TorchButton torchButton)
 ```
+
+**Code Snippet**
+
+```dart
+_cameraView.torchButton = TorchButton(
+    rect: Rect(x: 50, y: 50, width: 100, height: 100),
+    torchOnImage: 'assets/abc.png',
+    torchOffImage: null);
+```
