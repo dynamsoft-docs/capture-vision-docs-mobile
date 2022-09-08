@@ -86,7 +86,7 @@ Create a new React Native project.
 npx react-native init SimpleBarcodeScanner
 ```
 
->Note: This sample uses React 17.0.2 and React Native 0.65.0.
+>Note: This sample uses React 17.0.2 and React Native 0.67.2.
 
 ### Include the Library
 
