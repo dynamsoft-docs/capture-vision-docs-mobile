@@ -24,7 +24,6 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [License Activation](#license-activation)
   - [Configure the Barcode Reader](#configure-the-barcode-reader)
   - [Build the Widget](#build-the-widget)
-  - [Configure Camera Permissions](#configure-camera-permissions)
   - [Run the Project](#run-the-project)
 - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
   - [Using the Settings Templates](#using-the-settings-templates)
@@ -104,7 +103,7 @@ void main() async {
   const String licenseKey = '';
   // Initialize the license so that you can use full feature of the Barcode Reader module.
   try {
-    await DCVBarcodeReader.initLicense(license: licenseKey);
+    await DCVBarcodeReader.initLicense(licenseKey);
   } catch (e) {
     print(e);
   }
