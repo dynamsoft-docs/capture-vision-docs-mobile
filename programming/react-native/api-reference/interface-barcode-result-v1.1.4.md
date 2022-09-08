@@ -19,10 +19,6 @@ export interface BarcodeResult {
      * The barcode text.
      */
     barcodeText: string;
-        /**
-    * Barcode bytes in base64 string.
-    */
-    barcodeBytes: string;
     /**
      * Barcode type in string.
      */
@@ -36,7 +32,7 @@ export interface BarcodeResult {
 
 ## Related API(s)
 
-- [`DCVBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
+- [`DynamsoftBarcodeReader.addResultListener`](barcode-reader.md#addresultlistener)
 - [`Interfaces BarcodeLocationResult`](interface-barcode-location-result.md)
 - [`Interface Quadrilateral`](interface-quadrilateral.md)
 - [`Interface Point`](interface-point.md)

@@ -19,7 +19,3 @@ enum EnumTorchState{
     OFF = 1 // Turn off the torch.
 }
 ```
-
-## Related API(s)
-
-- [`DynamsoftCameraView.torchState`](camera-view.md#torchstate)

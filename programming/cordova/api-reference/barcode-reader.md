@@ -11,7 +11,7 @@ breadcrumbText: Class DCVBarcodeReader
 
 # Class DCVBarcodeReader
 
-`DCVBarcodeReader` accesses the camera via a `DynamsoftCameraView` object at the native level, then perform continuous barcode scanning on the incoming frames.
+`DCVBarcodeReader` accesses the camera via a `DCVCameraView` object at the native level, then perform continuous barcode scanning on the incoming frames.
 
 ```js
 class DCVBarcodeReader
@@ -21,11 +21,11 @@ class DCVBarcodeReader
 | ------- | ----------- |
 | [`createInstance`](#createinstance) | Create an instance of `DCVBarcodeReader`. |
 | [`initLicense`](#initlicense) | Initialize the license of Dynamsoft Barcode Reader. |
-| [`getVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
-| [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
-| [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a DBRRuntimeSettings object, a preset template or a JSON String. |
-| [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
-| [`outputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
+| [`getVersion`](#getversion) | Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
+| [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DCVBarcodeReader`. |
+| [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DCVBarcodeReader` with a DBRRuntimeSettings object, a preset template or a JSON String. |
+| [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DCVBarcodeReader` to default. |
+| [`outputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DCVBarcodeReader` to string. |
 | [`startScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
@@ -72,7 +72,7 @@ try {
 
 ## getVersion
 
-Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
+Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
 
 ```js
 static getVersion(): Promise<string>;
@@ -80,11 +80,11 @@ static getVersion(): Promise<string>;
 
 **Return Value**
 
-The Version of `DynamsoftBarcodeReader`.
+The Version of `DCVBarcodeReader`.
 
 ## getRuntimeSettings
 
-Get the current runtime settings of `DynamsoftBarcodeReader`.
+Get the current runtime settings of `DCVBarcodeReader`.
 
 ```js
 getRuntimeSettings(): Promise<DBRRuntimeSettings>;

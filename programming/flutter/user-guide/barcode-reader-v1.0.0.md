@@ -64,7 +64,7 @@ This will add a line like this to your package's `pubspec.yaml` (and run an impl
 
 ```dart
 dependencies:
-   dynamsoft_capture_vision_flutter: ^1.1.0
+   dynamsoft_capture_vision_flutter: ^1.0.0
 ```
 
 ## Build Your Barcode Scanner App
@@ -104,7 +104,7 @@ void main() async {
   const String licenseKey = '';
   // Initialize the license so that you can use full feature of the Barcode Reader module.
   try {
-    await DCVBarcodeReader.initLicense(license: licenseKey);
+    await DynamsoftBarcodeReader.initLicense(license: licenseKey);
   } catch (e) {
     print(e);
   }
@@ -120,63 +120,31 @@ In this section, we are going to work on the `_MyHomePageState` class in the new
 Add the following instance variables:
 
 ```dart
-class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
-  late final DCVBarcodeReader _barcodeReader;
-  late final DCVCameraEnhancer _cameraEnhancer;
-  final DCVCameraView _cameraView = DCVCameraView();
+class _MyHomePageState extends State<MyHomePage> {
+  late final DynamsoftBarcodeReader _barcodeReader;
+  final DynamsoftCameraView _cameraView = DynamsoftCameraView();
   List<BarcodeResult> decodeResults = [];
 }
 ```
 
-- `_barcodeReader`: The object that implements the barcode decoding feature. Users can configure barcode decoding settings via this object.
-- `_cameraView`: The camera view that displays the video stream (from a camera input).
-- `_cameraEnhancer`: The object that enables you to control the camera.
+- `barcodeReader`: The object that implements the barcode decoding feature. Users can configure barcode decoding settings via this object.
+- `cameraView`: The camera view that displays the video stream (from a camera input).
 - `decodeResults`: An object that will be used to receive and store barcode decoding results.
 
 Add **_configDBR** method to initialize the barcode reader:
 
 ```dart
-class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
+class _MyHomePageState extends State<MyHomePage> {
   ...
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
     _configDBR();
-  }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    _cameraEnhancer.close();
-    _barcodeReader.stopScanning();
-    super.dispose();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    super.didChangeAppLifecycleState(state);
-
-    switch (state) {
-      case AppLifecycleState.resumed:
-        _barcodeReader.startScanning();
-        _cameraEnhancer.open();
-        break;
-      case AppLifecycleState.inactive:
-        _cameraEnhancer.close();
-        _barcodeReader.stopScanning();
-        break;
-    }
   }
 
   _configDBR() async {
     /// Create an instance of barcode reader.
-    _barcodeReader = await DCVBarcodeReader.createInstance();
-    /// Create an instance of camera enhancer.
-    _cameraEnhancer = await DCVCameraEnhancer.createInstance();
-
-    /// When overlayVisible is set to true, the decoded barcodes will be highlighted with overlays.
-    _cameraView.overlayVisible = true;
+    _barcodeReader = await DynamsoftBarcodeReader.createInstance();
 
     /// Receive the barcode decoding results and store the result in object decodeResults
     _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {
@@ -187,10 +155,11 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
       }
     });
 
-    await _cameraEnhancer.open();
-
     /// Start barcode decoding when the widget is created.
     _barcodeReader.startScanning();
+
+    /// When overlayVisible is set to true, the decoded barcodes will be highlighted with overlays.
+    _cameraView.overlayVisible = true;
   }
 }
 ```
@@ -198,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
 Add configurations to parse and display the barcode decoding results:
 
 ```dart
-class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
+class _MyHomePageState extends State<MyHomePage> {
   ...
   /// Get listItem
   Widget listItem(BuildContext context, int index) {
@@ -206,6 +175,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
 
     return ListTileTheme(
         textColor: Colors.white,
+        // tileColor: Colors.green,
         child: ListTile(
           title: Text(res.barcodeFormatString),
           subtitle: Text(res.barcodeText),
@@ -219,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
 Modify the `build` method to display the decode barcode results on the widget.
 
 ```dart
-class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
+class _MyHomePageState extends State<MyHomePage> {
   ...
   @override
   Widget build(BuildContext context) {
@@ -245,13 +215,29 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
 }
 ```
 
+### Configure Camera Permissions
+
+Before you run the project on iOS devices, you need to add the camera permission first.
+
+In the project folder, go to file `ios/Runner/info.plist`, add the following code for requesting camera permission:
+
+```xml
+<plist version="1.0">
+<dict>
+  ...
+  <key>NSCameraUsageDescription</key>
+  <string>Request your authorization.</string>
+  ...
+</dict>
+```
+
 ### Run the Project
 
 #### Run Android on Windows
 
 Go to the file **build.gradle(app)**, update the `minSdkVersion` to 21.
 
-```gradle
+```gradle 
 android {
    defaultConfig {
       ...
@@ -268,18 +254,6 @@ flutter run
 ```
 
 #### Run iOS on macOS
-
-In the project folder, go to file ios/Runner/info.plist, add the following code for requesting camera permission:
-
-```xml
-<plist version="1.0">
-<dict>
-  ...
-  <key>NSCameraUsageDescription</key>
-  <string>Request your authorization.</string>
-  ...
-</dict>
-```
 
 Go to the **Podfile** in **ios** folder and add the following code at the top of the file:
 
@@ -302,7 +276,7 @@ flutter run
 DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
 
 ```dart
-await _barcodeReader.updateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate.VIDEO_READ_RATE_FIRST );
+await _barcodeReader.updateRuntimeSettingsFromTemplate(template: EnumDBRPresetTemplate.VIDEO_READ_RATE_FIRST );
 ```
 
 ### Using the DBRRuntimeSettings Interface
@@ -315,7 +289,7 @@ currentSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
 currentSettings.expectedBarcodeCount = 10;
 currentSettings.timeout = 500;
 try {
-   await _barcodeReader.updateRuntimeSettings(currentSettings);
+   await _barcodeReader.updateRuntimeSettings(settings: currentSettings);
 } catch (e) {
    print('error = $e');
 }
@@ -323,24 +297,15 @@ try {
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `DCVCameraEnhancer` class.
+You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` interface as well as the `DynamsoftCameraView` component.
 
-First, let's create an instance of `DCVCameraEnhancer`. Next, we will create a scan region using the `Region` class. In this example, we define a rectangular `Region` whose dimensions are measured as a percentage of the total dimensions. Finally call the `setScanRegion` method to apply the scan region:
+First, let's define the `DynamsoftCameraView` object. Next, we will define the region using the `Region` interface. In this example, we define a rectangular `Region` whose dimensions are measured as a percentage of the total dimensions. It is then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
 
 ```dart
-final DCVCameraEnhancer _cameraEnhancer = await DCVCameraEnhancer.createInstance();
+final DynamsoftCameraView _cameraView = DynamsoftCameraView();
 Region scanRegion = Region(regionTop: 20, regionBottom: 80, regionLeft: 20, regionRight: 80, regionMeasuredByPercentage: true);
-_cameraEnhancer.setScanRegion(scanRegion);
+_cameraView.scanRegion = scanRegion;
 ```
-
-### Others
-
-View the API reference to see how to use other features of Dynamsoft Capture Vision:
-
-- [Switch to front-facing camera](../api-reference/camera-enhancer.md#selectcamera)
-- Torch control
-  - [Turn on/off torch](../api-reference/camera-enhancer.md#turnontorch)
-  - [Add a torch button](../api-reference/camera-view.md#torchbutton)
 
 ## Licensing
 

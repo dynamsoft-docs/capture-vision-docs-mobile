@@ -16,16 +16,22 @@ Class `DBRRuntimeSettings`. It stores the basic barcode decoding settings when u
 ```dart
 class DBRRuntimeSettings extends Serializer{
     /// Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
-    int barcodeFormatIds;
+    int? barcodeFormatIds;
 
     /// Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.
-    int barcodeFormatIds_2;
+    int? barcodeFormatIds_2;
 
     /// Sets the number of barcodes expected to be detected for each image.
-    int expectedBarcodeCount;
+    int? expectedBarcodeCount;
 
     /// Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page.
-    int timeout;
+    int? timeout;
+
+    /// Filter the barcode results by the minimum length of barcode text.
+    int? minBarcodeTextLength;
+
+    /// Filter the barcode results by the minimum confidence.
+    int? minResultConfidence;
 }
 ```
 

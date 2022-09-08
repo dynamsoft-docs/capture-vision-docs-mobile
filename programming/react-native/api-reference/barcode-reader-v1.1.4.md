@@ -9,24 +9,23 @@ noTitleIndex: true
 breadcrumbText: Barcode Reader class
 ---
 
-# DCVBarcodeReader Class
+# DynamsoftBarcodeReader Class
 
-A barcode reader object accesses to a camera via DCVCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
+A barcode reader object accesses to a camera via DynamsoftCameraView object at native level, then perform continuous barcode scanning on the incoming frames.
 
 | Methods | Description |
 | ------- | ----------- |
 | [`initLicense`](#initlicense) | Initialize the license of the Dynamsoft Barcode Reader module. |
 | [`createInstance`](#createinstance) | Create a barcode reader instance. |
-| [`getVersion`](#getversion) | Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
-| [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DCVBarcodeReader`. |
-| [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DCVBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
-| [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DCVBarcodeReader` to default. |
-| [`outputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DCVBarcodeReader` to string. |
+| [`getVersion`](#getversion) | Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
+| [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DynamsoftBarcodeReader`. |
+| [`updateRuntimeSettings`](#updateruntimesettings) | Update the runtime settings of `DynamsoftBarcodeReader` with a `DBRRuntimeSettings` struct or a template. |
+| [`resetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DynamsoftBarcodeReader` to default. |
+| [`outputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DynamsoftBarcodeReader` to string. |
 | [`startScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 | [`removeAllResultListeners`](#removeallresultlisteners) | Remove all existing result listener. |
-| [`decodeFile`](#decodefile) | Decode barcodes from a specified image file. |
 
 ## initLicense
 
@@ -44,7 +43,7 @@ static initLicense(license: String): Promise<void>;
 
 ```js
 try {
-  await DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
+  await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
 } catch (e) {
   // Catch and log the error message when license activation is failed.
   console.log(e)
@@ -56,7 +55,7 @@ try {
 Create a barcode reader instance.
 
 ```js
-static createInstance(): Promise<DCVBarcodeReader>
+static createInstance(): Promise<DynamsoftBarcodeReader>
 ```
 
 **Return Value**
@@ -66,12 +65,12 @@ A barcode reader instance.
 **Code Snippet**
 
 ```js
-this.reader = await DCVBarcodeReader.createInstance();
+this.reader = await DynamsoftBarcodeReader.createInstance();
 ```
 
 ## getVersion
 
-Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
+Get the version of `DynamsoftBarcodeReader`, which is packaged in Dynamsoft Capture Vision.
 
 ```js
 getVersion(): Promise<string>
@@ -79,7 +78,7 @@ getVersion(): Promise<string>
 
 **Return Value**
 
-The Version of `DCVBarcodeReader`.
+The Version of `DynamsoftBarcodeReader`.
 
 **Code Snippet**
 
@@ -89,7 +88,7 @@ let dbrVersion = await this.reader.getVersion();
 
 ## getRuntimeSettings
 
-Get the current runtime settings of `DCVBarcodeReader`.
+Get the current runtime settings of `DynamsoftBarcodeReader`.
 
 ```js
 getRuntimeSettings(): Promise<DBRRuntimeSettings>
@@ -215,11 +214,11 @@ state = {
 componentDidMount() {
   (async () => {
     try {
-      await DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
+      await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
     } catch (e) {
       console.log(e);
     }
-    this.reader = await DCVBarcodeReader.createInstance();
+    this.reader = await DynamsoftBarcodeReader.createInstance();
     await this.reader.startScanning();
     this.reader.addResultListener((results) => {
       this.setState({results});
@@ -244,28 +243,4 @@ async componentWillUnmount() {
   // Remove the result listener when your component is unmount.
   this.reader.removeAllResultListeners()
 }
-```
-
-## decodeFile
-
-Decode barcodes from an image file.
-
-```js
-decodeFile(filePath: string): Promise<BarcodeResult[]>;
-```
-
-**Parameters**
-
-`filePath`: The Path of the image file.
-
-**Code Snippet**
-
-```js
-try {
-  await DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
-} catch (e) {
-  console.log(e);
-}
-reader = await DCVBarcodeReader.createInstance();
-result = reader.decodeFile("Your file path");
 ```

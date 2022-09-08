@@ -36,6 +36,6 @@ namespace DCVXamarin
 
 ## Related API(s)
 
-- [`DynamsoftBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
+- [`IDCVBarcodeReader.updateRuntimeSettings`](barcode-reader.md#updateruntimesettings)
 - [`DBRRuntimeSettings`](class-dbr-runtime-settings.md)
 - [`EnumBarcodeFormat`](enum-barcode-format.md)

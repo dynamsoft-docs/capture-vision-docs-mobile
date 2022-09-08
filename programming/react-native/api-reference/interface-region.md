@@ -38,7 +38,3 @@ export interface Region {
     regionMeasuredByPercentage: number | boolean;
 }
 ```
-
-## Related API(s)
-
-- [`DynamsoftCameraView.scanRegion`](camera-view.md#scanregion)
