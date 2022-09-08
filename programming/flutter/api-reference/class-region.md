@@ -31,4 +31,4 @@ class Region extends Serializer {
 
 ## Related API(s)
 
-- [`DCVCameraView.scanRegion`](camera-view.md#scanregion)
+- [`DCVCameraEnhancer.setScanRegion`](camera-enhancer.md#setscanregion)

@@ -15,6 +15,7 @@ The class provides camera control APIs.
 
 | Property | Description |
 | -------- | ----------- |
+| [`createInstance`](#createinstance) | Create a camera enhancer instance. |
 | [`open`](#open) | Open the camera. |
 | [`close`](#close) | Close the camera. |
 | [`selectCamera`](#selectcamera) | Select a camera (front-facing or back-facing camera). |
