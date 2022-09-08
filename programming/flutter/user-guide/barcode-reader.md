@@ -24,6 +24,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [License Activation](#license-activation)
   - [Configure the Barcode Reader](#configure-the-barcode-reader)
   - [Build the Widget](#build-the-widget)
+  - [Configure Camera Permissions](#configure-camera-permissions)
   - [Run the Project](#run-the-project)
 - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
   - [Using the Settings Templates](#using-the-settings-templates)
@@ -267,6 +268,18 @@ flutter run
 ```
 
 #### Run iOS on macOS
+
+In the project folder, go to file ios/Runner/info.plist, add the following code for requesting camera permission:
+
+```xml
+<plist version="1.0">
+<dict>
+  ...
+  <key>NSCameraUsageDescription</key>
+  <string>Request your authorization.</string>
+  ...
+</dict>
+```
 
 Go to the **Podfile** in **ios** folder and add the following code at the top of the file:
 
