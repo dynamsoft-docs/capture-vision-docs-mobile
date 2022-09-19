@@ -25,7 +25,7 @@ breadcrumbText: API Index
 
 | Classes | Description |
 | ------- | ----------- |
-| [`Rect`](class-region.md) | The class that stores the rectangle information. |
+| [`Rect`](class-rect.md) | The class that stores the rectangle information. |
 | [`Region`](class-region.md) | The class that stores the region information. Users can configure region of interest. |
 | [`Quadrilateral`](class-quadrilateral.md) | The class that stores the vertex coordinates of the quadrilateral.|
 | [`BarcodeResult`](class-barcode-result.md) | The class that stores the barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
