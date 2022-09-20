@@ -383,8 +383,9 @@ Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
 
 #### Run iOS & Android on macOS
 
-1. Right click on the **SimpleBarcodeReader.iOS** or **SimpleBarcodeReader.Android** and select **Set As Startup Project**.
-2. In the menu, select and click **Run > Start Debugging**.
+1. Set an Apple Developer Accounts **Tools > Preferences > Publishing > Apple Developer Accounts**.
+2. Right click on the **SimpleBarcodeReader.iOS** or **SimpleBarcodeReader.Android** and select **Set As Startup Project**.
+3. In the menu, select and click **Run > Start Debugging**.
 
 ## Customizing the Barcode Reader
 
