@@ -11,3 +11,5 @@ permalink: /faq/index.html
 
 1. [How to fix building errors related to IOS archetecture?](How-to-fix-building-errors-related-to-IOS-archetecture.md)
 
+2. [Can I build an iOS app for armv7?](How-to-fix-building-errors-related-to-IOS-archetecture.md)
+
