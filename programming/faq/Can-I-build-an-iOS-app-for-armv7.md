@@ -10,4 +10,4 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-Dynamsoft framework can be built for arm64 and x86_64 architectures. armv7 is not supported.
+Dynamsoft framework can be built for *arm64* and *x86_64* architectures. *armv7* is not supported.
