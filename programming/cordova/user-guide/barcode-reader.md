@@ -35,7 +35,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ### Cordova Platforms
 
-- Cordova Android: 9.0.0+ (10.1.1+ recommended)
+- Cordova Android: 10.1.1+
 - Cordova iOS: 6.2.0
 
 ### Android
