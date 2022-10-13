@@ -11,6 +11,14 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.7 (10/13/2022)
+
+- Fixed a bug of activity-lifecycle management, which might cause camera not be opened when activity is resumed.
+
+## 1.1.6 (09/28/2022)
+
+- Fixed a bug that camera might not be opened after camera permission is allowed.
+
 ## 1.1.5 (09/08/2022)
 
 ### New
