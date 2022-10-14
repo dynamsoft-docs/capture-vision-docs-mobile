@@ -17,4 +17,4 @@ needAutoGenerateSidebar: false
 ![Set build action](assets/build_action.jpg)<br />
 
 ### Add image assets in Xamarin.iOS
-[Learn how to display an image in Xamarin.iOS](https://learn.microsoft.com/en-us/xamarin/ios/app-fundamentals/images-icons/displaying-an-image?tabs=macos)
+[Learn how to add an image in Xamarin.iOS](https://learn.microsoft.com/en-us/xamarin/ios/app-fundamentals/images-icons/displaying-an-image?tabs=macos)
