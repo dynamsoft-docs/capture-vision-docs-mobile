@@ -66,4 +66,4 @@ TorchButton Torchbutton;
     </local:DCVCameraView.TorchButton>
 </local:DCVCameraView>
 ```
->Note: Learn how to [display an image in Xamarin.iOS](https://learn.microsoft.com/en-us/xamarin/ios/app-fundamentals/images-icons/displaying-an-image?tabs=macos).
+>Note: Learn how to [display an image in Xamarin.iOS](https://learn.microsoft.com/en-us/xamarin/ios/app-fundamentals/images-icons/displaying-an-image?tabs=macos) and display an image in Xamarin.iOS
