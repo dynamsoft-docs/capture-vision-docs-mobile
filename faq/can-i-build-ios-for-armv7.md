@@ -6,7 +6,7 @@ description: Can I build an iOS app for armv7?
 needAutoGenerateSidebar: false
 ---
 
-## Can I build for armv7 on Xcode?
+# Can I build for armv7 on Xcode?
 
 [<< Back to FAQ index](index.md)
 
