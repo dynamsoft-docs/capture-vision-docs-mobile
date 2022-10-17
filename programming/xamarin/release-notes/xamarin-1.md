@@ -11,6 +11,10 @@ breadcrumbText: 1.x
 
 # Release Notes for Xamarin SDK - 1.x
 
+## 1.0.1 (10/17/2022)
+
+- Fixed a duplicate symbol issue.
+
 ## 1.0.0 (08/04/2022)
 
 ### HighLights
