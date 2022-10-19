@@ -6,11 +6,11 @@ description: How to add image assets in Xamarin.forms?
 needAutoGenerateSidebar: false
 ---
 
-# How to add image assets in Xamarin.forms(Visual Studio 2022)?
+# How to add image assets in Xamarin.forms?
 
 [<< Back to FAQ index](index.md)
 
-## Add image assets in Xamarin.Android (Windows)
+## Add image assets in Xamarin.Android (Visual Studio 2022)
 
 1. Add image to Assets
 
@@ -20,7 +20,7 @@ needAutoGenerateSidebar: false
 
    ![Set build action](assets/build_action_win.jpg)
 
-## Add image assets in Xamarin.Android (macOS)
+## Add image assets in Xamarin.Android (Visual Studio 2022 for mac)
 
 1. Add image to Assets
 
