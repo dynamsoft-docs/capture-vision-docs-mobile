@@ -20,7 +20,7 @@ needAutoGenerateSidebar: false
 
    ![Set build action](assets/build_action_win.jpg)
 
-## Add image assets in Xamarin.Android (Visual Studio 2022 for mac)
+## Add image assets in Xamarin.Android (Visual Studio 2022 for Mac)
 
 1. Add image to Assets
 
