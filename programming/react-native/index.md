@@ -21,8 +21,8 @@ breadcrumbText: React Native Index
 
 ## API Reference
 
-- [DynamsoftCameraView class](api-reference/camera-view.md)
-- [DynamsoftBarcodeReader class](api-reference/barcode-reader.md)
+- [DCVCameraView class](api-reference/camera-view.md)
+- [DCVBarcodeReader class](api-reference/barcode-reader.md)
 
 ## Release Notes
 

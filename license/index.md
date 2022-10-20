@@ -37,7 +37,7 @@ The following code snippets are using the public trial license to initialize the
 componentDidMount() {
    (async () => {
       try {
-         await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
+         await DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9")
       } catch (e) {
          console.log(e)
       }
@@ -49,7 +49,7 @@ componentDidMount() {
 void main() async {
    WidgetsFlutterBinding.ensureInitialized();
    try {
-      await DynamsoftBarcodeReader.initLicense(license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9');
+      await DCVBarcodeReader.initLicense(license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9');
    } catch (e) {
       print('license error = $e');
    }

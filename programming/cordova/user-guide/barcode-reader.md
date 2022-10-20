@@ -24,7 +24,6 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
   - [Initialize the License](#initialize-the-license)
   - [Initialize the Camera Module](#initialize-the-camera-module)
   - [Configure the Barcode Reader Module](#configure-the-barcode-reader-module)
-  - [Configure Camera Permissions](#configure-camera-permissions)
   - [Run the Project](#run-the-project)
 - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
   - [Using the Settings Templates](#using-the-settings-templates)
@@ -36,7 +35,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ### Cordova Platforms
 
-- Cordova Android: 9.0.0+ (10.1.1+ recommended)
+- Cordova Android: 10.1.1+
 - Cordova iOS: 6.2.0
 
 ### Android
@@ -94,7 +93,7 @@ cordova plugin add dynamsoft-capture-vision-cordova
 
 ### Initialize the License
 
-The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to work. Add the following code in **www/index.js** to initialize the license of the Barcode Reader module
+The Barcode Reader module of Dynamsoft Capture Vision needs a valid license to work. Add the following code in **www/js/index.js** to initialize the license of the Barcode Reader module
 
 ```js
 // Register the event of device ready.
@@ -133,7 +132,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
     </html>
     ```
 
-2. Open **www/index.js** and add code to initialize `DCVCameraEnhancer` and `DCVCameraView`
+2. Open **www/js/index.js** and add code to initialize `DCVCameraEnhancer` and `DCVCameraView`
 
     ```js
     var dcvCameraEnhancer

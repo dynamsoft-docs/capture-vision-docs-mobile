@@ -86,7 +86,7 @@ Create a new React Native project.
 npx react-native init SimpleBarcodeScanner
 ```
 
->Note: This sample uses React 17.0.2 and React Native 0.65.0.
+>Note: This sample uses React 17.0.2 and React Native 0.67.2.
 
 ### Include the Library
 
@@ -122,8 +122,8 @@ In `App.js`, import the following components:
 import React from 'react';
 import {Text} from 'react-native';
 import {
-    DynamsoftBarcodeReader,
-    DynamsoftCameraView,
+    DCVBarcodeReader,
+    DCVCameraView,
     EnumBarcodeFormat
 } from 'dynamsoft-capture-vision-react-native';
 ```
@@ -148,12 +148,12 @@ class App extends React.Component {
         (async () => {
             // Initialize the license so that you can use full feature of the Barcode Reader module.
             try {
-                await DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+                await DCVBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
             } catch (e) {
                 console.log(e);
             }
             // Create a barcode reader instance.
-            this.reader = await DynamsoftBarcodeReader.createInstance();
+            this.reader = await DCVBarcodeReader.createInstance();
 
             // Add a result listener. The result listener will handle callback when barcode result is returned. 
             this.reader.addResultListener((results) => {
@@ -188,7 +188,7 @@ class App extends React.Component {
 
 ### Rendering the UI
 
-Lastly, let's create the `DynamsoftCameraView` UI component in the `render` function.
+Lastly, let's create the `DCVCameraView` UI component in the `render` function.
 
 ```jsx
 class App extends React.Component {
@@ -202,9 +202,9 @@ class App extends React.Component {
                 resultBoxText+=results[i].barcodeFormatString+"\n"+results[i].barcodeText+"\n";
             }
         }
-        // Render DynamsoftCameraView componment.
+        // Render DCVCameraView componment.
         return (
-            <DynamsoftCameraView
+            <DCVCameraView
                 style={
                     {
                         flex: 1
@@ -223,7 +223,7 @@ class App extends React.Component {
                         fontSize: 18,
                     }
                 }>{results && results.length > 0 ? resultBoxText : "No Barcode Detected"}</Text>
-            </DynamsoftCameraView>
+            </DCVCameraView>
         );
     }
 }
@@ -299,9 +299,9 @@ componentDidMount() {
 
 ### Customizing the scan region
 
-You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface as well as the [`DynamsoftCameraView`](../api-reference/camera-view.md) component.
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface as well as the [`DCVCameraView`](../api-reference/camera-view.md) component.
 
-First, the region must be defined using the `Region` interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DynamsoftCameraView` component:
+First, the region must be defined using the `Region` interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DCVCameraView` component:
 
 ```jsx
 class App extends React.Component {
@@ -317,7 +317,7 @@ class App extends React.Component {
         }
         ...
         return (
-            <DynamsoftCameraView
+            <DCVCameraView
                 style={
                     {
                         flex: 1
@@ -329,7 +329,7 @@ class App extends React.Component {
                 scanRegion={region}
             >
             ...
-            </DynamsoftCameraView>
+            </DCVCameraView>
         );
     }
 }

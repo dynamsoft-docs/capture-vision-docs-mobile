@@ -11,6 +11,40 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.7 (10/13/2022)
+
+- Fixed a bug of activity-lifecycle management, which might cause camera not be opened when activity is resumed.
+
+## 1.1.6 (09/28/2022)
+
+- Fixed a bug that camera might not be opened after camera permission is allowed.
+
+## 1.1.5 (09/08/2022)
+
+### New
+
+- Added a new method [`decodeFile`](../api-reference/barcode-reader.md#decodefile) in Barcode Reader module to decode barcodes from an image file.
+- Added a new property [`barcodeBytes`](../api-reference/class-barcode-result.md) in `BarcodeResult` to output the base64 string of the barcode.
+- Added a new property [`cameraPosition`](../api-reference/camera-view.md#cameraposition) in `DCVCameraView` class for users to switch between front-facing camera and back-facing camera.
+- Added an enumeration [`EnumCameraPosition`](../api-reference/enum-camera-position.md).
+
+### Changes
+
+- Renamed `DynamsoftBarcodeReader` class to [`DCVBarcodeReader`](../api-reference/barcode-reader.md).
+- Renamed `DynamsoftCameraView` class to [`DCVCameraView`](../api-reference/camera-view.md).
+
+## 1.1.4 (08/09/2022)
+
+- Fixed a bug that might cause a crash when using the library in React Native 0.69.0+.
+
+## 1.1.3 (08/04/2022)
+
+- Minor changes on `DynamsoftCameraView` class.
+
+## 1.1.2 (07/21/2022)
+
+- Fixed a bug in Barcode Reader module that could cause App Store rejection when Build Options - Enable BitCode is set to Yes for an app.
+
 ## 1.1.1 (07/06/2022)
 
 ### Fixed

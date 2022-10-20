@@ -27,3 +27,4 @@ USEFUL RESOURCES
 <hr>
 
 * [License Activation](license/index.md)
+* [FAQ](faq/index.md)

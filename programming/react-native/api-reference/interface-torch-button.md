@@ -36,5 +36,4 @@ export interface TorchButton {
 
 ## Related API(s)
 
-- [`DynamsoftCameraView.torchButton`](camera-view.md#torchbutton)
 - [`Interface Rect`](interface-rect.md)

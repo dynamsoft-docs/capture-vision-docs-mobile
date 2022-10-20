@@ -11,8 +11,12 @@ breadcrumbText: 1.x
 
 # Release Notes for Cordova SDK - 1.x
 
-## 1.0.0 (08/04/2022)
+## 1.0.1 (09/22/2022)
 
-### HighLights
+- Fixed a bug that a previously captured video frame is not removed when the camera is closed.
+
+## 1.0.0 (08/23/2022)
+
+### Highlights
 
 {%- include release-notes/product-highlight-1.0.0.md -%}

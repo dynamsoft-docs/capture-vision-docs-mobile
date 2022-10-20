@@ -31,4 +31,4 @@ namespace DCVXamarin
 
 ## Related API(s)
 
-- [`DynamsoftBarcodeReader.updateRuntimeSettingsFromTemplate`](barcode-reader.md#updateruntimesettingsfromtemplate)
+- [`IDCVBarcodeReader.updateRuntimeSettingsFromTemplate`](barcode-reader.md#updateruntimesettingsfromtemplate)
