@@ -243,7 +243,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumDBRPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example of prioritizing read rate for image-based decoding:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumDBRPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```js
 dcvBarcodeReader.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
@@ -267,7 +267,7 @@ await reader.updateRuntimeSettings(settings)
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface along with the `DCVCameraEnhancer` class.
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface along with the `DCVCameraEnhancer` class.
 
 How to set scan region:
 

@@ -298,7 +298,7 @@ flutter run
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example:
 
 ```dart
 await _barcodeReader.updateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate.VIDEO_READ_RATE_FIRST );
@@ -322,7 +322,7 @@ try {
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `DCVCameraEnhancer` class.
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `DCVCameraEnhancer` class.
 
 First, let's create an instance of `DCVCameraEnhancer`. Next, we will create a scan region using the `Region` class. In this example, we define a rectangular `Region` whose dimensions are measured as a percentage of the total dimensions. Finally call the `setScanRegion` method to apply the scan region:
 
