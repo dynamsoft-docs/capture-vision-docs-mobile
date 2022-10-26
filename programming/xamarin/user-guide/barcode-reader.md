@@ -390,7 +390,7 @@ Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you’re looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example of prioritizing read rate for image-based decoding:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```c#
 BarcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST);
@@ -410,7 +410,7 @@ barcodeReader.UpdateRuntimeSettings(settings);
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn’t exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `IDCVCameraEnhancer` interface.
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the `Region` class as well as the `IDCVCameraEnhancer` interface.
 
 How to set scan region:
 
