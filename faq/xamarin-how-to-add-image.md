@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to add image assets in Xamarin.forms?
+title: How do I add image assets in Xamarin.forms?
 keywords: Dynamsoft Barcode Reader, FAQ, IOS, Android, Mobile, Xamarin, image
-description: How to add image assets in Xamarin.forms?
+description: How do I add image assets in Xamarin.forms?
 needAutoGenerateSidebar: false
 ---
 
-# How to add image assets in Xamarin.forms?
+# How do I add image assets in Xamarin.forms?
 
 [<< Back to FAQ index](index.md)
 
