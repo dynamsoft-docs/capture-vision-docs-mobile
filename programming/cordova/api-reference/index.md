@@ -2,7 +2,7 @@
 layout: default-layout
 title: The index of Cordova API Reference
 description: This page is the index of Cordova API reference
-keywords: API reference
+keywords: API Reference, Cordova
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
