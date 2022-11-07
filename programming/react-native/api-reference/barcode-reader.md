@@ -89,7 +89,7 @@ let dbrVersion = await this.reader.getVersion();
 
 ## getRuntimeSettings
 
-Get the current runtime settings of `DCVBarcodeReader`.
+Get the current runtime settings of `DCVBarcodeReader`. To learn more about the currently available runtime settings, please visit [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) interface page.
 
 ```js
 getRuntimeSettings(): Promise<DBRRuntimeSettings>
@@ -107,7 +107,7 @@ let settings = await this.reader.getRuntimeSettings();
 
 ## updateRuntimeSettings
 
-Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
+Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template. To learn more about the currently available runtime settings, please visit [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) interface page.
 
 ```js
 updateRuntimeSettings(settings: DBRRuntimeSettings | EnumDBRPresetTemplate | String): Promise<boolean>

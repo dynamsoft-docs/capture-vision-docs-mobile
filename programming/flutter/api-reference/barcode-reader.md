@@ -2,7 +2,7 @@
 layout: default-layout
 title: DCVBarcodeReader Class of Dynamsoft Capture Vision Flutter Edition
 description: This page is the API reference of DCVBarcodeReader class
-keywords: Barcode, API reference
+keywords: Barcode, API reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

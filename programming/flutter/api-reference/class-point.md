@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class Point of Dynamsoft Capture Vision Flutter Edition
 description: The class of DBR runtime settings
-keywords: Class Point, API reference
+keywords: Class Point, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

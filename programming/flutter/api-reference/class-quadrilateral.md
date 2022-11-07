@@ -2,7 +2,7 @@
 layout: default-layout
 title: Interface Quadrilateral of Dynamsoft Capture Vision Flutter Edition
 description: The interface of DBR runtime settings
-keywords: Interface Quadrilateral, API reference
+keywords: Interface Quadrilateral, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
