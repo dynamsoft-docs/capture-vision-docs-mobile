@@ -115,7 +115,7 @@ try {
 
 ## updateRuntimeSettings
 
-Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct or a template.
+Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct.
 
 ```dart
 Future<void> updateRuntimeSettings(DBRRuntimeSettings settings)
@@ -177,7 +177,7 @@ Future<void> updateRuntimeSettingsFromJson(String jsonString)
 late final DCVBarcodeReader _barcodeReader;
 _barcodeReader = await DCVBarcodeReader.createInstance();
 try {
-  await _barcodeReader.updateRuntimeSettingsFromJson('**********');
+  await _barcodeReader.updateRuntimeSettingsFromJson("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}");
 } catch (e) {
   print('error = $e');
 }

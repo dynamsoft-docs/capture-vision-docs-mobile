@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class Quadrilateral of Dynamsoft Capture Vision Xamarin Edition
 description: The Class of DBR runtime settings
-keywords: Class Quadrilateral, API reference
+keywords: Class Quadrilateral, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

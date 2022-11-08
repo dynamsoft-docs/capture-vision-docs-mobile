@@ -2,7 +2,7 @@
 layout: default-layout
 title: The index of Xamarin API Reference
 description: This page is the index of Xamarin API reference
-keywords: API reference
+keywords: API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

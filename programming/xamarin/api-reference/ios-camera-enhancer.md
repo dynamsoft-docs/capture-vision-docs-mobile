@@ -2,7 +2,7 @@
 layout: default-layout
 title: DCVCameraEnhancer Class under namespace Xamarin.iOS
 description: DCVCameraEnhancer class of Xamarin.iOS implements the IDCVCameraEnhancer interface on iOS.
-keywords: DCVCameraEnhancer, API reference, Xamarin.iOS
+keywords: DCVCameraEnhancer, API Reference, Xamarin, Xamarin Forms, Xamarin.iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

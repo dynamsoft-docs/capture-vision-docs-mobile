@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class TorchButton of Dynamsoft Capture Vision Xamarin Edition
 description: The interface of TorchButton
-keywords: Interface TorchButton, API reference
+keywords: Interface TorchButton, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
