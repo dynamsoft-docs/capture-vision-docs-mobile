@@ -110,9 +110,11 @@ updateRuntimeSettings(settings: String | DBRRuntimeSettings | EnumDBRPresetTempl
 
 **Parameters**
 
-`settings (DBRRuntimeSettings)`: An object that stores `DBRRuntimeSettings`.  
-`settings (EnumDBRPresetTemplate)`: One of the `EnumDBRPresetTemplate` member that indicates a preset template.  
-`settings (String)`: A stringified JSON data that contains barcode decoding settings. The available settings include but not limited in `DBRRuntimeSettings`. You can access full feature of DBR when upload the settings from a JSON data.
+`Settings`: The parameter should be one of the following types:
+
+- `settings (DBRRuntimeSettings)`: An object that stores `DBRRuntimeSettings`.  
+- `settings (EnumDBRPresetTemplate)`: One of the `EnumDBRPresetTemplate` member that indicates a preset template.  
+- `settings (String)`: A stringified JSON data that contains barcode decoding settings. The available settings include but not limited in `DBRRuntimeSettings`. You can access full feature of DBR when upload the settings from a JSON data.
 
 **Code Snippet**
 
