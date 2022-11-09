@@ -2,7 +2,7 @@
 layout: default-layout
 title: DCVCameraView Class of Dynamsoft Capture Vision Xamarin Edition
 description: This page is the API reference of DCVCameraView class
-keywords: Camera view, API reference
+keywords: Camera view, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

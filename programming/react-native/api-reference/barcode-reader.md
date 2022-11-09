@@ -89,7 +89,7 @@ let dbrVersion = await this.reader.getVersion();
 
 ## getRuntimeSettings
 
-Get the current runtime settings of `DCVBarcodeReader`.
+Get the current runtime settings of `DCVBarcodeReader`. To learn more about the currently available runtime settings, please visit [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) interface page.
 
 ```js
 getRuntimeSettings(): Promise<DBRRuntimeSettings>
@@ -107,7 +107,7 @@ let settings = await this.reader.getRuntimeSettings();
 
 ## updateRuntimeSettings
 
-Update the barcode decoding settings with a `DBRRuntimeSettings` struct or a template.
+Update the barcode decoding settings with a [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) struct, a preset template (from the [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) items) or a JSON String.
 
 ```js
 updateRuntimeSettings(settings: DBRRuntimeSettings | EnumDBRPresetTemplate | String): Promise<boolean>
@@ -117,21 +117,24 @@ updateRuntimeSettings(settings: DBRRuntimeSettings | EnumDBRPresetTemplate | Str
 
 `Settings`: The parameter should be one of the following types:
 
-- An object that stores barcode reader runtime settings.
-- A JSON string that stores the barcode reader template.
-- An enumeration member of [EnumPresetTemplate](../api-reference/enum-dbr-preset-template.md)
+`settings (DBRRuntimeSettings)`: An object that stores `DBRRuntimeSettings`.  
+`settings (EnumDBRPresetTemplate)`: One of the `EnumDBRPresetTemplate` member that indicates a preset template.  
+`settings (String)`: A stringified JSON data that contains barcode decoding settings. The available settings include but not limited in `DBRRuntimeSettings`. You can access full feature of DBR when upload the settings from a JSON data.
 
 **Code Snippet**
 
 ```js
-/* How to update using one of the preset templates */
-await this.reader.updateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
-
 /* How to update runtime settings using runtime settings object */
 let settings = await this.reader.getRuntimeSettings();
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
 settings.expectedBarcodeCount = 1;
 await this.reader.updateRuntimeSettings(settings);
+
+/* How to update using one of the preset templates */
+await this.reader.updateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SPEED_FIRST);
+
+/* How to update the settings using a JSON string */
+await this.reader.updateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}")
 ```
 
 ## resetRuntimeSettings

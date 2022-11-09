@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class BarcodeLocationResult of Dynamsoft Capture Vision Xamarin Edition
 description: The class of barcode location result
-keywords: Class BarcodeLocationResult, API reference
+keywords: Class BarcodeLocationResult, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

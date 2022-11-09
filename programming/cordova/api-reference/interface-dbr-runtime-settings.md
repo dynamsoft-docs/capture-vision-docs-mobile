@@ -2,7 +2,7 @@
 layout: default-layout
 title: Interface DBRRuntimeSettings of Dynamsoft Capture Vision Cordova Edition
 description: The interface of DBR runtime settings
-keywords: Interface DBRRuntimeSettings, API reference
+keywords: Interface DBRRuntimeSettings, API Reference, Cordova
 needAutoGenerateSidebar: false
 needGenerateH3Content: false
 noTitleIndex: true

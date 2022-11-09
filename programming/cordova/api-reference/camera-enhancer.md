@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class DCVCameraEnhancer of Dynamsoft Capture Vision Cordova Edition
 description: This page is the API reference of Class DCVCameraEnhancer
-keywords: Class DCVCameraEnhancer, API reference
+keywords: Class DCVCameraEnhancer, API Reference, Cordova
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

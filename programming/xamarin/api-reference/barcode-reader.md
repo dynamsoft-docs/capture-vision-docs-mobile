@@ -100,60 +100,37 @@ App.barcodeReader.UpdateRuntimeSettings(settings);
 
 ## UpdateRuntimeSettings(DBRRuntimeSettings)
 
-Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct or a template.
+Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct, a preset template (from the [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) items) or a JSON String.
 
 ```c#
 void UpdateRuntimeSettings(DBRRuntimeSettings settings)
+void UpdateRuntimeSettings(EnumDBRPresetTemplate)
+void UpdateRuntimeSettings(String template) 
 ```
 
 **Parameters**
 
-`Settings`: An object that stores barcode reader runtime settings.
+`Settings`: The parameter should be one of the following types:
+
+`settings (DBRRuntimeSettings)`: An object that stores `DBRRuntimeSettings`.  
+`settings (EnumDBRPresetTemplate)`: One of the `EnumDBRPresetTemplate` member that indicates a preset template.  
+`settings (String)`: A stringified JSON data that contains barcode decoding settings. The available settings include but not limited in `DBRRuntimeSettings`. You can access full feature of DBR when upload the settings from a JSON data.
 
 **Code Snippet**
 
 ```c#
+/* How to update runtime settings using the runtime settings object */
 DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
 settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 300;
 App.barcodeReader.UpdateRuntimeSettings(settings);
-```
 
-## UpdateRuntimeSettings(EnumPresetTemplate)
-
-Update the barcode decoding settings with a preset template.
-
-```c#
-void UpdateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate template)
-```
-
-**Parameters**
-
-`template`: An enumeration member of [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md).
-
-**Code Snippet**
-
-```c#
+/* How to update using one of the preset templates */
 App.barcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SINGLE_BARCODE);
-```
 
-## UpdateRuntimeSettings(String)
-
-Update the barcode decoding settings with a JSON template.
-
-```c#
-void UpdateRuntimeSettingsFromTemplate(string jsonTemplate)
-```
-
-**Parameters**
-
-`jsonString`: An JSON string that includes barcode reader settings.
-
-**Code Snippet**
-
-```c#
-App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}");
+/* How to update the settings using a JSON string */
+App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}")
 ```
 
 ## ResetRuntimeSettings

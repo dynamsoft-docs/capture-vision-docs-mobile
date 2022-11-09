@@ -2,7 +2,7 @@
 layout: default-layout
 title: EnumCameraPosition of Dynamsoft Capture Vision Flutter Edition
 description: The enumeration of camera position
-keywords: Camera position, API reference
+keywords: Camera position, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

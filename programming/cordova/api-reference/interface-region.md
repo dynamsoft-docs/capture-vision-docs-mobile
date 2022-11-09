@@ -2,7 +2,7 @@
 layout: default-layout
 title: Interface Region of Dynamsoft Capture Vision Cordova Edition
 description: The interface of region
-keywords: Interface Region, API reference
+keywords: Interface Region, API Reference, Cordova
 needAutoGenerateSidebar: false
 needGenerateH3Content: false
 noTitleIndex: true

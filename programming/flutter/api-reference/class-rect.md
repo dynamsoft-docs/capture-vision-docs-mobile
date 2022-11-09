@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class Rect of Dynamsoft Capture Vision Flutter Edition
 description: The class of Rect
-keywords: Class Rect, API reference
+keywords: Class Rect, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

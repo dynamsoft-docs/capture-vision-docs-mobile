@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class DBRRuntimeSettings of Dynamsoft Capture Vision Xamarin Edition
 description: The class of DBR runtime settings
-keywords: Class DBRRuntimeSettings, API reference
+keywords: Class DBRRuntimeSettings, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

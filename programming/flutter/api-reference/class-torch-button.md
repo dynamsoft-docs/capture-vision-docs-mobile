@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class TorchButton of Dynamsoft Capture Vision Flutter Edition
 description: The class of TorchButton
-keywords: Class TorchButton, API reference
+keywords: Class TorchButton, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

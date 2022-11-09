@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class Rect of Dynamsoft Capture Vision Xamarin Edition
 description: The interface of Rect
-keywords: Class Rect, API reference
+keywords: Class Rect, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
