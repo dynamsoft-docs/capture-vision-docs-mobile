@@ -2,7 +2,7 @@
 layout: default-layout
 title: ILicenseVerificationListener of Dynamsoft Capture Vision Xamarin Edition
 description: The interface ILicenseVerificationListener
-keywords: License verification, API reference
+keywords: License verification, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

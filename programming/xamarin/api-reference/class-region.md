@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class Region of Dynamsoft Capture Vision Xamarin Edition
 description: The Class of region
-keywords: Class Region, API reference
+keywords: Class Region, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

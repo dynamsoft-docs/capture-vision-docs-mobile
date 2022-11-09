@@ -2,7 +2,7 @@
 layout: default-layout
 title: The index of Flutter API Reference
 description: This page is the index of Flutter API reference
-keywords: API reference
+keywords: API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

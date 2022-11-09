@@ -22,10 +22,11 @@ interface IDCVBarcodeReader
 | [`InitLicense`](#initlicense) | Initialize the license of the Dynamsoft Barcode Reader module. |
 | [`GetVersion`](#getversion) | Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`GetRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DCVBarcodeReader`. |
-| [`UpdateRuntimeSettings`](#updateruntimesettingsdbrruntimesettings) | Update the runtime settings of `DCVBarcodeReader` with a `DBRRuntimeSettings` struct. |
-| [`UpdateRuntimeSettings`](#updateruntimesettingsenumpresettemplate) | Update the runtime settings of `DCVBarcodeReader` with a preset template. |
+| [`UpdateRuntimeSettings (DBRRuntimeSettings)`](#updateruntimesettingsdbrruntimesettings) | Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct. |
+| [`UpdateRuntimeSettings (EnumDBRPresetTemplate)`](#updateruntimesettingsenumpresettemplate) | Update the barcode decoding settings with a preset template (from the [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) items). |
+| [`UpdateRuntimeSettings (String)`](#updateruntimesettingsstring) | Update the barcode decoding settings with a JSON String. |
 | [`ResetRuntimeSettings`](#resetruntimesettings) | Reset the runtime settings of `DCVBarcodeReader` to default. |
-| [`OutputRuntimeSettings`](#outputruntimesettings) | Output the runtime settings of `DCVBarcodeReader` to string. |
+| [`OutputRuntimeSettingsToString`](#outputruntimesettingstostring) | Output the runtime settings of `DCVBarcodeReader` to string. |
 | [`StartScanning`](#startscanning) | Start the barcode decoding thread. |
 | [`StopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`SetCameraEnhancer`](#setcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
@@ -100,7 +101,7 @@ App.barcodeReader.UpdateRuntimeSettings(settings);
 
 ## UpdateRuntimeSettings(DBRRuntimeSettings)
 
-Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct or a template.
+Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct.
 
 ```c#
 void UpdateRuntimeSettings(DBRRuntimeSettings settings)
@@ -108,11 +109,12 @@ void UpdateRuntimeSettings(DBRRuntimeSettings settings)
 
 **Parameters**
 
-`Settings`: An object that stores barcode reader runtime settings.
+`settings`: An object that stores `DBRRuntimeSettings`.  
 
 **Code Snippet**
 
 ```c#
+/* How to update runtime settings using the runtime settings object */
 DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
 settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
@@ -122,38 +124,40 @@ App.barcodeReader.UpdateRuntimeSettings(settings);
 
 ## UpdateRuntimeSettings(EnumPresetTemplate)
 
-Update the barcode decoding settings with a preset template.
+Update the barcode decoding settings with a preset template (from the [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) items).
 
 ```c#
-void UpdateRuntimeSettingsFromTemplate(EnumDBRPresetTemplate template)
+void UpdateRuntimeSettings(EnumDBRPresetTemplate)
 ```
 
 **Parameters**
 
-`template`: An enumeration member of [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md).
+`settings`: One of the `EnumDBRPresetTemplate` member that indicates a preset template.  
 
 **Code Snippet**
 
 ```c#
+/* How to update using one of the preset templates */
 App.barcodeReader.UpdateRuntimeSettings(EnumDBRPresetTemplate.VIDEO_SINGLE_BARCODE);
 ```
 
 ## UpdateRuntimeSettings(String)
 
-Update the barcode decoding settings with a JSON template.
+Update the barcode decoding settings with a JSON String.
 
 ```c#
-void UpdateRuntimeSettingsFromTemplate(string jsonTemplate)
+void UpdateRuntimeSettings(String template) 
 ```
 
 **Parameters**
 
-`jsonString`: An JSON string that includes barcode reader settings.
+`settings`: A stringified JSON data that contains barcode decoding settings. The available settings include but not limited in `DBRRuntimeSettings`. You can access full feature of DBR when upload the settings from a JSON data.
 
 **Code Snippet**
 
 ```c#
-App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}");
+/* How to update the settings using a JSON string */
+App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}")
 ```
 
 ## ResetRuntimeSettings

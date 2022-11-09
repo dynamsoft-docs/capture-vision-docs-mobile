@@ -2,7 +2,7 @@
 layout: default-layout
 title: Interface IBarcodeResultListener of Dynamsoft Capture Vision Xamarin Edition
 description: The interface IBarcodeResultListener
-keywords: Barcode Result Listener, API reference
+keywords: Barcode Result Listener, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

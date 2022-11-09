@@ -2,7 +2,7 @@
 layout: default-layout
 title: DCVCameraEnhancer Class of Dynamsoft Capture Vision Flutter Edition
 description: This page is the API reference of DCVCameraEnhancer class
-keywords: Camera enhancer, API reference
+keywords: Camera enhancer, API reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

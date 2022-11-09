@@ -2,7 +2,7 @@
 layout: default-layout
 title: DCVBarcodeReader Class under namespace Xamarin.iOS
 description: DCVBarcodeReader class of Xamarin.iOS implements the IDCVBarcodeReader interface on iOS.
-keywords: DCVBarcodeReader, API reference, Xamarin.iOS
+keywords: DCVBarcodeReader, API Reference, Xamarin, Xamarin Forms, Xamarin.iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

@@ -2,7 +2,7 @@
 layout: default-layout
 title: EnumBarcodeFormat of Dynamsoft Capture Vision Flutter Edition
 description: The first group enumeration of the barcode formats
-keywords: Barcode format, API reference
+keywords: Barcode format, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

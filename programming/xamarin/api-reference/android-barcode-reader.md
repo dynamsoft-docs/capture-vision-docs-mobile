@@ -2,7 +2,7 @@
 layout: default-layout
 title: DCVBarcodeReader Class under namespace Xamarin.Droid
 description: DCVBarcodeReader class of Xamarin.Droid implements the IDCVBarcodeReader interface on Android.
-keywords: DCVBarcodeReader, API reference, Xamarin.Droid
+keywords: DCVBarcodeReader, API Reference, Xamarin, Xamarin Forms, Xamarin.Droid
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

@@ -2,7 +2,7 @@
 layout: default-layout
 title: DCVCameraEnhancer Class under namespace Xamarin.Droid
 description: DCVCameraEnhancer class of Xamarin.Droid implements the IDCVCameraEnhancer interface on Android.
-keywords: DCVCameraEnhancer, API reference, Xamarin.Droid
+keywords: DCVCameraEnhancer, API Reference, Xamarin, Xamarin Forms, Xamarin.Droid
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class BarcodeResult of Dynamsoft Capture Vision Flutter Edition
 description: The class of BarcodeResult result
-keywords: Class BarcodeResult, API reference
+keywords: Class BarcodeResult, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

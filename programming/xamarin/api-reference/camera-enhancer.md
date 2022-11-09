@@ -2,7 +2,7 @@
 layout: default-layout
 title: Interface IDCVCameraEnhancer of Dynamsoft Capture Vision Xamarin Edition
 description: This page is the API reference of Interface IDCVCameraEnhancer
-keywords: Interface IDCVCameraEnhancer, API reference
+keywords: Interface IDCVCameraEnhancer, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

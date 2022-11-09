@@ -2,7 +2,7 @@
 layout: default-layout
 title: Interface BarcodeResult of Dynamsoft Capture Vision Cordova Edition
 description: The interface of BarcodeResult
-keywords: Interface BarcodeResult, API reference
+keywords: Interface BarcodeResult, API Reference, Cordova
 needAutoGenerateSidebar: false
 needGenerateH3Content: false
 noTitleIndex: true

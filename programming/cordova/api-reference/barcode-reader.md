@@ -2,7 +2,7 @@
 layout: default-layout
 title: Class DCVBarcodeReader of Dynamsoft Capture Vision Cordova Edition
 description: This page is the API reference of Class DCVBarcodeReader
-keywords: Class DCVBarcodeReader, API reference
+keywords: Class DCVBarcodeReader, API Reference, Cordova
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -92,7 +92,7 @@ getRuntimeSettings(): Promise<DBRRuntimeSettings>;
 
 **Return Value**
 
-An object of [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) that stores the runtime settings.
+An object of [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) that stores the runtime settings.
 
 **Code Snippet**
 
@@ -102,7 +102,7 @@ let settings = await dbr.getRuntimeSettings();
 
 ## updateRuntimeSettings
 
-Update the barcode decoding settings with a [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) struct, a preset template or a JSON String.
+Update the barcode decoding settings with a [`DBRRuntimeSettings`](interface-dbr-runtime-settings.md) struct, a preset template (from the [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) items) or a JSON String.
 
 ```js
 updateRuntimeSettings(settings: String | DBRRuntimeSettings | EnumDBRPresetTemplate): Promise<void>;
@@ -110,9 +110,11 @@ updateRuntimeSettings(settings: String | DBRRuntimeSettings | EnumDBRPresetTempl
 
 **Parameters**
 
-`settings (DBRRuntimeSettings)`: An object that stores `DBRRuntimeSettings`.  
-`settings (EnumDBRPresetTemplate)`: One of the `EnumDBRPresetTemplate` member that indicates a preset template.  
-`settings (String)`: A stringified JSON data that contains barcode decoding settings. The available settings include but not limited in `DBRRuntimeSettings`. You can access full feature of DBR when upload the settings from a JSON data.
+`Settings`: The parameter should be one of the following types:
+
+- `settings (DBRRuntimeSettings)`: An object that stores `DBRRuntimeSettings`.  
+- `settings (EnumDBRPresetTemplate)`: One of the `EnumDBRPresetTemplate` member that indicates a preset template.  
+- `settings (String)`: A stringified JSON data that contains barcode decoding settings. The available settings include but not limited in `DBRRuntimeSettings`. You can access full feature of DBR when upload the settings from a JSON data.
 
 **Code Snippet**
 
