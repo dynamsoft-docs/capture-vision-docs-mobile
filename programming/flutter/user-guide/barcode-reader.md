@@ -63,7 +63,7 @@ This will add a line like this to your package's `pubspec.yaml` (and run an impl
 
 ```dart
 dependencies:
-   dynamsoft_capture_vision_flutter: ^1.1.0
+   dynamsoft_capture_vision_flutter: ^1.2.0
 ```
 
 ## Build Your Barcode Scanner App

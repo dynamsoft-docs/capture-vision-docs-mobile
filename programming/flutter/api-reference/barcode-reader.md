@@ -27,6 +27,8 @@ A barcode reader object accesses to a camera via `DCVCameraView` object at nativ
 | [`receiveResultStream`](#receiveresultstream) | Receive the stream to listen all the barcode results after the library finishes scanning a frame. |
 | [`decodeFile`](#decodefile) | Decode barcodes from an image file. |
 | [`enableResultVerification`](#enableresultverification) | Enable result verification. The output result will be double-checked to make sure the accuracy. |
+| [`setModeArgument`](#setmodeargument) | **Mode arguments** are the optional settings of **mode parameters** in `DBRRuntimeSettings`. You can use `setModeArgument` to configure these arguments. |
+| [`getModeArgument`](#getmodeargument) | Get the value of the specified **mode argument**. |
 
 ## initLicense
 
@@ -318,4 +320,56 @@ Future enableResultVerification(bool isEnable)
 late final DCVBarcodeReader _barcodeReader;
 _barcodeReader = await DCVBarcodeReader.createInstance();
 _barcodeReader.enableResultVerification(true);
+```
+
+## setModeArgument
+
+> *Added in version 1.2.0.*
+
+**Mode arguments** are the optional settings of **mode parameters** in `DBRRuntimeSettings`. You can use setModeArgument to configure these arguments.
+
+```dart
+Future setModeArgument(String modesName, int index, String argumentName, String argumentValue)
+```
+
+**Parameters**
+
+`modesName`: The name of the **mode parameter** that you want to make changes.
+`index`: The array index of **mode parameter**.
+`argumentName`: The name of the **mode argument** to set.
+`argumentValue`: The value of the **mode argument** to set.
+
+**Code Snippet**
+
+Suppose that you specified `[BM_LOCAL_BLOCK, BM_THRESHOLD]` for **mode parameter** `binarizationModes` and you want to set the value of **mode argument** `BlockSizeX` of mode `BM_LOCAL_BLOCK` to 50. The following code snippet is how you can make the settings:
+
+```dart
+/// Configure the mode parameters first.
+DBRRuntimeSettings currentSettings = await _barcodeReader.getRuntimeSettings();
+currentSettings.binarizationModes = [EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_THRESHOLD];
+await _barcodeReader.updateRuntimeSettings(currentSettings);
+/// Set mode argument
+await _barcodeReader.setModeArgument("binarizationModes",0,"BlockSizeX","50");
+```
+
+## getModeArgument
+
+> *Added in version 1.2.0.*
+
+Get the current setting of the specified **mode argument**.
+
+```dart
+Future getModeArgument(String modesName, int index, String argumentName)
+```
+
+**Parameters**
+
+`modesName`: The name of the **mode parameter** that you want to make changes.
+`index`: The array index of **mode parameter**.
+`argumentName`: The name of the **mode argument** to set.
+
+**Code Snippet**
+
+```dart
+String blockSizeX = await _barcodeReader.getModeArgument("binarizationModes",0,"BlockSizeX");
 ```

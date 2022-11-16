@@ -23,7 +23,7 @@ breadcrumbText: API Index
 
 | Classes | Description |
 | ---------- | ----------- |
-| [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) | The class that stores barcode decoding settings. |
+| [`DBRRuntimeSettings`](class-dbr-runtime-settings.md) | The class that stores the settings of barcode decoding **mode parameters**. |
 | [`BarcodeResult`](class-barcode-result.md) | The class that stores the barcode results. Barcode result can be acquired from result callback when using video barcode decoding. |
 | [`BarcodeLocationResult`](class-barcode-location-result.md) | The class that stores the location result of the detected barcodes. |
 | [`Quadrilateral`](class-quadrilateral.md) | The class that stores the vertex coordinates of the quadrilateral.|
@@ -34,7 +34,23 @@ breadcrumbText: API Index
 
 | Enumerations | Description |
 | ------------ | ----------- |
+| [`EnumBarcodeColourMode`](enum-barcode-colour-mode.md) | The enumeration for user to configure **mode parameter** `barcodeColourMode`. |
+| [`EnumBarcodeComplementMode`](enum-barcode-complement-mode.md) | The enumeration for user to configure **mode parameter** `barcodeComplementMode`. |
 | [`EnumBarcodeFormat`](enum-barcode-format.md) | The enumeration stores the first group of barcode formats. |
 | [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration stores the second group of barcode formats. |
-| [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
+| [`EnumBinarizationMode`](enum-binarization-mode.md) | The enumeration for user to configure **mode parameter** `binarizationMode`. |
 | [`EnumCameraPosition`](enum-camera-position.md) | It is the enumeration for user to select camera. |
+| [`EnumColourClusteringMode`](enum-colour-clustering-mode.md) | The enumeration for user to configure **mode parameter** `colourClusteringMode`. |
+| [`EnumColourConversionMode`](enum-colour-conversion-mode.md) | The enumeration for user to configure **mode parameter** `colourConversionMode`. |
+| [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
+| [`EnumDeblurMode`](enum-deblur-mode.md) | The enumeration for user to configure **mode parameter** `deblurMode`. |
+| [`EnumDeformationResistingMode`](enum-deformation-resisting-mode.md) | The enumeration for user to configure **mode parameter** `deformationResistingMode`. |
+| [`EnumDPMCodeReadingMode`](enum-dpm-code-reading-mode.md) | The enumeration for user to configure **mode parameter** `dpmCodeReadingMode`. |
+| [`EnumGrayscaleTransformationMode`](enum-grayscale-transformation-mode.md) | The enumeration for user to configure **mode parameter** `grayscaleTransformationMode`. |
+| [`EnumImagePreprocessingMode`](enum-image-preprocessing-mode.md) | The enumeration for user to configure **mode parameter** `imagePreprocessingMode`. |
+| [`EnumLocalizationMode`](enum-localization-mode.md) | The enumeration for user to configure **mode parameter** `localizationMode`. |
+| [`EnumRegionPredetectionMode`](enum-region-predetection-mode.md) | The enumeration for user to configure **mode parameter** `regionPredetectionMode`. |
+| [`EnumScaleUpMode`](enum-scaleup-mode.md) | The enumeration for user to configure **mode parameter** `scaleUpMode`. |
+| [`EnumTextFilterMode`](enum-text-filter-mode.md) | The enumeration for user to configure **mode parameter** `textFilterMode`. |
+| [`EnumTextResultOrderMode`](enum-text-result-order-mode.md) | The enumeration for user to configure **mode parameter** `textResultOrderMode`. |
+| [`EnumTextureDetectionMode`](enum-texture-detection-mode.md)  | The enumeration for user to configure **mode parameter** `textureDetectionMode`. |

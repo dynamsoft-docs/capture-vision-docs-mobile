@@ -25,7 +25,7 @@ class Region extends Serializer {
     int regionRight;
     /// If measured by percentage, the above values will be recognized as percentage (1 to 100).
     /// Otherwise, the above values will be recognized as pixel length.
-    bool regionMeasuredByPercentage;
+    int regionMeasuredByPercentage;
 }
 ```
 
