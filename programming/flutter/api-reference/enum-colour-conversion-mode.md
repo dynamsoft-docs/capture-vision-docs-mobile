@@ -11,6 +11,8 @@ breadcrumbText: EnumColourConversionMode
 
 # EnumColourConversionMode
 
+> *Added in version 1.2.0.*
+
 `EnumColourConversionMode` is the enumeration for user to configure **mode parameter** `colourConversionModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

@@ -11,6 +11,8 @@ breadcrumbText: EnumDeformationResistingMode
 
 # EnumDeformationResistingMode
 
+> *Added in version 1.2.0.*
+
 `EnumDeformationResistingMode` is the enumeration for user to configure **mode parameter** `deformationResistingModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

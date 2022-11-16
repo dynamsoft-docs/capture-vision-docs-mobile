@@ -11,6 +11,8 @@ breadcrumbText: EnumTextFilterMode
 
 # EnumTextFilterMode
 
+> *Added in version 1.2.0.*
+
 `EnumTextFilterMode` is the enumeration for user to configure **mode parameter** `textFilterModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

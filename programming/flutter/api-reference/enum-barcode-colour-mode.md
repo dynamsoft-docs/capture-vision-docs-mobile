@@ -11,6 +11,8 @@ breadcrumbText: EnumBarcodeColourMode
 
 # EnumBarcodeColourMode
 
+> *Added in version 1.2.0.*
+
 `EnumBarcodeColourMode` is the enumeration for user to configure **mode parameter** `barcodeColourModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

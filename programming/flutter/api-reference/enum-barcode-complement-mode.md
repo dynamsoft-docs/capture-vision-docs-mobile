@@ -11,6 +11,8 @@ breadcrumbText: EnumBarcodeComplementMode
 
 # EnumBarcodeComplementMode
 
+> *Added in version 1.2.0.*
+
 `EnumBarcodeComplementMode` is the enumeration for user to configure **mode parameter** `barcodeComplementModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

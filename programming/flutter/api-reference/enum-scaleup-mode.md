@@ -11,6 +11,8 @@ breadcrumbText: EnumScaleUpMode
 
 # EnumScaleUpMode
 
+> *Added in version 1.2.0.*
+
 `EnumScaleUpMode` is the enumeration for user to configure **mode parameter** `scaleUpModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

@@ -11,6 +11,8 @@ breadcrumbText: EnumImagePreprocessingMode
 
 # EnumImagePreprocessingMode
 
+> *Added in version 1.2.0.*
+
 `EnumImagePreprocessingMode` is the enumeration for user to configure **mode parameter** `imagePreprocessingModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

@@ -11,6 +11,8 @@ breadcrumbText: EnumBinarizationMode
 
 # EnumBinarizationMode
 
+> *Added in version 1.2.0.*
+
 `EnumBinarizationMode` is the enumeration for user to configure **mode parameter** `binarizationModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

@@ -11,6 +11,8 @@ breadcrumbText: EnumColourClusteringMode
 
 # EnumColourClusteringMode
 
+> *Added in version 1.2.0.*
+
 `EnumColourClusteringMode` is the enumeration for user to configure **mode parameter** `colourClusteringModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

@@ -324,13 +324,13 @@ _barcodeReader.enableResultVerification(true);
 
 ## setModeArgument
 
+> *Added in version 1.2.0.*
+
 **Mode arguments** are the optional settings of **mode parameters** in `DBRRuntimeSettings`. You can use setModeArgument to configure these arguments.
 
 ```dart
 Future setModeArgument(String modesName, int index, String argumentName, String argumentValue)
 ```
-
-> Added in version 1.2.0.
 
 **Parameters**
 
@@ -354,13 +354,13 @@ await _barcodeReader.setModeArgument("binarizationModes",0,"BlockSizeX","50");
 
 ## getModeArgument
 
+> *Added in version 1.2.0.*
+
 Get the current setting of the specified **mode argument**.
 
 ```dart
 Future getModeArgument(String modesName, int index, String argumentName)
 ```
-
-> Added in version 1.2.0.
 
 **Parameters**
 

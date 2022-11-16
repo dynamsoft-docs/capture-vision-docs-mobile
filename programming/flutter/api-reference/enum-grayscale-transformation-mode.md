@@ -11,6 +11,8 @@ breadcrumbText: EnumGrayscaleTransformationMode
 
 # EnumGrayscaleTransformationMode
 
+> *Added in version 1.2.0.*
+
 `EnumGrayscaleTransformationMode` is the enumeration for user to configure **mode parameter** `grayscaleTransformationModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

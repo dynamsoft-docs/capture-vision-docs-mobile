@@ -11,9 +11,9 @@ breadcrumbText: FurtherModes
 
 # FurtherModes
 
-Class `FurtherModes`. Configure the furtherModes to set when using Dynamsoft Barcode Reader.
-
 > *Added in version 1.2.0.*
+
+Class `FurtherModes`. Configure the furtherModes to set when using Dynamsoft Barcode Reader.
 
 ```dart
 class FurtherModes {

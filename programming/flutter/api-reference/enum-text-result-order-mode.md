@@ -11,6 +11,8 @@ breadcrumbText: EnumTextResultOrderMode
 
 # EnumTextResultOrderMode
 
+> *Added in version 1.2.0.*
+
 `EnumTextResultOrderMode` is the enumeration for user to configure **mode parameter** `textResultOrderModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

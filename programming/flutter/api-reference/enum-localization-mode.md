@@ -11,6 +11,8 @@ breadcrumbText: EnumLocalizationMode
 
 # EnumLocalizationMode
 
+> *Added in version 1.2.0.*
+
 `EnumLocalizationMode` is the enumeration for user to configure **mode parameter** `localizationModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

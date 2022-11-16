@@ -11,6 +11,8 @@ breadcrumbText: EnumDPMCodeReadingMode
 
 # EnumDPMCodeReadingMode
 
+> *Added in version 1.2.0.*
+
 `EnumDPMCodeReadingMode` is the enumeration for user to configure **mode parameter** `dpmCodeReadingModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart

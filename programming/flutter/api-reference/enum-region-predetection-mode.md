@@ -11,6 +11,8 @@ breadcrumbText: EnumRegionPredetectionMode
 
 # EnumRegionPredetectionMode
 
+> *Added in version 1.2.0.*
+
 `EnumRegionPredetectionMode` is the enumeration for user to configure **mode parameter** `regionPredetectionModes` via class [`DBRRuntimeSettings`](class-dbr-runtime-settings.md).
 
 ```dart
