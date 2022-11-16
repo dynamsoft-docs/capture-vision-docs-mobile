@@ -330,6 +330,8 @@ _barcodeReader.enableResultVerification(true);
 Future setModeArgument(String modesName, int index, String argumentName, String argumentValue)
 ```
 
+> Added in version 1.2.0.
+
 **Parameters**
 
 `modesName`: The name of the **mode parameter** that you want to make changes.
@@ -357,6 +359,8 @@ Get the current setting of the specified **mode argument**.
 ```dart
 Future getModeArgument(String modesName, int index, String argumentName)
 ```
+
+> Added in version 1.2.0.
 
 **Parameters**
 
