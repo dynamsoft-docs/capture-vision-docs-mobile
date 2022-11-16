@@ -11,6 +11,23 @@ breadcrumbText: 1.x
 
 # Release Notes for Flutter SDK - 1.x
 
+## 1.2.0 (11/16/2022)
+
+### New
+
+* Extended [`DBRRuntimeSettings`](../api-reference/class-dbr-runtime-settings.md) with more **mode parameters**. You can further optimize the barcode decoding performance of your project with the **mode parameters**:
+  * `binarizationModes`
+  * `deblurLevel`
+  * `deblurModes`
+  * `region`
+  * `scaleDownThreshold`
+  * `scaleUpModes`
+  * `textResultOrderModes`
+  * `furtherModes`
+* Added a new class `FurtherModes` to set the `furtherModes` parameter of `DBRRuntimeSettings`.
+* Added new methods `setModeArgument` and `getModeArgument` in class `DCVBarcodeReader`. These two methods give you access to the optional arguments of the **mode parameters**.
+* Added enumeration classes to set **mode parameters**.
+
 ## 1.1.0 (09/08/2022)
 
 ### New

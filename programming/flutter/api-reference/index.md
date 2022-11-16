@@ -34,7 +34,23 @@ breadcrumbText: API Index
 
 | Enumerations | Description |
 | ------------ | ----------- |
+| [`EnumBarcodeColourMode`](enum-barcode-colour-mode.md) | The enumeration for user to configure **mode parameter** `barcodeColourMode` via class `DBRRuntimeSettings`. |
+| [`EnumBarcodeComplementMode`](enum-barcode-complement-mode.md) | The enumeration for user to configure **mode parameter** `barcodeComplementMode` via class `DBRRuntimeSettings`. |
 | [`EnumBarcodeFormat`](enum-barcode-format.md) | The enumeration stores the first group of barcode formats. |
 | [`EnumBarcodeFormat_2`](enum-barcode-format2.md) | The enumeration stores the second group of barcode formats. |
-| [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
+| [`EnumBinarizationMode`](enum-binarization-mode.md) | The enumeration for user to configure **mode parameter** `binarizationMode` via class `DBRRuntimeSettings`. |
 | [`EnumCameraPosition`](enum-camera-position.md) | It is the enumeration for user to select camera. |
+| [`EnumColourClusteringMode`](enum-colour-clustering-mode.md) | The enumeration for user to configure **mode parameter** `colourClusteringMode` via class `DBRRuntimeSettings`. |
+| [`EnumColourConversionMode`](enum-colour-conversion-mode.md) | The enumeration for user to configure **mode parameter** `colourConversionMode` via class `DBRRuntimeSettings`. |
+| [`EnumDBRPresetTemplate`](enum-dbr-preset-template.md) | The enumeration stores the preset barcode decoding templates. |
+| [`EnumDeblurMode`](enum-deblur-mode.md) | The enumeration for user to configure **mode parameter** `deblurMode` via class `DBRRuntimeSettings`. |
+| [`EnumDeformationResistingMode`](enum-deformation-resisting-mode.md) | The enumeration for user to configure **mode parameter** `deformationResistingMode` via class `DBRRuntimeSettings`. |
+| [`EnumDPMCodeReadingMode`](enum-dpm-code-reading-mode.md) | The enumeration for user to configure **mode parameter** `dpmCodeReadingMode` via class `DBRRuntimeSettings`. |
+| [`EnumGrayscaleTransformationMode`](enum-grayscale-transformation-mode.md) | The enumeration for user to configure **mode parameter** `grayscaleTransformationMode` via class `DBRRuntimeSettings`. |
+| [`EnumImagePreprocessingMode`](enum-image-preprocessing-mode.md) | The enumeration for user to configure **mode parameter** `imagePreprocessingMode` via class `DBRRuntimeSettings`. |
+| [`EnumLocalizationMode`](enum-localization-mode.md) | The enumeration for user to configure **mode parameter** `localizationMode` via class `DBRRuntimeSettings`. |
+| [`EnumRegionPredetectionMode`](enum-region-predetection-mode.md) | The enumeration for user to configure **mode parameter** `regionPredetectionMode` via class `DBRRuntimeSettings`. |
+| [`EnumScaleUpMode`](enum-scaleup-mode.md) | The enumeration for user to configure **mode parameter** `scaleUpMode` via class `DBRRuntimeSettings`. |
+| [`EnumTextFilterMode`](enum-text-filter-mode.md) | The enumeration for user to configure **mode parameter** `textFilterMode` via class `DBRRuntimeSettings`. |
+| [`EnumTextResultOrderMode`](enum-text-result-order-mode.md) | The enumeration for user to configure **mode parameter** `textResultOrderMode` via class `DBRRuntimeSettings`. |
+| [`EnumTextureDetectionMode`](enum-texture-detection-mode.md)  | The enumeration for user to configure **mode parameter** `textureDetectionMode` via class `DBRRuntimeSettings`. |
