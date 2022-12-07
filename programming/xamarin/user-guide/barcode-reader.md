@@ -60,6 +60,11 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.CaptureVision.Xamarin.Forms**. Select all the modules of your project and click **install**.
 
+<div align="center">
+    <p><img src="../assets/install-nuget.png" width="40%" alt="run"></p>
+    <p>Run Your Project</p>
+</div>
+
 ## Build Your Barcode Scanner App
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision Xamarin SDK.
