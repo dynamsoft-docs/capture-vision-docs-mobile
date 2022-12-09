@@ -23,3 +23,5 @@ Generally, you don’t have to add any configurations when shrinking your code b
 -keep class com.dynamsoft.dbr.** { *; }
 -keep class com.dynamsoft.dce.** { *; }
 ```
+
+You can view the <a href="https://learn.microsoft.com/en-us/xamarin/android/deploy-test/release-prep/proguard?tabs=macos" target="_blank">official documents</a> for how to enable proguard.
