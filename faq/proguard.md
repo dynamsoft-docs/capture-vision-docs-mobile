@@ -1,3 +1,12 @@
+---
+layout: default-layout
+title: How to Prevent Project Build Failure after Shrinking Code in Xamarin.Forms?
+keywords: Dynamsoft Capture Vision, FAQs, Xamarin.Forms
+description: How to Prevent Project Build Failure after Shrinking Code in Xamarin.Forms?
+needAutoGenerateSidebar: false
+noTitleIndex: true
+breadcrumbText: Add Proguard
+---
 
 # How to Prevent Project Build Failure after Shrinking Code in Xamarin.Forms?
 
