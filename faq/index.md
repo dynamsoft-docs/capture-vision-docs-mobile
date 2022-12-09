@@ -20,3 +20,5 @@ permalink: /faq/index.html
 5. [When building my Cordova app, I get an error saying “invalid signature”. How do I resolve that?](cordova-signature-error.md)
 
 6. [Are all the runtime settings included in the Barcode Reader module of the DCV packages?](runtime-settings-dcv.md)
+
+7. [How to Prevent Project Build Failure after Shrinking Code in Xamarin.forms?](proguard.md)
