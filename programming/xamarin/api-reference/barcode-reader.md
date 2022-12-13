@@ -31,6 +31,10 @@ interface IDCVBarcodeReader
 | [`StopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`SetCameraEnhancer`](#setcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
 | [`AddResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
+| [`MinImageReadingInterval`]() |  |
+| [`EnableResultVerification`]() |  |
+| [`EnableDuplicateFilter`]() |  |
+| [`DuplicateForgetTime`]() |  |
 
 ## InitLicense
 
@@ -259,4 +263,45 @@ public partial class DBRRendererPage : ContentPage, IBarcodeResultListener
         // Add your code to execute here when barcode results are received.
     }
 }
+```
+
+## MinImageReadingInterval
+
+`MinImageReadingInterval` indicates the minimum interval between two barcode decoding.
+
+```c#
+int MinImageReadingInterval { get; set; }
+```
+
+**Code Snippet**
+
+```c#
+App.dbr.MinImageReadingInterval = 3000;
+App.dbr.DuplicateForgetTime = 1000;
+App.dbr.EnableDuplicateFilter = true;
+App.dbr.EnableResultVerification = true;
+```
+
+## EnableResultVerification
+
+Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding.
+
+```c#
+bool EnableResultVerification { get; set; }
+```
+
+## EnableDuplicateFilter
+
+Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding.
+
+```c#
+bool EnableDuplicateFilter { get; set; }
+```
+
+## DuplicateForgetTime
+
+Set/get the period of `duplicateForgetTime`, Default value is 3000(ms).
+
+```c#
+int DuplicateForgetTime { get; set; }
 ```
