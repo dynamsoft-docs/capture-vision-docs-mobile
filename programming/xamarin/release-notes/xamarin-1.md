@@ -11,7 +11,7 @@ breadcrumbText: 1.x
 
 # Release Notes for Xamarin SDK - 1.x
 
-## 1.0.2 (12/14/2022)
+## 1.0.2 (12/20/2022)
 
 - Added [`ScanRegionVisile`](../api-reference/camera-enhancer.md#scanregionvisible) in interface `IDCVCameraEnhancer` so that users can hide the **scan region** on the UI.
 - Added a new method [`EnableResultVerification`](../api-reference/barcode-reader.md#enableresultverification) in interface `IDCVBarcodeReader` to improve the accuracy of barcode results for video streaming barcode decoding.
