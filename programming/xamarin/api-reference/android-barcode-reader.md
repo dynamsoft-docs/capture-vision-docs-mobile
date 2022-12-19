@@ -34,6 +34,10 @@ namespace DCVXamarin.Droid
         public void UpdateRuntimeSettings(DBRRuntimeSettings settings);
         public void UpdateRuntimeSettings(EnumDBRPresetTemplate presetTemplate);
         public void UpdateRuntimeSettings(string jsonTemplate);
+        public int MinImageReadingInterval();
+        public bool EnableResultVerification();
+        public bool EnableDuplicateFilter();
+        public int DuplicateForgetTime();
     }
 }
 ```
