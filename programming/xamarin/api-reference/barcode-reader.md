@@ -31,6 +31,10 @@ interface IDCVBarcodeReader
 | [`StopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`SetCameraEnhancer`](#setcameraenhancer) | Set camera enhancer as the source of video stream. The library will be able to continuously obtain video frames from the camera enhancer when this method is triggered. |
 | [`AddResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
+| [`MinImageReadingInterval`](#minimagereadinginterval) | `MinImageReadingInterval` indicates the minimum interval between two barcode decoding. |
+| [`EnableResultVerification`](#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+| [`EnableDuplicateFilter`](#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
+| [`DuplicateForgetTime`](#duplicateforgettime) | Set/get the period of `duplicateForgetTime`, Default value is 3000(ms). |
 
 ## InitLicense
 
@@ -259,4 +263,64 @@ public partial class DBRRendererPage : ContentPage, IBarcodeResultListener
         // Add your code to execute here when barcode results are received.
     }
 }
+```
+
+## MinImageReadingInterval
+
+`MinImageReadingInterval` indicates the minimum interval between two barcode decoding.
+
+```c#
+int MinImageReadingInterval { get; set; }
+```
+
+**Code Snippet**
+
+```c#
+App.dbr.EnableResultVerification = true;
+```
+
+## EnableResultVerification
+
+Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding.
+
+> Note: **Result verification** feature only effects on the **OneD barcode** results that are decoded from the video streaming.
+
+```c#
+bool EnableResultVerification { get; set; }
+```
+
+**Code Snippet**
+
+```c#
+App.dbr.EnableResultVerification = true;
+```
+
+## EnableDuplicateFilter
+
+Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same **BarcodeText** and **BarcodeFormatString** will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms.
+
+```c#
+bool EnableDuplicateFilter { get; set; }
+```
+
+**Code Snippet**
+
+```c#
+App.dbr.DuplicateForgetTime = 1000;
+App.dbr.EnableDuplicateFilter = true;
+```
+
+## DuplicateForgetTime
+
+Set/get the period of `duplicateForgetTime`, Default value is 3000(ms). View [`EnableDuplicateFilter`](#enableduplicatefilter) for more information.
+
+```c#
+int DuplicateForgetTime { get; set; }
+```
+
+**Code Snippet**
+
+```c#
+App.dbr.DuplicateForgetTime = 1000;
+App.dbr.EnableDuplicateFilter = true;
 ```

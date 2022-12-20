@@ -30,6 +30,7 @@ interface IDCVCameraEnhancer
 | Method | Description |
 | ------- | ----------- |
 | [`ScanRegion`](#scanregion) | The property for users to specify the region of interest. |
+| [`ScanRegionVisible`](#scanregionvisible) | Set or get the visibility of the scan region. |
 | [`Open`](#open) | Open the camera. |
 | [`Close`](#close) | Close the camera. |
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
@@ -37,7 +38,7 @@ interface IDCVCameraEnhancer
 
 ## ScanRegion
 
-Specify a region of interest.
+Specify a region of interest. Once the **scan region** is set, the video frames will be cropped so that the library process the region only. The **scan region** you specified will be displayed on the view by default. You can hide the **scan region** by setting [`ScanRegionVisible`](#scanregionvisible) to **false**.
 
 ```c#
 Region ScanRegion { get; set; }
@@ -47,7 +48,14 @@ Region ScanRegion { get; set; }
 
 `scanRegion`: An object of [`Region`](class-region.md) class which indicates the location of the region.
 
+**Related APIs**
+
+- [ScanRegionVisible](#scanregionvisible): You can set whether to display the **scan region**.
+- [BarcodeLocationResult](class-barcode-location-result.md): Since the video frame is cropped based on the **scan region**, the `Location` you get from `BarcodeLocationResult` is based on the cropped video frame.
+
 **Code Snippet**
+
+Specify a scan region and display it on the view:
 
 ```c#
 DCVXamarin.Region scanRegion = new DCVXamarin.Region();
@@ -56,12 +64,50 @@ scanRegion.RegionBottom = 70;
 scanRegion.RegionLeft = 15;
 scanRegion.RegionRight = 85;
 scanRegion.RegionMeasuredByPercentage = 1;
-camera.ScanRegion = scanRegion;
+protected override void OnAppearing()
+{
+    base.OnAppearing();
+    App.dbr.StartScanning();
+    App.dce.Open();
+    // Set scan region on appearing
+    App.dce.ScanRegion = scanRegion;
+}
 ```
 
 **Related APIs**
 
 - [Region](class-region.md)
+
+## ScanRegionVisible
+
+Set or get the visibility of the scan region.
+
+```c#
+bool ScanRegionVisible { get; set; }
+```
+
+**Code Snippet**
+
+The following code snippet shows how to set the scan region but hide it on the view.
+
+```c#
+DCVXamarin.Region scanRegion = new DCVXamarin.Region();
+scanRegion.RegionTop = 30;
+scanRegion.RegionBottom = 70;
+scanRegion.RegionLeft = 15;
+scanRegion.RegionRight = 85;
+scanRegion.RegionMeasuredByPercentage = 1;
+protected override void OnAppearing()
+{
+    base.OnAppearing();
+    App.dbr.StartScanning();
+    App.dce.Open();
+    App.dce.ScanRegion = scanRegion;
+
+    // Hide the scan region with the following line.
+    App.dce.ScanRegionVisible = false;
+}
+```
 
 ## Open
 
