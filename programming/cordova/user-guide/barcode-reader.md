@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Getting Started with Barcode Reader
+title: Getting Started with Barcode Reader - Dynamsoft Capture Vision Cordova Edition
 description: This is the user guide of Dynamsoft Capture Vision Cordova edition - Barcode Reader module
 keywords: User guide, Barcode Reader, Cordova, Capture Vision, Dynamsoft
 needAutoGenerateSidebar: true
