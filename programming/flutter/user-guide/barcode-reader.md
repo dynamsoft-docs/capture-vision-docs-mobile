@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Getting Started with Barcode Reader
+title: Getting Started with Barcode Reader - Dynamsoft Capture Vision Flutter Edition
 description: This is the user guide of Dynamsoft Capture Vision Flutter edition - Barcode Reader module
 keywords: User guide, Barcode Reader, Flutter, Capture Vision, Dynamsoft
 needAutoGenerateSidebar: true
