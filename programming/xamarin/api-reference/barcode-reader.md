@@ -100,7 +100,14 @@ DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
 settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 300;
-App.barcodeReader.UpdateRuntimeSettings(settings);
+try 
+{
+    App.barcodeReader.UpdateRuntimeSettings(settings);
+}
+catch(DCVException ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ## UpdateRuntimeSettings(DBRRuntimeSettings)
@@ -123,7 +130,14 @@ DBRRuntimeSettings settings = App.barcodeReader.GetRuntimeSettings();
 settings.BarcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
 settings.ExpectedBarcodeCount = 0;
 settings.Timeout = 300;
-App.barcodeReader.UpdateRuntimeSettings(settings);
+try 
+{
+    App.barcodeReader.UpdateRuntimeSettings(settings);
+}
+catch(DCVException ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ## UpdateRuntimeSettings(EnumPresetTemplate)
@@ -161,7 +175,14 @@ void UpdateRuntimeSettings(String template)
 
 ```c#
 /* How to update the settings using a JSON string */
-App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}")
+try 
+{
+    App.barcodeReader.UpdateRuntimeSettings("{\"ImageParameter\":{\"BarcodeFormatIds\":[\"BF_ALL\"],\"BarcodeFormatIds_2\":null,\"DeblurLevel\":0,\"ExpectedBarcodesCount\":0,\"LocalizationModes\":[{\"Mode\":\"LM_SCAN_DIRECTLY\",\"ScanDirection\":1},{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"Name\":\"video-speed-first\",\"ScaleDownThreshold\":2300,\"Timeout\":500},\"Version\":\"3.0\"}");
+}
+catch(DCVException ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ## ResetRuntimeSettings
