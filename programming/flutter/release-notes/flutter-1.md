@@ -11,6 +11,12 @@ breadcrumbText: 1.x
 
 # Release Notes for Flutter SDK - 1.x
 
+## 1.2.1 (01/12/2023)
+
+### Improved
+
+* Optimized the internal code to support more usage scenarios.
+
 ## 1.2.0 (11/16/2022)
 
 ### New

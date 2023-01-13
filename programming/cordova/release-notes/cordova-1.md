@@ -11,6 +11,14 @@ breadcrumbText: 1.x
 
 # Release Notes for Cordova SDK - 1.x
 
+## 1.0.3 (01/12/2023)
+
+### Improved
+
+- Optimized the internal code to support more usage scenarios.
+- Fixed a bug that the camera view is not correctly displayed when switching from one scan page to another.
+- Fixed a bug that the scan region is not removed from `DCECameraView` when it is canceled.
+
 ## 1.0.2 (11/24/2022)
 
 - Fixed a bug that camera view is not displayed correctly when the camera is re-opened.
