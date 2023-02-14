@@ -11,6 +11,10 @@ breadcrumbText: 1.x
 
 # Release Notes for Xamarin SDK - 1.x
 
+## 1.0.3 (02/14/2023)
+
+- Fixed a crash bug on the devices that do not support 16:9 size resolution.
+
 ## 1.0.2 (12/20/2022)
 
 - Added [`ScanRegionVisile`](../api-reference/camera-enhancer.md#scanregionvisible) in interface `IDCVCameraEnhancer` so that users can hide the **scan region** on the UI.
