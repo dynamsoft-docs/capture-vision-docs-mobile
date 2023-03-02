@@ -11,6 +11,11 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.8 (03/02/2023)
+
+- Fixed a scan region deviation bug.
+- Fixed a bug that parameter [`regionMeasuredByPercentage`](../api-reference/interface-region.md) had no effect when set to `false` or `0`.
+
 ## 1.1.7 (10/13/2022)
 
 - Fixed a bug of activity-lifecycle management, which might cause camera not be opened when activity is resumed.
