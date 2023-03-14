@@ -21,9 +21,12 @@ namespace DCVXamarin
         // The barcode text.
         public string BarcodeText { get; set; }
 
+        // The barcode decoding result in bytes.
+        public byte[] BarcodeBytes { get; set; }
+
         // Barcode type in string.
         public string BarcodeFormatString { get; set; }
-        
+
         // The corresponding localization result.
         public BarcodeLocationResult BarcodeLocationResult { get; set; }
     }

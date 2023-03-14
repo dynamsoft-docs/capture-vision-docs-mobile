@@ -11,6 +11,10 @@ breadcrumbText: 1.x
 
 # Release Notes for Xamarin SDK - 1.x
 
+## 1.0.4 (03/13/2023)
+
+- Added property [`BarcodeBytes`](../api-reference/class-barcode-result.md) to class `BarcodeResult`
+
 ## 1.0.3 (02/14/2023)
 
 - Fixed a crash bug on the devices that do not support 16:9 size resolution.

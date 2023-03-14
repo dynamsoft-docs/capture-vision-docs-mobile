@@ -11,6 +11,10 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.9 (03/13/2023)
+
+- Fixed a symbol conflict bug when using typescript.
+
 ## 1.1.8 (03/02/2023)
 
 - Fixed a scan region deviation bug.
