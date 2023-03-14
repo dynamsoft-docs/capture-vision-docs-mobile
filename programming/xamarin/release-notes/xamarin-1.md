@@ -13,7 +13,7 @@ breadcrumbText: 1.x
 
 ## 1.0.4 (03/13/2023)
 
-- Added property [`BarcodeBytes`](../api-reference/class-barcode-result.md) to class `BarcodeResult`
+- Added property `BarcodeBytes` to class [`BarcodeResult`](../api-reference/class-barcode-result.md)
 
 ## 1.0.3 (02/14/2023)
 
