@@ -11,6 +11,20 @@ breadcrumbText: 1.x
 
 # Release Notes for Xamarin SDK - 1.x
 
+## 1.0.5 (03/31/2023)
+
+- Added zoom focus controlling APIs:
+  - Method [`SetFocus`](../api-reference/camera-enhancer.md#setfocus) for settings the focus point and the focus mode.
+  - Method [`SetZoomFactor`](../api-reference/camera-enhancer.md#setzoomfactor) for settings the zoom factor.
+  - Method [`EnableFeatures`](../api-reference/camera-enhancer.md#enablefeatures) for enabling the advanced features.
+  - Method [`DisableFeatures`](../api-reference/camera-enhancer.md#disablefeatures) for disabling the advanced features.
+  - Method [`IsFeatureEnabled`](../api-reference/camera-enhancer.md#isfeatureenabled) for checking the state of the advanced features.
+  - Property [`MaxZoomFactor`](../api-reference/camera-enhancer.md#maxzoomfactor) for obtaining the maximum zoom ability of the device.
+  - Property [`AutoZoomRange`](../api-reference/camera-enhancer.md#autozoomrange) for restricting the range of the auto-zoom feature.
+  - Enumeration [`EnumEnhancerFeatures`](../api-reference/enum-enhancer-features.md) for specifying the advanced features, which include auto zoom, enhanced focus, et al.
+  - Enumeration [`EnumFocusMode`](../api-reference/enum-focus-mode.md) for settings the focus mode.
+  - Class [`Range`](../api-reference/class-range.md) for specifying the auto zoom range.
+
 ## 1.0.4 (03/14/2023)
 
 - Added property `BarcodeBytes` to class [`BarcodeResult`](../api-reference/class-barcode-result.md)
