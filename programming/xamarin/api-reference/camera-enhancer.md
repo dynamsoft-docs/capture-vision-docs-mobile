@@ -36,11 +36,11 @@ interface IDCVCameraEnhancer
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 | [`SetFocus`](#setfocus) | Trigger a focus at the targeting point and set the subsequent focus mode after focused. |
-| [`EnableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` value. |
-| [`DisableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`EnableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) value. |
+| [`DisableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
 | [`IsFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
 | [`SetZoomFactor`](#setzoomfactor) | Set the zoom factor. The camera will zoom in/out immediately after this method is triggered. |
-| [`AutoZoomRange`](#autozoomrange) | A `Range` value that indicates the maximum available zoom factor of the device. |
+| [`AutoZoomRange`](#autozoomrange) | A [`Range`](class-range.md) value that indicates the maximum available zoom factor of the device. |
 | [`MaxZoomFactor`](#maxzoomfactor) | A float property that indicates the maximum available zoom factor of the device. |
 
 ## ScanRegion
