@@ -41,84 +41,7 @@ interface IDCVCameraEnhancer
 | [`IsFeatureEnabled`](#isfeatureenabled) | Returns a boolean value that means whether the feature(s) you input is (are) enabled. |
 | [`SetZoomFactor`](#setzoomfactor) | Set the zoom factor. The camera will zoom in/out immediately after this method is triggered. |
 | [`AutoZoomRange`](#autozoomrange) | A `Range` value that indicates the maximum available zoom factor of the device. |
-| [MaxZoomFactor](#maxzoomfactor) | A float property that indicates the maximum available zoom factor of the device. |
-
-## SetFocus
-
-Trigger a focus at the targeting point and set the subsequent focus mode after focused.
-
-```c#
-void SetFocus(Point focusPoint, EnumFocusMode subsequentFocusMode);
-```
-
-Parameters
-
-`[in] focusPosition`: An android.graphics.PointF object indicates the interest area.  
-`[in] subsequentFocusMode`: If you set the focus mode to FM_LOCKED, the focallength will be lock after the focus. Otherwise, the continuous auto focus that control by the hardware is still enabled.
-
-## EnableFeatures
-
-Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
-
-```c#
-void EnableFeatures(EnumEnhancerFeatures enhancerFeatures);
-```
-
-**Parameters**
-
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
-
-## DisableFeatures
-
-Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
-
-```c#
-void DisableFeatures(EnumEnhancerFeatures enhancerFeatures);
-```
-
-**Parameters**
-
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
-
-## isFeatureEnabled
-
-Returns a boolean value that means whether the feature(s) you input is (are) enabled.
-
-```c#
-bool IsFeatureEnabled(EnumEnhancerFeatures enhancerFeatures);
-```
-
-**Parameters**
-
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
-
-## SetZoomFactor
-
-Set the zoom factor. The camera will zoom in/out immediately after this method is triggered.
-
-```c#
-void SetZoomFactor(float factor);
-```
-
-**Parameters**
-
-`factor`: The target zoom factor.
-
-## AutoZoomRange
-
-A `Range` value that indicates the maximum available zoom factor of the device.
-
-```c#
-Range AutoZoomRange { get; set; }
-```
-
-## MaxZoomFactor
-
-A float property that indicates the maximum available zoom factor of the device.
-
-```c#
-float MaxZoomFactor { get; }
-```
+| [`MaxZoomFactor`](#maxzoomfactor) | A float property that indicates the maximum available zoom factor of the device. |
 
 ## ScanRegion
 
@@ -223,4 +146,81 @@ Turn off the torch.
 
 ```c#
 void TurnOffTorch();
+```
+
+## SetFocus
+
+Trigger a focus at the targeting point and set the subsequent focus mode after focused.
+
+```c#
+void SetFocus(Point focusPoint, EnumFocusMode subsequentFocusMode);
+```
+
+Parameters
+
+`[in] focusPosition`: An Point object indicates the interest area.  
+`[in] subsequentFocusMode`: Specify a mode with [`EnumFocusMode`](enum-focus-mode.md). If you set the focus mode to `FM_LOCKED`, the focallength will be lock after the focus. Otherwise, the continuous auto focus that control by the hardware is still enabled.
+
+## EnableFeatures
+
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) value.
+
+```c#
+void EnableFeatures(EnumEnhancerFeatures enhancerFeatures);
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+
+## DisableFeatures
+
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values.
+
+```c#
+void DisableFeatures(EnumEnhancerFeatures enhancerFeatures);
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+
+## isFeatureEnabled
+
+Returns a boolean value that means whether the feature(s) you input is (are) enabled.
+
+```c#
+bool IsFeatureEnabled(EnumEnhancerFeatures enhancerFeatures);
+```
+
+**Parameters**
+
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+
+## SetZoomFactor
+
+Set the zoom factor. The camera will zoom in/out immediately after this method is triggered.
+
+```c#
+void SetZoomFactor(float factor);
+```
+
+**Parameters**
+
+`factor`: The target zoom factor.
+
+## AutoZoomRange
+
+A [`Range`](class-range.md) value that indicates the maximum available zoom factor of the device.
+
+```c#
+Range AutoZoomRange { get; set; }
+```
+
+## MaxZoomFactor
+
+A float property that indicates the maximum available zoom factor of the device.
+
+```c#
+float MaxZoomFactor { get; }
 ```
