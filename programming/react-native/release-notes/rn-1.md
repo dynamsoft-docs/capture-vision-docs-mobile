@@ -11,6 +11,14 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.12 (05/24/2023)
+
+- Added [`enableDuplicateFilter`](../api-reference/barcode-reader.md#enableduplicatefilter) to `DCVBarcodeReader` class to get unique result from the result callback.
+
+## 1.1.11 (03/28/2023)
+
+- Fixed a bug that might cause thread blocking on the simulator.
+
 ## 1.1.9 (03/14/2023)
 
 - Fixed a symbol conflict bug when using typescript.
