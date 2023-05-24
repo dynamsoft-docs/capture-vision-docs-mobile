@@ -27,7 +27,7 @@ A barcode reader object accesses to a camera via DCVCameraView object at native 
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 | [`removeAllResultListeners`](#removeallresultlisteners) | Remove all existing result listener. |
 | [`decodeFile`](#decodefile) | Decode barcodes from a specified image file. |
-| [`enableDuplicateFilter`]() |  |
+| [`enableDuplicateFilter`](#enableduplicatefilter) | Enable (or disable) duplicate result filter to get unique results from the result callback. |
 
 ## initLicense
 
