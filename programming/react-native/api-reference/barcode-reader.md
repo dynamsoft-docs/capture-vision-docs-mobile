@@ -276,7 +276,7 @@ result = reader.decodeFile("Your file path");
 
 ## enableDuplicateFilter
 
-Enable duplicate result filter to get unique results from the result callback.
+Enable (or disable) duplicate result filter to get unique results from the result callback.
 
 ```js
 enableDuplicateFilter(isEnabled: boolean): Promise<void>;
