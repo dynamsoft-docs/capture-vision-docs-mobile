@@ -41,7 +41,7 @@ breadcrumbText: 1.x
 ### New
 
 - Added a new method [`decodeFile`](../api-reference/barcode-reader.md#decodefile) in Barcode Reader module to decode barcodes from an image file.
-- Added a new property [`barcodeBytes`](../api-reference/class-barcode-result.md) in `BarcodeResult` to output the base64 string of the barcode.
+- Added a new property [`barcodeBytes`](../api-reference/interface-barcode-result.md) in `BarcodeResult` to output the base64 string of the barcode.
 - Added a new property [`cameraPosition`](../api-reference/camera-view.md#cameraposition) in `DCVCameraView` class for users to switch between front-facing camera and back-facing camera.
 - Added an enumeration [`EnumCameraPosition`](../api-reference/enum-camera-position.md).
 
