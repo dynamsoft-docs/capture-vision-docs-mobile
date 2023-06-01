@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Interface Rect - Dynamsoft Capture Vision React Native Edition
-description: The interface of Rect
+description: Documentation page of interface of Rect of Dynamsoft Capture Vision
 keywords: Interface Rect, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Interface Region of Dynamsoft Capture Vision Flutter Edition
-description: The interface of region
+description: Documentation page of interface of region of Dynamsoft Capture Vision.
 keywords: Interface Region, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

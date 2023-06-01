@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DCVCameraView Class of Dynamsoft Capture Vision Flutter Edition
-description: This page is the API reference of Camera View class
+description: Documentation page of the API reference of Camera View class of Dynamsoft Capture Vision
 keywords: Camera view, API reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
