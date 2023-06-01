@@ -38,4 +38,3 @@ namespace DCVXamarin
 - [`DCVBarcodeReader.AddResultListener`](barcode-reader.md#addresultlistener)
 - [`Class BarcodeLocationResult`](class-barcode-location-result.md)
 - [`Class Quadrilateral`](class-quadrilateral.md)
-- [`Class Point`](class-point.md)
