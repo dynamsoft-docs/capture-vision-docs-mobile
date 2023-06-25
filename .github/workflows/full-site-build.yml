@@ -26,15 +26,15 @@ jobs:
           cd /home/ubuntu 
           [ -d DCVDocMobile ] && rm -rf DCVDocMobile 
           [ -d capture-vision-docs-mobile ] && rm -rf capture-vision-docs-mobile
-          [ -d Docs-Template-Repo-Preview-DCV2 ] && rm -rf Docs-Template-Repo-Preview-DCV2
+          [ -d Docs-Template-Repo-DCV2 ] && rm -rf Docs-Template-Repo-DCV2
       - name: Build the full site (not incremental)
         run: |
           cd /home/ubuntu
           mkdir -p DCVDocMobile
           git clone --depth 1 https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile
-          git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-DCV2
           cp -rfp ./capture-vision-docs-mobile/* ./DCVDocMobile/
-          cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DCVDocMobile/
+          cp -rfp ./Docs-Template-Repo-DCV2/* ./DCVDocMobile/
           cd DCVDocMobile && bundle exec jekyll build
           #python3 /home/ubuntu/ftp.py /home/ubuntu/DCVDocMobile/_site/ ./www.dynamsoft.com/capture-vision/docs/mobile/ prod
 
