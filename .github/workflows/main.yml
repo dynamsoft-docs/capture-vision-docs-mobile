@@ -36,7 +36,7 @@ jobs:
           [ ! -d DCVDocMobile ] && mkdir -p DCVDocMobile
 
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile
-          git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-DCV2
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-DCV2
           cp -rfp ./capture-vision-docs-mobile/* ./DCVDocMobile/
           cp -rfp ./Docs-Template-Repo-DCV2/* ./DCVDocMobile/
           cd DCVDocMobile && bundle exec jekyll build --incremental
@@ -72,7 +72,7 @@ jobs:
           cd /home/ubuntu
           [ ! -d DCVDocMobilePreview ] && mkdir -p DCVDocMobilePreview
           git clone --depth 1 --branch preview https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile-preview
-          git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
           cp -rfp ./capture-vision-docs-mobile-preview/* ./DCVDocMobilePreview/
           cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DCVDocMobilePreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
