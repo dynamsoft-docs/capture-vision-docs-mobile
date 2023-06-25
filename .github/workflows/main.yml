@@ -32,13 +32,13 @@ jobs:
           cd /home/ubuntu
           [ -d DCVDocMobile ] && rm -rf DCVDocMobile
           [ -d capture-vision-docs-mobile ] && rm -rf capture-vision-docs-mobile
-          [ -d Docs-Template-Repo ] && rm -rf Docs-Template-Repo
+          [ -d Docs-Template-Repo-Preview-DCV2 ] && rm -rf Docs-Template-Repo-Preview-DCV2
           [ ! -d DCVDocMobile ] && mkdir -p DCVDocMobile
 
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo
+          git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
           cp -rfp ./capture-vision-docs-mobile/* ./DCVDocMobile/
-          cp -rfp ./Docs-Template-Repo/* ./DCVDocMobile/
+          cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DCVDocMobile/
           cd DCVDocMobile && bundle exec jekyll build --incremental
 
       - name: Sync files
