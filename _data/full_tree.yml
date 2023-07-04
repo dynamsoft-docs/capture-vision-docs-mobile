@@ -1,11 +1,5 @@
 tree_file_list:
   - sidelist-full-tree.html
-  - sidelist-introduction.html
-  - sidelist-programming.html
-  - sidelist-useful.html
-  - sidelist-release-notes.html
-  - sidelist-license-activation.html
-  - sidelist-faq.html
   - sidelist-programming/programming-react-native.html
   - sidelist-programming/programming-flutter.html
   - sidelist-programming/programming-xamarin.html
