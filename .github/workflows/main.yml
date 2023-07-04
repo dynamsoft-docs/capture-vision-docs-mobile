@@ -32,13 +32,13 @@ jobs:
           cd /home/ubuntu
           [ -d DCVDocMobile ] && rm -rf DCVDocMobile
           [ -d capture-vision-docs-mobile ] && rm -rf capture-vision-docs-mobile
-          [ -d Docs-Template-Repo-DCV2 ] && rm -rf Docs-Template-Repo-DCV2
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           [ ! -d DCVDocMobile ] && mkdir -p DCVDocMobile
 
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-DCV2
+          git clone --depth 1 https://github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./capture-vision-docs-mobile/* ./DCVDocMobile/
-          cp -rfp ./Docs-Template-Repo-DCV2/* ./DCVDocMobile/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocMobile/
           cd DCVDocMobile && bundle exec jekyll build --incremental
 
       - name: Sync files
@@ -64,17 +64,18 @@ jobs:
           cd /home/ubuntu 
           [ -d DCVDocMobilePreview ] && rm -rf DCVDocMobilePreview
           [ -d capture-vision-docs-mobile-preview ] && rm -rf capture-vision-docs-mobile-preview
-          [ -d Docs-Template-Repo-Preview-DCV2 ] && rm -rf Docs-Template-Repo-Preview-DCV2
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           cd /home/ubuntu
 
       - name: Build the site
         run: |
           cd /home/ubuntu
           [ ! -d DCVDocMobilePreview ] && mkdir -p DCVDocMobilePreview
+
           git clone --depth 1 --branch preview https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/capture-vision-docs-mobile.git capture-vision-docs-mobile-preview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./capture-vision-docs-mobile-preview/* ./DCVDocMobilePreview/
-          cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DCVDocMobilePreview/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocMobilePreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocMobilePreview/_config.yml
           cd DCVDocMobilePreview && bundle exec jekyll build --incremental
