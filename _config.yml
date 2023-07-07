@@ -1,8 +1,8 @@
 repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-mobile/blob/main
 repository: dynamsoft-docs/capture-vision-docs-mobile
 docFullPath: https://www.dynamsoft.com/capture-vision/docs/mobile/
-firstLevelUrl: /capture-vision/docs
-docHomePage: /capture-vision/docs/introduction/
+firstLevelUrl: /capture-vision/docs/mobile
+docHomePage: /capture-vision/docs/core/introduction/
 frontPageFolder: /capture-vision/docs/
 
 productName: Dynamsoft Capture Vision
