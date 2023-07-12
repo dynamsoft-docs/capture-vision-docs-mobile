@@ -261,11 +261,11 @@ npx react-native run-ios
 
 ## Customizing the Barcode Reader
 
-There are several ways in which you can customize the Barcode Reader - but what they all have in common is that each involves the [`updateRuntimeSettings`](../api-reference/barcode-reader.md#updateruntimesettings) method. There are currently three methods in which you can update the runtime settings.
+There are several ways in which you can customize the Barcode Reader - but what they all have in common is that each involves the <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/api-reference/barcode-reader.html#updateruntimesettings" target="_blank">updateRuntimeSettings</a> method. There are currently three methods in which you can update the runtime settings.
 
 ### Using the settings templates
 
-Dynamsoft barcode reader offers several preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example:
+Dynamsoft barcode reader offers several preset templates for different popular scenarios. To prioritize speed over accuracy, then you will want to use one of the speed templates, choosing the corresponding template for images or video, respectively. And vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/api-reference/enum-dbr-preset-template.html" target="_blank">EnumDBRPresetTemplate</a>. Here is a quick example:
 
 ```js
 componentDidMount() {
