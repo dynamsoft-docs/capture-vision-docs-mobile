@@ -279,7 +279,7 @@ componentDidMount() {
 
 ### Using the DBRRuntimeSettings interface
 
-The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to [`DBRRuntimeSettings`](../api-reference/interface-dbr-runtime-settings.md). Here is a quick example:
+The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/api-reference/interface-dbr-runtime-settings.html" target="_blank">DBRRuntimeSettings</a>. Here is a quick example:
 
 ```js
 componentDidMount() {
@@ -299,7 +299,7 @@ componentDidMount() {
 
 ### Customizing the scan region
 
-You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface as well as the [`DCVCameraView`](../api-reference/camera-view.md) component.
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/api-reference/interface-region.html" target="_blank">Region</a> interface as well as the <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/api-reference/camera-view.html" target="_blank">DCVCameraView</a> component.
 
 First, the region must be defined using the `Region` interface. In this example, we demonstrate how the region is first defined in the `render()` function and then assigned to the `scanRegion` parameter of the `DCVCameraView` component:
 
