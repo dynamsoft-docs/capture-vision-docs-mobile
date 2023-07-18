@@ -1,0 +1,181 @@
+---
+layout: default-layout
+Title: DSDirectoryFetcher - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+Description: The class DSDirectoryFetcher of Dynamsoft Capture Vision Router Module is a utility class that retrieves a list of files from a specified directory based on certain criteria.
+Keywords: directory fetcher, objective-c, swift
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
+
+# DSDirectoryFetcher
+
+The `DSDirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `DSImageSourceAdapter` class.
+
+## Definition
+
+*Assembly:* DynamsoftUtility.framework
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NS_SWIFT_NAME(DirectoryFetcher)
+@interface DSDirectoryFetcher : DSImageSourceAdapter
+```
+2. 
+```swift
+class DirectoryFetcher : ImageSourceAdapter
+```
+
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`init`](#init) | Create an instance of DSDirectoryFetcher. |
+| [`setDirectory`](#setdirectory) | Sets the directory path and filter for the file search. |
+| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters for reading PDF files. |
+
+### init
+
+Create an instance of DSDirectoryFetcher.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)init;
+```
+2. 
+```swift
+init()
+```
+
+**Return Value**
+
+An instance of `DSDirectoryFetcher`.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+DSDirectoryFetcher *fetcher = [[DSDirectoryFetcher alloc] init];
+```
+2. 
+```swift
+let fetcher = DirectoryFetcher()
+```
+
+### setDirectory
+
+Sets the directory path and filter for the file search.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (BOOL)setDirectory:(NSString *)directoryPath
+                filter:(nullable NSString *)filter
+                recursive:(BOOL)recursive
+                error:(NSError * _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func setDirectory(_ directoryPath: String, filter: String?, recursive: Bool) throws
+```
+
+**Parameters**
+
+`directoryPath`: The directory path.
+
+`filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g ".BMP;.JPG;.GIF".
+
+`recursive`: Specifies whether to load files recursively.
+
+`[in,out] error`: A `NSError` pointer. An error occurs when:
+- The directory is unavailable.
+- The method is triggered after the capture is started.
+
+**Return Value**
+
+A `BOOL` value that indicates whether the directory is set successfully.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSError *error;
+BOOL success = [fetcher setDirectory:directoryPath filter:nil recursive:YES error:&error];
+```
+2. 
+```swift
+do {
+   try fetcher.setDirectory(directoryPath, filter: nil, recursive: true)
+} catch {
+   // Add your code to deal with exceptions.
+}
+```
+
+### setPDFReadingParameter
+
+Sets the parameters for reading PDF files.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (BOOL)setPDFReadingParameter:(DSPDFReadingParameter*)para
+                    error:(NSError * _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func setPDFReadingParameter(_ para: DSPDFReadingParameter) throws
+```
+
+**Parameters**
+
+`para`: A `DSPDFReadingParameter` object.
+
+`[in,out] error`: A `NSError` pointer. An error occurs when:
+- The directory is unavailable.
+- The method is triggered after the capture is started.
+
+**Return Value**
+
+A `BOOL` value that indicates whether the PDF reading mode is set successfully.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSError *error;
+BOOL success = [fetcher setPDFReadingParameter:pdfParameter error:&error];
+```
+2. 
+```swift
+do {
+   try fetcher.setPDFReadingParameter(pdfParameter)
+} catch {
+   // Add your code to deal with exceptions.
+}
+```

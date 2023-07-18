@@ -1,0 +1,89 @@
+---
+Title: DSSimplifiedCaptureVisionSettings - Dynamsoft Capture Vision Router Module Android Edition API Reference
+Description: The class DSSimplifiedCaptureVisionSettings of Dynamsoft Capture Vision Router Module contains settings for capturing and recognizing images with the CaptureVisionRouter class.
+Keywords: capture vision settings, Java, Kotlin
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
+
+# DSSimplifiedCaptureVisionSettings
+
+The `DSSimplifiedCaptureVisionSettings` class contains settings for capturing and recognizing images with the `CaptureVisionRouter` class.
+
+## Definition
+
+*Namespace*: com.dynamsoft.cvr
+*Assembly:* DynamsoftCaptureVisionRouter.aar
+
+```java
+class SimplifiedCaptureVisionSettings
+```
+
+## Attributes
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`capturedResultItemTypes`](#capturedresultitemtypes) | *NSInteger* | Specifies the type(s) of CapturedItem(s) that will be captured. |
+| [`roi`](#roi) | *DSQuadrilateral \** | Specifies the region of interest (ROI) where the image capture and recognition will take place. |
+| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *BOOL* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
+| [`maxParallelTasks`](#maxparalleltasks) | *NSInteger* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
+| [`timeout`](#timeout) | *NSInteger* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
+| [`barcodeSettings`](#barcodesettings) | *DSSimplifiedBarcodeReaderSettings \** | Specifies the settings for barcode recognition. |
+| [`labelSettings`](#labelsettings) | *DSSimplifiedLabelRecognizerSettings \** | Specifies the settings for label recognition. |
+
+### capturedResultItemTypes
+
+Specifies the type(s) of CapturedItem(s) that will be captured.
+
+```java
+int capturedResultItemTypes;
+```
+
+### roi
+
+Specifies the region of interest (ROI) where the image capture and recognition will take place.
+
+```java
+Quadrilateral roi;
+```
+
+### roiMeasuredInPercentage
+
+Specifies whether the ROI is measured in pixels or as a percentage of the image size.
+
+```java
+boolean roiMeasuredInPercentage;
+```
+
+### maxParallelTasks
+
+Specifies the maximum number of parallel tasks that can be used for image capture and recognition.
+
+```java
+int maxParallelTasks;
+```
+
+### timeout
+
+Specifies the maximum time (in milliseconds) allowed for image capture and recognition.
+
+```java
+int timeout;
+```
+
+### barcodeSettings
+
+Specifies the settings for barcode recognition.
+
+```java
+SimplifiedBarcodeReaderSettings barcodeSettings;
+```
+
+### labelSettings
+
+Specifies the settings for label recognition.
+
+```java
+SimplifiedLabelRecognizerSettings labelSettings;
+```
