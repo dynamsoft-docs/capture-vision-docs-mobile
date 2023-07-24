@@ -14,8 +14,8 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`initSettings`](#initsettings) | Initialize the settings with a JSON String. |
 | [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the settings with a JSON file. |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Get the object of the currently active `DSSimplifiedCaptureVisionSettings`. |
-| [`updateSettings`](#updatesettings) | Update capture vision settings with a object of `DSSimplifiedCaptureVisionSettings`. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Get the object of the currently active `SimplifiedCaptureVisionSettings`. |
+| [`updateSettings`](#updatesettings) | Update capture vision settings with a object of `SimplifiedCaptureVisionSettings`. |
 | [`resetSettings`](#resetsettings) | Reset the capture vision settings. |
 | [`outputSettings`](#outputsettings) | Output the targeting capture vision settings to a JSON string. |
 | [`outputSettingsToFile`](#outputsettingstofile) | Output the targeting capture vision settings to a JSON file. |
@@ -69,7 +69,7 @@ An exception is thrown when:
 
 ## getSimplifiedSettings
 
-Get the object of the currently active `DSSimplifiedCaptureVisionSettings`.
+Get the object of the currently active `SimplifiedCaptureVisionSettings`.
 
 ```java
 SimplifiedCaptureVisionSettings getSimplifiedSettings(String templateName) throws CaptureVisionRouterException;
@@ -77,7 +77,7 @@ SimplifiedCaptureVisionSettings getSimplifiedSettings(String templateName) throw
 
 **Return Value**
 
-An object of `DSSimplifiedCaptureVisionSettings`.
+An object of `SimplifiedCaptureVisionSettings`.
 
 **Exception**
 
@@ -88,7 +88,7 @@ An exception is thrown when:
 
 ## updateSettings
 
-Update capture vision settings with a object of `DSSimplifiedCaptureVisionSettings`.
+Update capture vision settings with a object of `SimplifiedCaptureVisionSettings`.
 
 ```java
 void updateSettings(String templateName, SimplifiedCaptureVisionSettings settings) throws CaptureVisionRouterException;
@@ -97,7 +97,7 @@ void updateSettings(String templateName, SimplifiedCaptureVisionSettings setting
 **Parameters**
 
 `templateName`: Specify the name of the template that you want to update.
-`settings`: An object of DSSimplifiedCaptureVisionSettings.
+`settings`: An object of SimplifiedCaptureVisionSettings.
 
 **Return Value**
 

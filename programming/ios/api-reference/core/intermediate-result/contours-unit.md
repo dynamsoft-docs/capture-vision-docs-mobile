@@ -33,11 +33,11 @@ class ContoursUnit: IntermediateResultUnit
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`contours`](#contours) | *NSArray <DSContour**>* | A array of `DSContour` objects. |
+| [`contours`](#contours) | *NSArray <DSContour**>* | An array of `DSContour` objects. |
 
 ### contours
 
-A array of `DSContour` objects.
+An array of `DSContour` objects.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -29,13 +29,13 @@ The `DSQuadrilateral` class represents a quadrilateral shape in 2D space, which 
 class Quadrilateral : NSObject
 ```
 
-## Attributes
+## Attribute Summaries
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *NSArray* |Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
-## Methods
+## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
@@ -43,6 +43,8 @@ class Quadrilateral : NSObject
 | [`getBoundingRect`](#getboundingrect) | Get the bounding rectangle of the quadrilateral. |
 | [`getCentrePoint`](#getcentrepoint) | Get the centre point of the quadrilateral. |
 | [`getArea`](#getarea) | Get the area of the quadrilateral. |
+
+## Attribute Details
 
 ### points
 
@@ -60,6 +62,8 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 ```swift
 var points: [CGPoint] { get set }
 ```
+
+## Method Details
 
 ## contains
 

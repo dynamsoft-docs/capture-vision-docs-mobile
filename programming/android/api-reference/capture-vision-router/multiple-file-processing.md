@@ -14,8 +14,8 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`setInput`](#setinput) | Sets an image source to provide images for consecutive process. |
 | [`getInput`](#getinput) | Gets the attached image source adapter object of the capture vision router. |
-| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Regisiter a DSImageSourceStateListener to get callback when the status of DSImageSourceAdapter changes. |
-| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Remove a DSImageSourceStateListener. |
+| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Regisiter a ImageSourceStateListener to get callback when the status of ImageSourceAdapter changes. |
+| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Remove a ImageSourceStateListener. |
 | [`addResultReceiver`](#addresultreceiver) | Regisiter a CapturedResultReceiver to get callback when CapturedResult output. |
 | [`removeResultReceiver`](#removeresultreceiver) | Remove a CapturedResultReceiver. |
 | [`startCapturing`](#startcapturing) | Start capturing with the targeting template. |
@@ -35,7 +35,7 @@ void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`adapter`: An object of `DSImageSourceAdapter`. You can use a internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` and `FileFetcher`.
+`adapter`: An object of `ImageSourceAdapter`. You can use a internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` and `FileFetcher`.
 
 **Return Value**
 
@@ -59,7 +59,7 @@ The attached image source adapter object of the capture vision router.
 
 ## addImageSourceStateListener
 
-Regisiter a `DSImageSourceStateListener` to get callback when the status of `DSImageSourceAdapter` changes.
+Regisiter a `ImageSourceStateListener` to get callback when the status of `ImageSourceAdapter` changes.
 
 ```java
 void addImageSourceStateListener(ImageSourceStatestener listener) throws CaptureVisionRouterException;
@@ -67,11 +67,11 @@ void addImageSourceStateListener(ImageSourceStatestener listener) throws Capture
 
 **Parameters**
 
-`listener`: An object of `DSImageSourceStateListener`.
+`listener`: An object of `ImageSourceStateListener`.
 
 **Return Value**
 
-A bool value that indicates whether the `DSImageSourceStateListener` is added successfully.
+A bool value that indicates whether the `ImageSourceStateListener` is added successfully.
 
 **Exception**
 
@@ -79,7 +79,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeImageSourceStateListener
 
-Remove a `DSImageSourceStateListener`.
+Remove a `ImageSourceStateListener`.
 
 ```java
 void removeImageSourceStateListener(ImageSourceStateListener listener) throws CaptureVisionRouterException;
@@ -87,11 +87,11 @@ void removeImageSourceStateListener(ImageSourceStateListener listener) throws Ca
 
 **Parameters**
 
-`listener`: An object of `DSImageSourceStateListener`.
+`listener`: An object of `ImageSourceStateListener`.
 
 **Return Value**
 
-A bool value that indicates whether the `DSImageSourceStateListener` is removed successfully.
+A bool value that indicates whether the `ImageSourceStateListener` is removed successfully.
 
 **Exception**
 
@@ -174,7 +174,7 @@ void stopCapturing();
 Regisiter a `CaptureStateListener` to get callback when capture state changes.
 
 ```java
-func addCaptureStateListener(_ listener:CaptureStateListener) throws -> BOOL
+void addCaptureStateListener(CaptureStateListener listener) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -194,7 +194,7 @@ An exception is thrown if the method is triggered after the capture is started.
 Remove a `CaptureStateListener`.
 
 ```java
-func removeCaptureStateListener(_ listener:CaptureStateListener) throws -> BOOL
+void removeCaptureStateListener(CaptureStateListener listener) throws CaptureVisionRouterException;
 ```
 
 **Parameters**

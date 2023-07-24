@@ -29,7 +29,7 @@ The `DSFileImageTag` class represents an image tag that is associated with a fil
 class FileImageTag : ImageTag
 ```
 
-## Attributes
+## Attribute Summaries
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -37,11 +37,13 @@ class FileImageTag : ImageTag
 | [`pageNumber`](#pagenumber) | *NSInteger* | The page number of the current image in the PDF file. |
 | [`totalPages`](#totalpages) | *NSInteger* | The total page number of the PDF file. |
 
-## Methods
+## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
 | [`initWithImageId`](#initwithimageid) | The constructor of the FileImageTag. |
+
+## Attribute Details
 
 ### filePath
 
@@ -94,6 +96,8 @@ The total page number of the PDF file.
 var totalPages: Int { get }
 ```
 
+## Method Details
+
 ### initWithImageId
 
 The constructor of the FileImageTag.
@@ -116,12 +120,9 @@ init(imageId: Int, filePath: String, pageNumber: Int, totalPages: Int)
 
 **Parameters**
 
-`imageId`: The ID of the image.
-
-`filePath`: The file path of the image.
-
-`pageNumber`: The page number of the current image in the PDF file.
-
+`imageId`: The ID of the image.  
+`filePath`: The file path of the image.  
+`pageNumber`: The page number of the current image in the PDF file.  
 `totalPages`: The total page number of the PDF file.
 
 **Return Value**
@@ -136,7 +137,7 @@ An instance of the `DSFileImageTag`.
 >
 >1. 
 ```objc
-DSFileImageTag *fileImageTag = [[DSFileImageTag alloc] initWithImageId:123 filePath:filePath pageNumber:1 totalPages:10];
+DSFileImageTag *fileImageTag = [[DSFileImageTag alloc] initWithImageId:123 filePath:@"Your file path" pageNumber:1 totalPages:10];
 ```
 2. 
 ```swift

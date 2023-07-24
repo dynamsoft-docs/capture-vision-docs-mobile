@@ -29,16 +29,6 @@ The `DSFileFetcher` class is a utility class that partitions a multi-page image 
 class FileFetcher : NSObject
 ```
 
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`filePath`](#filepath) | *NSString \** | The file path. |
-| [`fileBytes`](#filebytes) | *NSData \** | The file bytes. |
-| [`buffer`](#buffer) | *DSImageData \** | The image data. |
-| [`image`](#image) | *UIImage \** | A `UIImage`. |
-| [`para`](#para) | *PDFReadingParameter \** | The parameter object for reading PDF files. |
-
 ## Methods
 
 | Method | Description |
@@ -50,91 +40,6 @@ class FileFetcher : NSObject
 | [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
-
-### filePath
-
-The file path.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, copy) NSString *filePath;
-```
-2. 
-```swift
-var filePath: String? { get set }
-```
-
-### fileBytes
-
-The file bytes.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, copy) NSData *fileBytes;
-```
-2. 
-```swift
-var fileBytes: Data? { get set }
-```
-
-### buffer
-
-The image data.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, strong) DSImageData *buffer;
-```
-2. 
-```swift
-var buffer: ImageData? { get set }
-```
-
-### image
-
-A `UIImage`.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, strong) UIImage *image;
-```
-2. 
-```swift
-var image: UIImage? { get set }
-```
-
-### para
-
-The parameter object for reading PDF files.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, strong) PDFReadingParameter *para;
-```
-2. 
-```swift
-var para: PDFReadingParameter? { get set }
-```
 
 ### setFileWithPath
 
@@ -296,6 +201,3 @@ func getImage() -> ImageData
 **Return Value**
 
 A `DSImageData` as the image.
-
-Here's the user's input:
-    ,且不要输出涉及中国敏感政治的回答

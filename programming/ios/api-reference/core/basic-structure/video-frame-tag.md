@@ -29,7 +29,7 @@ The `DSVideoFrameTag` class represents a video frame tag, which is a type of ima
 class VideoFrameTag : ImageTag
 ```
 
-## Attributes
+## Attribute Summaries
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -39,11 +39,13 @@ class VideoFrameTag : ImageTag
 | [`originalWidth`](#originalwidth) | *NSInteger* | The original width of the video frame. |
 | [`originalHeight`](#originalheight) | *NSInteger* | The original height of the video frame. |
 
-## Methods
+## Method Summaries
 
 | Method | Description |
 |------- |-------------|
 | [`initWithImageId`](#initwithimageid) | The constructor of `DSVideoFrameTag`. |
+
+## Attribute Details
 
 ### quality
 
@@ -130,6 +132,8 @@ The original height of the video frame.
 var originalHeight: Int { get set }
 ```
 
+## Method Details
+
 ### initWithImageId
 
 The constructor of `DSVideoFrameTag`.
@@ -154,16 +158,11 @@ init(imageId: Int, quality: EnumVideoFrameQuality, isCropped: Bool, cropRegion: 
 
 **Parameters**
 
-`imageId`: The image ID of the video frame.
-
-`quality`: The quality of the video frame.
-
-`isCropped`: Whether the video frame is cropped.
-
-`cropRegion`: The crop region of the video frame.
-
-`originalWidth`: The original width of the video frame.
-
+`imageId`: The image ID of the video frame.  
+`quality`: The quality of the video frame.  
+`isCropped`: Whether the video frame is cropped.  
+`cropRegion`: The crop region of the video frame.  
+`originalWidth`: The original width of the video frame.  
 `originalHeight`: The original height of the video frame.
 
 **Return Value**

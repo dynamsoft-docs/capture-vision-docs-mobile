@@ -36,7 +36,7 @@ class IntermediateResultExtraInfo : NSObject
 | [`targetROIDefName`](#targetroidefname) | *NSString \** | The name of the TargetROIDef object that generates the intermediate result. |
 | [`taskName`](#taskname) | *NSString \** | The name of the task object that generates the intermediate result. |
 | [`isSectionLevelResult`](#issectionlevelresult) | *bool \** | Whether the intermediate result is section-level result. |
-| [`sectionType`](#sectiontype) | *EnumSectionType* | The type of the section that generates the intermediate result. |
+| [`sectionType`](#sectiontype) | *DSSectionType* | The type of the section that generates the intermediate result. |
 
 ### targetROIDefName
 
@@ -99,7 +99,7 @@ The type of the section that generates the intermediate result.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) EnumSectionType sectionType;
+@property(nonatomic, assign, readonly) DSSectionType sectionType;
 ```
 2. 
 ```swift

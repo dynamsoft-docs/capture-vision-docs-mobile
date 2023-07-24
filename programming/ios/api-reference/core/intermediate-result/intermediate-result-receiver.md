@@ -31,6 +31,10 @@ protocol IntermediateResultReceiver: NSObjectProtocol
 
 ## Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`getObservationParameters`](#getobservationparameters) | Get a `DSObservationParameters` object to configure the observation settings. |
+
 ### getObservationParameters
 
 Get a `DSObservationParameters` object to configure the observation settings.
@@ -45,3 +49,4 @@ Get a `DSObservationParameters` object to configure the observation settings.
 ```
 2. 
 ```swift
+```

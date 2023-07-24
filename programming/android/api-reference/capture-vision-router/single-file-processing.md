@@ -12,24 +12,27 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`captureFromFile`](#capturefromfile) | Implement data capture on the given file. |
-| [`captureFromFileBytes`](#capturefromfilebytes) | Implement data capture on the given file in memory. |
-| [`captureFromBuffer`](#capturefrombuffer) | Implement data capture on the given image data. |
-| [`captureFromImage`](#capturefromimage) | Implement data capture on the given UIImage. |
+| [`capture(filePath,templateName)`](#capturefilepathtemplatename) | Implement data capture on the given file. |
+| [`capture(fileBytes,templateName)`](#capturefilebytestemplatename) | Implement data capture on the given file in memory. |
+| [`capture(imageData,templateName)`](#captureimagedatatemplatename) | Implement data capture on the given image data. |
+| [`capture(bitmap,templateName)`](#capturebitmaptemplatename) | Implement data capture on the given Bitmap. |
 
-## captureFromFile
+## capture(filePath,templateName)
 
 Implement data capture on the given file.
 
 ```java
-func captureFromFile(_ file:String, templateName:String) throws -> CaptureResult
+CapturedResult capture(String filePath, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
 
 `file`: The file path and name that you want to implement the data capturing.
-`templateName`: Specify a template with a templateName for the data capturing.
-`error`: An NSError pointer. An error occurs when:
+`templateName`: Specify a template with a template name for the data capturing.
+
+**Exception**
+
+An exception is thrown if:
 
 * The method is triggered after the capture is started.
 * The template name you input is invalid.
@@ -39,19 +42,22 @@ func captureFromFile(_ file:String, templateName:String) throws -> CaptureResult
 
 A CapturedResult object output by the library.
 
-## captureFromFileBytes
+## capture(fileBytes,templateName)
 
 Implement data capture on the given file in memory.
 
 ```java
-func captureFromFileBytes(_ fileBytes:Data, templateName:String) throws -> CaptureResult
+CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
 
 `fileBytes`: A NSData that points to a file in memory.
-`templateName`: Specify a template with a templateName for the data capturing.
-`error`: An NSError pointer. An error occurs when:
+`templateName`: Specify a template with a template name for the data capturing.
+
+**Exception**
+
+An exception is thrown if:
 
 * The method is triggered after the capture is started.
 * The template name you input is invalid.
@@ -61,19 +67,22 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) throws -> Captu
 
 A `CapturedResult` object output by the library.
 
-## captureFromBuffer
+## capture(imageData,templateName)
 
 Implement data capture on the given file.
 
 ```java
-func captureFromBuffer(_ buffer:DSImageData, templateName:String) throws -> CaptureResult
+CapturedResult capture(ImageData imageData, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
 
-`buffer`: A DSImageData object that contains image info.
-`templateName`: Specify a template with a templateName for the data capturing.
-`error`: An NSError pointer. An error occurs when:
+`buffer`: A `ImageData` object that contains image info.
+`templateName`: Specify a template with a template name for the data capturing.
+
+**Exception**
+
+An exception is thrown if:
 
 * The method is triggered after the capture is started.
 * The template name you input is invalid.
@@ -83,19 +92,22 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) throws -> Capt
 
 A CapturedResult object output by the library.
 
-## captureFromImage
+## capture(bitmap,templateName)
 
 Implement data capture on the given file.
 
 ```java
-func captureFromBuffer(_ image:UIImage, templateName:String) throws -> CaptureResult
+CapturedResult capture(Bitmap bitmap, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
 
-`image`: A UIImage.
-`templateName`: Specify a template with a templateName for the data capturing.
-`error`: An NSError pointer. An error occurs when:
+`bitmap`: A `android.graphics.Bitmap` object.
+`templateName`: Specify a template with a template name for the data capturing.
+
+**Exception**
+
+An exception is thrown if:
 
 * The method is triggered after the capture is started.
 * The template name you input is invalid.

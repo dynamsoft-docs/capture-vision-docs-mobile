@@ -1,142 +1,100 @@
 ---
 layout: default-layout
-Title: DSFileFetcher * Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The class DSFileFetcher of Dynamsoft Capture Vision Router Module is a utility class that partitions a multi-page image file into multiple independent ImageData objects.
+Title: FileFetcher * Dynamsoft Capture Vision Router Module Android Edition API Reference
+Description: The class FileFetcher of Dynamsoft Capture Vision Router Module is a utility class that partitions a multi-page image file into multiple independent ImageData objects.
 Keywords: file fetcher, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSFileFetcher
+# FileFetcher
 
-The `DSFileFetcher` class is a utility class that partitions a multi-page image file into multiple independent `ImageData` objects. It inherits from the `DSImageSourceAdapter` class.
+The `FileFetcher` class is a utility class that partitions a multi-page image file into multiple independent `ImageData` objects. It inherits from the `ImageSourceAdapter` class.
 
 ## Definition
 
-*Namespace*: com.dynamsoft.utility  
+*Namespace:* com.dynamsoft.utility  
 *Assembly:* DynamsoftUtility.aar
 
 ```java
 class FileFetcher
 ```
 
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`filePath`](#filepath) | *NSString \** | The file path. |
-| [`fileBytes`](#filebytes) | *NSData \** | The file bytes. |
-| [`buffer`](#buffer) | *DSImageData \** | The image data. |
-| [`image`](#image) | *UIImage \** | A `UIImage`. |
-| [`para`](#para) | *PDFReadingParameter \** | The parameter object for reading PDF files. |
-
 ## Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`setFileWithPath`](#setfilewithpath) | Sets the file with a file path. |
-| [`setFileWithBytes`](#setfilewithbytes) | Sets the file with file bytes. |
-| [`setFileWithBuffer`](#setfilewithbuffer) | Sets the file with a `DSImageData` object. |
-| [`setFileWithImage`](#setfilewithimage) | Sets the file with a `UIImage`. |
+| [`setFile(filePath)`](#setfilefilepath) | Sets the file with a file path. |
+| [`setFile(fileBytes)`](#setfilefilebytes) | Sets the file with file bytes. |
+| [`setFile(imageData)`](#setfileimagedata) | Sets the file with a `ImageData` object. |
+| [`setFile(bitmap)`](#setfilebitmap) | Sets the file with a `Bitmap`. |
 | [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
 
-### filePath
-
-The file path.
-
-```java
-var filePath: String? { get set }
-```
-
-### fileBytes
-
-The file bytes.
-
-```java
-var fileBytes: Data? { get set }
-```
-
-### buffer
-
-The image data.
-
-```java
-var buffer: ImageData? { get set }
-```
-
-### image
-
-A `UIImage`.
-
-```java
-var image: UIImage? { get set }
-```
-
-### para
-
-The parameter object for reading PDF files.
-
-```java
-var para: PDFReadingParameter? { get set }
-```
-
-### setFileWithPath
+### setFile(filePath)
 
 Sets the file with a file path.
 
 ```java
-func setFile(withPath filePath: String) throws
+void setFile(String filePath) throws UtilityException{}
 ```
 
 **Parameters**
 
 `filePath`: The file path.
 
-`error`: An `NSError` pointer. An error occurs when fail to load the image.
+**Exception**
 
-### setFileWithBytes
+An exception is thrown when fail to load the image.
+
+### setFile(fileBytes)
 
 Sets the file with file bytes.
 
 ```java
-func setFile(withBytes fileBytes: Data) throws
+void setFile(byte[] fileBytes) throws UtilityException{}
 ```
 
 **Parameters**
 
 `fileBytes`: The file bytes.  
-`error`: An `NSError` pointer. An error occurs when fail to load the image.
+**Exception**
 
-### setFileWithBuffer
+An exception is thrown when fail to load the image.
 
-Sets the file with a `DSImageData` object.
+### setFile(imageData)
+
+Sets the file with a `ImageData` object.
 
 ```java
-func setFile(withBuffer buffer: ImageData) throws
+void setFile(ImageData imageData) throws UtilityException{}
 ```
 
 **Parameters**
 
 `buffer`: The image data.
 
-`error`: An `NSError` pointer. An error occurs when fail to load the image.
+**Exception**
 
-### setFileWithImage
+An exception is thrown when fail to load the image.
 
-Sets the file with a `UIImage`.
+### setFile(bitmap)
+
+Sets the file with an `android.graphics.Bitmap`.
 
 ```java
-func setFile(withImage image: UIImage) throws
+void setFile(Bitmap bitmap) throws UtilityException{}
 ```
 
 **Parameters**
 
-`image`: A `UIImage`.
+`image`: An `android.graphics.Bitmap`.
 
-`error`: An `NSError` pointer. An error occurs when fail to load the image.
+**Exception**
+
+An exception is thrown when fail to load the image.
 
 ### setPDFReadingParameter
 
@@ -150,7 +108,9 @@ func setPDFReadingParameter(_ para: PDFReadingParameter) throws
 
 `para`: The parameter object for reading PDF files.
 
-`error`: An `NSError` pointer. An error occurs when:
+**Exception**
+
+An exception is thrown when:
 
 * The directory is unavailable.
 * The method is triggered after the capture is started.
@@ -181,4 +141,4 @@ func getImage() -> ImageData
 
 **Return Value**
 
-A `DSImageData` as the image.
+A `ImageData` as the image.

@@ -36,7 +36,6 @@ class RegionObjectElement : NSObject
 | [`location`](#location) | *DSQuadrilateral \** | The location info of the element that defined in DSQuadrilateral. |
 | [`referencedElement`](#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
 | [`regionObjectElementType`](#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
-| [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The transformation matrix that can transfer the points cooridinates from. |
 
 ### location
 
@@ -87,21 +86,4 @@ The type of the element.
 2. 
 ```swift
 var regionObjectElementType: EnumRegionObjectElementType { get }
-```
-
-### rotationTransformMatrix
-
-The transformation matrix that can transfer the points cooridinates from.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly) CGAffineTransform rotationTransformMatrix;
-```
-2. 
-```swift
-var rotationTransformMatrix: CGAffineTransform { get }
 ```

@@ -14,7 +14,7 @@ The `CaptureStateListener` protocol defines the methods for monitoring the captu
 
 ## Definition
 
-*Namespace*: com.dynamsoft.cvr
+*Namespace:* com.dynamsoft.cvr
 *Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java

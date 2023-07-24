@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-Title: DSDirectoryFetcher * Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The class DSDirectoryFetcher of Dynamsoft Capture Vision Router Module is a utility class that retrieves a list of files from a specified directory based on certain criteria.
+Title: DirectoryFetcher * Dynamsoft Capture Vision Router Module Android Edition API Reference
+Description: The class DirectoryFetcher of Dynamsoft Capture Vision Router Module is a utility class that retrieves a list of files from a specified directory based on certain criteria.
 Keywords: directory fetcher, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSDirectoryFetcher
+# DirectoryFetcher
 
-The `DSDirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `DSImageSourceAdapter` class.
+The `DirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `ImageSourceAdapter` class.
 
 ## Definition
 
-*Namespace*: com.dynamsoft.utility  
+*Namespace:* com.dynamsoft.utility  
 *Assembly:* DynamsoftUtility.aar
 
 ```java
@@ -25,28 +25,16 @@ class DirectoryFetcher extends ImageSourceAdapter
 
 | Method | Description |
 | ------ | ----------- |
-| [`init`](#init) | Create an instance of DSDirectoryFetcher. |
 | [`setDirectory`](#setdirectory) | Sets the directory path and filter for the file search. |
 | [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters for reading PDF files. |
-
-### init
-
-Create an instance of DSDirectoryFetcher.
-
-```java
-init()
-```
-
-**Return Value**
-
-An instance of `DSDirectoryFetcher`.
+| [`DirectoryFetcher`](#directoryfetcher) | The constructor. |
 
 ### setDirectory
 
 Sets the directory path and filter for the file search.
 
 ```java
-func setDirectory(_ directoryPath: String, filter: String?, recursive: Bool) throws
+int setDirectory(String directoryPath, String filter, boolean recursive);
 ```
 
 **Parameters**
@@ -54,31 +42,31 @@ func setDirectory(_ directoryPath: String, filter: String?, recursive: Bool) thr
 `directoryPath`: The directory path.  
 `filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g ".BMP;.JPG;.GIF".  
 `recursive`: Specifies whether to load files recursively.  
-`error`: A `NSError` pointer. An error occurs when:
-
-* The directory is unavailable.
-* The method is triggered after the capture is started.
 
 **Return Value**
 
-A `BOOL` value that indicates whether the directory is set successfully.
+An int value that indicates whether the directory is set successfully.
 
 ### setPDFReadingParameter
 
 Sets the parameters for reading PDF files.
 
 ```java
-func setPDFReadingParameter(_ para: DSPDFReadingParameter) throws
+int setPDFReadingParameter(PDFReadingParameter para);
 ```
 
 **Parameters**
 
-`para`: A `DSPDFReadingParameter` object.
-`error`: A `NSError` pointer. An error occurs when:
-
-* The directory is unavailable.
-* The method is triggered after the capture is started.
+`para`: A `PDFReadingParameter` object.
 
 **Return Value**
 
-A `BOOL` value that indicates whether the PDF reading mode is set successfully.
+An int value that indicates whether the PDF reading mode is set successfully.
+
+### DirectoryFetcher
+
+The constructor.
+
+```java
+DirectoryFetcher()
+```

@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-Title: DSImageProcessingModule - Dynamsoft Image Processing Module Android Edition API Reference
-Description: The class DSImageProcessingModule of Dynamsoft Image Processing Module represents general functions of the image processing module.
+Title: ImageProcessingModule - Dynamsoft Image Processing Module Android Edition API Reference
+Description: The class ImageProcessingModule of Dynamsoft Image Processing Module represents general functions of the image processing module.
 Keywords: image processing module, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSImageProcessingModule
+# ImageProcessingModule
 
-The `DSImageProcessingModule` class defines general functions of the image processing module.
+The `ImageProcessingModule` class defines general functions of the image processing module.
 
 ## Definition
 
-*Namespace*: com.dynamsoft.dip
+*Namespace:* com.dynamsoft.dip
 *Assembly:* DynamsoftImageProcessing.aar
 
 ```java
@@ -32,7 +32,7 @@ class ImageProcessingModule
 Get the version of Dynamsoft Image Processing module.
 
 ```java
-class func getVersion() -> String
+static String getVersion();
 ```
 
 **Return Value**

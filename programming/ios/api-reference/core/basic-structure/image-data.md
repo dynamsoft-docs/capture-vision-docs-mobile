@@ -29,7 +29,7 @@ The `DSImageData` class represents image data, which contains the image bytes, w
 class ImageData : NSObject
 ```
 
-## Attributes
+## Attribute Summaries
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -41,11 +41,13 @@ class ImageData : NSObject
 | [`orientation`](#orientation) | *NSInteger* | The orientation information of the image. The library is able to read the orientation information from the EXIF data of the image file. |
 | [`tag`](#tag) | *DSImageTag \** | The tag of the image. |
 
-## Methods
+## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
 | [`toUIImage`](#touiimage) | Transform the DSImageData to a UIImage. |
+
+## Attribute Details
 
 ### bytes
 
@@ -64,7 +66,7 @@ The image data content in a byte array.
 var bytes: Data? { get set }
 ```
 
-## width
+### width
 
 The width of the image in pixels.  
 
@@ -81,7 +83,7 @@ The width of the image in pixels.
 var width: Int { get set }
 ```
 
-## height
+### height
 
 The height of the image in pixels.  
 
@@ -98,7 +100,7 @@ The height of the image in pixels.
 var height: Int { get set }
 ```
 
-## stride
+### stride
 
 The stride (or scan width) of the image.
 
@@ -115,7 +117,7 @@ The stride (or scan width) of the image.
 var stride: Int { get set }
 ```
 
-## format
+### format
 
 The image pixel format used in the image byte array.
 
@@ -132,7 +134,7 @@ The image pixel format used in the image byte array.
 var format: DSImagePixelFormat { get set }
 ```
 
-## orientation
+### orientation
 
 The orientation information of the image. The library is able to read the orientation information from the EXIF data of the image file.
 
@@ -149,7 +151,7 @@ The orientation information of the image. The library is able to read the orient
 var orientation: Int { get set }
 ```
 
-## tag
+### tag
 
 The tag of the image.
 
@@ -166,7 +168,9 @@ The tag of the image.
 var tag?: DSImageTag { get set }
 ```
 
-## toUIImage
+## Method Details
+
+### toUIImage
 
 Transform the DSImageData to a UIImage.
 
@@ -188,7 +192,7 @@ func toUIImage() throws -> UIImage
 
 **Return Value**
 
-An `UIImage` that converted from the `DSImageData`.
+A `UIImage` that converted from the `DSImageData`.
 
 **Code Snippet**
 

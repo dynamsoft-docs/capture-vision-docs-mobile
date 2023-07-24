@@ -31,10 +31,11 @@ Initialize the settings with a JSON String.
 >1. 
 ```objc
 - (BOOL)initSettings:(NSString *)content
-                error:(NSError * _Nullable * _Nullable)error
+               error:(NSError * _Nullable * _Nullable)error
 ```
 2. 
 ```swift
+func initSettings(_ content:String) throws -> BOOL
 ```
 
 **Parameters**
@@ -64,6 +65,7 @@ Initialize the settings with a JSON file.
 ```
 2. 
 ```swift
+func initSettingsFromFile(_ file:String) throws -> BOOL
 ```
 
 **Parameters**
@@ -94,6 +96,7 @@ Get the object of the currently active `DSSimplifiedCaptureVisionSettings`.
 ```
 2. 
 ```swift
+func getSimplifiedSettings(_ templateName:String) throws -> SimplifiedCaptureVisionSettings
 ```
 
 **Parameters**
@@ -123,6 +126,7 @@ Update capture vision settings with a object of `DSSimplifiedCaptureVisionSettin
 ```
 2. 
 ```swift
+func updateSettings(_ templateName:String, settings:SimplifiedCaptureVisionSettings) throws -> BOOL
 ```
 
 **Parameters**
@@ -152,6 +156,7 @@ Reset the capture vision settings.
 ```
 2. 
 ```swift
+func resetSettings() throws -> BOOL
 ```
 
 **Parameters**
@@ -180,6 +185,7 @@ Output the targeting capture vision settings to a JSON string.
 ```
 2. 
 ```swift
+func outputSettings(_ templateName:String) throws -> String
 ```
 
 **Parameters**
@@ -209,6 +215,7 @@ Output the targeting capture vision settings to a JSON file.
 ```
 2. 
 ```swift
+func outputSettingsToFile(_ templateName:String, file:String) throws -> BOOL
 ```
 
 **Parameters**

@@ -14,7 +14,7 @@ The CaptureVisionRouterException class defines the exceptions of Dynamsoft Captu
 
 ## Definition
 
-*Namespace*: com.dynamsoft.cvr
+*Namespace:* com.dynamsoft.cvr
 *Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java

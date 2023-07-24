@@ -28,7 +28,3 @@ The `DSCaptureVisionRouter` class is what a user uses to interact with image-pro
 ```swift
 class CaptureVisionRouter : NSObject
 ```
-
-@end
-
-NS_ASSUME_NUNNULL_END

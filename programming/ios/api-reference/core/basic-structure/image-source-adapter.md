@@ -29,7 +29,7 @@ The `DSImageSourceAdapter` class provides an interface for fetching and bufferin
 class ImageSourceAdapter : NSObject
 ```
 
-## Attributes
+## Attribute Summaries
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -40,7 +40,7 @@ class ImageSourceAdapter : NSObject
 | [`bufferEmpty`](#bufferempty) | *BOOL* | The read only property indicates whether the Video Buffer is empty. |
 | [`colourChannelUsageType`](#colourchannelusagetype) | *colourChannelUsageType* | The usage type of a color channel in an image. |
 
-## Methods
+## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
@@ -51,6 +51,8 @@ class ImageSourceAdapter : NSObject
 | [`hasImage`](#hasimage) | Check the availability of the specified image. |
 | [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
 | [`clearBuffer`](#clearbuffer) | Clears the image buffer. |
+
+## Attribute Details
 
 ### hasNextImageToFetch
 
@@ -153,6 +155,8 @@ The usage type of a color channel in an image.
 ```swift
 var colourChannelUsageType: colourChannelUsageType { get set }
 ```
+
+## Method Details
 
 ### startFetching
 

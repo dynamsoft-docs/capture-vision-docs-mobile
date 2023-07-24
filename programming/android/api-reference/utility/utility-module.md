@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-Title: DSUtilityModule - Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The class DSUtilityModule of Dynamsoft Capture Vision Router Module represents general functions of the utility module.
+Title: UtilityModule - Dynamsoft Capture Vision Router Module Android Edition API Reference
+Description: The class UtilityModule of Dynamsoft Capture Vision Router Module represents general functions of the utility module.
 Keywords: utility module, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSUtilityModule
+# UtilityModule
 
-The `DSUtilityModule` class defines general functions of the utility module.
+The `UtilityModule` class defines general functions of the utility module.
 
 ## Definition
 
-*Namespace*: com.dynamsoft.utility  
+*Namespace:* com.dynamsoft.utility  
 *Assembly:* DynamsoftUtility.aar
 
 ```java
@@ -32,15 +32,9 @@ class UtilityModule
 Get the version of Dynamsoft Utility.
 
 ```java
-class func getVersion() -> String
+static String getVersion();
 ```
 
 **Return Value**
 
 The version of Dynamsoft Utility.
-
-**Code Snippet**
-
-```java
-let version = UtilityModule.getVersion()
-```
