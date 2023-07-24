@@ -21,7 +21,7 @@ The `RegionObjectElement` class represents an element of a region object in 2D s
 class RegionObjectElement
 ```
 
-## Attributes
+## Method
 
 | Method | Description |
 | ------ | ----------- |
