@@ -36,9 +36,13 @@ xamarin-release-notes: /capture-vision/docs/mobile/programming/xamarin/release-n
 xamarin-guide: /capture-vision/docs/mobile/programming/xamarin/user-guide/
 
 android: /capture-vision/docs/mobile/programming/android/
-android-api: /capture-vision/docs/mobile/programming/android/api-reference/
+android_api: /capture-vision/docs/mobile/programming/android/api-reference/
 
-ddn-android-api: /document-normalizer/docs/mobile/programming/android/api-reference/
+ios: /capture-vision/docs/mobile/programming/ios/
+ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+
+ddn_android_api: /document-normalizer/docs/mobile/programming/android/api-reference/
+ddn_ios_api: /document-normalizer/docs/mobile/programming/ios/api-reference/
 
 enums: /capture-vision/docs/core/enums/
 
