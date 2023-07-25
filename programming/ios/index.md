@@ -4,6 +4,7 @@ title: Index - Dynamsoft Capture Vision iOS Edition
 description: The introduction of Dynamsoft Capture Vision iOS edition.
 keywords: API reference, index, iOS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Dynamsoft Capture Vision Documentation for iOS Edition

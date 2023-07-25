@@ -43,6 +43,7 @@ ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 ddn_android_api: /document-normalizer/docs/mobile/programming/android/api-reference/
 ddn_ios_api: /document-normalizer/docs/mobile/programming/ios/api-reference/
+dce_android_api: /camera-enhancer/docs/mobile/programming/android/
 
 enums: /capture-vision/docs/core/enums/
 

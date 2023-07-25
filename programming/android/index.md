@@ -4,6 +4,7 @@ title: Index - Dynamsoft Capture Vision Android Edition
 description: The introduction of Dynamsoft Capture Vision Android edition.
 keywords: API reference, index, Android
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Dynamsoft Capture Vision Documentation for Android Edition
