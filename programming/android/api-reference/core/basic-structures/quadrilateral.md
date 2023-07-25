@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: Quadrilateral - Dynamsoft Core Module Android Edition API Reference
-Description: The class Quadrilateral of Dynamsoft Core Module represents a quadrilateral shape in 2D space, which contains an array of four CGPoint, representing the vertices of the quadrilateral.
+Description: The class Quadrilateral of Dynamsoft Core Module represents a quadrilateral shape in 2D space, which contains an array of four points, representing the vertices of the quadrilateral.
 Keywords: quadrilateral, shape, 2D space, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Quadrilateral
 
-The `Quadrilateral` class represents a quadrilateral shape in 2D space, which contains an array of four CGPoint, representing the vertices of the quadrilateral.
+The `Quadrilateral` class represents a quadrilateral shape in 2D space, which contains an array of four points, representing the vertices of the quadrilateral.
 
 ## Definition
 
@@ -25,7 +25,7 @@ class Quadrilateral
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`points`](#points) | *NSArray* |Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`points`](#points) | *android.graphics.Point[]* |Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## Method Summaries
 
@@ -61,7 +61,7 @@ boolean contains(Point point);
 
 **Return Value**
 
-A `BOOL` value that indicates whether the point is contained by the quadrilateral.
+A boolean value that indicates whether the point is contained by the quadrilateral.
 
 ## getBoundingRect
 

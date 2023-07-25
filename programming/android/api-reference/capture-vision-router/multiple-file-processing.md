@@ -39,7 +39,7 @@ void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
 
 **Return Value**
 
-A bool value that indicates whether the input is set successfully.
+A boolean value that indicates whether the input is set successfully.
 
 **Exception**
 
@@ -71,7 +71,7 @@ void addImageSourceStateListener(ImageSourceStatestener listener) throws Capture
 
 **Return Value**
 
-A bool value that indicates whether the `ImageSourceStateListener` is added successfully.
+A boolean value that indicates whether the `ImageSourceStateListener` is added successfully.
 
 **Exception**
 
@@ -91,7 +91,7 @@ void removeImageSourceStateListener(ImageSourceStateListener listener) throws Ca
 
 **Return Value**
 
-A bool value that indicates whether the `ImageSourceStateListener` is removed successfully.
+A boolean value that indicates whether the `ImageSourceStateListener` is removed successfully.
 
 **Exception**
 
@@ -111,7 +111,7 @@ void addResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionRout
 
 **Return Value**
 
-A bool value that indicates whether the result receiver is added successfully.
+A boolean value that indicates whether the result receiver is added successfully.
 
 **Exception**
 
@@ -131,7 +131,7 @@ void removeResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionR
 
 **Return Value**
 
-A bool value that indicates whether the result receiver is removed successfully.
+A boolean value that indicates whether the result receiver is removed successfully.
 
 **Exception**
 
@@ -151,7 +151,7 @@ void startCapturing(String templateName) throws CaptureVisionRouterException;
 
 **Return Value**
 
-A bool value that indicates whether the capture starts successfully.
+A boolean value that indicates whether the capture starts successfully.
 
 **Exception**
 
@@ -183,7 +183,7 @@ void addCaptureStateListener(CaptureStateListener listener) throws CaptureVision
 
 **Return Value**
 
-A BOOL value that indicates whether the capture state listener is added successfully.
+A boolean value that indicates whether the capture state listener is added successfully.
 
 **Exception**
 
@@ -203,7 +203,7 @@ void removeCaptureStateListener(CaptureStateListener listener) throws CaptureVis
 
 **Return Value**
 
-A BOOL value that indicates whether the capture state listener is removed successfully.
+A boolean value that indicates whether the capture state listener is removed successfully.
 
 **Exception**
 
@@ -223,7 +223,7 @@ void addResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterExce
 
 **Return Value**
 
-A BOOL value that indicates whether the result filter is added successfully.
+A boolean value that indicates whether the result filter is added successfully.
 
 **Exception**
 
@@ -243,7 +243,7 @@ void removeResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterE
 
 **Return Value**
 
-A BOOL value that indicates whether the result filter is removed successfully.
+A boolean value that indicates whether the result filter is removed successfully.
 
 **Exception**
 

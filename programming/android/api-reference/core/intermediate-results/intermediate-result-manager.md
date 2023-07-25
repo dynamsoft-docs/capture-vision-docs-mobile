@@ -47,7 +47,7 @@ An exception is thrown when the result receiver is not added successfully.
 
 **Return Value**
 
-A `BOOL` value that indicates whether the result receiver is added successfully.
+A boolean value that indicates whether the result receiver is added successfully.
 
 ### removeResultReceiver
 
@@ -67,7 +67,7 @@ An exception is thrown when the result receiver is not removed successfully.
 
 **Return Value**
 
-A `BOOL` value that indicates whether the result receiver is removed successfully.
+A boolean value that indicates whether the result receiver is removed successfully.
 
 ### getRawImage
 

@@ -25,7 +25,7 @@ class Contour
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`points`](#points) | *NSArray \** | An array of `android.graphics.Point` that includes all vertices of the contour. |
+| [`points`](#points) | *android.graphics.Point[]* | An array of `android.graphics.Point` that includes all vertices of the contour. |
 
 ### points
 

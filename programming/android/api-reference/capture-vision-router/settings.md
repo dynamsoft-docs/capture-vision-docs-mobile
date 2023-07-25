@@ -34,7 +34,7 @@ void initSettings(String content) throws CaptureVisionRouterException;
 
 **Return Value**
 
-A bool value that indicates whether the settings are initialized successfully.
+A boolean value that indicates whether the settings are initialized successfully.
 
 **Exception**
 
@@ -57,7 +57,7 @@ void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
 
 **Return Value**
 
-A bool value that indicates whether the settings are initialized successfully.
+A boolean value that indicates whether the settings are initialized successfully.
 
 **Exception**
 
@@ -101,7 +101,7 @@ void updateSettings(String templateName, SimplifiedCaptureVisionSettings setting
 
 **Return Value**
 
-A bool value that indicates whether the settings are uploaded successfully.
+A boolean value that indicates whether the settings are uploaded successfully.
 
 **Exception**
 
@@ -120,7 +120,7 @@ void resetSettings() throws CaptureVisionRouterException;
 
 **Return Value**
 
-A bool value that indicates whether the settings are reset successfully.
+A boolean value that indicates whether the settings are reset successfully.
 
 **Exception**
 
@@ -163,7 +163,7 @@ void outputSettingsToFile(String templateName, String filePath) throws CaptureVi
 
 **Return Value**
 
-A BOOL value that indicates whether the template is output successfully.
+A boolean value that indicates whether the template is output successfully.
 
 **Exception**
 

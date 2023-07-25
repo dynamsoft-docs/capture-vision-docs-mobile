@@ -25,12 +25,10 @@ class SimplifiedCaptureVisionSettings
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`capturedResultItemTypes`](#capturedresultitemtypes) | *int* | Specifies the type(s) of CapturedItem(s) that will be captured. |
-| [`roi`](#roi) | *Quadrilateral \** | Specifies the region of interest (ROI) where the image capture and recognition will take place. |
-| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *BOOL* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
+| [`roi`](#roi) | *[Quadrilateral](../../core/basic-structures/quadrilateral.md)* | Specifies the region of interest (ROI) where the image capture and recognition will take place. |
+| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *boolean* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
-| [`barcodeSettings`](#barcodesettings) | *SimplifiedBarcodeReaderSettings \** | Specifies the settings for barcode recognition. |
-| [`labelSettings`](#labelsettings) | *SimplifiedLabelRecognizerSettings \** | Specifies the settings for label recognition. |
 
 ### capturedResultItemTypes
 
@@ -70,20 +68,4 @@ Specifies the maximum time (in milliseconds) allowed for image capture and recog
 
 ```java
 int timeout;
-```
-
-### barcodeSettings
-
-Specifies the settings for barcode recognition.
-
-```java
-SimplifiedBarcodeReaderSettings barcodeSettings;
-```
-
-### labelSettings
-
-Specifies the settings for label recognition.
-
-```java
-SimplifiedLabelRecognizerSettings labelSettings;
 ```

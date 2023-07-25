@@ -21,20 +21,15 @@ The `VideoFrameTag` class represents a video frame tag, which is a type of image
 class VideoFrameTag extends ImageTag
 ```
 
-## Attributes
+## Methods
 
-| Attributes | Description |
+| Methods | Description |
 | ---------- | ----------- |
 | [`getQuality`](#getquality) | Get the quality of the video frame. |
 | [`isCropped`](#iscropped) | Check whether the video frame is cropped. |
 | [`getCropRegion`](#getcropregion) | Get the crop region of the video frame. |
 | [`getOriginalWidth`](#getoriginalwidth) | Get the original width of the video frame. |
 | [`getOriginalHeight`](#getoriginalheight) | Get the original height of the video frame. |
-
-## Methods
-
-| Method | Description |
-|------- |-------------|
 | [`VideoFrameTag(frameID,quality,isCropped,cropRegion,originalWidth,originalHeight)`](#videoframetagframeidqualityiscroppedcropregionoriginalwidthoriginalheight) | The constructor. |
 
 ### getQuality

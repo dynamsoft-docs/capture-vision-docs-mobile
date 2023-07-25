@@ -25,8 +25,8 @@ class Edge
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`startCorner`](#startcorner) | *Corner* | The start corner of the edge. |
-| [`endCorner`](#endcorner) | *Corner* | The end corner of the edge. |
+| [`startCorner`](#startcorner) | *[Corner](corner.md)* | The start corner of the edge. |
+| [`endCorner`](#endcorner) | *[Corner](corner.md)* | The end corner of the edge. |
 
 ### startCorner
 

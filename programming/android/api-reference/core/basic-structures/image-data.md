@@ -29,9 +29,9 @@ class ImageData
 | [`width`](#width) | *int* | The width of the image in pixels. |
 | [`height`](#height) | *int* | The height of the image in pixels. |
 | [`stride`](#stride) | *int* | The stride (or scan width) of the image. |
-| [`format`](#format) | *EnumImagePixelFormat* | The image pixel format used in the image byte array. |
+| [`format`](#format) | *[EnumImagePixelFormat]({{ site.enums }}core/image-pixel-format.html?lang=android)* | The image pixel format used in the image byte array. |
 | [`orientation`](#orientation) | *int* | The orientation information of the image. The library is able to read the orientation information from the EXIF data of the image file. |
-| [`tag`](#tag) | *ImageTag* | The tag of the image. |
+| [`tag`](#tag) | *[ImageTag](image-tag.md)* | The tag of the image. |
 
 ## Methods
 

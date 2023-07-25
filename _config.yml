@@ -40,6 +40,8 @@ android-api: /capture-vision/docs/mobile/programming/android/api-reference/
 
 ddn-android-api: /document-normalizer/docs/mobile/programming/android/api-reference/
 
+enums: /capture-vision/docs/core/enums/
+
 assets: /capture-vision/docs/mobile/assets/
 edit_icon: /capture-vision/docs/mobile/assets/img-icon/edit-icon.png
 smile_icon: /capture-vision/docs/mobile/assets/img-icon/icon-smile.png

@@ -25,10 +25,10 @@ class Corner
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`type`](#type) | *CornerType* | The type of the corner. The types are availabled as normal-intersected, T-intersected, cross-intersected, not-intersected. |
-| [`intersection`](#intersection) | *CGPoint* | The coordinate of the intersection point of the corner. |
-| [`line1`](#line1) | *LineSegment* |One of the lines of the corner. Defined in LineSegment. |
-| [`line2`](#line2) | *LineSegment* |One of the lines of the corner. Defined in LineSegment. |
+| [`type`](#type) | *[EnumCornerType]({{ site.enums }}core/corner-type.html?lang=android)* | The type of the corner. The types are availabled as normal-intersected, T-intersected, cross-intersected, not-intersected. |
+| [`intersection`](#intersection) | *android.graphics.Point* | The coordinate of the intersection point of the corner. |
+| [`line1`](#line1) | *[LineSegment](line-segment.md)* |One of the lines of the corner. Defined in LineSegment. |
+| [`line2`](#line2) | *[LineSegment](line-segment.md)* |One of the lines of the corner. Defined in LineSegment. |
 
 ### type
 

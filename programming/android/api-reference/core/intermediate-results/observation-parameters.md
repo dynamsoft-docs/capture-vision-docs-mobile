@@ -67,7 +67,7 @@ boolean isTaskObserved(String taskName);
 
 **Return Value**
 
-A BOOL value that indicates whether the specified task is observed.
+A boolean value that indicates whether the specified task is observed.
 
 **Code Snippet**
 

@@ -52,7 +52,7 @@ An exception is thrown when the file path is unavailable.
 
 **Return Value**
 
-A `BOOL` value that indicates whether the file is saved successfully.
+A boolean value that indicates whether the file is saved successfully.
 
 ### drawOnImage(imageData,quads,colour,thickness)
 

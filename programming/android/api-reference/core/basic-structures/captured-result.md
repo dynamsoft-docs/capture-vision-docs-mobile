@@ -23,12 +23,12 @@ class CapturedResult
 
 ## Attributes
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`getsourceImageHashId`](#getsourceimagehashid) | *String* | Get the  hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
-| [`getsourceImageTag`](#getsourceimagetag) | *ImageTag* | Get the  tag of the source image that records the information of the source image. |
-| [`getitems`](#getitems) | *NSArray<CapturedResultItem*> \** | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a raw image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
-| [`getrotationTransformMatrix`](#getrotationtransformmatrix) | *CGAffineTransform* | Get the  rotation transformation matrix of the original image relative to the rotated image. |
+| Method | Description |
+| ------ | ----------- |
+| [`getsourceImageHashId`](#getsourceimagehashid) | Get the  hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
+| [`getsourceImageTag`](#getsourceimagetag) | Get the  tag of the source image that records the information of the source image. |
+| [`getitems`](#getitems) | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a raw image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
+| [`getrotationTransformMatrix`](#getrotationtransformmatrix) | Get the  rotation transformation matrix of the original image relative to the rotated image. |
 
 ### getSourceImageHashId
 

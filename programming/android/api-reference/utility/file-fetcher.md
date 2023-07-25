@@ -117,7 +117,7 @@ An exception is thrown when:
 
 **Return Value**
 
-A BOOL value that indicates whether the PDF reading mode is set successfully.
+A boolean value that indicates whether the PDF reading mode is set successfully.
 
 ### hasNextImageToFetch
 
@@ -129,7 +129,7 @@ func hasNextImageToFetch() -> Bool
 
 **Return Value**
 
-A bool value that indicates whether there is a next image to fetch.
+A boolean value that indicates whether there is a next image to fetch.
 
 ### getImage
 

@@ -21,18 +21,13 @@ The `FileImageTag` class represents an image tag that is associated with a file.
 class FileImageTag extends ImageTag
 ```
 
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`getFilePath`](#getfilepath) | *String* | The file path of the image. |
-| [`getPageNumber`](#getpagenumber) | *int* | The page number of the current image in the PDF file. |
-| [`getTotalPages`](#gettotalpages) | *int* | The total page number of the PDF file. |
-
 ## Methods
 
 | Method | Description |
-| ------ | ----------- |
+|------- |-------------|
+| [`getFilePath`](#getfilepath) | The file path of the image. |
+| [`getPageNumber`](#getpagenumber) | The page number of the current image in the PDF file. |
+| [`getTotalPages`](#gettotalpages) | The total page number of the PDF file. |
 | [`FileImageTag(filePath,pageNumber,totalPages)`](#fileimagetagfilepathpagenumbertotalpages) | The constructor of the FileImageTag. |
 
 ### getFilePath

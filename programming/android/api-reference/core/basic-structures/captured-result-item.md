@@ -23,10 +23,10 @@ class CapturedResultItem
 
 ## Attributes
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`getType`](#gettype) | *EnumCapturedResultItemType* | Get the type of the captured result item. |
-| [`getReferencedItem`](#getreferenceditem) | *CapturedResultItem* | Get the referenced captured result item. The reference dependencies is defined in the capture vision settings. |
+| Method | Description |
+| ------ | ----------- |
+| [`getType`](#gettype) | Get the type of the captured result item. |
+| [`getReferencedItem`](#getreferenceditem) | Get the referenced captured result item. The reference dependencies is defined in the capture vision settings. |
 
 ### getType
 

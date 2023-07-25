@@ -23,9 +23,9 @@ class RawImageResultItem extends CapturedResultItem
 
 ## Attributes
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`getImageData`](#getimagedata) | *ImageData* | Get the image data of the captured raw image result item. |
+| Methods | Description |
+| ------- | ----------- |
+| [`getImageData`](#getimagedata) | Get the image data of the captured raw image result item. |
 
 ### getImageData
 

@@ -40,7 +40,7 @@ An exception is thrown if:
 
 **Return Value**
 
-A CapturedResult object output by the library.
+A `CapturedResult` object output by the library.
 
 ## capture(fileBytes,templateName)
 
@@ -52,7 +52,7 @@ CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisi
 
 **Parameters**
 
-`fileBytes`: A NSData that points to a file in memory.
+`fileBytes`: A byte array that points to a file in memory.
 `templateName`: Specify a template with a template name for the data capturing.
 
 **Exception**
@@ -90,7 +90,7 @@ An exception is thrown if:
 
 **Return Value**
 
-A CapturedResult object output by the library.
+A `CapturedResult` object output by the library.
 
 ## capture(bitmap,templateName)
 

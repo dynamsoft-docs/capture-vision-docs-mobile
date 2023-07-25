@@ -21,10 +21,10 @@ The `ImageTag` class represents an image tag that can be attached to an image in
 class ImageTag
 ```
 
-## Attributes
+## Methods
 
-| Attributes | Description |
-| ---------- | ----------- |
+| Methods | Description |
+| ------- | ----------- |
 | [`setImageId`](#setimageid) | Set the ID of the image. |
 | [`getImageId`](#getimageid) | Get the ID of the image. |
 | [`getType`](#gettype) | The type of the image tag. |

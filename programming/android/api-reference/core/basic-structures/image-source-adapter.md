@@ -21,11 +21,6 @@ The `ImageSourceAdapter` class provides an interface for fetching and buffering 
 class ImageSourceAdapter
 ```
 
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-
 ## Methods
 
 | Method | Description |
@@ -197,7 +192,7 @@ boolean setNextImageToReturn(int imageId);
 
 **Return Value**
 
-A BOOL value that indicates whether the specified image is successfully set as the "next image".
+A boolean value that indicates whether the specified image is successfully set as the "next image".
 
 ### setNextImageToReturn(imageId,keepInBuffer)
 
@@ -214,7 +209,7 @@ boolean setNextImageToReturn(int imageId, boolean keepInBuffer)
 
 **Return Value**
 
-A BOOL value that indicates whether the specified image is successfully set as the "next image".
+A boolean value that indicates whether the specified image is successfully set as the "next image".
 
 ### hasImage
 
@@ -230,7 +225,7 @@ boolean hasImage(int imageId);
 
 **Return Value**
 
-A BOOL value that indicates whether the specified image is found in the video buffer.
+A boolean value that indicates whether the specified image is found in the video buffer.
 
 ### addImageToBuffer
 
