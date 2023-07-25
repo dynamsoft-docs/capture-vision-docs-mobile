@@ -1,22 +1,22 @@
 ---
 layout: default-layout
-title: Index - Dynamsoft Capture Vision Android Edition
-description: The introduction of Dynamsoft Capture Vision Android edition.
-keywords: API reference, index, Android
+title: Index - Dynamsoft Capture Vision iOS Edition
+description: The introduction of Dynamsoft Capture Vision iOS edition.
+keywords: API reference, index, iOS
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Capture Vision Documentation for Android Edition
+# Dynamsoft Capture Vision Documentation for iOS Edition
 
-## Getting Started with DCV Android Edition
+## Getting Started with DCV iOS Edition
 
 Following the [User Guide](user-guide/index.md) to build your first capture vision project:
 
 ### System Requirements
 
-* Supported OS: Android 5.0 (API Level 21) or higher.
-* Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
-* Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+* Supported OS: iOS 9 or higher (iOS 11 and higher recommended).
+* Supported ABI: arm64 and x86_64.
+* Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
 ### License Subscription
 
