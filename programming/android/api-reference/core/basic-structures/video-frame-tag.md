@@ -82,9 +82,14 @@ VideoFrameTag(int frameID, EnumFrameQuality quality, boolean isCropped, Rect cro
 
 **Parameters**
 
-`frameID`: The image ID of the video frame.  
-`quality`: The quality of the video frame.  
-`isCropped`: Whether the video frame is cropped.  
-`cropRegion`: The crop region of the video frame.  
-`originalWidth`: The original width of the video frame.  
-`originalHeight`: The original height of the video frame.
+`[in] frameID`: The image ID of the video frame.  
+
+`[in] quality`: The quality of the video frame.  
+
+`[in] isCropped`: Whether the video frame is cropped.  
+
+`[in] cropRegion`: The crop region of the video frame.  
+
+`[in] originalWidth`: The original width of the video frame.  
+
+`[in] originalHeight`: The original height of the video frame.

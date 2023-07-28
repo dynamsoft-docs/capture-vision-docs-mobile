@@ -25,12 +25,16 @@ class TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | An `ImageData` object as the image data of the texture-removed grayscale image. |
+| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the texture-removed grayscale image. |
 
 ### getImageData
 
-An `ImageData` object as the image data of the texture-removed grayscale image.
+Gets the `ImageData` object as the image data of the texture-removed grayscale image.
 
 ```java
 ImageData getImageData();
 ```
+
+**Return Value**
+
+The `ImageData` object as the image data of the texture-removed grayscale  image.

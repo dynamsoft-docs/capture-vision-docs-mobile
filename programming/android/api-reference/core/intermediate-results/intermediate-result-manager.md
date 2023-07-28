@@ -39,15 +39,11 @@ void addResultReceiver(IntermediateResultReceiver receiver) throws CoreException
 
 **Parameters**
 
-`receiver`: A delegate object of `IntermediateResultReceiver`.  
+`[in] receiver`: A delegate object of `IntermediateResultReceiver`.  
 
 **Exception**
 
 An exception is thrown when the result receiver is not added successfully.
-
-**Return Value**
-
-A boolean value that indicates whether the result receiver is added successfully.
 
 ### removeResultReceiver
 
@@ -59,15 +55,11 @@ void removeResultReceiver(IntermediateResultReceiver receiver) throws CoreExcept
 
 **Parameters**
 
-`receiver`: A delegate object of `IntermediateResultReceiver`.  
+`[in] receiver`: A delegate object of `IntermediateResultReceiver`.  
 
 **Exception**
 
 An exception is thrown when the result receiver is not removed successfully.
-
-**Return Value**
-
-A boolean value that indicates whether the result receiver is removed successfully.
 
 ### getRawImage
 
@@ -79,7 +71,7 @@ ImageData getRawImage(String imageHashId);
 
 **Parameters**
 
-`imageHashId`: The image hash id.
+`[in] imageHashId`: The image hash id.
 
 **Return Value**
 

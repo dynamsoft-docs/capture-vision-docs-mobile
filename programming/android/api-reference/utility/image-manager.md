@@ -42,9 +42,11 @@ void saveToFile(ImageData imageData, String path, boolean overWrite) throws Util
 
 **Parameters**
 
-`imageData`: The `ImageData` object to save to an image file.  
-`path`: The targeting file path with the file name and extension name.  
-`overWrite`: A flag indicating whether to overwrite the file if it already exists. Defaults to true.  
+`[in] imageData`: The `ImageData` object to save to an image file.  
+
+`[in] path`: The targeting file path with the file name and extension name.  
+
+`[in] overWrite`: A flag indicating whether to overwrite the file if it already exists. Defaults to true.  
 
 **Exception**
 
@@ -64,10 +66,13 @@ ImageData drawOnImage(ImageData imageData, Quadrilateral[] quads, int colour, in
 
 **Parameters**
 
-`imageData`: The `ImageData` to modify.  
-`quads`: An array of `Quadrilateral` objects to be added on the image.  
-`colour`: An int value as an ARGB colour.  
-`thickness`: The width of the border.
+`[in] imageData`: The `ImageData` to modify.  
+
+`[in] quads`: An array of `Quadrilateral` objects to be added on the image.  
+
+`[in] colour`: An int value as an ARGB colour.  
+
+`[in] thickness`: The width of the border.
 
 **Return Value**
 
@@ -83,10 +88,13 @@ ImageData drawOnImage(ImageData imageData, LineSegment[] lines, int colour, int 
 
 **Parameters**
 
-`imageData`: The `ImageData` to modify.  
-`lineSegments`: An array of `LineSegment` objects to be added on the image.  
-`colour`: An int value as an ARGB colour.  
-`thickness`: The width of the lines.
+`[in] imageData`: The `ImageData` to modify.  
+
+`[in] lineSegments`: An array of `LineSegment` objects to be added on the image.  
+
+`[in] colour`: An int value as an ARGB colour.  
+
+`[in] thickness`: The width of the lines.
 
 **Return Value**
 
@@ -102,10 +110,13 @@ ImageData drawOnImage(ImageData imageData, Contour[] contours, int colour, int t
 
 **Parameters**
 
-`imageData`: The `ImageData` to modify.  
-`contours`: An array of `Contour` objects to be added on the image.  
-`colour`: An int value as an ARGB colour.  
-`thickness`: The width of the borders.
+`[in] imageData`: The `ImageData` to modify.  
+
+`[in] contours`: An array of `Contour` objects to be added on the image.  
+
+`[in] colour`: An int value as an ARGB colour.  
+
+`[in] thickness`: The width of the borders.
 
 **Return Value**
 
@@ -121,10 +132,13 @@ ImageData drawOnImage(ImageData imageData, Corner[] corners, int colour, int thi
 
 **Parameters**
 
-`imageData`: The `ImageData` to modify.  
-`corners`: An array of `Corner` objects to be added on the image.  
-`colour`: An int value as an ARGB colour.  
-`thickness`: The width of the lines.
+`[in] imageData`: The `ImageData` to modify.  
+
+`[in] corners`: An array of `Corner` objects to be added on the image.  
+
+`[in] colour`: An int value as an ARGB colour.  
+
+`[in] thickness`: The width of the lines.
 
 **Return Value**
 
@@ -140,10 +154,13 @@ ImageData drawOnImage(ImageData imageData, Edge[] edges, int colour, int thickne
 
 **Parameters**
 
-`imageData`: The `ImageData` to modify.  
-`edges`: An array of `Edge` objects to be added on the image.  
-`colour`: An int value as an ARGB colour.  
-`thickness`: The width of the lines.  
+`[in] imageData`: The `ImageData` to modify. 
+
+`[in] edges`: An array of `Edge` objects to be added on the image.  
+
+`[in] colour`: An int value as an ARGB colour.  
+
+`[in] thickness`: The width of the lines.  
 
 **Return Value**
 

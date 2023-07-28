@@ -25,12 +25,16 @@ class EnhancedGrayscaleImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | An `ImageData` object as the image data of the enhanced grayscale image. |
+| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the enhanced grayscale image. |
 
 ### getImageData
 
-An `ImageData` object as the image data of the enhanced grayscale image.
+Gets the `ImageData` object as the image data of the enhanced grayscale image.
 
 ```java
 ImageData getImageData();
 ```
+
+**Return Value**
+
+The `ImageData` object as the image data of the enhanced grayscale image.

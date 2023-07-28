@@ -37,4 +37,4 @@ int getErrorCode();
 
 **Return Value**
 
-An int value that indicates the error code. View `EnumErrorCode` for more information.
+An int value that indicates the error code. View [`EnumErrorCode`]({site.enums}core/error-code.html) for more information.

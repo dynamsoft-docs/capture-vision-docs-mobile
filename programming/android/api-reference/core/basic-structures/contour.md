@@ -34,3 +34,4 @@ An array of `android.graphics.Point` that includes all vertices of the contour.
 ```java
 Point[] points;
 ```
+

@@ -26,60 +26,84 @@ class IntermediateResultUnit
 | Method | Description |
 |------- |-------------|
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
-| [`gethashId`](#gethashid) | The hash ID of the unit. |
-| [`getSourceImageHashId`](#getsourceimagehashid) | The hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
-| [`getSourceImageTag`](#getsourceimagetag) | The image tag of the source image. |
-| [`getType`](#gettype) | The type of the intermediate result unit. |
-| [`getLocalToSourceImageTransformMatrix`](#getlocaltosourceimagetransformmatrix) | The transformation matrix from local to source image coordinates. |
-| [`getRotationTransformMatrix`](#getrotationtransformmatrix) | The rotation transformation matrix of the original image relative to the rotated image. |
+| [`gethashId`](#gethashid) | Gets the hash ID of the unit. |
+| [`getSourceImageHashId`](#getsourceimagehashid) | Gets the hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
+| [`getSourceImageTag`](#getsourceimagetag) | Gets the image tag of the source image. |
+| [`getType`](#gettype) | Gets the type of the intermediate result unit. |
+| [`getLocalToSourceImageTransformMatrix`](#getlocaltosourceimagetransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
+| [`getRotationTransformMatrix`](#getrotationtransformmatrix) | Gets the rotation transformation matrix of the original image relative to the rotated image. |
 
 ### getHashId
 
-The hash ID of the unit.
+Gets the hash ID of the unit.
 
 ```java
 String getHashId();
 ```
 
+**Return Value**
+
+The hash ID of the unit.
+
 ### getSourceImageHashId
 
-The hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class.
+Gets the hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class.
 
 ```java
 String getSourceImageHashId();
 ```
 
+**Return Value**
+
+The hash ID of the source image.
+
 ### getSourceImageTag
 
-The image tag of the source image.
+Gets the image tag of the source image.
 
 ```java
 ImageTag getSourceImageTag();
 ```
 
+**Return Value**
+
+The image tag of the source image.
+
 ### getType
 
-The type of the intermediate result unit.
+Gets the type of the intermediate result unit.
 
 ```java
 long getType();
 ```
 
+**Return Value**
+
+The type of the intermediate result unit.
+
 ### getLocalToSourceImageTransformMatrix
 
-The transformation matrix from local to source image coordinates.
+Gets the transformation matrix from local to source image coordinates.
 
 ```java
 Matrix getLocalToSourceImageTransformMatrix();
 ```
 
+**Return Value**
+
+The transformation matrix from local to source image coordinates.
+
 ### getRotationTransformMatrix
 
-The rotation transformation matrix of the original image relative to the rotated image.
+Gets the rotation transformation matrix of the original image relative to the rotated image.
 
 ```java
 Matrix getRotationTransformMatrix();
 ```
+
+**Return Value**
+
+The rotation transformation matrix of the original image relative to the rotated image.
 
 ### clone
 

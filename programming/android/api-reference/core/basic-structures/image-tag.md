@@ -39,6 +39,10 @@ Set the ID of the image.
 void setImageId(int imageId);
 ```
 
+**Parameters**
+
+`[in] imageId`: The id of image for identification.
+
 ### getImageId
 
 Get the ID of the image.
@@ -46,6 +50,10 @@ Get the ID of the image.
 ```java
 int getImageId();
 ```
+
+**Return Value**
+
+The ID of the image.
 
 ### getType
 
@@ -55,18 +63,30 @@ The type of the image tag.
 EnumImageTagType getType();
 ```
 
+**Return Value**
+
+The [`EnumImageTagType`]({{site.enums}}core/image-tag-type.html) of the image.
+
 ### setDistanceMode
 
 Set the capture distance mode of the image.
 
 ```java
-void setDistanceMode(EnumImageCaptureDistanceMode distanceMode){}
+void setDistanceMode(EnumImageCaptureDistanceMode distanceMode)
 ```
+
+**Parameters**
+
+`[in] distanceMode`: The capture distance mode of the image.
 
 ### getDistanceMode
 
-Get the capture distance mode of the image.
+Get the capture distance mode of the image
 
 ```java
-EnumImageCaptureDistanceMode getDistanceMode(){}
+EnumImageCaptureDistanceMode getDistanceMode()
 ```
+
+**Return Value**
+
+The [`EnumImageCaptureDistanceMode`]({{site.enums}}core/image-capture-distance-mode.html) of the image.

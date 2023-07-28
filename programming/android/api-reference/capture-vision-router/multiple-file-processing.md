@@ -2,7 +2,7 @@
 layout: default-layout
 Title: Processing multiple Images/Pages - Dynamsoft Capture Vision Router Module Android Edition API Reference
 Description: The APIs of the CaptureVisionRouter for processing multiple Images/Pages.
-Keywords: capture vision, Java, Kotlin
+Keywords: capture vision, multiple-file processing, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -35,11 +35,7 @@ void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`adapter`: An object of `ImageSourceAdapter`. You can use a internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` and `FileFetcher`.
-
-**Return Value**
-
-A boolean value that indicates whether the input is set successfully.
+`[in] adapter`: An object of [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md). You can use a internally implemented [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md) such as `CameraEnhancer`, `DirectoryFetcher` and `FileFetcher`.
 
 **Exception**
 
@@ -59,7 +55,7 @@ The attached image source adapter object of the capture vision router.
 
 ## addImageSourceStateListener
 
-Regisiter a `ImageSourceStateListener` to get callback when the status of `ImageSourceAdapter` changes.
+Register a [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md) to get callback when the status of [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md) received.
 
 ```java
 void addImageSourceStateListener(ImageSourceStatestener listener) throws CaptureVisionRouterException;
@@ -67,11 +63,7 @@ void addImageSourceStateListener(ImageSourceStatestener listener) throws Capture
 
 **Parameters**
 
-`listener`: An object of `ImageSourceStateListener`.
-
-**Return Value**
-
-A boolean value that indicates whether the `ImageSourceStateListener` is added successfully.
+`[in] listener`: An object of [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md).
 
 **Exception**
 
@@ -79,7 +71,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeImageSourceStateListener
 
-Remove a `ImageSourceStateListener`.
+Remove a [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md).
 
 ```java
 void removeImageSourceStateListener(ImageSourceStateListener listener) throws CaptureVisionRouterException;
@@ -87,11 +79,7 @@ void removeImageSourceStateListener(ImageSourceStateListener listener) throws Ca
 
 **Parameters**
 
-`listener`: An object of `ImageSourceStateListener`.
-
-**Return Value**
-
-A boolean value that indicates whether the `ImageSourceStateListener` is removed successfully.
+`[in] listener`: An object of [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md).
 
 **Exception**
 
@@ -99,7 +87,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## addResultReceiver
 
-Regisiter a `CapturedResultReceiver` to get callback when `CapturedResult` output.
+Register a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) to get callback when `CapturedResult` output.
 
 ```java
 void addResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionRouterException;
@@ -107,11 +95,7 @@ void addResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionRout
 
 **Parameters**
 
-`listener`: An object of `CapturedResultReceiver`.
-
-**Return Value**
-
-A boolean value that indicates whether the result receiver is added successfully.
+`[in] receiver`: An object of [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
 
 **Exception**
 
@@ -119,7 +103,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeResultReceiver
 
-Remove a `CapturedResultReceiver`.
+Remove a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
 
 ```java
 void removeResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionRouterException;
@@ -127,11 +111,7 @@ void removeResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionR
 
 **Parameters**
 
-`listener`: An object of `CapturedResultReceiver`.
-
-**Return Value**
-
-A boolean value that indicates whether the result receiver is removed successfully.
+`[in] receiver`: An object of [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
 
 **Exception**
 
@@ -147,11 +127,7 @@ void startCapturing(String templateName) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`templateName`: The name of a template that you have previously set via `initSettings` or `initSettingsFromFile`.
-
-**Return Value**
-
-A boolean value that indicates whether the capture starts successfully.
+`[in] templateName`: The name of a template that you have previously set via `initSettings` or `initSettingsFromFile`.
 
 **Exception**
 
@@ -171,7 +147,7 @@ void stopCapturing();
 
 ## addCaptureStateListener
 
-Regisiter a `CaptureStateListener` to get callback when capture state changes.
+Register a [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md) to get callback when capture state changes.
 
 ```java
 void addCaptureStateListener(CaptureStateListener listener) throws CaptureVisionRouterException;
@@ -179,11 +155,7 @@ void addCaptureStateListener(CaptureStateListener listener) throws CaptureVision
 
 **Parameters**
 
-`listener`: A delegate object of `CaptureStateListener` to receive the capture state.
-
-**Return Value**
-
-A boolean value that indicates whether the capture state listener is added successfully.
+`[in] listener`: A delegate object of [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md) to receive the capture state.
 
 **Exception**
 
@@ -191,7 +163,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeCaptureStateListener
 
-Remove a `CaptureStateListener`.
+Remove a [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md).
 
 ```java
 void removeCaptureStateListener(CaptureStateListener listener) throws CaptureVisionRouterException;
@@ -199,11 +171,7 @@ void removeCaptureStateListener(CaptureStateListener listener) throws CaptureVis
 
 **Parameters**
 
-`listener`: An object of `CaptureStateListener`.
-
-**Return Value**
-
-A boolean value that indicates whether the capture state listener is removed successfully.
+`[in] listener`: An object of [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md)
 
 **Exception**
 
@@ -211,7 +179,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## addResultFilter
 
-Regisiter a `CapturedResultFilter` to get callback when filtered result output.
+Register a [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) to get callback when filtered result output.
 
 ```java
 void addResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterException;
@@ -219,11 +187,7 @@ void addResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterExce
 
 **Parameters**
 
-`filter`: An object of `CapturedResultFilter`.
-
-**Return Value**
-
-A boolean value that indicates whether the result filter is added successfully.
+`[in] filter`: An object of [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
 
 **Exception**
 
@@ -231,7 +195,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeResultFilter
 
-Remove a `CapturedResultFilter`.
+Remove a [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
 
 ```java
 void removeResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterException;
@@ -239,11 +203,7 @@ void removeResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterE
 
 **Parameters**
 
-`filter`: An object of `CapturedResultFilter`.
-
-**Return Value**
-
-A boolean value that indicates whether the result filter is removed successfully.
+`[in] filter`: An object of [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
 
 **Exception**
 

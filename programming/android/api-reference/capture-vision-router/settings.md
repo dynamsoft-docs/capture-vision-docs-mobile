@@ -12,9 +12,9 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`initSettings`](#initsettings) | Initialize the settings with a JSON String. |
-| [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the settings with a JSON file. |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Get the object of the currently active `SimplifiedCaptureVisionSettings`. |
+| [`initSettings`](#initsettings) | Initialize the capture settings with a JSON String. |
+| [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the capture settings with a JSON file. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the capture settings for a specific template. |
 | [`updateSettings`](#updatesettings) | Update capture vision settings with a object of `SimplifiedCaptureVisionSettings`. |
 | [`resetSettings`](#resetsettings) | Reset the capture vision settings. |
 | [`outputSettings`](#outputsettings) | Output the targeting capture vision settings to a JSON string. |
@@ -22,7 +22,7 @@ noTitleIndex: true
 
 ## initSettings
 
-Initialize the settings with a JSON String.
+Initialize the capture settings with a JSON String.
 
 ```java
 void initSettings(String content) throws CaptureVisionRouterException;
@@ -30,11 +30,7 @@ void initSettings(String content) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`content`: A JSON string that contains capture vision settings.
-
-**Return Value**
-
-A boolean value that indicates whether the settings are initialized successfully.
+`[in] content`: A JSON string that contains capture vision settings.
 
 **Exception**
 
@@ -45,7 +41,7 @@ An exception is thrown when:
 
 ## initSettingsFromFile
 
-Initialize the settings with a JSON file.
+Initialize the capture settings with a JSON file.
 
 ```java
 void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
@@ -53,11 +49,7 @@ void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`file`: A JSON file that contains capture vision settings.
-
-**Return Value**
-
-A boolean value that indicates whether the settings are initialized successfully.
+`[in] file`: A JSON file that contains capture vision settings.
 
 **Exception**
 
@@ -69,7 +61,7 @@ An exception is thrown when:
 
 ## getSimplifiedSettings
 
-Get the object of the currently active `SimplifiedCaptureVisionSettings`.
+Retrieves a simplified version of the capture settings for a specific template.
 
 ```java
 SimplifiedCaptureVisionSettings getSimplifiedSettings(String templateName) throws CaptureVisionRouterException;
@@ -77,7 +69,7 @@ SimplifiedCaptureVisionSettings getSimplifiedSettings(String templateName) throw
 
 **Return Value**
 
-An object of `SimplifiedCaptureVisionSettings`.
+An object of [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-capture-vision-settings.md).
 
 **Exception**
 
@@ -88,7 +80,7 @@ An exception is thrown when:
 
 ## updateSettings
 
-Update capture vision settings with a object of `SimplifiedCaptureVisionSettings`.
+Update capture vision settings with an object of [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-capture-vision-settings.md).
 
 ```java
 void updateSettings(String templateName, SimplifiedCaptureVisionSettings settings) throws CaptureVisionRouterException;
@@ -96,12 +88,10 @@ void updateSettings(String templateName, SimplifiedCaptureVisionSettings setting
 
 **Parameters**
 
-`templateName`: Specify the name of the template that you want to update.
-`settings`: An object of SimplifiedCaptureVisionSettings.
+`[in] templateName`: Specify the name of the template that you want to update.
 
-**Return Value**
+`[in] settings`: An object of SimplifiedCaptureVisionSettings.
 
-A boolean value that indicates whether the settings are uploaded successfully.
 
 **Exception**
 
@@ -118,10 +108,6 @@ Reset the capture vision settings.
 void resetSettings() throws CaptureVisionRouterException;
 ```
 
-**Return Value**
-
-A boolean value that indicates whether the settings are reset successfully.
-
 **Exception**
 
 An exception is thrown when:
@@ -136,6 +122,8 @@ Output the targeting capture vision settings to a JSON string.
 ```java
 String outputSettings(String templateName) throws CaptureVisionRouterException;
 ```
+
+`[in] templateName`: The name of the template that you want to output.
 
 **Return Value**
 
@@ -158,12 +146,9 @@ void outputSettingsToFile(String templateName, String filePath) throws CaptureVi
 
 **Parameters**
 
-`templateName`: The name of the template that you want to output.
-`file`: The file path and name that you want to save the template.
+`[in] templateName`: The name of the template that you want to output.
 
-**Return Value**
-
-A boolean value that indicates whether the template is output successfully.
+`[in] file`: The file path and name that you want to save the template.
 
 **Exception**
 

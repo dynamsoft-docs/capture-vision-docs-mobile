@@ -32,11 +32,15 @@ class CapturedResult
 
 ### getSourceImageHashId
 
-Get the hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class.
+Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`](../intermediate-results/intermediate-result-manager.md) class.
 
 ```java
 String getSourceImageHashId();
 ```
+
+**Return Value**
+
+The hash id of the source image.
 
 ### getSourceImageTag
 
@@ -46,13 +50,21 @@ Get the tag of the source image that records the information of the source image
 ImageTag getSourceImageTag();
 ```
 
+**Return Value**
+
+The tag of the source image that records the information of the source image.
+
 ### getItems
 
-Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a raw image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View `CapturedResultItemType` for all available types.
+Get an array of [`CapturedResultItem`](capture-result-item.md), which are the basic unit of the captured results. A [`CapturedResultItem`](capture-result-item.md) can be a raw image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View [`CapturedResultItemType`]({{site.enums}}core/captured-result-item-type.html) for all available types.
 
 ```java
 CapturedResultItem[] getItems();
 ```
+
+**Return Value**
+
+An array containing the [`CapturedResultItem`](capture-result-item.md) objects within the captured result.
 
 ### getRotationTransformMatrix
 
@@ -61,3 +73,7 @@ Get the rotation transformation matrix of the original image relative to the rot
 ```java
 Matrix getRotationTransformMatrix();
 ```
+
+**Return Value**
+
+Return the rotation transformation matrix of the original image relative to the rotated image.

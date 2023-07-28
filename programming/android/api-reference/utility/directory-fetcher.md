@@ -34,34 +34,34 @@ class DirectoryFetcher extends ImageSourceAdapter
 Sets the directory path and filter for the file search.
 
 ```java
-int setDirectory(String directoryPath, String filter, boolean recursive);
+void setDirectory(String directoryPath, String filter, boolean recursive) throws UtilityException;
 ```
 
 **Parameters**
 
-`directoryPath`: The directory path.  
-`filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g ".BMP;.JPG;.GIF".  
-`recursive`: Specifies whether to load files recursively.  
+`[in] directoryPath`: The directory path.  
 
-**Return Value**
+`[in] filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g ".BMP;.JPG;.GIF".  
 
-An int value that indicates whether the directory is set successfully.
+`[in] recursive`: Specifies whether to load files recursively.  
+
+**Exception**
+
+An exception is thrown when:
+
+* The directory is unavailable.
 
 ### setPDFReadingParameter
 
 Sets the parameters for reading PDF files.
 
 ```java
-int setPDFReadingParameter(PDFReadingParameter para);
+void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException;
 ```
 
 **Parameters**
 
-`para`: A `PDFReadingParameter` object.
-
-**Return Value**
-
-An int value that indicates whether the PDF reading mode is set successfully.
+`[in] para`: A `PDFReadingParameter` object.
 
 ### DirectoryFetcher
 

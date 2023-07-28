@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: CapturedResultReceiver - Dynamsoft Core Module Android Edition API Reference
-Description: The protocol CapturedResultReceiver of Dynamsoft Core Module Android Edition provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+Description: The interface CapturedResultReceiver of Dynamsoft Core Module Android Edition provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
 Keywords: captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultReceiver
 
-The `CapturedResultReceiver` protocol provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+The `CapturedResultReceiver` interface provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
 
 ## Definition
 
@@ -35,7 +35,7 @@ interface CapturedResultReceiver
 
 ### onCapturedResultReceived
 
-The method for monitoring the output of `CapturedResult`.
+The method for monitoring the output of [`CapturedResult`](captured-result.md).
 
 ```java
 void onCapturedResultReceived(CapturedResult result);
@@ -43,11 +43,11 @@ void onCapturedResultReceived(CapturedResult result);
 
 **Parameters**
 
-`result`: A `CapturedResult` object as a captured result.
+`[in] result`: A [`CapturedResult`](captured-result.md) object as a captured result.
 
 ### onRawImageResultReceived
 
-The method for monitoring the output of `RawImageResultItem`.
+The method for monitoring the output of [`RawImageResultItem`](raw-image-result-item.md).
 
 ```java
 void onRawImageResultReceived(RawImageResultItem result);
@@ -55,7 +55,7 @@ void onRawImageResultReceived(RawImageResultItem result);
 
 **Parameters**
 
-`result`: A `RawImageResultItem` object as a raw image result.
+`[in] result`: A [`RawImageResultItem`](raw-image-result-item.md) object as a raw image result.
 
 ### onDecodedBarcodesReceived
 
@@ -67,7 +67,7 @@ void onDecodedBarcodesReceived(DecodedBarcodesResult result);
 
 **Parameters**
 
-`result`: A `DecodedBarcodesResult` object as a decoded barcode result.
+`[in] result`: A `DecodedBarcodesResult` object as a decoded barcode result.
 
 ### onRecognizedTextLinesReceived
 
@@ -79,11 +79,11 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 
 **Parameters**
 
-`result`: A `RecognizedTextLinesResult` object as a recognized text line result.
+`[in] result`: A `RecognizedTextLinesResult` object as a recognized text line result.
 
 ### onDetectedQuadsReceived
 
-The method for monitoring the output of `DetectedQuadsResult`.
+The method for monitoring the output of [`DetectedQuadsResult`]({{site.android_api}}detected-quads-result.html).
 
 ```java
 void onDetectedQuadsReceived(DetectedQuadsResult result);
@@ -91,11 +91,11 @@ void onDetectedQuadsReceived(DetectedQuadsResult result);
 
 **Parameters**
 
-`result`: A `DetectedQuadsResult` object as a detected quad result.
+`[in] result`: A [`DetectedQuadsResult`]({{site.android_api}}detected-quads-result.html) object as a detected quad result.
 
 ### onNormalizedImagesReceived
 
-The method for monitoring the output of `NormalizedImagesResult`.
+The method for monitoring the output of [`NormalizedImagesResult`]({{site.android_api}}normalized-images-result.html).
 
 ```java
 void onNormalizedImagesReceived(NormalizedImagesResult result);
@@ -103,7 +103,7 @@ void onNormalizedImagesReceived(NormalizedImagesResult result);
 
 **Parameters**
 
-`result`: A `NormalizedImagesResult` object as a normalized image result.
+`[in] result`: A [`NormalizedImagesResult`]({{site.android_api}}normalized-images-result.html) object as a normalized image result.
 
 ### onParsedResultsReceived
 
@@ -115,4 +115,4 @@ void onParsedResultsReceived(ParsedResult result);
 
 **Parameters**
 
-`result`: A `ParsedResult` object as a parsed result.
+`[in] result`: A `ParsedResult` object as a parsed result.

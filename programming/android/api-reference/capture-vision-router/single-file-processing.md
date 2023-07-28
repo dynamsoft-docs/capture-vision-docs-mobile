@@ -27,8 +27,9 @@ CapturedResult capture(String filePath, String templateName) throws CaptureVisio
 
 **Parameters**
 
-`file`: The file path and name that you want to implement the data capturing.
-`templateName`: Specify a template with a template name for the data capturing.
+`[in] file`: The file path and name that you want to implement the data capturing.
+
+`[in] templateName`: Specify a template with a template name for the data capturing.
 
 **Exception**
 
@@ -40,7 +41,7 @@ An exception is thrown if:
 
 **Return Value**
 
-A `CapturedResult` object output by the library.
+A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
 ## capture(fileBytes,templateName)
 
@@ -52,8 +53,9 @@ CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisi
 
 **Parameters**
 
-`fileBytes`: A byte array that points to a file in memory.
-`templateName`: Specify a template with a template name for the data capturing.
+`[in] fileBytes`: A byte array that points to a file in memory.
+
+`[in] templateName`: Specify a template with a template name for the data capturing.
 
 **Exception**
 
@@ -65,7 +67,7 @@ An exception is thrown if:
 
 **Return Value**
 
-A `CapturedResult` object output by the library.
+A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
 ## capture(imageData,templateName)
 
@@ -77,8 +79,9 @@ CapturedResult capture(ImageData imageData, String templateName) throws CaptureV
 
 **Parameters**
 
-`buffer`: A `ImageData` object that contains image info.
-`templateName`: Specify a template with a template name for the data capturing.
+`[in] buffer`: A [`ImageData`](../core/basic-structures/image-data.md) object that contains image info.
+
+`[in] templateName`: Specify a template with a template name for the data capturing.
 
 **Exception**
 
@@ -90,7 +93,7 @@ An exception is thrown if:
 
 **Return Value**
 
-A `CapturedResult` object output by the library.
+A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
 ## capture(bitmap,templateName)
 
@@ -102,8 +105,9 @@ CapturedResult capture(Bitmap bitmap, String templateName) throws CaptureVisionR
 
 **Parameters**
 
-`bitmap`: A `android.graphics.Bitmap` object.
-`templateName`: Specify a template with a template name for the data capturing.
+`[in] bitmap`: A `android.graphics.Bitmap` object.
+
+`[in] templateName`: Specify a template with a template name for the data capturing.
 
 **Exception**
 
@@ -114,4 +118,4 @@ An exception is thrown if:
 
 **Return Value**
 
-A `CapturedResult` object output by the library.
+A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.

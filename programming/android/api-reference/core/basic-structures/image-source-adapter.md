@@ -65,7 +65,7 @@ void setMaximumImageCount(int count);
 
 **Parameters**
 
-`count`: The maximum capability of the Video Buffer.
+`[in] count`: The maximum capability of the Video Buffer.
 
 ### getMaxImageCount
 
@@ -89,7 +89,7 @@ void setBufferOverflowProtectionMode(BufferOverflowProtectionMode mode);
 
 **Parameters**
 
-`mode`: One of the `EnumBufferOverflowProtectionMode` that indicates the buffer overflow protection mode.
+`[in] mode`: One of the `EnumBufferOverflowProtectionMode` that indicates the buffer overflow protection mode.
 
 ### getBufferOverflowProtectionMode
 
@@ -110,6 +110,10 @@ Get the current image count in the Video Buffer.
 ```java
 int getImageCount();
 ```
+
+**Return Value**
+
+The current image count in the Video Buffer.
 
 ### isBufferEmpty
 
@@ -133,7 +137,7 @@ void setColourChannelUsageType(EnumColourChannelUsageType type);
 
 **Parameters**
 
-`type`: One of the `EnumColourChannelUsageType` that indicates whether the colour channel usage type.
+`[in] type`: One of the [`EnumColourChannelUsageType`]({{site.enums}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
 
 ### getColourChannelUsageType
 
@@ -145,7 +149,7 @@ EnumColourChannelUsageType getColourChannelUsageType();
 
 **Return Value**
 
-One of the `EnumColourChannelUsageType` that indicates whether the colour channel usage type.
+One of the [`EnumColourChannelUsageType`]({{site.enums}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
 
 ### startFetching
 
@@ -188,7 +192,7 @@ boolean setNextImageToReturn(int imageId);
 
 **Parameters**
 
-`imageId`: The imageId of image you want to set as the "next image".  
+`[in] imageId`: The imageId of image you want to set as the "next image".  
 
 **Return Value**
 
@@ -204,8 +208,9 @@ boolean setNextImageToReturn(int imageId, boolean keepInBuffer)
 
 **Parameters**
 
-`imageId`: The imageId of image you want to set as the "next image".  
-`keepInBuffer`: Set this value to true so that the "next image" is protected from being pushed out before is it returned by method getImage.
+`[in] imageId`: The imageId of image you want to set as the "next image".  
+
+`[in] keepInBuffer`: Set this value to true so that the "next image" is protected from being pushed out before is it returned by method getImage.
 
 **Return Value**
 
@@ -221,7 +226,7 @@ boolean hasImage(int imageId);
 
 **Parameters**
 
-`imageId`: The imageId of image you want to check the availability.
+`[in] imageId`: The imageId of image you want to check the availability.
 
 **Return Value**
 
@@ -237,7 +242,7 @@ void addImageToBuffer(ImageData image);
 
 **Parameters**
 
-`image`: The ImageData object to add.
+`[in] image`: The ImageData object to add.
 
 ### clearBuffer
 

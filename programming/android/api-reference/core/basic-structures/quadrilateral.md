@@ -42,7 +42,7 @@ class Quadrilateral
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
 ```java
-Point[] points = new Point[4];
+Point[] points;
 ```
 
 ## Method Details
@@ -57,7 +57,7 @@ boolean contains(Point point);
 
 **Parameters**
 
-`point`: Input a point.
+`[in] point`: Input a point.
 
 **Return Value**
 

@@ -25,12 +25,16 @@ class ScaledDownColourImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | An `ImageData` object as the image data of the down-scaled colour image. |
+| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the down-scaled colour image. |
 
 ### getImageData
 
-An `ImageData` object as the image data of the down-scaled colour image.
+Gets the `ImageData` object as the image data of the down-scaled colour image.
 
 ```java
 ImageData getImageData();
 ```
+
+**Return Value**
+
+The `ImageData` object as the image data of the down-scaled colour image.

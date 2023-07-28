@@ -34,3 +34,7 @@ Get the name of the detection mode used to detect this region element.
 ```java
 String getModeName()
 ```
+
+**Return Value**
+
+The name of the detection mode used to detect this region element.

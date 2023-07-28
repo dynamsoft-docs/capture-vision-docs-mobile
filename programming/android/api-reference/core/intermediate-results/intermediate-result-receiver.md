@@ -1,8 +1,8 @@
 ---
 layout: default-layout
 Title: IntermediateResultReceiver - Dynamsoft Core Module Android Edition API Reference
-Description: The protocol IntermediateResultReceiver includes methods for monitoring the output of intermediate results.
-Keywords: protocol, Java, Kotlin
+Description: The interface IntermediateResultReceiver includes methods for monitoring the output of intermediate results.
+Keywords: interface, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # IntermediateResultReceiver
 
-The `IntermediateResultReceiver` protocol includes methods for monitoring the output of intermediate results.
+The `IntermediateResultReceiver` interface includes methods for monitoring the output of intermediate results.
 
 ## Definition
 
@@ -77,8 +77,9 @@ void onPredetectedRegionsReceived(PredetectedRegionsUnit unit, IntermediateResul
 
 **Parameters**
 
-`unit`: A `PredetectedRegionsUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `PredetectedRegionsUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onLocalizedBarcodesReceived
 
@@ -90,8 +91,9 @@ void onLocalizedBarcodesReceived(LocalizedBarcodesUnit unit, IntermediateResultE
 
 **Parameters**
 
-`unit`: A `LocalizedBarcodesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `LocalizedBarcodesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onDecodedBarcodesReceived
 
@@ -103,8 +105,9 @@ void onDecodedBarcodesReceived(DecodedBarcodesUnit unit, IntermediateResultExtra
 
 **Parameters**
 
-`unit`: A `DecodedBarcodesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `DecodedBarcodesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onLocalizedTextLinesReceived
 
@@ -116,8 +119,9 @@ void onLocalizedTextLinesReceived(LocalizedTextLinesUnit unit, IntermediateResul
 
 **Parameters**
 
-`unit`: A `LocalizedTextLines` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `LocalizedTextLines` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onRecognizedTextLinesReceived
 
@@ -129,8 +133,9 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesUnit unit, IntermediateRes
 
 **Parameters**
 
-`unit`: A `RecognizedTextLinesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `RecognizedTextLinesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onDetectedQuadsReceived
 
@@ -142,8 +147,9 @@ void onDetectedQuadsReceived(DetectedQuadsUnit unit, IntermediateResultExtraInfo
 
 **Parameters**
 
-`unit`: A `DetectedQuadsUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `DetectedQuadsUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onNormalizedImagesReceived
 
@@ -155,8 +161,9 @@ void onNormalizedImagesReceived(NormalizedImagesUnit unit, IntermediateResultExt
 
 **Parameters**
 
-`unit`: A `NormalizedImagesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `NormalizedImagesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onColourImageUnitReceived
 
@@ -168,8 +175,9 @@ void onColourImageUnitReceived(ColourImageUnit unit, IntermediateResultExtraInfo
 
 **Parameters**
 
-`unit`: A `ColourImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `ColourImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onScaledDownColourImageUnitReceived
 
@@ -181,8 +189,9 @@ void onScaledDownColourImageUnitReceived(ScaledDownColourImageUnit unit, Interme
 
 **Parameters**
 
-`unit`: A `ScaledDownColourImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `ScaledDownColourImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onGrayscaleImageUnitReceived
 
@@ -194,8 +203,9 @@ void onGrayscaleImageUnitReceived(GrayscaleImageUnit unit, IntermediateResultExt
 
 **Parameters**
 
-`unit`: A `GrayscaleImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `GrayscaleImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onTransformedGrayscaleImageUnitReceived
 
@@ -207,8 +217,9 @@ void onTransformedGrayscaleImageUnitReceived(TransformedGrayscaleImageUnit unit,
 
 **Parameters**
 
-`unit`: A `TransformedGrayscaleImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `TransformedGrayscaleImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onEnhancedGrayscaleImageUnitReceived
 
@@ -220,8 +231,9 @@ void onEnhancedGrayscaleImageUnitReceived(EnhancedGrayscaleImageUnit unit, Inter
 
 **Parameters**
 
-`unit`: An `EnhancedGrayscaleImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: An `EnhancedGrayscaleImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onBinaryImageUnitReceived
 
@@ -233,8 +245,9 @@ void onBinaryImageUnitReceived(BinaryImageUnit unit, IntermediateResultExtraInfo
 
 **Parameters**
 
-`unit`: A `BinaryImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `BinaryImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onTextureDetectionResultUnitReceived
 
@@ -246,8 +259,9 @@ void onTextureDetectionResultUnitReceived(TextureDetectionResultUnit unit, Inter
 
 **Parameters**
 
-`unit`: A `TextureDetectionResultUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `TextureDetectionResultUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onTextureRemovedGrayscaleImageUnitReceived
 
@@ -259,8 +273,9 @@ void onTextureRemovedGrayscaleImageUnitReceived(TextureRemovedGrayscaleImageUnit
 
 **Parameters**
 
-`unit`: A `TextureRemovedGrayscaleImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `TextureRemovedGrayscaleImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onTextureRemovedBinaryImageUnitReceived
 
@@ -272,8 +287,9 @@ void onTextureRemovedBinaryImageUnitReceived(TextureRemovedBinaryImageUnit unit,
 
 **Parameters**
 
-`unit`: A `TextureRemovedBinaryImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `TextureRemovedBinaryImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onContoursUnitReceived
 
@@ -285,8 +301,9 @@ void onContoursUnitReceived(ContoursUnit unit, IntermediateResultExtraInfo info)
 
 **Parameters**
 
-`unit`: A `ContoursUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `ContoursUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onLineSegmentsUnitReceived
 
@@ -298,8 +315,9 @@ void onLineSegmentsUnitReceived(LineSegmentsUnit unit, IntermediateResultExtraIn
 
 **Parameters**
 
-`unit`: A `LineSegmentsUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `LineSegmentsUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onTextZonesUnitReceived
 
@@ -311,8 +329,9 @@ void onTextZonesUnitReceived(TextZonesUnit unit, IntermediateResultExtraInfo inf
 
 **Parameters**
 
-`unit`: A `TextZonesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `TextZonesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onTextRemovedBinaryImageUnitReceived
 
@@ -324,8 +343,9 @@ void onTextRemovedBinaryImageUnitReceived(TextRemovedBinaryImageUnit unit, Inter
 
 **Parameters**
 
-`unit`: A `TextRemovedBinaryImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `TextRemovedBinaryImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onLongLinesUnitReceived
 
@@ -337,8 +357,9 @@ void onLongLinesUnitReceived(LongLinesUnit unit, IntermediateResultExtraInfo inf
 
 **Parameters**
 
-`unit`: A `LongLinesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `LongLinesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onCornersUnitReceived
 
@@ -350,8 +371,9 @@ void onCornersUnitReceived(CornersUnit unit, IntermediateResultExtraInfo info);
 
 **Parameters**
 
-`unit`: A `CornersUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `CornersUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onCandidateQuadEdgesUnitReceived
 
@@ -363,8 +385,9 @@ void onCandidateQuadEdgesUnitReceived(CandidateQuadEdgesUnit unit, IntermediateR
 
 **Parameters**
 
-`unit`: A `CandidateQuadEdgesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `CandidateQuadEdgesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onCandidateBarcodeZonesUnitReceived
 
@@ -376,8 +399,9 @@ void onCandidateBarcodeZonesUnitReceived(CandidateBarcodeZonesUnit unit, Interme
 
 **Parameters**
 
-`unit`: A `CandidateBarcodeZonesUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `CandidateBarcodeZonesUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onScaledUpBarcodeImageUnitReceived
 
@@ -389,8 +413,9 @@ void onScaledUpBarcodeImageUnitReceived(ScaledUpBarcodeImageUnit unit, Intermedi
 
 **Parameters**
 
-`unit`: A `ScaledUpBarcodeImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `ScaledUpBarcodeImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onDeformationResistedBarcodeImageUnitReceived
 
@@ -402,8 +427,9 @@ void onDeformationResistedBarcodeImageUnitReceived(DeformationResistedBarcodeIma
 
 **Parameters**
 
-`unit`: A `DeformationResistedBarcodeImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `DeformationResistedBarcodeImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onComplementedBarcodeImageUnitReceived
 
@@ -415,8 +441,9 @@ void onComplementedBarcodeImageUnitReceived(ComplementedBarcodeImageUnit unit, I
 
 **Parameters**
 
-`unit`: A `ComplementedBarcodeImageUnit` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: A `ComplementedBarcodeImageUnit` object output by the library.
+
+`[in] info`: The extra info of the result.
 
 ### onTaskResultsReceived
 
@@ -428,5 +455,6 @@ void onTaskResultsReceived(IntermediateResult result, IntermediateResultExtraInf
 
 **Parameters**
 
-`unit`: An `IntermediateResult` object output by the library.
-`info`: The extra info of the result.
+`[in] unit`: An `IntermediateResult` object output by the library.
+
+`[in] info`: The extra info of the result.

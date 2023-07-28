@@ -25,21 +25,29 @@ class TextureDetectionResultUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getXSpacing`](#getxspacing) | X-direction spacing of the texture stripes. |
-| [`getYSpacing`](#getyspacing) | Y-direction spacing of the texture stripes. |
+| [`getXSpacing`](#getxspacing) | Gets the X-direction spacing of the texture stripes. |
+| [`getYSpacing`](#getyspacing) | Gets the Y-direction spacing of the texture stripes. |
 
 ### getXSpacing
 
-X-direction spacing of the texture stripes.
+Gets the X-direction spacing of the texture stripes.
 
 ```java
-var xSpacing: Int { get set }
+int getXSpacing()
 ```
+
+**Return Value**
+
+The X-direction spacing of the texture stripes.
 
 ### getYSpacing
 
-Y-direction spacing of the texture stripes.
+Gets the Y-direction spacing of the texture stripes.
 
 ```java
-var ySpacing: Int { get set }
+int getYSpacing()
 ```
+
+**Return Value**
+
+The Y-direction spacing of the texture stripes.

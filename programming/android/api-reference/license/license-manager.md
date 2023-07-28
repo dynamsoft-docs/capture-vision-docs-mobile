@@ -39,9 +39,11 @@ static void initLicense(String license, @NonNull Context context, LicenseVerific
 
 **Parameters**
 
-`license`: A license key.  
-`context`: The context that you want to initialize the license.  
-`listener`: An listener object of `LicenseVerificationListener` to monitor the license activation status.
+`[in] license`: A license key.  
+
+`[in] context`: The context that you want to initialize the license.  
+
+`[in] listener`: An listener object of `LicenseVerificationListener` to monitor the license activation status.
 
 ### setDeviceFriendlyName
 
@@ -53,7 +55,7 @@ static void setDeviceFriendlyName(String name);
 
 **Parameters**
 
-`name`: The name of the device.
+`[in] name`: The name of the device.
 
 ### getDeviceUUID
 

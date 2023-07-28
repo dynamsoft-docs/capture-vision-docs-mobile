@@ -25,12 +25,16 @@ class IntermediateResult
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getIntermediateResultUnits`](#getintermediateresultunits) | Get the array of `IntermediateResultUnit` objects. |
+| [`getIntermediateResultUnits`](#getintermediateresultunits) | Get the array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects. |
 
 ### getIntermediateResultUnits
 
-Get the array of `IntermediateResultUnit` objects.
+Get the array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects.
 
 ```java
 IntermediateResultUnit[] getIntermediateResultUnits()
 ```
+
+**Return Value**
+
+The array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects.

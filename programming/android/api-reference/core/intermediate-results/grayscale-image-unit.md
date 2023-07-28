@@ -25,12 +25,16 @@ class GrayscaleImageUnit: IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | An `ImageData` object as the image data of the grayscale image. |
+| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the grayscale image. |
 
 ### getImageData
 
-An `ImageData` object as the image data of the grayscale image.
+Gets the `ImageData` object as the image data of the grayscale image.
 
 ```java
 ImageData getImageData();
 ```
+
+**Return Value**
+
+The `ImageData` object as the image data of the grayscale image.

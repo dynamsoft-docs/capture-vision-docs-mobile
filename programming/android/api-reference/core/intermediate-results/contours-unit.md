@@ -25,12 +25,16 @@ class ContoursUnit: IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getContours`](#getcontours) | Get the array of `Contour` objects. |
+| [`getContours`](#getcontours) | Gets the array of `Contour` objects. |
 
 ### getContours
 
-Get the array of `Contour` objects.
+Gets the array of `Contour` objects.
 
 ```java
 Contour[] getContours()
 ```
+
+**Return Value**
+
+The array of `Contour` objects.

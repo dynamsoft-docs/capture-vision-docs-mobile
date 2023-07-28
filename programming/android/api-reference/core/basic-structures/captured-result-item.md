@@ -47,3 +47,7 @@ Get the referenced captured result item. The reference dependencies is defined i
 ```java
 CapturedResultItem getReferencedItem();
 ```
+
+**Return Value**
+
+The referenced captured result item.

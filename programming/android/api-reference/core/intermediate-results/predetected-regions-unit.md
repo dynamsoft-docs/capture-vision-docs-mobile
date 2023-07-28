@@ -34,3 +34,7 @@ Get the array of `PredetectedRegionElement` objects.
 ```java
 PredetectedRegionElement[] getPredetectedRegions();
 ```
+
+**Return Value**
+
+The array of [`PredetectedRegionElement`](predetected-region-element.md) objects.

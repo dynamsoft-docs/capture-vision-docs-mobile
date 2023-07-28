@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: CapturedResultFilter - Dynamsoft Core Module Android Edition API Reference
-Description: The protocol CapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+Description: The interface CapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 Keywords: captured result filter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultFilter
 
-The `CapturedResultFilter` protocol represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CapturedResultFilter` interface represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ## Definition
 
@@ -34,7 +34,7 @@ interface CapturedResultFilter
 
 ### onRawImageResultReceived
 
-The method for monitoring the output of RawImageResultItem.
+The method for monitoring the output of [`RawImageResultItem`](raw-image-result-item.md).
 
 ```java
 void onRawImageResultReceived(RawImageResultItem result);
@@ -42,7 +42,7 @@ void onRawImageResultReceived(RawImageResultItem result);
 
 **Parameters**
 
-`result`: A `RawImageResultItem` object as a raw image result.
+`[in] result`: A [`RawImageResultItem`](raw-image-result-item.md) object as a raw image result.
 
 ### onDecodedBarcodesReceived
 
@@ -54,7 +54,7 @@ void onDecodedBarcodesReceived(DecodedBarcodesResult result);
 
 **Parameters**
 
-`result`: A `DecodedBarcodesResult` object as a decoded barcode result.
+`[in] result`: A `DecodedBarcodesResult` object as a decoded barcode result.
 
 ### onRecognizedTextLinesReceived
 
@@ -66,11 +66,11 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 
 **Parameters**
 
-`result`: A `RecognizedTextLinesResult` object as a recognized text line result.
+`[in] result`: A `RecognizedTextLinesResult` object as a recognized text line result.
 
 ### onDetectedQuadsReceived
 
-The method for monitoring the output of DetectedQuadsResult.
+The method for monitoring the output of [`DetectedQuadsResult`]({{site.android_api}}detected-quads-result.html).
 
 ```java
 void onDetectedQuadsReceived(DetectedQuadsResult result);
@@ -78,11 +78,11 @@ void onDetectedQuadsReceived(DetectedQuadsResult result);
 
 **Parameters**
 
-`result`: A `DetectedQuadsResult` object as a detected quad result.
+`[in] result`: A [`DetectedQuadsResult`]({{site.android_api}}detected-quads-result.html) object as a detected quad result.
 
 ### onNormalizedImagesReceived
 
-The method for monitoring the output of NormalizedImagesResult.
+The method for monitoring the output of [`NormalizedImagesResult`]({{site.android_api}}normalized-images-result.html).
 
 ```java
 void onNormalizedImagesReceived(NormalizedImagesResult result);
@@ -90,7 +90,7 @@ void onNormalizedImagesReceived(NormalizedImagesResult result);
 
 **Parameters**
 
-`result`: A `NormalizedImagesResult` object as a normalized image result.
+`[in] result`: A [`NormalizedImagesResult`]({{site.android_api}}normalized-images-result.html) object as a normalized image result.
 
 ### onParsedResultsReceived
 
@@ -102,4 +102,4 @@ void onParsedResultsReceived(ParsedResult result);
 
 **Parameters**
 
-`result`: A `ParsedResult` object as a parsed result.
+`[in] result`: A `ParsedResult` object as a parsed result.

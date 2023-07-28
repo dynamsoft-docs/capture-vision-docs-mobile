@@ -25,12 +25,16 @@ class TextZonesUnit: IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getTextZones`](#gettextzones) | Get the array of `Quadrilaterals` as text zones. |
+| [`getTextZones`](#gettextzones) | Gets the array of `Quadrilaterals` as text zones. |
 
 ### getTextZones
 
-Get the array of `Quadrilaterals` as text zones.
+Gets the array of `Quadrilaterals` as text zones.
 
 ```java
 Quadrilateral[] getTextZones()
 ```
+
+**Return Value**
+
+The array of `Quadrilaterals` as text zones.

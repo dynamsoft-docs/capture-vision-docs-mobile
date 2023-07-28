@@ -16,8 +16,8 @@ noTitleIndex: true
 
 ## CaptureVisionRouter
 
-Create an instance of CaptureVisionRouter
+Create an instance of CaptureVisionRouter.
 
 ```java
-CaptureVisionRouter();
+CaptureVisionRouter(Context context);
 ```

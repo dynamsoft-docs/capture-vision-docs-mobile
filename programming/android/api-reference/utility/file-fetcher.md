@@ -38,12 +38,12 @@ class FileFetcher
 Sets the file with a file path.
 
 ```java
-void setFile(String filePath) throws UtilityException{}
+void setFile(String filePath) throws UtilityException
 ```
 
 **Parameters**
 
-`filePath`: The file path.
+`[in] filePath`: The file path.
 
 **Exception**
 
@@ -54,12 +54,13 @@ An exception is thrown when fail to load the image.
 Sets the file with file bytes.
 
 ```java
-void setFile(byte[] fileBytes) throws UtilityException{}
+void setFile(byte[] fileBytes) throws UtilityException
 ```
 
 **Parameters**
 
-`fileBytes`: The file bytes.  
+`[in] fileBytes`: The file bytes.  
+
 **Exception**
 
 An exception is thrown when fail to load the image.
@@ -69,12 +70,12 @@ An exception is thrown when fail to load the image.
 Sets the file with a `ImageData` object.
 
 ```java
-void setFile(ImageData imageData) throws UtilityException{}
+void setFile(ImageData imageData) throws UtilityException
 ```
 
 **Parameters**
 
-`buffer`: The image data.
+`[in] buffer`: The image data.
 
 **Exception**
 
@@ -85,12 +86,12 @@ An exception is thrown when fail to load the image.
 Sets the file with an `android.graphics.Bitmap`.
 
 ```java
-void setFile(Bitmap bitmap) throws UtilityException{}
+void setFile(Bitmap bitmap) throws UtilityException
 ```
 
 **Parameters**
 
-`image`: An `android.graphics.Bitmap`.
+`[in] image`: An `android.graphics.Bitmap`.
 
 **Exception**
 
@@ -101,30 +102,19 @@ An exception is thrown when fail to load the image.
 Sets the parameters of PDF reading.
 
 ```java
-func setPDFReadingParameter(_ para: PDFReadingParameter) throws
+void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException
 ```
 
 **Parameters**
 
-`para`: The parameter object for reading PDF files.
-
-**Exception**
-
-An exception is thrown when:
-
-* The directory is unavailable.
-* The method is triggered after the capture is started.
-
-**Return Value**
-
-A boolean value that indicates whether the PDF reading mode is set successfully.
+`[in] para`: The parameter object for reading PDF files.
 
 ### hasNextImageToFetch
 
 Whether there is a next image to fetch.
 
 ```java
-func hasNextImageToFetch() -> Bool
+boolean hasNextImageToFetch()
 ```
 
 **Return Value**
@@ -136,7 +126,7 @@ A boolean value that indicates whether there is a next image to fetch.
 Get the image data of the image.
 
 ```java
-func getImage() -> ImageData
+ImageData getImage()
 ```
 
 **Return Value**

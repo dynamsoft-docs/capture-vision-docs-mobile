@@ -25,30 +25,42 @@ class RegionObjectElement
 
 | Method | Description |
 | ------ | ----------- |
-| [`getLocation`](#getlocation) | Get the location info of the element that defined in Quadrilateral. |
-| [`getReferencedElement`](#getreferencedelement) | Get the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`](#getregionobjectelementtype) | Get the type of the element. |
+| [`getLocation`](#getlocation) | Gets the location info of the element that defined in Quadrilateral. |
+| [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`](#getregionobjectelementtype) | Gets the type of the element. |
 
 ### getLocation
 
-Get the location info of the element that defined in Quadrilateral.
+Gets the location info of the element that defined in Quadrilateral.
 
 ```java
 Quadrilateral getLocation();
 ```
 
+**Return Value**
+
+The location info of the element that defined in Quadrilateral.
+
 ### getReferencedElement
 
-Get the referenced element that supports the capturing of this element.
+Gets the referenced element that supports the capturing of this element.
 
 ```java
 RegionObjectElement getReferencedElement();
 ```
 
+**Return Value**
+
+The referenced element that supports the capturing of this element.
+
 ### getRegionObjectElementType
 
-Get the type of the element.
+Gets the type of the element.
 
 ```java
 EnumRegionObjectElementType getType();
 ```
+
+**Return Value**
+
+The [`EnumRegionObjectElementType`]({{site.enums}}core/region-object-element-type.html) of the element.

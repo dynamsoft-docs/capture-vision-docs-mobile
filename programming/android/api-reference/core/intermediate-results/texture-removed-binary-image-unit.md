@@ -25,12 +25,16 @@ class TextureRemovedBinaryImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | An `ImageData` object as the image data of the texture-removed binary image. |
+| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the texture-removed binary image. |
 
 ### getImageData
 
-An `ImageData` object as the image data of the texture-removed binary image.
+Gets the `ImageData` object as the image data of the texture-removed binary image.
 
 ```java
 ImageData getImageData();
 ```
+
+**Return Value**
+
+The `ImageData` object as the image data of the texture-removed binary  image.

@@ -25,12 +25,16 @@ class ColourImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | An `ImageData` object as the image data of the colour image. |
+| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the colour image. |
 
 ### getImageData
 
-An `ImageData` object as the image data of the colour image.
+Gets the `ImageData` object as the image data of the colour image.
 
 ```java
 ImageData getImageData();
 ```
+
+**Return Value**
+
+The `ImageData` object as the image data of the colour image.

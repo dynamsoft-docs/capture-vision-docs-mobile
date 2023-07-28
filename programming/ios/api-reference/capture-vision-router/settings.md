@@ -14,7 +14,7 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`initSettings`](#initsettings) | Initialize the settings with a JSON String. |
 | [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the settings with a JSON file. |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Get the object of the currently active `DSSimplifiedCaptureVisionSettings`. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the capture settings for a specific template. |
 | [`updateSettings`](#updatesettings) | Update capture vision settings with a object of `DSSimplifiedCaptureVisionSettings`. |
 | [`resetSettings`](#resetsettings) | Reset the capture vision settings. |
 | [`outputSettings`](#outputsettings) | Output the targeting capture vision settings to a JSON string. |
@@ -83,7 +83,7 @@ A bool value that indicates whether the settings are initialized successfully.
 
 ## getSimplifiedSettings
 
-Get the object of the currently active `DSSimplifiedCaptureVisionSettings`.
+Retrieves a simplified version of the capture settings for a specific template.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

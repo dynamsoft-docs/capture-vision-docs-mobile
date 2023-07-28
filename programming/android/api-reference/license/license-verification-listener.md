@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: LicenseVerificationListener - Dynamsoft Core Module Android Edition API Reference
-Description: The protocol LicenseVerificationListener of Dynamsoft Core Module includes methods for monitoring the license verification status.
+Description: The interface LicenseVerificationListener of Dynamsoft Core Module includes methods for monitoring the license verification status.
 Keywords: license verification, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # LicenseVerificationListener
 
-The `LicenseVerificationListener` is a protocol that includes methods for monitoring the license verification status.
+The `LicenseVerificationListener` is a interface that includes methods for monitoring the license verification status.
 
 ## Definition
 
@@ -31,5 +31,6 @@ void onLicenseVerified(boolean isSuccess, Exception error);
 
 **Parameters**
 
-`isSuccess`: A Boolean value indicating whether the license is verified successfully.  
-`error`: An exception object. It carries the error code and message that describe the reason why your license activation failed.
+`[in] isSuccess`: A Boolean value indicating whether the license is verified successfully. 
+
+`[in] error`: An exception object. It carries the error code and message that describe the reason why your license activation failed.

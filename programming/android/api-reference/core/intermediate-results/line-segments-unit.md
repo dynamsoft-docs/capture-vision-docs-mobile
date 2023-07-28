@@ -25,12 +25,16 @@ class LineSegmentsUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getLineSegments`](#getlinesegments) | Get the array of `LineSegment`. |
+| [`getLineSegments`](#getlinesegments) | Gets the array of [`LineSegment`](../basic-structures/line-segment.html). |
 
 ### getLineSegments
 
-Get the array of `LineSegment`.
+Gets the array of [`LineSegment`](../basic-structures/line-segment.html).
 
 ```java
 LineSegment[] getLineSegments();
 ```
+
+**Return Value**
+
+The array of [`LineSegment`](../basic-structures/line-segment.html).

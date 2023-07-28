@@ -39,7 +39,7 @@ void addObservedTask(String taskName);
 
 **Parameters**
 
-`taskName`: Specify a task name to add to the observation list.
+`[in] taskName`: Specify a task name to add to the observation list.
 
 ### removeObservedTask
 
@@ -51,7 +51,7 @@ void removeObservedTask(String taskName);
 
 **Parameters**
 
-`taskName`: Specify a task name to remove from the observation list.
+`[in] taskName`: Specify a task name to remove from the observation list.
 
 ### isTaskObserved
 
@@ -63,14 +63,8 @@ boolean isTaskObserved(String taskName);
 
 **Parameters**
 
-`taskName`: Specify a task name to check the observation state.
+`[in] taskName`: Specify a task name to check the observation state.
 
 **Return Value**
 
 A boolean value that indicates whether the specified task is observed.
-
-**Code Snippet**
-
-```java
-let observed = observationParameters.isTaskObserved("TextRecognition")
-```
