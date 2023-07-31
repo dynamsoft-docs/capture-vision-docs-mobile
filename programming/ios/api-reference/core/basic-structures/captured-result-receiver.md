@@ -1,8 +1,8 @@
 ---
 layout: default-layout
 Title: DSCapturedResultReceiver - Dynamsoft Core Module iOS Edition API Reference
-Description: The protocol DSCapturedResultReceiver of Dynamsoft Core Module iOS Edition provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
-Keywords: captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, objective-c, swift
+Description: The protocol DSCapturedResultReceiver of Dynamsoft Core Module iOS Edition provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+Keywords: captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSCapturedResultReceiver
 
-The `DSCapturedResultReceiver` protocol provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+The `DSCapturedResultReceiver` protocol provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
 
 ## Definition
 
@@ -34,7 +34,7 @@ protocol CapturedResultReceiver: NSObjectProtocol
 | Method | Description |
 | ------ | ----------- |
 | [`onCapturedResultReceived`](#oncapturedresultreceived) | The method for monitoring the output of `DSCapturedResult`. |
-| [`onRawImageResultReceived`](#onrawimageresultreceived) | The method for monitoring the output of `DSRawImageResultItem`. |
+| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `DSOriginalImageResultItem`. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DSDecodedBarcodesResult`. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `DSRecognizedTextLinesResult`. |
 | [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DSDetectedQuadsResult`. |
@@ -62,9 +62,9 @@ func onCapturedResultReceived(_ result: DSCapturedResult)
 
 `result` : A `DSCapturedResult` object as a captured result.
 
-### onRawImageResultReceived
+### onOriginalImageResultReceived
 
-The method for monitoring the output of `DSRawImageResultItem`.
+The method for monitoring the output of `DSOriginalImageResultItem`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -72,16 +72,16 @@ The method for monitoring the output of `DSRawImageResultItem`.
 >
 >1. 
 ```objc
-- (void)onRawImageResultReceived:(DSRawImageResultItem*)result;
+- (void)onOriginalImageResultReceived:(DSOriginalImageResultItem*)result;
 ```
 2. 
 ```swift
-func onRawImageResultReceived(_ result: DSRawImageResultItem)
+func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
 ```
 
 **Parameters**
 
-`result` : A `DSRawImageResultItem` object as a raw image result.
+`result` : A `DSOriginalImageResultItem` object as a original image result.
 
 ### onDecodedBarcodesReceived
 

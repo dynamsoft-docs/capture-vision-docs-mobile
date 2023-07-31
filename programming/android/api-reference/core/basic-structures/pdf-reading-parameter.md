@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: PDFReadingParameter - Dynamsoft Core Module Android Edition API Reference
-Description: The class PDFReadingParameter of Dynamsoft Core Module represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the target type.
+Description: The class PDFReadingParameter of Dynamsoft Core Module represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
 Keywords: PDF reading parameter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # PDFReadingParameter
 
-The `PDFReadingParameter` class represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the target type.
+The `PDFReadingParameter` class represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
 
 ## Definition
 
@@ -27,7 +27,7 @@ class PDFReadingParameter
 | ---------- | ---- | ----------- |
 | [`mode`](#mode) | *int* | Set the processing mode of the PDF file. You can either read the PDF info from vecter data or transform the PDF file into an image. The library will transform the PDF file into an image by default. |
 | [`dpi`](#dpi) | *int* | Set the DPI (dots per inch) of the PDF file. |
-| [`type`](#type) | *int* | Set the target type of the image. The default type is page. |
+| [`rasterDataSource`](#rasterdatasource) | *int* | Set the raster data source type of the image. The default type is [`RDS_RASTERIZED_PAGES`]({{site.enums}}core/raster-data-source.html). |
 
 ### mode
 
@@ -45,10 +45,10 @@ Set the DPI (dots per inch) of the PDF file.
 int dpi;
 ```
 
-### type
+### rasterDataSource
 
-Set the target type of the image. The default type is page.
+Set the raster data source type of the image. The default type is [`RDS_RASTERIZED_PAGES`]({{site.enums}}core/raster-data-source.html).
 
 ```java
-int type;
+int rasterDataSource;
 ```

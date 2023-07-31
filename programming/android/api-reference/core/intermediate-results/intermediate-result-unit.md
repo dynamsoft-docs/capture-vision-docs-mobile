@@ -27,11 +27,10 @@ class IntermediateResultUnit
 |------- |-------------|
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
 | [`gethashId`](#gethashid) | Gets the hash ID of the unit. |
-| [`getSourceImageHashId`](#getsourceimagehashid) | Gets the hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
-| [`getSourceImageTag`](#getsourceimagetag) | Gets the image tag of the source image. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the source image. |
 | [`getType`](#gettype) | Gets the type of the intermediate result unit. |
-| [`getLocalToSourceImageTransformMatrix`](#getlocaltosourceimagetransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
-| [`getRotationTransformMatrix`](#getrotationtransformmatrix) | Gets the rotation transformation matrix of the original image relative to the rotated image. |
+| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html). |
 
 ### getHashId
 
@@ -45,24 +44,24 @@ String getHashId();
 
 The hash ID of the unit.
 
-### getSourceImageHashId
+### getOriginalImageHashId
 
 Gets the hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class.
 
 ```java
-String getSourceImageHashId();
+String getOriginalImageHashId();
 ```
 
 **Return Value**
 
 The hash ID of the source image.
 
-### getSourceImageTag
+### getOriginalImageTag
 
 Gets the image tag of the source image.
 
 ```java
-ImageTag getSourceImageTag();
+ImageTag getOriginalImageTag();
 ```
 
 **Return Value**
@@ -81,29 +80,26 @@ long getType();
 
 The type of the intermediate result unit.
 
-### getLocalToSourceImageTransformMatrix
+### getTransformMatrix
 
-Gets the transformation matrix from local to source image coordinates.
+Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html).
 
 ```java
-Matrix getLocalToSourceImageTransformMatrix();
+Matrix getTransformMatrix(int matrixType);
 ```
+
+**Parameters**
+
+`[in] matrixType`: The transform matrix type.
 
 **Return Value**
 
-The transformation matrix from local to source image coordinates.
+The corresponding transformation matrices are as follows:
 
-### getRotationTransformMatrix
-
-Gets the rotation transformation matrix of the original image relative to the rotated image.
-
-```java
-Matrix getRotationTransformMatrix();
-```
-
-**Return Value**
-
-The rotation transformation matrix of the original image relative to the rotated image.
+- local image to original image
+- original image to local image
+- rotated image to original image
+- original image to rotated image
 
 ### clone
 

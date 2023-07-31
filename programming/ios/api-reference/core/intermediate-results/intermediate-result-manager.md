@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: DSIntermediateResultManager - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSIntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get raw image data using an image hash id.
+Description: The class DSIntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 Keywords: intermediate result manager, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSIntermediateResultManager
 
-The `DSIntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get raw image data using an image hash id.
+The `DSIntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
 ## Definition
 
@@ -35,7 +35,7 @@ class IntermediateResultManager : NSObject
 | ------ | ----------- |
 | [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
 | [`removeResultReceiver`](#removeresultreceiver) | Adds an intermediate result receiver. |
-| [`getRawImage`](#getrawimage) | Gets the raw image data using an image hash id. |
+| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
 
 ### addResultReceiver
 
@@ -138,9 +138,9 @@ do {
 }
 ```
 
-### getRawImage
+### getOriginalImage
 
-Gets the raw image data using an image hash id.
+Gets the original image data using an image hash id.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -148,11 +148,11 @@ Gets the raw image data using an image hash id.
 >
 >1. 
 ```objc
-- (DSImageData)getRawImage:(NSString)imageHashId;
+- (DSImageData)getOriginalImage:(NSString)imageHashId;
 ```
 2. 
 ```swift
-func getRawImage(_ imageHashId: String) -> DSImageData
+func getOriginalImage(_ imageHashId: String) -> DSImageData
 ```
 
 **Parameters**
@@ -161,7 +161,7 @@ func getRawImage(_ imageHashId: String) -> DSImageData
 
 **Return Value**
 
-The raw image data as `DSImageData`.
+The original image data as `DSImageData`.
 
 **Code Snippet**
 
@@ -171,9 +171,9 @@ The raw image data as `DSImageData`.
 >
 >1. 
 ```objc
-DSImageData *imageData = [resultManager getRawImage:imageHashId];
+DSImageData *imageData = [resultManager getOriginalImage:imageHashId];
 ```
 2. 
 ```swift
-let imageData = resultManager.getRawImage(imageHashId)
+let imageData = resultManager.getOriginalImage(imageHashId)
 ```

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: DSCapturedResultFilter - Dynamsoft Core Module iOS Edition API Reference
-Description: The protocol DSCapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+Description: The protocol DSCapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 Keywords: captured result filter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSCapturedResultFilter
 
-The `DSCapturedResultFilter` protocol represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `DSCapturedResultFilter` protocol represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ## Declaration
 
@@ -31,16 +31,16 @@ protocol CapturedResultFilter : NSObjectProtocol
 
 | Method | Description |
 | ------ | ----------- |
-| [`onRawImageResultReceived`](#onrawimageresultreceived) | The method for monitoring the output of `DSRawImageResultItem`. |
+| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `DSOriginalImageResultItem`. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DSDecodedBarcodesResult`. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `DSRecognizedTextLinesResult`. |
 | [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DSDetectedQuadsResult`. |
 | [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The method for monitoring the output of `DSNormalizedImagesResult`. |
 | [`onParsedResultsReceived`](#onparsedresultsreceived) | The method for monitoring the output of `DSParsedResult`. |
 
-### onRawImageResultReceived
+### onOriginalImageResultReceived
 
-The method for monitoring the output of DSRawImageResultItem.
+The method for monitoring the output of DSOriginalImageResultItem.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -48,16 +48,16 @@ The method for monitoring the output of DSRawImageResultItem.
 >
 >1. 
 ```objc
-- (void)onRawImageResultReceived:(DSRawImageResultItem*)result;
+- (void)onOriginalImageResultReceived:(DSOriginalImageResultItem*)result;
 ```
 2. 
 ```swift
-func onRawImageResultReceived(_ result: DSRawImageResultItem)
+func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
 ```
 
 **Parameters**
 
-`result`: A `DSRawImageResultItem` object as a raw image result.
+`result`: A `DSOriginalImageResultItem` object as a original image result.
 
 ### onDecodedBarcodesReceived
 

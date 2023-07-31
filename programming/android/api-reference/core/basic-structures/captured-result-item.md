@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: CapturedResultItem - Dynamsoft Core Module Android Edition API Reference
-Description: The class CapturedResultItem of Dynamsoft Core Module represents an item in a captured result, such as barcode, text line, detected quad, normalized image, raw image, parsed item, etc.
+Description: The class CapturedResultItem of Dynamsoft Core Module represents an item in a captured result, such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
 Keywords: captured result item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultItem
 
-The `CapturedResultItem` class represents an item in a captured result, such as barcode, text line, detected quad, normalized image, raw image, parsed item, etc.
+The `CapturedResultItem` class represents an item in a captured result, such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
 
 ## Definition
 

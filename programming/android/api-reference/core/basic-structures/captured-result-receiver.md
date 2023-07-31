@@ -1,8 +1,8 @@
 ---
 layout: default-layout
 Title: CapturedResultReceiver - Dynamsoft Core Module Android Edition API Reference
-Description: The interface CapturedResultReceiver of Dynamsoft Core Module Android Edition provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
-Keywords: captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, Java, Kotlin
+Description: The interface CapturedResultReceiver of Dynamsoft Core Module Android Edition provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+Keywords: captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultReceiver
 
-The `CapturedResultReceiver` interface provides methods for monitoring the output of captured results, including captured result, raw image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+The `CapturedResultReceiver` interface provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
 
 ## Definition
 
@@ -26,7 +26,7 @@ interface CapturedResultReceiver
 | Method | Description |
 | ------ | ----------- |
 | [`onCapturedResultReceived`](#oncapturedresultreceived) | The method for monitoring the output of `CapturedResult`. |
-| [`onRawImageResultReceived`](#onrawimageresultreceived) | The method for monitoring the output of `RawImageResultItem`. |
+| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `OriginalImageResultItem`. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DecodedBarcodesResult`. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `RecognizedTextLinesResult`. |
 | [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DetectedQuadsResult`. |
@@ -45,17 +45,17 @@ void onCapturedResultReceived(CapturedResult result);
 
 `[in] result`: A [`CapturedResult`](captured-result.md) object as a captured result.
 
-### onRawImageResultReceived
+### onOriginalImageResultReceived
 
-The method for monitoring the output of [`RawImageResultItem`](raw-image-result-item.md).
+The method for monitoring the output of [`OriginalImageResultItem`](original-image-result-item.md).
 
 ```java
-void onRawImageResultReceived(RawImageResultItem result);
+void onOriginalImageResultReceived(OriginalImageResultItem result);
 ```
 
 **Parameters**
 
-`[in] result`: A [`RawImageResultItem`](raw-image-result-item.md) object as a raw image result.
+`[in] result`: A [`OriginalImageResultItem`](original-image-result-item.md) object as a original image result.
 
 ### onDecodedBarcodesReceived
 

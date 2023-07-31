@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: CapturedResultFilter - Dynamsoft Core Module Android Edition API Reference
-Description: The interface CapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+Description: The interface CapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 Keywords: captured result filter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultFilter
 
-The `CapturedResultFilter` interface represents a captured result filter, which is responsible for filtering different types of captured results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CapturedResultFilter` interface represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ## Definition
 
@@ -25,24 +25,24 @@ interface CapturedResultFilter
 
 | Method | Description |
 | ------ | ----------- |
-| [`onRawImageResultReceived`](#onrawimageresultreceived) | The method for monitoring the output of `RawImageResultItem`. |
+| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `OriginalImageResultItem`. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DecodedBarcodesResult`. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `RecognizedTextLinesResult`. |
 | [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DetectedQuadsResult`. |
 | [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The method for monitoring the output of `NormalizedImagesResult`. |
 | [`onParsedResultsReceived`](#onparsedresultsreceived) | The method for monitoring the output of `ParsedResult`. |
 
-### onRawImageResultReceived
+### onOriginalImageResultReceived
 
-The method for monitoring the output of [`RawImageResultItem`](raw-image-result-item.md).
+The method for monitoring the output of [`OriginalImageResultItem`](original-image-result-item.md).
 
 ```java
-void onRawImageResultReceived(RawImageResultItem result);
+void onOriginalImageResultReceived(OriginalImageResultItem result);
 ```
 
 **Parameters**
 
-`[in] result`: A [`RawImageResultItem`](raw-image-result-item.md) object as a raw image result.
+`[in] result`: A [`OriginalImageResultItem`](original-image-result-item.md) object as a original image result.
 
 ### onDecodedBarcodesReceived
 

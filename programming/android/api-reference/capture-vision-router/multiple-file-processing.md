@@ -19,7 +19,7 @@ noTitleIndex: true
 | [`addResultReceiver`](#addresultreceiver) | Regisiter a CapturedResultReceiver to get callback when CapturedResult output. |
 | [`removeResultReceiver`](#removeresultreceiver) | Remove a CapturedResultReceiver. |
 | [`startCapturing`](#startcapturing) | Start capturing with the targeting template. |
-| [`stopCapturing`](#stopcapturing) | Start capturing with the targeting template. |
+| [`stopCapturing`](#stopcapturing) | Stop capturing. |
 | [`addCaptureStateListener`](#addcapturestatelistener) | Regisiter a CaptureStateListener to get callback when capture state changes. |
 | [`removeCaptureStateListener`](#removecapturestatelistener) | Remove a CaptureStateListener. |
 | [`addResultFilter`](#addresultfilter) | Regisiter a CapturedResultFilter to get callback when filtered result output. |

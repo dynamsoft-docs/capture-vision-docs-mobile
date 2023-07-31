@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: DSPDFReadingParameter - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSPDFReadingParameter of Dynamsoft Core Module represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the target type.
+Description: The class DSPDFReadingParameter of Dynamsoft Core Module represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
 Keywords: PDF reading parameter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSPDFReadingParameter
 
-The `DSPDFReadingParameter` class represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the target type.
+The `DSPDFReadingParameter` class represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
 
 ## Definition
 
@@ -33,9 +33,9 @@ class PDFReadingParameter : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`mode`](#mode) | *DSPDFReadingMode* | Set the processing mode of the PDF file. You can either read the PDF info from vecter data or transform the PDF file into an image. The library will transform the PDF file into an image by default. |
+| [`mode`](#mode) | *DSPDFReadingMode* | Set the processing mode of the PDF file. You can either read the PDF info from vector data or transform the PDF file into an image. The library will transform the PDF file into an image by default. |
 | [`dpi`](#dpi) | *NSInteger* | Set the DPI (dots per inch) of the PDF file. |
-| [`type`](#type) | *DSTargetType* | Set the target type of the image. The default type is page. |
+| [`rasterDataSource`](#rasterdatasource) | *DSRasterDataSource* | Set the data source type of the image. The default type is pages. |
 
 ### mode
 
@@ -71,9 +71,9 @@ Set the DPI (dots per inch) of the PDF file.
 var dpi: Int { get set }
 ```
 
-### type
+### rasterDataSource
 
-Set the target type of the image. The default type is page.
+Set the raster data source type of the image. The default type is pages.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,9 +81,9 @@ Set the target type of the image. The default type is page.
 >
 >1. 
 ```objc
-@property(nonatomic, assign) DSTargetType type;
+@property(nonatomic, assign) DSRasterDataSource rasterDataSource;
 ```
 2. 
 ```swift
-var type: TargetType { get set }
+var rasterDataSource: DSRasterDataSource { get set }
 ```

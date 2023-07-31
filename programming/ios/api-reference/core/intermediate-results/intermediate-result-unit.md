@@ -34,16 +34,15 @@ class IntermediateResultUnit : NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`hashId`](#hashid) | *NSString \** | The hash ID of the unit. |
-| [`sourceImageHashId`](#sourceimagehashid) | *NSString \** | The hash ID of the source image. You can use this ID to get the source image via IntermediateResultManager class. |
-| [`sourceImageTag`](#sourceimagetag) | *DSImageTag \** | The image tag of the source image. |
+| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the source image. You can use this ID to get the source image via IntermediateResultManager class. |
+| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The image tag of the source image. |
 | [`type`](#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
-| [`localToSourceImageTransformMatrix`](#localtosourceimagetransformmatrix) | *CGAffineTransform* | The transformation matrix from local to source image coordinates. |
-| [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
 
 ## Methods
 
 | Method | Description |
 |------- |-------------|
+| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html). |
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
 
 ### hashId
@@ -63,7 +62,7 @@ The hash ID of the unit.
 var hashId: String? { get }
 ```
 
-### sourceImageHashId
+### originalImageHashId
 
 The hash ID of the source image. You can use this ID to get the source image via IntermediateResultManager class.
 
@@ -73,14 +72,14 @@ The hash ID of the source image. You can use this ID to get the source image via
 >
 >1. 
 ```objc
-@property(nonatomic, copy, readonly) NSString *sourceImageHashId;
+@property(nonatomic, copy, readonly) NSString *originalImageHashId;
 ```
 2. 
 ```swift
-var sourceImageHashId: String? { get }
+var originalImageHashId: String? { get }
 ```
 
-### sourceImageTag
+### originalImageTag
 
 The image tag of the source image.
 
@@ -90,11 +89,11 @@ The image tag of the source image.
 >
 >1. 
 ```objc
-@property(nonatomic, strong, readonly, nullable) DSImageTag *sourceImageTag;
+@property(nonatomic, strong, readonly, nullable) DSImageTag *originalImageTag;
 ```
 2. 
 ```swift
-var sourceImageTag: ImageTag? { get }
+var originalImageTag: ImageTag? { get }
 ```
 
 ### type
@@ -114,26 +113,9 @@ The type of the intermediate result unit.
 var type: EnumIntermediateResultUnitType { get }
 ```
 
-### localToSourceImageTransformMatrix
+### getTransformMatrix
 
-The transformation matrix from local to source image coordinates.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign, readonly) CGAffineTransform localToSourceImageTransformMatrix;
-```
-2. 
-```swift
-var localToSourceImageTransformMatrix: CGAffineTransform { get }
-```
-
-### rotationTransformMatrix
-
-The rotation transformation matrix of the original image relative to the rotated image.
+Gets the transformation matrix via [`DSTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -141,12 +123,25 @@ The rotation transformation matrix of the original image relative to the rotated
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) CGAffineTransform rotationTransformMatrix;
+-(CGAffineTransform)getTransformMatrix:(DSTransformMatrixType)matrixType;
 ```
 2. 
 ```swift
-var rotationTransformMatrix: CGAffineTransform { get }
+func getTransformMatrix(DSTransformMatrixType matrixType) -> CGAffineTransform
 ```
+
+**Parameters**
+
+`[in] matrixType`: The transform matrix type.
+
+**Return Value**
+
+The corresponding transformation matrices are as follows:
+
+- local image to original image
+- original image to local image
+- rotated image to original image
+- original image to rotated image
 
 ### clone
 

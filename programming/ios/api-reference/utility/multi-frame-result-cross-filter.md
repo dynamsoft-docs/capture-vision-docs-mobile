@@ -39,7 +39,7 @@ class MultiFrameResultCrossFilter: NSObject, CapturedResultFilter
 | [`isDuplicateFilterEnabled`](#isduplicatefilterenabled) | Whether the duplicate filter feature is enabled for the specific result item type. |
 | [`isResultVerificationEnabled`](#isresultverificationenabled) | Whether the result verification feature is enabled for the specific result item type. |
 | [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the duplicate forget time for the specific captured result item types. |
-| [`onRawImageResultReceived`](#onrawimageresultreceived) | Callback method for receiving raw image result items. |
+| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | Callback method for receiving original image result items. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | Callback method for receiving decoded barcode results. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | Callback method for receiving recognized text line results. |
 | [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | Callback method for receiving detected quad results. |
@@ -193,9 +193,9 @@ func getDuplicateForgetTime(resultItemType: DSCapturedResultItemType) -> Int
 
 The duplicate forget time of the specified capture result type.
 
-### onRawImageResultReceived
+### onOriginalImageResultReceived
 
-Callback method for receiving raw image result items.
+Callback method for receiving original image result items.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -203,16 +203,16 @@ Callback method for receiving raw image result items.
 >
 >1. 
 ```objc
-- (void)onRawImageResultReceived:(DSRawImageResultItem *)pResult;
+- (void)onOriginalImageResultReceived:(DSOriginalImageResultItem *)pResult;
 ```
 2. 
 ```swift
-func onRawImageResultReceived(pResult: DSRawImageResultItem)
+func onOriginalImageResultReceived(pResult: DSOriginalImageResultItem)
 ```
 
 **Parameters**
 
-`pResult`: A `DSRawImageResultItem` object representing the raw image result.
+`pResult`: A `DSOriginalImageResultItem` object representing the original image result.
 
 ### onDecodedBarcodesReceived
 

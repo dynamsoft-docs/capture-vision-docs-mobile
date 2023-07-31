@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 Title: IntermediateResultManager - Dynamsoft Core Module Android Edition API Reference
-Description: The class IntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get raw image data using an image hash id.
+Description: The class IntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 Keywords: intermediate result manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # IntermediateResultManager
 
-The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get raw image data using an image hash id.
+The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
 ## Definition
 
@@ -27,7 +27,7 @@ class IntermediateResultManager
 | ------ | ----------- |
 | [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
 | [`removeResultReceiver`](#removeresultreceiver) | Adds an intermediate result receiver. |
-| [`getRawImage`](#getrawimage) | Gets the raw image data using an image hash id. |
+| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
 
 ### addResultReceiver
 
@@ -61,12 +61,12 @@ void removeResultReceiver(IntermediateResultReceiver receiver) throws CoreExcept
 
 An exception is thrown when the result receiver is not removed successfully.
 
-### getRawImage
+### getOriginalImage
 
-Gets the raw image data using an image hash id.
+Gets the original image data using an image hash id.
 
 ```java
-ImageData getRawImage(String imageHashId);
+ImageData getOriginalImage(String imageHashId);
 ```
 
 **Parameters**
@@ -75,4 +75,4 @@ ImageData getRawImage(String imageHashId);
 
 **Return Value**
 
-The raw image data as `ImageData`.
+The original image data as `ImageData`.
