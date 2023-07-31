@@ -114,8 +114,8 @@ async function onDeviceReady() {
 
 Dynamsoft Capture Vision provides a build-in camera module for you to capture and display the video stream. The following two classes are used when initializing the camera module:
 
-- [`DCVCameraEnhancer`](../api-reference/camera-enhancer.md): The class that provides camera controlling APIs. Please visit the link to learn more.
-- [`DCVCameraView`](../api-reference/camera-view.md): The camera view that will display the video stream and other UI elements. Please visit the link to learn more.
+- <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/api-reference/camera-enhancer.html" target="_blank">DCVCameraEnhancer</a>: The class that provides camera controlling APIs. Please visit the link to learn more.
+- <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/api-reference/camera-view.html" target="_blank">DCVCameraView</a>: The camera view class is responsible for displaying the video stream and other UI elements. Please visit the link to learn more.
 
 1. Find the **www/index.html** file in your project. Replace the original content with the following code:
 
@@ -243,7 +243,7 @@ Dynamsoft Capture Vision provides a build-in camera module for you to capture an
 
 ### Using the Settings Templates
 
-DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to [`EnumDBRPresetTemplate`](../api-reference/enum-dbr-preset-template.md). Here is a quick example of prioritizing read rate for image-based decoding:
+DBR offers several preset templates for different popular scenarios. For example, to prioritize speed over accuracy, you can use one of the speed templates and choose the corresponding template for images or video, and vice versa if you're looking to prioritize read rate and accuracy over speed. For the full set of templates, please refer to <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/api-reference/enum-dbr-preset-template.html" target="_blank">EnumDBRPresetTemplate</a>. Here is a quick example of prioritizing read rate for image-based decoding:
 
 ```js
 dcvBarcodeReader.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_READ_RATE_FIRST)
@@ -251,7 +251,7 @@ dcvBarcodeReader.updateRuntimeSettings(Dynamsoft.EnumDBRPresetTemplate.IMAGE_REA
 
 ### Using the DBRRuntimeSettings Interface
 
-The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to [`DBRRuntimeSettings`](../api-reference/interface-dbr-runtime-settings.md). Here is a quick example:
+The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout. For more info on each, please refer to <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/api-reference/interface-dbr-runtime-settings.html" target="_blank">DBRRuntimeSettings</a>. Here is a quick example:
 
 ```js
 // Get the current runtime settings of the barcode reader.
@@ -267,7 +267,7 @@ await reader.updateRuntimeSettings(settings)
 
 ### Customizing the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the [`Region`](../api-reference/interface-region.md) interface along with the `DCVCameraEnhancer` class.
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we will need to use the <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/api-reference/interface-region.html" target="_blank">Region</a> interface along with the `DCVCameraEnhancer` class.
 
 How to set scan region:
 
