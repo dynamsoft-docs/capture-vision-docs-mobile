@@ -1,0 +1,72 @@
+---
+layout: default-layout
+Title: DSUtilityModule - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+Description: The class DSUtilityModule of Dynamsoft Capture Vision Router Module represents general functions of the utility module.
+Keywords: utility module, objective-c, swift
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
+
+# DSUtilityModule
+
+The `DSUtilityModule` class defines general functions of the utility module.
+
+## Definition
+
+*Assembly:* DynamsoftUtility.framework
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSUtilityModule : NSObject
+```
+2. 
+```swift
+class UtilityModule : NSObject
+```
+
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`getVersion`](#getversion) | Get the version of Dynamsoft Utility. |
+
+## getVersion
+
+Get the version of Dynamsoft Utility.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
++ (NSString *)getVersion;
+```
+2. 
+```swift
+class func getVersion() -> String
+```
+
+**Return Value**
+
+The version of Dynamsoft Utility.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSString *version = [DSUtilityModule getVersion];
+```
+2. 
+```swift
+let version = UtilityModule.getVersion()
+```
