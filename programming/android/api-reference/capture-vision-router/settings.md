@@ -15,8 +15,8 @@ noTitleIndex: true
 | [`initSettings`](#initsettings) | Initialize the capture settings with a JSON String. |
 | [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the capture settings with a JSON file. |
 | [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the capture settings for a specific template. |
-| [`updateSettings`](#updatesettings) | Update capture vision settings with a object of `SimplifiedCaptureVisionSettings`. |
-| [`resetSettings`](#resetsettings) | Reset the capture vision settings. |
+| [`updateSettings`](#updatesettings) | Update capture vision settings with an object of `SimplifiedCaptureVisionSettings`. |
+| [`resetSettings`](#resetsettings) | Resets all templates to factory settings. |
 | [`outputSettings`](#outputsettings) | Output the targeting capture vision settings to a JSON string. |
 | [`outputSettingsToFile`](#outputsettingstofile) | Output the targeting capture vision settings to a JSON file. |
 
@@ -102,7 +102,7 @@ An exception is thrown when:
 
 ## resetSettings
 
-Reset the capture vision settings.
+Resets all templates to factory settings.
 
 ```java
 void resetSettings() throws CaptureVisionRouterException;

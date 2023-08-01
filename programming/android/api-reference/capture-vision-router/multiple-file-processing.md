@@ -14,16 +14,16 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`setInput`](#setinput) | Sets an image source to provide images for consecutive process. |
 | [`getInput`](#getinput) | Gets the attached image source adapter object of the capture vision router. |
-| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Regisiter a ImageSourceStateListener to get callback when the status of ImageSourceAdapter changes. |
-| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Remove a ImageSourceStateListener. |
-| [`addResultReceiver`](#addresultreceiver) | Regisiter a CapturedResultReceiver to get callback when CapturedResult output. |
-| [`removeResultReceiver`](#removeresultreceiver) | Remove a CapturedResultReceiver. |
+| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Registers a ImageSourceStateListener to get callback when the status of ImageSourceAdapter changes. |
+| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a ImageSourceStateListener. |
+| [`addResultReceiver`](#addresultreceiver) | Registers a CapturedResultReceiver to get callback when CapturedResult output. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes a CapturedResultReceiver. |
 | [`startCapturing`](#startcapturing) | Start capturing with the targeting template. |
 | [`stopCapturing`](#stopcapturing) | Stop capturing. |
-| [`addCaptureStateListener`](#addcapturestatelistener) | Regisiter a CaptureStateListener to get callback when capture state changes. |
-| [`removeCaptureStateListener`](#removecapturestatelistener) | Remove a CaptureStateListener. |
-| [`addResultFilter`](#addresultfilter) | Regisiter a CapturedResultFilter to get callback when filtered result output. |
-| [`removeResultFilter`](#removeresultfilter) | Remove a CapturedResultFilter. |
+| [`addCaptureStateListener`](#addcapturestatelistener) | Registers a CaptureStateListener to get callback when capture state changes. |
+| [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a CaptureStateListener. |
+| [`addResultFilter`](#addresultfilter) | Registers a CapturedResultFilter to get callback when filtered result output. |
+| [`removeResultFilter`](#removeresultfilter) | Removes a CapturedResultFilter. |
 
 ## setInput
 
@@ -71,7 +71,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeImageSourceStateListener
 
-Remove a [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md).
+Removes a [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md).
 
 ```java
 void removeImageSourceStateListener(ImageSourceStateListener listener) throws CaptureVisionRouterException;
@@ -103,7 +103,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeResultReceiver
 
-Remove a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
+Removes a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
 
 ```java
 void removeResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionRouterException;
@@ -163,7 +163,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeCaptureStateListener
 
-Remove a [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md).
+Removes a [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md).
 
 ```java
 void removeCaptureStateListener(CaptureStateListener listener) throws CaptureVisionRouterException;
@@ -195,7 +195,7 @@ An exception is thrown if the method is triggered after the capture is started.
 
 ## removeResultFilter
 
-Remove a [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
+Removes a [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
 
 ```java
 void removeResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterException;

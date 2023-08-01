@@ -14,16 +14,16 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`setInput`](#setinput) | Sets an image source to provide images for consecutive process. |
 | [`getInput`](#getinput) | Gets the attached image source adapter object of the capture vision router. |
-| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Regisiter a DSImageSourceStateListener to get callback when the status of DSImageSourceAdapter changes. |
-| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Remove a DSImageSourceStateListener. |
-| [`addResultReceiver`](#addresultreceiver) | Regisiter a DSCapturedResultReceiver to get callback when DSCapturedResult output. |
-| [`removeResultReceiver`](#removeresultreceiver) | Remove a DSCapturedResultReceiver. |
+| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Registers a DSImageSourceStateListener to get callback when the status of DSImageSourceAdapter changes. |
+| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a DSImageSourceStateListener. |
+| [`addResultReceiver`](#addresultreceiver) | Registers a DSCapturedResultReceiver to get callback when DSCapturedResult output. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes a DSCapturedResultReceiver. |
 | [`startCapturing`](#startcapturing) | Start capturing with the targeting template. |
 | [`stopCapturing`](#stopcapturing) | Start capturing with the targeting template. |
-| [`addCaptureStateListener`](#addcapturestatelistener) | Regisiter a DSCaptureStateListener to get callback when capture state changes. |
-| [`removeCaptureStateListener`](#removecapturestatelistener) | Remove a DSCaptureStateListener. |
-| [`addResultFilter`](#addresultfilter) | Regisiter a DSCapturedResultFilter to get callback when filtered result output. |
-| [`removeResultFilter`](#removeresultfilter) | Remove a DSCapturedResultFilter. |
+| [`addCaptureStateListener`](#addcapturestatelistener) | Registers a DSCaptureStateListener to get callback when capture state changes. |
+| [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a DSCaptureStateListener. |
+| [`addResultFilter`](#addresultfilter) | Registers a DSCapturedResultFilter to get callback when filtered result output. |
+| [`removeResultFilter`](#removeresultfilter) | Removes a DSCapturedResultFilter. |
 
 ## setInput
 
@@ -75,7 +75,7 @@ func getInput() throws -> DSImageSourceAdapter
 
 ## addImageSourceStateListener
 
-Regisiter a `DSImageSourceStateListener` to get callback when the status of `DSImageSourceAdapter` changes.
+Registers a `DSImageSourceStateListener` to get callback when the status of `DSImageSourceAdapter` changes.
 
 **Parameters**
 
@@ -102,7 +102,7 @@ func addImageSourceStateListener(_ listener:DSImageSourceStateListener) throws -
 
 ## removeImageSourceStateListener
 
-Remove a `DSImageSourceStateListener`.
+Removes a `DSImageSourceStateListener`.
 
 **Parameters**
 
@@ -129,7 +129,7 @@ func removeImageSourceStateListener(_ listener:DSImageSourceStateListener) throw
 
 ## addResultReceiver
 
-Regisiter a `DSCapturedResultReceiver` to get callback when `DSCapturedResult` output.
+Registers a `DSCapturedResultReceiver` to get callback when `DSCapturedResult` output.
 
 **Parameters**
 
@@ -156,7 +156,7 @@ func addResultReceiver(_ listener:DSCapturedResultReceiver) throws -> BOOL
 
 ## removeResultReceiver
 
-Remove a `DSCapturedResultReceiver`.
+Removes a `DSCapturedResultReceiver`.
 
 **Parameters**
 
@@ -231,7 +231,7 @@ func stopCapturing()
 
 ## addCaptureStateListener
 
-Regisiter a `DSCaptureStateListener` to get callback when capture state changes.
+Registers a `DSCaptureStateListener` to get callback when capture state changes.
 
 **Parameters**
 
@@ -258,7 +258,7 @@ func addCaptureStateListener(_ listener:DSCaptureStateListener) throws -> BOOL
 
 ## removeCaptureStateListener
 
-Remove a `DSCaptureStateListener`.
+Removes a `DSCaptureStateListener`.
 
 **Parameters**
 
@@ -285,7 +285,7 @@ func removeCaptureStateListener(_ listener:DSCaptureStateListener) throws -> BOO
 
 ## addResultFilter
 
-Regisiter a `DSCapturedResultFilter` to get callback when filtered result output.
+Registers a `DSCapturedResultFilter` to get callback when filtered result output.
 
 **Parameters**
 
@@ -312,7 +312,7 @@ func addResultFilter(_ filter:DSCapturedResultFilter) throws -> BOOL
 
 ## removeResultFilter
 
-Remove a `DSCapturedResultFilter`.
+Removes a `DSCapturedResultFilter`.
 
 **Parameters**
 

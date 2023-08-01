@@ -12,11 +12,11 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| `getIntermediateResultManager` | Get the object of `IntermediateResultManager`. |
+| `getIntermediateResultManager` | Gets the object of `IntermediateResultManager`. |
 
 ## getIntermediateResultManager
 
-Get the object of [`IntermediateResultManager`](../core/intermediate-results/intermediate-result-manager.md).
+Gets the object of [`IntermediateResultManager`](../core/intermediate-results/intermediate-result-manager.md).
 
 ```java
 IntermediateResultManager getIntermediateResultManager();

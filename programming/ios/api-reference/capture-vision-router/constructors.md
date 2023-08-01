@@ -12,11 +12,11 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| init | Create an instance of `CaptureVisionRouter`. |
+| [`init`](#init) | Creates an instance of `CaptureVisionRouter`. |
 
 ## init
 
-Create an instance of CaptureVisionRouter
+Creates an instance of CaptureVisionRouter.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

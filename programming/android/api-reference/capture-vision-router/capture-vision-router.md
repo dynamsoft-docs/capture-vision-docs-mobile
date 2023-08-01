@@ -20,3 +20,53 @@ The `CaptureVisionRouter` class is what a user uses to interact with image-proce
 ```java
 class CaptureVisionRouter
 ```
+
+## Constructor
+
+| Method                                                           | Description                                           |
+| ---------------------------------------------------------------- | ----------------------------------------------------- |
+| [`CaptureVisionRouter`](constructors.md#ccapturevisionrouter)    | Default constructor of `CaptureVisionRouter` object. |
+
+## Single-File Processing
+
+| Method                                       | Description                                               |
+| ---------------------------------------------- | --------------------------------------------------------- |
+| [`capture(filePath,templateName)`](single-file-processing.md#capturefilepathtemplatename) | Implement data capture on the given file. |
+| [`capture(fileBytes,templateName)`](single-file-processing.md#capturefilebytestemplatename) | Implement data capture on the given file in memory. |
+| [`capture(imageData,templateName)`](single-file-processing.md#captureimagedatatemplatename) | Implement data capture on the given image data. |
+| [`capture(bitmap,templateName)`](single-file-processing.md#capturebitmaptemplatename) | Implement data capture on the given Bitmap. |
+
+## Multiple-File Processing
+
+| Method | Description |
+| ------ | ----------- |
+| [`setInput`](multiple-file-processing.md#setinput) | Sets an image source to provide images for consecutive process. |
+| [`getInput`](multiple-file-processing.md#getinput) | Gets the attached image source adapter object of the capture vision router. |
+| [`addImageSourceStateListener`](multiple-file-processing.md#addimagesourcestatelistener) | Register a ImageSourceStateListener to get callback when the status of ImageSourceAdapter changes. |
+| [`removeImageSourceStateListener`](multiple-file-processing.md#removeimagesourcestatelistener) | Removes a ImageSourceStateListener. |
+| [`addResultReceiver`](multiple-file-processing.md#addresultreceiver) | Register a CapturedResultReceiver to get callback when CapturedResult output. |
+| [`removeResultReceiver`](multiple-file-processing.md#removeresultreceiver) | Removes a CapturedResultReceiver. |
+| [`startCapturing`](multiple-file-processing.md#startcapturing) | Start capturing with the targeting template. |
+| [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Stop capturing. |
+| [`addCaptureStateListener`](multiple-file-processing.md#addcapturestatelistener) | Register a CaptureStateListener to get callback when capture state changes. |
+| [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a CaptureStateListener. |
+| [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Register a CapturedResultFilter to get callback when filtered result output. |
+| [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes a CapturedResultFilter. |
+
+## Settings
+
+| Method | Description |
+| ------ | ----------- |
+| [`initSettings`](settings.md#initsettings) | Initialize the capture settings with a JSON String. |
+| [`initSettingsFromFile`](settings.md#initsettingsfromfile) | Initialize the capture settings with a JSON file. |
+| [`getSimplifiedSettings`](settings.md#getsimplifiedsettings) | Retrieves a simplified version of the capture settings for a specific template. |
+| [`updateSettings`](settings.md#updatesettings) | Update capture vision settings with an object of `SimplifiedCaptureVisionSettings`. |
+| [`resetSettings`](settings.md#resetsettings) | Resets all templates to factory settings. |
+| [`outputSettings`](settings.md#outputsettings) | Output the targeting capture vision settings to a JSON string. |
+| [`outputSettingsToFile`](settings.md#outputsettingstofile) | Output the targeting capture vision settings to a JSON file. |
+
+## Intermediate Result
+
+| Method | Description |
+| ------ | ----------- |
+|  [`getIntermediateResultManager`](intermediate-result.md#getintermediateresultmanager) | Gets the object of `IntermediateResultManager`. |

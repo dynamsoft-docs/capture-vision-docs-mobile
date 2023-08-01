@@ -12,11 +12,11 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| `getIntermediateResultManager` | Get the object of `DSIntermediateResultManager`. |
+| [`getIntermediateResultManager`](#getintermediateresultmanager) | Gets the object of `DSIntermediateResultManager`. |
 
 ## getIntermediateResultManager
 
-Get the object of `DSIntermediateResultManager`.
+Gets the object of `DSIntermediateResultManager`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
