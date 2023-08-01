@@ -15,6 +15,7 @@ noTitleIndex: true
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftUtility.aar
 
 ```java

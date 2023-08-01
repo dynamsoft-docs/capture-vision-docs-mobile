@@ -15,6 +15,7 @@ The `PredetectedRegionElement` class represents a pre-detected region element, w
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

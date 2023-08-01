@@ -15,6 +15,7 @@ The `Edge` class represents an edge of candidate quadrilaterals, which consists 
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

@@ -15,6 +15,7 @@ The `LineSegmentsUnit` class represents a collection of line segments in 2D spac
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

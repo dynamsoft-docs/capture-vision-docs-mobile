@@ -15,6 +15,7 @@ The `TextureDetectionResultUnit` class represents an intermediate result unit fo
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

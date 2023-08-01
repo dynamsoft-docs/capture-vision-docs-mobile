@@ -15,6 +15,7 @@ The `CapturedResultItem` class represents an item in a captured result, such as 
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

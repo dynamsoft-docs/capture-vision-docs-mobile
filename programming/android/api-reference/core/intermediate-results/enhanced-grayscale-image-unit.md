@@ -15,6 +15,7 @@ The `EnhancedGrayscaleImageUnit` class represents a unit that contains a graysca
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

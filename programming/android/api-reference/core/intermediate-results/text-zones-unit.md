@@ -15,6 +15,7 @@ The `TextZonesUnit` class represents a unit that contains text zones, which is d
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

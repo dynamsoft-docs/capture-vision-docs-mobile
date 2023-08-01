@@ -15,6 +15,7 @@ The `IntermediateResultUnit` class represents an intermediate result unit used i
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

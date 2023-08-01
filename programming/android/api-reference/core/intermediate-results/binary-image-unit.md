@@ -15,6 +15,7 @@ The `BinaryImageUnit` class represents a unit that contains a binary image.
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

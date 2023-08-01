@@ -15,6 +15,7 @@ The `TransformedGrayscaleImageUnit` class represents a unit that contains a tran
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

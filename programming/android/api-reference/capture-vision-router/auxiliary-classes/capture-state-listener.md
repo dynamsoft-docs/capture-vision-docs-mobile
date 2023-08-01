@@ -15,6 +15,7 @@ The `CaptureStateListener` interface defines the methods for monitoring the capt
 ## Definition
 
 *Namespace:* com.dynamsoft.cvr
+
 *Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java

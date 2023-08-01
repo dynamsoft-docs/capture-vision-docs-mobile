@@ -15,6 +15,7 @@ The `IntermediateResultExtraInfo` class represents the extra information for gen
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

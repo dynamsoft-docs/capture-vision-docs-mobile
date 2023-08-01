@@ -15,6 +15,7 @@ The `ImageTag` class represents an image tag that can be attached to an image in
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

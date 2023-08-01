@@ -15,6 +15,7 @@ The `CaptureVisionRouter` class is what a user uses to interact with image-proce
 ## Definition
 
 *Namespace:* com.dynamsoft.cvr
+
 *Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java

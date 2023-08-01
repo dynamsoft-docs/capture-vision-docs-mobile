@@ -15,6 +15,7 @@ The `RegionObjectElement` class represents an element of a region object in 2D s
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

@@ -15,6 +15,7 @@ The `ObservationParameters` class is used to set filter conditions for the `Inte
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

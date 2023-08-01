@@ -15,6 +15,7 @@ The `IntermediateResult` class represents a container containing a collection of
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

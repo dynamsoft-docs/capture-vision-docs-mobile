@@ -15,6 +15,7 @@ The `CapturedResultFilter` interface represents a captured result filter, which 
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

@@ -15,6 +15,7 @@ The `Corner` class represents a detected corner, which consists of an intersecti
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

@@ -15,6 +15,7 @@ The `IntermediateResultManager` class manages intermediate results generated dur
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

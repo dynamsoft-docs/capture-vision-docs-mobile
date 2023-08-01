@@ -15,6 +15,7 @@ The `Contour` class represents a contour in 2D space, which contains an array of
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

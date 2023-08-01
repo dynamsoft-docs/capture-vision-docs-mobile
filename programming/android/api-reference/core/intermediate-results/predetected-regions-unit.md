@@ -15,6 +15,7 @@ The `PredetectedRegionsUnit` class represents a unit that contains a collection 
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

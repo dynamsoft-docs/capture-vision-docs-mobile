@@ -15,6 +15,7 @@ The `ScaledDownColourImageUnit` class represents a unit that contains a down-sca
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

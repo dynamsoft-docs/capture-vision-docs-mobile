@@ -15,6 +15,7 @@ The `DSRect` class represents a rectangle in 2D space, which contains four integ
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

@@ -15,6 +15,7 @@ The `TextureRemovedBinaryImageUnit` class represents a unit that contains a text
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

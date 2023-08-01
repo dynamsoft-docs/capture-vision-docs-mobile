@@ -15,6 +15,7 @@ The `ImageSourceAdapter` class provides an interface for fetching and buffering 
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

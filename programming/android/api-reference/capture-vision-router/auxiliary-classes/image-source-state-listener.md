@@ -15,6 +15,7 @@ The `ImageSourceStateListener` interface defines methods for monitoring the stat
 ## Definition
 
 *Namespace:* com.dynamsoft.cvr
+
 *Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java

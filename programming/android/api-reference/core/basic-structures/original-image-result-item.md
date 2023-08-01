@@ -15,6 +15,7 @@ The `OriginalImageResultItem` class represents a captured original image result 
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
+
 *Assembly:* DynamsoftCore.aar
 
 ```java

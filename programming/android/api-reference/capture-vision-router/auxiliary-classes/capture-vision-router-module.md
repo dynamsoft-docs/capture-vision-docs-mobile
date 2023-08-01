@@ -15,6 +15,7 @@ The `CaptureVisionRouterModule` class defines general functions of the capture v
 ## Definition
 
 *Namespace:* com.dynamsoft.cvr
+
 *Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java

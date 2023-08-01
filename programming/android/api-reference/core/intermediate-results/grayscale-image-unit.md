@@ -15,6 +15,7 @@ The `GrayscaleImageUnit` class represents a unit that contains a grayscale image
 ## Definition
 
 *Namespace:* com.dynamsoft.core.intermediate_results
+
 *Assembly:* DynamsoftCore.aar
 
 ```java
