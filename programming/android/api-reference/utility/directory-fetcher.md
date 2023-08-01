@@ -14,7 +14,8 @@ The `DirectoryFetcher` class is a utility class that retrieves a list of files f
 
 ## Definition
 
-*Namespace:* com.dynamsoft.utility  
+*Namespace:* com.dynamsoft.utility
+
 *Assembly:* DynamsoftUtility.aar
 
 ```java

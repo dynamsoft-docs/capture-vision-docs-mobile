@@ -14,7 +14,8 @@ The `MultiFrameResultCrossFilter` class is responsible for filtering captured re
 
 ## Definition
 
-*Namespace:* com.dynamsoft.utility  
+*Namespace:* com.dynamsoft.utility
+
 *Assembly:* DynamsoftUtility.aar
 
 ```java

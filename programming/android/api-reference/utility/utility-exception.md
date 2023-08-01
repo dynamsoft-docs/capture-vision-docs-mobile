@@ -10,11 +10,11 @@ noTitleIndex: true
 
 # UtilityException
 
-`UtilityException` class defines the core exceptions.
+`UtilityException` class defines the utility exceptions.
 
 ## Definition
 
-*Namespace:* com.dynamsoft.core.basic_structures
+*Namespace:* com.dynamsoft.utility
 
 *Assembly:* DynamsoftUtility.aar
 

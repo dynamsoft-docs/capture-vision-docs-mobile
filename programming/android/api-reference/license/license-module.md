@@ -15,6 +15,7 @@ The `LicenseModule` class represents the license module, which provides general 
 ## Definition
 
 *Namespace:* com.dynamsoft.license
+
 *Assembly:* DynamsoftLicense.aar
 
 ```java

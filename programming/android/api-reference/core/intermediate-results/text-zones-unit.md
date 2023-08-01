@@ -19,7 +19,7 @@ The `TextZonesUnit` class represents a unit that contains text zones, which is d
 *Assembly:* DynamsoftCore.aar
 
 ```java
-class TextZonesUnit: IntermediateResultUnit
+class TextZonesUnit extends IntermediateResultUnit
 ```
 
 ## Methods

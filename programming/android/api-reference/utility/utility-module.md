@@ -14,7 +14,8 @@ The `UtilityModule` class defines general functions of the utility module.
 
 ## Definition
 
-*Namespace:* com.dynamsoft.utility  
+*Namespace:* com.dynamsoft.utility
+
 *Assembly:* DynamsoftUtility.aar
 
 ```java

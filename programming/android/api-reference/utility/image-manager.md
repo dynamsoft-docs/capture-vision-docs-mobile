@@ -14,7 +14,8 @@ The `ImageManager` class is a utility class for managing and manipulating images
 
 ## Definition
 
-*Namespace:* com.dynamsoft.utility  
+*Namespace:* com.dynamsoft.utility
+
 *Assembly:* DynamsoftUtility.aar
 
 ```java

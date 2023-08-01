@@ -47,6 +47,7 @@ dce_android_api: /camera-enhancer/docs/mobile/programming/android/
 dce_ios_api: /camera-enhancer/docs/mobile/programming/ios/
 
 enums: /capture-vision/docs/core/enums/
+architecture: /capture-vision/docs/core/architecture/
 
 assets: /capture-vision/docs/mobile/assets/
 edit_icon: /capture-vision/docs/mobile/assets/img-icon/edit-icon.png

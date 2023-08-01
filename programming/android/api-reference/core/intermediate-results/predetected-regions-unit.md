@@ -19,7 +19,7 @@ The `PredetectedRegionsUnit` class represents a unit that contains a collection 
 *Assembly:* DynamsoftCore.aar
 
 ```java
-class PredetectedRegionsUnit: IntermediateResultUnit
+class PredetectedRegionsUnit extends IntermediateResultUnit
 ```
 
 ## Methods
