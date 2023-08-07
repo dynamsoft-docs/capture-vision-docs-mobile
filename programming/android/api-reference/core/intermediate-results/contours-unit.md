@@ -27,6 +27,7 @@ class ContoursUnit: IntermediateResultUnit
 | Methods | Description |
 | ------- | ----------- |
 | [`getContours`](#getcontours) | Gets the array of `Contour` objects. |
+| [`getHierarchies`](#gethierarchies) | Gets the contour hierarchies as an array of `Vector4` objects. |
 
 ### getContours
 
@@ -39,3 +40,15 @@ Contour[] getContours()
 **Return Value**
 
 The array of `Contour` objects.
+
+### getHierarchies
+
+Gets the contour hierarchies as an array of `Vector4` objects.
+
+```java
+Vector4[] getHierarchies()
+```
+
+**Return Value**
+
+The contour hierarchies as an array of `Vector4` objects.
