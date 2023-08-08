@@ -80,7 +80,6 @@ Registers a `DSImageSourceStateListener` to get callback when the status of `DSI
 **Parameters**
 
 `listener`: An object of `DSImageSourceStateListener`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -92,12 +91,11 @@ A bool value that indicates whether the `DSImageSourceStateListener` is added su
 >
 >1. 
 ```objc
-- (BOOL)addImageSourceStateListener:(id<DSImageSourceStateListener>)listener
-                              error:(NSError * _Nullable * _Nullable)error
+- (BOOL)addImageSourceStateListener:(id<DSImageSourceStateListener>)listener;
 ```
 2. 
 ```swift
-func addImageSourceStateListener(_ listener:DSImageSourceStateListener) throws -> BOOL
+func addImageSourceStateListener(_ listener:DSImageSourceStateListener) -> BOOL
 ```
 
 ## removeImageSourceStateListener
@@ -107,7 +105,6 @@ Removes a `DSImageSourceStateListener`.
 **Parameters**
 
 `listener`: An object of `DSImageSourceStateListener`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -119,12 +116,11 @@ A bool value that indicates whether the `DSImageSourceStateListener` is removed 
 >
 >1. 
 ```objc
-- (BOOL)removeImageSourceStateListener:(id<DSImageSourceStateListener>)listener
-                                 error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)removeImageSourceStateListener:(id<DSImageSourceStateListener>)listener;
 ```
 2. 
 ```swift
-func removeImageSourceStateListener(_ listener:DSImageSourceStateListener) throws -> BOOL
+func removeImageSourceStateListener(_ listener:DSImageSourceStateListener) -> BOOL
 ```
 
 ## addResultReceiver
@@ -134,7 +130,6 @@ Registers a `DSCapturedResultReceiver` to get callback when `DSCapturedResult` o
 **Parameters**
 
 `listener`: An object of `DSCapturedResultReceiver`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -146,12 +141,11 @@ A bool value that indicates whether the result receiver is added successfully.
 >
 >1. 
 ```objc
-- (BOOL)addResultReceiver:(id<DSCapturedResultReceiver>)receiver
-                    error:(NSError * _Nullable * _Nullable)error
+- (BOOL)addResultReceiver:(id<DSCapturedResultReceiver>)receiver;
 ```
 2. 
 ```swift
-func addResultReceiver(_ listener:DSCapturedResultReceiver) throws -> BOOL
+func addResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
 ```
 
 ## removeResultReceiver
@@ -161,7 +155,6 @@ Removes a `DSCapturedResultReceiver`.
 **Parameters**
 
 `listener`: An object of `DSCapturedResultReceiver`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -173,12 +166,11 @@ A bool value that indicates whether the result receiver is removed successfully.
 >
 >1. 
 ```objc
-- (BOOL)removeResultReceiver:(id<DSCapturedResultReceiver>)receiver
-                       error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)removeResultReceiver:(id<DSCapturedResultReceiver>)receiver;
 ```
 2. 
 ```swift
-func removeResultReceiver(_ listener:DSCapturedResultReceiver) throws -> BOOL
+func removeResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
 ```
 
 ## startCapturing
@@ -188,11 +180,6 @@ Start capturing with the targeting template.
 **Parameters**
 
 `templateName`: The name of a template that you have previously set via `initSettings` or `initSettingsFromFile`.
-`error`: An NSError pointer. An error occurs when:
-
-* The method is triggered after the capture is started.
-* Your templateName is invalid.
-* Your image source is invalid.
 
 **Return Value**
 
@@ -236,7 +223,6 @@ Registers a `DSCaptureStateListener` to get callback when capture state changes.
 **Parameters**
 
 `listener`: A delegate object of `DSCaptureStateListener` to receive the capture state.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -248,12 +234,11 @@ A BOOL value that indicates whether the capture state listener is added successf
 >
 >1. 
 ```objc
-- (BOOL)addCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener
-                          error:(NSError * _Nullable * _Nullable)error
+- (BOOL)addCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener;
 ```
 2. 
 ```swift
-func addCaptureStateListener(_ listener:DSCaptureStateListener) throws -> BOOL
+func addCaptureStateListener(_ listener:DSCaptureStateListener) -> BOOL
 ```
 
 ## removeCaptureStateListener
@@ -263,7 +248,6 @@ Removes a `DSCaptureStateListener`.
 **Parameters**
 
 `listener`: An object of `DSCaptureStateListener`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -275,12 +259,11 @@ A BOOL value that indicates whether the capture state listener is removed succes
 >
 >1. 
 ```objc
-- (BOOL)removeCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener
-                             error:(NSError * _Nullable * _Nullable)error
+- (BOOL)removeCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener;
 ```
 2. 
 ```swift
-func removeCaptureStateListener(_ listener:DSCaptureStateListener) throws -> BOOL
+func removeCaptureStateListener(_ listener:DSCaptureStateListener) -> BOOL
 ```
 
 ## addResultFilter
@@ -290,7 +273,6 @@ Registers a `DSCapturedResultFilter` to get callback when filtered result output
 **Parameters**
 
 `filter`: An object of `DSCapturedResultFilter`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -302,12 +284,11 @@ A BOOL value that indicates whether the result filter is added successfully.
 >
 >1. 
 ```objc
-- (BOOL)addResultFilter:(nonnull id<DSCapturedResultFilter>)filter
-                          error:(NSError * _Nullable * _Nullable)error
+- (BOOL)addResultFilter:(nonnull id<DSCapturedResultFilter>)filter;
 ```
 2. 
 ```swift
-func addResultFilter(_ filter:DSCapturedResultFilter) throws -> BOOL
+func addResultFilter(_ filter:DSCapturedResultFilter) -> BOOL
 ```
 
 ## removeResultFilter
@@ -317,7 +298,6 @@ Removes a `DSCapturedResultFilter`.
 **Parameters**
 
 `filter`: An object of `DSCapturedResultFilter`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
 
 **Return Value**
 
@@ -329,10 +309,9 @@ A BOOL value that indicates whether the result filter is removed successfully.
 >
 >1. 
 ```objc
-- (BOOL)removeResultFilter:(nonnull id<DSCapturedResultFilter>)filter
-                             error:(NSError * _Nullable * _Nullable)error
+- (BOOL)removeResultFilter:(nonnull id<DSCapturedResultFilter>)filter;
 ```
 2. 
 ```swift
-func removeResultFilter(_ filter:DSCapturedResultFilter) throws -> BOOL
+func removeResultFilter(_ filter:DSCapturedResultFilter) -> BOOL
 ```

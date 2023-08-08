@@ -58,7 +58,7 @@ The attached image source adapter object of the capture vision router.
 Register a [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md) to get callback when the status of [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md) received.
 
 ```java
-void addImageSourceStateListener(ImageSourceStatestener listener) throws CaptureVisionRouterException;
+void addImageSourceStateListener(ImageSourceStatestener listener);
 ```
 
 **Parameters**
@@ -74,7 +74,7 @@ An exception is thrown if the method is triggered after the capture is started.
 Removes a [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md).
 
 ```java
-void removeImageSourceStateListener(ImageSourceStateListener listener) throws CaptureVisionRouterException;
+void removeImageSourceStateListener(ImageSourceStateListener listener);
 ```
 
 **Parameters**
@@ -90,7 +90,7 @@ An exception is thrown if the method is triggered after the capture is started.
 Register a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) to get callback when `CapturedResult` output.
 
 ```java
-void addResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionRouterException;
+void addResultReceiver(CapturedResultReceiver receiver);
 ```
 
 **Parameters**
@@ -106,7 +106,7 @@ An exception is thrown if the method is triggered after the capture is started.
 Removes a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
 
 ```java
-void removeResultReceiver(CapturedResultReceiver receiver) throws CaptureVisionRouterException;
+void removeResultReceiver(CapturedResultReceiver receiver);
 ```
 
 **Parameters**
@@ -150,7 +150,7 @@ void stopCapturing();
 Register a [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md) to get callback when capture state changes.
 
 ```java
-void addCaptureStateListener(CaptureStateListener listener) throws CaptureVisionRouterException;
+void addCaptureStateListener(CaptureStateListener listener);
 ```
 
 **Parameters**
@@ -166,7 +166,7 @@ An exception is thrown if the method is triggered after the capture is started.
 Removes a [`CaptureStateListener`](./auxiliary-classes/capture-state-listener.md).
 
 ```java
-void removeCaptureStateListener(CaptureStateListener listener) throws CaptureVisionRouterException;
+void removeCaptureStateListener(CaptureStateListener listener);
 ```
 
 **Parameters**
@@ -182,7 +182,7 @@ An exception is thrown if the method is triggered after the capture is started.
 Register a [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) to get callback when filtered result output.
 
 ```java
-void addResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterException;
+void addResultFilter(CapturedResultFilter filter);
 ```
 
 **Parameters**
@@ -198,7 +198,7 @@ An exception is thrown if the method is triggered after the capture is started.
 Removes a [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
 
 ```java
-void removeResultFilter(CapturedResultFilter filter) throws CaptureVisionRouterException;
+void removeResultFilter(CapturedResultFilter filter);
 ```
 
 **Parameters**
