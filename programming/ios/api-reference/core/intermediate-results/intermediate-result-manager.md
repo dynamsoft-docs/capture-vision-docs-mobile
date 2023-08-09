@@ -47,18 +47,16 @@ Adds an intermediate result receiver.
 >
 >1. 
 ```objc
-- (BOOL)addResultReceiver:(id<DSIntermediateResultReceiver>)receiver
-                    error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)addResultReceiver:(id<DSIntermediateResultReceiver>)receiver;
 ```
 2. 
 ```swift
-func addResultReceiver(_ receiver: DSIntermediateResultReceiver) throws
+func addResultReceiver(_ receiver: DSIntermediateResultReceiver)
 ```
 
 **Parameters**
 
 `receiver`: A delegate object of `DSIntermediateResultReceiver`.  
-`error`: An `NSError` pointer. An error occurs when the result receiver is not added successfully.
 
 **Return Value**
 
@@ -72,19 +70,11 @@ A `BOOL` value that indicates whether the result receiver is added successfully.
 >
 >1. 
 ```objc
-NSError *error;
-BOOL result = [resultManager addResultReceiver:receiver error:&error];
-if (error != nil) {
-    // Handle the error
-}
+BOOL result = [resultManager addResultReceiver:receiver];
 ```
 2. 
 ```swift
-do {
-    try resultManager.addResultReceiver(receiver)
-} catch {
-    // Handle the error
-}
+resultManager.addResultReceiver(receiver)
 ```
 
 ### removeResultReceiver
@@ -97,19 +87,16 @@ Removes an intermediate result receiver.
 >
 >1. 
 ```objc
-- (BOOL)removeResultReceiver:(id<DSIntermediateResultReceiver>)receiver
-                       error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)removeResultReceiver:(id<DSIntermediateResultReceiver>)receiver;
 ```
 2. 
 ```swift
-func removeResultReceiver(_ receiver: DSIntermediateResultReceiver) throws
+func removeResultReceiver(_ receiver: DSIntermediateResultReceiver)
 ```
 
 **Parameters**
 
 `receiver`: A delegate object of `DSIntermediateResultReceiver`.
-
-`error`: An `NSError` pointer. An error occurs when the result receiver is not removed successfully.
 
 **Return Value**
 
@@ -123,19 +110,11 @@ A `BOOL` value that indicates whether the result receiver is removed successfull
 >
 >1. 
 ```objc
-NSError *error;
-BOOL result = [resultManager removeResultReceiver:receiver error:&error];
-if (error != nil) {
-    // Handle the error
-}
+result = [resultManager removeResultReceiver:receiver];
 ```
 2. 
 ```swift
-do {
-    try resultManager.removeResultReceiver(receiver)
-} catch {
-    // Handle the error
-}
+resultManager.removeResultReceiver(receiver)
 ```
 
 ### getOriginalImage

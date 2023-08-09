@@ -35,7 +35,7 @@ class IntermediateResultManager
 Adds an intermediate result receiver.
 
 ```java
-void addResultReceiver(IntermediateResultReceiver receiver) throws CoreException;
+void addResultReceiver(IntermediateResultReceiver receiver);
 ```
 
 **Parameters**
@@ -51,7 +51,7 @@ An exception is thrown when the result receiver is not added successfully.
 Removes an intermediate result receiver.
 
 ```java
-void removeResultReceiver(IntermediateResultReceiver receiver) throws CoreException;
+void removeResultReceiver(IntermediateResultReceiver receiver);
 ```
 
 **Parameters**

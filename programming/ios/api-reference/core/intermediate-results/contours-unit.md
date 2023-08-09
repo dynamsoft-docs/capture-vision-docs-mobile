@@ -34,6 +34,7 @@ class ContoursUnit: IntermediateResultUnit
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`contours`](#contours) | *NSArray <DSContour**>* | An array of `DSContour` objects. |
+| [`hierarchies`](#hierarchies) | *NSArray <DSVector4**>* | An array of `DSVector4` objects. |
 
 ### contours
 
@@ -50,4 +51,21 @@ An array of `DSContour` objects.
 2. 
 ```swift
 var contours: [Contour]? { get set }
+```
+
+### hierarchies
+
+The contour hierarchies as an array of `DSVector4` objects.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, strong, nullable) NSArray<DSVector4*>* hierarchies;
+```
+2. 
+```swift
+var hierarchies: [Vector4]? { get set }
 ```
