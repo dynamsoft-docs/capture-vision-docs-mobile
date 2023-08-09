@@ -33,7 +33,7 @@ protocol IntermediateResultReceiver: NSObjectProtocol
 
 | Method | Description |
 | ------ | ----------- |
-| [`getObservationParameters`](#getobservationparameters) | Get a `ObservationParameters` object to configure the observation settings. |
+| [`getObservationParameters`](#getobservationparameters) | Get an `ObservationParameters` object to configure the observation settings. |
 | [`onPredetectedRegionsReceived`](#onpredetectedregionsreceived) | The method for monitoring the output of `PredetectedRegionsUnit`. |
 | [`onLocalizedBarcodesReceived`](#onlocalizedbarcodesreceived) | The method for monitoring the output of `LocalizedBarcodesUnit`. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DecodedBarcodesUnit`. |

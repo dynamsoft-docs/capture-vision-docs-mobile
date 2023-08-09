@@ -12,14 +12,14 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`captureFromFile`](#capturefromfile) | Implement data capture on the given file. |
-| [`captureFromFileBytes`](#capturefromfilebytes) | Implement data capture on the given file in memory. |
-| [`captureFromBuffer`](#capturefrombuffer) | Implement data capture on the given image data. |
-| [`captureFromImage`](#capturefromimage) | Implement data capture on the given UIImage. |
+| [`captureFromFile`](#capturefromfile) | Capture data from the file specified by the file path. |
+| [`captureFromFileBytes`](#capturefromfilebytes) | Capture data from a given file in memory. |
+| [`captureFromBuffer`](#capturefrombuffer) | Capture data from the memory buffer via a `DSImageData` object. |
+| [`captureFromImage`](#capturefromimage) | Capture data from the given image. |
 
 ## captureFromFile
 
-Implement data capture on the given file.
+Capture data from the file specified by the file path. To learn more about what the captured data can be, please see the *Return Value* section below.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -38,8 +38,8 @@ func captureFromFile(_ file:String, templateName:String) throws -> CaptureResult
 
 **Parameters**
 
-`file`: The file path and name that you want to implement the data capturing.
-`templateName`: Specify a template with a templateName for the data capturing.
+`file`: The file path and name that you want to capture data from.
+`templateName`: Specify a settings template that will be used for the data capturing.
 `error`: An NSError pointer. An error occurs when:
 
 * The method is triggered after the capture is started.
@@ -48,11 +48,11 @@ func captureFromFile(_ file:String, templateName:String) throws -> CaptureResult
 
 **Return Value**
 
-A DSCapturedResult object output by the library.
+A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
 
 ## captureFromFileBytes
 
-Implement data capture on the given file in memory.
+Capture data from a given file in memory. To learn more about what the captured data can be, please see the *Return Value* section below.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -71,9 +71,9 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) throws -> Captu
 
 **Parameters**
 
-`fileBytes`: A NSData that points to a file in memory.
-`templateName`: Specify a template with a templateName for the data capturing.
-`error`: An NSError pointer. An error occurs when:
+`fileBytes`: A `NSData` object that points to a file in memory.
+`templateName`: Specify a settings template that will be used for data capturing.
+`error`: An `NSError` pointer. An error occurs when:
 
 * The method is triggered after the capture is started.
 * The template name you input is invalid.
@@ -81,11 +81,11 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) throws -> Captu
 
 **Return Value**
 
-A `DSCapturedResult` object output by the library.
+A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
 
 ## captureFromBuffer
 
-Implement data capture on the given file.
+Capture data from the memory buffer via a `DSImageData` object. To learn more about what the captured data can be, please see the *Return Value* section below.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -104,9 +104,9 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) throws -> Capt
 
 **Parameters**
 
-`buffer`: A DSImageData object that contains image info.
-`templateName`: Specify a template with a templateName for the data capturing.
-`error`: An NSError pointer. An error occurs when:
+`buffer`: A [`DSImageData`](../core/basic-structures/image-data.md) object that contains image info.
+`templateName`: Specify a settings template that will be used for data capturing.
+`error`: An `NSError` pointer. An error occurs when:
 
 * The method is triggered after the capture is started.
 * The template name you input is invalid.
@@ -114,11 +114,28 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) throws -> Capt
 
 **Return Value**
 
-A DSCapturedResult object output by the library.
+A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (nullable DSCapturedResult *)captureFromBuffer:(DSImageData *)buffer
+                                    templateName:(nonnull NSString*)templateName
+                                           error:(NSError * _Nullable * _Nullable)error;
+```
+2. 
+```swift
+let result = try? cvr.captureFromBuffer(data, templateName: name)
+```
 
 ## captureFromImage
 
-Implement data capture on the given file.
+Capture data from the given image. To learn more about what the captured data can be, please see the *Return Value* section below.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -137,13 +154,13 @@ func captureFromBuffer(_ image:UIImage, templateName:String) throws -> CaptureRe
 
 **Parameters**
 
-`image`: A UIImage.
-`templateName`: Specify a template with a templateName for the data capturing.
-`error`: An NSError pointer. An error occurs when:
+`image`: A `UIImage` object.
+`templateName`: Specify a settings template that will be used for data capturing.
+`error`: An `NSError` pointer. An error occurs when:
 
 * The method is triggered after the capture is started.
 * The template name you input is invalid.
 
 **Return Value**
 
-A `DSCapturedResult` object output by the library.
+A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.

@@ -34,12 +34,12 @@ class IntermediateResultManager : NSObject
 | Method | Description |
 | ------ | ----------- |
 | [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
-| [`removeResultReceiver`](#removeresultreceiver) | Adds an intermediate result receiver. |
-| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
+| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using the image's hash ID. |
 
 ### addResultReceiver
 
-Adds an intermediate result receiver.
+Adds an intermediate result receiver to an `IntermediateResultManager` object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -56,7 +56,8 @@ func addResultReceiver(_ receiver: DSIntermediateResultReceiver)
 
 **Parameters**
 
-`receiver`: A delegate object of `DSIntermediateResultReceiver`.  
+`receiver`: A delegate object of [`DSIntermediateResultReceiver`](intermediate-result-receiver.md).  
+`error`: An `NSError` pointer. An error occurs when the result receiver is not added successfully.
 
 **Return Value**
 
@@ -79,7 +80,7 @@ resultManager.addResultReceiver(receiver)
 
 ### removeResultReceiver
 
-Removes an intermediate result receiver.
+Removes an intermediate result receiver from an `IntermediateResultManager` object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -96,7 +97,7 @@ func removeResultReceiver(_ receiver: DSIntermediateResultReceiver)
 
 **Parameters**
 
-`receiver`: A delegate object of `DSIntermediateResultReceiver`.
+`receiver`: A delegate object of [`DSIntermediateResultReceiver`](intermediate-result-receiver.md).
 
 **Return Value**
 
@@ -119,7 +120,7 @@ resultManager.removeResultReceiver(receiver)
 
 ### getOriginalImage
 
-Gets the original image data using an image hash id.
+Gets the original image data using the image's hash ID.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -127,20 +128,20 @@ Gets the original image data using an image hash id.
 >
 >1. 
 ```objc
-- (DSImageData)getOriginalImage:(NSString)imageHashId;
+- (DSImageData)getRawImage:(NSString)imageHashId;
 ```
 2. 
 ```swift
-func getOriginalImage(_ imageHashId: String) -> DSImageData
+func getRawImage(_ imageHashId: String) -> DSImageData
 ```
 
 **Parameters**
 
-`imageHashId`: The image hash id.
+`imageHashId`: The image hash ID.
 
 **Return Value**
 
-The original image data as `DSImageData`.
+The original image data as [`DSImageData`](../basic-structures/image-data.md).
 
 **Code Snippet**
 

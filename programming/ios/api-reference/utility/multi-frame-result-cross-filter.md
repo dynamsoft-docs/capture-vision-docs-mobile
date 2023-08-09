@@ -34,7 +34,7 @@ class MultiFrameResultCrossFilter: NSObject, CapturedResultFilter
 | Method | Description |
 | ------ | ----------- |
 | [`enableDuplicateFilter`](#enableduplicatefilter) | Enable duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition. |
-| [`enableResultVerification`](#enableresultverification) | Enable result verification feature to improve the accuracy of video streaming recognition results. |
+| [`enableResultCrossVerification`](#enableresultcrossverification) | Enable result verification feature to improve the accuracy of video streaming recognition results. |
 | [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the duplicate forget time for the specific captured result item types. |
 | [`isDuplicateFilterEnabled`](#isduplicatefilterenabled) | Whether the duplicate filter feature is enabled for the specific result item type. |
 | [`isResultVerificationEnabled`](#isresultverificationenabled) | Whether the result verification feature is enabled for the specific result item type. |
@@ -70,7 +70,7 @@ func enableDuplicateFilter(resultItemType: DSCapturedResultItemType, isEnabled: 
 
 `isEnabled`: A BOOL value that indicates whether to enable the duplicate filter feature.
 
-### enableResultVerification
+### enableResultCrossVerification
 
 Enable result verification feature to improve the accuracy of video streaming recognition results.
 
@@ -80,12 +80,12 @@ Enable result verification feature to improve the accuracy of video streaming re
 >
 >1. 
 ```objc
-- (void)enableResultVerification:(DSCapturedResultItemType)resultItemType
+- (void)enableResultCrossVerification:(DSCapturedResultItemType)resultItemType
                     isEnabled:(BOOL)isEnabled;
 ```
 2. 
 ```swift
-func enableResultVerification(resultItemType: DSCapturedResultItemType, isEnabled: Bool)
+func enableResultCrossVerification(resultItemType: DSCapturedResultItemType, isEnabled: Bool)
 ```
 
 **Parameters**

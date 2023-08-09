@@ -26,21 +26,21 @@ The `DSCapturedResult` class represents the result of a capture operation on an 
 ```
 2. 
 ```swift
-class CapturedResult : NSObject
+class Cap turedResult : NSObject
 ```
 
 ## Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
+| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
 | [`originalImageTag`](#originalimagetag) | *DSImageTag* | The tag of the source image that records the information of the source image. |
-| [`items`](#items) | *NSArray<DSCapturedResultItem*> \** | An array of `DSCapturedResultItems`, which are the basic unit of the captured results. A `DSCapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View DSCapturedResultItemType for all available types. |
+| [`items`](#items) | *NSArray<DSCapturedResultItem*> \** | An array of `DSCapturedResultItem` objects. A `DSCapturedResultItem` is the most basic unit of a captured result and varies depending on the functional product used. |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
 
 ### originalImageHashId
 
-The hash id of the source image. You can use this ID to get the source image via IntermediateResultManager class.
+The hash ID of the source image which can be used to get the source image via the [IntermediateResultManager](../intermediate-results/intermediate-result-manager.md) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +57,7 @@ var originalImageHashId: String { get }
 
 ### originalImageTag
 
-The tag of the source image that records the information of the source image.
+The [DSImageTag](image-tag.md) of the source image that records information such as the image ID of the source image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,7 +74,7 @@ var originalImageTag: ImageTag { get }
 
 ### items
 
-An array of DSCapturedResultItems, which are the basic unit of the captured results. A DSCapturedResultItem can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View DSCapturedResultItemType for all available types.
+An array of [DSCapturedResultItem](captured-result-item.md), which is the basic unit of the captured results. A DSCapturedResultItem can be an original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View DSCapturedResultItemType for all available types.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -91,7 +91,7 @@ var items: [CapturedResultItem]? { get }
 
 ### rotationTransformMatrix
 
-The rotation transformation matrix of the original image relative to the rotated image.
+The rotation transformation matrix of the original image relative to the rotated image. View [CGAffineTransform](https://developer.apple.com/documentation/corefoundation/cgaffinetransform) for more info.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
