@@ -8,35 +8,36 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Processing multiple Images/Pages
+# Processing Multiple Images/Pages
 
 | Method | Description |
 | ------ | ----------- |
-| [`setInput`](#setinput) | Sets an image source to provide images for consecutive process. |
-| [`getInput`](#getinput) | Gets the attached image source adapter object of the capture vision router. |
-| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Registers a DSImageSourceStateListener to get callback when the status of DSImageSourceAdapter changes. |
-| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a DSImageSourceStateListener. |
-| [`addResultReceiver`](#addresultreceiver) | Registers a DSCapturedResultReceiver to get callback when DSCapturedResult output. |
-| [`removeResultReceiver`](#removeresultreceiver) | Removes a DSCapturedResultReceiver. |
-| [`startCapturing`](#startcapturing) | Start capturing with the targeting template. |
-| [`stopCapturing`](#stopcapturing) | Start capturing with the targeting template. |
-| [`addCaptureStateListener`](#addcapturestatelistener) | Registers a DSCaptureStateListener to get callback when capture state changes. |
-| [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a DSCaptureStateListener. |
-| [`addResultFilter`](#addresultfilter) | Registers a DSCapturedResultFilter to get callback when filtered result output. |
-| [`removeResultFilter`](#removeresultfilter) | Removes a DSCapturedResultFilter. |
+| [`setInput`](#setinput) | Sets an image source that will provide images to be consecutively processed. |
+| [`getInput`](#getinput) | Gets the attached image source adapter object of the Capture Vision Router. |
+| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Registers a `DSImageSourceStateListener` object to be used as a callback when the status of `DSImageSourceAdapter` changes. |
+| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a `DSImageSourceStateListener` from the Capture Vision Router. |
+| [`addResultReceiver`](#addresultreceiver) | Registers a result receiver to be used as a callback when the library outputs a captured result. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes a result receiver from the Capture Vision Router. |
+| [`startCapturing`](#startcapturing) | Start capturing with the specified template. |
+| [`stopCapturing`](#stopcapturing) | Tells the Capture Vision Router to stop capturing. |
+| [`addCaptureStateListener`](#addcapturestatelistener) | Registers a `DSCaptureStateListener` to be used as a callback when capture state changes. |
+| [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a `DSCaptureStateListener` that has been configured for the Capture Vision Router. |
+| [`addResultFilter`](#addresultfilter) | Registers a `DSCapturedResultFilter` to be used as a callback when the Capture Vision Router outputs filtered result(s). |
+| [`removeResultFilter`](#removeresultfilter) | Removes a `DSCapturedResultFilter` that has been configured for the Capture Vision Router. |
 
 ## setInput
 
-Sets an image source to provide images for consecutive process.
+Sets an image source that will provide images to be consecutively processed.
 
 **Parameters**
 
-`adapter`: An object of `DSImageSourceAdapter`. You can use a internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` and `FileFetcher`.
-`error`: An NSError pointer. An error occurs if the method is triggered after the capture is started.
+`adapter`: An object of [`DSImageSourceAdapter`](../core/basic-structures/image-source-adapter.md). You can use an internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` or `FileFetcher`.
+`error`: An `NSError` pointer. An error occurs if the method is triggered after the capture starts.
 
 **Return Value**
 
-A bool value that indicates whether the input is set successfully.
+A BOOL value that indicates whether the input is set successfully.
+
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -54,11 +55,11 @@ func setInput(_ adapter: DSImageSourceAdapter) throws -> BOOL
 
 ## getInput
 
-Gets the attached image source adapter object of the capture vision router.
+Gets the attached image source adapter (`DSImageSourceAdapter`) object of the Capture Vision Router.
 
 **Return Value**
 
-The attached image source adapter object of the capture vision router.
+The attached [`DSImageSourceAdapter`](../core/basic-structures/image-source-adapter.md) object of the capture vision router.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -75,15 +76,15 @@ func getInput() throws -> DSImageSourceAdapter
 
 ## addImageSourceStateListener
 
-Registers a `DSImageSourceStateListener` to get callback when the status of `DSImageSourceAdapter` changes.
+Registers a `DSImageSourceStateListener` object to be used as a callback when the status of `DSImageSourceAdapter` is received.
 
 **Parameters**
 
-`listener`: An object of `DSImageSourceStateListener`.
+`listener`: An object of [`DSImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md).
 
 **Return Value**
 
-A bool value that indicates whether the `DSImageSourceStateListener` is added successfully.
+A BOOL value that indicates whether the `DSImageSourceStateListener` is added successfully.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -100,7 +101,7 @@ func addImageSourceStateListener(_ listener:DSImageSourceStateListener) -> BOOL
 
 ## removeImageSourceStateListener
 
-Removes a `DSImageSourceStateListener`.
+Removes a `DSImageSourceStateListener` from the Capture Vision Router.
 
 **Parameters**
 
@@ -108,7 +109,7 @@ Removes a `DSImageSourceStateListener`.
 
 **Return Value**
 
-A bool value that indicates whether the `DSImageSourceStateListener` is removed successfully.
+A BOOL value that indicates whether the `DSImageSourceStateListener` is removed successfully.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -125,15 +126,15 @@ func removeImageSourceStateListener(_ listener:DSImageSourceStateListener) -> BO
 
 ## addResultReceiver
 
-Registers a `DSCapturedResultReceiver` to get callback when `DSCapturedResult` output.
+Registers a `DSCapturedResultReceiver` to be used as a callback when the library outputs a `DSCapturedResult`.
 
 **Parameters**
 
-`listener`: An object of `DSCapturedResultReceiver`.
+`listener`: An object of [`DSCapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md).
 
 **Return Value**
 
-A bool value that indicates whether the result receiver is added successfully.
+A BOOL value that indicates whether the result receiver is added successfully.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -150,15 +151,15 @@ func addResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
 
 ## removeResultReceiver
 
-Removes a `DSCapturedResultReceiver`.
+Removes a `DSCapturedResultReceiver` from the Capture Vision Router.
 
 **Parameters**
 
-`listener`: An object of `DSCapturedResultReceiver`.
+`listener`: An object of [`DSCapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md).
 
 **Return Value**
 
-A bool value that indicates whether the result receiver is removed successfully.
+A BOOL value that indicates whether the result receiver is removed successfully.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -175,15 +176,15 @@ func removeResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
 
 ## startCapturing
 
-Start capturing with the targeting template.
+Start capturing with the specified template.
 
 **Parameters**
 
-`templateName`: The name of a template that you have previously set via `initSettings` or `initSettingsFromFile`.
+`templateName`: The name of a template that you have previously set via [`initSettings`](settings.md#initsettings) or [`initSettingsFromFile`](settings.md#initsettingsfromfile).
 
 **Return Value**
 
-A bool value that indicates whether the capture starts successfully.
+A BOOL value that indicates whether the capture starts successfully.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -196,12 +197,12 @@ A bool value that indicates whether the capture starts successfully.
 ```
 2. 
 ```swift
-func removeResultReceiver(_ templateName:String) throws -> BOOL
+func startCapturing(_ templateName:String) throws -> BOOL
 ```
 
 ## stopCapturing
 
-Stop capturing.
+Tells the Capture Vision Router to stop capturing.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -218,11 +219,11 @@ func stopCapturing()
 
 ## addCaptureStateListener
 
-Registers a `DSCaptureStateListener` to get callback when capture state changes.
+Registers a `DSCaptureStateListener` to be used as a callback when capture state changes.
 
 **Parameters**
 
-`listener`: A delegate object of `DSCaptureStateListener` to receive the capture state.
+`listener`: A delegate object of [`DSCaptureStateListener`](auxiliary-classes/capture-state-listener.md) to receive the capture state.
 
 **Return Value**
 
@@ -243,11 +244,11 @@ func addCaptureStateListener(_ listener:DSCaptureStateListener) -> BOOL
 
 ## removeCaptureStateListener
 
-Removes a `DSCaptureStateListener`.
+Removes a `DSCaptureStateListener` that has been configured for the Capture Vision Router via the `addCaptureStateListener` method.
 
 **Parameters**
 
-`listener`: An object of `DSCaptureStateListener`.
+`listener`: An object of [`DSCaptureStateListener`](auxiliary-classes/capture-state-listener.md).
 
 **Return Value**
 
@@ -268,11 +269,11 @@ func removeCaptureStateListener(_ listener:DSCaptureStateListener) -> BOOL
 
 ## addResultFilter
 
-Registers a `DSCapturedResultFilter` to get callback when filtered result output.
+Registers a `DSCapturedResultFilter` to be used as a callback when the Capture Vision Router outputs filtered result(s).
 
 **Parameters**
 
-`filter`: An object of `DSCapturedResultFilter`.
+`filter`: An object of [`DSCapturedResultFilter`](../core/basic-structures/captured-result-filter.md).
 
 **Return Value**
 
@@ -293,11 +294,11 @@ func addResultFilter(_ filter:DSCapturedResultFilter) -> BOOL
 
 ## removeResultFilter
 
-Removes a `DSCapturedResultFilter`.
+Removes a `DSCapturedResultFilter` that has been configured for the Capture Vision Router via the `addResultFilter` method.
 
 **Parameters**
 
-`filter`: An object of `DSCapturedResultFilter`.
+`filter`: An object of [`DSCapturedResultFilter`](../core/basic-structures/captured-result-filter.md).
 
 **Return Value**
 
