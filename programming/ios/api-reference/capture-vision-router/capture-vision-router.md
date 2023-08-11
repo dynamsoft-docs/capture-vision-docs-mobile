@@ -44,6 +44,7 @@ class CaptureVisionRouter : NSObject
 | [`captureFromBuffer`](single-file-processing.md#capturefrombuffer) | Capture data from the memory buffer via a `DSImageData` object. |
 | [`captureFromImage`](single-file-processing.md#capturefromimage) | Capture data from the given image. |
 
+
 ## Multiple-File Processing
 
 | Method | Description |

@@ -34,8 +34,8 @@ class IntermediateResultUnit : NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`hashId`](#hashid) | *NSString \** | The hash ID of the unit. |
-| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the source image. You can use this ID to get the source image via IntermediateResultManager class. |
-| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The image tag of the source image. |
+| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via IntermediateResultManager class. |
+| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
 | [`type`](#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
 
 ## Methods
@@ -64,7 +64,7 @@ var hashId: String? { get }
 
 ### originalImageHashId
 
-The hash ID of the source image. You can use this ID to get the source image via IntermediateResultManager class.
+The hash ID of the original image. You can use this ID to get the original image via IntermediateResultManager class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,7 +81,7 @@ var originalImageHashId: String? { get }
 
 ### originalImageTag
 
-The image tag of the source image.
+The image tag of the original image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

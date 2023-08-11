@@ -38,8 +38,8 @@ func captureFromFile(_ file:String, templateName:String) throws -> CaptureResult
 
 **Parameters**
 
-`file`: The file path and name that you want to capture data from.
-`templateName`: Specify a settings template that will be used for the data capturing.
+`file`: The file path and name that you want to capture data from.  
+`templateName`: Specify a template with a templateName for the data capturing.  
 `error`: An NSError pointer. An error occurs when:
 
 * The method is triggered after the capture is started.
@@ -71,8 +71,8 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) throws -> Captu
 
 **Parameters**
 
-`fileBytes`: A `NSData` object that points to a file in memory.
-`templateName`: Specify a settings template that will be used for data capturing.
+`fileBytes`: A `NSData` object that points to a file in memory.  
+`templateName`: Specify a template with a templateName for the data capturing.  
 `error`: An `NSError` pointer. An error occurs when:
 
 * The method is triggered after the capture is started.
@@ -104,8 +104,8 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) throws -> Capt
 
 **Parameters**
 
-`buffer`: A [`DSImageData`](../core/basic-structures/image-data.md) object that contains image info.
-`templateName`: Specify a settings template that will be used for data capturing.
+`buffer`: A [`DSImageData`](../core/basic-structures/image-data.md) object that contains image info.  
+`templateName`: Specify a template with a templateName for the data capturing.  
 `error`: An `NSError` pointer. An error occurs when:
 
 * The method is triggered after the capture is started.
@@ -115,23 +115,6 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) throws -> Capt
 **Return Value**
 
 A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (nullable DSCapturedResult *)captureFromBuffer:(DSImageData *)buffer
-                                    templateName:(nonnull NSString*)templateName
-                                           error:(NSError * _Nullable * _Nullable)error;
-```
-2. 
-```swift
-let result = try? cvr.captureFromBuffer(data, templateName: name)
-```
 
 ## captureFromImage
 
@@ -154,8 +137,8 @@ func captureFromBuffer(_ image:UIImage, templateName:String) throws -> CaptureRe
 
 **Parameters**
 
-`image`: A `UIImage` object.
-`templateName`: Specify a settings template that will be used for data capturing.
+`image`: A `UIImage` object.  
+`templateName`: Specify a template with a templateName for the data capturing.  
 `error`: An `NSError` pointer. An error occurs when:
 
 * The method is triggered after the capture is started.

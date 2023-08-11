@@ -56,8 +56,7 @@ func addResultReceiver(_ receiver: DSIntermediateResultReceiver)
 
 **Parameters**
 
-`receiver`: A delegate object of [`DSIntermediateResultReceiver`](intermediate-result-receiver.md).  
-`error`: An `NSError` pointer. An error occurs when the result receiver is not added successfully.
+`receiver`: A delegate object of `DSIntermediateResultReceiver`.  
 
 **Return Value**
 
@@ -128,11 +127,11 @@ Gets the original image data using the image's hash ID.
 >
 >1. 
 ```objc
-- (DSImageData)getRawImage:(NSString)imageHashId;
+- (DSImageData)getOriginalImage:(NSString)imageHashId;
 ```
 2. 
 ```swift
-func getRawImage(_ imageHashId: String) -> DSImageData
+func getOriginalImage(_ imageHashId: String) -> DSImageData
 ```
 
 **Parameters**

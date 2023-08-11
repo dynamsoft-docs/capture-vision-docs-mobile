@@ -28,8 +28,8 @@ class IntermediateResultUnit
 |------- |-------------|
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
 | [`gethashId`](#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
-| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the source image. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image. |
 | [`getType`](#gettype) | Gets the type of the intermediate result unit. |
 | [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html). |
 
@@ -47,7 +47,7 @@ The hash ID of the unit.
 
 ### getOriginalImageHashId
 
-Gets the hash ID of the source image. You can use this ID to get the source image via `IntermediateResultManager` class.
+Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class.
 
 ```java
 String getOriginalImageHashId();
@@ -55,11 +55,11 @@ String getOriginalImageHashId();
 
 **Return Value**
 
-The hash ID of the source image.
+The hash ID of the original image.
 
 ### getOriginalImageTag
 
-Gets the image tag of the source image.
+Gets the image tag of the original image.
 
 ```java
 ImageTag getOriginalImageTag();
@@ -67,7 +67,7 @@ ImageTag getOriginalImageTag();
 
 **Return Value**
 
-The image tag of the source image.
+The image tag of the original image.
 
 ### getType
 
