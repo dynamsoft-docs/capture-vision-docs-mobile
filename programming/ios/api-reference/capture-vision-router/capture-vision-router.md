@@ -39,10 +39,11 @@ class CaptureVisionRouter : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`captureFromFile`](single-file-processing.md#capturefromfile) | Implement data capture on the given file. |
-| [`captureFromFileBytes`](single-file-processing.md#capturefromfilebytes) | Implement data capture on the given file in memory. |
-| [`captureFromBuffer`](single-file-processing.md#capturefrombuffer) | Implement data capture on the given image data. |
-| [`captureFromImage`](single-file-processing.md#capturefromimage) | Implement data capture on the given UIImage. |
+| [`captureFromFile`](single-file-processing.md#capturefromfile) | Capture data from the file specified by the file path. |
+| [`captureFromFileBytes`](single-file-processing.md#capturefromfilebytes) | Capture data from a given file in memory. |
+| [`captureFromBuffer`](single-file-processing.md#capturefrombuffer) | Capture data from the memory buffer via a `DSImageData` object. |
+| [`captureFromImage`](single-file-processing.md#capturefromimage) | Capture data from the given image. |
+
 
 ## Multiple-File Processing
 

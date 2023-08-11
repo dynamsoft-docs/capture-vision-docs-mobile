@@ -26,14 +26,14 @@ class CapturedResult
 
 | Method | Description |
 | ------ | ----------- |
-| [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the  hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
-| [`getOriginalImageTag`](#getoriginalimagetag) | Get the  tag of the source image that records the information of the source image. |
-| [`getitems`](#getitems) | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the hash id of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | Get the [ImageTag](image-tag.md) of the original image that records information such as the image ID of the original image. |
+| [`getItems`](#getitems) | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
 | [`getrotationTransformMatrix`](#getrotationtransformmatrix) | Get the  rotation transformation matrix of the original image relative to the rotated image. |
 
 ### getOriginalImageHashId
 
-Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`](../intermediate-results/intermediate-result-manager.md) class.
+Get the hash ID of the original image which can be used to get the original image via the [IntermediateResultManager](../intermediate-results/intermediate-result-manager.md) class.
 
 ```java
 String getOriginalImageHashId();
@@ -41,11 +41,11 @@ String getOriginalImageHashId();
 
 **Return Value**
 
-The hash id of the source image.
+The hash id of the original image.
 
 ### getOriginalImageTag
 
-Get the tag of the source image that records the information of the source image.
+Get the [ImageTag](image-tag.md) of the original image that records information such as the image ID of the original image.
 
 ```java
 ImageTag getOriginalImageTag();
@@ -53,11 +53,11 @@ ImageTag getOriginalImageTag();
 
 **Return Value**
 
-The tag of the source image that records the information of the source image.
+The tag of the original image that records the information of the original image.
 
 ### getItems
 
-Get an array of [`CapturedResultItem`](capture-result-item.md), which are the basic unit of the captured results. A [`CapturedResultItem`](capture-result-item.md) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View [`CapturedResultItemType`]({{site.enums}}core/captured-result-item-type.html) for all available types.
+Get an array of [`CapturedResultItem`](capture-result-item.md), which is the basic unit of the captured results. A [`CapturedResultItem`](capture-result-item.md) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{site.enums}}core/captured-result-item-type.html) for all available types.
 
 ```java
 CapturedResultItem[] getItems();

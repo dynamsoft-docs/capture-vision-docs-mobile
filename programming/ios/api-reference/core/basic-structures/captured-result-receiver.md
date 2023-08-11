@@ -60,7 +60,7 @@ func onCapturedResultReceived(_ result: DSCapturedResult)
 
 **Parameters**
 
-`result` : A `DSCapturedResult` object as a captured result.
+`result` : A [`DSCapturedResult`](captured-result-item.md) object as a captured result.
 
 ### onOriginalImageResultReceived
 
@@ -81,7 +81,7 @@ func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
 
 **Parameters**
 
-`result` : A `DSOriginalImageResultItem` object as a original image result.
+`result` : A [`DSOriginalImageResultItem`](original-image-result-item.md) object as a original image result.
 
 ### onDecodedBarcodesReceived
 
@@ -144,7 +144,7 @@ func onDetectedQuadsReceived(_ result: DSDetectedQuadsResult)
 
 **Parameters**
 
-`result` : A `DSDetectedQuadsResult` object as a detected quad result.
+`result` : A [`DSDetectedQuadsResult`](quadrilateral.md) object as a detected quad result.
 
 ### onNormalizedImagesReceived
 
