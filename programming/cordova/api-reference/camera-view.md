@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DCVCameraView Class of Dynamsoft Capture Vision Cordova Edition
-description: This page is the API reference of DCVCameraView class
+description: Documentation page of API reference of Dynamsoft Capture Vision DCVCameraView class.
 keywords: Camera view, API Reference, Cordova
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

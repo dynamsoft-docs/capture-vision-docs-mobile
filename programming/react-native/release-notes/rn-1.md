@@ -11,6 +11,14 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.12 (05/24/2023)
+
+- Added [`enableDuplicateFilter`](../api-reference/barcode-reader.md#enableduplicatefilter) to `DCVBarcodeReader` class to get unique result from the result callback.
+
+## 1.1.11 (03/28/2023)
+
+- Fixed a bug that might cause thread blocking on the simulator.
+
 ## 1.1.9 (03/14/2023)
 
 - Fixed a symbol conflict bug when using typescript.
@@ -33,7 +41,7 @@ breadcrumbText: 1.x
 ### New
 
 - Added a new method [`decodeFile`](../api-reference/barcode-reader.md#decodefile) in Barcode Reader module to decode barcodes from an image file.
-- Added a new property [`barcodeBytes`](../api-reference/class-barcode-result.md) in `BarcodeResult` to output the base64 string of the barcode.
+- Added a new property [`barcodeBytes`](../api-reference/interface-barcode-result.md) in `BarcodeResult` to output the base64 string of the barcode.
 - Added a new property [`cameraPosition`](../api-reference/camera-view.md#cameraposition) in `DCVCameraView` class for users to switch between front-facing camera and back-facing camera.
 - Added an enumeration [`EnumCameraPosition`](../api-reference/enum-camera-position.md).
 

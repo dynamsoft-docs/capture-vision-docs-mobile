@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Interface BarcodeLocationResult of Dynamsoft Capture Vision Cordova Edition
-description: The interface of barcode location result
+description: Documentation page of interface of barcode location result of Dynamsoft Capture Vision.
 keywords: Interface BarcodeLocationResult, API Reference, Cordova
 needAutoGenerateSidebar: false
 needGenerateH3Content: false

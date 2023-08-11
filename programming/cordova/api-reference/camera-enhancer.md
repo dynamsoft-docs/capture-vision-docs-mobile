@@ -54,7 +54,7 @@ setScanRegion(region: Region): Promise<void>;
 
 **Parameters**
 
-`region`: An object of `Region` class. It contains the coordinates of the top, bottom, left and right border of the region. View more in [`Region`](class-region.md).
+`region`: An object of `Region` class. It contains the coordinates of the top, bottom, left and right border of the region. View more in [`Region`](interface-region.md).
 
 **Code Snippet**
 

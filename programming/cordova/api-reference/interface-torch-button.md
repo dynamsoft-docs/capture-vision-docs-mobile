@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Interface TorchButton of Dynamsoft Capture Vision Cordova Edition
-description: The interface of TorchButton
+description: Documentation page of interface of TorchButton of Dynamsoft Capture Vision.
 keywords: Interface TorchButton, API Reference, Cordova
 needAutoGenerateSidebar: false
 needGenerateH3Content: false

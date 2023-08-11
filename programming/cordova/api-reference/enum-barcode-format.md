@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumBarcodeFormat of Dynamsoft Capture Vision Cordova Edition
-description: The first group enumeration of the barcode formats
+description: Documentation page of first group enumeration of the barcode formats of Dynamsoft Capture Vision.
 keywords: Barcode format, API Reference, Cordova
 needAutoGenerateSidebar: false
 needGenerateH3Content: false

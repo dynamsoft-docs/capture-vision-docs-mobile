@@ -27,7 +27,6 @@ A barcode reader object accesses to a camera via DCVCameraView object at native 
 | [`addResultListener`](#addresultlistener) | Specifies an event handler that fires after the library finishes scanning a frame. |
 | [`removeAllResultListeners`](#removeallresultlisteners) | Remove all existing result listener. |
 | [`decodeFile`](#decodefile) | Decode barcodes from a specified image file. |
-| [`enableDuplicateFilter`](#enableduplicatefilter) | Enable (or disable) duplicate result filter to get unique results from the result callback. |
 
 ## initLicense
 
@@ -273,15 +272,3 @@ try {
 reader = await DCVBarcodeReader.createInstance();
 result = reader.decodeFile("Your file path");
 ```
-
-## enableDuplicateFilter
-
-Enable (or disable) duplicate result filter to get unique results from the result callback.
-
-```js
-enableDuplicateFilter(isEnabled: boolean): Promise<void>;
-```
-
-**Parameters**
-
-`isEnabled`: A boolean value that determines whether to enable the duplicate filter. Set it to true when you want to enable the filter. Otherwise, set it to false.

@@ -29,4 +29,3 @@ namespace DCVXamarin
 
 - [`Class BarcodeResult`](class-barcode-result.md)
 - [`Class Quadrilateral`](class-quadrilateral.md)
-- [`Class Point`](class-point.md)

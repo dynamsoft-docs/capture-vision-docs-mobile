@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Class BarcodeLocationResult of Dynamsoft Capture Vision Flutter Edition
-description: The class of barcode location result
+description: Documentation page of the class of barcode location result of Dynamsoft Capture Vision.
 keywords: Class BarcodeLocationResult, API reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
