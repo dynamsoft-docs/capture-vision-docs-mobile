@@ -32,7 +32,7 @@ class IntermediateResultManager
 
 ### addResultReceiver
 
-Adds an intermediate result receiver.
+Adds an intermediate result receiver to an `IntermediateResultManager` object.
 
 ```java
 void addResultReceiver(IntermediateResultReceiver receiver);
@@ -48,7 +48,7 @@ An exception is thrown when the result receiver is not added successfully.
 
 ### removeResultReceiver
 
-Removes an intermediate result receiver.
+Removes an intermediate result receiver from an `IntermediateResultManager` object.
 
 ```java
 void removeResultReceiver(IntermediateResultReceiver receiver);
@@ -56,7 +56,7 @@ void removeResultReceiver(IntermediateResultReceiver receiver);
 
 **Parameters**
 
-`[in] receiver`: A delegate object of `IntermediateResultReceiver`.  
+`[in] receiver`: A delegate object of [`IntermediateResultReceiver`](intermediate-result-receiver.md).  
 
 **Exception**
 
@@ -64,7 +64,7 @@ An exception is thrown when the result receiver is not removed successfully.
 
 ### getOriginalImage
 
-Gets the original image data using an image hash id.
+Gets the original image data using the image's hash ID.
 
 ```java
 ImageData getOriginalImage(String imageHashId);
@@ -72,8 +72,8 @@ ImageData getOriginalImage(String imageHashId);
 
 **Parameters**
 
-`[in] imageHashId`: The image hash id.
+`[in] imageHashId`: The image hash ID.
 
 **Return Value**
 
-The original image data as `ImageData`.
+The original image data as [`ImageData`](../basic-structures/image-data.md).

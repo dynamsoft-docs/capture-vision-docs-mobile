@@ -12,14 +12,14 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`capture(filePath,templateName)`](#capturefilepathtemplatename) | Implement data capture on the given file. |
-| [`capture(fileBytes,templateName)`](#capturefilebytestemplatename) | Implement data capture on the given file in memory. |
-| [`capture(imageData,templateName)`](#captureimagedatatemplatename) | Implement data capture on the given image data. |
-| [`capture(bitmap,templateName)`](#capturebitmaptemplatename) | Implement data capture on the given Bitmap. |
+| [`capture(filePath,templateName)`](#capturefilepathtemplatename) | Capture data from the file specified by the file path. |
+| [`capture(fileBytes,templateName)`](#capturefilebytestemplatename) | Capture data from a given file in memory. |
+| [`capture(imageData,templateName)`](#captureimagedatatemplatename) | Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object. |
+| [`capture(bitmap,templateName)`](#capturebitmaptemplatename) | Capture data from the given Bitmap. |
 
 ## capture(filePath,templateName)
 
-Implement data capture on the given file.
+Capture data from the file specified by the file path.
 
 ```java
 CapturedResult capture(String filePath, String templateName) throws CaptureVisionRouterException;
@@ -27,7 +27,7 @@ CapturedResult capture(String filePath, String templateName) throws CaptureVisio
 
 **Parameters**
 
-`[in] file`: The file path and name that you want to implement the data capturing.
+`[in] file`: The file path and name that you want to capture data from.
 
 `[in] templateName`: Specify a template with a template name for the data capturing.
 
@@ -45,7 +45,7 @@ A [`CapturedResult`](../core/basic-structures/captured-result.md) object output 
 
 ## capture(fileBytes,templateName)
 
-Implement data capture on the given file in memory.
+Capture data from a given file in memory.
 
 ```java
 CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisionRouterException;
@@ -71,7 +71,7 @@ A [`CapturedResult`](../core/basic-structures/captured-result.md) object output 
 
 ## capture(imageData,templateName)
 
-Implement data capture on the given file.
+Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object.
 
 ```java
 CapturedResult capture(ImageData imageData, String templateName) throws CaptureVisionRouterException;
@@ -97,7 +97,7 @@ A [`CapturedResult`](../core/basic-structures/captured-result.md) object output 
 
 ## capture(bitmap,templateName)
 
-Implement data capture on the given file.
+Capture data from the given Bitmap.
 
 ```java
 CapturedResult capture(Bitmap bitmap, String templateName) throws CaptureVisionRouterException;

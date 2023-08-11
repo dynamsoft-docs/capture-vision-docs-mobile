@@ -32,10 +32,10 @@ class CaptureVisionRouter
 
 | Method                                       | Description                                               |
 | ---------------------------------------------- | --------------------------------------------------------- |
-| [`capture(filePath,templateName)`](single-file-processing.md#capturefilepathtemplatename) | Implement data capture on the given file. |
-| [`capture(fileBytes,templateName)`](single-file-processing.md#capturefilebytestemplatename) | Implement data capture on the given file in memory. |
-| [`capture(imageData,templateName)`](single-file-processing.md#captureimagedatatemplatename) | Implement data capture on the given image data. |
-| [`capture(bitmap,templateName)`](single-file-processing.md#capturebitmaptemplatename) | Implement data capture on the given Bitmap. |
+| [`capture(filePath,templateName)`](single-file-processing.md#capturefilepathtemplatename) | Capture data from the file specified by the file path. |
+| [`capture(fileBytes,templateName)`](single-file-processing.md#capturefilebytestemplatename) | Capture data from a given file in memory. |
+| [`capture(imageData,templateName)`](single-file-processing.md#captureimagedatatemplatename) | Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object. |
+| [`capture(bitmap,templateName)`](single-file-processing.md#capturebitmaptemplatename) | Capture data from the given Bitmap. |
 
 ## Multiple-File Processing
 
