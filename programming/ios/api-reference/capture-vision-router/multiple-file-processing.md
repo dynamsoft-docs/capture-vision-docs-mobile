@@ -38,6 +38,7 @@ Sets an image source that will provide images to be consecutively processed.
 
 A BOOL value that indicates whether the input is set successfully.
 
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -75,7 +76,7 @@ func getInput() throws -> DSImageSourceAdapter
 
 ## addImageSourceStateListener
 
-Registers a `DSImageSourceStateListener` object to be used as a callback when the status of `DSImageSourceAdapter` changes.
+Registers a `DSImageSourceStateListener` object to be used as a callback when the status of `DSImageSourceAdapter` is received.
 
 **Parameters**
 
