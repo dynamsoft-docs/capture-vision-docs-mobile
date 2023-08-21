@@ -27,7 +27,7 @@ class CapturedResultItem
 | Method | Description |
 | ------ | ----------- |
 | [`getType`](#gettype) | Get the type of the captured result item. |
-| [`getReferencedItem`](#getreferenceditem) | Get the referenced captured result item. The reference dependencies is defined in the capture vision settings. |
+| [`getReferencedItem`](#getreferenceditem) | Get the referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
 
 ### getType
 
@@ -43,7 +43,7 @@ The type of the captured result item.
 
 ### getReferencedItem
 
-Get the referenced captured result item. The reference dependencies is defined in the capture vision settings.
+Get the referenced captured result item. The reference dependencies is defined in the Capture Vision settings.
 
 ```java
 CapturedResultItem getReferencedItem();

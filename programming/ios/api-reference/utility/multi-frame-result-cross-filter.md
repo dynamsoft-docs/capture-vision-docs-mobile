@@ -33,16 +33,16 @@ class MultiFrameResultCrossFilter: NSObject, CapturedResultFilter
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableResultDeduplication`](#enableresultdeduplication) | Enable duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition. |
-| [`enableResultCrossVerification`](#enableresultcrossverification) | Enable result verification feature to improve the accuracy of video streaming recognition results. |
-| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the duplicate forget time for the specific captured result item types. |
-| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Whether the duplicate filter feature is enabled for the specific result item type. |
-| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Whether the result verification feature is enabled for the specific result item type. |
-| [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the duplicate forget time for the specific captured result item types. |
+| [`enableResultDeduplication`](#enableresultdeduplication) | Enable filtering out duplicate consecutive results in the period set by `setDuplicateForgetTime` for video streaming recognition. |
+| [`enableResultCrossVerification`](#enableresultcrossverification) | Enable result cross verification to improve the accuracy of video streaming recognition results. |
+| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the time period during which duplicate results of the specified result type are discarded. |
+| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Returns whether the result deduplication feature is enabled for the specified result item type. |
+| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Returns whether the result cross verification feature is enabled for the specified result item type. |
+| [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the time period during which duplicate results of the specified  result type. |
 
 ### enableResultDeduplication
 
-Enable duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition.
+Enable filtering out duplicate consecutive results in the period set by `setDuplicateForgetTime` for video streaming recognition.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -62,11 +62,11 @@ func enableResultDeduplication(resultItemType: DSCapturedResultItemType, isEnabl
 
 `resultItemType`: Specifies a targeting captured result type.
 
-`isEnabled`: A BOOL value that indicates whether to enable the duplicate filter feature.
+`isEnabled`: A BOOL value that indicates whether to enable the result deduplication feature.
 
 ### enableResultCrossVerification
 
-Enable result verification feature to improve the accuracy of video streaming recognition results.
+Enable result cross verification feature to improve the accuracy of video streaming recognition results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -86,11 +86,11 @@ func enableResultCrossVerification(resultItemType: DSCapturedResultItemType, isE
 
 `resultItemType`: Specifies a targeting captured result type.
 
-`isEnabled`: A BOOL value that indicates whether to enable the result verification feature.
+`isEnabled`: A BOOL value that indicates whether to enable the result cross verification feature.
 
 ### setDuplicateForgetTime
 
-Sets the duplicate forget time for the specific captured result item types.
+Sets the time period during which duplicate results of the specified result type are discarded.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -114,7 +114,7 @@ func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateF
 
 ### isResultDeduplicationEnabled
 
-Whether the duplicate filter feature is enabled for the specific result item type.
+Returns whether the result deduplication feature is enabled for the specified result item type.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -135,11 +135,11 @@ func isResultDeduplicationEnabled(resultItemType: DSCapturedResultItemType) -> B
 
 **Return Value**
 
-A BOOL value that indicates whether the duplicate filter feature is enabled for the specific result item type.
+A BOOL value that indicates whether the result deduplication feature is enabled for the specific result item type.
 
 ### isResultCrossVerificationEnabled
 
-Whether the result verification feature is enabled for the specific result item type.
+Returns whether the result cross verification feature is enabled for the specified result item type.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -160,11 +160,11 @@ func isResultCrossVerificationEnabled(resultItemType: DSCapturedResultItemType) 
 
 **Return Value**
 
-A BOOL value that indicates whether the result verification feature is enabled for the specific result item type.
+A BOOL value that indicates whether the result cross verification feature is enabled for the specific result item type.
 
 ### getDuplicateForgetTime
 
-Gets the duplicate forget time for the specific captured result item types.
+Gets the time period during which duplicate results of the specified  result type.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -40,9 +40,9 @@ class Quadrilateral : NSObject
 | Method | Description |
 | ------ | ----------- |
 | [`contains`](#contains) | Check whether the input point is contained by the quadrilateral. |
-| [`getBoundingRect`](#getboundingrect) | Get the bounding rectangle of the quadrilateral. |
-| [`getCentrePoint`](#getcentrepoint) | Get the centre point of the quadrilateral. |
-| [`getArea`](#getarea) | Get the area of the quadrilateral. |
+| [`boundingRect`](#boundingrect) | Get the bounding rectangle of the quadrilateral. |
+| [`centrePoint`](#centrepoint) | Get the centre point of the quadrilateral. |
+| [`area`](#area) | Get the area of the quadrilateral. |
 
 ## Attribute Details
 
@@ -105,7 +105,7 @@ BOOL result = [quadrilateral contains:point];
 let result = quadrilateral.contains(point)
 ```
 
-## getBoundingRect
+## boundingRect
 
 Get the bounding rectangle of the quadrilateral.
 
@@ -115,11 +115,11 @@ Get the bounding rectangle of the quadrilateral.
 >
 >1. 
 ```objc
-- (CGRect)getBoundingRect;
+@property (nonatomic, readonly) CGRect *boundingRect;
 ```
 2. 
 ```swift
-func getBoundingRect() -> CGRect
+var boundingRect: CGRect { get }
 ```
 
 **Return Value**
@@ -141,7 +141,7 @@ CGRect rect = [quadrilateral getBoundingRect];
 let rect = quadrilateral.getBoundingRect()
 ```
 
-## getCentrePoint
+## centrePoint
 
 Get the centre point of the quadrilateral.
 
@@ -151,11 +151,11 @@ Get the centre point of the quadrilateral.
 >
 >1. 
 ```objc
-- (CGPoint)getCentrePoint;
+@property (nonatomic, readonly) CGPoint *centrePoint;
 ```
 2. 
 ```swift
-func getCentrePoint() -> CGPoint
+var centrePoint: CGPoint { get }
 ```
 
 **Return Value**
@@ -177,7 +177,7 @@ CGPoint center = [quadrilateral getCentrePoint];
 let center = quadrilateral.getCentrePoint()
 ```
 
-## getArea
+## area
 
 Get the area of the quadrilateral.
 
@@ -187,11 +187,11 @@ Get the area of the quadrilateral.
 >
 >1. 
 ```objc
-- (NSInteger)getArea;
+@property (nonatomic, readonly) NSInteger *area;
 ```
 2. 
 ```swift
-func getArea() -> Int
+var area: Int { get }
 ```
 
 **Return Value**
