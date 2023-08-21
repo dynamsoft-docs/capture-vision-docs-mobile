@@ -2,7 +2,7 @@
 layout: default-layout
 Title: MultiFrameResultCrossFilter - Dynamsoft Capture Vision Router Module Android Edition API Reference
 Description: The class MultiFrameResultCrossFilter of Dynamsoft Capture Vision Router Module is responsible for filtering captured results.
-Keywords: multi-frame result cross filter, Java, Kotlin
+Keywords: multi-frame result cross filter, Filter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
