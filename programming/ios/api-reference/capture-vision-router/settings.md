@@ -14,11 +14,11 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`initSettings`](#initsettings) | Initialize the settings with a JSON String. |
 | [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the settings with a JSON file. |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the capture settings for a specific template. |
-| [`updateSettings`](#updatesettings) | Update capture vision settings with a object of `DSSimplifiedCaptureVisionSettings`. |
-| [`resetSettings`](#resetsettings) | Reset the capture vision settings. |
-| [`outputSettings`](#outputsettings) | Output the targeting capture vision settings to a JSON string. |
-| [`outputSettingsToFile`](#outputsettingstofile) | Output the targeting capture vision settings to a JSON file. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision Router settings for a specific template. |
+| [`updateSettings`](#updatesettings) | Update the Capture Vision settings with an object of `DSSimplifiedCaptureVisionSettings`. |
+| [`resetSettings`](#resetsettings) | Reset the Capture Vision Router settings. |
+| [`outputSettings`](#outputsettings) | Output the targeted capture vision settings to a JSON string. |
+| [`outputSettingsToFile`](#outputsettingstofile) | Output the targeted capture vision settings to a JSON file. |
 
 ## initSettings
 
@@ -43,12 +43,12 @@ func initSettings(_ content:String) throws -> BOOL
 `content`: A JSON string that contains capture vision settings.
 `error`: An NSError pointer. An error occurs when:
 
-* The method is triggered after the capture is started.
-* You settings include invalid parameters.
+* The method is triggered after the capture starts or after `startCapturing` is invoked.
+* The settings string includes invalid parameters.
 
 **Return Value**
 
-A bool value that indicates whether the settings are initialized successfully.
+A BOOL value that indicates whether the settings are initialized successfully.
 
 ## initSettingsFromFile
 
@@ -73,17 +73,17 @@ func initSettingsFromFile(_ file:String) throws -> BOOL
 `file`: A JSON file that contains capture vision settings.
 `error`: An NSError pointer. An error occurs when:
 
-* The method is triggered after the capture is started.
-* There exists invalid parameters in your settings.
-* Your file path is unavailable.
+* The method is triggered after the capture starts or after `startCapturing` is invoked.
+* The settings template contains some invalid parameters.
+* The file path is unavailable or unaccessable.
 
 **Return Value**
 
-A bool value that indicates whether the settings are initialized successfully.
+A BOOL value that indicates whether the settings are initialized successfully.
 
 ## getSimplifiedSettings
 
-Retrieves a simplified version of the capture settings for a specific template.
+Retrieves a simplified version of the Capture Vision Router settings for a specific template.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -101,18 +101,24 @@ func getSimplifiedSettings(_ templateName:String) throws -> SimplifiedCaptureVis
 
 **Parameters**
 
+`templateName`: Name of the targeted Capture Vision template that is defined in a JSON string or a JSON file.
 `error`: An NSError pointer. An error occurs when:
 
-* The method is triggered after the capture is started.
-* You are using a complex template and failed to output the simplified settings object.
+* The method is triggered after the capture starts or after `startCapturing` is invoked.
+* You are using a very complex template and the library fails to output the simplified settings object.
+* The Capture Vision template that is referenced doesn't exist in the overall template file or string.
 
 **Return Value**
 
-An object of `DSSimplifiedCaptureVisionSettings`.
+A [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md) object.
+
+**Remarks**
+
+A single JSON string or file can define multiple Capture Vision templates. `getSimplifiedSettings` will only return the simplified settings of the template named in the input parameter, even though there could be several templates in the JSON string/file.
 
 ## updateSettings
 
-Update capture vision settings with a object of `DSSimplifiedCaptureVisionSettings`.
+Update the Capture Vision settings with an object of `DSSimplifiedCaptureVisionSettings`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -131,12 +137,12 @@ func updateSettings(_ templateName:String, settings:SimplifiedCaptureVisionSetti
 
 **Parameters**
 
-`templateName`: Specify the name of the template that you want to update.
-`settings`: An object of DSSimplifiedCaptureVisionSettings.
+`templateName`: The name of the template that you want to update.
+`settings`: An object of [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md).
 `error`: An NSError pointer. An error occurs when:
 
-* The method is triggered after the capture is started.
-* You settings include invalid parameters.
+* The method is triggered after the capture starts or after `startCapturing` is invoked.
+* The settings object contains some invalid parameters.
 
 **Return Value**
 
@@ -144,7 +150,7 @@ A bool value that indicates whether the settings are uploaded successfully.
 
 ## resetSettings
 
-Reset the capture vision settings.
+Reset the Capture Vision Router settings.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -163,16 +169,16 @@ func resetSettings() throws -> BOOL
 
 `error`: An NSError pointer. An error occurs when:
 
-* The method is triggered after the capture is started.
-* You settings include invalid parameters.
+* The method is triggered after the capture starts or after `startCapturing` is invoked.
+* The settings object contains some invalid parameters.
 
 **Return Value**
 
-A bool value that indicates whether the settings are reset successfully.
+A BOOL value that indicates whether the settings are reset successfully.
 
 ## outputSettings
 
-Output the targeting capture vision settings to a JSON string.
+Output the targeted capture vision settings to a JSON string.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -192,8 +198,8 @@ func outputSettings(_ templateName:String) throws -> String
 
 `error`: An NSError pointer. An error occurs when:
 
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
+* The method is triggered after the capture starts or after `startCapturing` is invoked.
+* The template name is invalid or doesn't exist in the JSON string/file.
 
 **Return Value**
 
@@ -201,7 +207,7 @@ The capture vision settings in a JSON string.
 
 ## outputSettingsToFile
 
-Output the targeting capture vision settings to a JSON file.
+Output the targeted capture vision settings to a JSON file.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -221,12 +227,12 @@ func outputSettingsToFile(_ templateName:String, file:String) throws -> BOOL
 **Parameters**
 
 `templateName`: The name of the template that you want to output.
-`file`: The file path and name that you want to save the template.
+`file`: The file path and name where the template will be output and saved.
 `error`: An NSError pointer. An error occurs when:
 
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
-* The file path you input is unavailable.
+* The method is triggered after the capture starts or after `startCapturing` is invoked.
+* The template name is invalid or doesn't exist.
+* The file path you input is unavailable or inaccessible.
 
 **Return Value**
 
