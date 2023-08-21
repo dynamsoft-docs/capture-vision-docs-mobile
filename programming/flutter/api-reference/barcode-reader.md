@@ -26,7 +26,7 @@ A barcode reader object accesses to a camera via `DCVCameraView` object at nativ
 | [`stopScanning`](#stopscanning) | Stop the barcode decoding thread. |
 | [`receiveResultStream`](#receiveresultstream) | Receive the stream to listen all the barcode results after the library finishes scanning a frame. |
 | [`decodeFile`](#decodefile) | Decode barcodes from an image file. |
-| [`enableResultVerification`](#enableresultverification) | Enable result verification. The output result will be double-checked to make sure the accuracy. |
+| [`enableResultVerification`](#enableresultverification) | Enable result cross verification. The output result will be double-checked to make sure the accuracy. |
 | [`setModeArgument`](#setmodeargument) | **Mode arguments** are the optional settings of **mode parameters** in `DBRRuntimeSettings`. You can use `setModeArgument` to configure these arguments. |
 | [`getModeArgument`](#getmodeargument) | Get the value of the specified **mode argument**. |
 
@@ -304,7 +304,7 @@ final result = await _barcodeReader.decodeFile("Your file path");
 
 ## enableResultVerification
 
-Enable result verification. The output result will be double-checked to make sure the accuracy.
+Enable result cross verification. The output result will be double-checked to make sure the accuracy.
 
 ```dart
 Future enableResultVerification(bool isEnable)
@@ -312,7 +312,7 @@ Future enableResultVerification(bool isEnable)
 
 **Parameters**
 
-`isEnable`: Set the bool value to true to enable the result verification.
+`isEnable`: Set the bool value to true to enable the result cross verification.
 
 **Code Snippet**
 

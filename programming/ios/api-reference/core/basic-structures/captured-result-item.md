@@ -34,7 +34,7 @@ class CapturedResultItem : NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`type`](#type) | *DSCapturedResultItemType* | The type of the captured result item. |
-| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the capture vision settings. |
+| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
 
 ### type
 
@@ -55,7 +55,7 @@ var type: DSCapturedResultItemType { get }
 
 ### referencedItem
 
-The referenced captured result item. The reference dependencies is defined in the capture vision settings.
+The referenced captured result item. The reference dependencies is defined in the Capture Vision settings.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

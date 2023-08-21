@@ -14,11 +14,11 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`initSettings`](#initsettings) | Initialize the settings with a JSON String. |
 | [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the settings with a JSON file. |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision Router settings for a specific template. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision settings for a specific template. |
 | [`updateSettings`](#updatesettings) | Update the Capture Vision settings with an object of `DSSimplifiedCaptureVisionSettings`. |
-| [`resetSettings`](#resetsettings) | Reset the Capture Vision Router settings. |
-| [`outputSettings`](#outputsettings) | Output the targeted capture vision settings to a JSON string. |
-| [`outputSettingsToFile`](#outputsettingstofile) | Output the targeted capture vision settings to a JSON file. |
+| [`resetSettings`](#resetsettings) | Reset the Capture Vision settings. |
+| [`outputSettings`](#outputsettings) | Output the targeted Capture Vision settings to a JSON string. |
+| [`outputSettingsToFile`](#outputsettingstofile) | Output the targeted Capture Vision settings to a JSON file. |
 
 ## initSettings
 
@@ -40,7 +40,7 @@ func initSettings(_ content:String) throws -> BOOL
 
 **Parameters**
 
-`content`: A JSON string that contains capture vision settings.
+`content`: A JSON string that contains Capture Vision settings.
 `error`: An NSError pointer. An error occurs when:
 
 * The method is triggered after the capture starts or after `startCapturing` is invoked.
@@ -70,7 +70,7 @@ func initSettingsFromFile(_ file:String) throws -> BOOL
 
 **Parameters**
 
-`file`: A JSON file that contains capture vision settings.
+`file`: A JSON file that contains Capture Vision settings.
 `error`: An NSError pointer. An error occurs when:
 
 * The method is triggered after the capture starts or after `startCapturing` is invoked.
@@ -83,7 +83,7 @@ A BOOL value that indicates whether the settings are initialized successfully.
 
 ## getSimplifiedSettings
 
-Retrieves a simplified version of the Capture Vision Router settings for a specific template.
+Retrieves a simplified version of the Capture Vision settings for a specific template.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -150,7 +150,7 @@ A bool value that indicates whether the settings are uploaded successfully.
 
 ## resetSettings
 
-Reset the Capture Vision Router settings.
+Reset the Capture Vision settings.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -178,7 +178,7 @@ A BOOL value that indicates whether the settings are reset successfully.
 
 ## outputSettings
 
-Output the targeted capture vision settings to a JSON string.
+Output the targeted Capture Vision settings to a JSON string.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -203,11 +203,11 @@ func outputSettings(_ templateName:String) throws -> String
 
 **Return Value**
 
-The capture vision settings in a JSON string.
+The Capture Vision settings in a JSON string.
 
 ## outputSettingsToFile
 
-Output the targeted capture vision settings to a JSON file.
+Output the targeted Capture Vision settings to a JSON file.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

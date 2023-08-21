@@ -284,4 +284,4 @@ enableDuplicateFilter(isEnabled: boolean): Promise<void>;
 
 **Parameters**
 
-`isEnabled`: A boolean value that determines whether to enable the duplicate filter. Set it to true when you want to enable the filter. Otherwise, set it to false.
+`isEnabled`: A boolean value that determines whether to enable the result deduplication. Set it to true when you want to enable the filter. Otherwise, set it to false.

@@ -58,13 +58,13 @@ class CaptureVisionRouter
 
 | Method | Description |
 | ------ | ----------- |
-| [`initSettings`](settings.md#initsettings) | Initialize the capture settings with a JSON String. |
-| [`initSettingsFromFile`](settings.md#initsettingsfromfile) | Initialize the capture settings with a JSON file. |
-| [`getSimplifiedSettings`](settings.md#getsimplifiedsettings) | Retrieves a simplified version of the capture settings for a specific template. |
-| [`updateSettings`](settings.md#updatesettings) | Update capture vision settings with an object of `SimplifiedCaptureVisionSettings`. |
+| [`initSettings`](settings.md#initsettings) | Initialize the Capture Vision settings with a JSON String. |
+| [`initSettingsFromFile`](settings.md#initsettingsfromfile) | Initialize the Capture Vision settings with a JSON file. |
+| [`getSimplifiedSettings`](settings.md#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision settings for a specific template. |
+| [`updateSettings`](settings.md#updatesettings) | Update Capture Vision settings with an object of `SimplifiedCaptureVisionSettings`. |
 | [`resetSettings`](settings.md#resetsettings) | Resets all templates to factory settings. |
-| [`outputSettings`](settings.md#outputsettings) | Output the targeting capture vision settings to a JSON string. |
-| [`outputSettingsToFile`](settings.md#outputsettingstofile) | Output the targeting capture vision settings to a JSON file. |
+| [`outputSettings`](settings.md#outputsettings) | Output the targeting Capture Vision settings to a JSON string. |
+| [`outputSettingsToFile`](settings.md#outputsettingstofile) | Output the targeting Capture Vision settings to a JSON file. |
 
 ## Intermediate Result
 

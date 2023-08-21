@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultReceiver
 
-The `CapturedResultReceiver` interface provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+The `CapturedResultReceiver` interface provides methods for monitoring the output of captured results, which can consist of original image result(s), decoded barcode result(s), recognized text line result(s), detected quad result(s), normalized image result(s), or parsed result(s). The `CapturedResultReceiver` can add a receiver for any type of captured result or for a specific type of captured result, based on the method that is implemented.
 
 ## Definition
 

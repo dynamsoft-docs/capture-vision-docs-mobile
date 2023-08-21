@@ -12,17 +12,17 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`initSettings`](#initsettings) | Initialize the capture settings with a JSON String. |
-| [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the capture settings with a JSON file. |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the capture settings for a specific template. |
-| [`updateSettings`](#updatesettings) | Update capture vision settings with an object of `SimplifiedCaptureVisionSettings`. |
+| [`initSettings`](#initsettings) | Initialize the Capture Vision settings with a JSON String. |
+| [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the Capture Vision settings with a JSON file. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision settings for a specific template. |
+| [`updateSettings`](#updatesettings) | Update Capture Vision settings with an object of `SimplifiedCaptureVisionSettings`. |
 | [`resetSettings`](#resetsettings) | Resets all templates to factory settings. |
-| [`outputSettings`](#outputsettings) | Output the targeting capture vision settings to a JSON string. |
-| [`outputSettingsToFile`](#outputsettingstofile) | Output the targeting capture vision settings to a JSON file. |
+| [`outputSettings`](#outputsettings) | Output the targeting Capture Vision settings to a JSON string. |
+| [`outputSettingsToFile`](#outputsettingstofile) | Output the targeting Capture Vision settings to a JSON file. |
 
 ## initSettings
 
-Initialize the capture settings with a JSON String.
+Initialize the Capture Vision settings with a JSON String.
 
 ```java
 void initSettings(String content) throws CaptureVisionRouterException;
@@ -30,7 +30,7 @@ void initSettings(String content) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`[in] content`: A JSON string that contains capture vision settings.
+`[in] content`: A JSON string that contains Capture Vision settings.
 
 **Exception**
 
@@ -41,7 +41,7 @@ An exception is thrown when:
 
 ## initSettingsFromFile
 
-Initialize the capture settings with a JSON file.
+Initialize the Capture Vision settings with a JSON file.
 
 ```java
 void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
@@ -49,7 +49,7 @@ void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`[in] file`: A JSON file that contains capture vision settings.
+`[in] file`: A JSON file that contains Capture Vision settings.
 
 **Exception**
 
@@ -61,7 +61,7 @@ An exception is thrown when:
 
 ## getSimplifiedSettings
 
-Retrieves a simplified version of the capture settings for a specific template.
+Retrieves a simplified version of the Capture Vision settings for a specific template.
 
 ```java
 SimplifiedCaptureVisionSettings getSimplifiedSettings(String templateName) throws CaptureVisionRouterException;
@@ -80,7 +80,7 @@ An exception is thrown when:
 
 ## updateSettings
 
-Update capture vision settings with an object of [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-capture-vision-settings.md).
+Update Capture Vision settings with an object of [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-capture-vision-settings.md).
 
 ```java
 void updateSettings(String templateName, SimplifiedCaptureVisionSettings settings) throws CaptureVisionRouterException;
@@ -117,7 +117,7 @@ An exception is thrown when:
 
 ## outputSettings
 
-Output the targeting capture vision settings to a JSON string.
+Output the targeting Capture Vision settings to a JSON string.
 
 ```java
 String outputSettings(String templateName) throws CaptureVisionRouterException;
@@ -127,7 +127,7 @@ String outputSettings(String templateName) throws CaptureVisionRouterException;
 
 **Return Value**
 
-The capture vision settings in a JSON string.
+The Capture Vision settings in a JSON string.
 
 **Exception**
 
@@ -138,7 +138,7 @@ An exception is thrown when:
 
 ## outputSettingsToFile
 
-Output the targeting capture vision settings to a JSON file.
+Output the targeting Capture Vision settings to a JSON file.
 
 ```java
 void outputSettingsToFile(String templateName, String filePath) throws CaptureVisionRouterException;
