@@ -42,10 +42,6 @@ void addResultReceiver(IntermediateResultReceiver receiver);
 
 `[in] receiver`: A delegate object of `IntermediateResultReceiver`.  
 
-**Exception**
-
-An exception is thrown when the result receiver is not added successfully.
-
 ### removeResultReceiver
 
 Removes an intermediate result receiver from an `IntermediateResultManager` object.
@@ -57,10 +53,6 @@ void removeResultReceiver(IntermediateResultReceiver receiver);
 **Parameters**
 
 `[in] receiver`: A delegate object of [`IntermediateResultReceiver`](intermediate-result-receiver.md).  
-
-**Exception**
-
-An exception is thrown when the result receiver is not removed successfully.
 
 ### getOriginalImage
 

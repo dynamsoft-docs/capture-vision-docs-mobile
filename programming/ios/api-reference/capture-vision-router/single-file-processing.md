@@ -40,11 +40,16 @@ func captureFromFile(_ file:String, templateName:String) throws -> CaptureResult
 
 `file`: The file path and name that you want to capture data from.  
 `templateName`: Specify a template with a templateName for the data capturing.  
-`error`: An NSError pointer. An error occurs when:
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
-* The file path you input is unavailable (The root of sandbox is invalid path for PNG files).
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND | -10005 | The file is not found. |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 
@@ -73,11 +78,15 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) throws -> Captu
 
 `fileBytes`: A `NSData` object that points to a file in memory.  
 `templateName`: Specify a template with a templateName for the data capturing.  
-`error`: An `NSError` pointer. An error occurs when:
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
-* The file path you input is unavailable (The root of sandbox is invalid path for PNGles).
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 
@@ -106,11 +115,16 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) throws -> Capt
 
 `buffer`: A [`DSImageData`](../core/basic-structures/image-data.md) object that contains image info.  
 `templateName`: Specify a template with a templateName for the data capturing.  
-`error`: An `NSError` pointer. An error occurs when:
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
-* The image buffer is invalid.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The ImageData object is null. |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 
@@ -139,10 +153,15 @@ func captureFromBuffer(_ image:UIImage, templateName:String) throws -> CaptureRe
 
 `image`: A `UIImage` object.  
 `templateName`: Specify a template with a templateName for the data capturing.  
-`error`: An `NSError` pointer. An error occurs when:
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 

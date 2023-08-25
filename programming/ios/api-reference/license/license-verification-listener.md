@@ -54,4 +54,4 @@ func onLicenseVerified(_ isSuccess: Bool, error: Error?)
 
 `isSuccess`: A Boolean value indicating whether the license is verified successfully.
 
-`error`: An NSError pointer. It carries the error code and message that describe the reason why your license activation failed.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.

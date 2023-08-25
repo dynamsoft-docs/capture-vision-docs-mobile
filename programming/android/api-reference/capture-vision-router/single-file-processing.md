@@ -33,11 +33,13 @@ CapturedResult capture(String filePath, String templateName) throws CaptureVisio
 
 **Exception**
 
-An exception is thrown if:
-
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
-* The file path you input is unavailable (The root of sandbox is invalid path for PNG files).
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND | -10005 | The file is not found. |
+| EC_FILE_TYPE_NOT_SUPPORTED | -10006 | The file type is not supported. |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 
@@ -59,11 +61,11 @@ CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisi
 
 **Exception**
 
-An exception is thrown if:
-
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
-* The file path you input is unavailable (The root of sandbox is invalid path for PNGles).
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 
@@ -85,11 +87,12 @@ CapturedResult capture(ImageData imageData, String templateName) throws CaptureV
 
 **Exception**
 
-An exception is thrown if:
-
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
-* The image buffer is invalid.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The ImageData object is null. |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 
@@ -111,10 +114,11 @@ CapturedResult capture(Bitmap bitmap, String templateName) throws CaptureVisionR
 
 **Exception**
 
-An exception is thrown if:
-
-* The method is triggered after the capture is started.
-* The template name you input is invalid.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 **Return Value**
 

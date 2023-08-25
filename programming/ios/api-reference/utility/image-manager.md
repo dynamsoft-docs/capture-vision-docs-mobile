@@ -65,7 +65,17 @@ func save(toFile imageData: ImageData, path: String, overWrite: Bool) throws -> 
 `imageData`: The `ImageData` object to save to an image file.  
 `path`: The targeting file path with the file name and extension name.  
 `overWrite`: A flag indicating whether to overwrite the file if it already exists. Defaults to true.  
-`error`: A `NSError` pointer. An error occurs when the file path is unavailable.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The ImageData object is null. |
+| EC_FILE_TYPE_NOT_SUPPORTED | -10006 | The file type is not supported. |
+| EC_FILE_ALREADY_EXISTS | -10067 | The file already exists but overwriting is disabled. |
+| EC_CREATE_FILE_FAILED | -10068 | The file path does not exist but cannot be created, or the file cannot be created for any other reason. |
+| EC_IMGAE_DATA_INVALID | -10069 | The input ImageData object contains invalid parameter(s). |
 
 **Return Value**
 

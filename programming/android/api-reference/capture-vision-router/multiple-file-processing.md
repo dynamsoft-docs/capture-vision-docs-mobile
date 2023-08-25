@@ -39,7 +39,9 @@ void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
 
 **Exception**
 
-An exception is thrown if the method is triggered after the capture is started.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 ## getInput
 
@@ -65,10 +67,6 @@ void addImageSourceStateListener(ImageSourceStatestener listener);
 
 `[in] listener`: An object of [`ImageSourceStateListener`](./auxiliary-classes/image-source-state-listener.md).
 
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
-
 ## removeImageSourceStateListener
 
 Removes a [`ImageSourceStateListener`](../auxiliary-classes/image-source-state-listener.md) from the Capture Vision Router.
@@ -80,10 +78,6 @@ void removeImageSourceStateListener(ImageSourceStateListener listener);
 **Parameters**
 
 `[in] listener`: An object of [`ImageSourceStateListener`](../auxiliary-classes/image-source-state-listener.md).
-
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
 
 ## addResultReceiver
 
@@ -97,10 +91,6 @@ void addResultReceiver(CapturedResultReceiver receiver);
 
 `[in] receiver`: An object of [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
 
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
-
 ## removeResultReceiver
 
 Removes a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) from the Capture Vision Router.
@@ -112,10 +102,6 @@ void removeResultReceiver(CapturedResultReceiver receiver);
 **Parameters**
 
 `[in] receiver`: An object of [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
-
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
 
 ## startCapturing
 
@@ -131,11 +117,11 @@ void startCapturing(String templateName) throws CaptureVisionRouterException;
 
 **Exception**
 
-An exception is thrown when:
-
-* The method is triggered after the capture is started.
-* Your templateName is invalid.
-* Your image source is invalid.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_NO_IMAGE_SOURCE | -10063 | Can not start capturing before you set the input. |
 
 ## stopCapturing
 
@@ -157,10 +143,6 @@ void addCaptureStateListener(CaptureStateListener listener);
 
 `[in] listener`: A delegate object of [`CaptureStateListener`](../auxiliary-classes/capture-state-listener.md) to receive the capture state.
 
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
-
 ## removeCaptureStateListener
 
 Removes a [`CaptureStateListener`](../auxiliary-classes/capture-state-listener.md) that has been configured for the Capture Vision Router.
@@ -172,10 +154,6 @@ void removeCaptureStateListener(CaptureStateListener listener);
 **Parameters**
 
 `[in] listener`: An object of [`CaptureStateListener`](../auxiliary-classes/capture-state-listener.md)
-
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
 
 ## addResultFilter
 
@@ -189,10 +167,6 @@ void addResultFilter(CapturedResultFilter filter);
 
 `[in] filter`: An object of [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
 
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
-
 ## removeResultFilter
 
 Removes a `CapturedResultFilter` that has been configured for the Capture Vision Router.
@@ -204,7 +178,3 @@ void removeResultFilter(CapturedResultFilter filter);
 **Parameters**
 
 `[in] filter`: An object of [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
-
-**Exception**
-
-An exception is thrown if the method is triggered after the capture is started.
