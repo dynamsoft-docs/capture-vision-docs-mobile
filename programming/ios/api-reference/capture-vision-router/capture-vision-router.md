@@ -2,7 +2,7 @@
 layout: default-layout
 Title: DSCaptureVisionRouter - Dynamsoft Capture Vision Router Module iOS Edition API Reference
 Description: The class DSCaptureVisionRouter of Dynamsoft Capture Vision Router Module is what a user uses to interact with image-processing and semantic-processing products in their applications. It accepts an image source and returns processing results which may contain Final results or Intermediate Results.
-Keywords: capture vision, objective-c, swift
+Keywords: CaptureVisionRouter index, cvr, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
