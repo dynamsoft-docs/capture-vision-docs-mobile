@@ -40,7 +40,7 @@ func initSettings(_ content:String) throws -> BOOL
 
 **Parameters**
 
-`content`: A JSON string that contains Capture Vision settings.
+`content`: A JSON string that contains Capture Vision settings.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
@@ -81,7 +81,7 @@ func initSettingsFromFile(_ file:String) throws -> BOOL
 
 **Parameters**
 
-`file`: A JSON file that contains Capture Vision settings.
+`file`: A JSON file that contains Capture Vision settings.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
@@ -123,7 +123,7 @@ func getSimplifiedSettings(_ templateName:String) throws -> SimplifiedCaptureVis
 
 **Parameters**
 
-`templateName`: Name of the targeted Capture Vision template that is defined in a JSON string or a JSON file.
+`templateName`: Name of the targeted Capture Vision template that is defined in a JSON string or a JSON file.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
@@ -163,8 +163,8 @@ func updateSettings(_ templateName:String, settings:SimplifiedCaptureVisionSetti
 
 **Parameters**
 
-`templateName`: The name of the template that you want to update.
-`settings`: An object of [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md).
+`templateName`: The name of the template that you want to update.  
+`settings`: An object of [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md).  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
@@ -264,8 +264,8 @@ func outputSettingsToFile(_ templateName:String, file:String) throws -> BOOL
 
 **Parameters**
 
-`templateName`: The name of the template that you want to output.
-`file`: The file path and name where the template will be output and saved.
+`templateName`: The name of the template that you want to output.  
+`file`: The file path and name where the template will be output and saved.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
