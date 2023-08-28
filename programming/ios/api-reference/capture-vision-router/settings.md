@@ -2,7 +2,7 @@
 layout: default-layout
 Title: Processing multiple Images/Pages - Dynamsoft Capture Vision Router Module iOS Edition API Reference
 Description: The APIs of the DSCaptureVisionRouter for processing multiple Images/Pages.
-Keywords: capture vision, objective-c, swift
+Keywords: cvr, CaptureVisionRouter, objective-c, swift, initSettings, updateSettings
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -40,11 +40,22 @@ func initSettings(_ content:String) throws -> BOOL
 
 **Parameters**
 
-`content`: A JSON string that contains Capture Vision settings.
-`error`: An NSError pointer. An error occurs when:
+`content`: A JSON string that contains Capture Vision settings.  
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture starts or after `startCapturing` is invoked.
-* The settings string includes invalid parameters.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_JSON_PARSE_FAILED | -10030 | Failed to parse the JSON data. |
+| EC_JSON_TYPE_INVALID | -10031 | One or more parameters are allocated with wrong data type. |
+| EC_JSON_KEY_INVALID | -10032 | There exists invalid key in your JSON data. |
+| EC_JSON_VALUE_INVALID | -10033 | There exists invalid parameter value in your JSON data. |
+| EC_JSON_NAME_KEY_MISSING | -10034 | One or more `name` parameters are missing in your JSON data. Each section of the JSON data requires a unique `name` parameter. |
+| EC_JSON_NAME_VALUE_DUPLICATED | -10035 | There exists duplicated `name` parameters in your JSON data. The `name` parameter should be unique. |
+| EC_JSON_NAME_REFERENCE_INVALID | -10037 | You have referenced an invalid `name` value in your JSON data. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 **Return Value**
 
@@ -70,12 +81,23 @@ func initSettingsFromFile(_ file:String) throws -> BOOL
 
 **Parameters**
 
-`file`: A JSON file that contains Capture Vision settings.
-`error`: An NSError pointer. An error occurs when:
+`file`: A JSON file that contains Capture Vision settings.  
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture starts or after `startCapturing` is invoked.
-* The settings template contains some invalid parameters.
-* The file path is unavailable or unaccessable.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND | -10005 | The file is not found. |
+| EC_JSON_PARSE_FAILED | -10030 | Failed to parse the JSON data. |
+| EC_JSON_TYPE_INVALID | -10031 | One or more parameters are allocated with wrong data type. |
+| EC_JSON_KEY_INVALID | -10032 | There exists invalid key in your JSON data. |
+| EC_JSON_VALUE_INVALID | -10033 | There exists invalid parameter value in your JSON data. |
+| EC_JSON_NAME_KEY_MISSING | -10034 | One or more `name` parameters are missing in your JSON data. Each section of the JSON data requires a unique `name` parameter. |
+| EC_JSON_NAME_VALUE_DUPLICATED | -10035 | There exists duplicated `name` parameters in your JSON data. The `name` parameter should be unique. |
+| EC_JSON_NAME_REFERENCE_INVALID | -10037 | You have referenced an invalid `name` value in your JSON data. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 **Return Value**
 
@@ -101,12 +123,16 @@ func getSimplifiedSettings(_ templateName:String) throws -> SimplifiedCaptureVis
 
 **Parameters**
 
-`templateName`: Name of the targeted Capture Vision template that is defined in a JSON string or a JSON file.
-`error`: An NSError pointer. An error occurs when:
+`templateName`: Name of the targeted Capture Vision template that is defined in a JSON string or a JSON file.  
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture starts or after `startCapturing` is invoked.
-* You are using a very complex template and the library fails to output the simplified settings object.
-* The Capture Vision template that is referenced doesn't exist in the overall template file or string.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CONVERT_COMPLEX_TEMPLATE_ERROR | -10061 | The template you specified is a complex template which can not be output as a `SimplifiedCaptureVisionSettings` object. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 **Return Value**
 
@@ -137,12 +163,17 @@ func updateSettings(_ templateName:String, settings:SimplifiedCaptureVisionSetti
 
 **Parameters**
 
-`templateName`: The name of the template that you want to update.
-`settings`: An object of [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md).
-`error`: An NSError pointer. An error occurs when:
+`templateName`: The name of the template that you want to update.  
+`settings`: An object of [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md).  
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture starts or after `startCapturing` is invoked.
-* The settings object contains some invalid parameters.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your `SimplifiedCaptureVisionSettings`. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 **Return Value**
 
@@ -167,10 +198,13 @@ func resetSettings() throws -> BOOL
 
 **Parameters**
 
-`error`: An NSError pointer. An error occurs when:
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture starts or after `startCapturing` is invoked.
-* The settings object contains some invalid parameters.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 **Return Value**
 
@@ -196,10 +230,14 @@ func outputSettings(_ templateName:String) throws -> String
 
 **Parameters**
 
-`error`: An NSError pointer. An error occurs when:
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture starts or after `startCapturing` is invoked.
-* The template name is invalid or doesn't exist in the JSON string/file.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 **Return Value**
 
@@ -226,13 +264,16 @@ func outputSettingsToFile(_ templateName:String, file:String) throws -> BOOL
 
 **Parameters**
 
-`templateName`: The name of the template that you want to output.
-`file`: The file path and name where the template will be output and saved.
-`error`: An NSError pointer. An error occurs when:
+`templateName`: The name of the template that you want to output.  
+`file`: The file path and name where the template will be output and saved.  
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
-* The method is triggered after the capture starts or after `startCapturing` is invoked.
-* The template name is invalid or doesn't exist.
-* The file path you input is unavailable or inaccessible.
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_SAVE_FAILED | -10058 | The file path is unavailable or the file can't be created for any other reasons. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 **Return Value**
 

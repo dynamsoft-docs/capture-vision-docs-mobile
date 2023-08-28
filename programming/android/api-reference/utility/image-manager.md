@@ -51,7 +51,13 @@ void saveToFile(ImageData imageData, String path, boolean overWrite) throws Util
 
 **Exception**
 
-An exception is thrown when the file path is unavailable.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The ImageData object is null. |
+| EC_FILE_TYPE_NOT_SUPPORTED | -10006 | The file type is not supported. |
+| EC_FILE_ALREADY_EXISTS | -10067 | The file already exists but overwriting is disabled. |
+| EC_CREATE_FILE_FAILED | -10068 | The file path does not exist but cannot be created, or the file cannot be created for any other reason. |
+| EC_IMGAE_DATA_INVALID | -10069 | The input ImageData object contains invalid parameter(s). |
 
 **Return Value**
 

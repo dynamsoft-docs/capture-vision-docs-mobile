@@ -186,9 +186,16 @@ Transform the DSImageData to a UIImage.
 ```swift
 func toUIImage() throws -> UIImage
 ```
+
 **Parameters**
 
-`[in,out] error`: An NSError pointer. An error occurs when the BPP (bit per pixel) is not supported.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_BPP_NOT_SUPPORTED | -10007 | The pixel format is not supported or the ImageData is invalid. |
 
 **Return Value**
 

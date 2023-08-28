@@ -62,7 +62,14 @@ func setFile(withPath filePath: String) throws
 
 `filePath`: The file path.
 
-`[in,out] error`: An `NSError` pointer. An error occurs when fail to load the image.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND | -10005 | The file is not found. |
+| EC_FILE_TYPE_NOT_SUPPORTED | -10006 | The file type is not supported. |
 
 ### setFileWithBytes
 
@@ -81,11 +88,18 @@ Sets the file with file bytes.
 ```swift
 func setFile(withBytes fileBytes: Data) throws
 ```
+
 **Parameters**
 
 `fileBytes`: The file bytes.
 
-`[in,out] error`: An `NSError` pointer. An error occurs when fail to load the image.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The fileBytes you input is null. |
 
 ### setFileWithBuffer
 
@@ -108,7 +122,13 @@ func setFile(withBuffer buffer: ImageData) throws
 
 `buffer`: The image data.
 
-`[in,out] error`: An `NSError` pointer. An error occurs when fail to load the image.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The fileBytes you input is null. |
 
 ### setFileWithImage
 
@@ -131,7 +151,13 @@ func setFile(withImage image: UIImage) throws
 
 `image`: A `UIImage`.
 
-`[in,out] error`: An `NSError` pointer. An error occurs when fail to load the image.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The fileBytes you input is null. |
 
 ### setPDFReadingParameter
 
@@ -154,9 +180,13 @@ func setPDFReadingParameter(_ para: PDFReadingParameter) throws
 
 `para`: The parameter object for reading PDF files.
 
-`[in,out] error`: An `NSError` pointer. An error occurs when:
-- The directory is unavailable.
-- The method is triggered after the capture is started.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
 
 **Return Value**
 
@@ -178,6 +208,7 @@ Whether there is a next image to fetch.
 ```swift
 func hasNextImageToFetch() -> Bool
 ```
+
 **Return Value**
 
 A bool value that indicates whether there is a next image to fetch.
@@ -198,6 +229,7 @@ Get the image data of the image.
 ```swift
 func getImage() -> ImageData
 ```
+
 **Return Value**
 
 A `DSImageData` as the image.

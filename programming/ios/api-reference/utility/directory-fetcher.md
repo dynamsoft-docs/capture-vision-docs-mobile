@@ -102,9 +102,13 @@ func setDirectory(_ directoryPath: String, filter: String?, recursive: Bool) thr
 
 `recursive`: Specifies whether to load files recursively.
 
-`[in,out] error`: A `NSError` pointer. An error occurs when:
-- The directory is unavailable.
-- The method is triggered after the capture is started.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_READ_DIRECTORY_FAILED | -10064 | Failed to read the directory. |
 
 **Return Value**
 
@@ -152,9 +156,13 @@ func setPDFReadingParameter(_ para: DSPDFReadingParameter) throws
 
 `para`: A `DSPDFReadingParameter` object.
 
-`[in,out] error`: A `NSError` pointer. An error occurs when:
-- The directory is unavailable.
-- The method is triggered after the capture is started.
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
 
 **Return Value**
 

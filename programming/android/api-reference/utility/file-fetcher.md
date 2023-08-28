@@ -48,7 +48,10 @@ void setFile(String filePath) throws UtilityException
 
 **Exception**
 
-An exception is thrown when fail to load the image.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND | -10005 | The file is not found. |
+| EC_FILE_TYPE_NOT_SUPPORTED | -10006 | The file type is not supported. |
 
 ### setFile(fileBytes)
 
@@ -64,7 +67,9 @@ void setFile(byte[] fileBytes) throws UtilityException
 
 **Exception**
 
-An exception is thrown when fail to load the image.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The fileBytes you input is null. |
 
 ### setFile(imageData)
 
@@ -80,7 +85,9 @@ void setFile(ImageData imageData) throws UtilityException
 
 **Exception**
 
-An exception is thrown when fail to load the image.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The ImageData object is null. |
 
 ### setFile(bitmap)
 
@@ -96,7 +103,9 @@ void setFile(Bitmap bitmap) throws UtilityException
 
 **Exception**
 
-An exception is thrown when fail to load the image.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The image data of the Bitmap is null. |
 
 ### setPDFReadingParameter
 
@@ -109,6 +118,12 @@ void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException
 **Parameters**
 
 `[in] para`: The parameter object for reading PDF files.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
 
 ### hasNextImageToFetch
 

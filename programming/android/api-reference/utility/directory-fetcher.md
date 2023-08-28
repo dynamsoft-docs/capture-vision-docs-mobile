@@ -48,9 +48,9 @@ void setDirectory(String directoryPath, String filter, boolean recursive) throws
 
 **Exception**
 
-An exception is thrown when:
-
-* The directory is unavailable.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_READ_DIRECTORY_FAILED | -10064 | Failed to read the directory. |
 
 ### setPDFReadingParameter
 
@@ -63,6 +63,12 @@ void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException;
 **Parameters**
 
 `[in] para`: A `PDFReadingParameter` object.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
 
 ### DirectoryFetcher
 

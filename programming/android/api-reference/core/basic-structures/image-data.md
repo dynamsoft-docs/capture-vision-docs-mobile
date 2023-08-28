@@ -107,7 +107,9 @@ Bitmap toBitmap() throws CoreException;
 
 **Exception**
 
-An exception is thrown when the BPP (bit per pixel) is not supported.
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_BPP_NOT_SUPPORTED | -10007 | The pixel format is not supported or the ImageData is invalid. |
 
 **Return Value**
 
