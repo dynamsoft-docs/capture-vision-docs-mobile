@@ -98,10 +98,27 @@
             var download = getUrlParam('download');
             if (download == 'true' && (getCookie('DynamsoftEmail') || getCookie('SourceServer') == '1')) {
                 var curHref = window.location.href.toLowerCase()
-                $('.editionName').html('React-Native');
-                $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dcv/dcv-rn-1.0.0.zip?ver=latest');
-                $('.dcvThanksDownloading').show();
-                $('.downloadlink')[0].click();
+                if (curHref.indexOf('/react-native/') > -1) {
+                    $('.editionName').html('React-Native');
+                    $('.downloadlink').attr('href', 'https://download3.dynamsoft.com/api-download-test/Api/Dynamic/GetDestZipWithUnZip?fileName=dynamsoft-capture-vision-react-native-1.1.12.zip&edition=mobile&product=dbr');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink')[0].click();
+                } else if (curHref.indexOf('/flutter/') > -1) {
+                    $('.editionName').html('Flutter');
+                    $('.downloadlink').attr('href', 'https://download3.dynamsoft.com/api-download-test/Api/Dynamic/GetDestZipWithUnZip?fileName=dynamsoft-capture-vision-flutter-1.2.2.zip&edition=mobile&product=dbr');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink')[0].click();
+                } else if (curHref.indexOf('/cordova/') > -1) {
+                    $('.editionName').html('Cordova');
+                    $('.downloadlink').attr('href', 'https://download3.dynamsoft.com/api-download-test/Api/Dynamic/GetDestZipWithUnZip?fileName=dynamsoft-capture-vision-cordova-1.0.4.zip&edition=mobile&product=dbr');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink')[0].click();
+                } else if (curHref.indexOf('/xamarin/') > -1) {
+                    $('.editionName').html('Xamarin.Forms');
+                    $('.downloadlink').attr('href', 'https://download3.dynamsoft.com/api-download-test/Api/Dynamic/GetDestZipWithUnZip?fileName=dynamsoft-capture-vision-xamarin-1.0.5.zip&edition=mobile&product=dbr');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink')[0].click();
+                }
             }
 
             $('#txtSearch').keydown(function(e) { 
