@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ImageManager - Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The class ImageManager of Dynamsoft Capture Vision Router Module is a utility class for managing and manipulating images. It provides functionality for saving images to files and drawing various shapes on images.
-Keywords: image manager, Java, Kotlin
+title: ImageManager - Dynamsoft Capture Vision Router Module Android Edition API Reference
+description: The class ImageManager of Dynamsoft Capture Vision Router Module is a utility class for managing and manipulating images. It provides functionality for saving images to files and drawing various shapes on images.
+keywords: image manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

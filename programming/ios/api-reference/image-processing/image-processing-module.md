@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSImageProcessingModule - Dynamsoft Image Processing Module iOS Edition API Reference
-Description: The class DSImageProcessingModule of Dynamsoft Image Processing Module represents general functions of the image processing module.
-Keywords: image processing module, objective-c, swift
+title: DSImageProcessingModule - Dynamsoft Image Processing Module iOS Edition API Reference
+description: The class DSImageProcessingModule of Dynamsoft Image Processing Module represents general functions of the image processing module.
+keywords: image processing module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSRegionObjectElement - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSRegionObjectElement of Dynamsoft Core Module represents an element of a region object in 2D space, which provides the interface for region object elements.
-Keywords: region object element, 2D space, objective-c, swift
+title: DSRegionObjectElement - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSRegionObjectElement of Dynamsoft Core Module represents an element of a region object in 2D space, which provides the interface for region object elements.
+keywords: region object element, 2D space, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

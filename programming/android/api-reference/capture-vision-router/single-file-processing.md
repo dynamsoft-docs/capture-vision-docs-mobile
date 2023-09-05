@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Processing a Single Image - Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The APIs of the CaptureVisionRouter for processing a single image.
-Keywords: capture vision, Java, Kotlin
+title: Processing a Single Image - Dynamsoft Capture Vision Router Module Android Edition API Reference
+description: The APIs of the CaptureVisionRouter for processing a single image.
+keywords: capture vision, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

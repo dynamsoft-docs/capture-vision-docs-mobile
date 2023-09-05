@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CapturedResult - Dynamsoft Core Module Android Edition API Reference
-Description: The class CapturedResult of Dynamsoft Core Module represents the result of a capture operation on an image, which contains multiple items such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
-Keywords: captured result, Java, Kotlin
+title: CapturedResult - Dynamsoft Core Module Android Edition API Reference
+description: The class CapturedResult of Dynamsoft Core Module represents the result of a capture operation on an image, which contains multiple items such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
+keywords: captured result, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

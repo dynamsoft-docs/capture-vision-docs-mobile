@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: IntermediateResultReceiver - Dynamsoft Core Module Android Edition API Reference
-Description: The interface IntermediateResultReceiver includes methods for monitoring the output of intermediate results.
-Keywords: interface, Java, Kotlin
+title: IntermediateResultReceiver - Dynamsoft Core Module Android Edition API Reference
+description: The interface IntermediateResultReceiver includes methods for monitoring the output of intermediate results.
+keywords: interface, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

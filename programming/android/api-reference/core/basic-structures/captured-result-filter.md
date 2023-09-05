@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CapturedResultFilter - Dynamsoft Core Module Android Edition API Reference
-Description: The interface CapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
-Keywords: captured result filter, Java, Kotlin
+title: CapturedResultFilter - Dynamsoft Core Module Android Edition API Reference
+description: The interface CapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+keywords: captured result filter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

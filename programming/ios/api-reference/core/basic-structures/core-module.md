@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSCoreModule - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSCoreModule of Dynamsoft Core Module defines general functions of the core module.
-Keywords: core module, objective-c, swift
+title: DSCoreModule - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSCoreModule of Dynamsoft Core Module defines general functions of the core module.
+keywords: core module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

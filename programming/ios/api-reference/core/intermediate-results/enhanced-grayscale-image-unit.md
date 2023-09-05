@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSEnhancedGrayscaleImageUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSEnhancedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a grayscale enhanced image.
-Keywords: enhanced grayscale image unit, objective-c, swift
+title: DSEnhancedGrayscaleImageUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSEnhancedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a grayscale enhanced image.
+keywords: enhanced grayscale image unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

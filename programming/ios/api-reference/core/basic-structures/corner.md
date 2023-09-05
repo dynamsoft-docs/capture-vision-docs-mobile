@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSCorner - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSCorner of Dynamsoft Core Module represents a detected corner, which consists of an intersection and two lines.
-Keywords: corner, objective-c, swift
+title: DSCorner - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSCorner of Dynamsoft Core Module represents a detected corner, which consists of an intersection and two lines.
+keywords: corner, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

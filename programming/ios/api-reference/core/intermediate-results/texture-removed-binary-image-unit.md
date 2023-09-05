@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSTextureRemovedBinaryImageUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSTextureRemovedBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a texture-removed binary image.
-Keywords: texture-removed binary image, objective-c, swift
+title: DSTextureRemovedBinaryImageUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSTextureRemovedBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a texture-removed binary image.
+keywords: texture-removed binary image, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

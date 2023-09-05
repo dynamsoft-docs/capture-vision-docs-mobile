@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: IntermediateResultManager - Dynamsoft Core Module Android Edition API Reference
-Description: The class IntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
-Keywords: intermediate result manager, Java, Kotlin
+title: IntermediateResultManager - Dynamsoft Core Module Android Edition API Reference
+description: The class IntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
+keywords: intermediate result manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

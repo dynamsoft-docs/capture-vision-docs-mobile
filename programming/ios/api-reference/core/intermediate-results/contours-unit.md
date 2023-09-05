@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSContoursUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSContoursUnit of Dynamsoft Core Module represents a unit that contains contours as intermediate results.
-Keywords: contours unit, objective-c, swift
+title: DSContoursUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSContoursUnit of Dynamsoft Core Module represents a unit that contains contours as intermediate results.
+keywords: contours unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

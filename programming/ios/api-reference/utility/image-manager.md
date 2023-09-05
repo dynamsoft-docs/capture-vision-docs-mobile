@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSImageManager - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-Description: The class DSImageManager of Dynamsoft Capture Vision Router Module is a utility class for managing and manipulating images. It provides functionality for saving images to files and drawing various shapes on images.
-Keywords: image manager, objective-c, swift
+title: DSImageManager - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+description: The class DSImageManager of Dynamsoft Capture Vision Router Module is a utility class for managing and manipulating images. It provides functionality for saving images to files and drawing various shapes on images.
+keywords: image manager, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

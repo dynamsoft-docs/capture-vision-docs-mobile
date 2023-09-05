@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ImageSourceAdapter - Dynamsoft Core Module Android Edition API Reference
-Description: The class ImageSourceAdapter of Dynamsoft Core Module represents an interface for fetching and buffering images.
-Keywords: image source adapter, Java, Kotlin
+title: ImageSourceAdapter - Dynamsoft Core Module Android Edition API Reference
+description: The class ImageSourceAdapter of Dynamsoft Core Module represents an interface for fetching and buffering images.
+keywords: image source adapter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

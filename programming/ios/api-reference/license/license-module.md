@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSLicenseModule - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSLicenseModule of Dynamsoft Core Module represents the license module, which provides general functions for managing licenses.
-Keywords: license module, objective-c, swift
+title: DSLicenseModule - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSLicenseModule of Dynamsoft Core Module represents the license module, which provides general functions for managing licenses.
+keywords: license module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

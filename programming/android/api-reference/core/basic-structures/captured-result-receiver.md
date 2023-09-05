@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CapturedResultReceiver - Dynamsoft Core Module Android Edition API Reference
-Description: The interface CapturedResultReceiver of Dynamsoft Core Module Android Edition provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
-Keywords: captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, Java, Kotlin
+title: CapturedResultReceiver - Dynamsoft Core Module Android Edition API Reference
+description: The interface CapturedResultReceiver of Dynamsoft Core Module Android Edition provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+keywords: captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

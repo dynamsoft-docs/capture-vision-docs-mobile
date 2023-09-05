@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CaptureVisionRouterModule - Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The class CaptureVisionRouterModule of Dynamsoft Capture Vision Router Module represents the capture vision router module, which provides general functions for the capture vision module.
-Keywords: capture vision, Java, Kotlin
+title: CaptureVisionRouterModule - Dynamsoft Capture Vision Router Module Android Edition API Reference
+description: The class CaptureVisionRouterModule of Dynamsoft Capture Vision Router Module represents the capture vision router module, which provides general functions for the capture vision module.
+keywords: capture vision, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

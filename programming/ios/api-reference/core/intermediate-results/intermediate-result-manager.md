@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSIntermediateResultManager - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSIntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
-Keywords: intermediate result manager, objective-c, swift
+title: DSIntermediateResultManager - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSIntermediateResultManager of Dynamsoft Core Module manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
+keywords: intermediate result manager, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

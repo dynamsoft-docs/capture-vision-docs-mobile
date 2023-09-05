@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CoreModule - Dynamsoft Core Module Android Edition API Reference
-Description: The class CoreModule of Dynamsoft Core Module defines general functions of the core module.
-Keywords: core module, Java, Kotlin
+title: CoreModule - Dynamsoft Core Module Android Edition API Reference
+description: The class CoreModule of Dynamsoft Core Module defines general functions of the core module.
+keywords: core module, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

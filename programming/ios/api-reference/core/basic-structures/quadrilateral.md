@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSQuadrilateral - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSQuadrilateral of Dynamsoft Core Module represents a quadrilateral shape in 2D space, which contains an array of four CGPoint, representing the vertices of the quadrilateral.
-Keywords: quadrilateral, shape, 2D space, objective-c, swift
+title: DSQuadrilateral - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSQuadrilateral of Dynamsoft Core Module represents a quadrilateral shape in 2D space, which contains an array of four CGPoint, representing the vertices of the quadrilateral.
+keywords: quadrilateral, shape, 2D space, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

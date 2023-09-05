@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: IntermediateResult - Dynamsoft Core Module Android Edition API Reference
-Description: The class IntermediateResult of Dynamsoft Core Module represents a container containing a collection of IntermediateResultUnit objects.
-Keywords: intermediate result, Java, Kotlin
+title: IntermediateResult - Dynamsoft Core Module Android Edition API Reference
+description: The class IntermediateResult of Dynamsoft Core Module represents a container containing a collection of IntermediateResultUnit objects.
+keywords: intermediate result, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

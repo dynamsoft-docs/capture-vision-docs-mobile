@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: LineSegment - Dynamsoft Core Module Android Edition API Reference
-Description: The class LineSegment of Dynamsoft Core Module represents a line segment in 2D space, which contains the start point and end point of the line segment.
-Keywords: line segment, 2D, Java, Kotlin
+title: LineSegment - Dynamsoft Core Module Android Edition API Reference
+description: The class LineSegment of Dynamsoft Core Module represents a line segment in 2D space, which contains the start point and end point of the line segment.
+keywords: line segment, 2D, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

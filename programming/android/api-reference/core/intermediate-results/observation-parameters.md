@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ObservationParameters - Dynamsoft Core Module Android Edition API Reference
-Description: The class ObservationParameters of Dynamsoft Core Module represents filter conditions for the IntermediateResultReceiver, which allows the user to specify which intermediate results to be notified.
-Keywords: observation parameters, filter conditions, Java, Kotlin
+title: ObservationParameters - Dynamsoft Core Module Android Edition API Reference
+description: The class ObservationParameters of Dynamsoft Core Module represents filter conditions for the IntermediateResultReceiver, which allows the user to specify which intermediate results to be notified.
+keywords: observation parameters, filter conditions, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSTextZonesUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSTextZonesUnit of Dynamsoft Core Module represents a unit that contains text zones, which is derived from DSIntermediateResultUnit class.
-Keywords: text zones unit, objective-c, swift
+title: DSTextZonesUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSTextZonesUnit of Dynamsoft Core Module represents a unit that contains text zones, which is derived from DSIntermediateResultUnit class.
+keywords: text zones unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

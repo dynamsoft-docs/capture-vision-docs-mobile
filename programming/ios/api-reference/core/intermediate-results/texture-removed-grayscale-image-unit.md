@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSTextureRemovedGrayscaleImageUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSTextureRemovedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a texture-removed grayscale image. It is derived from the DSIntermediateResultUnit class.
-Keywords: texture-removed grayscale image, unit, objective-c, swift
+title: DSTextureRemovedGrayscaleImageUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSTextureRemovedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a texture-removed grayscale image. It is derived from the DSIntermediateResultUnit class.
+keywords: texture-removed grayscale image, unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

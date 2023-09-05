@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSPDFReadingParameter - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSPDFReadingParameter of Dynamsoft Core Module represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
-Keywords: PDF reading parameter, objective-c, swift
+title: DSPDFReadingParameter - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSPDFReadingParameter of Dynamsoft Core Module represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
+keywords: PDF reading parameter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

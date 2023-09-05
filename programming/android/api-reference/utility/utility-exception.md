@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: extends UtilityException - Dynamsoft Utility Module Android Edition API Reference
-Description: The class CameraEnhancerModule of Dynamsoft Utility Module defines the camera enhancer exception.
-Keywords: camera enhancer, Java, Kotlin
+title: extends UtilityException - Dynamsoft Utility Module Android Edition API Reference
+description: The class CameraEnhancerModule of Dynamsoft Utility Module defines the camera enhancer exception.
+keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

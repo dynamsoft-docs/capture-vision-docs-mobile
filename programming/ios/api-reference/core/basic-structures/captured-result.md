@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSCapturedResult - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSCapturedResult of Dynamsoft Core Module represents the result of a capture operation on an image, which contains multiple items such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
-Keywords: captured result, objective-c, swift
+title: DSCapturedResult - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSCapturedResult of Dynamsoft Core Module represents the result of a capture operation on an image, which contains multiple items such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
+keywords: captured result, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

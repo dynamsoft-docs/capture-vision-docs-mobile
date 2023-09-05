@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSImageTag - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSImageTag of Dynamsoft Core Module represents an image tag that can be attached to an image in a system. It contains information about the image, such as the image ID and the image capture distance mode.
-Keywords: image tag, objective-c, swift
+title: DSImageTag - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSImageTag of Dynamsoft Core Module represents an image tag that can be attached to an image in a system. It contains information about the image, such as the image ID and the image capture distance mode.
+keywords: image tag, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
