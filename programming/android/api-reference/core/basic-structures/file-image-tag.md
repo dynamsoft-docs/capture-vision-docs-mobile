@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: FileImageTag - Dynamsoft Core Module Android Edition API Reference
-Description: The class FileImageTag of Dynamsoft Core Module represents an image tag that is associated with a file, which contains the file path, page number, and total page number.
-Keywords: image tag, Java, Kotlin
+title: FileImageTag - Dynamsoft Core Module Android Edition API Reference
+description: The class FileImageTag of Dynamsoft Core Module represents an image tag that is associated with a file, which contains the file path, page number, and total page number.
+keywords: image tag, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

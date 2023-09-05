@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSCaptureStateListener - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-Description: The protocol DSCaptureStateListener of Dynamsoft Capture Vision Router Module defines the methods for monitoring the capture state.
-Keywords: capture state, monitoring, objective-c, swift
+title: DSCaptureStateListener - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+description: The protocol DSCaptureStateListener of Dynamsoft Capture Vision Router Module defines the methods for monitoring the capture state.
+keywords: capture state, monitoring, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

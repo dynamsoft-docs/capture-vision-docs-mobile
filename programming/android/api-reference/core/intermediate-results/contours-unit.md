@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ContoursUnit - Dynamsoft Core Module Android Edition API Reference
-Description: The class ContoursUnit of Dynamsoft Core Module represents a unit that contains contours as intermediate results.
-Keywords: contours unit, Java, Kotlin
+title: ContoursUnit - Dynamsoft Core Module Android Edition API Reference
+description: The class ContoursUnit of Dynamsoft Core Module represents a unit that contains contours as intermediate results.
+keywords: contours unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

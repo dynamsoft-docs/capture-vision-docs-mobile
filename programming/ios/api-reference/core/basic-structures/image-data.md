@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSImageData - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSImageData of Dynamsoft Core Module represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
-Keywords: image data, objective-c, swift
+title: DSImageData - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSImageData of Dynamsoft Core Module represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
+keywords: image data, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

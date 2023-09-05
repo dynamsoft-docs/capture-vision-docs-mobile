@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ImageSourceStateListener - Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The interface ImageSourceStateListener of Dynamsoft Capture Vision Router Module defines methods for monitoring the state of the ImageSourceAdapter.
-Keywords: image source state listener, Java, Kotlin
+title: ImageSourceStateListener - Dynamsoft Capture Vision Router Module Android Edition API Reference
+description: The interface ImageSourceStateListener of Dynamsoft Capture Vision Router Module defines methods for monitoring the state of the ImageSourceAdapter.
+keywords: image source state listener, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

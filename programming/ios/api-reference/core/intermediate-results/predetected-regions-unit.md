@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSPredetectedRegionsUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSPredetectedRegionsUnit of Dynamsoft Core Module represents a unit that contains a collection of pre-detected regions.
-Keywords: pre-detected regions, objective-c, swift
+title: DSPredetectedRegionsUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSPredetectedRegionsUnit of Dynamsoft Core Module represents a unit that contains a collection of pre-detected regions.
+keywords: pre-detected regions, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

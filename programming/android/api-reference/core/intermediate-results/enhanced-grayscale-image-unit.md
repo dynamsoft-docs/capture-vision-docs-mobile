@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: EnhancedGrayscaleImageUnit - Dynamsoft Core Module Android Edition API Reference
-Description: The class EnhancedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a grayscale enhanced image.
-Keywords: enhanced grayscale image unit, Java, Kotlin
+title: EnhancedGrayscaleImageUnit - Dynamsoft Core Module Android Edition API Reference
+description: The class EnhancedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a grayscale enhanced image.
+keywords: enhanced grayscale image unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

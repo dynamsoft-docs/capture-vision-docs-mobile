@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: ImageProcessingModule - Dynamsoft Image Processing Module Android Edition API Reference
-Description: The class ImageProcessingModule of Dynamsoft Image Processing Module represents general functions of the image processing module.
-Keywords: image processing module, Java, Kotlin
+title: ImageProcessingModule - Dynamsoft Image Processing Module Android Edition API Reference
+description: The class ImageProcessingModule of Dynamsoft Image Processing Module represents general functions of the image processing module.
+keywords: image processing module, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

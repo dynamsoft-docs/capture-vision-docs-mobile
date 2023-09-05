@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TransformedGrayscaleImageUnit - Dynamsoft Core Module Android Edition API Reference
-Description: The class TransformedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a transformed grayscale image.
-Keywords: transformed grayscale image, Java, Kotlin
+title: TransformedGrayscaleImageUnit - Dynamsoft Core Module Android Edition API Reference
+description: The class TransformedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a transformed grayscale image.
+keywords: transformed grayscale image, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

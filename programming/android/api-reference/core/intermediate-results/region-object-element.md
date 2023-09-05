@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: RegionObjectElement - Dynamsoft Core Module Android Edition API Reference
-Description: The class RegionObjectElement of Dynamsoft Core Module represents an element of a region object in 2D space, which provides the interface for region object elements.
-Keywords: region object element, 2D space, Java, Kotlin
+title: RegionObjectElement - Dynamsoft Core Module Android Edition API Reference
+description: The class RegionObjectElement of Dynamsoft Core Module represents an element of a region object in 2D space, which provides the interface for region object elements.
+keywords: region object element, 2D space, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSObservationParameters - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSObservationParameters of Dynamsoft Core Module represents filter conditions for the DSIntermediateResultReceiver, which allows the user to specify which intermediate results to be notified.
-Keywords: observation parameters, filter conditions, objective-c, swift
+title: DSObservationParameters - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSObservationParameters of Dynamsoft Core Module represents filter conditions for the DSIntermediateResultReceiver, which allows the user to specify which intermediate results to be notified.
+keywords: observation parameters, filter conditions, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

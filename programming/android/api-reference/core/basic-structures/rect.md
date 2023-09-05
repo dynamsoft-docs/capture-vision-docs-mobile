@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSRect - Dynamsoft Core Module Android Edition API Reference
-Description: The class DSRect of Dynamsoft Core Module represents a rectangle in 2D space, which contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
-Keywords: rectangle, 2D space, Java, Kotlin
+title: DSRect - Dynamsoft Core Module Android Edition API Reference
+description: The class DSRect of Dynamsoft Core Module represents a rectangle in 2D space, which contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
+keywords: rectangle, 2D space, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

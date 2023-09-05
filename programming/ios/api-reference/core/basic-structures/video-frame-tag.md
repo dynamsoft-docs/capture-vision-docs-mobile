@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSVideoFrameTag - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSVideoFrameTag of Dynamsoft Core Module represents a video frame tag, which is a type of image tag that is used to store additional information about a video frame. It inherits from the DSImageTag class and adds additional attributes and methods specific to video frames.
-Keywords: video frame tag, objective-c, swift
+title: DSVideoFrameTag - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSVideoFrameTag of Dynamsoft Core Module represents a video frame tag, which is a type of image tag that is used to store additional information about a video frame. It inherits from the DSImageTag class and adds additional attributes and methods specific to video frames.
+keywords: video frame tag, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: CaptureVisionRouterException - Dynamsoft Capture Vision Router Module Android Edition API Reference
-Description: The CaptureVisionRouterException class defines the exceptions of Dynamsoft Capture Vision Router Module.
-Keywords: capture state, monitoring, Java, Kotlin
+title: CaptureVisionRouterException - Dynamsoft Capture Vision Router Module Android Edition API Reference
+description: The CaptureVisionRouterException class defines the exceptions of Dynamsoft Capture Vision Router Module.
+keywords: capture state, monitoring, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

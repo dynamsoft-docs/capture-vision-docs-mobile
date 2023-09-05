@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSLineSegmentsUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSLineSegmentsUnit of Dynamsoft Core Module represents a collection of line segments in 2D space.
-Keywords: line segments, 2D space, objective-c, swift
+title: DSLineSegmentsUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSLineSegmentsUnit of Dynamsoft Core Module represents a collection of line segments in 2D space.
+keywords: line segments, 2D space, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

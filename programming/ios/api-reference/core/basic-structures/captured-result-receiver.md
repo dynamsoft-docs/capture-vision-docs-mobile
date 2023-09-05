@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSCapturedResultReceiver - Dynamsoft Core Module iOS Edition API Reference
-Description: The protocol DSCapturedResultReceiver of Dynamsoft Core Module iOS Edition provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
-Keywords: captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, objective-c, swift
+title: DSCapturedResultReceiver - Dynamsoft Core Module iOS Edition API Reference
+description: The protocol DSCapturedResultReceiver of Dynamsoft Core Module iOS Edition provides methods for monitoring the output of captured results, including captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, and parsed result.
+keywords: captured result, original image result, decoded barcode result, recognized text line result, detected quad result, normalized image result, parsed result, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

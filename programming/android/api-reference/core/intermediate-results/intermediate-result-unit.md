@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: IntermediateResultUnit - Dynamsoft Core Module Android Edition API Reference
-Description: The class IntermediateResultUnit of Dynamsoft Core Module represents an intermediate result unit used in image processing, which is an abstract base class with multiple subclasses.
-Keywords: intermediate result unit, image processing, Java, Kotlin
+title: IntermediateResultUnit - Dynamsoft Core Module Android Edition API Reference
+description: The class IntermediateResultUnit of Dynamsoft Core Module represents an intermediate result unit used in image processing, which is an abstract base class with multiple subclasses.
+keywords: intermediate result unit, image processing, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

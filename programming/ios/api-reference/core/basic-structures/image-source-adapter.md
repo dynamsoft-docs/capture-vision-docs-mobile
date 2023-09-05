@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSImageSourceAdapter - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSImageSourceAdapter of Dynamsoft Core Module represents an interface for fetching and buffering images.
-Keywords: image source adapter, objective-c, swift
+title: DSImageSourceAdapter - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSImageSourceAdapter of Dynamsoft Core Module represents an interface for fetching and buffering images.
+keywords: image source adapter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

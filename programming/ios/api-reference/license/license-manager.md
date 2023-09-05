@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSLicenseManager - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSLicenseManager of Dynamsoft Core Module provides a set of APIs to manage SDK licensing.
-Keywords: license manager, objective-c, swift
+title: DSLicenseManager - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSLicenseManager of Dynamsoft Core Module provides a set of APIs to manage SDK licensing.
+keywords: license manager, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

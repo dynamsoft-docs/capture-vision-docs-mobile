@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TextureRemovedBinaryImageUnit - Dynamsoft Core Module Android Edition API Reference
-Description: The class TextureRemovedBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a texture-removed binary image.
-Keywords: texture-removed binary image, Java, Kotlin
+title: TextureRemovedBinaryImageUnit - Dynamsoft Core Module Android Edition API Reference
+description: The class TextureRemovedBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a texture-removed binary image.
+keywords: texture-removed binary image, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

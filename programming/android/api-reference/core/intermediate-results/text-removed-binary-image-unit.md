@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: TextRemovedBinaryImageUnit - Dynamsoft Core Module Android Edition API Reference
-Description: The class TextRemovedBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a text-removed binary image.
-Keywords: text-removed binary image, Java, Kotlin
+title: TextRemovedBinaryImageUnit - Dynamsoft Core Module Android Edition API Reference
+description: The class TextRemovedBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a text-removed binary image.
+keywords: text-removed binary image, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

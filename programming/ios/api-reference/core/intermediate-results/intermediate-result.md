@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSIntermediateResult - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSIntermediateResult of Dynamsoft Core Module represents a container containing a collection of DSIntermediateResultUnit objects.
-Keywords: intermediate result, objective-c, swift
+title: DSIntermediateResult - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSIntermediateResult of Dynamsoft Core Module represents a container containing a collection of DSIntermediateResultUnit objects.
+keywords: intermediate result, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

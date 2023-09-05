@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSTextureDetectionResultUnit - Dynamsoft Core Module iOS Edition API Reference
-Description: The class DSTextureDetectionResultUnit of Dynamsoft Core Module represents an intermediate result unit for texture detection, which contains the x-direction spacing and y-direction spacing of the texture stripes.
-Keywords: texture detection, objective-c, swift
+title: DSTextureDetectionResultUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSTextureDetectionResultUnit of Dynamsoft Core Module represents an intermediate result unit for texture detection, which contains the x-direction spacing and y-direction spacing of the texture stripes.
+keywords: texture detection, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

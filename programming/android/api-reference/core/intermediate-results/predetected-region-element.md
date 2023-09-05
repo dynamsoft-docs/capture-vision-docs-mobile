@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: PredetectedRegionElement - Dynamsoft Core Module Android Edition API Reference
-Description: The class PredetectedRegionElement of Dynamsoft Core Module represents a pre-detected region element, which is a subclass of RegionObjectElement.
-Keywords: pre-detected region element, Java, Kotlin
+title: PredetectedRegionElement - Dynamsoft Core Module Android Edition API Reference
+description: The class PredetectedRegionElement of Dynamsoft Core Module represents a pre-detected region element, which is a subclass of RegionObjectElement.
+keywords: pre-detected region element, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

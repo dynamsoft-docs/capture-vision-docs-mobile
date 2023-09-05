@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Processing a Single Image - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-Description: The APIs of the DSCaptureVisionRouter for processing a single image.
-Keywords: capture vision, objective-c, swift
+title: Processing a Single Image - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+description: The APIs of the DSCaptureVisionRouter for processing a single image.
+keywords: capture vision, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: Edge - Dynamsoft Core Module Android Edition API Reference
-Description: The class Edge of Dynamsoft Core Module represents an edge of candidate quadrilaterals, which consists of two corners.
-Keywords: edge, quadrilateral, corner, Java, Kotlin
+title: Edge - Dynamsoft Core Module Android Edition API Reference
+description: The class Edge of Dynamsoft Core Module represents an edge of candidate quadrilaterals, which consists of two corners.
+keywords: edge, quadrilateral, corner, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

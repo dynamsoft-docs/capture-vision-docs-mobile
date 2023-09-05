@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-Title: DSDirectoryFetcher - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-Description: The class DSDirectoryFetcher of Dynamsoft Capture Vision Router Module is a utility class that retrieves a list of files from a specified directory based on certain criteria.
-Keywords: directory fetcher, objective-c, swift
+title: DSDirectoryFetcher - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+description: The class DSDirectoryFetcher of Dynamsoft Capture Vision Router Module is a utility class that retrieves a list of files from a specified directory based on certain criteria.
+keywords: directory fetcher, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
