@@ -39,7 +39,7 @@ jobs:
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./capture-vision-docs-mobile/* ./DCVDocMobile/
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocMobile/
-          cd DCVDocMobile && bundle exec jekyll build --incremental
+          cd DCVDocMobile && bundle install && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -77,7 +77,7 @@ jobs:
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocMobilePreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocMobilePreview/_config.yml
-          cd DCVDocMobilePreview && bundle exec jekyll build --incremental
+          cd DCVDocMobilePreview && bundle install && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
