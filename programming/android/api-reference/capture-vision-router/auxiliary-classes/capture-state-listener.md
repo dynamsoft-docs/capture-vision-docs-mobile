@@ -38,4 +38,4 @@ void onCaptureStateChanged(EnumCaptureState state);
 
 **Parameters**
 
-`[in] state`: One of the [`EnumCaptureState`]({{site.enums}}core/capture-state.html) value that indicates the capture state.
+`[in] state`: One of the [`EnumCaptureState`]({{site.enums}}capture-vision-router/capture-state.html) value that indicates the capture state.
