@@ -117,6 +117,7 @@ void updateSettings(String templateName, SimplifiedCaptureVisionSettings setting
 | :--------- | :---- | :---------- |
 | EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
 | EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your `SimplifiedCaptureVisionSettings`. |
+| EC_CONVERT_COMPLEX_TEMPLATE_ERROR | -10061 | The template you specified is a complex template which can not be updated via a `SimplifiedCaptureVisionSettings` object. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 ## resetSettings
