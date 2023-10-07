@@ -84,7 +84,7 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 
 ### onDetectedQuadsReceived
 
-The method for monitoring the output of [`DetectedQuadsResult`]({{site.android_api}}detected-quads-result.html).
+The method for monitoring the output of [`DetectedQuadsResult`]({{site.ddn_android_api}}detected-quads-result.html).
 
 ```java
 void onDetectedQuadsReceived(DetectedQuadsResult result);
@@ -92,11 +92,11 @@ void onDetectedQuadsReceived(DetectedQuadsResult result);
 
 **Parameters**
 
-`[in] result`: A [`DetectedQuadsResult`]({{site.android_api}}detected-quads-result.html) object as a detected quad result.
+`[in] result`: A [`DetectedQuadsResult`]({{site.ddn_android_api}}detected-quads-result.html) object as a detected quad result.
 
 ### onNormalizedImagesReceived
 
-The method for monitoring the output of [`NormalizedImagesResult`]({{site.android_api}}normalized-images-result.html).
+The method for monitoring the output of [`NormalizedImagesResult`]({{site.ddn_android_api}}normalized-images-result.html).
 
 ```java
 void onNormalizedImagesReceived(NormalizedImagesResult result);
@@ -104,7 +104,7 @@ void onNormalizedImagesReceived(NormalizedImagesResult result);
 
 **Parameters**
 
-`[in] result`: A [`NormalizedImagesResult`]({{site.android_api}}normalized-images-result.html) object as a normalized image result.
+`[in] result`: A [`NormalizedImagesResult`]({{site.ddn_android_api}}normalized-images-result.html) object as a normalized image result.
 
 ### onParsedResultsReceived
 

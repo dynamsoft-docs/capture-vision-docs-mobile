@@ -57,7 +57,7 @@ The tag of the original image that records the information of the original image
 
 ### getItems
 
-Get an array of [`CapturedResultItem`](capture-result-item.md), which is the basic unit of the captured results. A [`CapturedResultItem`](capture-result-item.md) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{site.enums}}core/captured-result-item-type.html) for all available types.
+Get an array of [`CapturedResultItem`](captured-result-item.md), which is the basic unit of the captured results. A [`CapturedResultItem`](captured-result-item.md) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{site.enums}}core/captured-result-item-type.html) for all available types.
 
 ```java
 CapturedResultItem[] getItems();
@@ -65,7 +65,7 @@ CapturedResultItem[] getItems();
 
 **Return Value**
 
-An array containing the [`CapturedResultItem`](capture-result-item.md) objects within the captured result.
+An array containing the [`CapturedResultItem`](captured-result-item.md) objects within the captured result.
 
 ### getRotationTransformMatrix
 
