@@ -304,3 +304,24 @@ Clears the image buffer.
 ```swift
 func clearBuffer()
 ```
+
+## setErrorListener
+
+Registers a [`ImageSourceErrorListener`](image-source-error-listener.md) to be used as a callback when an error occurs in the `ImageSourceAdapter`.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)setErrorListener:(DSImageSourceErrorListener)listener;
+```
+2. 
+```swift
+func setErrorListener(_ listener:ImageSourceErrorListener)
+```
+
+**Parameters**
+
+`[in] listener`: A delegate object of [`DSImageSourceErrorListener`](auxiliary-classes/capture-state-listener.md) to receive the errors that occurs in the `ImageSourceAdapter`.

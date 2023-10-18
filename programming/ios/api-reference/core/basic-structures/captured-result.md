@@ -37,6 +37,8 @@ class CapturedResult : NSObject
 | [`originalImageTag`](#originalimagetag) | *DSImageTag* | The [DSImageTag](image-tag.md) of the original image that records information such as the image ID of the original image. |
 | [`items`](#items) | *NSArray<DSCapturedResultItem*> \** | An array of `DSCapturedResultItems`, which are the basic unit of the captured results. A `DSCapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View DSCapturedResultItemType for all available types. |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
+| [`errorCode`](#errorcode) | *NSInteger* | Get the error code of this result. |
+| [`errorMessage`](#errormessage) | *NSString \** | Get the error message of this result. |
 
 ### originalImageHashId
 
@@ -104,4 +106,38 @@ The rotation transformation matrix of the original image relative to the rotated
 2. 
 ```swift
 var rotationTransformMatrix: CGAffineTransform { get }
+```
+
+### errorCode
+
+Get the error code of this result. A `CapturedResult` will carry error information when the license module is missing or the process timeout.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign, readonly) NSInteger errorCode;
+```
+2. 
+```swift
+var errorCode: Int { get }
+```
+
+### errorMessage
+
+Get the error message of this result. A `CapturedResult` will carry error information when the license module is missing or the process timeout.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign, readonly) NSString * errorMessage;
+```
+2. 
+```swift
+var errorMessage: String { get }
 ```

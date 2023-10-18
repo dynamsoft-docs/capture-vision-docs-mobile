@@ -189,8 +189,8 @@ Start capturing with the specified template.
 >
 >1. 
 ```objc
-- (BOOL)startCapturing:(NSString*)templateName
-                 error:(NSError * _Nullable * _Nullable)error;
+- (void)startCapturing:(NSString*)templateName
+     completionHandler:(nullable void(^)(BOOL isSuccess, NSError *_Nullable error))completionHandler;
 ```
 2. 
 ```swift
@@ -200,7 +200,10 @@ func startCapturing(_ templateName:String) throws -> BOOL
 **Parameters**
 
 `templateName`: The name of a template that you have previously set via [`initSettings`](settings.md#initsettings) or [`initSettingsFromFile`](settings.md#initsettingsfromfile).  
-`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+`completionHandler`: A completion handler the system calls after it finishes the startCapturing.
+
+* isSuccess: A BOOL value that indicates whether the startCapturing operation is successful.
+* error: An error object if the request fails; otherwise, nil.
 
 **Error**
 

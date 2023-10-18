@@ -22,7 +22,7 @@ noTitleIndex: true
 Capture data from the file specified by the file path.
 
 ```java
-CapturedResult capture(String filePath, String templateName) throws CaptureVisionRouterException;
+CapturedResult capture(String filePath, String templateName);
 ```
 
 **Parameters**
@@ -31,26 +31,29 @@ CapturedResult capture(String filePath, String templateName) throws CaptureVisio
 
 `[in] templateName`: Specify a template with a template name for the data capturing.
 
-**Exception**
+**Return Value**
+
+A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+
+If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
+
+Possible errors:
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
 | EC_FILE_NOT_FOUND | -10005 | The file is not found. |
 | EC_FILE_TYPE_NOT_SUPPORTED | -10006 | The file type is not supported. |
+| EC_TIMEOUT | -10026 | The processing timeout. If not all the tasks are timeout, you will still receive the results of the processed tasks. |
 | EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 | EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
-
-**Return Value**
-
-A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
 ## capture(fileBytes,templateName)
 
 Capture data from a given file in memory.
 
 ```java
-CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisionRouterException;
+CapturedResult capture(byte[] fileBytes, String templateName);
 ```
 
 **Parameters**
@@ -59,24 +62,27 @@ CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisi
 
 `[in] templateName`: Specify a template with a template name for the data capturing.
 
-**Exception**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
-| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
-| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
-
 **Return Value**
 
 A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+
+If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
+
+Possible errors:
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TIMEOUT | -10026 | The processing timeout. If not all the tasks are timeout, you will still receive the results of the processed tasks. |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
 
 ## capture(imageData,templateName)
 
 Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object.
 
 ```java
-CapturedResult capture(ImageData imageData, String templateName) throws CaptureVisionRouterException;
+CapturedResult capture(ImageData imageData, String templateName);
 ```
 
 **Parameters**
@@ -85,25 +91,28 @@ CapturedResult capture(ImageData imageData, String templateName) throws CaptureV
 
 `[in] templateName`: Specify a template with a template name for the data capturing.
 
-**Exception**
+**Return Value**
+
+A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+
+If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
+
+Possible errors:
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
 | EC_NULL_POINTER | -10002 | The ImageData object is null. |
+| EC_TIMEOUT | -10026 | The processing timeout. If not all the tasks are timeout, you will still receive the results of the processed tasks. |
 | EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 | EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
-
-**Return Value**
-
-A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
 ## capture(bitmap,templateName)
 
 Capture data from the given Bitmap.
 
 ```java
-CapturedResult capture(Bitmap bitmap, String templateName) throws CaptureVisionRouterException;
+CapturedResult capture(Bitmap bitmap, String templateName);
 ```
 
 **Parameters**
@@ -112,14 +121,17 @@ CapturedResult capture(Bitmap bitmap, String templateName) throws CaptureVisionR
 
 `[in] templateName`: Specify a template with a template name for the data capturing.
 
-**Exception**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
-| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
-| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
-
 **Return Value**
 
 A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+
+If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
+
+Possible errors:
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TIMEOUT | -10026 | The processing timeout. If not all the tasks are timeout, you will still receive the results of the processed tasks. |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+| EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |

@@ -40,6 +40,7 @@ class FileFetcher : NSObject
 | [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
+| [`setPages`](#setpages) | Set the pages to read. |
 
 ### setFileWithPath
 
@@ -233,3 +234,35 @@ func getImage() -> ImageData
 **Return Value**
 
 A `DSImageData` as the image.
+
+### setPages
+
+Set the pages to read.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(BOOL)setPages:(NSArray *)pages
+          error:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
+func setPages(_ pages: NSArray) throws -> BOOL
+```
+
+**Parameters**
+
+`pages`: An array that contains all the pages to read.  
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Error**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND  | -10005 | File not found. |
+| EC_FILE_TYPE_NOT_SUPPORTED  | -10006 | The file type is not supported. |
+| EC_IMAGE_READ_FAILED  | -10012 | Failed to read the image. |
+| EC_PDF_READ_FAILED  | -10021 | Failed to read the PDF image. |

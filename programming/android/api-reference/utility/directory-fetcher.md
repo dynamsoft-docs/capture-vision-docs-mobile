@@ -28,6 +28,7 @@ class DirectoryFetcher extends ImageSourceAdapter
 | ------ | ----------- |
 | [`setDirectory`](#setdirectory) | Sets the directory path and filter for the file search. |
 | [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters for reading PDF files. |
+| [`setPages`](#setpages) | Set the pages to read. |
 | [`DirectoryFetcher`](#directoryfetcher) | The constructor. |
 
 ### setDirectory
@@ -69,6 +70,27 @@ void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException;
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
 | EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+
+### setPages
+
+Set the pages to read.
+
+```java
+void setPages(int[] pages) throws UtilityException;
+```
+
+**Parameters**
+
+`pages`: An array that contains all the pages to read.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND  | -10005 | File not found. |
+| EC_FILE_TYPE_NOT_SUPPORTED  | -10006 | The file type is not supported. |
+| EC_IMAGE_READ_FAILED  | -10012 | Failed to read the image. |
+| EC_PDF_READ_FAILED  | -10021 | Failed to read the PDF image. |
 
 ### DirectoryFetcher
 
