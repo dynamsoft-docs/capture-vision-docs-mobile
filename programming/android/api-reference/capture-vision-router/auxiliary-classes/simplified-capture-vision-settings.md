@@ -30,6 +30,7 @@ class SimplifiedCaptureVisionSettings
 | [`roi`](#roi) | *[Quadrilateral](../../core/basic-structures/quadrilateral.md)* | Specifies the region of interest (ROI) where the image capture and recognition will take place. |
 | [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *boolean* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
+| [`minImageCaptureInterval`](#minimagecaptureinterval) | *int* | Set the minimum capture interval. It is measured in millisecond. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
 
 ### capturedResultItemTypes
@@ -62,6 +63,14 @@ Specifies the maximum number of parallel tasks that can be used for image captur
 
 ```java
 int maxParallelTasks;
+```
+
+### minImageCaptureInterval
+
+Set the minimum capture interval. It is measured in millisecond.
+
+```java
+int minImageCaptureInterval;
 ```
 
 ### timeout
