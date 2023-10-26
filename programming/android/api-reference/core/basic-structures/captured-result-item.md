@@ -22,7 +22,7 @@ The `CapturedResultItem` class represents an item in a captured result, such as 
 class CapturedResultItem
 ```
 
-## Attributes
+## Methods
 
 | Method | Description |
 | ------ | ----------- |

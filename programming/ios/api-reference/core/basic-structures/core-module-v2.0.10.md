@@ -6,6 +6,7 @@ keywords: core module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/ios/api-reference/core/basic-structures/core-module-v2.0.10.html
 ---
 
 # DSCoreModule
@@ -34,8 +35,6 @@ class CoreModule : NSObject
 | Method | Description |
 | ------ |-------------|
 | [`getVersion`](#getversion) | Get the version of Dynamsoft Core. |
-| [`enableLogging`](#enablelogging) | Enable the output of logs. |
-| [`disableLogging`](#disablelogging) | Disable the output of logs. |
 
 ## getVersion
 
@@ -71,42 +70,4 @@ NSString *version = [DSCoreModule getVersion];
 2. 
 ```swift
 let version = CoreModule.getVersion()
-```
-
-### enableLogging
-
-Enable the output of logs.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-+(BOOL)enableLogging:(NSInteger)logMode;
-```
-2. 
-```swift
-class func enableLogging(_ logMode:Int)
-```
-
-**Parameters**
-
-`logMode`: One of the [`EnumLogMode`]({{ site.enums }}core/log-mode.html?lang=objc&swift) value.
-
-### disableLogging
-
-Disable the output of logs.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-+(void)disableLogging;
-```
-2. 
-```swift
-class func disableLogging()
 ```

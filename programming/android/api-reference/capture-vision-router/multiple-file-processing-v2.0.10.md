@@ -108,14 +108,12 @@ void removeResultReceiver(CapturedResultReceiver receiver);
 Start capturing with the specified template.
 
 ```java
-void startCapturing(String templateName, CompletionListener completionHandler);
+void startCapturing(String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
 
 `[in] templateName`: The name of a template that you have previously set via `initSettings` or `initSettingsFromFile`.
-
-`[in] completionHandler`: A [`CompletionListener`](../core/basic-structures/completion-listener.html) the system calls after it finishes the startCapturing.
 
 **Exception**
 

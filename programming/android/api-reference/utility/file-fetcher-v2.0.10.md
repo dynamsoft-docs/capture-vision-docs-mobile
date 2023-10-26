@@ -33,7 +33,6 @@ class FileFetcher
 | [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
-| [`setPages`](#setpages) | Set the pages to read. |
 
 ### setFile(filePath)
 
@@ -149,24 +148,3 @@ ImageData getImage()
 **Return Value**
 
 A `ImageData` as the image.
-
-### setPages
-
-Set the pages to read.
-
-```java
-void setPages(int[] pages) throws UtilityException;
-```
-
-**Parameters**
-
-`pages`: An array that contains all the pages to read.
-
-**Exception**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_FILE_NOT_FOUND  | -10005 | File not found. |
-| EC_FILE_TYPE_NOT_SUPPORTED  | -10006 | The file type is not supported. |
-| EC_IMAGE_READ_FAILED  | -10012 | Failed to read the image. |
-| EC_PDF_READ_FAILED  | -10021 | Failed to read the PDF image. |

@@ -30,8 +30,6 @@ class CapturedResult
 | [`getOriginalImageTag`](#getoriginalimagetag) | Get the [ImageTag](image-tag.md) of the original image that records information such as the image ID of the original image. |
 | [`getItems`](#getitems) | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
 | [`getrotationTransformMatrix`](#getrotationtransformmatrix) | Get the  rotation transformation matrix of the original image relative to the rotated image. |
-| [`getErrorCode`](#geterrorcode) | Get the error code if an error occurs when processing the image. |
-| [`getErrorMessage`](#geterrormessage) | Get the error message if an error occurs when processing the image. |
 
 ### getOriginalImageHashId
 
@@ -80,19 +78,3 @@ Matrix getRotationTransformMatrix();
 **Return Value**
 
 Return the rotation transformation matrix of the original image relative to the rotated image.
-
-### getErrorCode
-
-Get the error code if an error occurs when processing the image.
-
-```java
-int getErrorCode();
-```
-
-### getErrorMessage
-
-Get the error message if an error occurs when processing the image.
-
-```java
-String getErrorMessage();
-```

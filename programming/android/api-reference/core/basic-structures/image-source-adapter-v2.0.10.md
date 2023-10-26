@@ -43,7 +43,6 @@ class ImageSourceAdapter
 | [`hasImage`](#hasimage) | Check the availability of the specified image. |
 | [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
 | [`clearBuffer`](#clearbuffer) | Clears the image buffer. |
-| [`setErrorListener`](#seterrorlistener) | Clears the image buffer. |
 
 ### hasNextImageToFetch
 
@@ -253,15 +252,3 @@ Clears the image buffer.
 ```java
 void clearBuffer();
 ```
-
-## setErrorListener
-
-Registers a [`ImageSourceErrorListener`](image-source-error-listener.md) to be used as a callback when an error occurs in the `ImageSourceAdapter`.
-
-```java
-void setErrorListener(ImageSourceErrorListener* listener);
-```
-
-**Parameters**
-
-`[in] listener`: A interface object of [`ImageSourceErrorListener`](auxiliary-classes/capture-state-listener.md) to receive the errors that occurs in the `ImageSourceAdapter`.

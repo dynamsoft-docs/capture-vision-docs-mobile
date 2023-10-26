@@ -27,8 +27,6 @@ class CoreModule
 | Method | Description |
 | ------ |-------------|
 | [`getVersion`](#getversion) | Get the version of Dynamsoft Core. |
-| [`enableLogging`](#enablelogging) | Enable the output of logs. |
-| [`disableLogging`](#disablelogging) | Disable the output of logs. |
 
 ## getVersion
 
@@ -41,23 +39,3 @@ static String getVersion();
 **Return Value**
 
 The version of Dynamsoft Core.
-
-### enableLogging
-
-Enable the output of logs.
-
-```java
-static void enableLogging(int logMode);
-```
-
-**Parameters**
-
-`logMode`: One of the [`EnumLogMode`]({{ site.enums }}core/log-mode.html?lang=android) value.
-
-### disableLogging
-
-Disable the output of logs.
-
-```java
-static void disableLogging();
-```

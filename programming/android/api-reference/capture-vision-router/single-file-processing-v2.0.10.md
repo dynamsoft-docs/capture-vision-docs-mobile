@@ -22,7 +22,7 @@ noTitleIndex: true
 Capture data from the file specified by the file path.
 
 ```java
-CapturedResult capture(String filePath, String templateName);
+CapturedResult capture(String filePath, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -35,9 +35,7 @@ CapturedResult capture(String filePath, String templateName);
 
 A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
-If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
-
-Possible errors:
+**Exception**
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
@@ -53,7 +51,7 @@ Possible errors:
 Capture data from a given file in memory.
 
 ```java
-CapturedResult capture(byte[] fileBytes, String templateName);
+CapturedResult capture(byte[] fileBytes, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -66,9 +64,7 @@ CapturedResult capture(byte[] fileBytes, String templateName);
 
 A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
-If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
-
-Possible errors:
+**Exception**
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
@@ -82,7 +78,7 @@ Possible errors:
 Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object.
 
 ```java
-CapturedResult capture(ImageData imageData, String templateName);
+CapturedResult capture(ImageData imageData, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -95,9 +91,7 @@ CapturedResult capture(ImageData imageData, String templateName);
 
 A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
-If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
-
-Possible errors:
+**Exception**
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
@@ -112,7 +106,7 @@ Possible errors:
 Capture data from the given Bitmap.
 
 ```java
-CapturedResult capture(Bitmap bitmap, String templateName);
+CapturedResult capture(Bitmap bitmap, String templateName) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -125,9 +119,7 @@ CapturedResult capture(Bitmap bitmap, String templateName);
 
 A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
 
-If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
-
-Possible errors:
+**Exception**
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |

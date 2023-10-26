@@ -39,7 +39,6 @@ class SimplifiedCaptureVisionSettings : NSObject
 | [`timeout`](#timeout) | *NSInteger* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
 | [`barcodeSettings`](#barcodesettings) | *DSSimplifiedBarcodeReaderSettings \** | Specifies the settings for barcode recognition. |
 | [`labelSettings`](#labelsettings) | *DSSimplifiedLabelRecognizerSettings \** | Specifies the settings for label recognition. |
-| [`minImageCaptureInterval`](#minimagecaptureinterval) | *NSInteger* | Set the minimum capture interval. It is measured in millisecond. |
 
 ### capturedResultItemTypes
 
@@ -158,21 +157,4 @@ Specifies the settings for label recognition.
 2. 
 ```swift
 var labelSettings: DSSimplifiedLabelRecognizerSettings? { get set }
-```
-
-### minImageCaptureInterval
-
-Specifies the minimum image capture interval.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger minImageCaptureInterval;
-```
-2. 
-```swift
-var minImageCaptureInterval: Int { get set }
 ```
