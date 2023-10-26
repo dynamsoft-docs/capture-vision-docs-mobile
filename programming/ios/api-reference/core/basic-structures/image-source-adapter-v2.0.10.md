@@ -51,7 +51,6 @@ class ImageSourceAdapter : NSObject
 | [`hasImage`](#hasimage) | Check the availability of the specified image. |
 | [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
 | [`clearBuffer`](#clearbuffer) | Clears the image buffer. |
-| [`setErrorListener`](#seterrorlistener) | Clears the image buffer. |
 
 ## Attribute Details
 
