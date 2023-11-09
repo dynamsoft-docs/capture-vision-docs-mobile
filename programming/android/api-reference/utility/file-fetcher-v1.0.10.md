@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # FileFetcher
 
+> You are viewing a history document page of DynamsoftUtility v1.0.10.
+
 The `FileFetcher` class is a utility class that partitions a multi-page image file into multiple independent `ImageData` objects. It inherits from the `ImageSourceAdapter` class.
 
 ## Definition

@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # CapturedResult
 
+> You are viewing a history document page of DynamsoftCore v3.0.10.
+
 The `CapturedResult` class represents the result of a capture operation on an image. Internally, `CapturedResult` stores an array that contains multiple items, each of which may be a barcode, text line, detected quad, normalized image, original image, parsed item, etc.
 
 ## Definition
