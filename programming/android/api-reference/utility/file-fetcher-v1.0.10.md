@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: FileFetcher * Dynamsoft Capture Vision Router Module Android Edition API Reference
+title: FileFetcher - Dynamsoft Capture Vision Router Module Android Edition API Reference
 description: The class FileFetcher of Dynamsoft Capture Vision Router Module is a utility class that partitions a multi-page image file into multiple independent ImageData objects.
 keywords: file fetcher, Java, Kotlin
 needGenerateH3Content: true
