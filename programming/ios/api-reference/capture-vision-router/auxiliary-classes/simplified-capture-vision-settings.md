@@ -1,4 +1,5 @@
 ---
+layout: default-layout
 title: DSSimplifiedCaptureVisionSettings - Dynamsoft Capture Vision Router Module iOS Edition API Reference
 description: The class DSSimplifiedCaptureVisionSettings of Dynamsoft Capture Vision Router Module contains settings for capturing and recognizing images with the DSCaptureVisionRouter class.
 keywords: Capture Vision settings, objective-c, swift
