@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # CoreModule
 
+> You are viewing a history document page of DynamsoftCore v3.0.10.
+
 The `CoreModule` class defines general functions of the core module.
 
 ## Definition

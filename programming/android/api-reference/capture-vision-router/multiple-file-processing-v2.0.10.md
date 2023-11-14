@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # Processing multiple Images/Pages
 
+> You are viewing a history document page of DynamsoftCaptureVisionRouter v2.0.10.
+
 | Method | Description |
 | ------ | ----------- |
 | [`setInput`](#setinput) | Sets an image source that will provide images to be consecutively processed. |
