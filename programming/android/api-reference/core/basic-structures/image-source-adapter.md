@@ -264,4 +264,4 @@ void setErrorListener(ImageSourceErrorListener* listener);
 
 **Parameters**
 
-`[in] listener`: A interface object of [`ImageSourceErrorListener`](auxiliary-classes/capture-state-listener.md) to receive the errors that occurs in the `ImageSourceAdapter`.
+`[in] listener`: A interface object of [`ImageSourceErrorListener`](image-source-error-listener.md) to receive the errors that occurs in the `ImageSourceAdapter`.
