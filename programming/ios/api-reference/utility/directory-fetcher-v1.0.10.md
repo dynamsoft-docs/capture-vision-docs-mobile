@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # DSDirectoryFetcher
 
+> You are viewing a history document page of DynamsoftUtility v1.0.10.
+
 The `DSDirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `DSImageSourceAdapter` class.
 
 ## Definition
