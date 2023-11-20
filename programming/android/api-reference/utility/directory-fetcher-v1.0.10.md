@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DirectoryFetcher
 
-> You are viewing a history document page of DynamsoftUtility v3.0.10.
+> You are viewing a history document page of DynamsoftUtility v1.0.10.
 
 The `DirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `ImageSourceAdapter` class.
 
