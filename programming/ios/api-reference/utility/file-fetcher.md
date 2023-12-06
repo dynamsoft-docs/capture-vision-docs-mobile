@@ -37,7 +37,6 @@ class FileFetcher : NSObject
 | [`setFileWithBytes`](#setfilewithbytes) | Sets the file with file bytes. |
 | [`setFileWithBuffer`](#setfilewithbuffer) | Sets the file with a `DSImageData` object. |
 | [`setFileWithImage`](#setfilewithimage) | Sets the file with a `UIImage`. |
-| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
 | [`setPages`](#setpages) | Set the pages to read. |
@@ -160,39 +159,6 @@ func setFile(withImage image: UIImage) throws
 | :--------- | :---- | :---------- |
 | EC_NULL_POINTER | -10002 | The fileBytes you input is null. |
 
-### setPDFReadingParameter
-
-Sets the parameters of PDF reading.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(BOOL)setPDFReadingParameter:(PDFReadingParameter *)para
-                        error:(NSError *_Nullable *_Nullable)error;
-```
-2. 
-```swift
-func setPDFReadingParameter(_ para: PDFReadingParameter) throws
-```
-**Parameters**
-
-`para`: The parameter object for reading PDF files.
-
-`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
-
-**Error**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
-
-**Return Value**
-
-A BOOL value that indicates whether the PDF reading mode is set successfully.
-
 ### hasNextImageToFetch
 
 Whether there is a next image to fetch.
@@ -265,4 +231,3 @@ func setPages(_ pages: NSArray) throws -> BOOL
 | EC_FILE_NOT_FOUND  | -10005 | File not found. |
 | EC_FILE_TYPE_NOT_SUPPORTED  | -10006 | The file type is not supported. |
 | EC_IMAGE_READ_FAILED  | -10012 | Failed to read the image. |
-| EC_PDF_READ_FAILED  | -10021 | Failed to read the PDF image. |

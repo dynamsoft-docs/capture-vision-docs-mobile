@@ -28,8 +28,8 @@ class FileImageTag extends ImageTag
 |------- |-------------|
 | [`FileImageTag(filePath,pageNumber,totalPages)`](#fileimagetagfilepathpagenumbertotalpages) | The constructor of the FileImageTag. |
 | [`getFilePath`](#getfilepath) | Gets the file path of the image. |
-| [`getPageNumber`](#getpagenumber) | Gets the page number of the current image in the PDF/Tiff file. |
-| [`getTotalPages`](#gettotalpages) | Gets the total page number of the PDF/Tiff file. |
+| [`getPageNumber`](#getpagenumber) | Gets the page number of the current image in the file. |
+| [`getTotalPages`](#gettotalpages) | Gets the total page number of the file. |
 
 ### FileImageTag(filePath,pageNumber,totalPages)
 
@@ -45,9 +45,9 @@ FileImageTag(String filePath, int pageNumber, int totalPages);
 
 `[in] filePath`: The file path of the image.
 
-`[in] pageNumber`: The page number of the current image in the PDF file.  
+`[in] pageNumber`: The page number of the current image in the file.  
 
-`[in] totalPages`: The total page number of the PDF file.
+`[in] totalPages`: The total page number of the file.
 
 **Return Value**
 
@@ -67,7 +67,7 @@ The file path of the image.
 
 ### getPageNumber
 
-Gets the page number of the current image in the PDF/Tiff file.
+Gets the page number of the current image in the file.
 
 ```java
 int getPageNumber();
@@ -75,11 +75,11 @@ int getPageNumber();
 
 **Return Value**
 
-The page number of the current image in the PDF/Tiff file.
+The page number of the current image in the file.
 
 ### getTotalPages
 
-Gets the total page number of the PDF/Tiff file.
+Gets the total page number of the file.
 
 ```java
 int getTotalPages();
@@ -87,4 +87,4 @@ int getTotalPages();
 
 **Return Value**
 
-The total page number of the PDF/Tiff file.
+The total page number of the file.

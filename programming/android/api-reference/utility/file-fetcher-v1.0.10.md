@@ -32,7 +32,6 @@ class FileFetcher
 | [`setFile(fileBytes)`](#setfilefilebytes) | Sets the file with file bytes. |
 | [`setFile(imageData)`](#setfileimagedata) | Sets the file with a `ImageData` object. |
 | [`setFile(bitmap)`](#setfilebitmap) | Sets the file with a `Bitmap`. |
-| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
 
@@ -109,6 +108,7 @@ void setFile(Bitmap bitmap) throws UtilityException
 | :--------- | :---- | :---------- |
 | EC_NULL_POINTER | -10002 | The image data of the Bitmap is null. |
 
+<!-- 
 ### setPDFReadingParameter
 
 Sets the parameters of PDF reading.
@@ -125,7 +125,7 @@ void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. | -->
 
 ### hasNextImageToFetch
 

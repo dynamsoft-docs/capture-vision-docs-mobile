@@ -36,7 +36,6 @@ class DirectoryFetcher : ImageSourceAdapter
 | ------ | ----------- |
 | [`init`](#init) | Create an instance of DSDirectoryFetcher. |
 | [`setDirectory`](#setdirectory) | Sets the directory path and filter for the file search. |
-| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters for reading PDF files. |
 | [`setPages`](#setpages) | Set the pages to read. |
 
 ### init
@@ -135,60 +134,6 @@ do {
 }
 ```
 
-### setPDFReadingParameter
-
-Sets the parameters for reading PDF files.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (BOOL)setPDFReadingParameter:(DSPDFReadingParameter*)para
-                    error:(NSError * _Nullable * _Nullable)error;
-```
-2. 
-```swift
-func setPDFReadingParameter(_ para: DSPDFReadingParameter) throws
-```
-
-**Parameters**
-
-`para`: A `DSPDFReadingParameter` object.
-
-`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
-
-**Error**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
-
-**Return Value**
-
-A `BOOL` value that indicates whether the PDF reading mode is set successfully.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSError *error;
-BOOL success = [fetcher setPDFReadingParameter:pdfParameter error:&error];
-```
-2. 
-```swift
-do {
-   try fetcher.setPDFReadingParameter(pdfParameter)
-} catch {
-   // Add your code to deal with exceptions.
-}
-```
-
 ### setPages
 
 Set the pages to read.
@@ -219,4 +164,3 @@ func setPages(_ pages: NSArray) throws -> BOOL
 | EC_FILE_NOT_FOUND  | -10005 | File not found. |
 | EC_FILE_TYPE_NOT_SUPPORTED  | -10006 | The file type is not supported. |
 | EC_IMAGE_READ_FAILED  | -10012 | Failed to read the image. |
-| EC_PDF_READ_FAILED  | -10021 | Failed to read the PDF image. |

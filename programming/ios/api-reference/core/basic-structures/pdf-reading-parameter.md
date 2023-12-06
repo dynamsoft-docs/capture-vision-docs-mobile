@@ -6,6 +6,7 @@ keywords: PDF reading parameter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # DSPDFReadingParameter

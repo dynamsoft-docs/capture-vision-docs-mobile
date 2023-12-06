@@ -29,7 +29,6 @@ class DirectoryFetcher extends ImageSourceAdapter
 | Method | Description |
 | ------ | ----------- |
 | [`setDirectory`](#setdirectory) | Sets the directory path and filter for the file search. |
-| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters for reading PDF files. |
 | [`DirectoryFetcher`](#directoryfetcher-1) | The constructor. |
 
 ### setDirectory
@@ -54,6 +53,7 @@ void setDirectory(String directoryPath, String filter, boolean recursive) throws
 | :--------- | :---- | :---------- |
 | EC_READ_DIRECTORY_FAILED | -10064 | Failed to read the directory. |
 
+<!-- 
 ### setPDFReadingParameter
 
 Sets the parameters for reading PDF files.
@@ -70,7 +70,7 @@ void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException;
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. | -->
 
 ### DirectoryFetcher
 
