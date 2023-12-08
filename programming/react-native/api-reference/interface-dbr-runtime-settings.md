@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Interface DBRRuntimeSettings - Dynamsoft Capture Vision React Native Edition
-description: The interface of DBR runtime settings
+description: The interface of DBR runtime settings of Dynamsoft Capture Vision React Native edition.
 keywords: Interface DBRRuntimeSettings, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumBarcodeFormat of Dynamsoft Capture Vision Xamarin Edition
-description: The first group enumeration of the barcode formats
+description: The first group enumeration of the barcode formats of Dynamsoft Capture Vision Xamarin.forms edition
 keywords: Barcode format, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Processing multiple Images/Pages - Dynamsoft Capture Vision Router Module Android Edition API Reference
+title: Configure Settings - Dynamsoft Capture Vision Router Module Android Edition API Reference
 description: The APIs of the CaptureVisionRouter for processing multiple Images/Pages.
 keywords: capture vision, Java, Kotlin
 needGenerateH3Content: true
