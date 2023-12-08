@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Processing multiple Images/Pages - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+title: Configure Settings - Dynamsoft Capture Vision Router Module iOS Edition API Reference
 description: The APIs of the DSCaptureVisionRouter for processing multiple Images/Pages.
 keywords: cvr, CaptureVisionRouter, objective-c, swift, initSettings, updateSettings
 needGenerateH3Content: true

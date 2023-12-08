@@ -6,6 +6,7 @@ keywords: PDF reading parameter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # PDFReadingParameter

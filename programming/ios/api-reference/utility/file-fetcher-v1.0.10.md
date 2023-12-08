@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # DSFileFetcher
 
+> You are viewing a history document page of DynamsoftUtility v1.0.10.
+
 The `DSFileFetcher` class is a utility class that partitions a multi-page image file into multiple independent `ImageData` objects. It inherits from the `DSImageSourceAdapter` class.
 
 ## Definition
@@ -37,7 +39,6 @@ class FileFetcher : NSObject
 | [`setFileWithBytes`](#setfilewithbytes) | Sets the file with file bytes. |
 | [`setFileWithBuffer`](#setfilewithbuffer) | Sets the file with a `DSImageData` object. |
 | [`setFileWithImage`](#setfilewithimage) | Sets the file with a `UIImage`. |
-| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
 
@@ -158,39 +159,6 @@ func setFile(withImage image: UIImage) throws
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
 | EC_NULL_POINTER | -10002 | The fileBytes you input is null. |
-
-### setPDFReadingParameter
-
-Sets the parameters of PDF reading.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(BOOL)setPDFReadingParameter:(PDFReadingParameter *)para
-                        error:(NSError *_Nullable *_Nullable)error;
-```
-2. 
-```swift
-func setPDFReadingParameter(_ para: PDFReadingParameter) throws
-```
-**Parameters**
-
-`para`: The parameter object for reading PDF files.
-
-`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
-
-**Error**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
-
-**Return Value**
-
-A BOOL value that indicates whether the PDF reading mode is set successfully.
 
 ### hasNextImageToFetch
 

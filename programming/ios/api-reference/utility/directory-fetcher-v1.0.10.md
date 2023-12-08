@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # DSDirectoryFetcher
 
+> You are viewing a history document page of DynamsoftUtility v1.0.10.
+
 The `DSDirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `DSImageSourceAdapter` class.
 
 ## Definition
@@ -36,7 +38,6 @@ class DirectoryFetcher : ImageSourceAdapter
 | ------ | ----------- |
 | [`init`](#init) | Create an instance of DSDirectoryFetcher. |
 | [`setDirectory`](#setdirectory) | Sets the directory path and filter for the file search. |
-| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters for reading PDF files. |
 
 ### init
 
@@ -129,60 +130,6 @@ BOOL success = [fetcher setDirectory:directoryPath filter:nil recursive:YES erro
 ```swift
 do {
    try fetcher.setDirectory(directoryPath, filter: nil, recursive: true)
-} catch {
-   // Add your code to deal with exceptions.
-}
-```
-
-### setPDFReadingParameter
-
-Sets the parameters for reading PDF files.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (BOOL)setPDFReadingParameter:(DSPDFReadingParameter*)para
-                    error:(NSError * _Nullable * _Nullable)error;
-```
-2. 
-```swift
-func setPDFReadingParameter(_ para: DSPDFReadingParameter) throws
-```
-
-**Parameters**
-
-`para`: A `DSPDFReadingParameter` object.
-
-`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
-
-**Error**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
-
-**Return Value**
-
-A `BOOL` value that indicates whether the PDF reading mode is set successfully.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSError *error;
-BOOL success = [fetcher setPDFReadingParameter:pdfParameter error:&error];
-```
-2. 
-```swift
-do {
-   try fetcher.setPDFReadingParameter(pdfParameter)
 } catch {
    // Add your code to deal with exceptions.
 }

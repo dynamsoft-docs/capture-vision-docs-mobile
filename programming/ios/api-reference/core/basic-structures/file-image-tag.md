@@ -34,8 +34,8 @@ class FileImageTag : ImageTag
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`filePath`](#filepath) | *NSString \** | The file path of the image. |
-| [`pageNumber`](#pagenumber) | *NSInteger* | The page number of the current image in the PDF file. |
-| [`totalPages`](#totalpages) | *NSInteger* | The total page number of the PDF file. |
+| [`pageNumber`](#pagenumber) | *NSInteger* | The page number of the current image in the file. |
+| [`totalPages`](#totalpages) | *NSInteger* | The total page number of the file. |
 
 ## Method Summaries
 
@@ -64,7 +64,7 @@ var filePath: String? { get }
 
 ### pageNumber
 
-The page number of the current image in the PDF file.
+The page number of the current image in the multi-page.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,7 +81,7 @@ var pageNumber: Int { get }
 
 ### totalPages
 
-The total page number of the PDF file.
+The total page number of the multi-page.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -122,8 +122,8 @@ init(imageId: Int, filePath: String, pageNumber: Int, totalPages: Int)
 
 `imageId`: The ID of the image.  
 `filePath`: The file path of the image.  
-`pageNumber`: The page number of the current image in the PDF file.  
-`totalPages`: The total page number of the PDF file.
+`pageNumber`: The page number of the current image in the multi-page.  
+`totalPages`: The total page number of the multi-page.
 
 **Return Value**
 

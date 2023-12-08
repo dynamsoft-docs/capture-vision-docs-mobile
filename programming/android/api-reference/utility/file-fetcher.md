@@ -30,7 +30,6 @@ class FileFetcher
 | [`setFile(fileBytes)`](#setfilefilebytes) | Sets the file with file bytes. |
 | [`setFile(imageData)`](#setfileimagedata) | Sets the file with a `ImageData` object. |
 | [`setFile(bitmap)`](#setfilebitmap) | Sets the file with a `Bitmap`. |
-| [`setPDFReadingParameter`](#setpdfreadingparameter) | Sets the parameters of PDF reading. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Whether there is a next image to fetch. |
 | [`getImage`](#getimage) | Get the image data of the image. |
 | [`setPages`](#setpages) | Set the pages to read. |
@@ -108,6 +107,7 @@ void setFile(Bitmap bitmap) throws UtilityException
 | :--------- | :---- | :---------- |
 | EC_NULL_POINTER | -10002 | The image data of the Bitmap is null. |
 
+<!-- 
 ### setPDFReadingParameter
 
 Sets the parameters of PDF reading.
@@ -124,7 +124,7 @@ void setPDFReadingParameter(PDFReadingParameter para) throws UtilityException
 
 | Error Code | Value | Description |
 | :--------- | :---- | :---------- |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. | -->
 
 ### hasNextImageToFetch
 
@@ -169,4 +169,3 @@ void setPages(int[] pages) throws UtilityException;
 | EC_FILE_NOT_FOUND  | -10005 | File not found. |
 | EC_FILE_TYPE_NOT_SUPPORTED  | -10006 | The file type is not supported. |
 | EC_IMAGE_READ_FAILED  | -10012 | Failed to read the image. |
-| EC_PDF_READ_FAILED  | -10021 | Failed to read the PDF image. |
