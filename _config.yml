@@ -53,10 +53,10 @@ dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
 dbr_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/
 dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
 
-dlr_android: /label-recognizer/docs/mobile/programming/android/
-dlr_android_api: /label-recognizer/docs/mobile/programming/android/api-reference/
-dlr_ios: /label-recognizer/docs/mobile/programming/objectivec-swift/
-dlr_ios_api: /label-recognizer/docs/mobile/programming/objectivec-swift/api-reference/
+dlr_android: /label-recognition/docs/mobile/programming/android/
+dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
+dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
+dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
 
 enums: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
