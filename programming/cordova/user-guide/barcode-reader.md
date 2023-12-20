@@ -53,12 +53,6 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ## Installation
 
-- **Github**
-
-```bash
-cordova plugin add https://github.com/Dynamsoft/capture-vision-cordova
-```
-
 - **npm**
 
 ```bash

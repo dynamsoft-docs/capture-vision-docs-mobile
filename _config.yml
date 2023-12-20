@@ -42,9 +42,21 @@ ios: /capture-vision/docs/mobile/programming/ios/
 ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 ddn_android_api: /document-normalizer/docs/mobile/programming/android/api-reference/
+ddn_android: /document-normalizer/docs/mobile/programming/android/
 ddn_ios_api: /document-normalizer/docs/mobile/programming/ios/api-reference/
+ddn_ios: /document-normalizer/docs/mobile/programming/ios/
 dce_android_api: /camera-enhancer/docs/mobile/programming/android/
 dce_ios_api: /camera-enhancer/docs/mobile/programming/ios/
+
+dbr_android: /barcode-reader/docs/mobile/programming/android/
+dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
+dbr_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/
+dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
+
+dlr_android: /label-recognition/docs/mobile/programming/android/
+dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
+dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
+dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
 
 enums: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
