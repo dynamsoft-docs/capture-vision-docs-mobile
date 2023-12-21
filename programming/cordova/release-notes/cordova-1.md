@@ -11,6 +11,17 @@ breadcrumbText: 1.x
 
 # Release Notes for Cordova SDK - 1.x
 
+## 1.0.5 (12/20/2023)
+
+### New
+
+- Added methods `setMinImageReadingInterval` & `getMinImageReadingInterval` to control the image reading interval.
+
+### Fixed
+
+- Fixed a bug where UI elements are not removed when the `CameraView` disappears.
+- Fixed a crash bug by internal updates.
+
 ## 1.0.4 (02/14/2023)
 
 ### Fixed
