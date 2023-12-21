@@ -193,3 +193,19 @@ dbr.addResultListener((results) => {
     document.querySelector('#camera_view').appendChild(resultElement)
 })
 ```
+
+### setMinImageReadingInterval
+
+Set the minimum image reading interval.
+
+```js
+setMinImageReadingInterval(interval: number): void;
+```
+
+### getMinImageReadingInterval
+
+Get the minimum image reading interval.
+
+```js
+getMinImageReadingInterval(): Promise<number>;
+```
