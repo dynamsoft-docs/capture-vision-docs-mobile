@@ -33,7 +33,7 @@ class Quadrilateral : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`points`](#points) | *NSArray* |Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`points`](#points) | *NSArray* |Four vertices in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## Method Summaries
 
