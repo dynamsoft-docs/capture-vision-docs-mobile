@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - Core Module
 
-## v3.0.20
+## 3.0.20 (10/26/2023)
 
 ### New
 
@@ -27,3 +27,7 @@ noTitleIndex: true
 ### Changed
 
 - Changed the timing of `onOriginalImageResultReceived` so that it is triggered immediately after receiving the image.
+
+## 3.0.10 (08/10/2023)
+
+The first version of `DynamsoftCore` Android edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.

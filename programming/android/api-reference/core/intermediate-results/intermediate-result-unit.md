@@ -31,7 +31,7 @@ class IntermediateResultUnit
 | [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
 | [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image. |
 | [`getType`](#gettype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html). |
+| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 
 ### getHashId
 
@@ -83,7 +83,7 @@ The type of the intermediate result unit.
 
 ### getTransformMatrix
 
-Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html).
+Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html).
 
 ```java
 Matrix getTransformMatrix(int matrixType);

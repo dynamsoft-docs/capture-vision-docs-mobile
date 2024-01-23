@@ -138,7 +138,7 @@ void setColourChannelUsageType(EnumColourChannelUsageType type);
 
 **Parameters**
 
-`[in] type`: One of the [`EnumColourChannelUsageType`]({{site.enums}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
+`[in] type`: One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
 
 ### getColourChannelUsageType
 
@@ -150,7 +150,7 @@ EnumColourChannelUsageType getColourChannelUsageType();
 
 **Return Value**
 
-One of the [`EnumColourChannelUsageType`]({{site.enums}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
+One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
 
 ### startFetching
 

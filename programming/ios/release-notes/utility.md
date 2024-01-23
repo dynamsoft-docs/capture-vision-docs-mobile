@@ -9,12 +9,24 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftUtility Module
 
-## v2.0.20
+## 1.0.21 (12/07/2023)
 
-- Added a new method `SetPages` to the class `DirectoryFetcher` and class `FileFetcher`.
+### Changed
+
+- Updated the dependency rules of Dynamsoft SDK modules. Removed transitive dependencies.
+
+## 1.0.20 (10/26/2023)
+
+### New
+
+- Added a new method `setPages` to the class `DirectoryFetcher` and class `FileFetcher`.
 - The class `DirectoryFetcher` and `FileFetcher` will be able to return error codes via `ImageSourceErrorListener`
 - Updated the error codes of the method `saveToFile` of the class `ImageManager`.
 
 ### Changed
 
 - Changed the upper limit to the `DuplicateForgetTime`, which is 3 minutes.
+
+## 1.0.10 (08/10/2023)
+
+The first version of `DynamsoftUtility`.

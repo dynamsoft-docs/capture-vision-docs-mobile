@@ -9,7 +9,13 @@ noTitleIndex: true
 
 # Release Notes - CaptureVisionRouter Module
 
-## v2.0.20
+## 2.0.21 (12/07/2023)
+
+### Changed
+
+- Internal updates to compatible with new versions.
+
+## 2.0.20 (10/26/2023)
 
 ### New
 
@@ -37,3 +43,7 @@ noTitleIndex: true
 ### Fixed
 
 - Small fixes and tweaks.
+
+## 2.0.10 (08/10/2023)
+
+The first version of DynamsoftCaptureVisionRouter iOS edition.

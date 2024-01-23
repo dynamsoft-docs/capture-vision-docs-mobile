@@ -35,11 +35,11 @@ xamarin-api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
 xamarin-release-notes: /capture-vision/docs/mobile/programming/xamarin/release-notes/
 xamarin-guide: /capture-vision/docs/mobile/programming/xamarin/user-guide/
 
-android: /capture-vision/docs/mobile/programming/android/
-android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcv_android: /capture-vision/docs/mobile/programming/android/
+dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
 
-ios: /capture-vision/docs/mobile/programming/ios/
-ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+dcv_ios: /capture-vision/docs/mobile/programming/ios/
+dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 ddn_android_api: /document-normalizer/docs/mobile/programming/android/api-reference/
 ddn_android: /document-normalizer/docs/mobile/programming/android/
@@ -58,7 +58,7 @@ dlr_android_api: /label-recognition/docs/mobile/programming/android/api-referenc
 dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
 dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
 
-enums: /capture-vision/docs/core/enums/
+dcv_enumerations: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
 
 assets: /capture-vision/docs/mobile/assets/

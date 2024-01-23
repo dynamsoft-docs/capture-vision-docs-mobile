@@ -9,8 +9,18 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLicense Module
 
-## v2.0.20
+## 3.0.30 (12/07/2023)
 
 ### Fixed
 
-- Small fixes and tweaks.
+- Fixed a bug that might cause the app frozen.
+
+## 3.0.20 (10/26/2023)
+
+### Changed
+
+- The `initLicense` method will return error when you input contains correct and incorrect key at the same time.
+
+## 3.0.10 (08/10/2023)
+
+The first version of `DynamsoftLicense`.

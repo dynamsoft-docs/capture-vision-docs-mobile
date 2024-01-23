@@ -9,8 +9,18 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftImageProcessing Module
 
-## v2.0.20
+## 2.0.21 (12/07/2023)
+
+### Changed
+
+- Updated the dependency rules of Dynamsoft SDK modules. Removed transitive dependencies.
+
+## 2.0.20 (10/26/2023)
 
 ### Fixed
 
 - Small fixes and tweaks.
+
+## 2.0.10 (08/10/2023)
+
+The first version of `DynamsoftImageProcessing` module Android edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.

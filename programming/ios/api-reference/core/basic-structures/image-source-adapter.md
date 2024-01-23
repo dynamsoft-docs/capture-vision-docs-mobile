@@ -325,4 +325,4 @@ func setErrorListener(_ listener:ImageSourceErrorListener)
 
 **Parameters**
 
-`[in] listener`: A delegate object of [`DSImageSourceErrorListener`]({{ site.ios_api }}core/basic-structures/image-source-error-listener.html) to receive the errors that occurs in the `ImageSourceAdapter`.
+`[in] listener`: A delegate object of [`DSImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to receive the errors that occurs in the `ImageSourceAdapter`.

@@ -9,7 +9,11 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLabelRecognizer Module
 
-## v2.0.20
+## 2.0.20 (12/07/2023)
+
+The first version of `DynamsoftLabelRecognizer (DLR)` iOS edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.
+
+### New
 
 - Added a new parameter `scaleDownThreshold` to the struct `SimplifiedLabelRecognizerSettings`.
 
