@@ -64,4 +64,4 @@ EnumRegionObjectElementType getType();
 
 **Return Value**
 
-The [`EnumRegionObjectElementType`]({{site.enums}}core/region-object-element-type.html) of the element.
+The [`EnumRegionObjectElementType`]({{site.dcv_enumerations}}core/region-object-element-type.html) of the element.

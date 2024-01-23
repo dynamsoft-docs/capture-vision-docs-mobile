@@ -29,7 +29,7 @@ class IntermediateResultExtraInfo
 | [`targetROIDefName`](#targetroidefname) | *String* | The name of the TargetROIDef object that generates the intermediate result. |
 | [`taskName`](#taskname) | *String* | The name of the task object that generates the intermediate result. |
 | [`isSectionLevelResult`](#issectionlevelresult) | *boolean* | Whether the intermediate result is section-level result. |
-| [`sectionType`](#sectiontype) | *[EnumSectionType]({{ site.enums }}core/section-type.html?lang=android)* | The type of the section that generates the intermediate result. |
+| [`sectionType`](#sectiontype) | *[EnumSectionType]({{ site.dcv_enumerations }}core/section-type.html?lang=android)* | The type of the section that generates the intermediate result. |
 
 ### targetROIDefName
 

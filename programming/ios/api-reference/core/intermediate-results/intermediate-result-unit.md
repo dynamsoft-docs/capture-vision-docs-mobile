@@ -42,7 +42,7 @@ class IntermediateResultUnit : NSObject
 
 | Method | Description |
 |------- |-------------|
-| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html). |
+| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
 
 ### hashId
@@ -115,7 +115,7 @@ var type: EnumIntermediateResultUnitType { get }
 
 ### getTransformMatrix
 
-Gets the transformation matrix via [`DSTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html).
+Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

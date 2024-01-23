@@ -32,6 +32,8 @@ class SimplifiedCaptureVisionSettings
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *int* | Set the minimum capture interval. It is measured in millisecond. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
+| [`barcodeSettings`](#barcodesettings) | *SimplifiedBarcodeReaderSettings \** | Specifies the settings for barcode recognition. |
+| [`labelSettings`](#labelsettings) | *SimplifiedLabelRecognizerSettings \** | Specifies the settings for label recognition. |
 
 ### capturedResultItemTypes
 
@@ -79,4 +81,20 @@ Specifies the maximum time (in milliseconds) allowed for image capture and recog
 
 ```java
 int timeout;
+```
+
+### barcodeSettings
+
+Specifies the settings for barcode recognition.
+
+```java
+SimplifiedBarcodeReaderSettings barcodeSettings;
+```
+
+### labelSettings
+
+Specifies the settings for label recognition.
+
+```java
+SimplifiedLabelRecognizerSettings labelSettings;
 ```

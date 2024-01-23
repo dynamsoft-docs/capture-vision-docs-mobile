@@ -9,15 +9,33 @@ noTitleIndex: true
 
 # Dynamsoft Capture Vision Documentation for Android Edition
 
+Dynamsoft Capture Vision Android edition includes:
+
+| Package | Latest Version |
+| :------ | :------------- |
+| DynamsoftCaptureVisionRouter.aar | v2.0.21 |
+| DynamsoftBarcodeReader.aar | v10.0.21 |
+| DynamsoftLabelRecognizer.aar | v3.0.20 |
+| DynamsoftDocumentNormalizer.aar | v1.0.20 |
+| DynamsoftCore.aar | v3.0.20 |
+| DynamsoftImageProcessing.aar | v2.0.21 |
+| DynamsoftLicense.aar | v3.0.30 |
+| DynamsoftCameraEnhancer.aar | v4.0.2 |
+| DynamsoftUtility.aar | v1.0.21 |
+| DynamsoftCodeParser.aar | v2.0.20 |
+| DynamsoftCodeParserDedicator.aar | v1.0.10 |
+
 ## Getting Started with DCV Android Edition
 
-Following the [User Guide](user-guide/index.md) to build your first capture vision project:
+- [Read Barcode]({{ site.dbr_android }}user-guide.html)
+- [Recognize Text Lines]({{ site.dlr_android }}user-guide.html)
+- [Scan Documents]({{ site.ddn_android }}user-guide.html)
 
 ### System Requirements
 
-* Supported OS: Android 5.0 (API Level 21) or higher.
-* Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
-* Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+- Supported OS: Android 5.0 (API Level 21) or higher.
+- Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
 ### License Subscription
 

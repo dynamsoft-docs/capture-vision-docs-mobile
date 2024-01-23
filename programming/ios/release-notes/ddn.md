@@ -9,8 +9,17 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftDocumentNormalizer Module
 
-## v2.0.20
+## 2.0.20 (12/12/2023)
+
+### Changed
+
+- Updated the SDK to compatible with `DynamsoftCaptureVisionRouter` v2.0.21.
+- Updated the dependency rules of Dynamsoft SDK modules. Removed transitive dependencies.
 
 ### Fixed
 
 - Small fixes and tweaks.
+
+## 2.0.10 (08/10/2023)
+
+The first version of `DynamsoftDocumentNormalizer (DDN)` iOS edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.
