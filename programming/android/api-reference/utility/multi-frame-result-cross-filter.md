@@ -43,7 +43,7 @@ void enableResultDeduplication(int resultItemTypes, bool enable);
 
 **Parameters**
 
-`[in] resultItemTypes`: Specifies a targeting captured result type.  
+`[in] resultItemTypes`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).  
 
 `[in] enable`: A boolean value that indicates whether to enable the result deduplication feature.
 
@@ -57,7 +57,7 @@ void enableResultCrossVerification(int resultItemTypes, bool enable);
 
 **Parameters**
 
-`[in] resultItemTypes`: Specifies a targeting captured result type.  
+`[in] resultItemTypes`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).  
 
 `[in] enable`: A boolean value that indicates whether to enable the result cross verification feature.
 
@@ -71,7 +71,7 @@ void setDuplicateForgetTime(int resultItemTypes, int time);
 
 **Parameters**
 
-`[in] resultItemType`: Specifies a targeting captured result type.  
+`[in] resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).  
 
 `[in] time`: The duplicate forget time of the specified capture result type.
 
@@ -85,7 +85,7 @@ boolean isResultDeduplicationEnabled(CapturedResultItemType type);
 
 **Parameters**
 
-`[in] type`: Specifies a targeting captured result type.
+`[in] type`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
@@ -101,7 +101,7 @@ boolean isResultCrossVerificationEnabled(CapturedResultItemType type);
 
 **Parameters**
 
-`[in] type`: Specifies a targeting captured result type.
+`[in] type`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
@@ -117,7 +117,7 @@ int getDuplicateForgetTime(CapturedResultItemType type);
 
 **Parameters**
 
-`[in] type`: Specifies a targeting captured result type.
+`[in] type`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
