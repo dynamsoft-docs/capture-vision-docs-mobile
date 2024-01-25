@@ -60,7 +60,7 @@ func enableResultDeduplication(resultItemType: DSCapturedResultItemType, isEnabl
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type.
+`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 `isEnabled`: A BOOL value that indicates whether to enable the result deduplication feature.
 
@@ -84,7 +84,7 @@ func enableResultCrossVerification(resultItemType: DSCapturedResultItemType, isE
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type.
+`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 `isEnabled`: A BOOL value that indicates whether to enable the result cross verification feature.
 
@@ -108,7 +108,7 @@ func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateF
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type.
+`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 `duplicateForgetTime`: The duplicate forget time of the specified capture result type.
 
@@ -131,7 +131,7 @@ func isResultDeduplicationEnabled(resultItemType: DSCapturedResultItemType) -> B
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type.
+`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
@@ -156,7 +156,7 @@ func isResultCrossVerificationEnabled(resultItemType: DSCapturedResultItemType) 
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type.
+`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
@@ -181,7 +181,7 @@ func getDuplicateForgetTime(resultItemType: DSCapturedResultItemType) -> Int
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type.
+`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
