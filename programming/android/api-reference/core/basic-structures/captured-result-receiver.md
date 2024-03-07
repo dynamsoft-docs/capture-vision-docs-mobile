@@ -6,9 +6,12 @@ keywords: captured result, original image result, decoded barcode result, recogn
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # CapturedResultReceiver
+
+> You are reading a history page of `DynamsoftCore`. Start from v3.2.10, the `CapturedResultReceiver` class is moved to the `DynamsoftCaptureVisionRouter` module. View the [`DynamsoftCaptureVisionRouter.CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) for the latest version.
 
 The `CapturedResultReceiver` interface provides methods for monitoring the output of captured results, which can consist of original image result(s), decoded barcode result(s), recognized text line result(s), detected quad result(s), normalized image result(s), or parsed result(s). The `CapturedResultReceiver` can add a receiver for any type of captured result or for a specific type of captured result, based on the method that is implemented.
 

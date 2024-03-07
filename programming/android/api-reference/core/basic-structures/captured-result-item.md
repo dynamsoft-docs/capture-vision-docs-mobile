@@ -28,6 +28,8 @@ class CapturedResultItem
 | ------ | ----------- |
 | [`getType`](#gettype) | Get the type of the captured result item. |
 | [`getReferencedItem`](#getreferenceditem) | Get the referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
+| [`getTargetROIDefName`](#gettargetroidefname) | The name of the `targetROIDef` that produced this `CapturedResultItem`. |
+| [`getTaskName`](#gettaskname) | The name of the `Task` that produced this `CapturedResultItem`. |
 
 ### getType
 
@@ -52,3 +54,27 @@ CapturedResultItem getReferencedItem();
 **Return Value**
 
 The referenced captured result item.
+
+### getTargetROIDefName
+
+The name of the `targetROIDef` that produced this `CapturedResultItem`.
+
+```java
+String getTargetROIDefName();
+```
+
+**Return Value**
+
+The name of the `targetROIDef`.
+
+### getTaskName
+
+The name of the `Task` that produced this `CapturedResultItem`.
+
+```java
+String getTaskName();
+```
+
+**Return Value**
+
+The name of the task.

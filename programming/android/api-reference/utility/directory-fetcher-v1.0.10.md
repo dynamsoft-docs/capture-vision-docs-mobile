@@ -43,7 +43,7 @@ void setDirectory(String directoryPath, String filter, boolean recursive) throws
 
 `[in] directoryPath`: The directory path.  
 
-`[in] filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g ".BMP;.JPG;.GIF".  
+`[in] filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g "\*.BMP;\*.JPG;\*.GIF".  
 
 `[in] recursive`: Specifies whether to load files recursively.  
 

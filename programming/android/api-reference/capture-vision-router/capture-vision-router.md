@@ -24,14 +24,14 @@ class CaptureVisionRouter
 
 ## Constructor
 
-| Method                                                           | Description                                           |
-| ---------------------------------------------------------------- | ----------------------------------------------------- |
+| Method | Description |
+| ------ | ----------- |
 | [`CaptureVisionRouter`](constructors.md#ccapturevisionrouter)    | Default constructor of `CaptureVisionRouter` object. |
 
 ## Single-File Processing
 
-| Method                                       | Description                                               |
-| ---------------------------------------------- | --------------------------------------------------------- |
+| Method | Description |
+| ------ | ----------- |
 | [`capture(filePath,templateName)`](single-file-processing.md#capturefilepathtemplatename) | Capture data from the file specified by the file path. |
 | [`capture(fileBytes,templateName)`](single-file-processing.md#capturefilebytestemplatename) | Capture data from a given file in memory. |
 | [`capture(imageData,templateName)`](single-file-processing.md#captureimagedatatemplatename) | Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object. |
@@ -49,6 +49,8 @@ class CaptureVisionRouter
 | [`removeResultReceiver`](multiple-file-processing.md#removeresultreceiver) | Removes a CapturedResultReceiver. |
 | [`startCapturing`](multiple-file-processing.md#startcapturing) | Start capturing with the targeting template. |
 | [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Stop capturing. |
+| [`pauseCapturing`](multiple-file-processing.md#pausecapturing) | Pauses the Capture Vision Router. |
+| [`resumeCapturing`](multiple-file-processing.md#resumecapturing) | Resumes the Capture Vision Router. |
 | [`addCaptureStateListener`](multiple-file-processing.md#addcapturestatelistener) | Register a CaptureStateListener to get callback when capture state changes. |
 | [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a CaptureStateListener. |
 | [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Register a CapturedResultFilter to get callback when filtered result output. |

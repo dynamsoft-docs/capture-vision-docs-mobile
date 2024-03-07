@@ -6,6 +6,7 @@ keywords: interface, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # IntermediateResultReceiver

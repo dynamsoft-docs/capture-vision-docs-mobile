@@ -1,5 +1,15 @@
-version_info_list:
-  - latest version
+useGroupedVersion: true
 
-version_info_list_react_native:
-  - latest version
+# version_info_list_react_native:
+#   - latest version
+
+version_info_list_mobile:
+  - value: latest version (2.2.10)
+  - value: 2.x
+    child:
+      - 2.0.21
+      - 2.0.20
+      - 2.0.10
+  - value: 1.x
+    child:
+      - 1.2.1

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumPresetTemplate - Dynamsoft Capture Vision React Native Edition
-description: The enumeration of preset template
+description: The preset template enumeration of DCV React Native edition.
 keywords: Preset template, API reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

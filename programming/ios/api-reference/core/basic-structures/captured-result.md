@@ -6,9 +6,12 @@ keywords: captured result, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # DSCapturedResult
+
+> You are viewing a history document page of `DynamsoftCore` v3.0.20. Start from v3.2.10 version, the class `DSCapturedResult` is migrated to the `DynamsoftCaptureVisionRouter` library. [View the latest document page of `DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html).
 
 The `DSCapturedResult` class represents the result of a capture operation on an image. Internally, `DSCapturedResult` stores an array that contains multiple items, each of which may be a barcode, text line, detected quad, normalized image, original image, parsed item, etc.
 

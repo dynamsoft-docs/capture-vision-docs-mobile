@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Class Point of Dynamsoft Capture Vision Flutter Edition
-description: The class of DBR runtime settings
+description: The Point class of DynamsoftCaptureVision Flutter Edition defines a point with x and y coordinates.
 keywords: Class Point, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

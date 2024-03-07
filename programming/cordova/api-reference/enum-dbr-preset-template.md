@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumPresetTemplate of Dynamsoft Capture Vision Cordova Edition
-description: Documentation page of enumeration of preset template of Dynamsoft Capture Vision.
+description: The preset template enumeration of DCV Cordova edition.
 keywords: Preset template, API Reference, Cordova
 needAutoGenerateSidebar: false
 needGenerateH3Content: false

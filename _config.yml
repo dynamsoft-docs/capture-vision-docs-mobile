@@ -53,6 +53,8 @@ dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
 dbr_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/
 dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
 
+dbr_features: /barcode-reader/docs/core/programming/features/
+
 dlr_android: /label-recognition/docs/mobile/programming/android/
 dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
 dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/

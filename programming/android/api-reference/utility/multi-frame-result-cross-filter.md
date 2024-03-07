@@ -19,7 +19,7 @@ The `MultiFrameResultCrossFilter` class is responsible for filtering captured re
 *Assembly:* DynamsoftUtility.aar
 
 ```java
-class MultiFrameResultCrossFilter
+class MultiFrameResultCrossFilter implements CapturedResultFilter
 ```
 
 ## Methods

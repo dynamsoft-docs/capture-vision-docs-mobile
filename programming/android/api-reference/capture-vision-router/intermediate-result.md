@@ -16,7 +16,7 @@ noTitleIndex: true
 
 ## getIntermediateResultManager
 
-Gets the object of [`IntermediateResultManager`](../core/intermediate-results/intermediate-result-manager.md).
+Gets the object of [`IntermediateResultManager`](auxiliary-classes/intermediate-result-manager.md).
 
 ```java
 IntermediateResultManager getIntermediateResultManager();
@@ -24,4 +24,26 @@ IntermediateResultManager getIntermediateResultManager();
 
 **Return Value**
 
-An object of [`IntermediateResultManager`](../core/intermediate-results/intermediate-result-manager.md).
+An object of [`IntermediateResultManager`](auxiliary-classes/intermediate-result-manager.md).
+
+**Code Snippet**
+
+The following code snippet shows how to regisiter a `IntermediateResultReceiver` with the `IntermediateResultManager` and receive the localized barcodes.
+
+```java
+IntermediateResultManager intermediateResultManager;
+intermediateResultManager = mRouter.getIntermediateResultManager();
+intermediateResultManager.addResultReceiver(new IntermediateResultReceiver() {
+    @Override
+    public void onLocalizedBarcodesReceived(@NonNull LocalizedBarcodesUnit unit, IntermediateResultExtraInfo info) {
+        // Add code to do when localized barcodes are received.
+    }    
+    // You can add multiple callback methods here to monitor different types of intermediate results.
+});
+```
+
+See also:
+
+- [IntermediateResultManager](auxiliary-classes/intermediate-result-manager.md)
+- [IntermediateResultReceiver](auxiliary-classes/intermediate-result-receiver.md)
+- [EnumIntermediateResultUnitType]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android)

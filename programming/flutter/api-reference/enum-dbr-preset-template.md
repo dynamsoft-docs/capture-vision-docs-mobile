@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumPresetTemplate of Dynamsoft Capture Vision Flutter Edition
-description: The enumeration of preset template
+description: The preset template enumeration of DCV Flutter edition.
 keywords: Preset template, API Reference, Flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

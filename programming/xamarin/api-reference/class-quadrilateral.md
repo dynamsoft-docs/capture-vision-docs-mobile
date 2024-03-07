@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Class Quadrilateral of Dynamsoft Capture Vision Xamarin Edition
-description: The Class of DBR runtime settings
+description: Quadrilateral class of DCV Xamarin Edition defines a quadrilateral with 4 vertices coordinates.
 keywords: Class Quadrilateral, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

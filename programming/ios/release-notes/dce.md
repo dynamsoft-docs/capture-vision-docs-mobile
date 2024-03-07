@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCameraEnhancer Module
 
+## 4.2.0 (03/07/2024)
+
+- Internal changes to solve the compatibility issue.
+
 ## 4.0.2 (12/07/2023)
 
 - Fixed a bug where method `getSelectedDrawingItem` might not return correctly.

@@ -9,6 +9,31 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftDocumentNormalizer Module
 
+## 2.2.0 (03/07/2024)
+
+### New
+
+- Added new methods to the `LongLinesUnit` class to add, set or remove the line segments of the unit.
+- Added new methods to the `CornersUnit` class to add, set or remove the corners of the unit.
+- Added new methods to the `CandidateQuadEdgesUnit` class to add, set or remove the candidate quad edges of the unit.
+- Added new methods to the `DetectedQuadsUnit` class to add, set or remove the detected quad elements of the unit.
+- Added new methods to the `NormalizedImagesUnit` class to set or remove the normalized image element of the unit.
+- Added the following methods to the `NormalizedImagesResult` class.
+  - `retain`
+  - `release`
+- Added the following methods to the `DetectedQuadsResult` class.
+  - `retain`
+  - `release`
+- Added `SimplifiedDocumentNormalizerSettings` class to configure basic settings of document processing.
+- Added new constructors to the following classes.
+  - `NormalizedImageElement`
+  - `DetectedQuadElement`
+- Added a new enumeration `EnumImageColourMode` to specify the colour mode of the normalized image.
+
+### Fixed
+
+- Fixed a bug where the internal table boundaries were recognized as the document boundaries.
+
 ## 2.0.20 (12/12/2023)
 
 ### Changed

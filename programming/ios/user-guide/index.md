@@ -6,6 +6,7 @@ keywords: iOS, user guide
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 permalink: /programming/ios/user-guide/index.html
+ignore: true
 ---
 
 # User Guide - iOS

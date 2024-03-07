@@ -38,8 +38,9 @@ class SimplifiedCaptureVisionSettings : NSObject
 | [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *BOOL* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
 | [`maxParallelTasks`](#maxparalleltasks) | *NSInteger* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
 | [`timeout`](#timeout) | *NSInteger* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
-| [`barcodeSettings`](#barcodesettings) | *DSSimplifiedBarcodeReaderSettings \** | Specifies the settings for barcode recognition. |
-| [`labelSettings`](#labelsettings) | *DSSimplifiedLabelRecognizerSettings \** | Specifies the settings for label recognition. |
+| [`barcodeSettings`](#barcodesettings) | *DSSimplifiedBarcodeReaderSettings \** | Specifies the settings for `DynamsoftBarcodeReader` tasks. |
+| [`labelSettings`](#labelsettings) | *DSSimplifiedLabelRecognizerSettings \** | Specifies the settings for `DynamsoftLabelRecognizer` tasks. |
+| [`documentSettings`](#documentsettings) | *DSSimplifiedDocumentNormalizerSettings \** | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *NSInteger* | Set the minimum capture interval. It is measured in millisecond. |
 
 ### capturedResultItemTypes
@@ -129,7 +130,7 @@ var timeout: Int { get set }
 
 ### barcodeSettings
 
-Specifies the settings for barcode recognition.
+Specifies the settings for `DynamsoftBarcodeReader` tasks with a [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -146,7 +147,7 @@ var barcodeSettings: DSSimplifiedBarcodeReaderSettings? { get set }
 
 ### labelSettings
 
-Specifies the settings for label recognition.
+Specifies the settings for `DynamsoftLabelRecognizer` tasks with a [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_ios_api }}simplified-label-recognizer-settings.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -159,6 +160,23 @@ Specifies the settings for label recognition.
 2. 
 ```swift
 var labelSettings: DSSimplifiedLabelRecognizerSettings? { get set }
+```
+
+### documentSettings
+
+Specifies the settings for `DynamsoftDocumentNormalizer` tasks with a [`SimplifiedDocumentNormalizerSettings`]({{ site.ddn_ios_api }}simplified-document-normalizer-settings.html) object.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, strong, nullable) DSSimplifiedDocumentNormalizerSettings *documentSettings;
+```
+2. 
+```swift
+var documentSettings: DSSimplifiedDocumentNormalizerSettings? { get set }
 ```
 
 ### minImageCaptureInterval

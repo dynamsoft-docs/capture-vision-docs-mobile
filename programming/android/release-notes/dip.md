@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftImageProcessing Module
 
+## 2.2.0 (03/07/2024)
+
+### Break Changes
+
+- The `DeepNeuralNetwork` module is separated from the `DynamsoftImageProcessing` module.
+
 ## 2.0.21 (12/07/2023)
 
 ### Changed

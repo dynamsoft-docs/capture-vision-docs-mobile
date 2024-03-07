@@ -32,8 +32,9 @@ class SimplifiedCaptureVisionSettings
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *int* | Set the minimum capture interval. It is measured in millisecond. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
-| [`barcodeSettings`](#barcodesettings) | *SimplifiedBarcodeReaderSettings \** | Specifies the settings for barcode recognition. |
-| [`labelSettings`](#labelsettings) | *SimplifiedLabelRecognizerSettings \** | Specifies the settings for label recognition. |
+| [`barcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html) \** | Specifies the settings for `DynamsoftBarcodeReader` tasks. |
+| [`labelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html) \** | Specifies the settings for `DynamsoftLabelRecognizer` tasks. |
+| [`documentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.ddn_android_api }}simplified-document-normalizer-settings.html) \** | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
 
 ### capturedResultItemTypes
 
@@ -85,7 +86,7 @@ int timeout;
 
 ### barcodeSettings
 
-Specifies the settings for barcode recognition.
+Specifies the settings for `DynamsoftBarcodeReader` tasks with a [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html) object.
 
 ```java
 SimplifiedBarcodeReaderSettings barcodeSettings;
@@ -93,8 +94,16 @@ SimplifiedBarcodeReaderSettings barcodeSettings;
 
 ### labelSettings
 
-Specifies the settings for label recognition.
+Specifies the settings for `DynamsoftLabelRecognizer` tasks with a [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html) object.
 
 ```java
 SimplifiedLabelRecognizerSettings labelSettings;
+```
+
+### documentSettings
+
+Specifies the settings for `DynamsoftDocumentNormalizer` tasks with a [`SimplifiedDocumentNormalizerSettings`]({{ site.ddn_android_api }}simplified-document-normalizer-settings.html) object.
+
+```java
+SimplifiedDocumentNormalizerSettings documentSettings;
 ```

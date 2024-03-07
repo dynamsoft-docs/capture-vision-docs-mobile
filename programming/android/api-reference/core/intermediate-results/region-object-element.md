@@ -27,6 +27,7 @@ class RegionObjectElement
 | Method | Description |
 | ------ | ----------- |
 | [`getLocation`](#getlocation) | Gets the location info of the element that defined in Quadrilateral. |
+| [`setLocation`](#setlocation) | Sets the location info of the element that defined in Quadrilateral. |
 | [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
 | [`getRegionObjectElementType`](#getregionobjectelementtype) | Gets the type of the element. |
 
@@ -41,6 +42,18 @@ Quadrilateral getLocation();
 **Return Value**
 
 The location info of the element that defined in Quadrilateral.
+
+### setLocation
+
+Sets the location info of the element that defined in Quadrilateral.
+
+```java
+void setLocation(Quadrilateral location);
+```
+
+**Parameters**
+
+`[in] location`: The location info of the element that defined in Quadrilateral.
 
 ### getReferencedElement
 

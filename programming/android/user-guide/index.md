@@ -6,6 +6,7 @@ keywords: Android, user guide
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 permalink: /programming/android/user-guide/index.html
+ignore: true
 ---
 
 # User Guide - Android
