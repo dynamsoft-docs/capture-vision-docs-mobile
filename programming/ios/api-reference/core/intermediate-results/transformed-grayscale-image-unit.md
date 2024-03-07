@@ -29,15 +29,16 @@ The `DSTransformedGrayscaleImageUnit` class represents a unit that contains a tr
 class TransformedGrayscaleImageUnit : IntermediateResultUnit
 ```
 
-## Attributes
+## Methods
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`imageData`](#imagedata) | *DSImageData \** | A `DSImageData` object as the image data of the transformed grayscale image. |
+| Method | Description |
+|------- |-------------|
+| [`setImageData`](#setimagedata) | Sets the image data of the transformed grayscale image. |
+| [`getImageData`](#getimagedata) | Returns the image data of the transformed grayscale image. |
 
-### imageData
+### setImageData
 
-A `DSImageData` object as the image data of the transformed grayscale image.
+Set the image data of the transformed grayscale image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -45,9 +46,38 @@ A `DSImageData` object as the image data of the transformed grayscale image.
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nullable) DSImageData *imageData;
+-(NSInteger)setImageData:(DSImageData *)imageData;
 ```
 2. 
 ```swift
-var imageData: DSImageData? { get set }
+func setImageData(_ imageData: DSImageData?) -> Int
 ```
+
+**Parameters**
+
+`imageData`: A `DSImageData` object as the image data of the transformed grayscale image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getImageData
+
+Get the image data of the transformed grayscale image.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable DSImageData *)getImageData;
+```
+2. 
+```swift
+func getImageData() -> DSImageData?
+```
+
+**Return Value**
+
+The image data of the transformed grayscale image.

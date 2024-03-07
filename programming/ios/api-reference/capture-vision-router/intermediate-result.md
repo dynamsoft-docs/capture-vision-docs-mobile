@@ -12,11 +12,11 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`getIntermediateResultManager`](#getintermediateresultmanager) | Gets the object of `DSIntermediateResultManager`. |
+| [`getIntermediateResultManager`](#getintermediateresultmanager) | Gets the object of [`DSIntermediateResultManager`](auxiliary-classes/intermediate-result-manager.md). |
 
 ## getIntermediateResultManager
 
-Gets the object of `DSIntermediateResultManager`.
+Gets the object of [`DSIntermediateResultManager`](auxiliary-classes/intermediate-result-manager.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -33,4 +33,4 @@ func getIntermediateResultManager() -> IntermediateResultManager
 
 **Return Value**
 
-An object of `DSIntermediateResultManager`.
+An object of [`DSIntermediateResultManager`](auxiliary-classes/intermediate-result-manager.md).

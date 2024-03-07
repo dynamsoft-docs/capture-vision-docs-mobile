@@ -38,7 +38,12 @@ func captureFromFile(_ file:String, templateName:String) -> CaptureResult
 **Parameters**
 
 `file`: The file path and name that you want to capture data from.  
-`templateName`: Specify a template with a templateName for the data capturing.  
+
+`templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 
@@ -78,7 +83,12 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) -> CaptureResul
 **Parameters**
 
 `fileBytes`: A `NSData` object that points to a file in memory.  
-`templateName`: Specify a template with a templateName for the data capturing.  
+
+`templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 
@@ -116,7 +126,12 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) -> CaptureResu
 **Parameters**
 
 `buffer`: A [`DSImageData`](../core/basic-structures/image-data.md) object that contains image info.  
-`templateName`: Specify a template with a templateName for the data capturing.  
+
+`templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 
@@ -155,7 +170,12 @@ func captureFromBuffer(_ image:UIImage, templateName:String) -> CaptureResult
 **Parameters**
 
 `image`: A `UIImage` object.  
-`templateName`: Specify a template with a templateName for the data capturing.  
+
+`templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 

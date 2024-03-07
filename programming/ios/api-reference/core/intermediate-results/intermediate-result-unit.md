@@ -29,42 +29,21 @@ The `DSIntermediateResultUnit` class represents an intermediate result unit used
 class IntermediateResultUnit : NSObject
 ```
 
-## Attributes
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`hashId`](#hashid) | *NSString \** | The hash ID of the unit. |
-| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via IntermediateResultManager class. |
-| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
-| [`type`](#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
-
 ## Methods
 
 | Method | Description |
 |------- |-------------|
+| [`getHashId`](#gethashid) | Gets the hash ID of the unit. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image. |
+| [`getType`](#gettype) | Gets the type of the intermediate result unit. |
 | [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
+| [`replace`](#replace) | Replaces the content of the intermediate result unit. |
 
-### hashId
+### getHashId
 
-The hash ID of the unit.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, copy, readonly) NSString *hashId;
-```
-2. 
-```swift
-var hashId: String? { get }
-```
-
-### originalImageHashId
-
-The hash ID of the original image. You can use this ID to get the original image via IntermediateResultManager class.
+Gets the hash ID of the unit.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -72,46 +51,71 @@ The hash ID of the original image. You can use this ID to get the original image
 >
 >1. 
 ```objc
-@property(nonatomic, copy, readonly) NSString *originalImageHashId;
+-(NSString*)getHashId;
 ```
 2. 
 ```swift
-var originalImageHashId: String? { get }
+func getHashId() -> String
 ```
 
-### originalImageTag
+### getOriginalImageHashId
+
+Get the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSString*)getOriginalImageHashId;
+```
+2. 
+```swift
+func getOriginalImageHashId() -> String
+```
+
+### getOriginalImageTag
+
+Gets the image tag of the original image.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable DSImageTag*)getOriginalImageTag;
+```
+2. 
+```swift
+func getOriginalImageTag() -> ImageTag?
+```
+
+**Return Value**
 
 The image tag of the original image.
 
+### getType
+
+Gets the type of the intermediate result unit.
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
 >
 >1. 
 ```objc
-@property(nonatomic, strong, readonly, nullable) DSImageTag *originalImageTag;
+-(DSIntermediateResultUnitType)getType;
 ```
 2. 
 ```swift
-var originalImageTag: ImageTag? { get }
+func getType() -> DSIntermediateResultUnitType
 ```
 
-### type
+**Return Value**
 
 The type of the intermediate result unit.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign, readonly) EnumIntermediateResultUnitType type;
-```
-2. 
-```swift
-var type: EnumIntermediateResultUnitType { get }
-```
 
 ### getTransformMatrix
 
@@ -123,11 +127,11 @@ Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerat
 >
 >1. 
 ```objc
--(CGAffineTransform)getTransformMatrix:(DSTransformMatrixType)matrixType;
+-(CGAffineTransform)getTransformMatrix:(DSTransformMatrixType)type;
 ```
 2. 
 ```swift
-func getTransformMatrix(DSTransformMatrixType matrixType) -> CGAffineTransform
+func getTransformMatrix(_ type: DSTransformMatrixType) -> CGAffineTransform
 ```
 
 **Parameters**
@@ -164,7 +168,9 @@ func clone() -> IntermediateResultUnit
 
 A copy of the intermediate result unit.
 
-**Code Snippet**
+### replace
+
+Replaces the content of the intermediate result unit.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -172,9 +178,17 @@ A copy of the intermediate result unit.
 >
 >1. 
 ```objc
-DSIntermediateResultUnit *unitCopy = [unit clone];
+- (NSInteger)replace:(DSIntermediateResultUnit*)oldUnit;
 ```
 2. 
 ```swift
-let unitCopy = unit.clone()
+func replace(_ oldUnit: DSIntermediateResultUnit) -> NSInteger
 ```
+
+**Parameters**
+
+`[in] oldUnit`: The old unit.
+
+**Return Value**
+
+A NSInteger that indicates whether the replace is success. If success returns 0, otherwise returns the error code.

@@ -9,6 +9,18 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftBarcodeReader Module
 
+## 2.2.0 (03/07/2024)
+
+### New
+
+- Added the following methods to the `DSParsedResult` class:
+  - `retain`
+  - `release`
+
+### Break Changes
+
+- Removed an internal logic that grouping the text line recognition result of the MRZ. The logic is replaced by the text line group definition of the parameter system.
+
 ## 2.0.20 (12/07/2023)
 
 The first version of `DynamsoftCodeParser (DCP)` iOS edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.

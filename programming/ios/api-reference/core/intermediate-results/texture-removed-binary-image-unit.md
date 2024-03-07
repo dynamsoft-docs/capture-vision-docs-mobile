@@ -30,15 +30,16 @@ NS_SWIFT_NAME(TextureRemovedBinaryImageUnit)
 class TextureRemovedBinaryImageUnit : IntermediateResultUnit
 ```
 
-## Attributes
+## Methods
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`imageData`](#imagedata) | *DSImageData \** | A `DSImageData` object as the image data of the texture-removed binary image. |
+| Method | Description |
+|------- |-------------|
+| [`setImageData`](#setimagedata) | Sets the image data of the texture removed binary image. |
+| [`getImageData`](#getimagedata) | Returns the image data of the texture removed binary image. |
 
-### imageData
+### setImageData
 
-A `DSImageData` object as the image data of the texture-removed binary image.
+Set the image data of the texture removed binary image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -46,9 +47,38 @@ A `DSImageData` object as the image data of the texture-removed binary image.
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nullable) DSImageData *imageData;
+-(NSInteger)setImageData:(DSImageData *)imageData;
 ```
 2. 
 ```swift
-var imageData: ImageData? { get set }
+func setImageData(_ imageData: DSImageData?) -> Int
 ```
+
+**Parameters**
+
+`imageData`: A `DSImageData` object as the image data of the texture removed binary image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getImageData
+
+Get the image data of the texture removed binary image.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable DSImageData *)getImageData;
+```
+2. 
+```swift
+func getImageData() -> DSImageData?
+```
+
+**Return Value**
+
+The image data of the texture removed binary image.

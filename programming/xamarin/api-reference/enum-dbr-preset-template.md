@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumPresetTemplate of Dynamsoft Capture Vision Xamarin Edition
-description: The enumeration of preset template
+description: The preset template enumeration of DCV Xamarin edition.
 keywords: Preset template, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

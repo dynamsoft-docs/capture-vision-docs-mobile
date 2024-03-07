@@ -98,7 +98,7 @@ func setDirectory(_ directoryPath: String, filter: String?, recursive: Bool) thr
 
 `directoryPath`: The directory path.
 
-`filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g ".BMP;.JPG;.GIF".
+`filter`: A string that specifies file extensions. It determines which kinds of files to read. e.g "\*.BMP;\*.JPG;\*.GIF".
 
 `recursive`: Specifies whether to load files recursively.
 

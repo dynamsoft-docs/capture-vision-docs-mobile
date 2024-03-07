@@ -27,6 +27,7 @@ class TransformedGrayscaleImageUnit extends IntermediateResultUnit
 | Methods | Description |
 | ------- | ----------- |
 | [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the grayscale-transformed image. |
+| [`setImageData`](#setimagedata) | Sets the `ImageData` object as the image data of the grayscale-transformed image. |
 
 ### getImageData
 
@@ -39,3 +40,19 @@ ImageData getImageData();
 **Return Value**
 
 The `ImageData` object as the image data of the grayscale-transformed image.
+
+### setImageData
+
+Sets the `ImageData` object as the image data of the grayscale-transformed image.
+
+```java
+void setImageData(ImageData imageData);
+```
+
+**Parameter**
+
+`imageData`: The `ImageData` object as the image data of the grayscale-transformed image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

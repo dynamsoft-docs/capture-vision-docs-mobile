@@ -1,5 +1,129 @@
 [
     {
+        "version": "2.2.10",
+        "matchList": {
+            "android":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/android/api-reference/utility",
+                        "version": "1.2.10"
+                    }, {
+                        "path": "/programming/android/api-reference/license",
+                        "version": "3.2.10"
+                    }, {
+                        "path": "/programming/android/api-reference/capture-vision-router",
+                        "version": "2.2.10"
+                    }, {
+                        "path": "/programming/android/api-reference/core",
+                        "version": "3.2.10"
+                    }, {
+                        "path": "/programming/android/api-reference/image-processing",
+                        "version": "2.2.10"
+                    }
+                ],
+                "dcvRepoCore": [
+                    {
+                        "path": "/enums/utility",
+                        "version": "1.2.10"
+                    }, {
+                        "path": "/enums/license",
+                        "version": "3.2.10"
+                    }, {
+                        "path": "/enums/capture-vision-router",
+                        "version": "2.2.10"
+                    }, {
+                        "path": "/enums/core",
+                        "version": "3.2.10"
+                    },{
+                        "path": "/parameters/reference/capture-vision-template",
+                        "version": "2.2.10"
+                    },{
+                        "path": "/parameters/reference/target-roi-def",
+                        "version": "2.2.10"
+                    },{
+                        "path": "/parameters/reference/barcode-reader-task-settings",
+                        "version": "10.2.10"
+                    },{
+                        "path": "/parameters/reference/image-parameter",
+                        "version": "3.2.10"
+                    },{
+                        "path": "/parameters/reference/barcode-format-specification",
+                        "version": "10.2.10"
+                    },{
+                        "path": "/parameters/reference/image-source-options",
+                        "version": "3.2.10"
+                    },{
+                        "path": "/parameters/reference/global-parameter",
+                        "version": "2.2.10"
+                    }
+                ],
+                "dce": "4.2.0",
+                "dbr": "10.2.10",
+                "dlr": "3.2.10",
+                "ddn": "2.2.10"
+            },
+            "ios":{
+                "dcvRepoMobile": [
+                    {
+                        "path": "/programming/objectivec-swift/api-reference/utility",
+                        "version": "1.2.10"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/license",
+                        "version": "3.2.10"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/capture-vision-router",
+                        "version": "2.2.10"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/core",
+                        "version": "3.2.10"
+                    }, {
+                        "path": "/programming/objectivec-swift/api-reference/image-processing",
+                        "version": "2.2.10"
+                    }
+                ],
+                "dcvRepoCore": [
+                    {
+                        "path": "/enums/utility",
+                        "version": "1.2.10"
+                    }, {
+                        "path": "/enums/license",
+                        "version": "3.2.10"
+                    }, {
+                        "path": "/enums/capture-vision-router",
+                        "version": "2.2.10"
+                    }, {
+                        "path": "/enums/core",
+                        "version": "3.2.10"
+                    },{
+                        "path": "/parameters/reference/capture-vision-template",
+                        "version": "2.2.10"
+                    },{
+                        "path": "/parameters/reference/target-roi-def",
+                        "version": "2.2.10"
+                    },{
+                        "path": "/parameters/reference/barcode-reader-task-settings",
+                        "version": "10.2.10"
+                    },{
+                        "path": "/parameters/reference/image-parameter",
+                        "version": "2.2.10"
+                    },{
+                        "path": "/parameters/reference/barcode-format-specification",
+                        "version": "10.2.10"
+                    },{
+                        "path": "/parameters/reference/image-source-options",
+                        "version": "3.2.10"
+                    },{
+                        "path": "/parameters/reference/global-parameter",
+                        "version": "2.2.10"
+                    }
+                ],
+                "dce": "4.2.0",
+                "dbr": "10.2.10",
+                "dlr": "3.2.10",
+                "ddn": "2.2.10"
+            }
+        }
+    },{
         "version": "2.0.21",
         "matchList": {
             "android":{
@@ -58,7 +182,7 @@
                     }
                 ],
                 "dce": "4.0.2",
-                "dbr": "10.0.20",
+                "dbr": "10.0.21",
                 "dlr": "3.0.20",
                 "ddn": "2.0.20"
             },
@@ -118,7 +242,7 @@
                     }
                 ],
                 "dce": "4.0.2",
-                "dbr": "10.0.20",
+                "dbr": "10.0.21",
                 "dlr": "3.0.20",
                 "ddn": "2.0.20"
             }

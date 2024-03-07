@@ -10,16 +10,23 @@ noTitleIndex: true
 
 # Processing a Single Image
 
+This page introduces the `capture` APIs of the `CaptureVisionRouter` that designed for processing a single image (or single page file).
+
+> Note:
+>
+> - [Use the `DirectoryFetcher` to process a set of image files]({{ site.dcv_android_api }}utility/directory-fetcher.html).
+> - [Use the `FileFetcher` to process the multi-page files such as PDF and TIFF]({{ site.dcv_android_api }}utility/file-fetcher.html).
+
 | Method | Description |
 | ------ | ----------- |
-| [`capture(filePath,templateName)`](#capturefilepathtemplatename) | Capture data from the file specified by the file path. |
-| [`capture(fileBytes,templateName)`](#capturefilebytestemplatename) | Capture data from a given file in memory. |
-| [`capture(imageData,templateName)`](#captureimagedatatemplatename) | Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object. |
-| [`capture(bitmap,templateName)`](#capturebitmaptemplatename) | Capture data from the given Bitmap. |
+| [`capture(filePath,templateName)`](#capturefilepathtemplatename) | Processes a single image or a file containing a single image to derive important information with the file path. |
+| [`capture(fileBytes,templateName)`](#capturefilebytestemplatename) | Processes a single image or a file containing a single image to derive important information with the file bytes in the memory. |
+| [`capture(imageData,templateName)`](#captureimagedatatemplatename) | Processes a single image or a file containing a single image to derive important information with an [`ImageData`](../core/basic-structures/image-data.md) object. |
+| [`capture(bitmap,templateName)`](#capturebitmaptemplatename) | Processes a single image or a file containing a single image to derive important information with a `Bitmap`. |
 
 ## capture(filePath,templateName)
 
-Capture data from the file specified by the file path.
+Processes a single image or a file containing a single image to derive important information with the file path.
 
 ```java
 CapturedResult capture(String filePath, String templateName);
@@ -29,11 +36,15 @@ CapturedResult capture(String filePath, String templateName);
 
 `[in] file`: The file path and name that you want to capture data from.
 
-`[in] templateName`: Specify a template with a template name for the data capturing.
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 
-A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+A [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) object which contains the derived information from the image processed.
 
 If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
 
@@ -50,7 +61,7 @@ Possible errors:
 
 ## capture(fileBytes,templateName)
 
-Capture data from a given file in memory.
+Processes a single image or a file containing a single image to derive important information with the file bytes in the memory.
 
 ```java
 CapturedResult capture(byte[] fileBytes, String templateName);
@@ -60,11 +71,15 @@ CapturedResult capture(byte[] fileBytes, String templateName);
 
 `[in] fileBytes`: A byte array that points to a file in memory.
 
-`[in] templateName`: Specify a template with a template name for the data capturing.
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 
-A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+A [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) object which contains the derived information from the image processed.
 
 If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
 
@@ -79,7 +94,7 @@ Possible errors:
 
 ## capture(imageData,templateName)
 
-Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object.
+Processes a single image or a file containing a single image to derive important information with an [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object.
 
 ```java
 CapturedResult capture(ImageData imageData, String templateName);
@@ -87,13 +102,17 @@ CapturedResult capture(ImageData imageData, String templateName);
 
 **Parameters**
 
-`[in] buffer`: A [`ImageData`](../core/basic-structures/image-data.md) object that contains image info.
+`[in] buffer`: A [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.md) object that contains image info.
 
-`[in] templateName`: Specify a template with a template name for the data capturing.
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 
-A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+A [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) object which contains the derived information from the image processed.
 
 If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
 
@@ -109,7 +128,7 @@ Possible errors:
 
 ## capture(bitmap,templateName)
 
-Capture data from the given Bitmap.
+Processes a single image or a file containing a single image to derive important information with a `Bitmap`.
 
 ```java
 CapturedResult capture(Bitmap bitmap, String templateName);
@@ -119,11 +138,15 @@ CapturedResult capture(Bitmap bitmap, String templateName);
 
 `[in] bitmap`: A `android.graphics.Bitmap` object.
 
-`[in] templateName`: Specify a template with a template name for the data capturing.
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 **Return Value**
 
-A [`CapturedResult`](../core/basic-structures/captured-result.md) object output by the library.
+A [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) object which contains the derived information from the image processed.
 
 If an error occurs when processing the image, the `CapturedResult` object will include error code and error message that describes the reason of the error.
 

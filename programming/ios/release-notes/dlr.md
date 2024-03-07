@@ -9,7 +9,21 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLabelRecognizer Module
 
-## 2.0.20 (12/07/2023)
+## 3.2.0 (03/07/2024)
+
+### New
+
+- Added new methods to the `DSLocalizedTextLinesUnit` class to add, set or remove the localized text line elements.
+- Added new methods to the `DSRecognizedTextLinesUnit` class to add, set or remove the recognized text line elements.
+- Added a new method `setText` to the `DSRecognizedTextLineElement` class.
+- Added the following methods to the `DSRecognizedTextLinesResult` class.
+  - `retain`
+  - `release`
+- Added new constructors to the following classes.
+  - `DSRecognizedTextLineElement`
+  - `DSLocalizedTextLineElement`
+
+## 3.0.20 (12/07/2023)
 
 The first version of `DynamsoftLabelRecognizer (DLR)` iOS edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.
 

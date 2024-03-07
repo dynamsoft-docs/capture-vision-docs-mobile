@@ -42,7 +42,7 @@ static String getVersion();
 
 The version of Dynamsoft Core.
 
-## enableLogging
+### enableLogging
 
 Enable the output of logs.
 
@@ -54,10 +54,7 @@ static void enableLogging(int logMode);
 
 `logMode`: One of the [`EnumLogMode`]({{ site.dcv_enumerations }}core/log-mode.html?lang=android) value.
 
-- LGM_CONSOLE: Log info will be available via the logcat of Android studio.
-- LGM_FILE: Log info will be saved as a file under your app folder.
-
-## disableLogging
+### disableLogging
 
 Disable the output of logs.
 

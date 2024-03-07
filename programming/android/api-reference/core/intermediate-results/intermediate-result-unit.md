@@ -32,6 +32,9 @@ class IntermediateResultUnit
 | [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image. |
 | [`getType`](#gettype) | Gets the type of the intermediate result unit. |
 | [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
+| [`replace`](#replace) | Replaces the old unit with the new unit. |
+
+public int replace(IntermediateResultUnit oldUnit);
 
 ### getHashId
 
@@ -113,3 +116,15 @@ IntermediateResultUnit clone();
 **Return Value**
 
 A copy of the intermediate result unit.
+
+### replace
+
+Replaces the old unit with the new unit.
+
+```java
+int replace(IntermediateResultUnit oldUnit);
+```
+
+**Parameters**
+
+`[in] oldUnit`: The old unit to be replaced.

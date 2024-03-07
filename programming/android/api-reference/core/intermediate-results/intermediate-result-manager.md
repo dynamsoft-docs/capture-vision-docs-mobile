@@ -6,6 +6,7 @@ keywords: intermediate result manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # IntermediateResultManager

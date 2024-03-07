@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Class DBRRuntimeSettings of Dynamsoft Capture Vision Xamarin Edition
-description: The class of DBR runtime settings
+description: DBRRuntimeSettings class of DCV Xamarin Edition defines the barcode decoding settings.
 keywords: Class DBRRuntimeSettings, API Reference, Xamarin, Xamarin Forms
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

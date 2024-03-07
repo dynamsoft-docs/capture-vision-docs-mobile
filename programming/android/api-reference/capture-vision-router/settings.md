@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Configure Settings - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The APIs of the CaptureVisionRouter for processing multiple Images/Pages.
+description: Settings configuration APIs of CaptureVisionRouter class for DCV Android edition.
 keywords: capture vision, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -72,6 +72,18 @@ void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
 | EC_JSON_NAME_REFERENCE_INVALID | -10037 | You have referenced an invalid `name` value in your JSON data. |
 | EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+**Code Snippet**
+
+Add a **Templates** folder to the assets folder of your project at **src\main\assets\Templates**. Put your JSON file in the **Templates** folder and add the following code:
+
+```java
+try {
+    mRouter.initSettingsFromFile("UserDefineTemplate.json");
+} catch (CaptureVisionRouterException e) {
+    throw new RuntimeException(e);
+}
+```
 
 ## getSimplifiedSettings
 
@@ -175,3 +187,22 @@ void outputSettingsToFile(String templateName, String filePath) throws CaptureVi
 | :--------- | :---- | :---------- |
 | EC_FILE_SAVE_FAILED | -10058 | The file path is unavailable or the file can't be created for any other reasons. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+**Code Snippet**
+
+```java
+try {
+    // To output the template to a JSON file, you have to get the read/write permission of the external storage first.
+    // In this example, we output the template to the documents folder.
+    String outputPath = String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS));
+    // Optional code. If you want to create a new folder under the documents folder, please uncomment the following code.
+    // File file = new File(outputPath);
+    // if(!file.exists()) {
+    //     file.mkdirs();
+    // }
+    // You have to specify the template name and the file path. Here we use the preset template "PT_READ_BARCODES" as an example.
+    mRouter.outputSettingsToFile(EnumPresetTemplate.PT_READ_BARCODES, outputPath+"/outputTemplate.json");
+} catch (CaptureVisionRouterException e) {
+    throw new RuntimeException(e);
+}
+```

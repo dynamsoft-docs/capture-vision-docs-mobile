@@ -29,61 +29,95 @@ The `DSRegionObjectElement` class represents an element of a region object in 2D
 class RegionObjectElement : NSObject
 ```
 
-## Attributes
+## Methods
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`location`](#location) | *DSQuadrilateral \** | The location info of the element that defined in DSQuadrilateral. |
-| [`referencedElement`](#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
-| [`regionObjectElementType`](#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
+| Method | Description |
+|------- |-------------|
+| [`getLocation`](#getlocation) | Returns the location info of the element. |
+| [`setLocation`](#setlocation) | Sets the location info of the element. |
+| [`getReferencedElement`](#getreferencedelement) | Returns the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`](#getregionobjectelementtype) | Returns the type of the element. |
 
-### location
+### getLocation
+
+Get the location info of the element.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(DSQuadrilateral*)getLocation;
+```
+2. 
+```swift
+func getLocation() -> DSQuadrilateral?
+```
+
+**Return Value**
 
 The location info of the element that defined in DSQuadrilateral.
 
+### setLocation
+
+Set the location info of the element.
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
 >
 >1. 
 ```objc
-@property(nonatomic, copy) DSQuadrilateral *location;
+-(void)setLocation:(DSQuadrilateral *)location;
 ```
 2. 
 ```swift
-var location: DSQuadrilateral? { get set }
+func setLocation(_ location: DSQuadrilateral?)
 ```
 
-### referencedElement
+**Parameters**
+
+`location`: The location info of the element that defined in DSQuadrilateral.
+
+### getReferencedElement
+
+Get the referenced element that supports the capturing of this element.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable DSRegionObjectElement*)getReferencedElement;
+```
+2. 
+```swift
+func getReferencedElement() -> RegionObjectElement?
+```
+
+**Return Value**
 
 The referenced element that supports the capturing of this element.
 
+### getRegionObjectElementType
+
+Get the type of the element.
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nullable, readonly) DSRegionObjectElement *referencedElement;
+-(DSRegionObjectElementType)getRegionObjectElementType;
 ```
 2. 
 ```swift
-var referencedElement: RegionObjectElement? { get }
+func getRegionObjectElementType() -> RegionObjectElementType
 ```
 
-### regionObjectElementType
+**Return Value**
 
 The type of the element.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly) DSRegionObjectElementType regionObjectElementType;
-```
-2. 
-```swift
-var regionObjectElementType: EnumRegionObjectElementType { get }
-```

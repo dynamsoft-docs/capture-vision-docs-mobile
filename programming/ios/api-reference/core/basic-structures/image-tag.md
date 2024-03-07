@@ -47,11 +47,11 @@ The ID of the image.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger imageId;
+@property(nonatomic, assign) NSInteger imageId;
 ```
 2. 
 ```swift
-var imageId: Int { get }
+var imageId: Int { get set }
 ```
 
 ### type
@@ -64,11 +64,11 @@ The type of the image tag.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) EnumImageTagType type;
+@property(nonatomic, assign, readonly) DSImageTagType type;
 ```
 2. 
 ```swift
-var type: EnumImageTagType { get }
+var type: DSImageTagType { get }
 ```
 
 ### distanceMode
@@ -81,9 +81,9 @@ The capture distance mode of the image.
 >
 >1. 
 ```objc
-@property(nonatomic, assign) EnumImageCaptureDistanceMode distanceMode;
+@property(nonatomic, assign) DSImageCaptureDistanceMode distanceMode;
 ```
 2. 
 ```swift
-var distanceMode: EnumImageCaptureDistanceMode { get set }
+var distanceMode: DSImageCaptureDistanceMode { get set }
 ```

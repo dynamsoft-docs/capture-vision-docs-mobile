@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Processing multiple Images/Pages - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The APIs of the CaptureVisionRouter for processing multiple Images/Pages.
+description: The multiple Images/Pages processing APIs of the CaptureVisionRouter class for DCV Android Edition.
 keywords: capture vision, multiple-file processing, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -14,20 +14,22 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`setInput`](#setinput) | Sets an image source that will provide images to be consecutively processed. |
 | [`getInput`](#getinput) | Gets the attached image source adapter object of the Capture Vision Router. |
-| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) to get callback when the status of [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md) received. |
-| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) from the Capture Vision Router. |
-| [`addResultReceiver`](#addresultreceiver) | Registers a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) to be used as a callback when the library outputs a [`CapturedResult`](../core/basic-structures/captured-result.md). |
-| [`removeResultReceiver`](#removeresultreceiver) | Removes a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) from the Capture Vision Router. |
+| [`addResultReceiver`](#addresultreceiver) | Registers a [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.md) to be used as a callback when the library outputs a [`CapturedResult`]({{ site.dcv_android_api }}core/basic-structures/captured-result.md). |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes a [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.md) from the Capture Vision Router. |
 | [`startCapturing`](#startcapturing) | Start capturing with the specified template. |
 | [`stopCapturing`](#stopcapturing) | Tells the Capture Vision Router to stop capturing. |
+| [`pauseCapturing`](#pausecapturing) | Pauses the Capture Vision Router. |
+| [`resumeCapturing`](#resumecapturing) | Resumes the Capture Vision Router. |
 | [`addCaptureStateListener`](#addcapturestatelistener) | Registers a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.md) to be used as a callback when capture state is received. |
 | [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.md) that has been configured for the Capture Vision Router. |
 | [`addResultFilter`](#addresultfilter) | Registers a `CapturedResultFilter` to be used as a callback to filter the `CapturedResult`. |
 | [`removeResultFilter`](#removeresultfilter) | Removes a `CapturedResultFilter` that has been configured for the Capture Vision Router. |
+| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.md) received. |
+| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) from the Capture Vision Router. |
 
 ## setInput
 
-Sets an image source that will provide images to be consecutively processed.
+Sets up an image source with an `ImageSourceAdapter` object for continuous processing. The `CaptureVisionRputer` will consecutively retrieve images from the `ImageSourceAdapter` after you start the capturing.
 
 ```java
 void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
@@ -35,7 +37,13 @@ void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
 
 **Parameters**
 
-`[in] adapter`: An object of [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md). You can use a internally implemented [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md) such as `CameraEnhancer`, `DirectoryFetcher` and `FileFetcher`.
+`[in] adapter`: An object of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.md).
+
+You can use the following officially implemented `ImageSourceAdapter` classes:
+
+- [`CameraEnhancer`]({{ site.dce_android_api }}primary-api/camera-enhancer.html): A camera class that can capture video frames continuously.
+- [`DirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html): A class that can fetch all images from a directory. It supports the multi-page files like .PDF and .TIFF.
+- [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html): A class that can fetch the specified image(s). It supports the multi-page files like .PDF and .TIFF.
 
 **Exception**
 
@@ -45,7 +53,7 @@ void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
 
 ## getInput
 
-Gets the attached image source adapter object of the Capture Vision Router.
+Gets the `ImageSourceAdapter` object that is bind with this `CaptureVisionRouter` object.
 
 ```java
 ImageSourceAdapter getInput();
@@ -53,35 +61,11 @@ ImageSourceAdapter getInput();
 
 **Return Value**
 
-The attached image source adapter object of the capture vision router.
-
-## addImageSourceStateListener
-
-Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) to get callback when the status of [`ImageSourceAdapter`](../core/basic-structures/image-source-adapter.md) received.
-
-```java
-void addImageSourceStateListener(ImageSourceStatestener listener);
-```
-
-**Parameters**
-
-`[in] listener`: An object of [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md).
-
-## removeImageSourceStateListener
-
-Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) from the Capture Vision Router.
-
-```java
-void removeImageSourceStateListener(ImageSourceStateListener listener);
-```
-
-**Parameters**
-
-`[in] listener`: An object of [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md).
+The `ImageSourceAdapter` object that is bind with this `CaptureVisionRouter` object.
 
 ## addResultReceiver
 
-Registers a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) to be used as a callback when the library outputs a [`CapturedResult`](../core/basic-structures/captured-result.md).
+Registers a [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.md) to be used as a callback when an image is processed.
 
 ```java
 void addResultReceiver(CapturedResultReceiver receiver);
@@ -89,11 +73,11 @@ void addResultReceiver(CapturedResultReceiver receiver);
 
 **Parameters**
 
-`[in] receiver`: An object of [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
+`[in] receiver`: An object of [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.md).
 
 ## removeResultReceiver
 
-Removes a [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) from the Capture Vision Router.
+Removes a [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.md) from the Capture Vision Router.
 
 ```java
 void removeResultReceiver(CapturedResultReceiver receiver);
@@ -101,7 +85,7 @@ void removeResultReceiver(CapturedResultReceiver receiver);
 
 **Parameters**
 
-`[in] receiver`: An object of [`CapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md) .
+`[in] receiver`: An object of [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.md).
 
 ## startCapturing
 
@@ -113,25 +97,61 @@ void startCapturing(String templateName, CompletionListener completionHandler);
 
 **Parameters**
 
-`[in] templateName`: The name of a template that you have previously set via `initSettings` or `initSettingsFromFile`.
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-`[in] completionHandler`: A [`CompletionListener`](../core/basic-structures/completion-listener.html) the system calls after it finishes the startCapturing.
+- One of the [`EnumPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
-**Exception**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
-| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
-| EC_NO_IMAGE_SOURCE | -10063 | Can not start capturing before you set the input. |
+`[in] completionHandler`: A [`CompletionListener`]({{ site.dcv_android_api }}core/basic-structures/completion-listener.html) the system calls after it finishes the startCapturing.
 
 ## stopCapturing
 
-Tells the Capture Vision Router to stop capturing.
+Tells the `CaptureVisionRouter` to stop capturing.
 
 ```java
 void stopCapturing();
 ```
+
+## pauseCapturing
+
+Pauses the capturing.
+
+```java
+void pauseCapturing();
+```
+
+## resumeCapturing
+
+Resumes the capturing.
+
+```java
+void resumeCapturing();
+```
+
+## addResultFilter
+
+Adds a [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html) to filter the `CapturedResult`. Currnetly, [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) is the only supported implementation of the `CapturedResultFilter`.
+
+```java
+void addResultFilter(CapturedResultFilter filter);
+```
+
+**Parameters**
+
+`[in] filter`: An object of [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html). Currnetly, is must be a [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) object.
+
+## removeResultFilter
+
+Removes a `CapturedResultFilter` that has been configured for the Capture Vision Router.
+
+```java
+void removeResultFilter(CapturedResultFilter filter);
+```
+
+**Parameters**
+
+`[in] filter`: An object of [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html).
 
 ## addCaptureStateListener
 
@@ -157,26 +177,26 @@ void removeCaptureStateListener(CaptureStateListener listener);
 
 `[in] listener`: An object of [`CaptureStateListener`](auxiliary-classes/capture-state-listener.md)
 
-## addResultFilter
+## addImageSourceStateListener
 
-Registers a `CapturedResultFilter` to be used as a callback to filter the `CapturedResult`.
+Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.md) received.
 
 ```java
-void addResultFilter(CapturedResultFilter filter);
+void addImageSourceStateListener(ImageSourceStatestener listener);
 ```
 
 **Parameters**
 
-`[in] filter`: An object of [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
+`[in] listener`: An object of [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md).
 
-## removeResultFilter
+## removeImageSourceStateListener
 
-Removes a `CapturedResultFilter` that has been configured for the Capture Vision Router.
+Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md) from the Capture Vision Router.
 
 ```java
-void removeResultFilter(CapturedResultFilter filter);
+void removeImageSourceStateListener(ImageSourceStateListener listener);
 ```
 
 **Parameters**
 
-`[in] filter`: An object of [`CapturedResultFilter`](../core/basic-structures/captured-result-filter.md) .
+`[in] listener`: An object of [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md).

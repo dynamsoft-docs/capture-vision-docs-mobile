@@ -26,12 +26,15 @@ class ContoursUnit: IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getContours`](#getcontours) | Gets the array of `Contour` objects. |
+| [`getContours`](#getcontours) | Gets the contour array of the unit. |
+| [`setContours`](#setcontours) | Sets the contour array for the unit. |
 | [`getHierarchies`](#gethierarchies) | Gets the contour hierarchies as an array of `Vector4` objects. |
+
+public int setContours(Contour[] contours, Vector4[] hierarchies, Matrix matrixToOriginalImage);
 
 ### getContours
 
-Gets the array of `Contour` objects.
+Gets the contour array of the unit.
 
 ```java
 Contour[] getContours()
@@ -40,6 +43,26 @@ Contour[] getContours()
 **Return Value**
 
 The array of `Contour` objects.
+
+### setContours
+
+Sets the contour array for the unit.
+
+```java
+int setContours(Contour[] contours, Vector4[] hierarchies, Matrix matrixToOriginalImage);
+```
+
+**Parameters**
+
+`contours`: The array of `Contour` objects.
+
+`hierarchies`: The contour hierarchies as an array of `Vector4` objects.
+
+`matrixToOriginalImage`: The transformation matrix of the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
 
 ### getHierarchies
 

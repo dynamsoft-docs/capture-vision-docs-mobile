@@ -27,6 +27,12 @@ class PredetectedRegionsUnit extends IntermediateResultUnit
 | Method | Description |
 | ------ | ----------- |
 | [`getPredetectedRegions`](#getpredetectedregions) | Get the array of `PredetectedRegionElement` objects. |
+| [`getCount`](#getcount) | Get the number of `PredetectedRegionElement` objects. |
+| [`getPredetectedRegion`](#getpredetectedregion) | Get the `PredetectedRegionElement` object at the specified index. |
+| [`removeAllPredetectedRegions`](#removeallpredetectedregions) | Remove all `PredetectedRegionElement` objects. |
+| [`removePredetectedRegion`](#removepredetectedregion) | Remove the `PredetectedRegionElement` object at the specified index. |
+| [`addPredetectedRegion`](#addpredetectedregion) | Add a `PredetectedRegionElement` object. |
+| [`setPredetectedRegion`](#setpredetectedregion) | Set the `PredetectedRegionElement` object at the specified index. |
 
 ### getPredetectedRegions
 
@@ -39,3 +45,71 @@ PredetectedRegionElement[] getPredetectedRegions();
 **Return Value**
 
 The array of [`PredetectedRegionElement`](predetected-region-element.md) objects.
+
+### getCount
+
+Get the number of `PredetectedRegionElement` objects.
+
+```java
+int getCount();
+```
+
+**Return Value**
+
+The number of `PredetectedRegionElement` objects.
+
+### getPredetectedRegion
+
+Get the `PredetectedRegionElement` object at the specified index.
+
+```java
+PredetectedRegionElement getPredetectedRegion(int index);
+```
+
+**Return Value**
+
+The `PredetectedRegionElement` object at the specified index.
+
+### removeAllPredetectedRegions
+
+Remove all `PredetectedRegionElement` objects.
+
+```java
+void removeAllPredetectedRegions();
+```
+
+### removePredetectedRegion
+
+Remove the `PredetectedRegionElement` object at the specified index.
+
+```java
+int removePredetectedRegion(int index);
+```
+
+**Return Value**
+
+The index of the removed `PredetectedRegionElement` object.
+
+### addPredetectedRegion
+
+Add a `PredetectedRegionElement` object.
+
+```java
+int addPredetectedRegion(PredetectedRegionElement element, Matrix matrixToOriginalImage);
+```
+
+**Return Value**
+
+The index of the added `PredetectedRegionElement` object.
+
+### setPredetectedRegion
+
+Set the `PredetectedRegionElement` object at the specified index.
+
+```java
+int setPredetectedRegion(int index, PredetectedRegionElement element, Matrix matrixToOriginalImage);
+```
+
+**Return Value**
+
+The index of the set `PredetectedRegionElement` object.

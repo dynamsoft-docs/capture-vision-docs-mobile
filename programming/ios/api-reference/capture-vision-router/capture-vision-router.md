@@ -57,6 +57,8 @@ class CaptureVisionRouter : NSObject
 | [`removeResultReceiver`](multiple-file-processing.md#removeresultreceiver) | Removes a DSCapturedResultReceiver. |
 | [`startCapturing`](multiple-file-processing.md#startcapturing) | Start capturing with the targeting template. |
 | [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Start capturing with the targeting template. |
+| [`pauseCapturing`](multiple-file-processing.md#pausecapturing) | Pauses the Capture Vision Router. |
+| [`resumeCapturing`](multiple-file-processing.md#resumecapturing) | Resumes the Capture Vision Router. |
 | [`addCaptureStateListener`](multiple-file-processing.md#addcapturestatelistener) | Registers a DSCaptureStateListener to get callback when capture state changes. |
 | [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a DSCaptureStateListener. |
 | [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Registers a DSCapturedResultFilter to get callback when filtered result output. |

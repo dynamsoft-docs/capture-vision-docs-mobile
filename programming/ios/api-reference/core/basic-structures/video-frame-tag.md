@@ -178,11 +178,11 @@ An instance of the `DSVideoFrameTag`.
 >1. 
 ```objc
 DSVideoFrameTag *videoFrameTag = [[DSVideoFrameTag alloc] initWithImageId:imageId
-                                                                 quality:quality
-                                                               isCropped:isCropped
-                                                              cropRegion:cropRegion
-                                                           originalWidth:originalWidth
-                                                          originalHeight:originalHeight];
+                                                                  quality:quality
+                                                                isCropped:isCropped
+                                                               cropRegion:cropRegion
+                                                            originalWidth:originalWidth
+                                                           originalHeight:originalHeight];
 ```
 2. 
 ```swift
