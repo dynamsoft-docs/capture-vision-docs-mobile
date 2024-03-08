@@ -4,12 +4,42 @@ useGroupedVersion: true
 #   - latest version
 
 version_info_list_mobile:
-  - value: latest version (2.2.10)
+  - value: latest version
   - value: 2.x
     child:
-      - 2.0.21
-      - 2.0.20
-      - 2.0.10
+      - 2.2.10_android
+      - 2.0.21_android
+      - 2.0.20_android
+      - 2.0.10_android
+      - 2.2.10_ios
+      - 2.0.21_ios
+      - 2.0.20_ios
+      - 2.0.10_ios
   - value: 1.x
     child:
-      - 1.2.1
+      - 1.2.1_flutter
+      - 1.2.0_flutter
+      - 1.1.0_flutter
+      - 1.0.0_flutter
+      - 1.0.4_cordova
+      - 1.0.3_cordova
+      - 1.0.2_cordova
+      - 1.0.1_cordova
+      - 1.0.0_cordova
+      - 1.1.11_reactnative
+      - 1.1.9_reactnative
+      - 1.1.8_reactnative
+      - 1.1.7_reactnative
+      - 1.1.6_reactnative
+      - 1.1.5_reactnative
+      - 1.1.4_reactnative
+      - 1.1.3_reactnative
+      - 1.1.2_reactnative
+      - 1.1.1_reactnative
+      - 1.1.0_reactnative
+      - 1.0.0_reactnative
+      - 1.0.4_xamarin
+      - 1.0.3_xamarin
+      - 1.0.2_xamarin
+      - 1.0.1_xamarin
+      - 1.0.0_xamarin

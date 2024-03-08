@@ -84,7 +84,9 @@ plugins:
   - jekyll-redirect-from
   - jekyll-readme-index
   - jekyll-seo-tag
-  
+
+edition: mobile
+
 defaults:
   - scope:
       path: "Hide_Tree_Page.html"
