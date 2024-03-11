@@ -26,18 +26,18 @@ version_info_list_mobile:
       - 1.0.2_cordova
       - 1.0.1_cordova
       - 1.0.0_cordova
-      - 1.1.11_reactnative
-      - 1.1.9_reactnative
-      - 1.1.8_reactnative
-      - 1.1.7_reactnative
-      - 1.1.6_reactnative
-      - 1.1.5_reactnative
-      - 1.1.4_reactnative
-      - 1.1.3_reactnative
-      - 1.1.2_reactnative
-      - 1.1.1_reactnative
-      - 1.1.0_reactnative
-      - 1.0.0_reactnative
+      - 1.1.11_reactNative
+      - 1.1.9_reactNative
+      - 1.1.8_reactNative
+      - 1.1.7_reactNative
+      - 1.1.6_reactNative
+      - 1.1.5_reactNative
+      - 1.1.4_reactNative
+      - 1.1.3_reactNative
+      - 1.1.2_reactNative
+      - 1.1.1_reactNative
+      - 1.1.0_reactNative
+      - 1.0.0_reactNative
       - 1.0.4_xamarin
       - 1.0.3_xamarin
       - 1.0.2_xamarin
