@@ -18,13 +18,11 @@ noTitleIndex: true
 
 ## DynamsoftBarcodeReader
 
-- [10.2.10 (03/07/2024)](dbr.md#10210-03072024)
 - [10.0.21 (12/12/2023)](dbr.md#10021-12122023)
 - [10.0.20 (10/26/2023)](dbr.md#10020-10262023)
 
 ## DynamsoftLabelRecognizer
 
-- [3.2.10 (03/07/2024)](dlr.md#3210-03072024)
 - [3.0.20 (12/07/2023)](dlr.md#2020-12072023)
   
 ## DynamsoftDocumentNormalizer
@@ -69,10 +67,8 @@ noTitleIndex: true
 
 ## DynamsoftCodeParser
 
-- [2.2.10 (03/07/2024)](dcp.md#2210-03072024)
 - [2.0.20 (12/07/2023)](dcp.md#2020-12072023)
 
 ## DynamsoftCodeParserDedicator
 
-- [1.2.10 (03/07/2024)](dcpd.md#1210-03072024)
 - [1.0.10 (12/07/2023)](dcpd.md#1010-12072023)

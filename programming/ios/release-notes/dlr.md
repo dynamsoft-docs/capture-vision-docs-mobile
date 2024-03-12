@@ -8,8 +8,8 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftLabelRecognizer Module
-
-## 3.2.0 (03/07/2024)
+<!-- 
+## 3.2.10 (03/07/2024)
 
 ### New
 
@@ -21,7 +21,7 @@ noTitleIndex: true
   - `release`
 - Added new constructors to the following classes.
   - `DSRecognizedTextLineElement`
-  - `DSLocalizedTextLineElement`
+  - `DSLocalizedTextLineElement` -->
 
 ## 3.0.20 (12/07/2023)
 

@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - Core Module
 
-## 3.2.0 (03/07/2024)
+## 3.2.10 (03/07/2024)
 
 ### New
 

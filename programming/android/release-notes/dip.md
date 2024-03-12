@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftImageProcessing Module
 
-## 2.2.0 (03/07/2024)
+## 2.2.10 (03/07/2024)
 
 ### Breaking Changes
 

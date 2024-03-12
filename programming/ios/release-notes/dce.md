@@ -11,7 +11,7 @@ noTitleIndex: true
 
 ## 4.2.0 (03/07/2024)
 
-- Internal changes to solve the compatibility issue.
+Internal changes to be compatible with DynamsoftCaptureVisionRouter v2.2.10.
 
 ## 4.0.2 (12/07/2023)
 
