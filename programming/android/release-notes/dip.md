@@ -11,7 +11,7 @@ noTitleIndex: true
 
 ## 2.2.0 (03/07/2024)
 
-### Break Changes
+### Breaking Changes
 
 - The `DeepNeuralNetwork` module is separated from the `DynamsoftImageProcessing` module.
 

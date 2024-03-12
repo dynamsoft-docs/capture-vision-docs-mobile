@@ -50,7 +50,7 @@ noTitleIndex: true
 - Added methods `pauseCapturing` and `resumeCapturing`. Two new enumeration members, `CS_PAUSED` and `CS_RESUMED`, are added to `CapturedState` as well.
 - Added a new property `documentSettings` to class `SimplifiedCaptureVisionSettings`. The corresponding class `SimplifiedDocumentNormalizerSettings` is added to the `DynamsoftDocumentNormalizer` module to store the `documentSettings`.
 
-### Break Changes
+### Breaking Changes
 
 - Changed the logic of the `stopCapturing` method.
   - `CaptureResultReceiver` will not receive results after `stopCapturing` is triggered with `waitForRemainingTasks` false.

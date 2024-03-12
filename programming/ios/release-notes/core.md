@@ -60,7 +60,7 @@ noTitleIndex: true
 - Added a new supported image pixel format, binary 8 inverted. The corresponding enumeration member is added to the `DSImagePixelFormat`.
 - Added return value for the `retain` method of the `DSIntermediateResultUnit` class. The method will return the pointer of the current `DSIntermediateResultUnit`.
 
-### Break Changes
+### Breaking Changes
 
 - Refactored the `DSContour` class. Please view API reference - `DSContour` class for more information.
 
