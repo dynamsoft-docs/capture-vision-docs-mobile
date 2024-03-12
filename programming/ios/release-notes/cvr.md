@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - CaptureVisionRouter Module
 
-## 2.2.0 (03/07/2024)
+## 2.2.10 (03/07/2024)
 
 ### New
 
@@ -50,7 +50,7 @@ noTitleIndex: true
 - Added methods `pauseCapturing` and `resumeCapturing`. Two new enumeration members, `CapturedStatePaused` and `CapturedStateResumed`, are added to `DSCapturedState` as well.
 - Added a new property `documentSettings` to class `DSSimplifiedCaptureVisionSettings`. The corresponding class `DSSimplifiedDocumentNormalizerSettings` is added to the `DynamsoftDocumentNormalizer` module to store the `documentSettings`.
 
-### Break Changes
+### Breaking Changes
 
 - Changed the logic of the `stopCapturing` method.
   - `DSCaptureResultReceiver` will not receive results after `stopCapturing` is triggered with `waitForRemainingTasks` false.

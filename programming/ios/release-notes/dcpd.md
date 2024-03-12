@@ -8,10 +8,10 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftBarcodeReader Module
-
+<!-- 
 ## 1.2.10 (03/07/2023)
 
-- Small fixes and tweaks.
+- Small fixes and tweaks. -->
 
 ## 1.0.10 (12/07/2023)
 

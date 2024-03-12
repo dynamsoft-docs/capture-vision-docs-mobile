@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - Core Module
 
-## 3.2.0 (03/07/2024)
+## 3.2.10 (03/07/2024)
 
 ### New
 
@@ -63,7 +63,7 @@ noTitleIndex: true
 - Added a new supported image pixel format, binary 8 inverted. The corresponding enumeration member is added to the `EnumImagePixelFormat`.
 - Added return value for the `retain` method of the `IntermediateResultUnit` class. The method will return the pointer of the current `IntermediateResultUnit`.
 
-### Break Changes
+### Breaking Changes
 
 - Refactored the `Contour` class. Please view API reference - `Contour` class for more information.
 

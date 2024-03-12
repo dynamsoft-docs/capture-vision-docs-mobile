@@ -8,8 +8,8 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftBarcodeReader Module
-
-## 2.2.0 (03/07/2024)
+<!-- 
+## 2.2.10 (03/07/2024)
 
 ### New
 
@@ -17,9 +17,9 @@ noTitleIndex: true
   - `retain`
   - `release`
 
-### Break Changes
+### Breaking Changes
 
-- Removed an internal logic that grouping the text line recognition result of the MRZ. The logic is replaced by the text line group definition of the parameter system.
+- Removed an internal logic that grouping the text line recognition result of the MRZ. The logic is replaced by the text line group definition of the parameter system. -->
 
 ## 2.0.20 (12/07/2023)
 
