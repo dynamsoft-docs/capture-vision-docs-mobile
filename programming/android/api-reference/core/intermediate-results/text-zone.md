@@ -27,7 +27,7 @@ class TextZone
 | Attributes | Description |
 | ---------- | ----------- |
 | [`location`](#location) | The location of the text zone. |
-| [`charContoursIndices`](#charcontourindices) | The indices of the contours of the characters in the text zone. |
+| [`charContoursIndices`](#charcontoursindices) | The indices of the contours of the characters in the text zone. |
 
 ### location
 

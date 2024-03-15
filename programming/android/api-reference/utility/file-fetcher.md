@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # FileFetcher
 
-The `FileFetcher` class is a utility class that partitions a multi-page image file into multiple independent `ImageData` objects. It inherits the [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) class so that you can set it as the input of `CaptureVisionRouter` with the API [`setInput`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.md#setinput).
+The `FileFetcher` class is a utility class that partitions a multi-page image file into multiple independent `ImageData` objects. It inherits the [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) class so that you can set it as the input of `CaptureVisionRouter` with the API [`setInput`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput).
 
 ## Definition
 

@@ -148,7 +148,7 @@ func addResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
 
 **Parameters**
 
-`listener`: An object of [`DSCapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md).
+`listener`: An object of [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
 
 **Return Value**
 
@@ -173,7 +173,7 @@ func removeResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
 
 **Parameters**
 
-`listener`: An object of [`DSCapturedResultReceiver`](../core/basic-structures/captured-result-receiver.md).
+`listener`: An object of [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
 
 **Return Value**
 
@@ -308,7 +308,7 @@ func addResultFilter(_ filter:DSCapturedResultFilter) -> BOOL
 
 **Parameters**
 
-`filter`: An object of [`DSCapturedResultFilter`](../core/basic-structures/captured-result-filter.md).
+`filter`: An object of [`DSCapturedResultFilter`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html).
 
 **Return Value**
 
@@ -333,7 +333,7 @@ func removeResultFilter(_ filter:DSCapturedResultFilter) -> BOOL
 
 **Parameters**
 
-`filter`: An object of [`DSCapturedResultFilter`](../core/basic-structures/captured-result-filter.md).
+`filter`: An object of [`DSCapturedResultFilter`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html).
 
 **Return Value**
 

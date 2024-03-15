@@ -29,7 +29,7 @@ class TextZonesUnit extends IntermediateResultUnit
 | [`getTextZones`](#gettextzones) | Gets the array of `Quadrilaterals` as text zones. |
 | [`getCount`](#getcount) | Gets the number of text zones. |
 | [`getTextZone`](#gettextzone) | Gets the text zone at the specified index. |
-| [`removeAllTextZones`](#removetextzones) | Removes all text zones. |
+| [`removeAllTextZones`](#removealltextzones) | Removes all text zones. |
 | [`removeTextZone`](#removetextzone) | Removes the text zone at the specified index. |
 | [`addTextZone`](#addtextzone) | Adds the specified text zone. |
 | [`setTextZone`](#settextzone) | Sets the text zone at the specified index. |
