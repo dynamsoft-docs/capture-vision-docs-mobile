@@ -47,7 +47,7 @@ func captureFromFile(_ file:String, templateName:String) -> CaptureResult
 
 **Return Value**
 
-A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
+A [`DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) object.
 
 If an error occurs when processing the image, the `DSCapturedResult` object will include error code and error message that describes the reason of the error.
 
@@ -92,7 +92,7 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) -> CaptureResul
 
 **Return Value**
 
-A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
+A [`DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) object.
 
 If an error occurs when processing the image, the `DSCapturedResult` object will include error code and error message that describes the reason of the error.
 
@@ -135,7 +135,7 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) -> CaptureResu
 
 **Return Value**
 
-A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
+A [`DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) object.
 
 If an error occurs when processing the image, the `DSCapturedResult` object will include error code and error message that describes the reason of the error.
 
@@ -179,7 +179,7 @@ func captureFromBuffer(_ image:UIImage, templateName:String) -> CaptureResult
 
 **Return Value**
 
-A [`DSCapturedResult`](../core/basic-structures/captured-result.md) object.
+A [`DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) object.
 
 If an error occurs when processing the image, the `DSCapturedResult` object will include error code and error message that describes the reason of the error.
 

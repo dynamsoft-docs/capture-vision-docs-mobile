@@ -60,7 +60,7 @@ func onCapturedResultReceived(_ result: DSCapturedResult)
 
 **Parameters**
 
-`result` : A [`DSCapturedResult`](captured-result-item.md) object as a captured result.
+`result` : A [`DSCapturedResult`](captured-result.md) object as a captured result.
 
 ### onOriginalImageResultReceived
 

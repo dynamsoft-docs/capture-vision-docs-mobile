@@ -21,6 +21,7 @@ needGenerateH3Content: true
 - [`CaptureVisionRouterModule`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-vision-router-module.html)
 - [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html)
 - [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html)
+- [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html)
 - [`IntermediateResultManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html)
 - [`IntermediateResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html)
 - [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
@@ -101,7 +102,6 @@ needGenerateH3Content: true
 
 - [`BinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
 - [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html)
-- [`CapturedResult`]({{ site.dcv_android_api }}core/basic-structures/captured-result.html)
 - [`ColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
 - [`ContoursUnit`]({{ site.dcv_android_api }}core/intermediate-results/contours-unit.html)
 - [`Contour`]({{ site.dcv_android_api }}core/basic-structures/contour.html)

@@ -29,7 +29,7 @@ class ShortLinesUnit extends IntermediateResultUnit
 | [`getShortLines`](#getshortlines) | Gets the array of `LineSegment` as short lines. |
 | [`getCount`](#getcount) | Gets the number of short lines. |
 | [`getShortLine`](#getshortline) | Gets the short line at the specified index. |
-| [`removeAllShortLines`](#removeshortlines) | Removes all short lines. |
+| [`removeAllShortLines`](#removeallshortlines) | Removes all short lines. |
 | [`removeShortLine`](#removeshortline) | Removes the short line at the specified index. |
 | [`addShortLine`](#addshortline) | Adds the specified short line. |
 | [`setShortLine`](#setshortline) | Sets the short line at the specified index. |
