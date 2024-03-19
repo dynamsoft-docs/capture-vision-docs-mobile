@@ -306,7 +306,7 @@ Clears the image buffer.
 func clearBuffer()
 ```
 
-## setErrorListener
+### setErrorListener
 
 Registers a [`ImageSourceErrorListener`](image-source-error-listener.md) to be used as a callback when an error occurs in the `ImageSourceAdapter`.
 
