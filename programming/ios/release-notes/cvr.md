@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Release Notes - CaptureVisionRouter Module
+# Release Notes - DynamsoftCaptureVisionRouter Module
 
 ## 2.2.10 (03/07/2024)
 

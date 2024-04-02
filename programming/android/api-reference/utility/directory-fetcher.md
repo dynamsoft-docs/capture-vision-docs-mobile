@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DirectoryFetcher
 
-The `DirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits the [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) class so that you can set it as the input of `CaptureVisionRouter` with the API [`setInput`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.md#setinput).
+The `DirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits the [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) class so that you can set it as the input of `CaptureVisionRouter` with the API [`setInput`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput).
 
 ## Definition
 

@@ -20,7 +20,6 @@ noTitleIndex: true
 - Added a new method SetLocation to `ComplementedBarcodeImageUnit` class.
 - Added new methods to the `DecodedBarcodesUnit` class to set or remove the decoded barcode elements.
 - Added the following methods to the `DecodedBarcodesResult` class:
-  - A new override constructor.
   - `retain`
   - `release`.
 - Added new constructors to the following classes.

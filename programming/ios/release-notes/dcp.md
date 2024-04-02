@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Release Notes - DynamsoftBarcodeReader Module
+# Release Notes - DynamsoftCodeParser Module
 <!-- 
 ## 2.2.10 (03/07/2024)
 

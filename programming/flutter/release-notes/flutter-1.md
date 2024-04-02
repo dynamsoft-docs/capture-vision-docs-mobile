@@ -11,6 +11,13 @@ breadcrumbText: 1.x
 
 # Release Notes for Flutter SDK - 1.x
 
+## 1.2.2 (03/17/2023)
+
+### Fixed
+
+- Fixed a crash bug on the devices that do not support 16:9 size resolution.
+- Fixed a display bug when the display orientation is landscape.
+
 ## 1.2.1 (01/12/2023)
 
 ### Improved

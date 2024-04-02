@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Release Notes - Core Module
+# Release Notes - DynamsoftCore Module
 
 ## 3.2.10 (03/07/2024)
 
@@ -34,7 +34,7 @@ noTitleIndex: true
   - `TextRemovedBinaryImageUnit`
 - Added new methods to the `PredetectedRegionsUnit` class to add, remove or set the predetected regions.
 - Added new methods to the `LineSegmentsUnit` class to add, remove or set the line segments.
-- Added new methods to the `TextZonesUnit` class to add, remove or set the text zones. Added a new class CTextZone to store the information of a single text zone.
+- Added new methods to the `TextZonesUnit` class to add, remove or set the text zones. Added a new class `TextZone` to store the information of a single text zone.
 - Added a new method `setContours` to the `ContourUnit` class.
 - Added new methods to the `TextureDetectionResultUnit` class to set the X & Y spacing.
 - Added a new intermediate result unit, `ShortLinesUnit`, to output the detected short lines. The corresponding enumeration member `IRUT_SHORT_LINES` is added to the `EnumIntermediateResultUnitType`.
