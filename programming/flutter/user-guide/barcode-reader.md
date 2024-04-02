@@ -181,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
     _barcodeReader.receiveResultStream().listen((List<BarcodeResult> res) {
       if (mounted) {
         setState(() {
-          decodeResults = res;
+          decodeRes = res ?? [];
         });
       }
     });
@@ -232,10 +232,27 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
             child: _cameraView,
           ),
           Container(
-            height: 200,
+            height: 100,
             child: ListView.builder(
               itemBuilder: listItem,
               itemCount: decodeResults.length,
+            ),
+          ),
+          Positioned(
+            top: 150,
+            left: 25,
+            child: GestureDetector(
+              onTap: () {
+                faceLens = !faceLens;
+                _cameraEnhancer.selectCamera(faceLens
+                    ? EnumCameraPosition.CP_FRONT
+                    : EnumCameraPosition.CP_BACK);
+              },
+              child: Image.asset(
+                'assets/toggle_lens.png',
+                width: 48,
+                height: 48,
+              ),
             ),
           ),
         ],
