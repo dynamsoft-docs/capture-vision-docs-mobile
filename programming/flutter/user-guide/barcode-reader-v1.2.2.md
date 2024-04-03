@@ -33,22 +33,23 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 ## System Requirements
 
-### Flutter
+### Flutter & Dart
 
-- Flutter version: >=3.10.0
+- Flutter version: >=2.0.0
+- Dart version: >=2.12.0 <3.0.0
 
 ### Android
 
 - Supported OS: Android 5.0 (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Android Studio 2022.2.1 or higher.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 - JDK: 1.8+
 
 ### iOS
 
-- Supported OS: iOS 11 or higher (iOS 13 and higher recommended).
-- Supported ABI: arm64 and x86_64.
-- Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
+- Supported OS: **iOS 10.0** or higher.
+- Supported ABI: **arm64** and **x86_64**.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended), CocoaPods 1.11.0+.
 
 ## Installation
 
@@ -62,7 +63,7 @@ This will add a line like this to your package's `pubspec.yaml` (and run an impl
 
 ```dart
 dependencies:
-   dynamsoft_capture_vision_flutter: ^1.3.0
+   dynamsoft_capture_vision_flutter: ^1.2.0
 ```
 
 ## Build Your Barcode Scanner App

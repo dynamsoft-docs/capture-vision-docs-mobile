@@ -141,7 +141,7 @@ func getOriginalImage(_ imageHashId: String) -> DSImageData
 
 **Return Value**
 
-The original image data as [`DSImageData`](../basic-structures/image-data.md).
+The original image data as [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html).
 
 **Code Snippet**
 

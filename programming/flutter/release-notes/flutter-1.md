@@ -11,6 +11,18 @@ breadcrumbText: 1.x
 
 # Release Notes for Flutter SDK - 1.x
 
+## 1.3.0 (04/03/2024)
+
+- Updated the SDK to support Flutter 3. The lowest supported Flutter version is 3.10.0.
+- Added a new class [`EnumEnhancedFeatures`]({{ site.flutter-api }}enum-enhanced-features.html) for user to specify the enhanced features of `DynamsoftCameraEnhancer`.
+- Added a series of zoom control APIs.
+  - [`enableEnhancedFeatures`]({{ site.flutter-api }}camera-enhancer.html#enableenhancedfeatures) to enable the specified enhanced feature(s).
+  - [`disableEnhancedFeatures`]({{ site.flutter-api }}camera-enhancer.html#disableenhancedfeatures) to disable the specified enhanced feature(s).
+  - [`setZoomFactor`]({{ site.flutter-api }}camera-enhancer.html#setzoomfactor) to set the zoom factor.
+  - [`setAutoZoomRange`]({{ site.flutter-api }}camera-enhancer.html#setautozoomrange) to set the auto zoom range.
+  - [`getAutoZoomRange`]({{ site.flutter-api }}camera-enhancer.html#getautozoomrange) to get the auto zoom range.
+  - [`getMaxZoomFactor`]({{ site.flutter-api }}camera-enhancer.html#getmaxzoomfactor) to get the max zoom factor.
+
 ## 1.2.2 (03/17/2023)
 
 ### Fixed
