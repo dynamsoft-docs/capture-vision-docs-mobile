@@ -68,4 +68,4 @@ ImageData getOriginalImage(String imageHashId);
 
 **Return Value**
 
-The original image data as [`ImageData`](../basic-structures/image-data.md).
+The original image data as [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html).

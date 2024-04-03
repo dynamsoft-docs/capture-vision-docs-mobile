@@ -29,6 +29,12 @@ A barcode reader object accesses to a camera via `DCVCameraView` object at nativ
 | [`enableResultVerification`](#enableresultverification) | Enable result cross verification. The output result will be double-checked to make sure the accuracy. |
 | [`setModeArgument`](#setmodeargument) | **Mode arguments** are the optional settings of **mode parameters** in `DBRRuntimeSettings`. You can use `setModeArgument` to configure these arguments. |
 | [`getModeArgument`](#getmodeargument) | Get the value of the specified **mode argument**. |
+| [`enableEnhancedFeatures`](#enableenhancedfeatures) | Enable the specified enhanced feature(s). |
+| [`disableEnhancedFeatures`](#disableenhancedfeatures) | Disable the specified enhanced feature(s). |
+| [`setZoomFactor`](#setzoomfactor) | Set the zoom factor. |
+| [`setAutoZoomRange`](#setautozoomrange) | Set the auto zoom range. |
+| [`getAutoZoomRange`](#getautozoomrange) | Get the auto zoom range. |
+| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the max zoom factor. |
 
 ## initLicense
 
@@ -372,4 +378,92 @@ Future getModeArgument(String modesName, int index, String argumentName)
 
 ```dart
 String blockSizeX = await _barcodeReader.getModeArgument("binarizationModes",0,"BlockSizeX");
+```
+
+## enableEnhancedFeatures
+
+> *Added in version 1.3.0.*
+
+Enable the specified enhanced feature(s).
+
+Available features:
+
+| Feature | Description | Enumeration Member |
+| ------- | ----------- | ------------------ |
+| Frame Filter | Filter out low quality frames by sharpness evaluation. | EF_FRAME_FILTER |
+| Sensor Control | Filter out all frames produced when the device is shaking (sensor is required). | EF_SENSOR_CONTROL |
+| Enhanced focus | Additional focus control mechanism that helps device to focus. | EF_ENHANCED_FOCUS |
+| Auto Zoom | Enable the camera to auto zoom-in to close up to the barcode. | EF_AUTO_ZOOM |
+| Smart torch | Display the torch button only when the environment light is too dark. | EF_SMART_TORCH |
+
+```dart
+Future<void> enableEnhancedFeatures (EnumEnhancedFeatures features)
+```
+
+**Parameters**
+
+`features`： Specify the enhanced feature(s) to enable. You can use a combined value of `EnumEnhancedFeatures` to specify multiple features.
+
+## disableEnhancedFeatures
+
+> *Added in version 1.3.0.*
+
+Disable the specified enhanced feature(s).
+
+```dart
+Future<void> disableEnhancedFeatures (EnumEnhancedFeatures features)
+```
+
+**Parameters**
+
+`features`： Specify the enhanced feature(s) to enable. You can use a combined value of `EnumEnhancedFeatures` to specify multiple features.
+
+## setZoomFactor
+
+> *Added in version 1.3.0.*
+
+Set the zoom factor.
+
+```dart
+Future<void> setZoomFactor(double factor)
+```
+
+**Parameters**
+
+`factor`: The zoom factor.
+
+## setAutoZoomRange
+
+> *Added in version 1.3.0.*
+
+Set the auto zoom range.
+
+```dart
+Future<void> setAutoZoomRange (RangeValue zoomFactor)
+```
+
+**Parameters**
+
+`zoomFactor`: The auto zoom range.
+
+## getAutoZoomRange
+
+> *Added in version 1.3.0.*
+
+Get the auto zoom range.
+
+```dart
+Future<RangeValue> getAutoZoomRange ()
+```
+
+**Parameters**
+
+## getMaxZoomFactor
+
+> *Added in version 1.3.0.*
+
+Get the max zoom factor.
+
+```dart
+Future<double> getMaxZoomFactor ()
 ```

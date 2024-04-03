@@ -73,11 +73,11 @@ void addResultReceiver(CapturedResultReceiver receiver);
 
 **Parameters**
 
-`[in] receiver`: An object of [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
+`[in] receiver`: The receiver object, of type [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
 
 ## removeResultReceiver
 
-Removes a [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) from the Capture Vision Router.
+Removes the specified [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object from the Capture Vision Router.
 
 ```java
 void removeResultReceiver(CapturedResultReceiver receiver);
@@ -85,11 +85,11 @@ void removeResultReceiver(CapturedResultReceiver receiver);
 
 **Parameters**
 
-`[in] receiver`: An object of [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
+`[in] receiver`: The receiver object, of type [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
 
 ## startCapturing
 
-Start capturing with the specified template.
+Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source.
 
 ```java
 void startCapturing(String templateName, CompletionListener completionHandler);
@@ -107,7 +107,7 @@ void startCapturing(String templateName, CompletionListener completionHandler);
 
 ## stopCapturing
 
-Tells the `CaptureVisionRouter` to stop capturing.
+Stops the capturing process.
 
 ```java
 void stopCapturing();
@@ -131,7 +131,7 @@ void resumeCapturing();
 
 ## addResultFilter
 
-Adds a [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html) to filter the `CapturedResult`. Currnetly, [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) is the only supported implementation of the `CapturedResultFilter`.
+Adds a [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html) object to filter the `CapturedResult`. Currnetly, [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) is the only supported implementation of the `CapturedResultFilter`.
 
 ```java
 void addResultFilter(CapturedResultFilter filter);
@@ -139,11 +139,11 @@ void addResultFilter(CapturedResultFilter filter);
 
 **Parameters**
 
-`[in] filter`: An object of [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html). Currnetly, is must be a [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) object.
+`[in] filter`: The filter object, of type [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html). Currnetly, is must be a [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) object.
 
 ## removeResultFilter
 
-Removes a `CapturedResultFilter` that has been configured for the Capture Vision Router.
+Removes the specified `CapturedResultFilter` that has been configured for the Capture Vision Router.
 
 ```java
 void removeResultFilter(CapturedResultFilter filter);
@@ -151,7 +151,7 @@ void removeResultFilter(CapturedResultFilter filter);
 
 **Parameters**
 
-`[in] filter`: An object of [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html).
+`[in] filter`: The filter object, of type [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html).
 
 ## addCaptureStateListener
 
