@@ -34,13 +34,13 @@ class IntermediateResultManager : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
-| [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
-| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using the image's hash ID. |
+| [`addResultReceiver`](#addresultreceiver) | Adds a `DSIntermediateResultReceiver` object as the receiver of intermediate results. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified `DSIntermediateResultReceiver` object. |
+| [`getOriginalImage`](#getoriginalimage) | Retrieves the original image data. |
 
 ### addResultReceiver
 
-Adds an intermediate result receiver to an `IntermediateResultManager` object.
+Adds a [DSIntermediateResultReceiver](intermediate-result-receiver.md) object as the receiver of intermediate results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +57,7 @@ func addResultReceiver(_ receiver: DSIntermediateResultReceiver)
 
 **Parameters**
 
-`receiver`: A delegate object of `DSIntermediateResultReceiver`.  
+`receiver`: A delegate object of [DSIntermediateResultReceiver](intermediate-result-receiver.md).  
 
 **Return Value**
 
@@ -80,7 +80,7 @@ resultManager.addResultReceiver(receiver)
 
 ### removeResultReceiver
 
-Removes an intermediate result receiver from an `IntermediateResultManager` object.
+Removes the specified [DSIntermediateResultReceiver](intermediate-result-receiver.md) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -120,7 +120,7 @@ resultManager.removeResultReceiver(receiver)
 
 ### getOriginalImage
 
-Gets the original image data using the image's hash ID.
+Retrieves the original image data.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

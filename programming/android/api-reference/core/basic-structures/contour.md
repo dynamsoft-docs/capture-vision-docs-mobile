@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Contour
 
-The `Contour` class represents a contour in 2D space, which contains an array of CPoint objects, representing the vertices of the contour.
+The `Contour` class represents a contour made up of multiple points.
 
 ## Definition
 
@@ -26,13 +26,12 @@ class Contour
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`points`](#points) | *android.graphics.Point[]* | An array of `android.graphics.Point` that includes all vertices of the contour. |
+| [`points`](#points) | *android.graphics.Point[]* | An array of `Point` objects defining the vertices of the contour. |
 
 ### points
 
-An array of `android.graphics.Point` that includes all vertices of the contour.
+An array of `android.graphics.Point` objects defining the vertices of the contour.
 
 ```java
 Point[] points;
 ```
-

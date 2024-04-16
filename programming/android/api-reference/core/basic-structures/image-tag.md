@@ -26,15 +26,15 @@ class ImageTag
 
 | Methods | Description |
 | ------- | ----------- |
-| [`setImageId`](#setimageid) | Set the ID of the image. |
-| [`getImageId`](#getimageid) | Get the ID of the image. |
+| [`setImageId`](#setimageid) | Set the ID of the image. The ID is the unique identifier of the image. |
+| [`getImageId`](#getimageid) | Get the ID of the image. The ID is the unique identifier of the image. |
 | [`getType`](#gettype) | The type of the image tag. |
-| [`getDistanceMode`](#getdistancemode) | Set the capture distance mode of the image. |
+| [`setDistanceMode`](#setdistancemode) | Set the capture distance mode of the image. |
 | [`getDistanceMode`](#getdistancemode) | Get the capture distance mode of the image. |
 
 ### setImageId
 
-Set the ID of the image.
+Set the ID of the image. The ID is the unique identifier of the image.
 
 ```java
 void setImageId(int imageId);
@@ -46,7 +46,7 @@ void setImageId(int imageId);
 
 ### getImageId
 
-Get the ID of the image.
+Get the ID of the image. The ID is the unique identifier of the image.
 
 ```java
 int getImageId();
@@ -82,7 +82,7 @@ void setDistanceMode(EnumImageCaptureDistanceMode distanceMode)
 
 ### getDistanceMode
 
-Get the capture distance mode of the image
+Get the capture distance mode of the image.
 
 ```java
 EnumImageCaptureDistanceMode getDistanceMode()

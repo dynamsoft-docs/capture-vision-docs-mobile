@@ -33,10 +33,10 @@ class IntermediateResultExtraInfo : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`targetROIDefName`](#targetroidefname) | *NSString \** | The name of the TargetROIDef object that generates the intermediate result. |
-| [`taskName`](#taskname) | *NSString \** | The name of the task object that generates the intermediate result. |
-| [`isSectionLevelResult`](#issectionlevelresult) | *bool \** | Whether the intermediate result is section-level result. |
-| [`sectionType`](#sectiontype) | *DSSectionType* | The type of the section that generates the intermediate result. |
+| [`targetROIDefName`](#targetroidefname) | *NSString \** | The property indicates the name of the `TargetROIDef` object that generated the intermediate result. |
+| [`taskName`](#taskname) | *NSString \** | The property indicates the name of the task object that generates the intermediate result. |
+| [`isSectionLevelResult`](#issectionlevelresult) | *bool \** | The property indicates whether the result is at the section level. |
+| [`sectionType`](#sectiontype) | *[DSSectionType]({{ site.dcv_enumerations }}core/section-type.html?lang=android)* | The property indicates the type of the section that generates the intermediate result. If applicable, as defined by the enumeration `EnumSectionType`. |
 
 ### targetROIDefName
 

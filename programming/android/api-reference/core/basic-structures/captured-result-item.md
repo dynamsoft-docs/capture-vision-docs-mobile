@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultItem
 
-The `CapturedResultItem` class represents an item in a captured result, such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
+The `CapturedResultItem` class provides a common structure for representing different types of captured results. Each specific captured result item type will have its own implementation and additional properties specific to that type.
 
 ## Definition
 
@@ -26,14 +26,14 @@ class CapturedResultItem
 
 | Method | Description |
 | ------ | ----------- |
-| [`getType`](#gettype) | Get the type of the captured result item. |
-| [`getReferencedItem`](#getreferenceditem) | Get the referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
-| [`getTargetROIDefName`](#gettargetroidefname) | The name of the `targetROIDef` that produced this `CapturedResultItem`. |
-| [`getTaskName`](#gettaskname) | The name of the `Task` that produced this `CapturedResultItem`. |
+| [`getType`](#gettype) | Get the type of the captured result item, indicating what kind of data it represents. |
+| [`getReferencedItem`](#getreferenceditem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
+| [`getTargetROIDefName`](#gettargetroidefname) | The name of the target ROI definition which includes a task that generated the result. |
+| [`getTaskName`](#gettaskname) | The name of the task that generated the result. |
 
 ### getType
 
-Get the type of the captured result item.
+Get the type of the captured result item, indicating what kind of data it represents.
 
 ```java
 EnumCapturedResultItemType getType();
@@ -45,7 +45,7 @@ The type of the captured result item.
 
 ### getReferencedItem
 
-Get the referenced captured result item. The reference dependencies is defined in the Capture Vision settings.
+Get a property of type `CapturedResultItem` that represents a reference to another captured result item.
 
 ```java
 CapturedResultItem getReferencedItem();
@@ -57,7 +57,7 @@ The referenced captured result item.
 
 ### getTargetROIDefName
 
-The name of the `targetROIDef` that produced this `CapturedResultItem`.
+The name of the target ROI definition which includes a task that generated the result.
 
 ```java
 String getTargetROIDefName();
@@ -69,7 +69,7 @@ The name of the `targetROIDef`.
 
 ### getTaskName
 
-The name of the `Task` that produced this `CapturedResultItem`.
+The name of the task that generated the result.
 
 ```java
 String getTaskName();

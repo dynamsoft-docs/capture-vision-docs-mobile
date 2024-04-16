@@ -12,17 +12,17 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`initSettings`](#initsettings) | Initialize the Capture Vision settings with a JSON String. |
-| [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the Capture Vision settings with a JSON file. |
+| [`initSettings`](#initsettings) | Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`. |
+| [`initSettingsFromFile`](#initsettingsfromfile) | Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`. |
 | [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision settings for a specific template. |
-| [`updateSettings`](#updatesettings) | Update Capture Vision settings with an object of `SimplifiedCaptureVisionSettings`. |
-| [`resetSettings`](#resetsettings) | Resets all templates to factory settings. |
-| [`outputSettings`](#outputsettings) | Output the targeting Capture Vision settings to a JSON string. |
-| [`outputSettingsToFile`](#outputsettingstofile) | Output the targeting Capture Vision settings to a JSON file. |
+| [`updateSettings`](#updatesettings) | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object. |
+| [`resetSettings`](#resetsettings) | Restores all settings to their original default values. |
+| [`outputSettings`](#outputsettings) | Returns an object that contains settings for the specified `CaptureVisionTemplate`. |
+| [`outputSettingsToFile`](#outputsettingstofile) | Generates a JSON file download containing the settings for the specified `CaptureVisionTemplate`. |
 
 ## initSettings
 
-Initialize the Capture Vision settings with a JSON String.
+Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`.
 
 ```java
 void initSettings(String content) throws CaptureVisionRouterException;
@@ -48,7 +48,7 @@ void initSettings(String content) throws CaptureVisionRouterException;
 
 ## initSettingsFromFile
 
-Initialize the Capture Vision settings with a JSON file.
+Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`.
 
 ```java
 void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
@@ -111,7 +111,7 @@ An object of [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-
 
 ## updateSettings
 
-Update Capture Vision settings with an object of [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-capture-vision-settings.md).
+Updates the specified `CaptureVisionTemplate` with an updated [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-capture-vision-settings.md) object.
 
 ```java
 void updateSettings(String templateName, SimplifiedCaptureVisionSettings settings) throws CaptureVisionRouterException;
@@ -134,7 +134,7 @@ void updateSettings(String templateName, SimplifiedCaptureVisionSettings setting
 
 ## resetSettings
 
-Resets all templates to factory settings.
+Restores all settings to their original default values.
 
 ```java
 void resetSettings() throws CaptureVisionRouterException;
@@ -148,7 +148,7 @@ void resetSettings() throws CaptureVisionRouterException;
 
 ## outputSettings
 
-Output the targeting Capture Vision settings to a JSON string.
+Returns an object that contains settings for the specified `CaptureVisionTemplate`.
 
 ```java
 String outputSettings(String templateName) throws CaptureVisionRouterException;
@@ -169,7 +169,7 @@ The Capture Vision settings in a JSON string.
 
 ## outputSettingsToFile
 
-Output the targeting Capture Vision settings to a JSON file.
+Generates a JSON file download containing the settings for the specified `CaptureVisionTemplate`.
 
 ```java
 void outputSettingsToFile(String templateName, String filePath) throws CaptureVisionRouterException;

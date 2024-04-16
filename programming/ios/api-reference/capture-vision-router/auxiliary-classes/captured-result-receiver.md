@@ -34,17 +34,17 @@ protocol CapturedResultReceiver: NSObjectProtocol
 
 | Method | Description |
 | ------ | ----------- |
-| [`onCapturedResultReceived`](#oncapturedresultreceived) | The method for monitoring the output of `DSCapturedResult`. |
-| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `DSOriginalImageResultItem`. |
-| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DSDecodedBarcodesResult`. |
-| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `DSRecognizedTextLinesResult`. |
-| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DSDetectedQuadsResult`. |
-| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The method for monitoring the output of `DSNormalizedImagesResult`. |
-| [`onParsedResultsReceived`](#onparsedresultsreceived) | The method for monitoring the output of `DSParsedResult`. |
+| [`onCapturedResultReceived`](#oncapturedresultreceived) | The callback triggered when a generic captured result is available, occurring each time an image finishes its processing. |
+| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The callback triggered when the original image result is available, occurring each time an image finishes its processing. |
+| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing. |
+| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The callback triggered when recognized text lines are available, occurring each time an image finishes its processing. |
+| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The callback triggered when detected quads are available, occurring each time an image finishes its processing. |
+| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The callback triggered when normalized images are available, occurring each time an image finishes its processing. |
+| [`onParsedResultsReceived`](#onparsedresultsreceived) | The callback triggered when parsed results are available, occurring each time an image finishes its processing. |
 
 ### onCapturedResultReceived
 
-The method for monitoring the output of `DSCapturedResult`.
+The callback method triggered when a generic captured result is available, occurring each time an image finishes its processing. This callback can be used for any result that does not fit into the specific categories of the other callbacks.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -65,7 +65,7 @@ func onCapturedResultReceived(_ result: DSCapturedResult)
 
 ### onOriginalImageResultReceived
 
-The method for monitoring the output of `DSOriginalImageResultItem`.
+The callback method triggered when the original image result is available, occurring each time an image finishes its processing. This callback is used to handle the original image that used as the input of this capture process.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -82,11 +82,11 @@ func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
 
 **Parameters**
 
-`result` : A [`DSOriginalImageResultItem`](original-image-result-item.md) object as a original image result.
+`result` : A [`DSOriginalImageResultItem`]({{ site.dcv_ios_api }}core/basic-structures/original-image-result-item.html) object as a original image result.
 
 ### onDecodedBarcodesReceived
 
-The method for monitoring the output of `DSDecodedBarcodesResult`.
+The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing. This callback is used to handle barcodes that have been successfully decoded by Dynamsoft Barcode Reader
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -103,11 +103,11 @@ func onDecodedBarcodesReceived(_ result: DSDecodedBarcodesResult)
 
 **Parameters**
 
-`result` : A `DSDecodedBarcodesResult` object as a decoded barcode result.
+`result` : A [`DSDecodedBarcodesResult`]({{site.dbr_ios_api}}decoded-barcodes-result.html}}) object as a decoded barcode result.
 
 ### onRecognizedTextLinesReceived
 
-The method for monitoring the output of `DSRecognizedTextLinesResult`.
+The callback triggered when recognized text lines are available, occurring each time an image finishes its processing. This callback is used to handle the result of text recognition by Dynamsoft Label Recognizer.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -124,11 +124,11 @@ func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
 
 **Parameters**
 
-`result` : A `DSRecognizedTextLinesResult` object as a recognized text line result.
+`result` : A [`DSRecognizedTextLinesResult`]({{site.dlr_ios_api}}recognized-text-lines-result.html) object as a recognized text line result.
 
 ### onDetectedQuadsReceived
 
-The method for monitoring the output of `DSDetectedQuadsResult`.
+The callback triggered when detected quads are available, occurring each time an image finishes its processing. This callback is used to handle the detection of quadrilateral shapes, typically used as document boundaries, by Dynamsoft Document Normalizer.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -145,11 +145,11 @@ func onDetectedQuadsReceived(_ result: DSDetectedQuadsResult)
 
 **Parameters**
 
-`result` : A [`DSDetectedQuadsResult`](quadrilateral.md) object as a detected quad result.
+`result` : A [`DSDetectedQuadsResult`]({{site.ddn_ios_api}}detected-quads-result.html) object as a detected quad result.
 
 ### onNormalizedImagesReceived
 
-The method for monitoring the output of `DSNormalizedImagesResult`.
+The callback triggered when normalized images are available, occurring each time an image finishes its processing. This callback is used for handling images that have been processed or normalized (e.g., corrected for skew or perspective), by Dynamsoft Document Normalizer.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -166,11 +166,11 @@ func onNormalizedImagesReceived(_ result: DSNormalizedImagesResult)
 
 **Parameters**
 
-`result` : A `DSNormalizedImagesResult` object as a normalized image result.
+`result` : A [`DSNormalizedImagesResult`]({{site.ddn_ios_api}}normalized-images-result.html) object as a normalized image result.
 
 ### onParsedResultsReceived
 
-The method for monitoring the output of `DSParsedResult`.
+The callback triggered when parsed results are available, occurring each time an image finishes its processing. This callback is used for handling results that have been parsed into a structured format by Dynamsoft Code Parser.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -187,4 +187,4 @@ func onParsedResultsReceived(_ result: DSParsedResult)
 
 **Parameters**
 
-`result` : A `DSParsedResult` object as a parsed result.
+`result` : A [`DSParsedResult`]({{site.dcp_ios_api}}parsed-result.html) object as a parsed result.

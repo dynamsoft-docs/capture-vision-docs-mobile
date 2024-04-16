@@ -12,17 +12,17 @@ noTitleIndex: true
 
 | Method | Description |
 | ------ | ----------- |
-| [`initSettings`](#initsettings) | Initialize the settings with a JSON String. |
-| [`initSettingsFromFile`](#initsettingsfromfile) | Initialize the settings with a JSON file. |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision settings for a specific template. |
-| [`updateSettings`](#updatesettings) | Update the Capture Vision settings with an object of `DSSimplifiedCaptureVisionSettings`. |
+| [`initSettings`](#initsettings) | Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`. |
+| [`initSettingsFromFile`](#initsettingsfromfile) | Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a `SimplifiedCaptureVisionSettings` object that contains simplified settings for the specified `CaptureVisionTemplate`. |
+| [`updateSettings`](#updatesettings) | Updates the specified `CaptureVisionTemplate` with a `SimplifiedCaptureVisionSettings` object. |
 | [`resetSettings`](#resetsettings) | Reset the Capture Vision settings. |
-| [`outputSettings`](#outputsettings) | Output the targeted Capture Vision settings to a JSON string. |
+| [`outputSettings`](#outputsettings) | Returns an object that contains settings for the specified `CaptureVisionTemplate`. |
 | [`outputSettingsToFile`](#outputsettingstofile) | Output the targeted Capture Vision settings to a JSON file. |
 
 ## initSettings
 
-Initialize the settings with a JSON String.
+Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -63,7 +63,7 @@ A BOOL value that indicates whether the settings are initialized successfully.
 
 ## initSettingsFromFile
 
-Initialize the settings with a JSON file.
+Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -105,7 +105,7 @@ A BOOL value that indicates whether the settings are initialized successfully.
 
 ## getSimplifiedSettings
 
-Retrieves a simplified version of the Capture Vision settings for a specific template.
+Retrieves a `SimplifiedCaptureVisionSettings` object that contains simplified settings for the specified `CaptureVisionTemplate`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -144,7 +144,7 @@ A single JSON string or file can define multiple Capture Vision templates. `getS
 
 ## updateSettings
 
-Update the Capture Vision settings with an object of `DSSimplifiedCaptureVisionSettings`.
+Updates the specified `CaptureVisionTemplate` with a `SimplifiedCaptureVisionSettings` object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -163,8 +163,8 @@ func updateSettings(_ templateName:String, settings:SimplifiedCaptureVisionSetti
 
 **Parameters**
 
-`templateName`: The name of the template that you want to update.  
-`settings`: An object of [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md).  
+`templateName`: Specifies a `CaptureVisionTemplate` by its name.
+`settings`: The [`SimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md) object that contains updated settings.
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
@@ -181,7 +181,7 @@ A bool value that indicates whether the settings are uploaded successfully.
 
 ## resetSettings
 
-Reset the Capture Vision settings.
+Restores all runtime settings to their original default values.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -212,7 +212,7 @@ A BOOL value that indicates whether the settings are reset successfully.
 
 ## outputSettings
 
-Output the targeted Capture Vision settings to a JSON string.
+Returns an object that contains settings for the specified `CaptureVisionTemplate`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -245,7 +245,7 @@ The Capture Vision settings in a JSON string.
 
 ## outputSettingsToFile
 
-Output the targeted Capture Vision settings to a JSON file.
+Output a JSON file containing the settings for the specified `CaptureVisionTemplate`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -39,30 +39,29 @@ class CaptureVisionRouter : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`captureFromFile`](single-file-processing.md#capturefromfile) | Capture data from the file specified by the file path. |
-| [`captureFromFileBytes`](single-file-processing.md#capturefromfilebytes) | Capture data from a given file in memory. |
-| [`captureFromBuffer`](single-file-processing.md#capturefrombuffer) | Capture data from the memory buffer via a `DSImageData` object. |
-| [`captureFromImage`](single-file-processing.md#capturefromimage) | Capture data from the given image. |
-
+| [`captureFromFile`](single-file-processing.md#capturefromfile) | Processes an image file to derive important information. |
+| [`captureFromFileBytes`](single-file-processing.md#capturefromfilebytes) | Processes an image file in memory to derive important information. |
+| [`captureFromBuffer`](single-file-processing.md#capturefrombuffer) | Processes an `ImageData` object to derive important information. |
+| [`captureFromImage`](single-file-processing.md#capturefromimage) | Processes an `UIImage` to derive important information. |
 
 ## Multiple-File Processing
 
 | Method | Description |
 | ------ | ----------- |
-| [`setInput`](multiple-file-processing.md#setinput) | Sets an image source to provide images for consecutive process. |
-| [`getInput`](multiple-file-processing.md#getinput) | Gets the attached image source adapter object of the capture vision router. |
+| [`setInput`](multiple-file-processing.md#setinput) | Sets up an image source to provide images for continuous processing. |
+| [`getInput`](multiple-file-processing.md#getinput) | Returns the image source object. |
 | [`addImageSourceStateListener`](multiple-file-processing.md#addimagesourcestatelistener) | Registers a DSImageSourceStateListener to get callback when the status of DSImageSourceAdapter changes. |
 | [`removeImageSourceStateListener`](multiple-file-processing.md#removeimagesourcestatelistener) | Removes a DSImageSourceStateListener. |
 | [`addResultReceiver`](multiple-file-processing.md#addresultreceiver) | Registers a DSCapturedResultReceiver to get callback when DSCapturedResult output. |
 | [`removeResultReceiver`](multiple-file-processing.md#removeresultreceiver) | Removes a DSCapturedResultReceiver. |
-| [`startCapturing`](multiple-file-processing.md#startcapturing) | Start capturing with the targeting template. |
-| [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Start capturing with the targeting template. |
+| [`startCapturing`](multiple-file-processing.md#startcapturing) | Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source. |
+| [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Stops the capturing process. |
 | [`pauseCapturing`](multiple-file-processing.md#pausecapturing) | Pauses the Capture Vision Router. |
 | [`resumeCapturing`](multiple-file-processing.md#resumecapturing) | Resumes the Capture Vision Router. |
 | [`addCaptureStateListener`](multiple-file-processing.md#addcapturestatelistener) | Registers a DSCaptureStateListener to get callback when capture state changes. |
 | [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a DSCaptureStateListener. |
-| [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Registers a DSCapturedResultFilter to get callback when filtered result output. |
-| [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes a DSCapturedResultFilter. |
+| [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Adds a `CaptureResultFilter` object to filter non-essential results. |
+| [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes the specified `CaptureResultFilter` object. |
 
 ## Settings
 

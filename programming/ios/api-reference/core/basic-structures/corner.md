@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSCorner
 
-The `DSCorner` class represents a detected corner, which consists of an intersection point and two lines of the corner.
+The `DSCorner` class represents a corner, typically where two line segments meet.
 
 ## Definition
 

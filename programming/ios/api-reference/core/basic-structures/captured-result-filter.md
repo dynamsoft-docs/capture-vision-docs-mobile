@@ -6,6 +6,7 @@ keywords: captured result filter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # DSCapturedResultFilter

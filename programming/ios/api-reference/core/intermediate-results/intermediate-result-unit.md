@@ -33,10 +33,10 @@ class IntermediateResultUnit : NSObject
 
 | Method | Description |
 |------- |-------------|
-| [`getHashId`](#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image. |
+| [`getHashId`](#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image associated with this unit. |
 | [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`](#gettype) | Gets the type of the intermediate result unit. |
+| [`getType`](#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift). |
 | [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
 | [`replace`](#replace) | Replaces the content of the intermediate result unit. |

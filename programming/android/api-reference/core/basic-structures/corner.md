@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Corner
 
-The `Corner` class represents a detected corner, which consists of an intersection point and two lines of the corner.
+The `Corner` class represents a corner, typically where two line segments meet
 
 ## Definition
 
@@ -28,8 +28,8 @@ class Corner
 | ---------- | ---- | ----------- |
 | [`type`](#type) | *[EnumCornerType]({{ site.dcv_enumerations }}core/corner-type.html?lang=android)* | The type of the corner. The types are availabled as normal-intersected, T-intersected, cross-intersected, not-intersected. |
 | [`intersection`](#intersection) | *android.graphics.Point* | The coordinate of the intersection point of the corner. |
-| [`line1`](#line1) | *[LineSegment](line-segment.md)* |One of the lines of the corner. Defined in LineSegment. |
-| [`line2`](#line2) | *[LineSegment](line-segment.md)* |One of the lines of the corner. Defined in LineSegment. |
+| [`line1`](#line1) | *[LineSegment](line-segment.md)* | One of the lines of the corner. Defined in LineSegment. |
+| [`line2`](#line2) | *[LineSegment](line-segment.md)* | One of the lines of the corner. Defined in LineSegment. |
 
 ### type
 

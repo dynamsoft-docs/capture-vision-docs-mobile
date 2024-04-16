@@ -10,7 +10,9 @@ noTitleIndex: true
 
 # CapturedResultReceiver
 
-The `CapturedResultReceiver` interface provides methods for monitoring the output of captured results, which can consist of original image result(s), decoded barcode result(s), recognized text line result(s), detected quad result(s), normalized image result(s), or parsed result(s). The `CapturedResultReceiver` can add a receiver for any type of captured result or for a specific type of captured result, based on the method that is implemented.
+The `CapturedResultReceiver` interface is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. By implementing the `CapturedResultReceiver`, you will receive the callback of the various types of captured results, such as original image, decoded barcode, recognized text line, detected quad, normalized image, or parsed data. The `CapturedResultReceiver` can add a receiver for any type of captured result or for a specific type of captured result, based on the method that is implemented.
+
+The `CapturedResultReceiver` interface is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results, etc.
 
 ## Definition
 
@@ -26,17 +28,17 @@ interface CapturedResultReceiver
 
 | Method | Description |
 | ------ | ----------- |
-| [`onCapturedResultReceived`](#oncapturedresultreceived) | The method for monitoring the output of `CapturedResult`. |
-| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `OriginalImageResultItem`. |
-| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DecodedBarcodesResult`. |
-| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `RecognizedTextLinesResult`. |
-| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DetectedQuadsResult`. |
-| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The method for monitoring the output of `NormalizedImagesResult`. |
-| [`onParsedResultsReceived`](#onparsedresultsreceived) | The method for monitoring the output of `ParsedResult`. |
+| [`onCapturedResultReceived`](#oncapturedresultreceived) | The callback triggered when a generic captured result is available, occurring each time an image finishes its processing. |
+| [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The callback triggered when the original image result is available, occurring each time an image finishes its processing. |
+| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing. |
+| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The callback triggered when recognized text lines are available, occurring each time an image finishes its processing. |
+| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The callback triggered when detected quads are available, occurring each time an image finishes its processing. |
+| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The callback triggered when normalized images are available, occurring each time an image finishes its processing. |
+| [`onParsedResultsReceived`](#onparsedresultsreceived) | The callback triggered when parsed results are available, occurring each time an image finishes its processing. |
 
 ### onCapturedResultReceived
 
-The method for monitoring the output of [`CapturedResult`](captured-result.md).
+The callback method triggered when a generic captured result is available, occurring each time an image finishes its processing. This callback can be used for any result that does not fit into the specific categories of the other callbacks.
 
 ```java
 void onCapturedResultReceived(CapturedResult result);
@@ -44,11 +46,11 @@ void onCapturedResultReceived(CapturedResult result);
 
 **Parameters**
 
-`[in] result`: A [`CapturedResult`](captured-result.md) object as a captured result.
+`[in] result`: The captured result, an instance of [`CapturedResult`](captured-result.md).
 
 ### onOriginalImageResultReceived
 
-The method for monitoring the output of [`OriginalImageResultItem`](original-image-result-item.md).
+The callback method triggered when the original image result is available, occurring each time an image finishes its processing. This callback is used to handle the original image that used as the input of this capture process.
 
 ```java
 void onOriginalImageResultReceived(OriginalImageResultItem result);
@@ -56,11 +58,11 @@ void onOriginalImageResultReceived(OriginalImageResultItem result);
 
 **Parameters**
 
-`[in] result`: A [`OriginalImageResultItem`](original-image-result-item.md) object as a original image result.
+`[in] result`: The original image result, an instance of [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html).
 
 ### onDecodedBarcodesReceived
 
-The method for monitoring the output of `DecodedBarcodesResult`.
+The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing. This callback is used to handle barcodes that have been successfully decoded by Dynamsoft Barcode Reader
 
 ```java
 void onDecodedBarcodesReceived(DecodedBarcodesResult result);
@@ -68,11 +70,11 @@ void onDecodedBarcodesReceived(DecodedBarcodesResult result);
 
 **Parameters**
 
-`[in] result`: A `DecodedBarcodesResult` object as a decoded barcode result.
+`[in] result`: The decoded barcode result, an instance of `DecodedBarcodesResult`.
 
 ### onRecognizedTextLinesReceived
 
-The method for monitoring the output of `RecognizedTextLinesResult`.
+The callback triggered when recognized text lines are available, occurring each time an image finishes its processing. This callback is used to handle the result of text recognition by Dynamsoft Label Recognizer.
 
 ```java
 void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
@@ -80,11 +82,11 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 
 **Parameters**
 
-`[in] result`: A `RecognizedTextLinesResult` object as a recognized text line result.
+`[in] result`: The recognized text lines result, an instance of [`RecognizedTextLinesResult`]({{site.dlr_android_api}}recognized-text-lines-result.html).
 
 ### onDetectedQuadsReceived
 
-The method for monitoring the output of [`DetectedQuadsResult`]({{site.ddn_android_api}}detected-quads-result.html).
+The callback triggered when detected quads are available, occurring each time an image finishes its processing. This callback is used to handle the detection of quadrilateral shapes, typically used as document boundaries, by Dynamsoft Document Normalizer.
 
 ```java
 void onDetectedQuadsReceived(DetectedQuadsResult result);
@@ -92,11 +94,11 @@ void onDetectedQuadsReceived(DetectedQuadsResult result);
 
 **Parameters**
 
-`[in] result`: A [`DetectedQuadsResult`]({{site.ddn_android_api}}detected-quads-result.html) object as a detected quad result.
+`[in] result`: The detected quads result, an instance of [`DetectedQuadsResult`]({{site.ddn_android_api}}detected-quads-result.html).
 
 ### onNormalizedImagesReceived
 
-The method for monitoring the output of [`NormalizedImagesResult`]({{site.ddn_android_api}}normalized-images-result.html).
+The callback triggered when normalized images are available, occurring each time an image finishes its processing. This callback is used for handling images that have been processed or normalized (e.g., corrected for skew or perspective), by Dynamsoft Document Normalizer.
 
 ```java
 void onNormalizedImagesReceived(NormalizedImagesResult result);
@@ -104,11 +106,11 @@ void onNormalizedImagesReceived(NormalizedImagesResult result);
 
 **Parameters**
 
-`[in] result`: A [`NormalizedImagesResult`]({{site.ddn_android_api}}normalized-images-result.html) object as a normalized image result.
+`[in] result`: The normalized images result, an instance of [`NormalizedImagesResult`]({{site.ddn_android_api}}normalized-images-result.html).
 
 ### onParsedResultsReceived
 
-The method for monitoring the output of `ParsedResult`.
+The callback triggered when parsed results are available, occurring each time an image finishes its processing. This callback is used for handling results that have been parsed into a structured format by Dynamsoft Code Parser.
 
 ```java
 void onParsedResultsReceived(ParsedResult result);
@@ -116,4 +118,4 @@ void onParsedResultsReceived(ParsedResult result);
 
 **Parameters**
 
-`[in] result`: A `ParsedResult` object as a parsed result.
+`[in] result`: The parsed result, an instance of [`ParsedResult`]({{site.dcp_android_api}}parsed-result.html).

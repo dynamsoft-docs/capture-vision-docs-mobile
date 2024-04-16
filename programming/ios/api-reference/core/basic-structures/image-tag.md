@@ -33,13 +33,13 @@ class ImageTag : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`imageId`](#imageid) | *NSInteger* | The ID of the image. |
+| [`imageId`](#imageid) | *NSInteger* | The ID of the image, which is the unique identifier of the image. |
 | [`type`](#type) | *DSImageTagType* | The type of the image tag. |
 | [`distanceMode`](#distancemode) | *DSImageCaptureDistanceMode* | The capture distance mode of the image. |
 
 ### imageId
 
-The ID of the image.
+The ID of the image, which is the unique identifier of the image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

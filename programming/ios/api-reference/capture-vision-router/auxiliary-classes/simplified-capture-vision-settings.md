@@ -33,19 +33,19 @@ class SimplifiedCaptureVisionSettings : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`capturedResultItemTypes`](#capturedresultitemtypes) | *NSInteger* | Specifies the type(s) of CapturedItem(s) that will be captured. |
-| [`roi`](#roi) | *DSQuadrilateral \** | Specifies the region of interest (ROI) where the image capture and recognition will take place. |
-| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *BOOL* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
+| [`capturedResultItemTypes`](#capturedresultitemtypes) | *NSInteger* | Specifies the types of result items that are expected to be returned. |
+| [`roi`](#roi) | *DSQuadrilateral \** | Designates the region of interest (ROI) within an image, limiting the image processing activities exclusively to this specified area. |
+| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *BOOL* | Determines if the coordinates for the region of interest (ROI) are expressed in percentage terms (true) or as exact pixel measurements (false). |
 | [`maxParallelTasks`](#maxparalleltasks) | *NSInteger* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
 | [`timeout`](#timeout) | *NSInteger* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
-| [`barcodeSettings`](#barcodesettings) | *DSSimplifiedBarcodeReaderSettings \** | Specifies the settings for `DynamsoftBarcodeReader` tasks. |
-| [`labelSettings`](#labelsettings) | *DSSimplifiedLabelRecognizerSettings \** | Specifies the settings for `DynamsoftLabelRecognizer` tasks. |
-| [`documentSettings`](#documentsettings) | *DSSimplifiedDocumentNormalizerSettings \** | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
+| [`barcodeSettings`](#barcodesettings) | *DSSimplifiedBarcodeReaderSettings \** | Specifies the basic settings for the barcode reader module. |
+| [`labelSettings`](#labelsettings) | *DSSimplifiedLabelRecognizerSettings \** | Specifies the basic settings for the label recognizer module. |
+| [`documentSettings`](#documentsettings) | *DSSimplifiedDocumentNormalizerSettings \** | Specifies the basic settings for document normalizer module. |
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *NSInteger* | Set the minimum capture interval. It is measured in millisecond. |
 
 ### capturedResultItemTypes
 
-Specifies the type(s) of CapturedItem(s) that will be captured.
+Specifies the types of result items that are expected to be returned.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -130,7 +130,7 @@ var timeout: Int { get set }
 
 ### barcodeSettings
 
-Specifies the settings for `DynamsoftBarcodeReader` tasks with a [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html) object.
+Specifies the basic settings for the barcode reader module.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -147,7 +147,7 @@ var barcodeSettings: DSSimplifiedBarcodeReaderSettings? { get set }
 
 ### labelSettings
 
-Specifies the settings for `DynamsoftLabelRecognizer` tasks with a [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_ios_api }}simplified-label-recognizer-settings.html) object.
+Specifies the basic settings for the label recognizer module.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -164,7 +164,7 @@ var labelSettings: DSSimplifiedLabelRecognizerSettings? { get set }
 
 ### documentSettings
 
-Specifies the settings for `DynamsoftDocumentNormalizer` tasks with a [`SimplifiedDocumentNormalizerSettings`]({{ site.ddn_ios_api }}simplified-document-normalizer-settings.html) object.
+Specifies the basic settings for document normalizer module.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

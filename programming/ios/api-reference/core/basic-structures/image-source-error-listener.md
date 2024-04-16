@@ -51,3 +51,7 @@ The callback method for monitoring the errors that occur in the [`ImageSourceAda
 ```swift
 func onErrorReceived(_ error: Error)
 ```
+
+**Parameters**
+
+`error`: An NSError containing the error code and error message providing the information about the error.

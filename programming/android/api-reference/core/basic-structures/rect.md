@@ -30,7 +30,7 @@ class DSRect
 | [`left`](#left) | *float* | The distance between the left of the rect and the y-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the width of the parent. If measuredInPercentage = 0, the value specifies a pixel length. |
 | [`right`](#right) | *float* | The distance between the right of the rect and the y-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the width of the parent. If measuredInPercentage = 0, the value specifies a pixel length. |
 | [`bottom`](#bottom) | *float* | The distance between the bottom of the rect and the x-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the height of the parent. If measuredInPercentage = 0, the value specifies a pixel length. |
-| [`measuredInPercentage`](#measuredinpercentage) | *boolean* | Sets whether to use percentages to measure the region size. |
+| [`measuredInPercentage`](#measuredinpercentage) | *boolean* | Indicates if the rectangle's measurements are in percentages. |
 
 ### top
 

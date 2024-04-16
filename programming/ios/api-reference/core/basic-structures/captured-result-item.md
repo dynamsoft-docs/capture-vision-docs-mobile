@@ -33,10 +33,10 @@ class CapturedResultItem : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`type`](#type) | *DSCapturedResultItemType* | The type of the captured result item. |
-| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
-| [`targetROIDefName`](#targetroidefname) | *NSString* | The name of the `targetROIDef` that produced this `CapturedResultItem`. |
-| [`taskName`](#taskname) | *NSString* | The name of the `Task` that produced this `CapturedResultItem`. |
+| [`type`](#type) | *DSCapturedResultItemType* | The type of the captured result item, indicating what kind of data it represents. |
+| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | A property of type `DSCapturedResultItem` that represents a reference to another captured result item. |
+| [`targetROIDefName`](#targetroidefname) | *NSString* | The name of the target ROI definition which includes a task that generated the result. |
+| [`taskName`](#taskname) | *NSString* | The name of the task that generated the result. |
 
 ### type
 

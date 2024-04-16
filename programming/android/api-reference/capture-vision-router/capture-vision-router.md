@@ -32,29 +32,29 @@ class CaptureVisionRouter
 
 | Method | Description |
 | ------ | ----------- |
-| [`capture(filePath,templateName)`](single-file-processing.md#capturefilepathtemplatename) | Capture data from the file specified by the file path. |
-| [`capture(fileBytes,templateName)`](single-file-processing.md#capturefilebytestemplatename) | Capture data from a given file in memory. |
-| [`capture(imageData,templateName)`](single-file-processing.md#captureimagedatatemplatename) | Capture data from the memory buffer via a [`ImageData`](../core/basic-structures/image-data.md) object. |
-| [`capture(bitmap,templateName)`](single-file-processing.md#capturebitmaptemplatename) | Capture data from the given Bitmap. |
+| [`capture(filePath,templateName)`](single-file-processing.md#capturefilepathtemplatename) | Processes an image file to derive important information. |
+| [`capture(fileBytes,templateName)`](single-file-processing.md#capturefilebytestemplatename) | Processes an image file in memory to derive important information. |
+| [`capture(imageData,templateName)`](single-file-processing.md#captureimagedatatemplatename) | Processes an `ImageData` object to derive important information. |
+| [`capture(bitmap,templateName)`](single-file-processing.md#capturebitmaptemplatename) | Processes a `Bitmap` object to derive important information. |
 
 ## Multiple-File Processing
 
 | Method | Description |
 | ------ | ----------- |
-| [`setInput`](multiple-file-processing.md#setinput) | Sets an image source to provide images for consecutive process. |
-| [`getInput`](multiple-file-processing.md#getinput) | Gets the attached image source adapter object of the capture vision router. |
-| [`addImageSourceStateListener`](multiple-file-processing.md#addimagesourcestatelistener) | Register a ImageSourceStateListener to get callback when the status of ImageSourceAdapter changes. |
-| [`removeImageSourceStateListener`](multiple-file-processing.md#removeimagesourcestatelistener) | Removes a ImageSourceStateListener. |
-| [`addResultReceiver`](multiple-file-processing.md#addresultreceiver) | Register a CapturedResultReceiver to get callback when CapturedResult output. |
-| [`removeResultReceiver`](multiple-file-processing.md#removeresultreceiver) | Removes a CapturedResultReceiver. |
-| [`startCapturing`](multiple-file-processing.md#startcapturing) | Start capturing with the targeting template. |
-| [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Stop capturing. |
+| [`setInput`](multiple-file-processing.md#setinput) | Sets up an image source to provide images for continuous processing. |
+| [`getInput`](multiple-file-processing.md#getinput) | Returns the image source object. |
+| [`addImageSourceStateListener`](multiple-file-processing.md#addimagesourcestatelistener) | Registers a `ImageSourceStateListener` to get callback when the status of ImageSourceAdapter changes. |
+| [`removeImageSourceStateListener`](multiple-file-processing.md#removeimagesourcestatelistener) | Removes a `ImageSourceStateListener`. |
+| [`addResultReceiver`](multiple-file-processing.md#addresultreceiver) | Registers a `CapturedResultReceiver` to get callback when CapturedResult output. |
+| [`removeResultReceiver`](multiple-file-processing.md#removeresultreceiver) | Removes a `CapturedResultReceiver`. |
+| [`startCapturing`](multiple-file-processing.md#startcapturing) | Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source. |
+| [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Stops the capturing process. |
 | [`pauseCapturing`](multiple-file-processing.md#pausecapturing) | Pauses the Capture Vision Router. |
 | [`resumeCapturing`](multiple-file-processing.md#resumecapturing) | Resumes the Capture Vision Router. |
-| [`addCaptureStateListener`](multiple-file-processing.md#addcapturestatelistener) | Register a CaptureStateListener to get callback when capture state changes. |
-| [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a CaptureStateListener. |
-| [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Register a CapturedResultFilter to get callback when filtered result output. |
-| [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes a CapturedResultFilter. |
+| [`addCaptureStateListener`](multiple-file-processing.md#addcapturestatelistener) | Registers a `CaptureStateListener` to get callback when capture state changes. |
+| [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a `CaptureStateListener`. |
+| [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Adds a `CaptureResultFilter` object to filter non-essential results. |
+| [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes the specified `CaptureResultFilter` object. |
 
 ## Settings
 

@@ -11,7 +11,7 @@ ignore: true
 
 # IntermediateResultManager
 
-The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
+The `IntermediateResultManager` class is responsible for handling intermediate results obtained during the process of an image. It offers methods to both register and deregister receivers of these intermediate results, as well as to retrieve the original image data.
 
 ## Definition
 
@@ -27,13 +27,13 @@ class IntermediateResultManager
 
 | Method | Description |
 | ------ | ----------- |
-| [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
-| [`removeResultReceiver`](#removeresultreceiver) | Adds an intermediate result receiver. |
+| [`addResultReceiver`](#addresultreceiver) | Adds a `IntermediateResultReceiver` object as the receiver of intermediate results. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified `IntermediateResultReceiver` object. |
 | [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
 
 ### addResultReceiver
 
-Adds an intermediate result receiver to an `IntermediateResultManager` object.
+Adds a `IntermediateResultReceiver` object as the receiver of intermediate results.
 
 ```java
 void addResultReceiver(IntermediateResultReceiver receiver);

@@ -33,13 +33,13 @@ class CoreModule : NSObject
 
 | Method | Description |
 | ------ |-------------|
-| [`getVersion`](#getversion) | Get the version of Dynamsoft Core. |
+| [`getVersion`](#getversion) | Get the version of the `DynamsoftCore` module. |
 | [`enableLogging`](#enablelogging) | Enable the output of logs. |
 | [`disableLogging`](#disablelogging) | Disable the output of logs. |
 
 ## getVersion
 
-Get the version of Dynamsoft Core.
+Get the version of the `DynamsoftCore` module.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -56,7 +56,7 @@ class func getVersion() -> String
 
 **Return Value**
 
-The version of Dynamsoft Core.
+The version of the `DynamsoftCore` module.
 
 **Code Snippet**
 
