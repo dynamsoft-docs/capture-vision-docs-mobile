@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TextureDetectionResultUnit
 
-The `TextureDetectionResultUnit` class represents an intermediate result unit for texture detection, which contains the x-direction spacing and y-direction spacing of the texture stripes.
+The `TextureDetectionResultUnit` class extends the `IntermediateResultUnit` class and represents a texture-detection result unit. This class captures the results of texture analysis, specifically the spacing of texture patterns in both the x and y directions.
 
 ## Definition
 
@@ -55,7 +55,7 @@ int getXSpacing()
 
 **Return Value**
 
-The X-direction spacing of the texture stripes.
+The X-direction spacing of the texture stripes. This value represents the detected horizontal distance in pixels between consecutive texture patterns, providing an indication of the texture's density and orientation within the image.
 
 ### getYSpacing
 
@@ -67,7 +67,7 @@ int getYSpacing()
 
 **Return Value**
 
-The Y-direction spacing of the texture stripes.
+The Y-direction spacing of the texture stripes. This value represents the spacing between texture stripes in the y-direction. Similar to `xSpacing`, this value measures the vertical distance between texture patterns. It offers insights into the vertical density and alignment of the texture within the image, contributing to the understanding of the texture's characteristics and spatial distribution.
 
 ### setXSpacing
 

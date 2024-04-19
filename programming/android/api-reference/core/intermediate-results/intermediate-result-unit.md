@@ -34,7 +34,17 @@ class IntermediateResultUnit
 | [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 | [`replace`](#replace) | Replaces the old unit with the new unit. |
 
-public int replace(IntermediateResultUnit oldUnit);
+### clone
+
+Creates a copy of the intermediate result unit.
+
+```java
+IntermediateResultUnit clone();
+```
+
+**Return Value**
+
+A copy of the intermediate result unit.
 
 ### getHashId
 
@@ -104,18 +114,6 @@ The corresponding transformation matrices are as follows:
 - original image to local image
 - rotated image to original image
 - original image to rotated image
-
-### clone
-
-Creates a copy of the intermediate result unit.
-
-```java
-IntermediateResultUnit clone();
-```
-
-**Return Value**
-
-A copy of the intermediate result unit.
 
 ### replace
 

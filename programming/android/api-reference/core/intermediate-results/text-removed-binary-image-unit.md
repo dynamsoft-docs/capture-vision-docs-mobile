@@ -26,8 +26,8 @@ class TextRemovedBinaryImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the text-removed binary image. |
-| [`setImageData`](#setimagedata) | Sets the `ImageData` object as the image data of the text-removed binary image. |
+| [`getImageData`](#getimagedata) | Gets the image data for the text-removed binary image. |
+| [`setImageData`](#setimagedata) | Sets the image data for the text-removed binary image. |
 
 ## Inherited Methods
 
@@ -45,7 +45,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getImageData
 
-Gets the `ImageData` object as the image data of the text-removed binary image.
+Gets the image data for the text-removed binary image.
 
 ```java
 ImageData getImageData();
@@ -57,7 +57,7 @@ The `ImageData` object as the image data of the text-removed binary  image.
 
 ### setImageData
 
-Sets the `ImageData` object as the image data of the text-removed binary image.
+Sets the image data for the text-removed binary image.
 
 ```java
 int setImageData(ImageData imageData);

@@ -26,11 +26,11 @@ class PredetectedRegionElement extends RegionObjectElement
 
 | Method | Description |
 | ------ | ----------- |
-| [`getModeName`](#getmodename) | The name of the detection mode used to detect this region element. |
+| [`getModeName`](#getmodename) | Gets the name of the detection mode used to detect this region element. |
 
 ### getModeName
 
-Get the name of the detection mode used to detect this region element.
+Gets the name of the detection mode used to detect this region element.
 
 ```java
 String getModeName()
@@ -38,4 +38,10 @@ String getModeName()
 
 **Return Value**
 
-The name of the detection mode used to detect this region element.
+The name of the detection mode used to detect this region element. It can be one of the following:
+
+- "RPM_AUTO"
+- "RPM_GENERAL"
+- "RPM_GENERAL_RGB_CONTRAST"
+- "RPM_GENERAL_GRAY_CONTRAST"
+- "RPM_GENERAL_HSV_CONTRAST"

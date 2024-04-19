@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSContour
 
-The `DSContour` class represents a contour made up of multiple points.
+The `Contour` class represents a contour made up of multiple points.
 
 ## Definition
 

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSCoreModule
 
-The `DSCoreModule` class defines general functions of the core module.
+The `DSCoreModule` class defines common functionality in the Core module.
 
 ## Definition
 

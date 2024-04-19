@@ -8,8 +8,8 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftBarcodeReader Module
-<!-- 
-## 10.2.0 (03/07/2024)
+
+## 10.2.10 (04/16/2024)
 
 ### New
 
@@ -30,7 +30,7 @@ noTitleIndex: true
   - `setText`
   - `setBytes`
   - `setConfidence`
-- Added a new method `setPossibleFormats` to the `LocalizedBarcodeElement`. -->
+- Added a new method `setPossibleFormats` to the `LocalizedBarcodeElement`.
 
 ## 10.0.21 (12/12/2023)
 

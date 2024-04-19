@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSImageSourceAdapter
 
-The `DSImageSourceAdapter` class provides an interface for fetching and buffering images. It is an abstract class that needs to be implemented by a concrete class to provide actual functionality.
+The `ImageSourceAdapter` class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. Implementations must provide specific mechanisms for image retrieval and handling.
 
 ## Definition
 

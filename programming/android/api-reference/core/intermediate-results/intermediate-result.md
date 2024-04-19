@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # IntermediateResult
 
-The `IntermediateResult` class represents a container containing a collection of `IntermediateResultUnit` objects.
+The `IntermediateResult` interface represents the collection of all intermediate result units produced during image processing.
 
 ## Definition
 
@@ -26,11 +26,11 @@ class IntermediateResult
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getIntermediateResultUnits`](#getintermediateresultunits) | Get the array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects. |
+| [`getIntermediateResultUnits`](#getintermediateresultunits) | Get an array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects, each representing a different type of intermediate result. |
 
 ### getIntermediateResultUnits
 
-Get the array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects.
+Get an array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects, each representing a different type of intermediate result.
 
 ```java
 IntermediateResultUnit[] getIntermediateResultUnits()
@@ -38,4 +38,4 @@ IntermediateResultUnit[] getIntermediateResultUnits()
 
 **Return Value**
 
-The array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects.
+An array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects.

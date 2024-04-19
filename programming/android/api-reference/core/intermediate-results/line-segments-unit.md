@@ -26,7 +26,7 @@ class LineSegmentsUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getLineSegments`](#getlinesegments) | Gets the array of [`LineSegment`](../basic-structures/line-segment.html). |
+| [`getLineSegments`](#getlinesegments) | Gets an array of [`LineSegment`](../basic-structures/line-segment.html) objects, each representing a segment of a line detected within the image. |
 | [`getCount`](#getcount) | Gets the number of line segments. |
 | [`getLineSegment`](#getlinesegment) | Gets the [`LineSegment`](../basic-structures/line-segment.html) at the specified index. |
 | [`removeAllLineSegments`](#removealllinesegments) | Removes all line segments. |

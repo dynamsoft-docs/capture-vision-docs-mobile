@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TextureRemovedGrayscaleImageUnit
 
-The `TextureRemovedGrayscaleImageUnit` class represents a unit that contains a texture-removed grayscale image. It is derived from the `IntermediateResultUnit` class.
+The `TextureRemovedGrayscaleImageUnit` class extends the `IntermediateResultUnit` class and represents a texture-removed grayscale image unit.
 
 ## Definition
 
@@ -26,8 +26,8 @@ class TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the texture-removed grayscale image. |
-| [`setImageData`](#setimagedata) | Sets the `ImageData` object as the image data of the texture-removed grayscale image. |
+| [`getImageData`](#getimagedata) | Gets the `ImageData` for the texture-removed grayscale image. |
+| [`setImageData`](#setimagedata) | Sets the `ImageData` for the texture-removed grayscale image. |
 
 ## Inherited Methods
 

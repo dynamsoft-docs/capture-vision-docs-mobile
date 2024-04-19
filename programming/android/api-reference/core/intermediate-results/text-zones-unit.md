@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TextZonesUnit
 
-The `TextZonesUnit` class represents a unit that contains text zones, which is derived from `IntermediateResultUnit` class.
+The `TextZonesUnit` class extends the `IntermediateResultUnit` class and represents a unit of text zones identified during the processing of an image. This class is used to encapsulate the locations of detected text areas within an image, providing a structured representation of where text is located.
 
 ## Definition
 
@@ -26,7 +26,7 @@ class TextZonesUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getTextZones`](#gettextzones) | Gets the array of `Quadrilaterals` as text zones. |
+| [`getTextZones`](#gettextzones) | Gets an array of `TextZone` objects, each representing the geometric boundaries of a detected text zone within the image. |
 | [`getCount`](#getcount) | Gets the number of text zones. |
 | [`getTextZone`](#gettextzone) | Gets the text zone at the specified index. |
 | [`removeAllTextZones`](#removealltextzones) | Removes all text zones. |
@@ -50,15 +50,15 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getTextZones
 
-Gets the array of `Quadrilaterals` as text zones.
+Gets an array of `TextZone` objects, each representing the geometric boundaries of a detected text zone within the image.
 
 ```java
-Quadrilateral[] getTextZones()
+TextZone[] getTextZones()
 ```
 
 **Return Value**
 
-The array of `Quadrilaterals` as text zones.
+The array of `TextZone` objects.
 
 ### getCount
 

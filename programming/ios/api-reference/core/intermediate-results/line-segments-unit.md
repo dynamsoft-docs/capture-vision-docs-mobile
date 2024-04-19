@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSLineSegmentsUnit
 
-The `DSLineSegmentsUnit` class represents a collection of line segments in 2D space. It is a derived class of `DSIntermediateResultUnit`.
+The `DSLineSegmentsUnit` class extends the `DSIntermediateResultUnit` class and represents a unit of intermediate result specifically for line segments.
 
 ## Definition
 
@@ -33,7 +33,7 @@ class LineSegmentsUnit : IntermediateResultUnit
 
 | Method | Description |
 |------- |-------------|
-| [`getLineSegments`](#getlinesegments) | Gets an array of `DSLineSegment` objects that indicates the line segments. |
+| [`getLineSegments`](#getlinesegments) | Gets an array of [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structure/line-segment.html) objects, each representing a segment of a line detected within the image. |
 | [`getCount`](#getcount) | Returns the number of line segments. |
 | [`getLineSegment`](#getlinesegment) | Returns the line segment at the specified index. |
 | [`removeAllLineSegments`](#removealllinesegments) | Removes all line segments. |
@@ -43,13 +43,13 @@ class LineSegmentsUnit : IntermediateResultUnit
 
 ## Inherited Methods
 
-The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 | Method | Description |
 |------- |-------------|
 | [`getHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
 | [`getOriginalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image associated with this unit. |
-| [`getOriginalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image. |
+| [`getOriginalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the tag associated with the original image. |
 | [`getType`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift). |
 | [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 | [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
@@ -57,7 +57,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getLineSegments
 
-Get an array of `DSLineSegment` objects that indicates the line segments.
+Get an array of [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structure/line-segment.html) objects, each representing a segment of a line detected within the image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,7 +74,7 @@ func getLineSegments() -> [LineSegment]?
 
 **Return Value**
 
-An array of `DSLineSegment` objects that indicates the line segments.
+An array of `DSLineSegment` objects.
 
 ### getCount
 

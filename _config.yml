@@ -67,6 +67,7 @@ dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
 
 dcv_enumerations: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
+dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 assets: /capture-vision/docs/mobile/assets/
 edit_icon: /capture-vision/docs/mobile/assets/img-icon/edit-icon.png

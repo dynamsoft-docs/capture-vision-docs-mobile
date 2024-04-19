@@ -33,13 +33,13 @@ class LicenseManager : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`](#initlicense) | Initialize the license. |
-| [`setDeviceFriendlyName`](#setdevicefriendlyname) | Set a human readable name for the device. |
-| [`getDeviceUUID`](#getdeviceuuid) |  Get the device UUID. |
+| [`initLicense`](#initlicense) | Initializes the license for the application using a license key. |
+| [`setDeviceFriendlyName`](#setdevicefriendlyname) | Assigns a distinctive name to the device, correlating it with its UUID. |
+| [`getDeviceUUID`](#getdeviceuuid) |  Get the unique identifier of the device. |
 
 ### initLicense
 
-Initialize the license.
+Initializes the license for the application using a license key.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -53,15 +53,16 @@ Initialize the license.
 ```swift
 class func initLicense(_ license: String, verificationDelegate delegate: DSLicenseVerificationListener?)
 ```
+
 **Parameters**
 
-`license`: A license key.
+`license`: The license key to be used for initialization.
 
 `delegate`: An delegate object of `DSLicenseVerificationListener` to monitor the license activation status.
 
 ### setDeviceFriendlyName
 
-Set a human readable name for the device.
+Assigns a distinctive name to the device, correlating it with its UUID.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -75,13 +76,14 @@ Set a human readable name for the device.
 ```swift
 class func setDeviceFriendlyName(_ name: String)
 ```
+
 **Parameters**
 
-`name`: The name of the device.
+`name`: A string representing the device which is easier to recognize than its UUID.
 
 ### getDeviceUUID
 
-Get the device UUID.
+Get the unique identifier of the device.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -96,3 +98,6 @@ Get the device UUID.
 class func getDeviceUUID() -> String
 ```
 
+**Return Value**
+
+The unique identifier of the device.

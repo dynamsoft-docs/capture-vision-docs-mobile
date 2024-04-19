@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # ScaledDownColourImageUnit
 
-The `ScaledDownColourImageUnit` class represents a unit that contains a down-scaled colour image.
+The `ScaledDownColourImageUnit` class extends the `IntermediateResultUnit` class and represents a scaled-down colour image unit.
 
 ## Definition
 
@@ -26,8 +26,8 @@ class ScaledDownColourImageUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the down-scaled colour image. |
-| [`setImageData`](#setimagedata) | Sets the `ImageData` object as the image data of the down-scaled colour image. |
+| [`getImageData`](#getimagedata) | Gets the image data for the scaled-down colour image. |
+| [`setImageData`](#setimagedata) | Sets the image data for the scaled-down colour image. |
 
 ## Inherited Methods
 
@@ -45,7 +45,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getImageData
 
-Gets the `ImageData` object as the image data of the down-scaled colour image.
+Gets the image data for the scaled-down colour image.
 
 ```java
 ImageData getImageData();
@@ -57,7 +57,7 @@ The `ImageData` object as the image data of the down-scaled colour image.
 
 ### setImageData
 
-Sets the `ImageData` object as the image data of the down-scaled colour image.
+Sets the image data for the scaled-down colour image.
 
 ```java
 int setImageData(ImageData imageData);

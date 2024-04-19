@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # PredetectedRegionsUnit
 
-The `PredetectedRegionsUnit` class represents a unit that contains a collection of pre-detected regions.
+The `PredetectedRegionsUnit` class extends the `IntermediateResultUnit` class and represents a unit of intermediate result specifically for pre-detected regions.
 
 ## Definition
 
@@ -26,7 +26,7 @@ class PredetectedRegionsUnit extends IntermediateResultUnit
 
 | Method | Description |
 | ------ | ----------- |
-| [`getPredetectedRegions`](#getpredetectedregions) | Get the array of `PredetectedRegionElement` objects. |
+| [`getPredetectedRegions`](#getpredetectedregions) | Gets an array of `PredetectedRegionElement` objects, each representing a pre-detected region detected within the image. |
 | [`getCount`](#getcount) | Get the number of `PredetectedRegionElement` objects. |
 | [`getPredetectedRegion`](#getpredetectedregion) | Get the `PredetectedRegionElement` object at the specified index. |
 | [`removeAllPredetectedRegions`](#removeallpredetectedregions) | Remove all `PredetectedRegionElement` objects. |

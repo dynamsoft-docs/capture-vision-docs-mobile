@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TextZone
 
-The `TextZone` class represents the information of a single text zone.
+The `TextZone` class describes a text zone.
 
 ## Definition
 
@@ -27,7 +27,7 @@ class TextZone
 | Attributes | Description |
 | ---------- | ----------- |
 | [`location`](#location) | The location of the text zone. |
-| [`charContoursIndices`](#charcontoursindices) | The indices of the contours of the characters in the text zone. |
+| [`charContoursIndices`](#charcontoursindices) | The indices of the character contours. |
 
 ### location
 
@@ -39,7 +39,7 @@ Quadrilateral location
 
 ### charContoursIndices
 
-The indices of the contours of the characters in the text zone.
+The indices of the character contours.
 
 ```java
 int[] charContoursIndices

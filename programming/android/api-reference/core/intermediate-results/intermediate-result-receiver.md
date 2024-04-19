@@ -11,6 +11,8 @@ ignore: true
 
 # IntermediateResultReceiver
 
+> You are reading a history page of `DynamsoftCore`. Start from v3.2.10, the `IntermediateResultReceiver` class is moved to the `DynamsoftCaptureVisionRouter` module. View the [`DynamsoftCaptureVisionRouter.IntermediateResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html) for the latest version.
+
 The `IntermediateResultReceiver` interface includes methods for monitoring the output of intermediate results.
 
 ## Definition
@@ -27,39 +29,39 @@ interface IntermediateResultReceiver
 
 | Method | Description |
 | ------ | ----------- |
-| [`getObservationParameters`](#getobservationparameters) | Get an `ObservationParameters` object to configure the observation settings. |
-| [`onPredetectedRegionsReceived`](#onpredetectedregionsreceived) | The method for monitoring the output of `PredetectedRegionsUnit`. |
-| [`onLocalizedBarcodesReceived`](#onlocalizedbarcodesreceived) | The method for monitoring the output of `LocalizedBarcodesUnit`. |
-| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DecodedBarcodesUnit`. |
-| [`onLocalizedTextLinesReceived`](#onlocalizedtextlinesreceived) | The method for monitoring the output of `LocalizedTextLinesUnit`. |
-| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `RecognizedTextLinesUnit`. |
-| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DetectedQuadsUnit`. |
-| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The method for monitoring the output of `NormalizedImagesUnit`. |
-| [`onColourImageUnitReceived`](#oncolourimageunitreceived) | The method for monitoring the output of `ColourImageUnit`. |
-| [`onScaledDownColourImageUnitReceived`](#onscaleddowncolourimageunitreceived) | The method for monitoring the output of `ScaledDownColourImageUnit`. |
-| [`onGrayscaleImageUnitReceived`](#ongrayscaleimageunitreceived) | The method for monitoring the output of `GrayscaleImageUnit`. |
-| [`onTransformedGrayscaleImageUnitReceived`](#ontransformedgrayscaleimageunitreceived) | The method for monitoring the output of `TransformedGrayscaleImageUnit`. |
-| [`onEnhancedGrayscaleImageUnitReceived`](#onenhancedgrayscaleimageunitreceived) | The method for monitoring the output of `EnhancedGrayscaleImageUnit`. |
-| [`onBinaryImageUnitReceived`](#onbinaryimageunitreceived) | The method for monitoring the output of `BinaryImageUnit`. |
-| [`onTextureDetectionResultUnitReceived`](#ontexturedetectionresultunitreceived) | The method for monitoring the output of `TextureDetectionResultUnit`. |
-| [`onTextureRemovedGrayscaleImageUnitReceived`](#ontextureremovedgrayscaleimageunitreceived) | The method for monitoring the output of `TextureRemovedGrayscaleImageUnit`. |
-| [`onTextureRemovedBinaryImageUnitReceived`](#ontextureremovedbinaryimageunitreceived) | The method for monitoring the output of `TextureRemovedBinaryImageUnit`. |
-| [`onContoursUnitReceived`](#oncontoursunitreceived) | The method for monitoring the output of `ContoursUnit`. |
-| [`onLineSegmentsUnitReceived`](#onlinesegmentsunitreceived) | The method for monitoring the output of `LineSegmentsUnit`. |
-| [`onTextZonesUnitReceived`](#ontextzonesunitreceived) | The method for monitoring the output of `TextZonesUnit`. |
-| [`onTextRemovedBinaryImageUnitReceived`](#ontextremovedbinaryimageunitreceived) | The method for monitoring the output of `TextRemovedBinaryImageUnit`. |
-| [`onLongLinesUnitReceived`](#onlonglinesunitreceived) | The method for monitoring the output of `LongLinesUnit`. |
-| [`onCornersUnitReceived`](#oncornersunitreceived) | The method for monitoring the output of `CornersUnit`. |
-| [`onCandidateQuadEdgesUnitReceived`](#oncandidatequadedgesunitreceived) | The method for monitoring the output of `CandidateQuadEdgesUnit`. |
-| [`onCandidateBarcodeZonesUnitReceived`](#oncandidatebarcodezonesunitreceived) | The method for monitoring the output of `CandidateBarcodeZonesUnit`. |
-| [`onScaledUpBarcodeImageUnitReceived`](#onscaledupbarcodeimageunitreceived) | The method for monitoring the output of `ScaledUpBarcodeImageUnit`. |
-| [`onDeformationResistedBarcodeImageUnitReceived`](#ondeformationresistedbarcodeimageunitreceived) | The method for monitoring the output of `DeformationResistedBarcodeImageUnit`. |
-| [`onComplementedBarcodeImageUnitReceived`](#oncomplementedbarcodeimageunitreceived) | The method for monitoring the output of `ComplementedBarcodeImageUnit`. |
-| [`onTaskResultsReceived`](#ontaskresultsreceived) | The method for monitoring the output of task results. |
+| [`getObservationParameters`](#getobservationparameters) | Gets the observed parameters of the intermediate result receiver. Allowing for configuration of intermediate result observation. |
+| [`onPredetectedRegionsReceived`](#onpredetectedregionsreceived) | The callback method triggered when a pre-detected regions unit is received. |
+| [`onLocalizedBarcodesReceived`](#onlocalizedbarcodesreceived) | The callback method triggered when a localized barcodes unit is received. |
+| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The callback method triggered when a decoded barcodes unit is received. |
+| [`onLocalizedTextLinesReceived`](#onlocalizedtextlinesreceived) | The callback method triggered when a localized text lines unit is received. |
+| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The callback method triggered when a recognized text lines unit is received. |
+| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The callback method triggered when a detected quads unit is received. |
+| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The callback method triggered when a normalized images unit is received. |
+| [`onColourImageUnitReceived`](#oncolourimageunitreceived) | The callback method triggered when a colour images unit is received. |
+| [`onScaledDownColourImageUnitReceived`](#onscaleddowncolourimageunitreceived) | The callback method triggered when a scaled down colour images unit is received. |
+| [`onGrayscaleImageUnitReceived`](#ongrayscaleimageunitreceived) | The callback method triggered when a grayscale images unit is received. |
+| [`onTransformedGrayscaleImageUnitReceived`](#ontransformedgrayscaleimageunitreceived) | The callback method triggered when a transformed grayscale images unit is received. |
+| [`onEnhancedGrayscaleImageUnitReceived`](#onenhancedgrayscaleimageunitreceived) | The callback method triggered when a enhanced grayscale images unit is received. |
+| [`onBinaryImageUnitReceived`](#onbinaryimageunitreceived) | The callback method triggered when a binary images unit is received. |
+| [`onTextureDetectionResultUnitReceived`](#ontexturedetectionresultunitreceived) | The callback method triggered when a texture detection results unit is received. |
+| [`onTextureRemovedGrayscaleImageUnitReceived`](#ontextureremovedgrayscaleimageunitreceived) | The callback method triggered when a texture-removed grayscale images unit is received. |
+| [`onTextureRemovedBinaryImageUnitReceived`](#ontextureremovedbinaryimageunitreceived) | The callback method triggered when a texture-removed binary images unit is received. |
+| [`onContoursUnitReceived`](#oncontoursunitreceived) | The callback method triggered when a contours unit is received. |
+| [`onLineSegmentsUnitReceived`](#onlinesegmentsunitreceived) | The callback method triggered when a line segments unit is received. |
+| [`onTextZonesUnitReceived`](#ontextzonesunitreceived) | The callback method triggered when a text zones unit is received. |
+| [`onTextRemovedBinaryImageUnitReceived`](#ontextremovedbinaryimageunitreceived) | The callback method triggered when a text removed binary images unit is received. |
+| [`onLongLinesUnitReceived`](#onlonglinesunitreceived) | The callback method triggered when a long lines unit is received. |
+| [`onCornersUnitReceived`](#oncornersunitreceived) | The callback method triggered when a corners unit is received. |
+| [`onCandidateQuadEdgesUnitReceived`](#oncandidatequadedgesunitreceived) | The callback method triggered when a candidate quad edges unit is received. |
+| [`onCandidateBarcodeZonesUnitReceived`](#oncandidatebarcodezonesunitreceived) | The callback method triggered when a candidate barcode zones unit is received. |
+| [`onScaledUpBarcodeImageUnitReceived`](#onscaledupbarcodeimageunitreceived) | The callback method triggered when a scaled up barcode images unit is received. |
+| [`onDeformationResistedBarcodeImageUnitReceived`](#ondeformationresistedbarcodeimageunitreceived) | The callback method triggered when a deformation-resisted barcode images unit is received. |
+| [`onComplementedBarcodeImageUnitReceived`](#oncomplementedbarcodeimageunitreceived) | The callback method triggered when a complemented barcode images unit is received. |
+| [`onTaskResultsReceived`](#ontaskresultsreceived) | The callback method triggered when a task results unit is received. |
 
 ### getObservationParameters
 
-Get a `ObservationParameters` object to configure the observation settings.
+Gets the observed parameters of the intermediate result receiver. Allowing for configuration of intermediate result observation.
 
 ```java
 ObservationParameters getObservationParameters();
@@ -67,11 +69,11 @@ ObservationParameters getObservationParameters();
 
 **Return Value**
 
-An `ObservationParameters` object.
+The observed parameters, of type `ObservationParameters`. The default parameters are to observe all intermediate result unit types and all tasks.
 
 ### onPredetectedRegionsReceived
 
-The method for monitoring the output of `PredetectedRegionsUnit`.
+The callback method triggered when a pre-detected regions unit is received.
 
 ```java
 void onPredetectedRegionsReceived(PredetectedRegionsUnit unit, IntermediateResultExtraInfo info);
@@ -79,13 +81,13 @@ void onPredetectedRegionsReceived(PredetectedRegionsUnit unit, IntermediateResul
 
 **Parameters**
 
-`[in] unit`: A `PredetectedRegionsUnit` object output by the library.
+`[in] unit`: The result unit that contains the pre-detected regions, of type `PredetectedRegionsUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onLocalizedBarcodesReceived
 
-The method for monitoring the output of `LocalizedBarcodesUnit`.
+The callback method triggered when a localized barcodes unit is received.
 
 ```java
 void onLocalizedBarcodesReceived(LocalizedBarcodesUnit unit, IntermediateResultExtraInfo info);
@@ -93,13 +95,13 @@ void onLocalizedBarcodesReceived(LocalizedBarcodesUnit unit, IntermediateResultE
 
 **Parameters**
 
-`[in] unit`: A `LocalizedBarcodesUnit` object output by the library.
+`[in] unit`: The result unit that contains the localized barcodes, of type `LocalizedBarcodesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onDecodedBarcodesReceived
 
-The method for monitoring the output of `DecodedBarcodesUnit`.
+The callback method triggered when a decoded barcodes unit is received.
 
 ```java
 void onDecodedBarcodesReceived(DecodedBarcodesUnit unit, IntermediateResultExtraInfo info);
@@ -107,13 +109,13 @@ void onDecodedBarcodesReceived(DecodedBarcodesUnit unit, IntermediateResultExtra
 
 **Parameters**
 
-`[in] unit`: A `DecodedBarcodesUnit` object output by the library.
+`[in] unit`: The result unit that contains the decoded barcodes, of type `DecodedBarcodesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onLocalizedTextLinesReceived
 
-The method for monitoring the output of `LocalizedTextLines`.
+The callback method triggered when a localized text lines unit is received.
 
 ```java
 void onLocalizedTextLinesReceived(LocalizedTextLinesUnit unit, IntermediateResultExtraInfo info);
@@ -121,13 +123,13 @@ void onLocalizedTextLinesReceived(LocalizedTextLinesUnit unit, IntermediateResul
 
 **Parameters**
 
-`[in] unit`: A `LocalizedTextLines` object output by the library.
+`[in] unit`: The result unit that contains the localized text lines, of type `LocalizedTextLinesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onRecognizedTextLinesReceived
 
-The method for monitoring the output of `RecognizedTextLinesUnit`.
+The callback method triggered when a recognized text lines unit is received.
 
 ```java
 void onRecognizedTextLinesReceived(RecognizedTextLinesUnit unit, IntermediateResultExtraInfo info);
@@ -135,13 +137,13 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesUnit unit, IntermediateRes
 
 **Parameters**
 
-`[in] unit`: A `RecognizedTextLinesUnit` object output by the library.
+`[in] unit`: The result unit that contains the recognized text lines, of type `RecognizedTextLinesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onDetectedQuadsReceived
 
-The method for monitoring the output of `DetectedQuadsUnit`.
+The callback method triggered when a detected quads unit is received.
 
 ```java
 void onDetectedQuadsReceived(DetectedQuadsUnit unit, IntermediateResultExtraInfo info);
@@ -149,13 +151,13 @@ void onDetectedQuadsReceived(DetectedQuadsUnit unit, IntermediateResultExtraInfo
 
 **Parameters**
 
-`[in] unit`: A `DetectedQuadsUnit` object output by the library.
+`[in] unit`: The result unit that contains the detected quads, of type `DetectedQuadsUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onNormalizedImagesReceived
 
-The method for monitoring the output of `NormalizedImagesUnit`.
+The callback method triggered when a normalized images unit is received.
 
 ```java
 void onNormalizedImagesReceived(NormalizedImagesUnit unit, IntermediateResultExtraInfo info);
@@ -163,13 +165,13 @@ void onNormalizedImagesReceived(NormalizedImagesUnit unit, IntermediateResultExt
 
 **Parameters**
 
-`[in] unit`: A `NormalizedImagesUnit` object output by the library.
+`[in] unit`: The result unit that contains the normalized images, of type `NormalizedImagesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onColourImageUnitReceived
 
-The method for monitoring the output of `ColourImageUnit`.
+The callback method triggered when a colour images unit is received.
 
 ```java
 void onColourImageUnitReceived(ColourImageUnit unit, IntermediateResultExtraInfo info);
@@ -177,13 +179,13 @@ void onColourImageUnitReceived(ColourImageUnit unit, IntermediateResultExtraInfo
 
 **Parameters**
 
-`[in] unit`: A `ColourImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the colour images, of type `ColourImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onScaledDownColourImageUnitReceived
 
-The method for monitoring the output of `ScaledDownColourImageUnit`.
+The callback method triggered when a scaled-down colour images unit is received.
 
 ```java
 void onScaledDownColourImageUnitReceived(ScaledDownColourImageUnit unit, IntermediateResultExtraInfo info);
@@ -191,13 +193,13 @@ void onScaledDownColourImageUnitReceived(ScaledDownColourImageUnit unit, Interme
 
 **Parameters**
 
-`[in] unit`: A `ScaledDownColourImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the scaled-down colour images, of type `ScaledDownColourImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onGrayscaleImageUnitReceived
 
-The method for monitoring the output of `GrayscaleImageUnit`.
+The callback method triggered when a grayscale images unit is received.
 
 ```java
 void onGrayscaleImageUnitReceived(GrayscaleImageUnit unit, IntermediateResultExtraInfo info);
@@ -205,13 +207,13 @@ void onGrayscaleImageUnitReceived(GrayscaleImageUnit unit, IntermediateResultExt
 
 **Parameters**
 
-`[in] unit`: A `GrayscaleImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the grayscale images, of type `GrayscaleImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onTransformedGrayscaleImageUnitReceived
 
-The method for monitoring the output of `TransformedGrayscaleImageUnit`.
+The callback method triggered when a transformed grayscale images unit is received.
 
 ```java
 void onTransformedGrayscaleImageUnitReceived(TransformedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
@@ -219,13 +221,13 @@ void onTransformedGrayscaleImageUnitReceived(TransformedGrayscaleImageUnit unit,
 
 **Parameters**
 
-`[in] unit`: A `TransformedGrayscaleImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the transformed grayscale images, of type `TransformedGrayscaleImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onEnhancedGrayscaleImageUnitReceived
 
-The method for monitoring the output of `EnhancedGrayscaleImageUnit`.
+The callback method triggered when a enhanced grayscale images unit is received.
 
 ```java
 void onEnhancedGrayscaleImageUnitReceived(EnhancedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
@@ -233,13 +235,13 @@ void onEnhancedGrayscaleImageUnitReceived(EnhancedGrayscaleImageUnit unit, Inter
 
 **Parameters**
 
-`[in] unit`: An `EnhancedGrayscaleImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the enhanced grayscale images, of type `EnhancedGrayscaleImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onBinaryImageUnitReceived
 
-The method for monitoring the output of `BinaryImageUnit`.
+The callback method triggered when a binary images unit is received.
 
 ```java
 void onBinaryImageUnitReceived(BinaryImageUnit unit, IntermediateResultExtraInfo info);
@@ -247,13 +249,13 @@ void onBinaryImageUnitReceived(BinaryImageUnit unit, IntermediateResultExtraInfo
 
 **Parameters**
 
-`[in] unit`: A `BinaryImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the binary images, of type `BinaryImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onTextureDetectionResultUnitReceived
 
-The method for monitoring the output of `TextureDetectionResultUnit`.
+The callback method triggered when a texture detection results unit is received.
 
 ```java
 void onTextureDetectionResultUnitReceived(TextureDetectionResultUnit unit, IntermediateResultExtraInfo info);
@@ -261,13 +263,13 @@ void onTextureDetectionResultUnitReceived(TextureDetectionResultUnit unit, Inter
 
 **Parameters**
 
-`[in] unit`: A `TextureDetectionResultUnit` object output by the library.
+`[in] unit`: The result unit that contains the texture detection results, of type `TextureDetectionResultUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onTextureRemovedGrayscaleImageUnitReceived
 
-The method for monitoring the output of `TextureRemovedGrayscaleImageUnit`.
+The callback method triggered when a texture removed grayscale images unit is received.
 
 ```java
 void onTextureRemovedGrayscaleImageUnitReceived(TextureRemovedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
@@ -275,13 +277,13 @@ void onTextureRemovedGrayscaleImageUnitReceived(TextureRemovedGrayscaleImageUnit
 
 **Parameters**
 
-`[in] unit`: A `TextureRemovedGrayscaleImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the texture removed grayscale images, of type `TextureRemovedGrayscaleImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onTextureRemovedBinaryImageUnitReceived
 
-The method for monitoring the output of `TextureRemovedBinaryImageUnit`.
+The callback method triggered when a texture removed binary images unit is received.
 
 ```java
 void onTextureRemovedBinaryImageUnitReceived(TextureRemovedBinaryImageUnit unit, IntermediateResultExtraInfo info);
@@ -289,13 +291,13 @@ void onTextureRemovedBinaryImageUnitReceived(TextureRemovedBinaryImageUnit unit,
 
 **Parameters**
 
-`[in] unit`: A `TextureRemovedBinaryImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the texture removed binary images, of type `TextureRemovedBinaryImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onContoursUnitReceived
 
-The method for monitoring the output of `ContoursUnit`.
+The callback method triggered when a contours unit is received.
 
 ```java
 void onContoursUnitReceived(ContoursUnit unit, IntermediateResultExtraInfo info);
@@ -303,13 +305,13 @@ void onContoursUnitReceived(ContoursUnit unit, IntermediateResultExtraInfo info)
 
 **Parameters**
 
-`[in] unit`: A `ContoursUnit` object output by the library.
+`[in] unit`: The result unit that contains the contours, of type `ContoursUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onLineSegmentsUnitReceived
 
-The method for monitoring the output of `LineSegmentsUnit`.
+The callback method triggered when a line segments unit is received.
 
 ```java
 void onLineSegmentsUnitReceived(LineSegmentsUnit unit, IntermediateResultExtraInfo info);
@@ -317,13 +319,13 @@ void onLineSegmentsUnitReceived(LineSegmentsUnit unit, IntermediateResultExtraIn
 
 **Parameters**
 
-`[in] unit`: A `LineSegmentsUnit` object output by the library.
+`[in] unit`: The result unit that contains the line segments, of type `LineSegmentsUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onTextZonesUnitReceived
 
-The method for monitoring the output of `TextZonesUnit`.
+The callback method triggered when a text zones unit is received.
 
 ```java
 void onTextZonesUnitReceived(TextZonesUnit unit, IntermediateResultExtraInfo info);
@@ -331,13 +333,13 @@ void onTextZonesUnitReceived(TextZonesUnit unit, IntermediateResultExtraInfo inf
 
 **Parameters**
 
-`[in] unit`: A `TextZonesUnit` object output by the library.
+`[in] unit`: The result unit that contains the text zones, of type `TextZonesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onTextRemovedBinaryImageUnitReceived
 
-The method for monitoring the output of `TextRemovedBinaryImageUnit`.
+The callback method triggered when a text removed binary images unit is received.
 
 ```java
 void onTextRemovedBinaryImageUnitReceived(TextRemovedBinaryImageUnit unit, IntermediateResultExtraInfo info);
@@ -345,13 +347,13 @@ void onTextRemovedBinaryImageUnitReceived(TextRemovedBinaryImageUnit unit, Inter
 
 **Parameters**
 
-`[in] unit`: A `TextRemovedBinaryImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the text removed binary images, of type `TextRemovedBinaryImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onLongLinesUnitReceived
 
-The method for monitoring the output of `LongLinesUnit`.
+The callback method triggered when a long lines unit is received.
 
 ```java
 void onLongLinesUnitReceived(LongLinesUnit unit, IntermediateResultExtraInfo info);
@@ -359,13 +361,13 @@ void onLongLinesUnitReceived(LongLinesUnit unit, IntermediateResultExtraInfo inf
 
 **Parameters**
 
-`[in] unit`: A `LongLinesUnit` object output by the library.
+`[in] unit`: The result unit that contains the long lines, of type `LongLinesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onCornersUnitReceived
 
-The method for monitoring the output of `CornersUnit`.
+The callback method triggered when a corners unit is received.
 
 ```java
 void onCornersUnitReceived(CornersUnit unit, IntermediateResultExtraInfo info);
@@ -373,13 +375,13 @@ void onCornersUnitReceived(CornersUnit unit, IntermediateResultExtraInfo info);
 
 **Parameters**
 
-`[in] unit`: A `CornersUnit` object output by the library.
+`[in] unit`: The result unit that contains the corners, of type `CornersUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onCandidateQuadEdgesUnitReceived
 
-The method for monitoring the output of `CandidateQuadEdgesUnit`.
+The callback method triggered when a candidate quad edges unit is received.
 
 ```java
 void onCandidateQuadEdgesUnitReceived(CandidateQuadEdgesUnit unit, IntermediateResultExtraInfo info);
@@ -387,13 +389,13 @@ void onCandidateQuadEdgesUnitReceived(CandidateQuadEdgesUnit unit, IntermediateR
 
 **Parameters**
 
-`[in] unit`: A `CandidateQuadEdgesUnit` object output by the library.
+`[in] unit`: The result unit that contains the candidate quad edges, of type `CandidateQuadEdgesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onCandidateBarcodeZonesUnitReceived
 
-The method for monitoring the output of `CandidateBarcodeZonesUnit`.
+The callback method triggered when a candidate barcode zones unit is received.
 
 ```java
 void onCandidateBarcodeZonesUnitReceived(CandidateBarcodeZonesUnit unit, IntermediateResultExtraInfo info);
@@ -401,13 +403,13 @@ void onCandidateBarcodeZonesUnitReceived(CandidateBarcodeZonesUnit unit, Interme
 
 **Parameters**
 
-`[in] unit`: A `CandidateBarcodeZonesUnit` object output by the library.
+`[in] unit`: The result unit that contains the candidate barcode zones, of type `CandidateBarcodeZonesUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onScaledUpBarcodeImageUnitReceived
 
-The method for monitoring the output of `ScaledUpBarcodeImageUnit`.
+The callback method triggered when a scaled up barcode images unit is received.
 
 ```java
 void onScaledUpBarcodeImageUnitReceived(ScaledUpBarcodeImageUnit unit, IntermediateResultExtraInfo info);
@@ -415,13 +417,13 @@ void onScaledUpBarcodeImageUnitReceived(ScaledUpBarcodeImageUnit unit, Intermedi
 
 **Parameters**
 
-`[in] unit`: A `ScaledUpBarcodeImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the scaled up barcode images, of type `ScaledUpBarcodeImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onDeformationResistedBarcodeImageUnitReceived
 
-The method for monitoring the output of `DeformationResistedBarcodeImageUnit`.
+The callback method triggered when a deformation resisted barcode images unit is received.
 
 ```java
 void onDeformationResistedBarcodeImageUnitReceived(DeformationResistedBarcodeImageUnit unit, IntermediateResultExtraInfo info);
@@ -429,13 +431,13 @@ void onDeformationResistedBarcodeImageUnitReceived(DeformationResistedBarcodeIma
 
 **Parameters**
 
-`[in] unit`: A `DeformationResistedBarcodeImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the deformation resisted barcode images, of type `DeformationResistedBarcodeImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onComplementedBarcodeImageUnitReceived
 
-The method for monitoring the output of `ComplementedBarcodeImageUnit`.
+The callback method triggered when a complemented barcode images unit is received.
 
 ```java
 void onComplementedBarcodeImageUnitReceived(ComplementedBarcodeImageUnit unit, IntermediateResultExtraInfo info);
@@ -443,13 +445,13 @@ void onComplementedBarcodeImageUnitReceived(ComplementedBarcodeImageUnit unit, I
 
 **Parameters**
 
-`[in] unit`: A `ComplementedBarcodeImageUnit` object output by the library.
+`[in] unit`: The result unit that contains the complemented barcode images, of type `ComplementedBarcodeImageUnit`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 ### onTaskResultsReceived
 
-The method for monitoring the output of `IntermediateResult`.
+The callback method triggered when a task results unit is received.
 
 ```java
 void onTaskResultsReceived(IntermediateResult result, IntermediateResultExtraInfo info);
@@ -457,6 +459,6 @@ void onTaskResultsReceived(IntermediateResult result, IntermediateResultExtraInf
 
 **Parameters**
 
-`[in] unit`: An `IntermediateResult` object output by the library.
+`[in] unit`: The result unit that contains the task results, of type `IntermediateResult`.
 
-`[in] info`: The extra info of the result.
+`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.

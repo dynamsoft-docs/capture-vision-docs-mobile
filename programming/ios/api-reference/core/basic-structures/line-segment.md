@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSLineSegment
 
-The `DSLineSegment` class represents a line segment in 2D space, which contains the start point and end point of the line segment.
+The `DSLineSegment` class represents a line segment defined by two `Points`.
 
 ## Definition
 
@@ -33,12 +33,12 @@ class LineSegment : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`startPoint`](#startpoint) | *CGPoint* | The start point of the line segment. |
-| [`endPoint`](#endpoint) | *CGPoint* | The end point of the line segment. |
+| [`startPoint`](#startpoint) | *CGPoint* | The starting point of the line segment. |
+| [`endPoint`](#endpoint) | *CGPoint* | The ending point of the line segment. |
 
 ### startPoint
 
-The start point of the line segment.
+The starting point of the line segment.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -55,7 +55,7 @@ var startPoint: CGPoint { get set }
 
 ### endPoint
 
-The end point of the line segment.
+The ending point of the line segment.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

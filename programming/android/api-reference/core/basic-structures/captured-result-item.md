@@ -28,7 +28,7 @@ class CapturedResultItem
 | ------ | ----------- |
 | [`getType`](#gettype) | Get the type of the captured result item, indicating what kind of data it represents. |
 | [`getReferencedItem`](#getreferenceditem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
-| [`getTargetROIDefName`](#gettargetroidefname) | The name of the target ROI definition which includes a task that generated the result. |
+| [`getTargetROIDefName`](#gettargetroidefname) | Gets the name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
 | [`getTaskName`](#gettaskname) | The name of the task that generated the result. |
 
 ### getType
@@ -57,7 +57,7 @@ The referenced captured result item.
 
 ### getTargetROIDefName
 
-The name of the target ROI definition which includes a task that generated the result.
+Gets the name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result.
 
 ```java
 String getTargetROIDefName();
@@ -65,7 +65,7 @@ String getTargetROIDefName();
 
 **Return Value**
 
-The name of the `targetROIDef`.
+The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object.
 
 ### getTaskName
 

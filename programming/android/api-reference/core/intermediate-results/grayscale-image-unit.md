@@ -26,8 +26,8 @@ class GrayscaleImageUnit: IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getImageData`](#getimagedata) | Gets the `ImageData` object as the image data of the grayscale image. |
-| [`setImageData`](#setimagedata) | Sets the `ImageData` object as the image data of the grayscale image. |
+| [`getImageData`](#getimagedata) | Gets the image data for the grayscale image. |
+| [`setImageData`](#setimagedata) | Sets the image data for the grayscale image. |
 
 ## Inherited Methods
 
@@ -45,7 +45,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getImageData
 
-Gets the `ImageData` object as the image data of the grayscale image.
+Gets the image data for the grayscale image.
 
 ```java
 ImageData getImageData();
@@ -57,7 +57,7 @@ The `ImageData` object as the image data of the grayscale image.
 
 ### setImageData
 
-Sets the `ImageData` object as the image data of the grayscale image.
+Sets the image data for the grayscale image.
 
 ```java
 int setImageData(ImageData imageData);

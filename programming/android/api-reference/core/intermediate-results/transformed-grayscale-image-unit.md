@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TransformedGrayscaleImageUnit
 
-The `TransformedGrayscaleImageUnit` class represents a unit that contains a transformed grayscale image.
+The `TransformedGrayscaleImageUnit` class extends the `IntermediateResultUnit` class and represents a transformed grayscale image unit.
 
 ## Definition
 

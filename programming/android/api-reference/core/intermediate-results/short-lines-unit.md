@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # ShortLinesUnit
 
-The `ShortLinesUnit` class represents a unit that contains the information of the detected short lines.
+The `ShortLinesUnit` class extends the `IntermediateResultUnit` class and represents a unit of intermediate result specifically for short lines.
 
 ## Definition
 
@@ -26,7 +26,7 @@ class ShortLinesUnit extends IntermediateResultUnit
 
 | Methods | Desctiption |
 | ------- | ----------- |
-| [`getShortLines`](#getshortlines) | Gets the array of `LineSegment` as short lines. |
+| [`getShortLines`](#getshortlines) | Gets an array of `LineSegment` objects, each representing a short line detected within the image. |
 | [`getCount`](#getcount) | Gets the number of short lines. |
 | [`getShortLine`](#getshortline) | Gets the short line at the specified index. |
 | [`removeAllShortLines`](#removeallshortlines) | Removes all short lines. |
@@ -50,7 +50,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getShortLines
 
-Gets the array of `LineSegment` as short lines.
+Gets an array of `LineSegment` objects, each representing a short line detected within the image.
 
 ```java
 LineSegment[] getShortLines()
@@ -58,7 +58,7 @@ LineSegment[] getShortLines()
 
 **Return Value**
 
-The array of `LineSegment` as short lines.
+An array of `LineSegment` objects.
 
 ### getCount
 
