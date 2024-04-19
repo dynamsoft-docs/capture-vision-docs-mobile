@@ -26,8 +26,8 @@ class LineSegment
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`startPoint`](#startpoint) | *android.graphics.Point* | The start point of the line segment. |
-| [`endPoint`](#endpoint) | *android.graphics.Point* | The end point of the line segment. |
+| [`startPoint`](#startpoint) | *android.graphics.Point* | The starting point of the line segment. |
+| [`endPoint`](#endpoint) | *android.graphics.Point* | The ending point of the line segment. |
 
 ## Method Summaries
 

@@ -34,10 +34,10 @@ class VideoFrameTag : ImageTag
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`quality`](#quality) | *DSVideoFrameQuality* | The quality of the video frame. |
-| [`isCropped`](#iscropped) | *BOOL* | Whether the video frame is cropped. |
-| [`cropRegion`](#cropregion) | *CGRect* | The crop region of the video frame. |
-| [`originalWidth`](#originalwidth) | *NSInteger* | The original width of the video frame. |
-| [`originalHeight`](#originalheight) | *NSInteger* | The original height of the video frame. |
+| [`isCropped`](#iscropped) | *BOOL* | Indicates whether the video frame is cropped. |
+| [`cropRegion`](#cropregion) | *CGRect* | The region based on which the original frame was cropped. If `isCropped` is false, the region covers the entire original image. |
+| [`originalWidth`](#originalwidth) | *NSInteger* | The original width of the video frame before any cropping. |
+| [`originalHeight`](#originalheight) | *NSInteger* | The original height of the video frame before any cropping. |
 
 ## Method Summaries
 
@@ -83,7 +83,7 @@ var isCropped: Bool { get set }
 
 ### cropRegion
 
-The crop region of the video frame.
+The region based on which the original frame was cropped. If `isCropped` is false, the region covers the entire original image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

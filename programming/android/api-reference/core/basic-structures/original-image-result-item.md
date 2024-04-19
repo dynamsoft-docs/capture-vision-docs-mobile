@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # OriginalImageResultItem
 
-The `OriginalImageResultItem` class represents a captured original image result item, which is a derived class of `CapturedResultItem` and provides a property to get the image data.
+The `OriginalImageResultItem` class extends the [`CapturedResultItem`](captured-result.md) class and represents an original image result item.
 
 ## Definition
 
@@ -22,11 +22,20 @@ The `OriginalImageResultItem` class represents a captured original image result 
 class OriginalImageResultItem extends CapturedResultItem
 ```
 
-## Attributes
+## Methods
 
 | Methods | Description |
 | ------- | ----------- |
 | [`getImageData`](#getimagedata) | Get the image data of the captured original image result item. |
+
+## Inherited Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`getType`](captured-result.md#gettype) | Get the type of the captured result item, indicating what kind of data it represents. |
+| [`getReferencedItem`](captured-result.md#getreferenceditem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
+| [`getTargetROIDefName`](captured-result.md#gettargetroidefname) | Gets the name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
+| [`getTaskName`](captured-result.md#gettaskname) | The name of the task that generated the result. |
 
 ### getImageData
 

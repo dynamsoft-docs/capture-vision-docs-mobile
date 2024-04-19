@@ -11,7 +11,9 @@ ignore: true
 
 # IntermediateResultManager
 
-The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
+> You are reading a history page of `DynamsoftCore`. Start from v3.2.10, the `IntermediateResultManager` class is moved to the `DynamsoftCaptureVisionRouter` module. View the [`DynamsoftCaptureVisionRouter.IntermediateResultManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) for the latest version.
+
+The `IntermediateResultManager` class is responsible for handling intermediate results obtained during the process of an image. It offers methods to both register and deregister receivers of these intermediate results, as well as to retrieve the original image data.
 
 ## Definition
 
@@ -27,13 +29,13 @@ class IntermediateResultManager
 
 | Method | Description |
 | ------ | ----------- |
-| [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
-| [`removeResultReceiver`](#removeresultreceiver) | Adds an intermediate result receiver. |
-| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
+| [`addResultReceiver`](#addresultreceiver) | Adds a `IntermediateResultReceiver` object as the receiver of intermediate results. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified `IntermediateResultReceiver` object. |
+| [`getOriginalImage`](#getoriginalimage) | Retrieves the original image data. |
 
 ### addResultReceiver
 
-Adds an intermediate result receiver to an `IntermediateResultManager` object.
+Adds a `IntermediateResultReceiver` object as the receiver of intermediate results.
 
 ```java
 void addResultReceiver(IntermediateResultReceiver receiver);
@@ -45,7 +47,7 @@ void addResultReceiver(IntermediateResultReceiver receiver);
 
 ### removeResultReceiver
 
-Removes an intermediate result receiver from an `IntermediateResultManager` object.
+Removes the specified `IntermediateResultReceiver` object.
 
 ```java
 void removeResultReceiver(IntermediateResultReceiver receiver);
@@ -57,7 +59,7 @@ void removeResultReceiver(IntermediateResultReceiver receiver);
 
 ### getOriginalImage
 
-Gets the original image data using the image's hash ID.
+Retrieves the original image data.
 
 ```java
 ImageData getOriginalImage(String imageHashId);
@@ -69,4 +71,4 @@ ImageData getOriginalImage(String imageHashId);
 
 **Return Value**
 
-The original image data as [`ImageData`](../basic-structures/image-data.md).
+The original image data, of type [`ImageData`](../basic-structures/image-data.md).

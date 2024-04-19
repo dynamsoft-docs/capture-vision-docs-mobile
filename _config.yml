@@ -60,8 +60,14 @@ dlr_android_api: /label-recognition/docs/mobile/programming/android/api-referenc
 dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
 dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
 
+dcp_android: /code-parser/docs/mobile/programming/android/
+dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
+dcp_ios: /code-parser/docs/mobile/programming/ios/
+dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
+
 dcv_enumerations: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
+dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 assets: /capture-vision/docs/mobile/assets/
 edit_icon: /capture-vision/docs/mobile/assets/img-icon/edit-icon.png

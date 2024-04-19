@@ -11,6 +11,8 @@ ignore: true
 
 # DSIntermediateResultManager
 
+> You are reading a history page of `DynamsoftCore`. Start from v3.2.10, the `DSIntermediateResultManager` class is moved to the `DynamsoftCaptureVisionRouter` module. View the [`DynamsoftCaptureVisionRouter.DSIntermediateResultManager`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) for the latest version.
+
 The `DSIntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
 ## Definition
@@ -34,13 +36,13 @@ class IntermediateResultManager : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
-| [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
-| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using the image's hash ID. |
+| [`addResultReceiver`](#addresultreceiver) | Adds a [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html) object as the receiver of intermediate results. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html) object. |
+| [`getOriginalImage`](#getoriginalimage) | Gets the original image data. |
 
 ### addResultReceiver
 
-Adds an intermediate result receiver to an `IntermediateResultManager` object.
+Adds a [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html) object as the receiver of intermediate results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +59,7 @@ func addResultReceiver(_ receiver: DSIntermediateResultReceiver)
 
 **Parameters**
 
-`receiver`: A delegate object of `DSIntermediateResultReceiver`.  
+`receiver`: A delegate object of [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html).  
 
 **Return Value**
 
@@ -80,7 +82,7 @@ resultManager.addResultReceiver(receiver)
 
 ### removeResultReceiver
 
-Removes an intermediate result receiver from an `IntermediateResultManager` object.
+Removes the specified [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -97,7 +99,7 @@ func removeResultReceiver(_ receiver: DSIntermediateResultReceiver)
 
 **Parameters**
 
-`receiver`: A delegate object of [`DSIntermediateResultReceiver`](intermediate-result-receiver.md).
+`receiver`: A delegate object of [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html).
 
 **Return Value**
 
@@ -120,7 +122,7 @@ resultManager.removeResultReceiver(receiver)
 
 ### getOriginalImage
 
-Gets the original image data using the image's hash ID.
+Gets the original image data.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

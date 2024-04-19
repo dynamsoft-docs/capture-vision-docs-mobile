@@ -26,13 +26,27 @@ class LineSegmentsUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getLineSegments`](#getlinesegments) | Gets the array of [`LineSegment`](../basic-structures/line-segment.html). |
+| [`getLineSegments`](#getlinesegments) | Gets an array of [`LineSegment`](../basic-structures/line-segment.html) objects, each representing a segment of a line detected within the image. |
 | [`getCount`](#getcount) | Gets the number of line segments. |
 | [`getLineSegment`](#getlinesegment) | Gets the [`LineSegment`](../basic-structures/line-segment.html) at the specified index. |
 | [`removeAllLineSegments`](#removealllinesegments) | Removes all line segments. |
 | [`removeLineSegment`](#removelinesegment) | Removes the line segment at the specified index. |
 | [`addLineSegment`](#addlinesegment) | Adds a line segment. |
 | [`setLineSegment`](#setlinesegment) | Sets the line segment at the specified index. |
+
+## Inherited Methods
+
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+
+| Method | Description |
+|------- |-------------|
+| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
+| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image associated with this unit. |
+| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`EnumIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android). |
+| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
+| [`replace`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#replace) | Replaces the old unit with the new unit. |
 
 ### getLineSegments
 

@@ -34,11 +34,11 @@ class CapturedResult : NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash id of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
-| [`originalImageTag`](#originalimagetag) | *DSImageTag* | The [DSImageTag](image-tag.md) of the original image that records information such as the image ID of the original image. |
-| [`items`](#items) | *NSArray<DSCapturedResultItem*> \** | An array of `DSCapturedResultItems`, which are the basic unit of the captured results. A `DSCapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View DSCapturedResultItemType for all available types. |
+| [`originalImageTag`](#originalimagetag) | *DSImageTag* | The [ImageTag]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) associated with the original image. |
+| [`items`](#items) | *NSArray<DSCapturedResultItem*> \** | An array of `DSCapturedResultItems`, which are the basic item of the captured results. A `DSCapturedResultItem` can be an original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View DSCapturedResultItemType for all available types. |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
-| [`errorCode`](#errorcode) | *NSInteger* | Get the error code of this result. |
-| [`errorMessage`](#errormessage) | *NSString \** | Get the error message of this result. |
+| [`errorCode`](#errorcode) | *NSInteger* | Error code associated with the capture result. |
+| [`errorMessage`](#errormessage) | *NSString \** | Error message providing details about the error. |
 | [`decodedBarcodesResult`](#decodedbarcodesresult) | *DSDecodedBarcodesResult* | A [`DSDecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html) object that contains all the [`DSBarcodesResultItems`]({{ site.dbr_ios_api }}barcodes-result-item.html) in the DSCapturedResult. |
 | [`recognizedTextLinesResult`](#recognizedtextlinesresult) | *DSRecognizedTextLinesResult* | A [`DSRecognizedTextLinesResult`]({{ site.dlr_ios_api }}recognized-text-lines-result.html) object that contains all the [`DSTextLinesResultItems`]({{ site.dlr_ios_api }}text-lines-result-item.html) in the DSCapturedResult. |
 | [`detectedQuadsResult`](#detectedquadsresult) | *DSDetectedQuadsResult* | A [`DSDetectedQuadsResult`]({{ site.ddn_ios_api }}detected-quads-result.html) object that contains all the [`DSDetectedQuadResultItem`]({{ site.ddn_ios_api }}detected-quad-result-item.html) in the DSCapturedResult. |

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSEdge
 
-The `DSEdge` class represents an edge of candidate quadrilaterals, which consists of two corners.
+The `DSEdge` class represents an edge defined by two `Corners`.
 
 ## Definition
 
@@ -33,12 +33,12 @@ class Edge : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`startCorner`](#startcorner) | *DSCorner \** | The start corner of the edge. |
-| [`endCorner`](#endcorner) | *DSCorner \** | The end corner of the edge. |
+| [`startCorner`](#startcorner) | *DSCorner \** | The starting corner of the edge. |
+| [`endCorner`](#endcorner) | *DSCorner \** | The ending corner of the edge. |
 
 ### startCorner
 
-The start corner of the edge.
+The starting corner of the edge.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -55,7 +55,7 @@ var startCorner: Corner? { get set }
 
 ### endCorner
 
-The end corner of the edge.
+The ending corner of the edge.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSTextZone
 
-The class `DSTextZone` represents a single text zone.
+The `TextZone` class describes a text zone.
 
 ## Definition
 
@@ -34,7 +34,7 @@ class TextZone: NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`location`](#location) | *DSQuadrilateral * \** | The location of the text zone. |
-| [`charContoursIndices`](#charcontourindices) | *NSArray * \** | The indices of the character contours in the text zone. |
+| [`charContoursIndices`](#charcontourindices) | *NSArray * \** | The indices of the character contours. |
 
 ### location
 
@@ -55,7 +55,7 @@ var location: Quadrilateral? { get set }
 
 ### charContourIndices
 
-The indices of the character contours in the text zone.
+The indices of the character contours.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

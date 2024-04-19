@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSImageSourceAdapter
 
-The `DSImageSourceAdapter` class provides an interface for fetching and buffering images. It is an abstract class that needs to be implemented by a concrete class to provide actual functionality.
+The `ImageSourceAdapter` class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. Implementations must provide specific mechanisms for image retrieval and handling.
 
 ## Definition
 
@@ -33,48 +33,31 @@ class ImageSourceAdapter : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`hasNextImageToFetch`](#hasnextimagetofetch) | *BOOL* |Determines whether there are more images left to fetch. |
-| [`maxImageCount`](#maximagecount) | *NSUInteger* | The property defines the maximum capability of the Video Buffer. |
-| [`bufferOverflowProtectionMode`](#bufferoverflowprotectionmode) | *DSBufferOverflowProtectionMode* | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. You can either block the Video Buffer or push out the oldest image and append a new one. |
-| [`imageCount`](#imagecount) | *NSUInteger* | The property defines current image count in the Video Buffer. |
-| [`bufferEmpty`](#bufferempty) | *BOOL* | The read only property indicates whether the Video Buffer is empty. |
-| [`colourChannelUsageType`](#colourchannelusagetype) | *colourChannelUsageType* | The usage type of a color channel in an image. |
+| [`bufferEmpty`](#bufferempty) | *BOOL* | The read only property determines whether the buffer is currently empty. |
+| [`bufferOverflowProtectionMode`](#bufferoverflowprotectionmode) | *DSBufferOverflowProtectionMode* | Sets the behavior for handling new incoming images when the buffer is full. |
+| [`colourChannelUsageType`](#colourchannelusagetype) | *colourChannelUsageType* | Sets the usage type for color channels in images. |
+| [`hasNextImageToFetch`](#hasnextimagetofetch) | *BOOL* | Determines whether there are more images available to fetch. |
+| [`imageCount`](#imagecount) | *NSUInteger* | The property defines the current number of images in the buffer. |
+| [`maxImageCount`](#maximagecount) | *NSUInteger* | The property defines the maximum number of images that can be buffered. |
 
 ## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
+| [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the internal buffer. |
+| [`clearBuffer`](#clearbuffer) | Clears all images from the buffer, resetting the state for new image fetching. |
+| [`getImage`](#getimage) | Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `DSImageData`. |
+| [`hasImage`](#hasimage) | Checks if an image with the specified ID is present in the buffer. |
+| [`setErrorListener`](#seterrorlistener) | Sets an error listener to receive notifications about errors that occur during image source operations. |
+| [`setNextImageToReturn`](#setnextimagetoreturn) | Sets the processing priority of a specific image. This can affect the order in which images are returned by `getImage`. |
 | [`startFetching`](#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
 | [`stopFetching`](#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
-| [`getImage`](#getimage) | Get an image from the Video Buffer. |
-| [`setNextImageToReturn`](#setnextimagetoreturn) | Specify the next image that is returned by method getImage. |
-| [`hasImage`](#hasimage) | Check the availability of the specified image. |
-| [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
-| [`clearBuffer`](#clearbuffer) | Clears the image buffer. |
-| [`setErrorListener`](#seterrorlistener) | Clears the image buffer. |
 
 ## Attribute Details
 
-### hasNextImageToFetch
+### bufferEmpty
 
-Determines whether there are more images left to fetch.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) BOOL hasNextImageToFetch;
-```
-2. 
-```swift
-var hasNextImageToFetch: Bool { get set }
-```
-
-### maxImageCount
-
-The property defines the maximum capability of the Video Buffer.
+The read only property indicates whether the Video Buffer is empty.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -82,11 +65,11 @@ The property defines the maximum capability of the Video Buffer.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSUInteger maxImageCount;
+@property (nonatomic, assign, readonly, getter=isBufferEmpty) BOOL bufferEmpty;
 ```
 2. 
 ```swift
-var maxImageCount: Int { get set }
+var bufferEmpty: Bool { get }
 ```
 
 ### bufferOverflowProtectionMode
@@ -106,40 +89,6 @@ Sets a mode that determines the action to take when there is a new incoming imag
 var bufferOverflowProtectionMode: DSBufferOverflowProtectionMode { get set }
 ```
 
-### imageCount
-
-The property defines current image count in the Video Buffer.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSUInteger imageCount;
-```
-2. 
-```swift
-var imageCount: Int { get set }
-```
-
-### bufferEmpty
-
-The read only property indicates whether the Video Buffer is empty.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign, readonly, getter=isBufferEmpty) BOOL bufferEmpty;
-```
-2. 
-```swift
-var bufferEmpty: Bool { get }
-```
-
 ### colourChannelUsageType
 
 The usage type of a color channel in an image.
@@ -157,28 +106,62 @@ The usage type of a color channel in an image.
 var colourChannelUsageType: colourChannelUsageType { get set }
 ```
 
+### hasNextImageToFetch
+
+Determines whether there are more images left to fetch.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) BOOL hasNextImageToFetch;
+```
+2. 
+```swift
+var hasNextImageToFetch: Bool { get set }
+```
+
+### imageCount
+
+The property defines current image count in the Video Buffer.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) NSUInteger imageCount;
+```
+2. 
+```swift
+var imageCount: Int { get set }
+```
+
+### maxImageCount
+
+The property defines the maximum capability of the Video Buffer.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) NSUInteger maxImageCount;
+```
+2. 
+```swift
+var maxImageCount: Int { get set }
+```
+
 ## Method Details
 
-### startFetching
+### addImageToBuffer
 
-Start fetching images from the source to the Video Buffer of ImageSourceAdapter.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)startFetching;
-```
-2. 
-```swift
-func startFetching()
-```
-
-### stopFetching
-
-Stop fetching images from the source to the Video Buffer of ImageSourceAdapter.
+Adds an image to the internal buffer.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -186,16 +169,37 @@ Stop fetching images from the source to the Video Buffer of ImageSourceAdapter.
 >
 >1. 
 ```objc
-- (void)stopFetching;
+- (void)addImageToBuffer:(DSImageData*)image;
 ```
 2. 
 ```swift
-func stopFetching()
+func addImageToBuffer(image: DSImageData)
+```
+
+**Parameters**
+
+`[in] image`: The DSImageData object to add.
+
+### clearBuffer
+
+Clears all images from the buffer, resetting the state for new image fetching.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)clearBuffer;
+```
+2. 
+```swift
+func clearBuffer()
 ```
 
 ### getImage
 
-Get an image from the Video Buffer.
+Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `DSImageData`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -212,14 +216,60 @@ func getImage() -> DSImageData?
 
 **Return Value**
 
-An object of DSImageData.
+An object of `DSImageData`.
 
 * If an image is set as the "next image" by method setNextImageToReturn, return that image.
 * If no image is set as the "next image", return the latest image.
 
+### hasImage
+
+Checks if an image with the specified ID is present in the buffer.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (BOOL)hasImage:(NSInteger)imageId;
+```
+2. 
+```swift
+func hasImage(imageId: Int) -> Bool
+```
+
+**Parameters**
+
+`[in] imageId`: The imageId of image you want to check the availability.
+
+**Return Value**
+
+A BOOL value that indicates whether the specified image is found in the video buffer.
+
+### setErrorListener
+
+Sets an error listener to receive notifications about errors that occur during image source operations.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)setErrorListener:(DSImageSourceErrorListener)listener;
+```
+2. 
+```swift
+func setErrorListener(_ listener:ImageSourceErrorListener)
+```
+
+**Parameters**
+
+`[in] listener`: A delegate object of [`DSImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to receive the errors that occurs in the `ImageSourceAdapter`.
+
 ### setNextImageToReturn
 
-Specify the next image that is returned by method getImage.
+Sets the processing priority of a specific image. This can affect the order in which images are returned by [`getImage`](#getimage).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -243,34 +293,9 @@ func setNextImageToReturn(imageId: Int) -> Bool
 
 A BOOL value that indicates whether the specified image is successfully set as the "next image".
 
-### hasImage
+### startFetching
 
-Check the availability of the specified image.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (BOOL)hasImage:(NSInteger)imageId;
-```
-2. 
-```swift
-func hasImage(imageId: Int) -> Bool
-```
-
-**Parameters**
-
-`[in] imageId`: The imageId of image you want to check the availability.
-
-**Return Value**
-
-A BOOL value that indicates whether the specified image is found in the video buffer.
-
-### addImageToBuffer
-
-Adds an image to the buffer of the adapter.
+Start fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -278,20 +303,16 @@ Adds an image to the buffer of the adapter.
 >
 >1. 
 ```objc
-- (void)addImageToBuffer:(DSImageData*)image;
+- (void)startFetching;
 ```
 2. 
 ```swift
-func addImageToBuffer(image: DSImageData)
+func startFetching()
 ```
 
-**Parameters**
+### stopFetching
 
-`[in] image`: The DSImageData object to add.
-
-### clearBuffer
-
-Clears the image buffer.
+Stop fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -299,30 +320,9 @@ Clears the image buffer.
 >
 >1. 
 ```objc
-- (void)clearBuffer;
+- (void)stopFetching;
 ```
 2. 
 ```swift
-func clearBuffer()
+func stopFetching()
 ```
-
-### setErrorListener
-
-Registers a [`ImageSourceErrorListener`](image-source-error-listener.md) to be used as a callback when an error occurs in the `ImageSourceAdapter`.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(void)setErrorListener:(DSImageSourceErrorListener)listener;
-```
-2. 
-```swift
-func setErrorListener(_ listener:ImageSourceErrorListener)
-```
-
-**Parameters**
-
-`[in] listener`: A delegate object of [`DSImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to receive the errors that occurs in the `ImageSourceAdapter`.

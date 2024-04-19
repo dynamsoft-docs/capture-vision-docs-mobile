@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSIntermediateResultUnit
 
-The `DSIntermediateResultUnit` class represents an intermediate result unit used in image processing. It is an abstract base class with multiple subclasses, each representing a different type of unit such as pre-detected regions, localized barcodes, decoded barcodes, localized text lines, binary image, gray image, etc.
+The `IntermediateResultUnit` class represents the base structure for units of intermediate results in image processing. This class acts as a base and contains common methods shared by all intermediate result units.
 
 ## Definition
 
@@ -33,17 +33,17 @@ class IntermediateResultUnit : NSObject
 
 | Method | Description |
 |------- |-------------|
-| [`getHashId`](#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image. |
-| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`](#gettype) | Gets the type of the intermediate result unit. |
+| [`getHashId`](#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image associated with this unit. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the tag associated with the original image. |
+| [`getType`](#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift). |
 | [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
 | [`replace`](#replace) | Replaces the content of the intermediate result unit. |
 
 ### getHashId
 
-Gets the hash ID of the unit.
+Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -60,7 +60,7 @@ func getHashId() -> String
 
 ### getOriginalImageHashId
 
-Get the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class.
+Gets the hash ID of the original image associated with this unit. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -77,7 +77,7 @@ func getOriginalImageHashId() -> String
 
 ### getOriginalImageTag
 
-Gets the image tag of the original image.
+Gets the tag associated with the original image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -98,7 +98,7 @@ The image tag of the original image.
 
 ### getType
 
-Gets the type of the intermediate result unit.
+Gets the type of the intermediate result unit, defined by the enumeration [`DSIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

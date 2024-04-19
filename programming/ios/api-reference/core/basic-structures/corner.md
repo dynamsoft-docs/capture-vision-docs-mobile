@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSCorner
 
-The `DSCorner` class represents a detected corner, which consists of an intersection point and two lines of the corner.
+The `DSCorner` class represents a corner, typically where two line segments meet.
 
 ## Definition
 
@@ -33,14 +33,14 @@ class Corner: NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`type`](#type) | *DSCornerType* | The type of the corner. The types are availabled as normal-intersected, T-intersected, cross-intersected, not-intersected. |
-| [`intersection`](#intersection) | *CGPoint* | The coordinate of the intersection point of the corner. |
-| [`line1`](#line1) | *DSLineSegment \** |One of the lines of the corner. Defined in DSLineSegment. |
-| [`line2`](#line2) | *DSLineSegment \** |One of the lines of the corner. Defined in DSLineSegment. |
+| [`type`](#type) | *DSCornerType* | The type of the corner, represented by the enumeration [`DSCornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=objc,swift). |
+| [`intersection`](#intersection) | *CGPoint* | The point of intersection of the two lines forming the corner. |
+| [`line1`](#line1) | *DSLineSegment \** | The first line segment forming the corner. |
+| [`line2`](#line2) | *DSLineSegment \** | The second line segment forming the corner. |
 
 ### type
 
-The type of the corner. The types are availabled as normal-intersected, T-intersected, cross-intersected, not-intersected.
+The type of the corner, represented by the enumeration [`DSCornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,7 +74,7 @@ var intersection: CGPoint { get set }
 
 ### line1
 
-One of the lines of the corner. Defined in DSLineSegment.
+The first line segment forming the corner.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -91,7 +91,7 @@ var line1: DSLineSegment? { get set }
 
 ### line2
 
-One of the lines of the corner. Defined in DSLineSegment.
+The second line segment forming the corner.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

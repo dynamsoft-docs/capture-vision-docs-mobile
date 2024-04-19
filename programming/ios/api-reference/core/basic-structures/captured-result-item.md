@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSCapturedResultItem
 
-The `DSCapturedResultItem` class represents an item in a captured result, such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
+The `CapturedResultItem` class provides a common structure for representing different types of captured results. Each specific captured result item type will have its own implementation and additional properties specific to that type.
 
 ## Definition
 
@@ -33,14 +33,14 @@ class CapturedResultItem : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`type`](#type) | *DSCapturedResultItemType* | The type of the captured result item. |
-| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
-| [`targetROIDefName`](#targetroidefname) | *NSString* | The name of the `targetROIDef` that produced this `CapturedResultItem`. |
-| [`taskName`](#taskname) | *NSString* | The name of the `Task` that produced this `CapturedResultItem`. |
+| [`type`](#type) | *DSCapturedResultItemType* | The type of the captured result item, indicating what kind of data it represents. |
+| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | A property of type `DSCapturedResultItem` that represents a reference to another captured result item. |
+| [`targetROIDefName`](#targetroidefname) | *NSString* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
+| [`taskName`](#taskname) | *NSString* | The name of the task that generated the result. |
 
 ### type
 
-The type of the captured result item.
+The type of the captured result item, indicating what kind of data it represents.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +57,7 @@ var type: DSCapturedResultItemType { get }
 
 ### referencedItem
 
-The referenced captured result item. The reference dependencies is defined in the Capture Vision settings.
+A property of type `DSCapturedResultItem` that represents a reference to another captured result item.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,7 +74,7 @@ var referencedItem: DSCapturedResultItem? { get }
 
 ### targetROIDefName
 
-The name of the `targetROIDef` that produced this `CapturedResultItem`.
+The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -91,7 +91,7 @@ var targetROIDefName: String? { get }
 
 ### taskName
 
-The name of the `Task` that produced this `CapturedResultItem`.
+The name of the task that generated the result.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # ShortLinesUnit
 
-The `ShortLinesUnit` class represents a unit that contains the information of the detected short lines.
+The `ShortLinesUnit` class extends the `IntermediateResultUnit` class and represents a unit of intermediate result specifically for short lines.
 
 ## Definition
 
@@ -26,7 +26,7 @@ class ShortLinesUnit extends IntermediateResultUnit
 
 | Methods | Desctiption |
 | ------- | ----------- |
-| [`getShortLines`](#getshortlines) | Gets the array of `LineSegment` as short lines. |
+| [`getShortLines`](#getshortlines) | Gets an array of `LineSegment` objects, each representing a short line detected within the image. |
 | [`getCount`](#getcount) | Gets the number of short lines. |
 | [`getShortLine`](#getshortline) | Gets the short line at the specified index. |
 | [`removeAllShortLines`](#removeallshortlines) | Removes all short lines. |
@@ -34,9 +34,23 @@ class ShortLinesUnit extends IntermediateResultUnit
 | [`addShortLine`](#addshortline) | Adds the specified short line. |
 | [`setShortLine`](#setshortline) | Sets the short line at the specified index. |
 
+## Inherited Methods
+
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+
+| Method | Description |
+|------- |-------------|
+| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
+| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image associated with this unit. |
+| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`EnumIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android). |
+| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
+| [`replace`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#replace) | Replaces the old unit with the new unit. |
+
 ### getShortLines
 
-Gets the array of `LineSegment` as short lines.
+Gets an array of `LineSegment` objects, each representing a short line detected within the image.
 
 ```java
 LineSegment[] getShortLines()
@@ -44,7 +58,7 @@ LineSegment[] getShortLines()
 
 **Return Value**
 
-The array of `LineSegment` as short lines.
+An array of `LineSegment` objects.
 
 ### getCount
 

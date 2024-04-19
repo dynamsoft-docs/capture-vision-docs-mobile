@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSTextZonesUnit
 
-The `DSTextZonesUnit` class represents a unit that contains text zones, which is derived from `DSIntermediateResultUnit` class.
+The `DSTextZonesUnit` class extends the `DSIntermediateResultUnit` class and represents a unit of text zones identified during the processing of an image. This class is used to encapsulate the locations of detected text areas within an image, providing a structured representation of where text is located.
 
 ## Definition
 
@@ -33,16 +33,30 @@ class TextZonesUnit: IntermediateResultUnit
 
 | Method | Description |
 |------- |-------------|
-| [`getTextZones`](#gettextzones) | Returns the text zones in this unit. |
+| [`getTextZones`](#gettextzones) | Gets an array of [`DSTextZone`](text-zone.md) objects, each representing the geometric boundaries of a detected text zone within the image. |
 | [`getCount`](#getcount) | Returns the number of text zones in this unit. |
 | [`getTextZone`](#gettextzone) | Returns the text zone at the specified index. |
 | [`removeTextZone`](#removetextzone) | Removes the text zone at the specified index. |
 | [`addTextZone`](#addtextzone) | Adds a text zone to this unit. |
 | [`setTextZone`](#settextzone) | Sets the text zone at the specified index. |
 
+## Inherited Methods
+
+The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+
+| Method | Description |
+|------- |-------------|
+| [`getHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
+| [`getOriginalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image associated with this unit. |
+| [`getOriginalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the tag associated with the original image. |
+| [`getType`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift). |
+| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
+| [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+| [`replace`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#replace) | Replaces the content of the intermediate result unit. |
+
 ### getTextZones
 
-Returns the text zones in this unit.
+Gets an array of [`DSTextZone`](text-zone.md) objects, each representing the geometric boundaries of a detected text zone within the image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

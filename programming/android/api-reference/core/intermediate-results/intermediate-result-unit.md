@@ -27,14 +27,24 @@ class IntermediateResultUnit
 | Method | Description |
 |------- |-------------|
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
-| [`gethashId`](#gethashid) | Gets the hash ID of the unit. |
+| [`gethashId`](#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
 | [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
-| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`](#gettype) | Gets the type of the intermediate result unit. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | Gets the image tag of the original image associated with this unit. |
+| [`getType`](#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`EnumIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android). |
 | [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
 | [`replace`](#replace) | Replaces the old unit with the new unit. |
 
-public int replace(IntermediateResultUnit oldUnit);
+### clone
+
+Creates a copy of the intermediate result unit.
+
+```java
+IntermediateResultUnit clone();
+```
+
+**Return Value**
+
+A copy of the intermediate result unit.
 
 ### getHashId
 
@@ -104,18 +114,6 @@ The corresponding transformation matrices are as follows:
 - original image to local image
 - rotated image to original image
 - original image to rotated image
-
-### clone
-
-Creates a copy of the intermediate result unit.
-
-```java
-IntermediateResultUnit clone();
-```
-
-**Return Value**
-
-A copy of the intermediate result unit.
 
 ### replace
 

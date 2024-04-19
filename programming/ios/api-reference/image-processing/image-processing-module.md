@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSImageProcessingModule
 
-The `DSImageProcessingModule` class defines general functions of the image processing module.
+The `DSImageProcessingModule` class defines common functionality in the `DynamsoftImageProcessing` module.
 
 ## Definition
 
@@ -33,11 +33,11 @@ class ImageProcessingModule : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`getVersion`](#getversion) | Get the version of Dynamsoft Image Processing module. |
+| [`getVersion`](#getversion) | Get the version of `DynamsoftImageProcessing` module. |
 
 ### getVersion
 
-Get the version of Dynamsoft Image Processing module.
+Get the version of `DynamsoftImageProcessing` module.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -54,7 +54,7 @@ class func getVersion() -> String
 
 **Return Value**
 
-The version of Dynamsoft Image Processing module.
+The version of `DynamsoftImageProcessing` module.
 
 **Code Snippet**
 

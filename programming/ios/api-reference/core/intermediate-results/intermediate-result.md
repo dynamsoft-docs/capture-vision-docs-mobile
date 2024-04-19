@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSIntermediateResult
 
-The `DSIntermediateResult` class represents a container containing a collection of `DSIntermediateResultUnit` objects.
+The `IntermediateResult` class represents the collection of all intermediate result units produced during image processing.
 
 ## Definition
 
@@ -33,11 +33,11 @@ class IntermediateResult : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`intermediateResultUnits`](#intermediateresultunits) | *NSArray<DSIntermediateResultUnit*>* \** | An array of `DSIntermediateResultUnit` objects. |
+| [`intermediateResultUnits`](#intermediateresultunits) | *NSArray<DSIntermediateResultUnit*>* \** | An array of `DSIntermediateResultUnit` objects, each representing a different type of intermediate result. |
 
 ### intermediateResultUnits
 
-An array of `DSIntermediateResultUnit` objects.
+An array of `DSIntermediateResultUnit` objects, each representing a different type of intermediate result.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

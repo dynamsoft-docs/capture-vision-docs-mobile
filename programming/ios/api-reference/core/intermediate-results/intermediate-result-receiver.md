@@ -11,6 +11,8 @@ ignore: true
 
 # DSIntermediateResultReceiver
 
+> You are reading a history page of `DynamsoftCore`. Start from v3.2.10, the `DSIntermediateResultReceiver` class is moved to the `DynamsoftCaptureVisionRouter` module. View the [`DynamsoftCaptureVisionRouter.DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html) for the latest version.
+
 The `DSIntermediateResultReceiver` protocol includes methods for monitoring the output of intermediate results.
 
 ## Definition

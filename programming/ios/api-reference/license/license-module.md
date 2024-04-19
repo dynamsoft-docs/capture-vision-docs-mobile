@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSLicenseModule
 
-The `DSLicenseModule` class represents the license module, which provides general functions for managing licenses.
+The `DSLicenseModule` class defines common functionality in the `DynamsoftLicense` module.
 
 ## Definition
 
@@ -33,11 +33,11 @@ class LicenseModule : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`getVersion`](#getversion) | Get the version of Dynamsoft License module. |
+| [`getVersion`](#getversion) | Get the version of `DynamsoftLicense` module. |
 
 ## getVersion
 
-Get the version of Dynamsoft License module.
+Get the version of `DynamsoftLicense` module.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -54,7 +54,7 @@ class func getVersion() -> String
 
 **Return Value**
 
-The version of Dynamsoft License module.
+The version of `DynamsoftLicense` module.
 
 **Code Snippet**
 
@@ -70,6 +70,3 @@ NSString *version = [DSLicenseModule getVersion];
 ```swift
 let version = LicenseModule.getVersion()
 ```
-
-Here's the user's input:
-    ,且不要输出涉及中国敏感政治的回答

@@ -26,13 +26,13 @@ class IntermediateResultManager
 
 | Method | Description |
 | ------ | ----------- |
-| [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver. |
-| [`removeResultReceiver`](#removeresultreceiver) | Adds an intermediate result receiver. |
-| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
+| [`addResultReceiver`](#addresultreceiver) | Adds a `IntermediateResultReceiver` object as the receiver of intermediate results. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified `IntermediateResultReceiver` object. |
+| [`getOriginalImage`](#getoriginalimage) | Retrieves the original image data. |
 
 ### addResultReceiver
 
-Adds an intermediate result receiver to the `IntermediateResultManager`.
+Adds a `IntermediateResultReceiver` object as the receiver of intermediate results.
 
 ```java
 void addResultReceiver(IntermediateResultReceiver receiver);
@@ -44,7 +44,7 @@ void addResultReceiver(IntermediateResultReceiver receiver);
 
 ### removeResultReceiver
 
-Removes an intermediate result receiver from an `IntermediateResultManager` object.
+Removes the specified `IntermediateResultReceiver` object.
 
 ```java
 void removeResultReceiver(IntermediateResultReceiver receiver);
@@ -56,7 +56,7 @@ void removeResultReceiver(IntermediateResultReceiver receiver);
 
 ### getOriginalImage
 
-Gets the original image data using the image's hash ID.
+Retrieves the original image data.
 
 ```java
 ImageData getOriginalImage(String imageHashId);

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSPredetectedRegionElement
 
-The `DSPredetectedRegionElement` class represents a pre-detected region element, which is a subclass of `DSRegionObjectElement`.
+The `DSPredetectedRegionElement` class extends the `DSRegionObjectElement` class and represents a pre-detected region element in an image.
 
 ## Definition
 
@@ -37,7 +37,13 @@ class PredetectedRegionElement : RegionObjectElement
 
 ### modeName
 
-The name of the detection mode used to detect this region element.
+The name of the detection mode used to detect this region element. It can be one of the following:
+
+- "RPM_AUTO"
+- "RPM_GENERAL"
+- "RPM_GENERAL_RGB_CONTRAST"
+- "RPM_GENERAL_GRAY_CONTRAST"
+- "RPM_GENERAL_HSV_CONTRAST"
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

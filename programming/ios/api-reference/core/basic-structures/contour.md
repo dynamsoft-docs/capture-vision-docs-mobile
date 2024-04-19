@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSContour
 
-The `DSContour` class represents a contour in 2D space, which contains an array of CPoint objects, representing the vertices of the contour.
+The `Contour` class represents a contour made up of multiple points.
 
 ## Definition
 
@@ -33,11 +33,11 @@ class Contour : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`points`](#points) | *NSArray \** | An array includes all vertices of the contour. |
+| [`points`](#points) | *NSArray \** | An array of `Point` objects defining the vertices of the contour. |
 
 ### points
 
-An array includes all vertices of the contour.
+An array of `Point` objects defining the vertices of the contour.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -49,5 +49,5 @@ An array includes all vertices of the contour.
 ```
 2. 
 ```swift
-var points: [CPoint] { get set }
+var points: [Point] { get set }
 ```

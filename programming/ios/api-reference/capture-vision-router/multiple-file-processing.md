@@ -16,14 +16,14 @@ noTitleIndex: true
 | [`getInput`](#getinput) | Gets the attached image source adapter object of the Capture Vision Router. |
 | [`addImageSourceStateListener`](#addimagesourcestatelistener) | Registers a `DSImageSourceStateListener` object to be used as a callback when the status of `DSImageSourceAdapter` changes. |
 | [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a `DSImageSourceStateListener` from the Capture Vision Router. |
-| [`addResultReceiver`](#addresultreceiver) | Registers a result receiver to be used as a callback when the library outputs a captured result. |
-| [`removeResultReceiver`](#removeresultreceiver) | Removes a result receiver from the Capture Vision Router. |
-| [`startCapturing`](#startcapturing) | Start capturing with the specified template. |
-| [`stopCapturing`](#stopcapturing) | Tells the Capture Vision Router to stop capturing. |
+| [`addResultReceiver`](#addresultreceiver) | Adds a [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object as the receiver of captured results. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object. |
+| [`startCapturing`](#startcapturing) | Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source. |
+| [`stopCapturing`](#stopcapturing) | Stops the capturing process. |
 | [`addCaptureStateListener`](#addcapturestatelistener) | Registers a `DSCaptureStateListener` to be used as a callback when capture state changes. |
 | [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a `DSCaptureStateListener` that has been configured for the Capture Vision Router. |
-| [`addResultFilter`](#addresultfilter) | Registers a `DSCapturedResultFilter` to be used as a callback when the Capture Vision Router outputs filtered result(s). |
-| [`removeResultFilter`](#removeresultfilter) | Removes a `DSCapturedResultFilter` that has been configured for the Capture Vision Router. |
+| [`addResultFilter`](#addresultfilter) | Adds a `DSCapturedResultFilter` object to filter non-essential results. |
+| [`removeResultFilter`](#removeresultfilter) | Removes the specified `DSCapturedResultFilter` object. |
 
 ## setInput
 
@@ -131,7 +131,7 @@ A BOOL value that indicates whether the `DSImageSourceStateListener` is removed 
 
 ## addResultReceiver
 
-Registers a `DSCapturedResultReceiver` to be used as a callback when the library outputs a `DSCapturedResult`.
+Adds a [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object as the receiver of captured results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -156,7 +156,7 @@ A BOOL value that indicates whether the result receiver is added successfully.
 
 ## removeResultReceiver
 
-Removes a `DSCapturedResultReceiver` from the Capture Vision Router.
+emoves the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -201,7 +201,7 @@ func startCapturing(_ templateName:String) -> BOOL
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
@@ -291,7 +291,7 @@ A BOOL value that indicates whether the capture state listener is removed succes
 
 ## addResultFilter
 
-Registers a `DSCapturedResultFilter` to be used as a callback when the Capture Vision Router outputs filtered result(s).
+Adds a [`DSCapturedResultFilter`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html) object to filter non-essential results. Currnetly, is must be a [`MultiFrameCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -316,7 +316,7 @@ A BOOL value that indicates whether the result filter is added successfully.
 
 ## removeResultFilter
 
-Removes a `DSCapturedResultFilter` that has been configured for the Capture Vision Router via the `addResultFilter` method.
+Removes the specified `DSCapturedResultFilter` object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

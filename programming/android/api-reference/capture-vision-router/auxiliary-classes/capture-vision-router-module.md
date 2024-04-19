@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CaptureVisionRouterModule
 
-The `CaptureVisionRouterModule` class defines general functions of the capture vision router module.
+The `CaptureVisionRouterModule` class defines common functionality in the `CaptureVisionRouter` module.
 
 ## Definition
 
@@ -26,11 +26,11 @@ class CaptureVisionRouterModule
 
 | Method | Description |
 |------- |-------------|
-| [`getVersion`](#getversion) | Get the version of Dynamsoft Capture Vision. |
+| [`getVersion`](#getversion) | Get the version of the CaptureVisionRouter module. |
 
 ### getVersion
 
-Get the version of Dynamsoft Capture Vision.
+Get the version of the CaptureVisionRouter module.
 
 ```java
 static String getVersion();
@@ -38,4 +38,4 @@ static String getVersion();
 
 **Return Value**
 
-The version of Dynamsoft Capture Vision.
+The version of the CaptureVisionRouter module.

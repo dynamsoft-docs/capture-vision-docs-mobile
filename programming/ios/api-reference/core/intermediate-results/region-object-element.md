@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSRegionObjectElement
 
-The `DSRegionObjectElement` class represents an element of a region object in 2D space, which provides the interface for region object elements.
+The `DSRegionObjectElement` class represents a basic element of a region object, including its type, location and reference to another element.
 
 ## Definition
 
@@ -33,14 +33,14 @@ class RegionObjectElement : NSObject
 
 | Method | Description |
 |------- |-------------|
-| [`getLocation`](#getlocation) | Returns the location info of the element. |
-| [`setLocation`](#setlocation) | Sets the location info of the element. |
-| [`getReferencedElement`](#getreferencedelement) | Returns the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`](#getregionobjectelementtype) | Returns the type of the element. |
+| [`getLocation`](#getlocation) | Gets the location of the region object, represented as a quadrilateral. |
+| [`setLocation`](#setlocation) | Sets the location of the region object. |
+| [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`](#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
 
 ### getLocation
 
-Get the location info of the element.
+Gets the location of the region object, represented as a [`Quadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,7 +61,7 @@ The location info of the element that defined in DSQuadrilateral.
 
 ### setLocation
 
-Set the location info of the element.
+Sets the location of the region object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -103,7 +103,7 @@ The referenced element that supports the capturing of this element.
 
 ### getRegionObjectElementType
 
-Get the type of the element.
+Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -120,4 +120,4 @@ func getRegionObjectElementType() -> RegionObjectElementType
 
 **Return Value**
 
-The type of the element.
+The type of the region object element.

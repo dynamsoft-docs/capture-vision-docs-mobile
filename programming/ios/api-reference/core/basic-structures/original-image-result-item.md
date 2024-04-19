@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSOriginalImageResultItem
 
-The `DSOriginalImageResultItem` class represents a captured original image result item, which is a derived class of `DSCapturedResultItem` and provides a property to get the image data.
+The `OriginalImageResultItem` class extends the [`CapturedResultItem`](captured-result.md) class and represents an original image result item.
 
 ## Definition
 
@@ -34,6 +34,15 @@ class OriginalImageResultItem : CapturedResultItem
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`imageData`](#imagedata) | *DSImageData \** | The image data of the captured original image result item. |
+
+## Inherited Attributes
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`type`](captured-result.md#type) | *DSCapturedResultItemType* | The type of the captured result item, indicating what kind of data it represents. |
+| [`referencedItem`](captured-result.md#referenceditem) | *DSCapturedResultItem \** | A property of type `DSCapturedResultItem` that represents a reference to another captured result item. |
+| [`targetROIDefName`](captured-result.md#targetroidefname) | *NSString* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
+| [`taskName`](captured-result.md#taskname) | *NSString* | The name of the task that generated the result. |
 
 ### imageData
 

@@ -35,3 +35,9 @@ The callback method for monitoring the errors that occur in the [`ImageSourceAda
 ```java
 void onErrorReceived(int errorCode, String errorMessage);
 ```
+
+**Parameters**
+
+`errorCode`: An enumeration value of type `EnumErrorCode` indicating the type of error..
+
+`errorMessage`: A string containing the error message providing additional information about the error.

@@ -12,6 +12,14 @@ noTitleIndex: true
 
 The `CapturedResult` class represents the result of a capture operation on an image. Internally, `CapturedResult` stores an array that contains multiple items, each of which may be a barcode, text line, detected quad, normalized image, original image, parsed item, etc.
 
+> You might also looking for:
+>
+> - [DecodedBarcodesResult]({{ site.dbr_android_api }}decoded-barcodes-result.html)
+> - [RecognizedTextLinesResult]({{ site.dlr_android_api }}recognized-text-lines-result.html)
+> - [DetectedQuadsResult]({{ site.ddn_android_api }}detected-quads-result.html)
+> - [NormalizedImagesResult]({{ site.ddn_android_api }}normalized-images-result.html)
+> - [ParsedResults]({{ site.dcp_android_api }}parsed-result.html)
+
 ## Definition
 
 *Namespace:* com.dynamsoft.core.basic_structures
@@ -27,11 +35,11 @@ class CapturedResult
 | Method | Description |
 | ------ | ----------- |
 | [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the hash id of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
-| [`getOriginalImageTag`](#getoriginalimagetag) | Get the [ImageTag](image-tag.md) of the original image that records information such as the image ID of the original image. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | The [ImageTag]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) associated with the original image. |
 | [`getItems`](#getitems) | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
 | [`getrotationTransformMatrix`](#getrotationtransformmatrix) | Get the  rotation transformation matrix of the original image relative to the rotated image. |
-| [`getErrorCode`](#geterrorcode) | Get the error code if an error occurs when processing the image. |
-| [`getErrorMessage`](#geterrormessage) | Get the error message if an error occurs when processing the image. |
+| [`getErrorCode`](#geterrorcode) | Get the error code associated with the capture result. |
+| [`getErrorMessage`](#geterrormessage) | Get the error message associated with the capture result. |
 | [`getDecodedBarcodesResult`](#getdecodedbarcodesresult) | Get the decoded barcodes result. |
 | [`getRecognizedTextLinesResult`](#getrecognizedtextlinesresult) | Get the recognized text lines result. |
 | [`getDetectedQuadsResult`](#getdetectedquadsresult) | Get the detected quads result. |

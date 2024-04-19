@@ -8,15 +8,18 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftCodeParser Module
+
+## 2.2.10 (04/16/2024)
+
+### Improved
+
+- Security update for `DynamsoftCodeParser` library.
+
+### Fixed
+
+- Small fixes and tweaks.
+
 <!-- 
-## 2.2.0 (03/07/2024)
-
-### New
-
-- Added the following methods to the `ParsedResult` class:
-  - `retain`
-  - `release`
-
 ### Breaking Changes
 
 - Removed an internal logic that grouping the text line recognition result of the MRZ. The logic is replaced by the text line group definition of the parameter system. -->

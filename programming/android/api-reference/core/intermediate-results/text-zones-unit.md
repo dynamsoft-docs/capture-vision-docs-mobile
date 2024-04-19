@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TextZonesUnit
 
-The `TextZonesUnit` class represents a unit that contains text zones, which is derived from `IntermediateResultUnit` class.
+The `TextZonesUnit` class extends the `IntermediateResultUnit` class and represents a unit of text zones identified during the processing of an image. This class is used to encapsulate the locations of detected text areas within an image, providing a structured representation of where text is located.
 
 ## Definition
 
@@ -26,7 +26,7 @@ class TextZonesUnit extends IntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getTextZones`](#gettextzones) | Gets the array of `Quadrilaterals` as text zones. |
+| [`getTextZones`](#gettextzones) | Gets an array of `TextZone` objects, each representing the geometric boundaries of a detected text zone within the image. |
 | [`getCount`](#getcount) | Gets the number of text zones. |
 | [`getTextZone`](#gettextzone) | Gets the text zone at the specified index. |
 | [`removeAllTextZones`](#removealltextzones) | Removes all text zones. |
@@ -34,17 +34,31 @@ class TextZonesUnit extends IntermediateResultUnit
 | [`addTextZone`](#addtextzone) | Adds the specified text zone. |
 | [`setTextZone`](#settextzone) | Sets the text zone at the specified index. |
 
+## Inherited Methods
+
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+
+| Method | Description |
+|------- |-------------|
+| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
+| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image associated with this unit. |
+| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`EnumIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android). |
+| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
+| [`replace`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#replace) | Replaces the old unit with the new unit. |
+
 ### getTextZones
 
-Gets the array of `Quadrilaterals` as text zones.
+Gets an array of `TextZone` objects, each representing the geometric boundaries of a detected text zone within the image.
 
 ```java
-Quadrilateral[] getTextZones()
+TextZone[] getTextZones()
 ```
 
 **Return Value**
 
-The array of `Quadrilaterals` as text zones.
+The array of `TextZone` objects.
 
 ### getCount
 

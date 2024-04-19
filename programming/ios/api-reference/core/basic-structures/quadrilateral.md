@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSQuadrilateral
 
-The `DSQuadrilateral` class represents a quadrilateral shape in 2D space, which contains an array of four CGPoint, representing the vertices of the quadrilateral.
+The `DSQuadrilateral` class represents a quadrilateral defined by four points.
 
 ## Definition
 
@@ -33,7 +33,7 @@ class Quadrilateral : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`points`](#points) | *NSArray* |Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`points`](#points) | *NSArray* | An array of four `Point` objects defining the vertices of the quadrilateral. |
 
 ## Method Summaries
 
@@ -48,7 +48,7 @@ class Quadrilateral : NSObject
 
 ### points
 
-Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
+An array of four `Point` objects defining the vertices of the quadrilateral.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

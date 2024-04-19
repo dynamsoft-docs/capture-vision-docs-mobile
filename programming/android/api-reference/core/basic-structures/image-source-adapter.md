@@ -26,88 +26,64 @@ class ImageSourceAdapter
 
 | Method | Description |
 | ------ | ----------- |
-| [`hasNextImageToFetch`](#hasnextimagetofetch) | Determines whether there are more images left to fetch. |
-| [`setMaxImageCount`](#setmaximagecount) | Set the maximum capability of the Video Buffer. |
-| [`getMaxImageCount`](#getmaximagecount) | Get the property defines the maximum capability of the Video Buffer. |
-| [`setBufferOverflowProtectionMode`](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. You can either block the Video Buffer or push out the oldest image and append a new one. |
-| [`getBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Get the buffer overflow protection mode. |
-| [`getImageCount`](#getimagecount) | Get the current image count in the Video Buffer. |
-| [`isBufferEmpty`](#isbufferempty) | Check whether the Video Buffer is empty. |
-| [`setColourChannelUsageType`](#setcolourchannelusagetype) | Set the usage type of a color channel in an image. |
-| [`getColourChannelUsageType`](#getcolourchannelusagetype) | Get the usage type of a color channel in an image. |
+| [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the internal buffer. |
+| [`clearBuffer`](#clearbuffer) | Clears all images from the buffer, resetting the state for new image fetching. |
+| [`getBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Get the current mode for handling buffer overflow. |
+| [`getColourChannelUsageType`](#getcolourchannelusagetype) | Get the current usage type for color channels in images. |
+| [`getImageCount`](#getimagecount) | Get the current number of images in the buffer. |
+| [`getImage`](#getimage) | Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `DSImageData`. |
+| [`getMaxImageCount`](#getmaximagecount) | Get the maximum number of images that can be buffered. |
+| [`hasImage`](#hasimage) | Checks if an image with the specified ID is present in the buffer. |
+| [`hasNextImageToFetch`](#hasnextimagetofetch) | Determines whether there are more images available to fetch. |
+| [`isBufferEmpty`](#isbufferempty) | Determines whether the buffer is currently empty. |
+| [`setBufferOverflowProtectionMode`](#setbufferoverflowprotectionmode) | Sets the behavior for handling new incoming images when the buffer is full. |
+| [`setColourChannelUsageType`](#setcolourchannelusagetype) | Sets the usage type for color channels in images. |
+| [`setErrorListener`](#seterrorlistener) | Sets an error listener to receive notifications about errors that occur during image source operations. |
+| [`setMaxImageCount`](#setmaximagecount) | Sets the maximum number of images that can be buffered at any time. |
+| [`setNextImageToReturn(imageId)`](#setnextimagetoreturnimageid) | Sets the processing priority of a specific image. This can affect the order in which images are returned by getImage. |
+| [`setNextImageToReturn(imageId,keepInBuffer)`](#setnextimagetoreturnimageidkeepinbuffer) | Sets the processing priority of a specific image. This can affect the order in which images are returned by getImage. |
 | [`startFetching`](#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
 | [`stopFetching`](#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
-| [`getImage`](#getimage) | Get an image from the Video Buffer. |
-| [`setNextImageToReturn(imageId)`](#setnextimagetoreturnimageid) | Specify the next image that is returned by method getImage. |
-| [`setNextImageToReturn(imageId,keepInBuffer)`](#setnextimagetoreturnimageidkeepinbuffer) | Specify the next image that is returned by method getImage. |
-| [`hasImage`](#hasimage) | Check the availability of the specified image. |
-| [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
-| [`clearBuffer`](#clearbuffer) | Clears the image buffer. |
-| [`setErrorListener`](#seterrorlistener) | Clears the image buffer. |
 
-### hasNextImageToFetch
+### addImageToBuffer
 
-An abstract method that controls whether there are more images left to fetch.
+Adds an image to the internal buffer.
 
 ```java
-abstract boolean hasNextImageToFetch();
-```
-
-**Return value**
-
-A boolean value that determines whether there are more images left to fetch.
-
-### setMaxImageCount
-
-Set the maximum capability of the Video Buffer.
-
-```java
-void setMaximumImageCount(int count);
+void addImageToBuffer(ImageData image);
 ```
 
 **Parameters**
 
-`[in] count`: The maximum capability of the Video Buffer.
+`[in] image`: The ImageData object to add.
 
-### getMaxImageCount
+### clearBuffer
 
-Get the maximum capability of the Video Buffer.
-
-```java
-int getMaximumImageCount();
-```
-
-**Return Value**
-
-The maximum capability of the Video Buffer.
-
-### setBufferOverflowProtectionMode
-
-Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. You can either block the Video Buffer or push out the oldest image and append a new one.
+Clears all images from the buffer, resetting the state for new image fetching.
 
 ```java
-void setBufferOverflowProtectionMode(BufferOverflowProtectionMode mode);
+void clearBuffer();
 ```
-
-**Parameters**
-
-`[in] mode`: One of the `EnumBufferOverflowProtectionMode` that indicates the buffer overflow protection mode.
 
 ### getBufferOverflowProtectionMode
 
-Get the buffer overflow protection mode.
+Get the current mode for handling buffer overflow.
 
 ```java
 BufferOverflowProtectionMode getBufferOverflowProtectionMode();
 ```
 
-**Return Value**
+### getColourChannelUsageType
 
-The buffer overflow protection mode.
+Get the current usage type for color channels in images.
+
+```java
+EnumColourChannelUsageType getColourChannelUsageType();
+```
 
 ### getImageCount
 
-Get the current image count in the Video Buffer.
+Get the current number of images in the buffer.
 
 ```java
 int getImageCount();
@@ -115,59 +91,7 @@ int getImageCount();
 
 **Return Value**
 
-The current image count in the Video Buffer.
-
-### isBufferEmpty
-
-Check whether the Video Buffer is empty.
-
-```java
-boolean isBufferEmpty();
-```
-
-**Return Value**
-
-A boolean value that indicates whether the Video Buffer is empty.
-
-### setColourChannelUsageType
-
-The usage type of a color channel in an image.
-
-```java
-void setColourChannelUsageType(EnumColourChannelUsageType type);
-```
-
-**Parameters**
-
-`[in] type`: One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
-
-### getColourChannelUsageType
-
-The usage type of a color channel in an image.
-
-```java
-EnumColourChannelUsageType getColourChannelUsageType();
-```
-
-**Return Value**
-
-One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
-
-### startFetching
-
-Start fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
-
-```java
-void startFetching();
-```
-
-### stopFetching
-
-Stop fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
-
-```java
-void stopFetching();
-```
+The current number of images in the buffer.
 
 ### getImage
 
@@ -184,9 +108,117 @@ An object of ImageData.
 * If an image is set as the "next image" by method `setNextImageToReturn`, return that image.
 * If no image is set as the "next image", return the latest image.
 
+### getMaxImageCount
+
+Get the maximum number of images that can be buffered.
+
+```java
+int getMaximumImageCount();
+```
+
+**Return Value**
+
+The maximum capability of the Video Buffer.
+
+### hasImage
+
+Checks if an image with the specified ID is present in the buffer.
+
+```java
+boolean hasImage(int imageId);
+```
+
+**Parameters**
+
+`[in] imageId`: The imageId of image you want to check the availability.
+
+**Return Value**
+
+A boolean value that indicates whether the specified image is found in the video buffer.
+
+### hasNextImageToFetch
+
+Determines whether there are more images available to fetch.
+
+```java
+abstract boolean hasNextImageToFetch();
+```
+
+**Return value**
+
+A boolean value that determines whether there are more images left to fetch.
+
+### isBufferEmpty
+
+Determines whether the buffer is currently empty.
+
+```java
+boolean isBufferEmpty();
+```
+
+**Return Value**
+
+A boolean value that indicates whether the Video Buffer is empty.
+
+### setBufferOverflowProtectionMode
+
+Sets the behavior for handling new incoming images when the buffer is full.
+
+```java
+void setBufferOverflowProtectionMode(BufferOverflowProtectionMode mode);
+```
+
+**Parameters**
+
+`[in] mode`: One of the `EnumBufferOverflowProtectionMode` that indicates the buffer overflow protection mode.
+
+**Return Value**
+
+The buffer overflow protection mode.
+
+### setColourChannelUsageType
+
+Sets the usage type for color channels in images.
+
+```java
+void setColourChannelUsageType(EnumColourChannelUsageType type);
+```
+
+**Parameters**
+
+`[in] type`: One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
+
+**Return Value**
+
+One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
+
+### setErrorListener
+
+Sets an error listener to receive notifications about errors that occur during image source operations.
+
+```java
+void setErrorListener(ImageSourceErrorListener* listener);
+```
+
+**Parameters**
+
+`[in] listener`: A interface object of [`ImageSourceErrorListener`](image-source-error-listener.md) to receive the errors that occurs in the `ImageSourceAdapter`.
+
+### setMaxImageCount
+
+Sets the maximum number of images that can be buffered at any time.
+
+```java
+void setMaximumImageCount(int count);
+```
+
+**Parameters**
+
+`[in] count`: The maximum capability of the Video Buffer.
+
 ### setNextImageToReturn(imageId)
 
-Specify the next image that is returned by method getImage.
+Sets the processing priority of a specific image. This can affect the order in which images are returned by getImage.
 
 ```java
 boolean setNextImageToReturn(int imageId);
@@ -202,7 +234,7 @@ A boolean value that indicates whether the specified image is successfully set a
 
 ### setNextImageToReturn(imageId,keepInBuffer)
 
-Specify the next image that is returned by method getImage.
+Sets the processing priority of a specific image. This can affect the order in which images are returned by getImage.
 
 ```java
 boolean setNextImageToReturn(int imageId, boolean keepInBuffer)
@@ -218,50 +250,18 @@ boolean setNextImageToReturn(int imageId, boolean keepInBuffer)
 
 A boolean value that indicates whether the specified image is successfully set as the "next image".
 
-### hasImage
+### startFetching
 
-Check the availability of the specified image.
-
-```java
-boolean hasImage(int imageId);
-```
-
-**Parameters**
-
-`[in] imageId`: The imageId of image you want to check the availability.
-
-**Return Value**
-
-A boolean value that indicates whether the specified image is found in the video buffer.
-
-### addImageToBuffer
-
-Adds an image to the buffer of the adapter.
+Start fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
 
 ```java
-void addImageToBuffer(ImageData image);
+void startFetching();
 ```
 
-**Parameters**
+### stopFetching
 
-`[in] image`: The ImageData object to add.
-
-### clearBuffer
-
-Clears the image buffer.
+Stop fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
 
 ```java
-void clearBuffer();
+void stopFetching();
 ```
-
-### setErrorListener
-
-Registers a [`ImageSourceErrorListener`](image-source-error-listener.md) to be used as a callback when an error occurs in the `ImageSourceAdapter`.
-
-```java
-void setErrorListener(ImageSourceErrorListener* listener);
-```
-
-**Parameters**
-
-`[in] listener`: A interface object of [`ImageSourceErrorListener`](image-source-error-listener.md) to receive the errors that occurs in the `ImageSourceAdapter`.

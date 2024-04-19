@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSTextureRemovedGrayscaleImageUnit
 
-The `DSTextureRemovedGrayscaleImageUnit` class represents a unit that contains a texture-removed grayscale image. It is derived from the `DSIntermediateResultUnit` class.
+The `DSTextureRemovedGrayscaleImageUnit` class extends the `DSIntermediateResultUnit` class and represents a texture-removed grayscale image unit.
 
 ## Definition
 
@@ -33,12 +33,26 @@ class TextureRemovedGrayscaleImageUnit : IntermediateResultUnit
 
 | Method | Description |
 |------- |-------------|
-| [`setImageData`](#setimagedata) | Sets the image data of the texture removed grayscale image. |
-| [`getImageData`](#getimagedata) | Returns the image data of the texture removed grayscale image. |
+| [`setImageData`](#setimagedata) | Sets the image data for the texture-removed grayscale image. |
+| [`getImageData`](#getimagedata) | Gets the image data for the texture-removed grayscale image. |
+
+## Inherited Methods
+
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+
+| Method | Description |
+|------- |-------------|
+| [`getHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
+| [`getOriginalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image associated with this unit. |
+| [`getOriginalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the tag associated with the original image. |
+| [`getType`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift). |
+| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
+| [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+| [`replace`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#replace) | Replaces the content of the intermediate result unit. |
 
 ### setImageData
 
-Set the image data of the texture removed grayscale image.
+Sets the image data for the texture-removed grayscale image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -63,7 +77,7 @@ Returns the `ErrorCode` if failed. Otherwise, returns 0.
 
 ### getImageData
 
-Get the image data of the texture removed grayscale image.
+Gets the image data for the texture-removed grayscale image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -80,4 +94,4 @@ func getImageData() -> DSImageData?
 
 **Return Value**
 
-The image data of the texture removed grayscale image.
+A `DSImageData` object that describes the texture removed grayscale image.

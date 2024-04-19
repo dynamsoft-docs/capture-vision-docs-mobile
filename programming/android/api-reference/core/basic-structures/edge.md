@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Edge
 
-The `Edge` class represents an edge of candidate quadrilaterals, which consists of two corners.
+The `Edge` class represents an edge defined by two `Corners`.
 
 ## Definition
 
@@ -26,12 +26,12 @@ class Edge
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`startCorner`](#startcorner) | *[Corner](corner.md)* | The start corner of the edge. |
-| [`endCorner`](#endcorner) | *[Corner](corner.md)* | The end corner of the edge. |
+| [`startCorner`](#startcorner) | *[Corner](corner.md)* | The starting corner of the edge. |
+| [`endCorner`](#endcorner) | *[Corner](corner.md)* | The ending corner of the edge. |
 
 ### startCorner
 
-The start corner of the edge.
+The starting corner of the edge.
 
 ```java
 Corner startCorner;
@@ -39,7 +39,7 @@ Corner startCorner;
 
 ### endCorner
 
-The end corner of the edge.
+The ending corner of the edge.
 
 ```java
 Corner endCorner;
