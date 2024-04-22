@@ -22,9 +22,13 @@ The `LicenseVerificationListener` is a interface that includes methods for monit
 interface LicenseVerificationListener
 ```
 
+| Method | Description |
+| ------ | ----------- |
+| [`onLicenseVerified`](#onlicenseverified) | The callback triggered when the license verification result is available. |
+
 ### onLicenseVerified
 
-The method that is triggered when the license server returns the verification info.
+The callback triggered when the license verification result is available.
 
 ```java
 void onLicenseVerified(boolean isSuccess, Exception error);

@@ -33,7 +33,7 @@ class ImageManager : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`saveToFile`](#savetofile) | Save an `ImageData` object as an image file. |
+| [`saveToFile`](#savetofile) | Saves an image to the specified path and format. |
 | [`drawOnImage(image,quads,colour,thickness)`](#drawonimageimagequadscolourthickness) | Add quadrilaterals on the image. |
 | [`drawOnImage(image,lines,colour,thickness)`](#drawonimageimagelinesegmentscolourthickness) | Add lines on the image. |
 | [`drawOnImage(image,contours,colour,thickness)`](#drawonimageimagecontourscolourthickness) | Add contours on the image. |
@@ -42,7 +42,7 @@ class ImageManager : NSObject
 
 ### saveToFile
 
-Save an `ImageData` object as an image file.
+Saves an image to the specified path and format. The desired file format is inferred from the file extension provided in the `path` parameter.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -62,9 +62,12 @@ func save(toFile imageData: ImageData, path: String, overWrite: Bool) throws -> 
 
 **Parameters**
 
-`imageData`: The `ImageData` object to save to an image file.  
-`path`: The targeting file path with the file name and extension name.  
-`overWrite`: A flag indicating whether to overwrite the file if it already exists. Defaults to true.  
+`imageData`: The image to be saved, of type `ImageData`.
+
+`path`: The file path, name and extension name, as a string, under which the image will be saved.
+
+`overWrite`: A flag indicating whether to overwrite the file if it already exists. Defaults to true.
+
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**

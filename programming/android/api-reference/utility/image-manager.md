@@ -26,7 +26,7 @@ class ImageManager
 
 | Method | Description |
 | ------ | ----------- |
-| [`saveToFile`](#savetofile) | Save an `ImageData` object as an image file. |
+| [`saveToFile`](#savetofile) | Saves an image to the specified path and format. |
 | [`drawOnImage(imageData,quads,colour,thickness)`](#drawonimageimagedataquadscolourthickness) | Add quadrilaterals on the image. |
 | [`drawOnImage(imageData,lines,colour,thickness)`](#drawonimageimagedatalinesegmentscolourthickness) | Add lines on the image. |
 | [`drawOnImage(imageData,contours,colour,thickness)`](#drawonimageimagedatacontourscolourthickness) | Add contours on the image. |
@@ -35,7 +35,7 @@ class ImageManager
 
 ### saveToFile
 
-Save an `ImageData` object as an image file.
+Saves an image to the specified path and format. The desired file format is inferred from the file extension provided in the `path` parameter.
 
 ```java
 void saveToFile(ImageData imageData, String path, boolean overWrite) throws UtilityException{}
@@ -43,11 +43,11 @@ void saveToFile(ImageData imageData, String path, boolean overWrite) throws Util
 
 **Parameters**
 
-`[in] imageData`: The `ImageData` object to save to an image file.  
+`[in] imageData`: The image to be saved, of type `ImageData`.
 
-`[in] path`: The targeting file path with the file name and extension name.  
+`[in] path`: The file path, name and extension name, as a string, under which the image will be saved.
 
-`[in] overWrite`: A flag indicating whether to overwrite the file if it already exists. Defaults to true.  
+`[in] overWrite`: A flag indicating whether to overwrite the file if it already exists. Defaults to true.
 
 **Exception**
 
@@ -62,6 +62,36 @@ void saveToFile(ImageData imageData, String path, boolean overWrite) throws Util
 **Return Value**
 
 A boolean value that indicates whether the file is saved successfully.
+
+**Code Snippet**
+
+```java
+@Override
+public void onOriginalImageResultReceived(@NonNull OriginalImageResultItem result) {
+    if (result != null)
+    {
+        ImageManager imageManager = new ImageManager();
+        Thread saveThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    imageManager.saveToFile(result.getImageData(), String.valueOf(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES))+"/DynamsoftImageManager/originalImage.png", true);
+                } catch (UtilityException e) {
+                    throw new RuntimeException(e);
+                } catch (CoreException e) {
+                    throw new RuntimeException(e);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+        saveThread.start();
+    } else {
+        Log.i("CRR", "onOriginalImageResultReceived: Not saved");
+        return;
+    }
+}
+```
 
 ### drawOnImage(imageData,quads,colour,thickness)
 

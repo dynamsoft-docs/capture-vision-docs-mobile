@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # UtilityModule
 
-The `UtilityModule` class defines general functions of the utility module.
+The `UtilityModule` class defines common functionality in the `DynamsoftUtility` module.
 
 ## Definition
 
@@ -26,11 +26,11 @@ class UtilityModule
 
 | Method | Description |
 | ------ | ----------- |
-| [`getVersion`](#getversion) | Get the version of Dynamsoft Utility. |
+| [`getVersion`](#getversion) | Get the version of `DynamsoftUtility` module. |
 
 ## getVersion
 
-Get the version of Dynamsoft Utility.
+Get the version of `DynamsoftUtility` module.
 
 ```java
 static String getVersion();
@@ -38,4 +38,4 @@ static String getVersion();
 
 **Return Value**
 
-The version of Dynamsoft Utility.
+The version of `DynamsoftUtility` module.

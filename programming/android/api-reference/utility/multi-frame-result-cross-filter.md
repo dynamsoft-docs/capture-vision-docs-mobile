@@ -26,16 +26,16 @@ class MultiFrameResultCrossFilter implements CapturedResultFilter
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableResultDeduplication`](#enableresultdeduplication) | Enable filtering out duplicate consecutive results in the period set by `setDuplicateForgetTime` for video streaming recognition. |
-| [`enableResultCrossVerification`](#enableresultcrossverification) | Enable result cross verification to improve the accuracy of video streaming recognition results. |
-| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the time period during which duplicate results of the specified result type are discarded. |
-| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Returns whether the result deduplication feature is enabled for the specified result item type. |
-| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Returns whether the result cross verification feature is enabled for the specified result item type. |
-| [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the time period during which duplicate results of the specified  result type. |
+| [`enableResultDeduplication`](#enableresultdeduplication) | Enables or disables the deduplication process for one or multiple specific result item types. |
+| [`enableResultCrossVerification`](#enableresultcrossverification) | Enables or disables the verification of one or multiple specific result item types. |
+| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the interval during which duplicates are disregarded for a given result item type. |
+| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if deduplication is active for a given result item type. |
+| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Checks if verification is active for a given result item type. |
+| [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the interval during which duplicates are disregarded for a given result item type. |
 
 ### enableResultDeduplication
 
-Enable filtering out duplicate consecutive results in the period set by `setDuplicateForgetTime` for video streaming recognition.
+Enables or disables the deduplication process for one or multiple specific result item types.
 
 ```java
 void enableResultDeduplication(int resultItemTypes, bool enable);
@@ -43,13 +43,13 @@ void enableResultDeduplication(int resultItemTypes, bool enable);
 
 **Parameters**
 
-`[in] resultItemTypes`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).  
+`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
-`[in] enable`: A boolean value that indicates whether to enable the result deduplication feature.
+`[in] enable`: Boolean to toggle deduplication on or off.
 
 ### enableResultCrossVerification
 
-Enable result cross verification to improve the accuracy of video streaming recognition results.
+Enables or disables the verification of one or multiple specific result item types.
 
 ```java
 void enableResultCrossVerification(int resultItemTypes, bool enable);
@@ -57,13 +57,13 @@ void enableResultCrossVerification(int resultItemTypes, bool enable);
 
 **Parameters**
 
-`[in] resultItemTypes`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).  
+`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
-`[in] enable`: A boolean value that indicates whether to enable the result cross verification feature.
+`[in] enable`: Boolean to toggle verification on or off.
 
 ### setDuplicateForgetTime
 
-Sets the time period during which duplicate results of the specified result type are discarded.
+Sets the interval during which duplicates are disregarded for a given result item type.
 
 ```java
 void setDuplicateForgetTime(int resultItemTypes, int time);
@@ -71,13 +71,13 @@ void setDuplicateForgetTime(int resultItemTypes, int time);
 
 **Parameters**
 
-`[in] resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).  
+`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
-`[in] time`: The duplicate forget time of the specified capture result type.
+`[in] time`: Time in milliseconds during which duplicates are disregarded.
 
 ### isResultDeduplicationEnabled
 
-Returns whether the result cross verification feature is enabled for the specified result item type.
+Checks if deduplication is active for a given result item type.
 
 ```java
 boolean isResultDeduplicationEnabled(CapturedResultItemType type);
@@ -85,15 +85,15 @@ boolean isResultDeduplicationEnabled(CapturedResultItemType type);
 
 **Parameters**
 
-`[in] type`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
-A boolean value that indicates whether the result deduplication feature is enabled for the specific result item type.
+Boolean indicating the deduplication status for the specified type.
 
 ### isResultCrossVerificationEnabled
 
-Returns whether the result cross verification feature is enabled for the specified result item type.
+Checks if verification is active for a given result item type.
 
 ```java
 boolean isResultCrossVerificationEnabled(CapturedResultItemType type);
@@ -101,15 +101,15 @@ boolean isResultCrossVerificationEnabled(CapturedResultItemType type);
 
 **Parameters**
 
-`[in] type`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
-A boolean value that indicates whether the result cross verification feature is enabled for the specific result item type.
+Boolean indicating the status of verification for the specified type.
 
 ### getDuplicateForgetTime
 
-Gets the time period during which duplicate results of the specified  result type.
+Gets the interval during which duplicates are disregarded for a given result item type.
 
 ```java
 int getDuplicateForgetTime(CapturedResultItemType type);
@@ -117,8 +117,8 @@ int getDuplicateForgetTime(CapturedResultItemType type);
 
 **Parameters**
 
-`[in] type`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
-The duplicate forget time of the specified capture result type.
+The set interval for the specified item type.
