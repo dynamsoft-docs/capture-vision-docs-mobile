@@ -11,7 +11,7 @@ ignore: true
 
 # DSCapturedResultReceiver
 
-The `DSCapturedResultReceiver` protocol provides methods for monitoring the output of captured results, which can consist of original image result(s), decoded barcode result(s), recognized text line result(s), detected quad result(s), normalized image result(s), or parsed result(s). The `DSCapturedResultReceiver` can add a receiver for any type of captured result or for a specific type of captured result, based on the method that is implemented.
+The `DSCapturedResultReceiver` interface is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. By implementing the `DSCapturedResultReceiver`, you will receive the callback of the various types of captured results, such as original image, decoded barcode, recognized text line, detected quad, normalized image, or parsed data. The `DSCapturedResultReceiver` can add a receiver for any type of captured result or for a specific type of captured result, based on the method that is implemented.
 
 ## Definition
 

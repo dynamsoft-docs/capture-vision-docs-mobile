@@ -163,8 +163,8 @@ func updateSettings(_ templateName:String, settings:SimplifiedCaptureVisionSetti
 
 **Parameters**
 
-`templateName`: Specifies a `CaptureVisionTemplate` by its name.
-`settings`: The [`SimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md) object that contains updated settings.
+`templateName`: Specifies a `CaptureVisionTemplate` by its name.  
+`settings`: The [`SimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vision-settings.md) object that contains updated settings.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**

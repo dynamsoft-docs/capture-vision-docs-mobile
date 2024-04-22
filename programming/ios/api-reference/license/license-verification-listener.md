@@ -31,11 +31,11 @@ protocol LicenseVerificationListener : NSObjectProtocol
 
 | Method | Description |
 | ------ | ----------- |
-| [`onLicenseVerified`](#onlicenseverified) | The method that is triggered when the license server returns the verification info. |
+| [`onLicenseVerified`](#onlicenseverified) | The callback triggered when the license verification result is available. |
 
 ### onLicenseVerified
 
-The method that is triggered when the license server returns the verification info.
+The callback triggered when the license verification result is available.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

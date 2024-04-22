@@ -37,7 +37,7 @@ func captureFromFile(_ file:String, templateName:String) -> CaptureResult
 
 **Parameters**
 
-`file`: The file path and name that you want to capture data from.  
+`file`: The file path and name that you want to capture data from.
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
@@ -82,7 +82,7 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) -> CaptureResul
 
 **Parameters**
 
-`fileBytes`: A `NSData` object that points to a file in memory.  
+`fileBytes`: A `NSData` object that points to a file in memory.
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
@@ -125,7 +125,7 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) -> CaptureResu
 
 **Parameters**
 
-`buffer`: A [`DSImageData`](../core/basic-structures/image-data.md) object that contains image info.  
+`buffer`: A [`DSImageData`](../core/basic-structures/image-data.md) object that contains image info.
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
@@ -169,7 +169,7 @@ func captureFromBuffer(_ image:UIImage, templateName:String) -> CaptureResult
 
 **Parameters**
 
-`image`: A `UIImage` object.  
+`image`: A `UIImage` object.
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
