@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSUtilityModule
 
-The `DSUtilityModule` class defines general functions of the utility module.
+The `DSUtilityModule` class defines common functionality in the `DynamsoftUtility` module.
 
 ## Definition
 
@@ -33,11 +33,11 @@ class UtilityModule : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`getVersion`](#getversion) | Get the version of Dynamsoft Utility. |
+| [`getVersion`](#getversion) | Get the version of `DynamsoftUtility` module. |
 
 ## getVersion
 
-Get the version of Dynamsoft Utility.
+Get the version of `DynamsoftUtility` module.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -54,7 +54,7 @@ class func getVersion() -> String
 
 **Return Value**
 
-The version of Dynamsoft Utility.
+The version of `DynamsoftUtility` module.
 
 **Code Snippet**
 

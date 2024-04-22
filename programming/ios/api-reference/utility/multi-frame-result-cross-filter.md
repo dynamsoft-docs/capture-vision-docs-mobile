@@ -33,16 +33,16 @@ class MultiFrameResultCrossFilter: NSObject, CapturedResultFilter
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableResultDeduplication`](#enableresultdeduplication) | Enable filtering out duplicate consecutive results in the period set by `setDuplicateForgetTime` for video streaming recognition. |
-| [`enableResultCrossVerification`](#enableresultcrossverification) | Enable result cross verification to improve the accuracy of video streaming recognition results. |
-| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the time period during which duplicate results of the specified result type are discarded. |
-| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Returns whether the result deduplication feature is enabled for the specified result item type. |
-| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Returns whether the result cross verification feature is enabled for the specified result item type. |
-| [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the time period during which duplicate results of the specified  result type. |
+| [`enableResultDeduplication`](#enableresultdeduplication) | Enables or disables the deduplication process for one or multiple specific result item types. |
+| [`enableResultCrossVerification`](#enableresultcrossverification) | Enables or disables the verification of one or multiple specific result item types. |
+| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the interval during which duplicates are disregarded for specific result item types. |
+| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if deduplication is active for a given result item type. |
+| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Checks if verification is active for a given result item type. |
+| [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the interval during which duplicates are disregarded for specific result item types. |
 
 ### enableResultDeduplication
 
-Enable filtering out duplicate consecutive results in the period set by `setDuplicateForgetTime` for video streaming recognition.
+Enables or disables the deduplication process for one or multiple specific result item types.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -60,13 +60,13 @@ func enableResultDeduplication(resultItemType: DSCapturedResultItemType, isEnabl
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 `isEnabled`: A BOOL value that indicates whether to enable the result deduplication feature.
 
 ### enableResultCrossVerification
 
-Enable result cross verification feature to improve the accuracy of video streaming recognition results.
+Enables or disables the verification of one or multiple specific result item types.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -84,13 +84,13 @@ func enableResultCrossVerification(resultItemType: DSCapturedResultItemType, isE
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 `isEnabled`: A BOOL value that indicates whether to enable the result cross verification feature.
 
 ### setDuplicateForgetTime
 
-Sets the time period during which duplicate results of the specified result type are discarded.
+Sets the interval during which duplicates are disregarded for specific result item types.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -108,13 +108,13 @@ func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateF
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 `duplicateForgetTime`: The duplicate forget time of the specified capture result type.
 
 ### isResultDeduplicationEnabled
 
-Returns whether the result deduplication feature is enabled for the specified result item type.
+Checks if deduplication is active for a given result item type.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -131,15 +131,15 @@ func isResultDeduplicationEnabled(resultItemType: DSCapturedResultItemType) -> B
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
-A BOOL value that indicates whether the result deduplication feature is enabled for the specific result item type.
+Boolean indicating the deduplication status for the specified type.
 
 ### isResultCrossVerificationEnabled
 
-Returns whether the result cross verification feature is enabled for the specified result item type.
+Checks if verification is active for a given result item type.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -156,15 +156,15 @@ func isResultCrossVerificationEnabled(resultItemType: DSCapturedResultItemType) 
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
-A BOOL value that indicates whether the result cross verification feature is enabled for the specific result item type.
+Boolean indicating the status of verification for the specified type.
 
 ### getDuplicateForgetTime
 
-Gets the time period during which duplicate results of the specified  result type.
+Gets the interval during which duplicates are disregarded for specific result item types.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -181,8 +181,8 @@ func getDuplicateForgetTime(resultItemType: DSCapturedResultItemType) -> Int
 
 **Parameters**
 
-`resultItemType`: Specifies a targeting captured result type with the Eumeration [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
-The duplicate forget time of the specified capture result type.
+The set interval for the specified item type.
