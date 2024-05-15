@@ -22,20 +22,16 @@ The `LineSegment` class represents a line segment in 2D space, which contains th
 class LineSegment
 ```
 
-## Attribute Summaries
+## Methods & Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`startPoint`](#startpoint) | *android.graphics.Point* | The starting point of the line segment. |
 | [`endPoint`](#endpoint) | *android.graphics.Point* | The ending point of the line segment. |
 
-## Method Summaries
-
 | Method | Description |
 | ------ | ----------- |
 | [`LineSegment`](#linesegment-1) | The constructor. |
-
-## Attribute Details
 
 ### startPoint
 
@@ -52,8 +48,6 @@ The end point of the line segment.
 ```java
 Point endPoint;
 ```
-
-## Method Details
 
 ### LineSegment
 

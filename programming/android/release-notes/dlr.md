@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLabelRecognizer Module
 
-## 2.2.30 (05/15/2024)
+## 3.2.30 (05/15/2024)
 
 ### Improved
 
@@ -58,6 +58,6 @@ noTitleIndex: true
   - `RecognizedTextLineElement`
   - `LocalizedTextLineElement` -->
 
-## 2.0.20 (12/07/2023)
+## 3.0.20 (12/07/2023)
 
 The first version of `DynamsoftLabelRecognizer (DLR)` Android edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.

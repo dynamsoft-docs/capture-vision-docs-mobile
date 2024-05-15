@@ -26,13 +26,13 @@ class LicenseManager
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`](#initlicense) | Initializes the license for the application using a license key. This function is overloaded, providing two different usages based on the provided parameters. |
+| [`initLicense`](#initlicense) | Initializes the license for the application using a license key. |
 | [`setDeviceFriendlyName`](#setdevicefriendlyname) | Assigns a distinctive name to the device, correlating it with its UUID. |
 | [`getDeviceUUID`](#getdeviceuuid) | Returns the unique identifier of the device. |
 
 ### initLicense
 
-Initializes the license for the application using a license key. This function is overloaded, providing two different usages based on the provided parameters.
+Initializes the license for the application using a license key.
 
 ```java
 static void initLicense(String license, @NonNull Context context, LicenseVerificationListener listener);

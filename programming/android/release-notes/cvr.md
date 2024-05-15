@@ -11,10 +11,6 @@ noTitleIndex: true
 
 ## 2.2.30 (05/15/2024)
 
-### Improved
-
-- Supported multiple instances of the class `CaptureVisionRouter`.
-
 ### New
 
 - Added a new class [`BufferedItemsManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/buffered-items-manager.html) to manage the buffered character items.
@@ -25,6 +21,10 @@ noTitleIndex: true
 - Fixed a bug where the `DynamsoftNeuralNetwork` module failed to load due to a path error.
 
 ## 2.2.10 (03/07/2024)
+
+### Improved
+
+- Supported multiple instances of the class `CaptureVisionRouter`.
 
 ### New
 

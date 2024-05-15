@@ -29,7 +29,7 @@ The `ImageSourceAdapter` class is an abstract class representing an adapter for 
 class ImageSourceAdapter : NSObject
 ```
 
-## Attribute Summaries
+## Methods & Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -39,8 +39,6 @@ class ImageSourceAdapter : NSObject
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | *BOOL* | Determines whether there are more images available to fetch. |
 | [`imageCount`](#imagecount) | *NSUInteger* | The property defines the current number of images in the buffer. |
 | [`maxImageCount`](#maximagecount) | *NSUInteger* | The property defines the maximum number of images that can be buffered. |
-
-## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
@@ -52,8 +50,6 @@ class ImageSourceAdapter : NSObject
 | [`setNextImageToReturn`](#setnextimagetoreturn) | Sets the processing priority of a specific image. This can affect the order in which images are returned by `getImage`. |
 | [`startFetching`](#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
 | [`stopFetching`](#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
-
-## Attribute Details
 
 ### bufferEmpty
 
@@ -156,8 +152,6 @@ The property defines the maximum capability of the Video Buffer.
 ```swift
 var maxImageCount: Int { get set }
 ```
-
-## Method Details
 
 ### addImageToBuffer
 

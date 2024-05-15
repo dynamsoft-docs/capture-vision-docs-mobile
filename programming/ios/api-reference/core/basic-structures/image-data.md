@@ -29,7 +29,7 @@ The `DSImageData` class defines the structure of an object that represents an im
 class ImageData : NSObject
 ```
 
-## Attribute Summaries
+## Methods & Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -41,13 +41,9 @@ class ImageData : NSObject
 | [`orientation`](#orientation) | *NSInteger* | The orientation information of the image. The library is able to read the orientation information from the EXIF data of the image file. |
 | [`tag`](#tag) | *DSImageTag \** | The tag of the image. |
 
-## Method Summaries
-
 | Method | Description |
 | ------ | ----------- |
 | [`toUIImage`](#touiimage) | Transform the DSImageData to a UIImage. |
-
-## Attribute Details
 
 ### bytes
 
@@ -167,8 +163,6 @@ The tag of the image.
 ```swift
 var tag?: DSImageTag { get set }
 ```
-
-## Method Details
 
 ### toUIImage
 

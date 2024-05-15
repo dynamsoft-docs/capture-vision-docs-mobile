@@ -22,6 +22,10 @@ noTitleIndex: true
 
 ## 2.2.10 (03/07/2024)
 
+### Improved
+
+- Supported multiple instances of the class `CaptureVisionRouter`.
+
 ### New
 
 - Updated the template system

@@ -29,15 +29,13 @@ The `BufferedItemsManager` class is used to manage the buffered items.
 class BufferedItemsManager : NSObject
 ```
 
-## Method Summary
+## Methods
 
 | Method | Description |
 |------- |-------------|
 | [`setMaxBufferedItems`](#setmaxbuffereditems) | Set the maximum number of buffered items. |
 | [`getMaxBufferedItems`](#getmaxbuffereditems) | Get the maximum number of buffered items. |
 | [`getBufferedCharacterItemSet`](#getbufferedcharacteritemset) | Get the buffered item set. |
-
-## Method Details
 
 ### setMaxBufferedItems
 

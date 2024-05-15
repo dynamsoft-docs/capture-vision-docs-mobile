@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLicense Module
 
-## 3.2.20 (04/16/2024)
+## 3.2.20 (05/15/2024)
 
 - Improved the usage count logic of the concurrent license mode.
 - Improved the experience of local cache usage when failing to connect the license server. The renewal of the local cache is optimized as well.

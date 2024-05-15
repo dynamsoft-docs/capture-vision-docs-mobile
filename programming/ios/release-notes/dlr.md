@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLabelRecognizer Module
 
-## 2.2.30 (05/15/2024)
+## 3.2.30 (05/15/2024)
 
 ### Improved
 

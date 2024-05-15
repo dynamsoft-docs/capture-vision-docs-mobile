@@ -29,7 +29,7 @@ The `DSFileImageTag` class represents an image tag that is associated with a fil
 class FileImageTag : ImageTag
 ```
 
-## Attribute Summaries
+## Methods & Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -37,13 +37,9 @@ class FileImageTag : ImageTag
 | [`pageNumber`](#pagenumber) | *NSInteger* | The page number of the current image in the file. |
 | [`totalPages`](#totalpages) | *NSInteger* | The total page number of the file. |
 
-## Method Summaries
-
 | Method | Description |
 | ------ | ----------- |
 | [`initWithImageId`](#initwithimageid) | The constructor of the FileImageTag. |
-
-## Attribute Details
 
 ### filePath
 
@@ -95,8 +91,6 @@ The total page number of the multi-page.
 ```swift
 var totalPages: Int { get }
 ```
-
-## Method Details
 
 ### initWithImageId
 

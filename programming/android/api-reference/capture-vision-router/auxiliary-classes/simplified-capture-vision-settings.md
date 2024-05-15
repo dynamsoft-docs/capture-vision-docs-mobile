@@ -22,7 +22,7 @@ The `SimplifiedCaptureVisionSettings` class contains settings for capturing and 
 class SimplifiedCaptureVisionSettings
 ```
 
-## Method & Attributes
+## Methods & Attributes
 
 | Method               | Description |
 |----------------------|-------------|
@@ -64,8 +64,6 @@ static SimplifiedLabelRecognizerSettings fromJSON(String jsonString);
 **Return Value**
 
 The generated `SimplifiedLabelRecognizerSettings` object.
-
-## Attribute Details
 
 ### capturedResultItemTypes
 

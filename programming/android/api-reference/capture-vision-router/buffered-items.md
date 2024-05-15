@@ -10,13 +10,11 @@ noTitleIndex: true
 
 # Buffered Items
 
-## Method Summary
+## Methods
 
 | Method | Description |
 |------- |-------------|
 | [`getBufferedItemsManager`](#getbuffereditemsmanager) | Returns the manager instance of buffered items. |
-
-## Method Details
 
 ### getBufferedItemsManager
 
