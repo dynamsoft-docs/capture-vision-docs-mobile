@@ -20,6 +20,8 @@ noTitleIndex: true
 | [`removeResultReceiver`](#removeresultreceiver) | Removes the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object. |
 | [`startCapturing`](#startcapturing) | Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source. |
 | [`stopCapturing`](#stopcapturing) | Stops the capturing process. |
+| [`pauseCapturing`](#pausecapturing) | Pauses the capturing process. |
+| [`resumeCapturing`](#resumecapturing) | Resumes the capturing process. |
 | [`addCaptureStateListener`](#addcapturestatelistener) | Registers a `DSCaptureStateListener` to be used as a callback when capture state changes. |
 | [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a `DSCaptureStateListener` that has been configured for the Capture Vision Router. |
 | [`addResultFilter`](#addresultfilter) | Adds a `DSCapturedResultFilter` object to filter non-essential results. |
@@ -181,7 +183,7 @@ A BOOL value that indicates whether the result receiver is removed successfully.
 
 ## startCapturing
 
-Start capturing with the specified template.
+Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -224,7 +226,7 @@ A BOOL value that indicates whether the capture starts successfully.
 
 ## stopCapturing
 
-Tells the Capture Vision Router to stop capturing.
+Stops the capturing process.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -237,6 +239,40 @@ Tells the Capture Vision Router to stop capturing.
 2. 
 ```swift
 func stopCapturing()
+```
+
+## pauseCapturing
+
+Pauses the capturing process.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)pauseCapturing;
+```
+2. 
+```swift
+func pauseCapturing()
+```
+
+## resumeCapturing
+
+Resumes the capturing process.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)resumeCapturing;
+```
+2. 
+```swift
+func resumeCapturing()
 ```
 
 ## addCaptureStateListener
