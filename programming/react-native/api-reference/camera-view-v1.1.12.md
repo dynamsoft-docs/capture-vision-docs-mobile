@@ -25,7 +25,6 @@ The UI component of Dynamsoft Capture Vision. It provides the following function
 | [`torchState`](#torchstate) | The property that indicates the state of the torch light. |
 | [`torchButton`](#torchbutton) | The property that defines how the torch button will be displayed. |
 | [`cameraPosition`](#cameraposition) | The property for selecting front-facing or back-facing camera. |
-| [`enhancedFeatures`](#enhancedfeatures) | The property for enabling enhanced features. |
 
 ## scanRegion
 
@@ -149,12 +148,4 @@ cameraPosition: EnumCameraPosition;
 // The following data can be assigned to the torchState
 cameraPosition={EnumCameraPosition.CP_BACK}
 cameraPosition={EnumCameraPosition.CP_FRONT}
-```
-
-## enhancedFeatures
-
-The property for enabling enhanced features. It can be set via one of the [EnumEnhancedFeature](enum-enhanced-feature.md) options.
-
-```js
-enhancedFeatures?: number;
 ```

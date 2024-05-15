@@ -13,17 +13,18 @@ Dynamsoft Capture Vision iOS edition includes:
 
 | Package | Latest Version |
 | :------ | :------------- |
-| DynamsoftCaptureVisionRouter.xcframework | v2.0.21 |
-| DynamsoftBarcodeReader.xcframework | v10.0.21 |
-| DynamsoftLabelRecognizer.xcframework | v3.0.20 |
-| DynamsoftDocumentNormalizer.xcframework | v1.0.20 |
-| DynamsoftCore.xcframework | v3.0.20 |
-| DynamsoftImageProcessing.xcframework | v2.0.21 |
-| DynamsoftLicense.xcframework | v3.0.20 |
-| DynamsoftCameraEnhancer.xcframework | v4.0.2 |
-| DynamsoftUtility.xcframework | v1.0.21 |
-| DynamsoftCodeParser.xcframework | v2.0.20 |
-| DynamsoftCodeParserDedicator.xcframework | v1.0.10 |
+| DynamsoftCaptureVisionRouter.xcframework | v2.2.30 |
+| DynamsoftBarcodeReader.xcframework | v10.2.11 |
+| DynamsoftLabelRecognizer.xcframework | v3.2.30 |
+| DynamsoftDocumentNormalizer.xcframework | v2.2.11 |
+| DynamsoftCore.xcframework | v3.2.30 |
+| DynamsoftImageProcessing.xcframework | v2.2.30 |
+| DynamsoftNeuralNetwork.xcframework | v1.0.20 |
+| DynamsoftLicense.xcframework | v3.2.20 |
+| DynamsoftCameraEnhancer.xcframework | v4.2.10 |
+| DynamsoftUtility.xcframework | v1.2.20 |
+| DynamsoftCodeParser.xcframework | v2.2.10 |
+| DynamsoftCodeParserDedicator.xcframework | v1.2.20 |
 
 ## Getting Started with DCV iOS Edition
 

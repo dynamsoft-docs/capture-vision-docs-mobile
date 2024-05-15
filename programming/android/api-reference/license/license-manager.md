@@ -26,13 +26,13 @@ class LicenseManager
 
 | Method | Description |
 | ------ | ----------- |
-| [`initLicense`](#initlicense) | Initialize the license. |
-| [`setDeviceFriendlyName`](#setdevicefriendlyname) | Set a human readable name for the device. |
-| [`getDeviceUUID`](#getdeviceuuid) |  Get the device UUID. |
+| [`initLicense`](#initlicense) | Initializes the license for the application using a license key. |
+| [`setDeviceFriendlyName`](#setdevicefriendlyname) | Assigns a distinctive name to the device, correlating it with its UUID. |
+| [`getDeviceUUID`](#getdeviceuuid) | Returns the unique identifier of the device. |
 
 ### initLicense
 
-Initialize the license.
+Initializes the license for the application using a license key.
 
 ```java
 static void initLicense(String license, @NonNull Context context, LicenseVerificationListener listener);
@@ -40,15 +40,15 @@ static void initLicense(String license, @NonNull Context context, LicenseVerific
 
 **Parameters**
 
-`[in] license`: A license key.  
+`[in] license`: The license key to be used for initialization.
 
-`[in] context`: The context that you want to initialize the license.  
+`[in] context`: The context that you want to initialize the license.
 
 `[in] listener`: An listener object of `LicenseVerificationListener` to monitor the license activation status.
 
 ### setDeviceFriendlyName
 
-Set a human readable name for the device.
+Assigns a distinctive name to the device, correlating it with its UUID.
 
 ```java
 static void setDeviceFriendlyName(String name);
@@ -60,7 +60,7 @@ static void setDeviceFriendlyName(String name);
 
 ### getDeviceUUID
 
-Get the device UUID.
+Returns the unique identifier of the device.
 
 ```java
 static String getDeviceUUID(){}
@@ -68,4 +68,4 @@ static String getDeviceUUID(){}
 
 **Return Value**
 
-The device UUID.
+The unique identifier of the device.

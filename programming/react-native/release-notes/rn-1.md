@@ -11,6 +11,17 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.13 (05/08/2024)
+
+### New
+
+- Added `enhancedFeatures` to DCVCameraView class to enable enhanced features such as auto-zoom, frame filter, etc.
+
+### Fixed
+
+- Resolved TS symbol conflicts.
+- Fixed bugs where the app might be freezed when re-opening the camera.
+
 ## 1.1.12 (05/24/2023)
 
 - Added [`enableDuplicateFilter`](../api-reference/barcode-reader.md#enableduplicatefilter) to `DCVBarcodeReader` class to get unique result from the result callback.

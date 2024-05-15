@@ -29,7 +29,7 @@ The `DSVideoFrameTag` class represents a video frame tag, which is a type of ima
 class VideoFrameTag : ImageTag
 ```
 
-## Attribute Summaries
+## Methods & Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -39,13 +39,9 @@ class VideoFrameTag : ImageTag
 | [`originalWidth`](#originalwidth) | *NSInteger* | The original width of the video frame. |
 | [`originalHeight`](#originalheight) | *NSInteger* | The original height of the video frame. |
 
-## Method Summaries
-
 | Method | Description |
 |------- |-------------|
 | [`initWithImageId`](#initwithimageid) | The constructor of `DSVideoFrameTag`. |
-
-## Attribute Details
 
 ### quality
 
@@ -131,8 +127,6 @@ The original height of the video frame.
 ```swift
 var originalHeight: Int { get set }
 ```
-
-## Method Details
 
 ### initWithImageId
 

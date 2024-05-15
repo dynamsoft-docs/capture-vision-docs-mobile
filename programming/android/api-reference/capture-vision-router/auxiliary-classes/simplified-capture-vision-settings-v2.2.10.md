@@ -22,15 +22,10 @@ The `SimplifiedCaptureVisionSettings` class contains settings for capturing and 
 class SimplifiedCaptureVisionSettings
 ```
 
-## Methods & Attributes
+## Attributes
 
-| Method               | Description |
-|----------------------|-------------|
-| [`toJSON`](#tojson) | Generate the current `SimplifiedCaptureVisionSettings` object to a JSON string. |
-| [`fromJSON`](#fromjson) | Generate a `SimplifiedCaptureVisionSettings` object from a JSON string. |
-
-| Attribute | Type | Description |
-| --------- | ---- | ----------- |
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
 | [`capturedResultItemTypes`](#capturedresultitemtypes) | *int* | Specifies the type(s) of CapturedItem(s) that will be captured. |
 | [`roi`](#roi) | *[Quadrilateral](../../core/basic-structures/quadrilateral.md)* | Specifies the region of interest (ROI) where the image capture and recognition will take place. |
 | [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *boolean* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
@@ -40,30 +35,6 @@ class SimplifiedCaptureVisionSettings
 | [`barcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html) \** | Specifies the settings for `DynamsoftBarcodeReader` tasks. |
 | [`labelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html) \** | Specifies the settings for `DynamsoftLabelRecognizer` tasks. |
 | [`documentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.ddn_android_api }}simplified-document-normalizer-settings.html) \** | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
-
-### toJSON
-
-Transform the current `SimplifiedLabelRecognizerSettings` object to a JSON string.
-
-```java
-String toJSON();
-```
-
-**Return Value**
-
-The string that generated from the current `SimplifiedLabelRecognizerSettings` object.
-
-### fromJSON
-
-Generate a `SimplifiedLabelRecognizerSettings` object from a JSON string.
-
-```java
-static SimplifiedLabelRecognizerSettings fromJSON(String jsonString);
-```
-
-**Return Value**
-
-The generated `SimplifiedLabelRecognizerSettings` object.
 
 ### capturedResultItemTypes
 

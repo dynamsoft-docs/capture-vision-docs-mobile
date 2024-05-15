@@ -13,17 +13,18 @@ Dynamsoft Capture Vision Android edition includes:
 
 | Package | Latest Version |
 | :------ | :------------- |
-| DynamsoftCaptureVisionRouter.aar | v2.0.21 |
-| DynamsoftBarcodeReader.aar | v10.0.21 |
-| DynamsoftLabelRecognizer.aar | v3.0.20 |
-| DynamsoftDocumentNormalizer.aar | v1.0.20 |
-| DynamsoftCore.aar | v3.0.20 |
-| DynamsoftImageProcessing.aar | v2.0.21 |
-| DynamsoftLicense.aar | v3.0.30 |
-| DynamsoftCameraEnhancer.aar | v4.0.2 |
-| DynamsoftUtility.aar | v1.0.21 |
-| DynamsoftCodeParser.aar | v2.0.20 |
-| DynamsoftCodeParserDedicator.aar | v1.0.10 |
+| DynamsoftCaptureVisionRouter.aar | v2.2.30 |
+| DynamsoftBarcodeReader.aar | v10.2.11 |
+| DynamsoftLabelRecognizer.aar | v3.2.30 |
+| DynamsoftDocumentNormalizer.aar | v2.2.11 |
+| DynamsoftCore.aar | v3.2.30 |
+| DynamsoftImageProcessing.aar | v2.2.30 |
+| DynamsoftNeuralNetwork.aar | v1.0.20 |
+| DynamsoftLicense.aar | v3.2.20 |
+| DynamsoftCameraEnhancer.aar | v4.2.10 |
+| DynamsoftUtility.aar | v1.2.20 |
+| DynamsoftCodeParser.aar | v2.2.10 |
+| DynamsoftCodeParserDedicator.aar | v1.2.20 |
 
 ## Getting Started with DCV Android Edition
 

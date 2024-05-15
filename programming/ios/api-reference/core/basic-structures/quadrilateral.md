@@ -29,13 +29,11 @@ The `DSQuadrilateral` class represents a quadrilateral defined by four points.
 class Quadrilateral : NSObject
 ```
 
-## Attribute Summaries
+## Methods & Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *NSArray* | An array of four `Point` objects defining the vertices of the quadrilateral. |
-
-## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
@@ -43,8 +41,6 @@ class Quadrilateral : NSObject
 | [`boundingRect`](#boundingrect) | Get the bounding rectangle of the quadrilateral. |
 | [`centrePoint`](#centrepoint) | Get the centre point of the quadrilateral. |
 | [`area`](#area) | Get the area of the quadrilateral. |
-
-## Attribute Details
 
 ### points
 
@@ -62,8 +58,6 @@ An array of four `Point` objects defining the vertices of the quadrilateral.
 ```swift
 var points: [CGPoint] { get set }
 ```
-
-## Method Details
 
 ## contains
 

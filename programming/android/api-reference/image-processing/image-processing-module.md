@@ -25,11 +25,11 @@ class ImageProcessingModule
 
 | Method | Description |
 | ------ | ----------- |
-| [`getVersion`](#getversion) | Get the version of Dynamsoft Image Processing module. |
+| [`getVersion`](#getversion) | Get the version of `DynamsoftImageProcessing` module. |
 
 ### getVersion
 
-Get the version of Dynamsoft Image Processing module.
+Get the version of `DynamsoftImageProcessing` module.
 
 ```java
 static String getVersion();
@@ -37,4 +37,4 @@ static String getVersion();
 
 **Return Value**
 
-The version of Dynamsoft Image Processing module.
+The version of `DynamsoftImageProcessing` module.

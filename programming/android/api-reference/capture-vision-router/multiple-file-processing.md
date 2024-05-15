@@ -22,8 +22,8 @@ noTitleIndex: true
 | [`resumeCapturing`](#resumecapturing) | Resumes the Capture Vision Router. |
 | [`addCaptureStateListener`](#addcapturestatelistener) | Registers a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html) to be used as a callback when capture state is received. |
 | [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html) that has been configured for the Capture Vision Router. |
-| [`addResultFilter`](#addresultfilter) | Adds a `DSCapturedResultFilter` object to filter non-essential results. |
-| [`removeResultFilter`](#removeresultfilter) | Removes the specified `DSCapturedResultFilter` object. |
+| [`addResultFilter`](#addresultfilter) | Adds a `CapturedResultFilter` object to filter non-essential results. |
+| [`removeResultFilter`](#removeresultfilter) | Removes the specified `CapturedResultFilter` object. |
 | [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) received. |
 | [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) from the Capture Vision Router. |
 
@@ -131,7 +131,7 @@ void resumeCapturing();
 
 ## addResultFilter
 
-Adds a `DSCapturedResultFilter` object to filter non-essential results. Currnetly, [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) is the only supported implementation of the `CapturedResultFilter`.
+Adds a `CapturedResultFilter` object to filter non-essential results. Currnetly, [`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) is the only supported implementation of the `CapturedResultFilter`.
 
 ```java
 void addResultFilter(CapturedResultFilter filter);
@@ -143,7 +143,7 @@ void addResultFilter(CapturedResultFilter filter);
 
 ## removeResultFilter
 
-Removes the specified `DSCapturedResultFilter` object.
+Removes the specified `CapturedResultFilter` object.
 
 ```java
 void removeResultFilter(CapturedResultFilter filter);

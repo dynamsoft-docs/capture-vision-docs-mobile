@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftDocumentNormalizer Module
 
+## 2.2.11 (04/17/2024)
+
+- Updated the privacy list of `DynamsoftDocumentNormalizer.xcframework` and other related libraries.
+
 ## 2.2.10 (03/07/2024)
 
 ### New

@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCore Module
 
+## 3.2.30 (05/15/2024)
+
+- Small fixes and tweaks.
+
 ## 3.2.10 (03/07/2024)
 
 ### New

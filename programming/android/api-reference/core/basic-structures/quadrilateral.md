@@ -22,21 +22,17 @@ The `Quadrilateral` class represents a quadrilateral shape in 2D space, which co
 class Quadrilateral
 ```
 
-## Attributes Summaries
+## Methods & Attributes
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *android.graphics.Point[]* | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
-
-## Method Summaries
 
 | Method | Description |
 | ------ | ----------- |
 | [`contains`](#contains) | Check whether the input point is contained by the quadrilateral. |
 | [`getBoundingRect`](#getboundingrect) | Get the bounding rectangle of the quadrilateral. |
 | [`getArea`](#getarea) | Get the area of the quadrilateral. |
-
-## Attributes Details
 
 ### points
 
@@ -46,9 +42,7 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 Point[] points;
 ```
 
-## Method Details
-
-## contains
+### contains
 
 Check whether the input point is contained by the quadrilateral.
 
@@ -64,7 +58,7 @@ boolean contains(Point point);
 
 A boolean value that indicates whether the point is contained by the quadrilateral.
 
-## getBoundingRect
+### getBoundingRect
 
 Get the bounding rectangle of the quadrilateral.
 
@@ -76,7 +70,7 @@ Rect getBoundingRect();
 
 The bounding rectangle of the quadrilateral.
 
-## getArea
+### getArea
 
 Get the area of the quadrilateral.
 

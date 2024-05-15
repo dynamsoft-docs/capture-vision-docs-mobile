@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCameraEnhancer Module
 
+## 4.2.10 (05/15/2024)
+
+- Small fixes and tweaks.
+
 ## 4.2.0 (03/07/2024)
 
 Internal changes to be compatible with DynamsoftCaptureVisionRouter v2.2.10.

@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftBarcodeReader Module
 
+## 10.2.11 (05/15/2024)
+
+- Added new methods `toJson` & `fromJson` to `SimplifiedBarcodeReaderSettings` class.
+
 ## 10.2.10 (04/16/2024)
 
 ### New

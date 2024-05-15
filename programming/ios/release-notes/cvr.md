@@ -9,7 +9,22 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionRouter Module
 
+## 2.2.30 (05/15/2024)
+
+### New
+
+- Added a new class [`BufferedItemsManager`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/buffered-items-manager.html) to manage the buffered character items.
+- Added a new method [`getBufferedItemsManger`]({{ site.dcv_ios_api }}capture-vision-router/buffered-items.html#getbuffereditemsmanager) to get an object of `BufferedItemsManager`.
+
+### Fixed
+
+- Fixed a bug where the DynamsoftNeuralNetwork module failed to load due to a path error.
+
 ## 2.2.10 (03/07/2024)
+
+### Improved
+
+- Supported multiple instances of the class `CaptureVisionRouter`.
 
 ### New
 
