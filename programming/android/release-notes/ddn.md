@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftDocumentNormalizer Module
 
+## 2.2.11 (05/15/2024)
+
+- Added new methods `toJson` & `fromJson` to `SimplifiedDocumentNormalizerSettings` class.
+
 ## 2.2.10 (03/07/2024)
 
 ### New
