@@ -11,11 +11,17 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.14 (05/16/2024)
+
+### Fixed
+
+- Resolved the compatibility issue for **react-native 0.73.0+**.
+
 ## 1.1.13 (05/08/2024)
 
 ### New
 
-- Added `enhancedFeatures` to DCVCameraView class to enable enhanced features such as auto-zoom, frame filter, etc.
+- Added `enhancedFeatures` to `DCVCameraView` class to enable enhanced features such as auto-zoom, frame filter, etc.
 
 ### Fixed
 
