@@ -362,5 +362,5 @@ View the API reference to see how to use other features of Dynamsoft Capture Vis
 
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
 - A one-day trial license is available by default for every new device to try Dynamsoft Capture Vision.
-- You can <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile&utm_source=docs" target="_blank"> request a 30-day free trial license</a> via Dynamsoft customer portal for further evaluation.
+>- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=flutter&version=9){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
 - [Contact us](https://www.dynamsoft.com/company/contact/) to purchase a full license.

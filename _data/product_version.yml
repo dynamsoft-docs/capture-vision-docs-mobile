@@ -26,6 +26,8 @@ version_info_list_mobile:
       - 1.0.2_cordova
       - 1.0.1_cordova
       - 1.0.0_cordova
+      - 1.1.13_reactNative
+      - 1.1.12_reactNative
       - 1.1.11_reactNative
       - 1.1.9_reactNative
       - 1.1.8_reactNative
