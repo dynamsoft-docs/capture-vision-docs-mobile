@@ -153,7 +153,7 @@ cameraPosition={EnumCameraPosition.CP_FRONT}
 
 ## enhancedFeatures
 
-The property for enabling enhanced features. It can be set via one of the [EnumEnhancedFeature](enum-enhanced-feature.md) options.
+The property for enabling enhanced features. It can be set via one of the [EnumEnhancedFeature](enum-enhanced-features.html) options.
 
 ```js
 enhancedFeatures?: number;
