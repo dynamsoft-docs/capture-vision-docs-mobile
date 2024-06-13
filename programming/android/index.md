@@ -42,7 +42,7 @@ Dynamsoft Capture Vision Android edition includes:
 
 To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
 
-* <a href = "https://www.dynamsoft.com/customer/license/trialLicense?utm_source=doc&product=DCV&package=mobile" target = "_blank">Request a 30-day free trial license
+* <a href = "https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dcv&package=mobile" target = "_blank">Request a 30-day free trial license
 
 ### Contact Us
 
