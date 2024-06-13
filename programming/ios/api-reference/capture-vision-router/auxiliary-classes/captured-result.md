@@ -47,7 +47,7 @@ class CapturedResult : NSObject
 
 ### originalImageHashId
 
-The hash ID of the original image which can be used to get the original image via the [IntermediateResultManager](../intermediate-results/intermediate-result-manager.md) class.
+The hash ID of the original image which can be used to get the original image via the [IntermediateResultManager]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -64,7 +64,7 @@ var originalImageHashId: String { get }
 
 ### originalImageTag
 
-The [DSImageTag](image-tag.md) of the original image that records information such as the image ID of the original image.
+The [DSImageTag]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) of the original image that records information such as the image ID of the original image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,7 +81,7 @@ var originalImageTag: ImageTag { get }
 
 ### items
 
-An array of [DSCapturedResultItem](captured-result-item.md), which is the basic unit of the captured results. A DSCapturedResultItem can be an original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View DSCapturedResultItemType for all available types.
+An array of [DSCapturedResultItem]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html), which is the basic unit of the captured results. A DSCapturedResultItem can be an original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View DSCapturedResultItemType for all available types.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

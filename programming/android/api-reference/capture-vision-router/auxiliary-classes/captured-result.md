@@ -48,7 +48,7 @@ class CapturedResult
 
 ### getOriginalImageHashId
 
-Get the hash ID of the original image which can be used to get the original image via the [IntermediateResultManager](../intermediate-results/intermediate-result-manager.md) class.
+Get the hash ID of the original image which can be used to get the original image via the [IntermediateResultManager]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 ```java
 String getOriginalImageHashId();
@@ -60,7 +60,7 @@ The hash id of the original image.
 
 ### getOriginalImageTag
 
-Get the [ImageTag](image-tag.md) of the original image that records information such as the image ID of the original image.
+Get the [ImageTag]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) of the original image that records information such as the image ID of the original image.
 
 ```java
 ImageTag getOriginalImageTag();
@@ -72,7 +72,7 @@ The tag of the original image that records the information of the original image
 
 ### getItems
 
-Get an array of [`CapturedResultItem`](captured-result-item.md), which is the basic unit of the captured results. A [`CapturedResultItem`](captured-result-item.md) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{site.dcv_enumerations}}core/captured-result-item-type.html) for all available types.
+Get an array of [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html), which is the basic unit of the captured results. A [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{site.dcv_enumerations}}core/captured-result-item-type.html) for all available types.
 
 ```java
 CapturedResultItem[] getItems();
@@ -80,7 +80,7 @@ CapturedResultItem[] getItems();
 
 **Return Value**
 
-An array containing the [`CapturedResultItem`](captured-result-item.md) objects within the captured result.
+An array containing the [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) objects within the captured result.
 
 ### getRotationTransformMatrix
 
