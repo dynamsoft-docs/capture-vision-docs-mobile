@@ -9,6 +9,6 @@ noTitleIndex: true
 
 # Release Notes - Dynamsoft.Core.Maui Library
 
-## 3.2.300 (06/20/2024)
+## 3.2.310 (06/20/2024)
 
 - The first version. Supported barcode decoding.

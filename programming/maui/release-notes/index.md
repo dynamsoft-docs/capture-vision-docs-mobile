@@ -15,7 +15,7 @@ noTitleIndex: true
 
 ## Dynamsoft.Core.Maui
 
-- [3.2.300 (06/20/2024)](core.md#32300-06202024)
+- [3.2.310 (06/20/2024)](core.md#32310-06202024)
 
 ## Dynamsoft.BarcodeReader.Maui
 
