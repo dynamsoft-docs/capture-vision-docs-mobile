@@ -7,7 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
-
+ 
 # LicenseManager
 
 The `LicenseManager` class provides a set of APIs to manage SDK licensing.
