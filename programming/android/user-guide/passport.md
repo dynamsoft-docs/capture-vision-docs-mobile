@@ -58,13 +58,13 @@ To build the passport application, it is essential to integrate the following li
 
 ## Build Your First Application
 
-In this section, we will explain how to create a `HelloWorld` implementation similar to our simple `PassportScanner` app for reading the MRZ zone from camera video input.
+In this section, we will explain how to create a `HelloWorld` implementation similar to our simple `PassportMRZScanner` app for reading the MRZ zone from camera video input.
 
 >Note:
 >
 >- Android Studio 2022.3.1 is used here in this guide.
 >- You can get similar source code from
->    - <a href="" target="_blank">PassportScanner Sample(Java)</a>
+>    - <a href="" target="_blank">PassportMRZScanner Sample(Java)</a>
 
 ### Create a New Project
 
@@ -89,7 +89,7 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
 
 2. Copy the <a href="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.11/dist/MRZ.data" target="_blank">**MRZ.data**</a> to the **CharacterModel** folder.
 
-3. Copy the  <a href="" target="_blank">**PassportScanner.json**</a> to the **Templates** folder.
+3. Copy the  <a href="" target="_blank">**PassportMRZScanner.json**</a> to the **Templates** folder.
 
 ### Initialize License
 
@@ -196,7 +196,7 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
 
     ````java
     try {
-        mRouter.initSettingsFromFile("PassportScanner.json");
+        mRouter.initSettingsFromFile("PassportMRZScanner.json");
     } catch (CaptureVisionRouterException e) {
         throw new RuntimeException(e);
     }
@@ -305,4 +305,4 @@ private String assembleString(ParsedResultItem item) {
 
 You can also download the similar source code of all the steps above:
 
-- <a href="" target="_blank">PassportScanner Sample(Java)</a>
+- <a href="" target="_blank">PassportMRZScanner Sample(Java)</a>

@@ -69,6 +69,17 @@ dcv_enumerations: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
 dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
+
+dbr_maui: /barcode-reader/docs/mobile/programming/maui/
+dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
+dcv_maui: /capture-vision/docs/mobile/programming/maui/
+dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
+dce_maui: /camera-enhancer/docs/mobile/programming/maui/
+dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
+dcp_maui: /code-parser/docs/mobile/programming/maui/
+dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
+
+
 assets: /capture-vision/docs/mobile/assets/
 edit_icon: /capture-vision/docs/mobile/assets/img-icon/edit-icon.png
 smile_icon: /capture-vision/docs/mobile/assets/img-icon/icon-smile.png
