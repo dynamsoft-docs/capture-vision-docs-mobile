@@ -26,7 +26,7 @@ class Quadrilateral
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`Points`](#points) | *Point[]* | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`Points`](#points) | *Microsoft.Maui.Graphics.Point[]* | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 | Method | Description |
 | ------ | ----------- |
@@ -40,7 +40,7 @@ class Quadrilateral
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
 ```csharp
-Point[] Points { get; }
+Microsoft.Maui.Graphics.Point[] Points { get; }
 ```
 
 ### Quadrilateral
@@ -48,7 +48,7 @@ Point[] Points { get; }
 The constructor.
 
 ```csharp
-Quadrilateral(Point[] points);
+Quadrilateral(Microsoft.Maui.Graphics.Point[] points);
 ```
 
 ### Contains
@@ -56,7 +56,7 @@ Quadrilateral(Point[] points);
 Check whether the input point is contained by the quadrilateral.
 
 ```csharp
-bool Contains(Point point);
+bool Contains(Microsoft.Maui.Graphics.Point point);
 ```
 
 **Parameters**
@@ -72,7 +72,7 @@ A boolean value that indicates whether the point is contained by the quadrilater
 Get the bounding rectangle of the quadrilateral.
 
 ```csharp
-Rect GetBoundingRect();
+Microsoft.Maui.Graphics.Rect GetBoundingRect();
 ```
 
 **Return Value**
