@@ -11,6 +11,7 @@ breadcrumbText: Release Notes
 
 # Release Notes - Flutter
 
+- [1.3.1 (07/08/2024)](flutter-1.md#131-07082024)
 - [1.3.0 (04/03/2024)](flutter-1.md#130-04032024)
 - [1.2.2 (03/17/2023)](flutter-1.md#122-03172023)
 - [1.2.1 (01/12/2023)](flutter-1.md#121-01122023)

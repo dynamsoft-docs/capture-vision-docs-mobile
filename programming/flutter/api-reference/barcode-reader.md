@@ -16,6 +16,7 @@ A barcode reader object accesses to a camera via `DCVCameraView` object at nativ
 | Methods | Description |
 | ------- | ----------- |
 | [`initLicense`](#initlicense) | Initialize the license of Dynamsoft Capture Vision. |
+| [`setDeviceFriendlyName`](#setdevicefriendlyname) | Set a human-readable name for your mobile device. |
 | [`createInstance`](#createinstance) | Create a barcode reader instance. |
 | [`getVersion`](#getversion) | Get the version of `DCVBarcodeReader`, which is packaged in Dynamsoft Capture Vision. |
 | [`getRuntimeSettings`](#getruntimesettings) | Get the current runtime settings of `DCVBarcodeReader`. |
@@ -56,6 +57,14 @@ try {
 } catch (e) {
     print('license error = $e');
 }
+```
+
+## setDeviceFriendlyName
+
+Set a human-readable name for your mobile device.
+
+```dart
+Future setDeviceFriendlyName(String deviceFriendlyName)
 ```
 
 ## createInstance

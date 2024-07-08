@@ -11,6 +11,10 @@ breadcrumbText: 1.x
 
 # Release Notes for Flutter SDK - 1.x
 
+## 1.3.1 (07/08/2024)
+
+- Added a new method [`setDeviceFriendlyName`]({{ site.flutter-api }}barcode-reader.html#setdevicefriendlyname) to the class `DCVBarcodeReader` for users to set human readable names for the devices.
+
 ## 1.3.0 (04/03/2024)
 
 - Updated the SDK to support Flutter 3. The lowest supported Flutter version is 3.10.0.
