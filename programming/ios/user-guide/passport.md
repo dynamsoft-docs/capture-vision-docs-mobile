@@ -58,7 +58,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 >Note:
 >
 >- The following steps are completed in XCode 14.2
->- You can get similar source code from <a href="" target="_blank">PassportScanner Sample(Swift)</a>
+>- You can get similar source code from <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/ios/PassportMRZScanner" target="_blank">PassportScanner Sample(Swift)</a>
 
 ### Create a New Project
 
@@ -84,7 +84,7 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
 
 2. Copy the <a href="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.11/dist/MRZ.data" target="_blank">**MRZ.data**</a> to the `CharacterModel` folder.
 
-3. Copy your template file <a href="" target="_blank">**PassportScanner.json**</a> to the **Templates** folder.
+3. Copy your template file <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/blob/main/ios/PassportMRZScanner/DynamsoftResources.bundle/Templates/PassportScanner.json" target="_blank">**PassportScanner.json**</a> to the **Templates** folder.
 
 4. Rename the **DynamsoftResources** folder's extension name to **.bundle** and drag the **DynamsoftResources.bundle** into your project on Xcode.
 
@@ -110,7 +110,7 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
    >Note:  
    >
    >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=docs&package=ios" target="_blank">Trial License link</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.   
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=docs&package=ios" target="_blank">Trial License link</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.
 
 ### Initialize the Camera Module
 
@@ -262,4 +262,4 @@ class ViewController: UIViewController, CapturedResultReceiver {
 1. Before deploying the project, select the device that you want to run your app on.
 2. Run the project, then your app will be installed on your device.
 
->Note: View the similar source code from <a href="" target="_blank">PassportScanner Sample(Swift)</a>
+>Note: View the similar source code from <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/ios/PassportMRZScanner" target="_blank">PassportScanner Sample(Swift)</a>
