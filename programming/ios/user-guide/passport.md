@@ -86,22 +86,27 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
 
 3. Copy your template file <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/blob/main/ios/PassportMRZScanner/DynamsoftResources.bundle/Templates/PassportScanner.json" target="_blank">**PassportScanner.json**</a> to the **Templates** folder.
 
-4. Rename the **DynamsoftResources** folder's extension name to **.bundle** and drag the **DynamsoftResources.bundle** into your project on Xcode.
+4. Rename the **DynamsoftResources** folder's extension name to **.bundle** and drag the **DynamsoftResources.bundle** into your project on Xcode. Select **Create groups** for the **Added folders** option.
+
+
 
 ### Initialize the License
 
 1. Use the `LicenseManager` class and initialize the license in **AppDelegate**.
 
     ```swift
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate:self)
-        return true
-    }
-    func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
-        if(error != nil)
-        {
-            if let msg = error?.localizedDescription {
-                print("Server license verify failed, error:\(msg)")
+    import DynamsoftLicense
+    class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate:self)
+            return true
+        }
+        func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+            if(error != nil)
+            {
+                if let msg = error?.localizedDescription {
+                    print("Server license verify failed, error:\(msg)")
+                }
             }
         }
     }
@@ -117,17 +122,21 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
 Create the instances of `CameraEnhancer` and `CameraView` in **ViewController**.
 
 ```swift
+import DynamsoftCameraEnhancer
+...
 class ViewController: UIViewController {
     private var dce: CameraEnhancer!
     private var dceView: CameraView!
+    private var dlrDrawingLayer: DrawingLayer!
+
     private func configureDCE() -> Void {
-        dceView = CameraView(frame: CGRect(x: 0, y: kNavigationBarFullHeight, width: kScreenWidth, height: kScreenHeight - kNavigationBarFullHeight))
+        dceView = .init(frame: view.bounds)
         dceView.scanLaserVisible = true
         dceView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.addSubview(dceView)
         
         dlrDrawingLayer = dceView.getDrawingLayer(DrawingLayerId.DLR.rawValue)
-        dlrDrawingLayer.visible = true
+        dlrDrawingLayer!.visible = true
         dce = CameraEnhancer(view: dceView)
         dce.enableEnhancedFeatures(.frameFilter)
    }
@@ -139,8 +148,11 @@ class ViewController: UIViewController {
 Create an instance of `CaptureVisionRouter` and bind it with the already created instance of `DynamsoftCameraEnhancer`.
 
 ```swift
+import DynamsoftCaptureVisionRouter
+...
 class ViewController: UIViewController {
     private var cvr: CaptureVisionRouter!
+    private var resultFilter: MultiFrameResultCrossFilter!
     ...
     private func configureCVR() -> Void {
         cvr = CaptureVisionRouter()
@@ -161,6 +173,8 @@ class ViewController: UIViewController {
 Set up result callback in order to receive the parsed passport results after the capturing starts.
 
 ```swift
+import DynamsoftCodeParser
+...
 // Add CapturedResultReceiver to the class.
 class ViewController: UIViewController, CapturedResultReceiver {
     ...
@@ -182,27 +196,19 @@ class ViewController: UIViewController, CapturedResultReceiver {
 class ViewController: UIViewController, CapturedResultReceiver {
     ...
     func onParsedResultsReceived(_ result: ParsedResult) {
-        guard let items = result.items else {
-            if let recognizedText = passportResultModel.recognizedText, recognizedText.count > 0 {
-                DispatchQueue.main.async {
-                    self.resultView.text = String(format: "%@%@", parseFailedTip, recognizedText)
-                }
-            }
-            return
-        }
-        
-        guard let firstItem = items.first, firstItem.parsedFields.keys.isEmpty == false else { return  }
-        self.analyzeInfo(firstItem)
-    }
-
-    func analyzeInfo(_ item: ParsedResultItem) -> Void {
-        guard let parsedFields = parsedResultItem?.parsedFields else { return  }
-        let birthDay = parsedFields["birthDay"] ?? ""
-        let birthMonth = parsedFields["birthMonth"] ?? ""
-        let birthYear = parsedFields["birthYear"] ?? ""
-        let expiryDay = parsedFields["expiryDay"] ?? ""
-        let expiryMonth = parsedFields["expiryMonth"] ?? ""
-        let expiryYear = parsedFields["expiryYear"] ?? ""
+        guard let items = result.items else { return }
+        guard let firstItem = items.first else { return }
+        let parsedFields = firstItem.parsedFields
+        let passportNumber = parsedFields["passportNumber"] ?? ""
+        let sex = parsedFields["sex"] ?? ""
+        let issuingState = parsedFields["issuingState"] ?? ""
+        let nationality = parsedFields["nationality"] ?? ""
+        let secondaryIdentifier = parsedFields["secondaryIdentifier"] ?? ""
+        let primaryIdentifier = parsedFields["primaryIdentifier"] ?? ""
+        let dateOfBirth = parsedFields["dateOfBirth"] ?? ""
+        let dateOfExpiry = parsedFields["dateOfExpiry"] ?? ""
+        let parsedString = "Name: " + secondaryIdentifier + " " + primaryIdentifier + "\n" + "Gender: " + sex + "\n" + "Issuing State: " + issuingState + "\n" + "Nationality: " + nationality + "\n" + "Date of Birth(YY-MM-DD): " + dateOfBirth + "\n" + "Date of Expiry(YY-MM-DD): " + dateOfExpiry
+        print(parsedString)
     }
 }
 ```
@@ -213,46 +219,36 @@ Time to configure these core functions that will connect everything together. Al
 
 ```swift
 class ViewController: UIViewController, CapturedResultReceiver {
-    private var templateName = "ReadPassport"
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+            // Do any additional setup after loading the view.
         self.title = "PassportScanner"
         
-        configureCVR()
         configureDCE()
-        setupUI()
+        configureCVR()
+        dce.open()
+        print("Open")
+        cvr.startCapturing("ReadPassport") {
+            isSuccess, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 59.003 / 255.0, green: 61.9991 / 255.0, blue: 69.0028 / 255.0, alpha: 1)
-        
-        resetUI()
-        dce.open()
-        cvr.startCapturing(templateName) {
-            [unowned self] isSuccess, error in
-            if let error = error {
-                self.displayError(msg: error.localizedDescription)
-            }
-        }
+
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         dce.close()
-    }
-
-    private func displayError(_ title: String = "", msg: String, _ acTitle: String = "OK", completion: ConfirmCompletion? = nil) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: acTitle, style: .default, handler: { _ in completion?() }))
-            self.present(alert, animated: true, completion: nil)
-        }
     }
 }
 ```

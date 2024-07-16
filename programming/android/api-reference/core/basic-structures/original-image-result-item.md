@@ -33,7 +33,7 @@ class OriginalImageResultItem extends CapturedResultItem
 | Method | Description |
 | ------ | ----------- |
 | [`getType`](captured-result.md#gettype) | Get the type of the captured result item, indicating what kind of data it represents. |
-| [`getReferencedItem`](captured-result.md#getreferenceditem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
+| [`getReferenceItem`](captured-result.md#getreferenceitem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
 | [`getTargetROIDefName`](captured-result.md#gettargetroidefname) | Gets the name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
 | [`getTaskName`](captured-result.md#gettaskname) | The name of the task that generated the result. |
 

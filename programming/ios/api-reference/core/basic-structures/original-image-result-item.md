@@ -40,7 +40,7 @@ class OriginalImageResultItem : CapturedResultItem
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`type`](captured-result.md#type) | *DSCapturedResultItemType* | The type of the captured result item, indicating what kind of data it represents. |
-| [`referencedItem`](captured-result.md#referenceditem) | *DSCapturedResultItem \** | A property of type `DSCapturedResultItem` that represents a reference to another captured result item. |
+| [`referenceItem`](captured-result.md#referenceitem) | *DSCapturedResultItem \** | A property of type `DSCapturedResultItem` that represents a reference to another captured result item. |
 | [`targetROIDefName`](captured-result.md#targetroidefname) | *NSString* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
 | [`taskName`](captured-result.md#taskname) | *NSString* | The name of the task that generated the result. |
 
