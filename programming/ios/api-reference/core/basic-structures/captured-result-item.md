@@ -34,7 +34,7 @@ class CapturedResultItem : NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`type`](#type) | *DSCapturedResultItemType* | The type of the captured result item, indicating what kind of data it represents. |
-| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | A property of type `DSCapturedResultItem` that represents a reference to another captured result item. |
+| [`referenceItem`](#referenceitem) | *DSCapturedResultItem \** | A property of type `DSCapturedResultItem` that represents a reference to another captured result item. |
 | [`targetROIDefName`](#targetroidefname) | *NSString* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
 | [`taskName`](#taskname) | *NSString* | The name of the task that generated the result. |
 
@@ -55,7 +55,7 @@ The type of the captured result item, indicating what kind of data it represents
 var type: DSCapturedResultItemType { get }
 ```
 
-### referencedItem
+### referenceItem
 
 A property of type `DSCapturedResultItem` that represents a reference to another captured result item.
 
@@ -65,11 +65,11 @@ A property of type `DSCapturedResultItem` that represents a reference to another
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) DSCapturedResultItem *referencedItem
+@property (nonatomic, nullable, readonly) DSCapturedResultItem *referenceItem
 ```
 2. 
 ```swift
-var referencedItem: DSCapturedResultItem? { get }
+var referenceItem: DSCapturedResultItem? { get }
 ```
 
 ### targetROIDefName

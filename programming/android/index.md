@@ -4,33 +4,20 @@ title: Index - Dynamsoft Capture Vision Android Edition
 description: The introduction of Dynamsoft Capture Vision Android edition.
 keywords: API reference, index, Android
 needAutoGenerateSidebar: true
-noTitleIndex: true
+noTitleIndex: false
 ---
 
-# Dynamsoft Capture Vision Documentation for Android Edition
+# Dynamsoft Capture Vision Android Edition - Documentation
 
-Dynamsoft Capture Vision Android edition includes:
+Dynamsoft Capture Vision (DCV) is a comprehensive SDK that integrates various functional products. It encompasses image capture, content understanding, result parsing, and interactive workflow. Essentially, DCV processes images to extract specific information that is meaningful within a business context.
 
-| Package | Latest Version |
-| :------ | :------------- |
-| DynamsoftCaptureVisionRouter.aar | v2.2.30 |
-| DynamsoftBarcodeReader.aar | v10.2.11 |
-| DynamsoftLabelRecognizer.aar | v3.2.30 |
-| DynamsoftDocumentNormalizer.aar | v2.2.11 |
-| DynamsoftCore.aar | v3.2.30 |
-| DynamsoftImageProcessing.aar | v2.2.30 |
-| DynamsoftNeuralNetwork.aar | v1.0.20 |
-| DynamsoftLicense.aar | v3.2.20 |
-| DynamsoftCameraEnhancer.aar | v4.2.10 |
-| DynamsoftUtility.aar | v1.2.20 |
-| DynamsoftCodeParser.aar | v2.2.10 |
-| DynamsoftCodeParserDedicator.aar | v1.2.20 |
+DCV is designed to enable developers to quickly create conceptual prototypes within hours. It also offers the flexibility to handle more complex customizations for demanding tasks.
 
-## Getting Started with DCV Android Edition
+> Read [introduction of Dynamsoft Capture Vision (DCV) architecture]({{ site.docHomePage }}){:target="_blank"}
 
-- [Read Barcode]({{ site.dbr_android }}user-guide.html)
-- [Recognize Text Lines]({{ site.dlr_android }}user-guide.html)
-- [Scan Documents]({{ site.ddn_android }}user-guide.html)
+This documentation provides guidance to assist developers in utilizing DCV for Android applications.
+
+## Using the SDK
 
 ### System Requirements
 
@@ -38,12 +25,27 @@ Dynamsoft Capture Vision Android edition includes:
 - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
 - Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
-### License Subscription
+### Get Started
 
-To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
+- [Read Barcode]({{ site.dbr_android }}user-guide.html)
+- [Recognize Text Lines]({{ site.dlr_android }}user-guide.html)
+- [Detect & Normalize Documents]({{ site.ddn_android }}user-guide.html)
+- [Scan & Parse Passport information]({{ site.dcv_android }}user-guide/passport.html)
 
-* <a href = "https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dcv&package=mobile" target = "_blank">Request a 30-day free trial license
+### Check APIs
+
+While the guide covers common APIs, more detailed explanations of these and other APIs can be found in the API Reference.
+
+### Read about CaptureVisionTemplate
+
+Using DCV in JavaScript involves:
+
+1. Creating a `CaptureVisionRouter` instance.
+2. Defining and binding an image source and a result receiver to the instance.
+3. Specifying a template which defines how to process images.
+
+Apparently, the use of DCV varies with the choice of template. Dynamsoft provides popular preset templates and will add more over time. To understand, adjust, or define your own template, read about [`CaptureVisionTemplate`]({{ site.docHomePage }}parameters/file/){:target="_blank"}.
 
 ### Contact Us
 
-<a href = "https://www.dynamsoft.com/company/customer-service/#contact" target = "_blank">Feel free to contact us if you have any questions.</a>
+Feel free to [contact us](https://www.dynamsoft.com/company/customer-service/#contact){:target="_blank"} if you have any questions.

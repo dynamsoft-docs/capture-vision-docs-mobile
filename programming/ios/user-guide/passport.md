@@ -58,7 +58,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 >Note:
 >
 >- The following steps are completed in XCode 14.2
->- You can get similar source code from <a href="" target="_blank">PassportScanner Sample(Swift)</a>
+>- You can get similar source code from <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/ios/PassportMRZScanner" target="_blank">PassportScanner Sample(Swift)</a>
 
 ### Create a New Project
 
@@ -84,24 +84,29 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
 
 2. Copy the <a href="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.11/dist/MRZ.data" target="_blank">**MRZ.data**</a> to the `CharacterModel` folder.
 
-3. Copy your template file <a href="" target="_blank">**PassportScanner.json**</a> to the **Templates** folder.
+3. Copy your template file <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/blob/main/ios/PassportMRZScanner/DynamsoftResources.bundle/Templates/PassportScanner.json" target="_blank">**PassportScanner.json**</a> to the **Templates** folder.
 
-4. Rename the **DynamsoftResources** folder's extension name to **.bundle** and drag the **DynamsoftResources.bundle** into your project on Xcode.
+4. Rename the **DynamsoftResources** folder's extension name to **.bundle** and drag the **DynamsoftResources.bundle** into your project on Xcode. Select **Create groups** for the **Added folders** option.
+
+
 
 ### Initialize the License
 
 1. Use the `LicenseManager` class and initialize the license in **AppDelegate**.
 
     ```swift
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate:self)
-        return true
-    }
-    func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
-        if(error != nil)
-        {
-            if let msg = error?.localizedDescription {
-                print("Server license verify failed, error:\(msg)")
+    import DynamsoftLicense
+    class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate:self)
+            return true
+        }
+        func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+            if(error != nil)
+            {
+                if let msg = error?.localizedDescription {
+                    print("Server license verify failed, error:\(msg)")
+                }
             }
         }
     }
@@ -110,24 +115,28 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
    >Note:  
    >
    >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=docs&package=ios" target="_blank">Trial License link</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.   
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=docs&package=ios" target="_blank">Trial License link</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.
 
 ### Initialize the Camera Module
 
 Create the instances of `CameraEnhancer` and `CameraView` in **ViewController**.
 
 ```swift
+import DynamsoftCameraEnhancer
+...
 class ViewController: UIViewController {
     private var dce: CameraEnhancer!
     private var dceView: CameraView!
+    private var dlrDrawingLayer: DrawingLayer!
+
     private func configureDCE() -> Void {
-        dceView = CameraView(frame: CGRect(x: 0, y: kNavigationBarFullHeight, width: kScreenWidth, height: kScreenHeight - kNavigationBarFullHeight))
+        dceView = .init(frame: view.bounds)
         dceView.scanLaserVisible = true
         dceView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.addSubview(dceView)
         
         dlrDrawingLayer = dceView.getDrawingLayer(DrawingLayerId.DLR.rawValue)
-        dlrDrawingLayer.visible = true
+        dlrDrawingLayer!.visible = true
         dce = CameraEnhancer(view: dceView)
         dce.enableEnhancedFeatures(.frameFilter)
    }
@@ -139,8 +148,11 @@ class ViewController: UIViewController {
 Create an instance of `CaptureVisionRouter` and bind it with the already created instance of `DynamsoftCameraEnhancer`.
 
 ```swift
+import DynamsoftCaptureVisionRouter
+...
 class ViewController: UIViewController {
     private var cvr: CaptureVisionRouter!
+    private var resultFilter: MultiFrameResultCrossFilter!
     ...
     private func configureCVR() -> Void {
         cvr = CaptureVisionRouter()
@@ -161,6 +173,8 @@ class ViewController: UIViewController {
 Set up result callback in order to receive the parsed passport results after the capturing starts.
 
 ```swift
+import DynamsoftCodeParser
+...
 // Add CapturedResultReceiver to the class.
 class ViewController: UIViewController, CapturedResultReceiver {
     ...
@@ -182,27 +196,19 @@ class ViewController: UIViewController, CapturedResultReceiver {
 class ViewController: UIViewController, CapturedResultReceiver {
     ...
     func onParsedResultsReceived(_ result: ParsedResult) {
-        guard let items = result.items else {
-            if let recognizedText = passportResultModel.recognizedText, recognizedText.count > 0 {
-                DispatchQueue.main.async {
-                    self.resultView.text = String(format: "%@%@", parseFailedTip, recognizedText)
-                }
-            }
-            return
-        }
-        
-        guard let firstItem = items.first, firstItem.parsedFields.keys.isEmpty == false else { return  }
-        self.analyzeInfo(firstItem)
-    }
-
-    func analyzeInfo(_ item: ParsedResultItem) -> Void {
-        guard let parsedFields = parsedResultItem?.parsedFields else { return  }
-        let birthDay = parsedFields["birthDay"] ?? ""
-        let birthMonth = parsedFields["birthMonth"] ?? ""
-        let birthYear = parsedFields["birthYear"] ?? ""
-        let expiryDay = parsedFields["expiryDay"] ?? ""
-        let expiryMonth = parsedFields["expiryMonth"] ?? ""
-        let expiryYear = parsedFields["expiryYear"] ?? ""
+        guard let items = result.items else { return }
+        guard let firstItem = items.first else { return }
+        let parsedFields = firstItem.parsedFields
+        let passportNumber = parsedFields["passportNumber"] ?? ""
+        let sex = parsedFields["sex"] ?? ""
+        let issuingState = parsedFields["issuingState"] ?? ""
+        let nationality = parsedFields["nationality"] ?? ""
+        let secondaryIdentifier = parsedFields["secondaryIdentifier"] ?? ""
+        let primaryIdentifier = parsedFields["primaryIdentifier"] ?? ""
+        let dateOfBirth = parsedFields["dateOfBirth"] ?? ""
+        let dateOfExpiry = parsedFields["dateOfExpiry"] ?? ""
+        let parsedString = "Name: " + secondaryIdentifier + " " + primaryIdentifier + "\n" + "Gender: " + sex + "\n" + "Issuing State: " + issuingState + "\n" + "Nationality: " + nationality + "\n" + "Date of Birth(YY-MM-DD): " + dateOfBirth + "\n" + "Date of Expiry(YY-MM-DD): " + dateOfExpiry
+        print(parsedString)
     }
 }
 ```
@@ -213,46 +219,36 @@ Time to configure these core functions that will connect everything together. Al
 
 ```swift
 class ViewController: UIViewController, CapturedResultReceiver {
-    private var templateName = "ReadPassport"
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+            // Do any additional setup after loading the view.
         self.title = "PassportScanner"
         
-        configureCVR()
         configureDCE()
-        setupUI()
+        configureCVR()
+        dce.open()
+        print("Open")
+        cvr.startCapturing("ReadPassport") {
+            isSuccess, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 59.003 / 255.0, green: 61.9991 / 255.0, blue: 69.0028 / 255.0, alpha: 1)
-        
-        resetUI()
-        dce.open()
-        cvr.startCapturing(templateName) {
-            [unowned self] isSuccess, error in
-            if let error = error {
-                self.displayError(msg: error.localizedDescription)
-            }
-        }
+
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         dce.close()
-    }
-
-    private func displayError(_ title: String = "", msg: String, _ acTitle: String = "OK", completion: ConfirmCompletion? = nil) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: acTitle, style: .default, handler: { _ in completion?() }))
-            self.present(alert, animated: true, completion: nil)
-        }
     }
 }
 ```
@@ -262,4 +258,4 @@ class ViewController: UIViewController, CapturedResultReceiver {
 1. Before deploying the project, select the device that you want to run your app on.
 2. Run the project, then your app will be installed on your device.
 
->Note: View the similar source code from <a href="" target="_blank">PassportScanner Sample(Swift)</a>
+>Note: View the similar source code from <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/ios/PassportMRZScanner" target="_blank">PassportScanner Sample(Swift)</a>

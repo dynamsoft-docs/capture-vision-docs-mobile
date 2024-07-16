@@ -4,44 +4,48 @@ title: Index - Dynamsoft Capture Vision iOS Edition
 description: The introduction of Dynamsoft Capture Vision iOS edition.
 keywords: API reference, index, iOS
 needAutoGenerateSidebar: true
-noTitleIndex: true
+noTitleIndex: false
 ---
 
-# Dynamsoft Capture Vision Documentation for iOS Edition
+# Dynamsoft Capture Vision iOS Edition - Documentation
 
-Dynamsoft Capture Vision iOS edition includes:
+Dynamsoft Capture Vision (DCV) is a comprehensive SDK that integrates various functional products. It encompasses image capture, content understanding, result parsing, and interactive workflow. Essentially, DCV processes images to extract specific information that is meaningful within a business context.
 
-| Package | Latest Version |
-| :------ | :------------- |
-| DynamsoftCaptureVisionRouter.xcframework | v2.2.30 |
-| DynamsoftBarcodeReader.xcframework | v10.2.11 |
-| DynamsoftLabelRecognizer.xcframework | v3.2.30 |
-| DynamsoftDocumentNormalizer.xcframework | v2.2.11 |
-| DynamsoftCore.xcframework | v3.2.30 |
-| DynamsoftImageProcessing.xcframework | v2.2.30 |
-| DynamsoftNeuralNetwork.xcframework | v1.0.20 |
-| DynamsoftLicense.xcframework | v3.2.20 |
-| DynamsoftCameraEnhancer.xcframework | v4.2.10 |
-| DynamsoftUtility.xcframework | v1.2.20 |
-| DynamsoftCodeParser.xcframework | v2.2.10 |
-| DynamsoftCodeParserDedicator.xcframework | v1.2.20 |
+DCV is designed to enable developers to quickly create conceptual prototypes within hours. It also offers the flexibility to handle more complex customizations for demanding tasks.
 
-## Getting Started with DCV iOS Edition
+> Read [introduction of Dynamsoft Capture Vision (DCV) architecture]({{ site.docHomePage }}){:target="_blank"}
 
-Following the [User Guide](user-guide/index.md) to build your first capture vision project:
+This documentation provides guidance to assist developers in utilizing DCV for iOS applications.
+
+## Using the SDK
 
 ### System Requirements
 
-* Supported OS: iOS 9 or higher (iOS 11 and higher recommended).
-* Supported ABI: arm64 and x86_64.
-* Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
+- Supported OS: iOS 9 or higher (iOS 11 and higher recommended).
+- Supported ABI: arm64 and x86_64.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
-### License Subscription
+### Get Started
 
-To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
+- [Read Barcode]({{ site.dbr_ios }}user-guide.html)
+- [Recognize Text Lines]({{ site.dlr_ios }}user-guide.html)
+- [Detect & Normalize Documents]({{ site.ddn_ios }}user-guide.html)
+- [Scan & Parse Passport information]({{ site.dcv_ios }}user-guide/passport.html)
 
-* <a href = "https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dcv&package=mobile" target = "_blank">Request a 30-day free trial license
+### Check APIs
+
+While the guide covers common APIs, more detailed explanations of these and other APIs can be found in the API Reference.
+
+### Read about CaptureVisionTemplate
+
+Using DCV in JavaScript involves:
+
+1. Creating a `CaptureVisionRouter` instance.
+2. Defining and binding an image source and a result receiver to the instance.
+3. Specifying a template which defines how to process images.
+
+Apparently, the use of DCV varies with the choice of template. Dynamsoft provides popular preset templates and will add more over time. To understand, adjust, or define your own template, read about [`CaptureVisionTemplate`]({{ site.docHomePage }}parameters/file/){:target="_blank"}.
 
 ### Contact Us
 
-<a href = "https://www.dynamsoft.com/company/customer-service/#contact" target = "_blank">Feel free to contact us if you have any questions.</a>
+Feel free to [contact us](https://www.dynamsoft.com/company/customer-service/#contact){:target="_blank"} if you have any questions.

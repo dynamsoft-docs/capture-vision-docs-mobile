@@ -34,7 +34,7 @@ class CapturedResultItem : NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`type`](#type) | *DSCapturedResultItemType* | The type of the captured result item. |
-| [`referencedItem`](#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
+| [`referenceItem`](#referenceitem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
 
 ### type
 
@@ -53,7 +53,7 @@ The type of the captured result item.
 var type: DSCapturedResultItemType { get }
 ```
 
-### referencedItem
+### referenceItem
 
 The referenced captured result item. The reference dependencies is defined in the Capture Vision settings.
 
@@ -63,9 +63,9 @@ The referenced captured result item. The reference dependencies is defined in th
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) DSCapturedResultItem *referencedItem
+@property (nonatomic, nullable, readonly) DSCapturedResultItem *referenceItem
 ```
 2. 
 ```swift
-var referencedItem: DSCapturedResultItem? { get }
+var referenceItem: DSCapturedResultItem? { get }
 ```

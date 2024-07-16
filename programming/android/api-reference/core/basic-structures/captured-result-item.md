@@ -27,7 +27,7 @@ class CapturedResultItem
 | Method | Description |
 | ------ | ----------- |
 | [`getType`](#gettype) | Get the type of the captured result item, indicating what kind of data it represents. |
-| [`getReferencedItem`](#getreferenceditem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
+| [`getReferenceItem`](#getreferenceitem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
 | [`getTargetROIDefName`](#gettargetroidefname) | Gets the name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
 | [`getTaskName`](#gettaskname) | The name of the task that generated the result. |
 
@@ -43,12 +43,12 @@ EnumCapturedResultItemType getType();
 
 The type of the captured result item.
 
-### getReferencedItem
+### getReferenceItem
 
 Get a property of type `CapturedResultItem` that represents a reference to another captured result item.
 
 ```java
-CapturedResultItem getReferencedItem();
+CapturedResultItem getReferenceItem();
 ```
 
 **Return Value**
