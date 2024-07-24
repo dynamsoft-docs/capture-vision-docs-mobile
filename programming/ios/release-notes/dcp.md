@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCodeParser Module
 
+## 2.2.11 (07/24/2024)
+
+- Updated the signature to prevent rejection of Apple store.
+
 ## 2.2.10 (04/16/2024)
 
 ### Improved
