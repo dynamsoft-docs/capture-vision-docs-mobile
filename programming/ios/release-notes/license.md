@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLicense Module
 
+## 3.2.21 (07/24/2024)
+
+- Updated the signature to prevent rejection of Apple store.
+
 ## 3.2.20 (05/15/2024)
 
 - Improved the usage count logic of the concurrent license mode.
