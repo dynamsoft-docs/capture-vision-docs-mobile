@@ -40,7 +40,7 @@ protocol CapturedResultFilter : NSObjectProtocol
 
 ### onOriginalImageResultReceived
 
-The method for monitoring the output of DSOriginalImageResultItem.
+The method for monitoring the output of [`DSOriginalImageResultItem`]({{ site.dcv_ios_api }}core/basic-structures/original-image-result-item.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,7 +61,7 @@ func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
 
 ### onDecodedBarcodesReceived
 
-The method for monitoring the output of DSDecodedBarcodesResult.
+The method for monitoring the output of [DSDecodedBarcodesResult]({{ site.dbr_ios_api }}decoded-barcodes-result.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -82,7 +82,7 @@ func onDecodedBarcodesReceived(_ result: DSDecodedBarcodesResult)
 
 ### onRecognizedTextLinesReceived
 
-The method for monitoring the output of DSRecognizedTextLinesResult.
+The method for monitoring the output of [DSRecognizedTextLinesResult]({{ site.dlr_ios_api }}recognized-text-lines-result.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -103,7 +103,7 @@ func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
 
 ### onDetectedQuadsReceived
 
-The method for monitoring the output of DSDetectedQuadsResult.
+The method for monitoring the output of [`DSDetectedQuadsResult`]({{site.ddn_ios_api}}detected-quads-result.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -124,7 +124,7 @@ func onDetectedQuadsReceived(_ result: DSDetectedQuadsResult)
 
 ### onNormalizedImagesReceived
 
-The method for monitoring the output of DSNormalizedImagesResult.
+The method for monitoring the output of [DSNormalizedImagesResult]({{ site.ddn_ios_api }}normalized-images-result.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -145,7 +145,7 @@ func onNormalizedImagesReceived(_ result: DSNormalizedImagesResult)
 
 ### onParsedResultsReceived
 
-The method for monitoring the output of DSParsedResult.
+The method for monitoring the output of [DSParsedResult]({{ site.dcp_ios_api }}parsed-result.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
