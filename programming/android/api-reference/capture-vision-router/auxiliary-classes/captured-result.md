@@ -40,10 +40,10 @@ class CapturedResult
 | [`getrotationTransformMatrix`](#getrotationtransformmatrix) | Get the  rotation transformation matrix of the original image relative to the rotated image. |
 | [`getErrorCode`](#geterrorcode) | Get the error code associated with the capture result. |
 | [`getErrorMessage`](#geterrormessage) | Get the error message associated with the capture result. |
-| [`getDecodedBarcodesResult`](#getdecodedbarcodesresult) | Get the decoded barcodes result. |
-| [`getRecognizedTextLinesResult`](#getrecognizedtextlinesresult) | Get the recognized text lines result. |
-| [`getDetectedQuadsResult`](#getdetectedquadsresult) | Get the detected quads result. |
-| [`getNormalizedImagesResult`](#getnormalizedimagesresult) | Get the normalized images result. |
+| [`getDecodedBarcodesResult`](#getdecodedbarcodesresult) | Get a [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html) object that contains all the [`BarcodeResultItems`]({{ site.dbr_android_api }}barcode-result-item.html) in the `CapturedResult`. |
+| [`getRecognizedTextLinesResult`](#getrecognizedtextlinesresult) | Get a [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html) object that contains all the [`TextLineResultItems`]({{ site.dlr_android_api }}text-line-result-item.html) in the `CapturedResult`. |
+| [`getDetectedQuadsResult`](#getdetectedquadsresult) | Get a [`DetectedQuadsResult`]({{ site.ddn_android_api }}detected-quads-result.html) object that contains all the [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html) in the `CapturedResult`. |
+| [`getNormalizedImagesResult`](#getnormalizedimagesresult) | Get a [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html) object that contains all the [`NormalizedImageResultItem`]({{ site.ddn_android_api }}normalized-image-result-item.html) in the `CapturedResult`. |
 | [`getParsedResult`](#getparsedresult) | Get the parsed result. |
 
 ### getOriginalImageHashId

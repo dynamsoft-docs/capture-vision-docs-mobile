@@ -35,7 +35,7 @@ interface CapturedResultFilter
 
 ### onOriginalImageResultReceived
 
-The method for monitoring the output of [`OriginalImageResultItem`](original-image-result-item.md).
+The method for monitoring the output of [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html).
 
 ```java
 void onOriginalImageResultReceived(OriginalImageResultItem result);
@@ -43,7 +43,7 @@ void onOriginalImageResultReceived(OriginalImageResultItem result);
 
 **Parameters**
 
-`[in] result`: A [`OriginalImageResultItem`](original-image-result-item.md) object as a original image result.
+`[in] result`: A [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html) object as a original image result.
 
 ### onDecodedBarcodesReceived
 
