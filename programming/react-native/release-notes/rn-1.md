@@ -11,6 +11,13 @@ breadcrumbText: 1.x
 
 # Release Notes for React Native SDK - 1.x
 
+## 1.1.16 (08/05/2024)
+
+- Added class `DCVFeedback`. You can use this class to trigger beep sound or vibration.
+- Added the following `CameraPositions`
+  - `CP_BACK_ULTRA_WIDE`: A ultra-wide-angle back camera that supports macro distant capturing.
+  - `CP_BACK_DUAL_WIDE_AUTO`: A back-facing virtual camera that can switch between the wide-angle camera and the ultra-wide-angle camera automatically.
+
 ## 1.1.14 (05/16/2024)
 
 ### Fixed
