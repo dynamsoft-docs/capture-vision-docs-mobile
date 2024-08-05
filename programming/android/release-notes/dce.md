@@ -9,6 +9,11 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCameraEnhancer Module
 
+## 4.2.11 (06/20/2024)
+
+- Added a new constructor of class [`CameraEnhancer`]({{ site.android-api }}camera-enhancer.html).
+- Updated the enumeration value of [`EnumCameraPosition`]({{ site.dce-enums }}camera-position.html?lang=android).
+
 ## 4.2.10 (05/15/2024)
 
 - Small fixes and tweaks.
