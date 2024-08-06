@@ -339,5 +339,5 @@ class App extends React.Component {
 
 - The `BarcodeReader` module of Dynamsoft Capture Vision needs a valid license to work.
 - A one-day trial license is available by default for every new device to try Dynamsoft Capture Vision.
->- You can request a 30-day offline trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=react-native&version=9){:target="_blank"} link.
+>- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=react-native&version=9){:target="_blank"} link.
 - [Contact us](https://www.dynamsoft.com/company/contact/) to purchase a full license.
