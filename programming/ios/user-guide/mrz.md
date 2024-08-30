@@ -28,6 +28,8 @@ needGenerateH3Content: true
     end
     ```
 
+    > Read more about [DynamsoftCaptureVisionBundle](../api-reference/index.md)
+
 2. Execute the pod command to install the frameworks and generate workspace(**{Your project name}.xcworkspace**):
 
    ```bash

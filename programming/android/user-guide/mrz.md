@@ -33,9 +33,11 @@ needGenerateH3Content: true
 
     ```groovy
     dependencies {
-        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:3.2.3000'
+        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.2.3000'
     }
     ```
+
+    > Read more about [dynamsoftcapturevisionbundle](../api-reference/index.md)
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
