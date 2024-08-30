@@ -9,6 +9,9 @@ productName: Dynamsoft Capture Vision
 
 programming: /capture-vision/docs/mobile/programming/
 
+architecture: /capture-vision/docs/core/architecture/
+parameter: /capture-vision/docs/core/parameters/
+
 license: /capture-vision/docs/mobile/license/
 
 faq: /capture-vision/docs/mobile/faq/
