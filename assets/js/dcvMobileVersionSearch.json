@@ -2,7 +2,7 @@
     {
         "version": "2.2.300",
         "matchList": {
-            "ios":{
+            "maui":{
                 "dcvRepoMobile": [
                     {
                         "path": "/programming/objectivec-swift/api-reference/utility",

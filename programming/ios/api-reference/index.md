@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer iOS  API Reference - Main Page
-description: This is the main page of Dynamsoft Document Normalizer SDK API Reference for iOS.
+title: Dynamsoft Capture Vision iOS  API Reference - Main Page
+description: This is the main page of Dynamsoft Capture Vision SDK API Reference for iOS.
 keywords: api reference, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true

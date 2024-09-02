@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer Android  API Reference - Main Page
-description: This is the main page of Dynamsoft Document Normalizer SDK API Reference for Android.
+title: Dynamsoft Capture Vision Android  API Reference - Main Page
+description: This is the main page of Dynamsoft Capture Vision SDK API Reference for Android.
 keywords: api reference, Android
 needAutoGenerateSidebar: true
 noTitleIndex: true
