@@ -1,215 +1,103 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer Android  API Reference - Main Page
-description: This is the main page of Dynamsoft Document Normalizer SDK API Reference for Android.
+title: Dynamsoft Capture Vision Android  API Reference - Main Page
+description: This is the main page of Dynamsoft Capture Vision SDK API Reference for Android.
 keywords: api reference, Android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
 ---
 
-# API Reference - Android
+# SDK Overview: Modules and Main APIs
 
-## DynamsoftCaptureVisionRouter
+This page provides an overview of the various modules and highlights the most essential APIs that form the backbone of Dynamsoft Capture Vision SDKs.
 
-### CaptureVisionRouter Class
+## Modules Summary
 
-- [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html)
+**DynamsoftCaptureVisionBundle** is a bundle package that includes all libraries of Dynamsoft Capture Vision (DCV) architecture. The DCV libraries work together to achieve barcode reading, MRZ recognizing, document scanning and other image processing features. The hierarchical structure diagram below illustrates the various modules of the DCV SDKs (with modules at the top depending on those below).
 
-### Auxiliary Classes
+<div align="center">
+    <p><img src="../../../assets/img/dcv-dependencies.png" width="70%" alt="dependencies"></p>
+    <p>Modules hierarchical of the DCV SDK</p>
+</div>
 
-- [`CaptureVisionRouterModule`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-vision-router-module.html)
-- [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html)
-- [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html)
-- [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html)
-- [`IntermediateResultManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html)
-- [`IntermediateResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html)
-- [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
+The table below describes details the functionalities of these modules:
 
-### Interfaces
+| File | Description |
+|:-----|:------------|
+| `DynamsoftCaptureVisionRouter.aar` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. |
+| `DynamsoftBarcodeReader.aar`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |
+| `DynamsoftDocumentNormalizer.aar`(DBR) | The Dynamsoft Document Normalizer module extracts structural information from document images, including document boundaries, shadow areas, and text areas. It uses this information to generate normalized document images through processes such as deskewing, shadow removal, and distortion correction. |
+| `DynamsoftLabelRecognizer.aar` (DLR) | The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. |
+| `DynamsoftCore.aar` | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs.|
+| `DynamsoftImageProcessing.aar` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer.  |
+| `DynamsoftNeuralNetwork.aar` | The Dynamsoft Neural Network module allows SDKs compliant with the DCV (Dynamsoft Capture Vision) architecture to leverage the power of deep learning when processing digital images. |
+| `DynamsoftLicense.aar` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
+| `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer (DCE) module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. |
+| `DynamsoftUtility.aar` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter). These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
+| `DynamsoftCodeParser.aar` | The Dynamsoft Code Parser module converts data strings, typically encrypted in barcodes and machine-readable zones, into human-readable information. |
+| `DynamsoftCodeParserDedicator.aar` | The Dynamsoft Code Parser Dedicator module provides auxiliary functionality to enhance and extend the capabilities of DCP module. |
 
-- [`CaptureStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
-- [`ImageSourceStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
+## Main APIs
 
-### Enumerations
+### Capture Vision Router
 
-- [`EnumCaptureState`]({{ site.dcv_enumerations }}capture-vision-router/capture-state.html?lang=android)
-- [`EnumPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android)
+The main class [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
-## DynamsoftBarcodeReader
+- [Set input]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput)
+- [Config barcode reader settings]({{ site.dcv_android_api }}capture-vision-router/settings.html)
+- [Add result receiver]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
+- [Start video stream barcode processing]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
 
-### Classes
+### Image Source Adapter
 
-- [`AztecDetails`]({{ site.dbr_android_api }}auxiliary-AztecDetails.html)
-- [`BarcodeDetails`]({{ site.dbr_android_api }}barcode-details.html)
-- [`BarcodeReaderModule`]({{ site.dbr_android_api }}barcode-reader-module.html)
-- [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html)
-- [`CandidateBarcodeZonesUnit`]({{ site.dbr_android_api }}candidate-barcode-zones-unit.html)
-- [`ComplementedBarcodeImageUnit`]({{ site.dbr_android_api }}complemented-barcode-image-unit.html)
-- [`DataMatrixDetails`]({{ site.dbr_android_api }}auxiliary-DatamatrixDetails.html)
-- [`DecodedBarcodeElement`]({{ site.dbr_android_api }}decoded-barcode-element.html)
-- [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html)
-- [`DecodedBarcodesUnit`]({{ site.dbr_android_api }}decoded-barcodes-unit.html)
-- [`DeformationResistedBarcodeImageUnit`]({{ site.dbr_android_api }}deformation-resisted-barcode-image-unit.html)
-- [`ExtendedBarcodeResult`]({{ site.dbr_android_api }}extended-barcode-result.html)
-- [`LocalizedBarcodesUnit`]({{ site.dbr_android_api }}localized-barcodes-unit.html)
-- [`LocalizedBarcodesElement`]({{ site.dbr_android_api }}localized-barcode-element.html)
-- [`OneDCodeDetails`]({{ site.dbr_android_api }}auxiliary-OneDCodeDetails.html)
-- [`PDF417Details`]({{ site.dbr_android_api }}auxiliary-PDF417Details.html)
-- [`QRCodeDetails`]({{ site.dbr_android_api }}auxiliary-QRCodeDetails.html)
-- [`ScaledUpBarcodeImageUnit`]({{ site.dbr_android_api }}scaled-up-barcode-image-unit.html)
-- [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
+The [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) or implement your own.
 
-### Enumerations
+Class [`CameraEnhancer`]({{ site.dce_android_api }}primary-api/camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
 
-- [`BarcodeFormat`]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
-- [`DeblurMode`]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=android)
-- [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android)
-- [`LocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=android)
-- [`QRCodeErrorCorrectionLevel`]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=android)
+### Captured Result Receiver
 
-## DynamsoftLabelRecognizer
+Implement the callback methods of [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive the corresponding results you required. The callbacks are triggered when the processing of an image/vide frame is finished or timeout.
 
-- [`CharacterResult`]({{ site.dlr_android_api }}character-result.html)
-- [`LabelRecognizerModule`]({{ site.dlr_android_api }}label-recognizer-module.html)
-- [`LocalizedTextLineElement`]({{ site.dlr_android_api }}localized-text-line-element.html)
-- [`LocalizedTextLinesUnit`]({{ site.dlr_android_api }}localized-text-lines-unit.html)
-- [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html)
-- [`RecognizedTextLineElement`]({{ site.dlr_android_api }}recognized-text-line-element.html)
-- [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html)
-- [`RecognizedTextLinesUnit`]({{ site.dlr_android_api }}recognized-text-lines-unit.html)
-- [`TextLineResultItem`]({{ site.dlr_android_api }}text-line-result-item.html)
+#### Barcode Decoding
 
-## DynamsoftDocumentNormalizer
+Callback methods that are related to barcode decoding:
 
-- [`CandidateQuadEdgesUnit`]({{ site.ddn_android_api }}candidate-quad-edges-unit.html)
-- [`CornersUnit`]({{ site.ddn_android_api }}corners-unit.html)
-- [`DetectedQuadElement`]({{ site.ddn_android_api }}detected-quad-element.html)
-- [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html)
-- [`DetectedQuadsResult`]({{ site.ddn_android_api }}detected-quads-result.html)
-- [`DetectedQuadsUnit`]({{ site.ddn_android_api }}detected-quads-unit.html)
-- [`DocumentNormalizerModule`]({{ site.ddn_android_api }}document-normalizer-module.html)
-- [`LongLinesUnit`]({{ site.ddn_android_api }}long-lines-unit.html)
-- [`NormalizedImageElement`]({{ site.ddn_android_api }}normalized-image-element.html)
-- [`NormalizedImageResultItem`]({{ site.ddn_android_api }}normalized-image-result-item.html)
-- [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html)
-- [`NormalizedImageUnit`]({{ site.ddn_android_api }}normalized-image-unit.html)
-- [`SimplifiedDocumentNormalizerSettings`]({{ site.ddn_android_api }}simplified-document-normalizer-settings.html)
+- [`onDecodedBarcodesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback of barcode decoding. The result you received in the callback method is a [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html) object, which contains all the decoded barcodes from the processed image.
 
-## DynamsoftCore
+Related APIs:
 
-### Classes
+- [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html): All barcodes that decoded from the processed image.
+- [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html): The barcode decoding result of a single barcode.
 
-- [`BinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
-- [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html)
-- [`ColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
-- [`ContoursUnit`]({{ site.dcv_android_api }}core/intermediate-results/contours-unit.html)
-- [`Contour`]({{ site.dcv_android_api }}core/basic-structures/contour.html)
-- [`CoreModule`]({{ site.dcv_android_api }}core/basic-structures/core-module.html)
-- [`Corner`]({{ site.dcv_android_api }}core/basic-structures/corner.html)
-- [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
-- [`Edge`]({{ site.dcv_android_api }}core/basic-structures/edge.html)
-- [`EnhancedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-- [`FileImageTag`]({{ site.dcv_android_api }}core/basic-structures/file-image-tag.html)
-- [`GrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html)
-- [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
-- [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
-- [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
-- [`IntermediateResultExtraInfo`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-extra-info.html)
-- [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html)
-- [`IntermediateResult`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html)
-- [`LineSegmentsUnit`]({{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html)
-- [`LineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html)
-- [`ObservationParameters`]({{ site.dcv_android_api }}core/intermediate-results/observation-parameters.html)
-- [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html)
-- [`PredetectedRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/predetected-region-element.html)
-- [`PredetectedRegionsUnit`]({{ site.dcv_android_api }}core/intermediate-results/predetected-regions-unit.html)
-- [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
-- [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html)
-- [`ScaledDownColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-- [`TextRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-removed-binary-image-unit.html)
-- [`TextureDetectionResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-detection-result-unit.html)
-- [`TextureRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-- [`TextureRemovedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-- [`TextZonesUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html)
-- [`TransformedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
-- [`Vector4`]({{ site.dcv_android_api }}core/basic-structures/vector4.html)
-- [`VideoFrameTag`]({{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html)
+#### Document Scanning
 
-### Interfaces
+Callback methods that are related to document scanning:
 
-- [`ImageSourceErrorListener`]({{ site.dcv_android_api }}core/basic-structures/image-source-error-listener.html)
+- [`onDetectedQuadsReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondetectedquadsreceived): The callback of document boundary detection. The result you received in the callback method is a [`DetectedQuadResult`]({{ site.ddn_android_api }}detected-quads-result.html) object, which contains all the detected quads from the processed image.
+- [`onNormalizedImagesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onnormalizedimagesreceived): The callback of image normalization. The result you received in the callback method is a [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html) object, which contains all the normalized images from the processed image.
 
-### Enumerations
+Related APIs:
 
-- [`BufferOverflowProtectionMode`]({{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?lang=android)
-- [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android)
-- [`ColourChannelUsageType`]({{ site.dcv_enumerations }}core/colour-channel-usage-type.html?lang=android)
-- [`CornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=android)
-- [`ErrorCode`]({{ site.dcv_enumerations }}core/error-code.html?lang=android)
-- [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?lang=android)
-- [`GrayscaleTransformationMode`]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=android)
-- [`ImageCaptureDistanceMode`]({{ site.dcv_enumerations }}core/image-capture-distance-mode.html?lang=android)
-- [`ImagePixelFormat`]({{ site.dcv_enumerations }}core/image-pixel-format.html?lang=android)
-- [`ImageSourceState`]({{ site.dcv_enumerations }}core/image-source-state.html?lang=android)
-- [`ImageTagType`]({{ site.dcv_enumerations }}core/image-tag-type.html?lang=android)
-- [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android)
-- [`LogMode`]({{ site.dcv_enumerations }}core/log-mode.html?lang=android)
-- [`RegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=android)
-- [`SectionType`]({{ site.dcv_enumerations }}core/section-type.html?lang=android)
-- [`TransformMatrixType`]({{ site.dcv_enumerations }}core/transform-matrix-type.html?lang=android)
-- [`VideoFrameQuality`]({{ site.dcv_enumerations }}core/video-frame-quality.html?lang=android)
+- [`DetectedQuadResult`]({{ site.ddn_android_api }}detected-quads-result.html): All quads that detected from the processed image.
+- [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html): The boundary detection result of a single document page.
+- [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html): All normalized images that deskewed from the processed image.
+- [`NormalizedImageResultItem`]({{ site.ddn_android_api }}normalized-image-result-item.html): The deskewing result of a single document page.
 
-## DynamsoftUtility
+#### MRZ Scanning
 
-- [`DirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html)
-- [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html)
-- [`MultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html)
-- [`UtilityModule`]({{ site.dcv_android_api }}utility/utility-module.html)
+Callback methods that are related to MRZ scanning:
 
-## DynamsoftCameraEnhancer
+- [`onParsedResultsReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onparsedresultsreceived): The callback of content parsing. The result you received in the callback method is a [`ParsedResult`]({{ site.dcp_android_api }}parsed-result.html) object, which contains all the parsed results from the processed image.
+- [`onRecognizedTextLinesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived): The callback of text recognition. The result you received in the callback method is a [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html) object, which contains all the original MRZ text of the processed image.
 
-### Classes
+Related APIs:
 
-- [`CameraEnhancer`]({{ site.dce_android_api }}primary-api/camera-enhancer.html)
-- [`CameraEnhancerModule`]({{ site.dce_android_api }}auxiliary-api/camera-enhancer-module.html)
-- [`CameraView`]({{ site.dce_android_api }}auxiliary-api/dcecameraview.html)
-- [`Capabilities`]({{ site.dce_android_api }}auxiliary-api/capabilities.html)
-- [`DrawingItem`]({{ site.dce_android_api }}auxiliary-api/drawingitem.html)
-- [`DrawingLayer`]({{ site.dce_android_api }}auxiliary-api/dcedrawinglayer.html)
-- [`DrawingStyleManager`]({{ site.dce_android_api }}auxiliary-api/drawingstylemanager.html)
-- [`DrawingStyle`]({{ site.dce_android_api }}auxiliary-api/drawingstyle.html)
-- [`Feedback`]({{ site.dce_android_api }}auxiliary-api/dcefeedback.html)
-- [`ImageEditorView`]({{ site.dce_android_api }}auxiliary-api/dceimageeditorview.html)
-- [`LineDrawingItem`]({{ site.dce_android_api }}auxiliary-api/drawingitem-line.html)
-- [`Note`]({{ site.dce_android_api }}auxiliary-api/note.html)
-- [`QuadDrawingItem`]({{ site.dce_android_api }}auxiliary-api/drawingitem-quad.html)
-- [`RectDrawingItem`]({{ site.dce_android_api }}auxiliary-api/drawingitem-rect.html)
-- [`TextDrawingItem`]({{ site.dce_android_api }}auxiliary-api/drawingitem-text.html)
-- [`TipConfig`]({{ site.dce_android_api }}auxiliary-api/tip-config.html)
+- [`ParsedResult`]({{ site.dcp_android_api }}parsed-result.html): All parsed results that captured from the processed image.
+- [`ParsedResultItem`]({{ site.dcp_android_api }}parsed-result-item.html): The parsing result of a single parsable content.
+- [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html): All text lines that recognized from the processed image.
+- [`TextLineResultItem`]({{ site.dlr_android_api }}text-line-result-item.html): The text recognition result of a single text line.
 
-### Interfaces
+### Camera View
 
-- [`CameraStateListener`]({{ site.dce_android_api }}auxiliary-api/protocol-dcecamerastatelistener.html)
-- [`PhotoListener`]({{ site.dce_android_api }}auxiliary-api/protocol-dcephotolistener.html)
-- [`VideoFrameListener`]({{ site.dce_android_api }}auxiliary-api/protocol-dceframelistener.html)
-
-### Enumerations
-
-- [`CameraPosition`]({{ site.dcv_enumerations }}camera-position.html?lang=objc,swift)
-- [`CameraState`]({{ site.dcv_enumerations }}camera-state.html?lang=objc,swift)
-- [`CoordinateBase`]({{ site.dcv_enumerations }}coordinate-base.html?lang=objc,swift)
-- [`DrawingItemMediaType`]({{ site.dcv_enumerations }}drawing-item-media-type.html?lang=objc,swift)
-- [`DrawingItemState`]({{ site.dcv_enumerations }}drawing-item-state.html?lang=objc,swift)
-- [`EnhancedFeatures`]({{ site.dcv_enumerations }}enhanced-features.html?lang=objc,swift)
-- [`FocusMode`]({{ site.dcv_enumerations }}focus-mode.html?lang=objc,swift)
-- [`Resolution`]({{ site.dcv_enumerations }}resolution.html?lang=objc,swift)
-
-## DynamsoftImageProcessing
-
-- [`ImageProcessingModule`]({{ site.dcv_android_api }}image-processing/image-processing-module.html)
-
-## DynamsoftLicense
-
-- [`LicenseManger`]({{ site.dcv_android_api }}license/license-manager.html)
-- [`LicenseModule`]({{ site.dcv_android_api }}license/license-module.html)
+[`CameraView`]({{ site.dce_android_api }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_android_api }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_android_api }}auxiliary-api/dcecameraview.html).
