@@ -305,4 +305,4 @@ private String assembleString(ParsedResultItem item) {
 
 You can also download the similar source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/android/PassportMRZScanner/" target="_blank">PassportMRZScanner Sample(Java)</a>
+- <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/android/MRZScanner/" target="_blank">MRZScanner Sample(Java)</a>
