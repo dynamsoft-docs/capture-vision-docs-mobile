@@ -40,7 +40,7 @@ Dynamsoft Camera Enhancer (DCE) is an SDK that includes camera control, camera e
    <p>Highlight Decoded Barcodes</p>
 </div>
 
-<a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">Read More about Dynamsoft Camera Enhancer.</a>
+<a href="https://www.dynamsoft.com/camera-enhancer/docs-archive/introduction/?ver=latest" target="_blank">Read More about Dynamsoft Camera Enhancer.</a>
 
 ## SDK Components
 

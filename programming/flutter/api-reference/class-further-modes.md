@@ -54,17 +54,17 @@ class FurtherModes {
 
 You can find detailed instructions of the mode parameters on **Dynamsoft Barcode Reader** documents
 
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/barcode-colour-modes.html" target="_blank">barcodeColourModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/barcode-complement-modes.html" target="_blank">barcodeComplementModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/colour-clustering-modes.html" target="_blank">colourClusteringModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/colour-conversion-modes.html" target="_blank">colourConversionModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/deformation-resisting-modes.html" target="_blank">deformationResistingModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/dpm-code-reading-modes.html" target="_blank">dpmCodeReadingModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/grayscale-transformation-modes.html" target="_blank">grayscaleTransformationModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/image-preprocessing-modes.html" target="_blank">imagePreprocessingModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/region-predetection-modes.html" target="_blank">regionPredetectionModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/texture-detection-modes.html" target="_blank">textureDetectionModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/text-filter-modes.html" target="_blank">textFilterModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/barcode-colour-modes.html" target="_blank">barcodeColourModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/barcode-complement-modes.html" target="_blank">barcodeComplementModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/colour-clustering-modes.html" target="_blank">colourClusteringModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/colour-conversion-modes.html" target="_blank">colourConversionModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/deformation-resisting-modes.html" target="_blank">deformationResistingModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/dpm-code-reading-modes.html" target="_blank">dpmCodeReadingModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/grayscale-transformation-modes.html" target="_blank">grayscaleTransformationModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/image-preprocessing-modes.html" target="_blank">imagePreprocessingModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/region-predetection-modes.html" target="_blank">regionPredetectionModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/texture-detection-modes.html" target="_blank">textureDetectionModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/text-filter-modes.html" target="_blank">textFilterModes</a>
 
 ## Related API(s)
 

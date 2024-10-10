@@ -1,104 +1,101 @@
 repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-mobile/blob/main
 repository: dynamsoft-docs/capture-vision-docs-mobile
-docFullPath: https://www.dynamsoft.com/capture-vision/docs/mobile/
-firstLevelUrl: /capture-vision/docs/mobile
-docHomePage: /capture-vision/docs/core/introduction/
-frontPageFolder: /capture-vision/docs/
+docFullPath: https://www.dynamsoft.com/capture-vision/docs-archive/mobile/
+firstLevelUrl: /capture-vision/docs-archive/mobile
+docHomePage: /capture-vision/docs-archive/core/introduction/
+frontPageFolder: /capture-vision/docs-archive/
 
 productName: Dynamsoft Capture Vision
 
-programming: /capture-vision/docs/mobile/programming/
+programming: /capture-vision/docs-archive/mobile/programming/
 
-architecture: /capture-vision/docs/core/architecture/
-parameter: /capture-vision/docs/core/parameters/
+license: /capture-vision/docs-archive/mobile/license/
 
-license: /capture-vision/docs/mobile/license/
+faq: /capture-vision/docs-archive/mobile/faq/
 
-faq: /capture-vision/docs/mobile/faq/
+introduction: /capture-vision/docs-archive/mobile/introduction/
 
-introduction: /capture-vision/docs/mobile/introduction/
+react-native: /capture-vision/docs-archive/mobile/programming/react-native/
+rn-api: /capture-vision/docs-archive/mobile/programming/react-native/api-reference/
+rn-release-notes: /capture-vision/docs-archive/mobile/programming/react-native/release-notes/
+rn-guide: /capture-vision/docs-archive/mobile/programming/react-native/user-guide/
 
-react-native: /capture-vision/docs/mobile/programming/react-native/
-rn-api: /capture-vision/docs/mobile/programming/react-native/api-reference/
-rn-release-notes: /capture-vision/docs/mobile/programming/react-native/release-notes/
-rn-guide: /capture-vision/docs/mobile/programming/react-native/user-guide/
+cordova: /capture-vision/docs-archive/mobile/programming/cordova/
+cordova-api: /capture-vision/docs-archive/mobile/programming/cordova/api-reference/
+cordova-release-notes: /capture-vision/docs-archive/mobile/programming/cordova/release-notes/
+cordova-guide: /capture-vision/docs-archive/mobile/programming/cordova/user-guide/
 
-cordova: /capture-vision/docs/mobile/programming/cordova/
-cordova-api: /capture-vision/docs/mobile/programming/cordova/api-reference/
-cordova-release-notes: /capture-vision/docs/mobile/programming/cordova/release-notes/
-cordova-guide: /capture-vision/docs/mobile/programming/cordova/user-guide/
+flutter: /capture-vision/docs-archive/mobile/programming/flutter/
+flutter-api: /capture-vision/docs-archive/mobile/programming/flutter/api-reference/
+flutter-release-notes: /capture-vision/docs-archive/mobile/programming/flutter/release-notes/
+flutter-guide: /capture-vision/docs-archive/mobile/programming/flutter/user-guide/
 
-flutter: /capture-vision/docs/mobile/programming/flutter/
-flutter-api: /capture-vision/docs/mobile/programming/flutter/api-reference/
-flutter-release-notes: /capture-vision/docs/mobile/programming/flutter/release-notes/
-flutter-guide: /capture-vision/docs/mobile/programming/flutter/user-guide/
+xamarin: /capture-vision/docs-archive/mobile/programming/xamarin/
+xamarin-api: /capture-vision/docs-archive/mobile/programming/xamarin/api-reference/
+xamarin-release-notes: /capture-vision/docs-archive/mobile/programming/xamarin/release-notes/
+xamarin-guide: /capture-vision/docs-archive/mobile/programming/xamarin/user-guide/
 
-xamarin: /capture-vision/docs/mobile/programming/xamarin/
-xamarin-api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
-xamarin-release-notes: /capture-vision/docs/mobile/programming/xamarin/release-notes/
-xamarin-guide: /capture-vision/docs/mobile/programming/xamarin/user-guide/
+dcv_android: /capture-vision/docs-archive/mobile/programming/android/
+dcv_android_api: /capture-vision/docs-archive/mobile/programming/android/api-reference/
 
-dcv_android: /capture-vision/docs/mobile/programming/android/
-dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcv_ios: /capture-vision/docs-archive/mobile/programming/ios/
+dcv_ios_api: /capture-vision/docs-archive/mobile/programming/ios/api-reference/
 
-dcv_ios: /capture-vision/docs/mobile/programming/ios/
-dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+ddn_android_api: /document-normalizer/docs-archive/mobile/programming/android/api-reference/
+ddn_android: /document-normalizer/docs-archive/mobile/programming/android/
+ddn_ios_api: /document-normalizer/docs-archive/mobile/programming/ios/api-reference/
+ddn_ios: /document-normalizer/docs-archive/mobile/programming/ios/
+dce_android_api: /camera-enhancer/docs-archive/mobile/programming/android/
+dce_ios_api: /camera-enhancer/docs-archive/mobile/programming/ios/
 
-ddn_android_api: /document-normalizer/docs/mobile/programming/android/api-reference/
-ddn_android: /document-normalizer/docs/mobile/programming/android/
-ddn_ios_api: /document-normalizer/docs/mobile/programming/ios/api-reference/
-ddn_ios: /document-normalizer/docs/mobile/programming/ios/
-dce_android_api: /camera-enhancer/docs/mobile/programming/android/
-dce_ios_api: /camera-enhancer/docs/mobile/programming/ios/
+dbr_android: /barcode-reader/docs-archive/mobile/programming/android/
+dbr_android_api: /barcode-reader/docs-archive/mobile/programming/android/api-reference/
+dbr_ios: /barcode-reader/docs-archive/mobile/programming/objectivec-swift/
+dbr_ios_api: /barcode-reader/docs-archive/mobile/programming/objectivec-swift/api-reference/
 
-dbr_android: /barcode-reader/docs/mobile/programming/android/
-dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
-dbr_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/
-dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
+dbr_features: /barcode-reader/docs-archive/core/programming/features/
 
-dbr_features: /barcode-reader/docs/core/programming/features/
+dlr_android: /label-recognition/docs-archive/mobile/programming/android/
+dlr_android_api: /label-recognition/docs-archive/mobile/programming/android/api-reference/
+dlr_ios: /label-recognition/docs-archive/mobile/programming/objectivec-swift/
+dlr_ios_api: /label-recognition/docs-archive/mobile/programming/objectivec-swift/api-reference/
 
-dlr_android: /label-recognition/docs/mobile/programming/android/
-dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
-dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
-dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
+dcp_android: /code-parser/docs-archive/mobile/programming/android/
+dcp_android_api: /code-parser/docs-archive/mobile/programming/android/api-reference/
+dcp_ios: /code-parser/docs-archive/mobile/programming/ios/
+dcp_ios_api: /code-parser/docs-archive/mobile/programming/ios/api-reference/
 
-dcp_android: /code-parser/docs/mobile/programming/android/
-dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
-dcp_ios: /code-parser/docs/mobile/programming/ios/
-dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
-
-dcv_enumerations: /capture-vision/docs/core/enums/
-architecture: /capture-vision/docs/core/architecture/
-dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcv_enumerations: /capture-vision/docs-archive/core/enums/
+architecture: /capture-vision/docs-archive/core/architecture/
+dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
 
 
-dbr_maui: /barcode-reader/docs/mobile/programming/maui/
-dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
-dcv_maui: /capture-vision/docs/mobile/programming/maui/
-dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
-dce_maui: /camera-enhancer/docs/mobile/programming/maui/
-dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
-dcp_maui: /code-parser/docs/mobile/programming/maui/
-dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
+dbr_maui: /barcode-reader/docs-archive/mobile/programming/maui/
+dbr_maui_api: /barcode-reader/docs-archive/mobile/programming/maui/api-reference/
+dcv_maui: /capture-vision/docs-archive/mobile/programming/maui/
+dcv_maui_api: /capture-vision/docs-archive/mobile/programming/maui/api-reference/
+dce_maui: /camera-enhancer/docs-archive/mobile/programming/maui/
+dce_maui_api: /camera-enhancer/docs-archive/mobile/programming/maui/api-reference/
+dcp_maui: /code-parser/docs-archive/mobile/programming/maui/
+dcp_maui_api: /code-parser/docs-archive/mobile/programming/maui/api-reference/
 
 
-assets: /capture-vision/docs/mobile/assets/
-edit_icon: /capture-vision/docs/mobile/assets/img-icon/edit-icon.png
-smile_icon: /capture-vision/docs/mobile/assets/img-icon/icon-smile.png
-sad_icon: /capture-vision/docs/mobile/assets/img-icon/icon-sad.png
-dbr_icon: /capture-vision/docs/mobile/assets/img-icon/icon-dbr.svg
-dwt_icon: /capture-vision/docs/mobile/assets/img-icon/icon-dwt.svg
-dnt_icon: /capture-vision/docs/mobile/assets/img-icon/icon-dnt.svg
+assets: /capture-vision/docs-archive/mobile/assets/
+edit_icon: /capture-vision/docs-archive/mobile/assets/img-icon/edit-icon.png
+smile_icon: /capture-vision/docs-archive/mobile/assets/img-icon/icon-smile.png
+sad_icon: /capture-vision/docs-archive/mobile/assets/img-icon/icon-sad.png
+dbr_icon: /capture-vision/docs-archive/mobile/assets/img-icon/icon-dbr.svg
+dwt_icon: /capture-vision/docs-archive/mobile/assets/img-icon/icon-dwt.svg
+dnt_icon: /capture-vision/docs-archive/mobile/assets/img-icon/icon-dnt.svg
 
 download: /capture-vision/downloads/1000024-confirmation/
 
 useVersionTree: true
 
-baseurl: "/capture-vision/docs/mobile/"
+baseurl: "/capture-vision/docs-archive/mobile/"
 plugins:
   - jemoji
-  - jekyll-sitemap
+  # - jekyll-sitemap
   - jekyll-webp
   - jekyll-relative-links
   - jekyll-redirect-from
@@ -107,10 +104,10 @@ plugins:
 
 edition: mobile
 
-defaults:
-  - scope:
-      path: "Hide_Tree_Page.html"
-    values:
-      sitemap: false
+# defaults:
+#   - scope:
+#       path: "Hide_Tree_Page.html"
+#     values:
+#       sitemap: false
 
 url: "https://www.dynamsoft.com" # sitemap root
