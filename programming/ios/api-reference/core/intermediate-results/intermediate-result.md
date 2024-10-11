@@ -14,7 +14,7 @@ The `IntermediateResult` class represents the collection of all intermediate res
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

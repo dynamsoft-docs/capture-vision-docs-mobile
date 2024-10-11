@@ -14,7 +14,7 @@ The `DSTextureDetectionResultUnit` class extends the `DSIntermediateResultUnit` 
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

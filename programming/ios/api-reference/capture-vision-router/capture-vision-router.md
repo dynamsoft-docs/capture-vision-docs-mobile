@@ -14,7 +14,7 @@ The `DSCaptureVisionRouter` class is what a user uses to interact with image-pro
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

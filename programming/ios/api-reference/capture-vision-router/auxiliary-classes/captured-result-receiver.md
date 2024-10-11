@@ -15,7 +15,7 @@ The `DSCapturedResultReceiver` interface is designed as a standardized way for r
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

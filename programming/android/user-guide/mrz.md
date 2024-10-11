@@ -2,12 +2,27 @@
 layout: default-layout
 title: Scan & Parse MRZ - Dynamsoft Capture Vision Android Edition
 description: This page introduce how to scan and parse a MRZ with Dynamsoft Capture Vision Android Edition.
-keywords: Android, MRZ
+keywords: Android, MRZ, passport, id card, visa
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Android User Guide for MRZ Integration
+
+In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision Android SDK.
+
+- [Android User Guide for MRZ Integration](#android-user-guide-for-mrz-integration)
+	- [Requirements](#requirements)
+	- [Add the SDK](#add-the-sdk)
+	- [Build Your First Application](#build-your-first-application)
+		- [Create a New Project](#create-a-new-project)
+		- [Include the Libraries](#include-the-libraries)
+		- [Initialize License](#initialize-license)
+		- [Initialize the Camera Module](#initialize-the-camera-module)
+		- [Initialize Capture Vision Router](#initialize-capture-vision-router)
+		- [Extract Parsed Results](#extract-parsed-results)
+		- [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
@@ -15,7 +30,7 @@ needGenerateH3Content: true
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
 - Development Environment: Android Studio 2022.2.1 or higher.
 
-## Add the Libraries
+## Add the SDK
 
 1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
@@ -33,11 +48,12 @@ needGenerateH3Content: true
 
     ```groovy
     dependencies {
-        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.2.3000'
+        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.4.2000'
+        implementation 'com.dynamsoft:dynamsoftmrz:3.4.20'
     }
     ```
 
-    > Read more about [dynamsoftcapturevisionbundle](../api-reference/index.md)
+    > Read more about the modules of [dynamsoftcapturevisionbundle](../api-reference/index.md)
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -64,17 +80,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 
 ### Include the Libraries
 
-Add the SDK to your new project. Please read [Add the Libraries](#add-the-libraries) section for more details.
-
-### Deploy the CharacterModel & Template
-
-A `CharacterModel` is a model file trained using deep neural networks for character recognition. A `Template` file in the Dynamsoft Capture Vision SDK offers a customizable configuration for optimizing barcode recognition, label recognition, document normalization, and bytes parsing settings. This enables users to tailor the capture process to their specific needs. For MRZ scanning, you have to include the required the MRZ `CharacterModel` and `Template` in your project first.
-
-1. Right-click on the **app** folder, click **New->Directory** and select the **src\main\assets** to create an assets folder. Under the **assets** folder create two new folders, **CharacterModel** and **Templates**.
-
-2. Copy the <a href="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.11/dist/MRZ.data" target="_blank">**MRZ.data**</a> to the **CharacterModel** folder.
-
-3. Copy the  <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/blob/main/android/MRZScanner/app/src/main/assets/Templates/MRZScanner.json" target="_blank">**MRZScanner.json**</a> to the **Templates** folder.
+Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
 ### Initialize License
 
@@ -99,7 +105,7 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
    >Note:  
    >
    >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=android" target="_blank">Trial License link</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=android" target="_blank">Trial License link</a>.
 
 ### Initialize the Camera Module
 
@@ -175,17 +181,7 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
     }
     ```
 
-3. Initialize settings via a MRZ scanning template.
-
-    ````java
-    try {
-        mRouter.initSettingsFromFile("MRZScanner.json");
-    } catch (CaptureVisionRouterException e) {
-        throw new RuntimeException(e);
-    }
-    ```
-
-4. Override `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video MRZ scanning. After scanning starts, the SDK will automatically recognize and parse the text in the MRZ area from the video frame, and send the parsed MRZ result to the callback function.
+3. Override `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video MRZ scanning. After scanning starts, the SDK will automatically recognize and parse the text in the MRZ area from the video frame, and send the parsed MRZ result to the callback function.
 
     ```java
     import com.dynamsoft.dce.CameraEnhancerException;

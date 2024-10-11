@@ -14,7 +14,7 @@ The `DSImageData` class defines the structure of an object that represents an im
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

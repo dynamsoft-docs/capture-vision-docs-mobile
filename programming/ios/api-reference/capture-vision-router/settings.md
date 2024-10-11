@@ -103,6 +103,59 @@ func initSettingsFromFile(_ file:String) throws -> BOOL
 
 A BOOL value that indicates whether the settings are initialized successfully.
 
+**Code Snippet**
+
+The following steps shows how to read a template file under the `DynamsoftResources.bundle`:
+
+1. Create a **DynamsoftResources** folder in the finder. Under the **DynamsoftResources** folder create a new folder, **Templates**.
+
+2. Put your **.json** template file under the **Templates** folder. Here we suppose you are adding a template file named **ReadPDF417.json**.
+
+3. Rename the **DynamsoftResources** folder's extension name to **.bundle** and drag the **DynamsoftResources.bundle** into your project on Xcode. Select **Create groups** for the **Added folders** option.
+
+   <div align="left">
+      <p><img src="../../../../assets/img/init-settings-from-file-ios.png" alt="initSettings" width="50%" /></p>
+      <p>DynamsoftResources.bundle Example</p>
+   </div>
+
+4. Add the following code to your project to initialize the template:
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   [self.cvr initSettingsFromFile:@"ReadPDF417.json" error:nil];
+   ```
+   2. 
+   ```swift
+   try! cvr.initSettingsFromFile("ReadPDF417.json")
+   ```
+
+5. To use your template, you have to specify the template name in the `startCapturing` or `capture` method.
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   [self.cvr startCapturing:@"ReadPDF417" completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
+      if (!isSuccess && error != nil) {
+             // Add code to handle error
+      }
+   }];
+   ```
+   2. 
+   ```swift
+   cvr.startCapturing("ReadPDF417") { isSuccess, error in
+      if (!isSuccess) {
+             // Add code to handle error
+      }
+   }
+   ```
+
 ## getSimplifiedSettings
 
 Retrieves a `SimplifiedCaptureVisionSettings` object that contains simplified settings for the specified `CaptureVisionTemplate`.

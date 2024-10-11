@@ -17,7 +17,7 @@ The `DSIntermediateResultReceiver` protocol includes methods for monitoring the 
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

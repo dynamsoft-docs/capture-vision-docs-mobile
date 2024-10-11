@@ -13,7 +13,7 @@ Dynamsoft Capture Vision (DCV) is a comprehensive SDK that integrates various fu
 
 DCV is designed to enable developers to quickly create conceptual prototypes within hours. It also offers the flexibility to handle more complex customizations for demanding tasks.
 
-> Read [introduction of Dynamsoft Capture Vision (DCV) architecture]({{ site.docHomePage }}){:target="_blank"}
+> Read [Introduction to Dynamsoft Capture Vision]({{ site.dcvb_introduction }})
 
 This documentation provides guidance to assist developers in utilizing DCV for Android applications.
 
@@ -22,29 +22,28 @@ This documentation provides guidance to assist developers in utilizing DCV for A
 ### System Requirements
 
 - Supported OS: Android 5.0 (API Level 21) or higher.
-- Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
-- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 2022.2.1 or higher.
 
 ### Get Started
 
 - [Read Barcode]({{ site.dbr_android }}user-guide.html)
-- [Recognize Text Lines]({{ site.dlr_android }}user-guide.html)
+- [Scan MRZ]({{ site.dcv_android }}user-guide/mrz.html)
 - [Detect & Normalize Documents]({{ site.ddn_android }}user-guide.html)
-- [Scan & Parse Passport information]({{ site.dcv_android }}user-guide/passport.html)
 
 ### Check APIs
 
-While the guide covers common APIs, more detailed explanations of these and other APIs can be found in the API Reference.
+While the guide covers common APIs, more detailed explanations of these and other APIs can be found in the [API Reference](./api-reference/index.md).
 
 ### Read about CaptureVisionTemplate
 
-Using DCV in JavaScript involves:
+Using DCV in Android involves:
 
 1. Creating a `CaptureVisionRouter` instance.
 2. Defining and binding an image source and a result receiver to the instance.
 3. Specifying a template which defines how to process images.
 
-Apparently, the use of DCV varies with the choice of template. Dynamsoft provides popular preset templates and will add more over time. To understand, adjust, or define your own template, read about [`CaptureVisionTemplate`]({{ site.docHomePage }}parameters/file/){:target="_blank"}.
+Apparently, the use of DCV varies with the choice of template. Dynamsoft provides popular preset templates and will add more over time. To understand, adjust, or define your own template, read about [CaptureVisionTemplate]({{ site.parameter }}file/).
 
 ### Contact Us
 

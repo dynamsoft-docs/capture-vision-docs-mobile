@@ -14,7 +14,7 @@ The `CapturedResultItem` class provides a common structure for representing diff
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

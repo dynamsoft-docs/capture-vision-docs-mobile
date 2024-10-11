@@ -27,7 +27,7 @@ class CapturedResultItem
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`Type`](#type) | *[EnumCapturedResultItemType]({{ site.dcv_maui_api }}core/enum/captured-result-item-type.html)* | The type of the captured result item, indicating what kind of data it represents. |
-| [`TargetROIDefName`](#targetroidefname) | *string* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/){:target="_blank"} object which includes a task that generated the result. |
+| [`TargetROIDefName`](#targetroidefname) | *string* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
 | [`TaskName`](#taskname) | *string* | The name of the task that generated the result. |
 
 ### Type
@@ -40,7 +40,7 @@ EnumCapturedResultItemType Type { get; }
 
 ### TargetROIDefName
 
-The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/){:target="_blank"} object which includes a task that generated the result. The name is defined in a `CaptureVisionTemplate`.
+The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. The name is defined in a `CaptureVisionTemplate`.
 
 ```csharp
 string TargetROIDefName { get; }

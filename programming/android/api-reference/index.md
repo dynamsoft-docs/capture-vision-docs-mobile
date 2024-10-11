@@ -45,9 +45,9 @@ The table below describes details the functionalities of these modules:
 The main class [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
 - [Set input]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput)
-- [Config barcode reader settings]({{ site.dcv_android_api }}capture-vision-router/settings.html)
+- [Config capture vision settings]({{ site.dcv_android_api }}capture-vision-router/settings.html)
 - [Add result receiver]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
-- [Start video stream barcode processing]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
+- [Start capturing]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
 
 ### Image Source Adapter
 

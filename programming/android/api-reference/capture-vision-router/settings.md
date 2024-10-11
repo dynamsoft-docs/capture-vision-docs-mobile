@@ -75,14 +75,37 @@ void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
 
 **Code Snippet**
 
-Add a **Templates** folder to the assets folder of your project at **src\main\assets\Templates**. Put your JSON file in the **Templates** folder and add the following code:
+Add a **Templates** folder to the assets folder of your project at **src\main\assets\Templates**. Put your JSON file in the **Templates** folder. Here we use a **ReadPDF417.json** file as an example.
+
+<div align="left">
+   <p><img src="../../../../assets/img/init-settings-from-file-android.png" alt="initSettings" width="50%" /></p>
+   <p>Template Example</p>
+</div>
+
+Add the following code to initialize the template:
 
 ```java
 try {
-    mRouter.initSettingsFromFile("UserDefineTemplate.json");
+    mRouter.initSettingsFromFile("ReadPDF417.json");
 } catch (CaptureVisionRouterException e) {
     throw new RuntimeException(e);
 }
+```
+
+To use your template, you have to specify the template name in the `startCapturing` or `capture` method. For example:
+
+```java
+mRouter.startCapturing("ReadPDF417", new CompletionListener() {
+    @Override
+    public void onSuccess() {
+        // Add code to run when the capture is successfully started.
+    }
+
+    @Override
+    public void onFailure(int errorCode, String errorString) {
+        // Add code to run when the capture fails.
+    }
+});
 ```
 
 ## getSimplifiedSettings

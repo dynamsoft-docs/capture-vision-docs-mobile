@@ -14,7 +14,7 @@ The `Contour` class represents a contour made up of multiple points.
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

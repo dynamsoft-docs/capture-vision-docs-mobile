@@ -15,7 +15,7 @@ The IntermediateResultReceiver class is designed as a standardized way for retri
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

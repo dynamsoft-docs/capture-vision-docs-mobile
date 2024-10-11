@@ -2,12 +2,32 @@
 layout: default-layout
 title: Scan & Parse MRZ - Dynamsoft Capture Vision iOS Edition
 description: This page introduce how to scan and parse a MRZ with Dynamsoft Capture Vision iOS Edition.
-keywords: iOS, MRZ
+keywords: iOS, MRZ, passport, id card, visa
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # iOS User Guide for MRZ Integration
+
+In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision iOS SDK.
+
+- [iOS User Guide for MRZ Integration](#ios-user-guide-for-mrz-integration)
+	- [Requirements](#requirements)
+	- [Add the SDK](#add-the-sdk)
+		- [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
+		- [Add the xcframeworks via Swift Package Manager](#add-the-xcframeworks-via-swift-package-manager)
+	- [Build Your First Application](#build-your-first-application)
+		- [Create a New Project](#create-a-new-project)
+		- [Include the Library](#include-the-library)
+		- [Initialize the License](#initialize-the-license)
+		- [Initialize the Camera Module](#initialize-the-camera-module)
+		- [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
+		- [Implement Result Receiver](#implement-result-receiver)
+		- [Extract Parsed Results](#extract-parsed-results)
+		- [Configure viewWillAppear, viewWillDisappear, viewDidLoad](#configure-viewwillappear-viewwilldisappear-viewdidload)
+		- [Configure Camera Privacy](#configure-camera-privacy)
+		- [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
@@ -15,7 +35,11 @@ needGenerateH3Content: true
 - Supported ABI: arm64 and x86_64.
 - Development Environment: Xcode 13+ (Xcode 14.1+ recommended).
 
-## Add the Libraries
+## Add the SDK
+
+There are two ways to add the SDK into your project - **CocoaPods**, or via **Swift Package Manager**.
+
+### Add the xcframeworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace *TargetName* with your real target name.
 
@@ -23,18 +47,29 @@ needGenerateH3Content: true
     target '{Your project name}' do
         use_frameworks!
 
-        pod 'DynamsoftCaptureVisionBundle','2.2.3000'
+        pod 'DynamsoftCaptureVisionBundle','2.4.2000'
+        pod 'DynamsoftMRZ', '3.4.20'
 
     end
     ```
 
-    > Read more about [DynamsoftCaptureVisionBundle](../api-reference/index.md)
+    > Read more about the modules of [DynamsoftCaptureVisionBundle](../api-reference/index.md)
 
 2. Execute the pod command to install the frameworks and generate workspace(**{Your project name}.xcworkspace**):
 
    ```bash
    pod install
    ```
+
+### Add the xcframeworks via Swift Package Manager
+
+1. In your Xcode project, go to **File --> AddPackages**.
+
+2. In the top-right section of the window, search "https://github.com/Dynamsoft/capture-vision-spm"
+
+3. Select `capture-vision-spm`, choose `Exact version`, enter **2.4.2000**, then click **Add Package**.
+
+4. Check all the frameworks and add.
 
 ## Build Your First Application
 
@@ -59,19 +94,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 
 ### Include the Library
 
-To add the SDK to your new project, please read [Add the Libraries](#add-the-libraries) section for more details.
-
-### Deploy the CharacterModel & Template
-
-A `CharacterModel` is a model file trained using deep neural networks for character recognition. A `Template` file in the Dynamsoft Capture Vision SDK offers a customizable configuration for optimizing barcode recognition, label recognition, document normalization, and bytes parsing settings. This enables users to tailor the capture process to their specific needs. For MRZ scanning, you have to include the required the MRZ `CharacterModel` and `Template` in your project first.
-
-1. Create a **DynamsoftResources** folder in the finder. Under the **DynamsoftResources** folder create two new folders, **CharacterModel** and **Templates**.
-
-2. Copy the <a href="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.11/dist/MRZ.data" target="_blank">**MRZ.data**</a> to the `CharacterModel` folder.
-
-3. Copy your template file <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/blob/main/ios/MRZScanner/DynamsoftResources.bundle/Templates/MRZScanner.json" target="_blank">**MRZScanner.json**</a> to the **Templates** folder.
-
-4. Rename the **DynamsoftResources** folder's extension name to **.bundle** and drag the **DynamsoftResources.bundle** into your project on Xcode. Select **Create groups** for the **Added folders** option.
+To add the SDK to your new project, please read [Add the SDK](#add-the-sdk) section for more details.
 
 ### Initialize the License
 
@@ -98,7 +121,7 @@ A `CharacterModel` is a model file trained using deep neural networks for charac
    >Note:  
    >
    >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=ios" target="_blank">Trial License link</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=ios" target="_blank">Trial License link</a>.
 
 ### Initialize the Camera Module
 

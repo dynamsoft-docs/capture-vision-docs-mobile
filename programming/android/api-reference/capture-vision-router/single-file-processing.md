@@ -34,7 +34,7 @@ CapturedResult capture(String filePath, String templateName);
 
 **Parameters**
 
-`[in] file`: The file path and name that you want to capture data from.
+`[in] filePath`: The file path and name that you want to capture data from. You have to specify the file name with extension name in the `filePath`. Supported file type includes ".bmp", ".jpg", ".png", ".gif" or one-page ".tiff".
 
 `[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
