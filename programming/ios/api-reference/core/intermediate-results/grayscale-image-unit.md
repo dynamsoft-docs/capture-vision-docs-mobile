@@ -14,7 +14,7 @@ The `GrayscaleImageUnit` class extends the `IntermediateResultUnit` class and re
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

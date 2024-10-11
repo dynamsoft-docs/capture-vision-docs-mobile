@@ -15,7 +15,7 @@ The `DSPDFReadingParameter` class represents the parameters for reading a PDF fi
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

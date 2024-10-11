@@ -14,7 +14,7 @@ The `ScaledDownColourImageUnit` class extends the `IntermediateResultUnit` class
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

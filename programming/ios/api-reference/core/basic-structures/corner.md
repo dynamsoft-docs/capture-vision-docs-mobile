@@ -14,7 +14,7 @@ The `DSCorner` class represents a corner, typically where two line segments meet
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

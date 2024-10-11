@@ -14,7 +14,7 @@ The `ImageSourceAdapter` class is an abstract class representing an adapter for 
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -14,7 +14,7 @@ The `DSTextureRemovedBinaryImageUnit` class extends the `DSIntermediateResultUni
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

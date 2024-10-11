@@ -14,7 +14,7 @@ The `DSTextureRemovedGrayscaleImageUnit` class extends the `DSIntermediateResult
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

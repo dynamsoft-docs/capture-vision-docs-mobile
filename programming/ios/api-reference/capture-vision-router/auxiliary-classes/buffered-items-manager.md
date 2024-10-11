@@ -14,7 +14,7 @@ The `BufferedItemsManager` class is used to manage the buffered items.
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

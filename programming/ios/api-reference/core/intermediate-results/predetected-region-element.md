@@ -14,7 +14,7 @@ The `DSPredetectedRegionElement` class extends the `DSRegionObjectElement` class
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

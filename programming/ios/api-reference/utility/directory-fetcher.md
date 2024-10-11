@@ -10,11 +10,11 @@ noTitleIndex: true
 
 # DSDirectoryFetcher
 
-The `DSDirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `DSImageSourceAdapter` class.
+The `DSDirectoryFetcher` class is a utility class that retrieves a list of files from a specified directory based on certain criteria. It inherits from the `DSProactiveImageSourceAdapter` class.
 
 ## Definition
 
-*Assembly:* DynamsoftUtility.framework
+*Assembly:* DynamsoftUtility.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -23,11 +23,11 @@ The `DSDirectoryFetcher` class is a utility class that retrieves a list of files
 >1. 
 ```objc
 NS_SWIFT_NAME(DirectoryFetcher)
-@interface DSDirectoryFetcher : DSImageSourceAdapter
+@interface DSDirectoryFetcher : DSProactiveImageSourceAdapter
 ```
 2. 
 ```swift
-class DirectoryFetcher : ImageSourceAdapter
+class DirectoryFetcher : ProactiveImageSourceAdapter
 ```
 
 ## Methods
@@ -37,6 +37,35 @@ class DirectoryFetcher : ImageSourceAdapter
 | [`init`](#init) | Create an instance of DSDirectoryFetcher. |
 | [`setDirectory`](#setdirectory) | Sets the directory path and filter for the file search. |
 | [`setPages`](#setpages) | Set the pages to read. |
+
+The following methods are inherited from [`DSProactiveImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/proactive-image-source-adapter.html).
+
+| Method | Description |
+| ------ | ----------- |
+| [`setImageFetchInterval`]({{ site.dcv_ios_api }}core/basic-structures/proactive-image-source-adapter.html#setimagefetchinterval) | Sets the time interval for the ImageSource to wait before attempting to fetch another image to put in the buffer. |
+| [`getImageFetchInterval`]({{ site.dcv_ios_api }}core/basic-structures/proactive-image-source-adapter.html#getimagefetchinterval) | Gets the time interval for the ImageSource to wait before attempting to fetch another image to put in the buffer. |
+
+The following methods & attributes are inherited from [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`bufferEmpty`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#bufferempty) | *BOOL* | The read only property determines whether the buffer is currently empty. |
+| [`bufferOverflowProtectionMode`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#bufferoverflowprotectionmode) | *DSBufferOverflowProtectionMode* | Sets the behavior for handling new incoming images when the buffer is full. |
+| [`colourChannelUsageType`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#colourchannelusagetype) | *colourChannelUsageType* | Sets the usage type for color channels in images. |
+| [`hasNextImageToFetch`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasnextimagetofetch) | *BOOL* | Determines whether there are more images available to fetch. |
+| [`imageCount`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#imagecount) | *NSUInteger* | The property defines the current number of images in the buffer. |
+| [`maxImageCount`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#maximagecount) | *NSUInteger* | The property defines the maximum number of images that can be buffered. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`addImageToBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#addimagetobuffer) | Adds an image to the internal buffer. |
+| [`clearBuffer`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#clearbuffer) | Clears all images from the buffer, resetting the state for new image fetching. |
+| [`getImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#getimage) | Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `DSImageData`. |
+| [`hasImage`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#hasimage) | Checks if an image with the specified ID is present in the buffer. |
+| [`setErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#seterrorlistener) | Sets an error listener to receive notifications about errors that occur during image source operations. |
+| [`setNextImageToReturn`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#setnextimagetoreturn) | Sets the processing priority of a specific image. This can affect the order in which images are returned by `getImage`. |
+| [`startFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`stopFetching`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
 
 ### init
 

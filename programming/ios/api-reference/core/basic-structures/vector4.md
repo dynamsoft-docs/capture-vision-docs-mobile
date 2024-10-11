@@ -14,7 +14,7 @@ The `DSVector4` class represents a four-dimensional vector.
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

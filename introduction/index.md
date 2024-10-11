@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
 breadcrumbText: Introduction
+ignore: true
 ---
 
 # Introduction to Dynamsoft Capture Vision

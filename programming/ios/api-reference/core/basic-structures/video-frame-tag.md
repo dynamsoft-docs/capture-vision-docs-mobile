@@ -14,7 +14,7 @@ The `DSVideoFrameTag` class represents a video frame tag, which is a type of ima
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

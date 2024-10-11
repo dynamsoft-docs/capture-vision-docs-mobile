@@ -14,7 +14,7 @@ The `IntermediateResultUnit` class represents the base structure for units of in
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

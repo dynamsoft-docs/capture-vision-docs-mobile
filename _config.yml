@@ -17,6 +17,7 @@ license: /capture-vision/docs/mobile/license/
 faq: /capture-vision/docs/mobile/faq/
 
 introduction: /capture-vision/docs/mobile/introduction/
+performance: /barcode-reader/docs/core/performance/
 
 react-native: /capture-vision/docs/mobile/programming/react-native/
 rn-api: /capture-vision/docs/mobile/programming/react-native/api-reference/
@@ -68,9 +69,11 @@ dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
 dcp_ios: /code-parser/docs/mobile/programming/ios/
 dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
 
+dce_enumerations: /camera-enhancer/docs/core/enums/
 dcv_enumerations: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
 dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcvb_introduction: /capture-vision/docs/core/introduction/
 
 
 dbr_maui: /barcode-reader/docs/mobile/programming/maui/
@@ -82,6 +85,7 @@ dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
 dcp_maui: /code-parser/docs/mobile/programming/maui/
 dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
 
+code_types: /code-parser/docs/core/code-types/
 
 assets: /capture-vision/docs/mobile/assets/
 edit_icon: /capture-vision/docs/mobile/assets/img-icon/edit-icon.png

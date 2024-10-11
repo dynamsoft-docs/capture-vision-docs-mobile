@@ -36,6 +36,6 @@ void onLicenseVerified(boolean isSuccess, Exception error);
 
 **Parameters**
 
-`[in] isSuccess`: A Boolean value indicating whether the license is verified successfully. 
+`[in] isSuccess`: A Boolean value indicating whether the license is verified successfully.
 
 `[in] error`: An exception object. It carries the error code and message that describe the reason why your license activation failed.

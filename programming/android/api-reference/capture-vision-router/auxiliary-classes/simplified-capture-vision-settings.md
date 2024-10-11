@@ -70,8 +70,23 @@ The generated `SimplifiedLabelRecognizerSettings` object.
 Specifies the type(s) of CapturedItem(s) that will be captured.
 
 ```java
+@EnumCapturedResultItemType
 int capturedResultItemTypes;
 ```
+
+You can specify multiple types. For example, you can use the following code to add `CRIT_ORIGINAL_IMAGE` to the captured results of `PT_READ_BARCODES` template.
+
+```java
+try {
+    SimplifiedCaptureVisionSettings settings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+    settings.capturedResultItemTypes = EnumCapturedResultItemType.CRIT_BARCODE | EnumCapturedResultItemType.CRIT_ORIGINAL_IMAGE;
+    cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+} catch (CaptureVisionRouterException e) {
+    throw new RuntimeException(e);
+}
+```
+
+> View [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android) about all supported result item types.
 
 ### roi
 

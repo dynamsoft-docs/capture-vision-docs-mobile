@@ -14,7 +14,7 @@ The `DSColourImageUnit` interface extends the `DSIntermediateResultUnit` interfa
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

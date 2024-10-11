@@ -14,7 +14,7 @@ The `DSLicenseVerificationListener` is a protocol that includes methods for moni
 
 ## Definition
 
-*Assembly:* DynamsoftLicense.framework
+*Assembly:* DynamsoftLicense.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

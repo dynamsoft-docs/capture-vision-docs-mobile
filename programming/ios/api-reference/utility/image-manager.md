@@ -14,7 +14,7 @@ The `DSImageManager` class is a utility class for managing and manipulating imag
 
 ## Definition
 
-*Assembly:* DynamsoftUtility.framework
+*Assembly:* DynamsoftUtility.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

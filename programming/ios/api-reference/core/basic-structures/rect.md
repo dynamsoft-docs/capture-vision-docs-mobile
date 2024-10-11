@@ -14,7 +14,7 @@ The `DSRect` class represents a rectangle in 2D space, which contains four integ
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

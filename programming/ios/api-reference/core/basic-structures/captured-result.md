@@ -17,7 +17,7 @@ The `DSCapturedResult` class represents the result of a capture operation on an 
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -14,7 +14,7 @@ The `DSEdge` class represents an edge defined by two `Corners`.
 
 ## Definition
 
-*Assembly:* DynamsoftCore.framework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
