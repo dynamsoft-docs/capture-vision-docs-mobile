@@ -44,7 +44,7 @@ static void initLicense(String license, @NonNull Context context, LicenseVerific
 
 `[in] context`: The context that you want to initialize the license.
 
-`[in] listener`: An listener object of `LicenseVerificationListener` to monitor the license activation status.
+`[in] listener`: A listener object of `LicenseVerificationListener` to monitor the license activation status.
 
 ### setDeviceFriendlyName
 

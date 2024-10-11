@@ -22,7 +22,7 @@ noTitleIndex: true
 
 #### Improved
 
-- Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to an licensing issue.
+- Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to a licensing issue.
 <!-- - Updated the method `stopCapturing`. Changed the default value of parameter `waitForRemaingTasks` from `false` to `true`. -->
 
 #### New
@@ -41,7 +41,7 @@ noTitleIndex: true
   - -40103: [Label Recognizer] No license found.
   - -50058: [Document Normalizer] No license found.
   - -90012: [Code Parser] No license found.
-- Added a new enumeration member `IRUT_RAW_TEXT_LINES` to the [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android).
+- Added a new enumeration member `IRUT_RAW_TEXT_LINES` to the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android).
 <!-- - Added a new method `Clone` to the class `CapturedResultItem`. -->
 
 #### Fixed
@@ -53,7 +53,7 @@ noTitleIndex: true
 
 #### Improved
 
-- Updated the error message of `initLicense` method. The methods will returns more detailed messages when failed to initialized the license. Warnings will be available if license initialization is successful but a part of the license key is invalid.
+- Updated the error message of `initLicense` method. The method will return more detailed messages when failed to initialize the license. Warnings will be available if license initialization is successful but a part of the license key is invalid.
 
 #### New
 
