@@ -42,7 +42,7 @@ static void InitLicense(string license, ILicenseVerificationListener listener);
 
 `[in] license`: The license key to be used for initialization.
 
-`[in] listener`: An listener object of [`ILicenseVerificationListener`]({{ site.dcv_maui_api }}license/license-verification-listener.html) to monitor the license activation status.
+`[in] listener`: A listener object of [`ILicenseVerificationListener`]({{ site.dcv_maui_api }}license/license-verification-listener.html) to monitor the license activation status.
 
 ### SetDeviceFriendlyName
 
