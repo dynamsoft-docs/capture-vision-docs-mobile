@@ -25,13 +25,11 @@ noTitleIndex: true
 #### Improved
 
 - Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to a licensing issue.
-<!-- - Updated the method `stopCapturing`. Changed the default value of parameter `waitForRemaingTasks` from `false` to `true`. -->
 
 #### New
 
 - Added internal logics for usage count.
 - Added a new callback method [`onRawTextLinesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html#onrawtextlinesreceived) to the class `DSIntermediateResultReceiver`.
-<!-- - Added a new method `addItem` to the class `CapturedResult`. -->
 
 ### DynamsoftCore
 
@@ -44,7 +42,6 @@ noTitleIndex: true
   - -50058: [Document Normalizer] No license found.
   - -90012: [Code Parser] No license found.
 - Added a new enumeration member `IntermediateResultUnitTypeRawTextLines` to the enumeration [`DSIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift).
-<!-- - Added a new method `Clone` to the class `CapturedResultItem`. -->
 
 #### Fixed
 
@@ -103,9 +100,6 @@ noTitleIndex: true
 - Added new properties to the [`QRCodeDetails`]({{ site.dbr_ios_api }}auxiliary-iQRCodeDetails.html) class
   - `dataMaskPattern`
   - `codewords`
-  <!-- - `codewordsCount` -->
-<!-- - Added a new method `AddItem` to the class `DecodedBarcodesResult`.
-- Added a new method `SetLocation` to the class `BarcodeResultItem`. -->
 
 #### Changed
 
@@ -131,11 +125,8 @@ noTitleIndex: true
   - Added a new method `addRecognizedTextLine`
   - Added a new method `setRecognizedTextLine(index,element,matrixToOriginalImage)`
   - Deprecated method `setRecognizedTextLine(element,matrixToOriginalImage)`
-<!-- - Added a new method `createRawTextLine` to the class [`DSLabelRecognizerModule`]({{ site.dlr_ios_api }}label-recognizer-module.html). -->
 - Added a new method `getRawText` to the class [`DSRecognizedTextLineELement`]({{ site.dlr_ios_api }}recognized-text-line-element.html).
 - Added a new property `rawText` to the class [`DSTextLineResultItem`]({{ site.dlr_ios_api }}text-line-result-item.html).
-<!-- - Added a new method `AddItem` to the class `RecognizedTextLinesResult`.
-- Added a new method `SetLocation` to the class `TextLineResultItem`. -->
 
 #### Fixed
 
@@ -158,10 +149,6 @@ noTitleIndex: true
 - Small fixes and tweaks.
 
 ### DynamsoftCodeParser
-
-<!-- #### New
-
-- Added a new method `AddItem` to the class `ParsedResultItem`. -->
 
 #### Changed
 
