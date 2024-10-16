@@ -17,6 +17,8 @@ noTitleIndex: true
   - EAN13
   - DotCode
 - Added support for decoding add-on codes (also known as Extension Codes) for UPC-A, UPC-E, EAN-8 and EAN-13 codes.
+- Added "Recognize Raw TextLines" stage for recognizing raw text lines.
+- Introduced a feature to track and accumulate recognized barcodes across multiple frames in real-time video, enabling seamless multi-barcode recognition.
 
 ### DynamsoftCaptureVisionRouter
 
@@ -171,6 +173,17 @@ noTitleIndex: true
 - Fixed a bug where the South African Driver's license might be parsed incorrectly.
 
 ## 2.2.3000 (08/21/2024)
+
+### Highlights
+
+- Added confusable character distinguishing: this feature enhances the library’s ability to distinguish between common confusable character sets including {0, o, O}, {1, I, l}, and {5, s, S}, across popular fonts like Arial, Times New Roman, and Verdana, etc.
+- Supported confusable character set customization: leveraging the new caching mechanism in the `CaptureVisionRouter (CVR)` module, the library now enables users to customize confusable character sets to meet the needs of specific scenarios.
+- Introduced the capability for users to influence the image processing process by altering intermediate results. Users can now clone, edit, and substitute intermediate result units within the callback method of each type. Subsequent operations will then proceed based on the updated unit.
+- Introduced a feature for multi-condition filtering across products. Users can now specify filtering criteria for the task results of a [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) by implementing an OutputTaskSetting based on the task results of varying products from descendant `TargetROIDef` objects.
+- Enhanced the [`Offset`]({{ site.dcv_parameters_reference }}target-roi-def/location.html#offset) parameter in `TargetROIDef`. Users now have the capability to meticulously customize components of the coordinate system, including the origin, X-axis, and Y-axis, for precise offset calculation.
+- Introduced a feature for grouping text lines. A text line group consists of spatially adjacent lines of text. Through the [`TextLineSpecification`]({{ site.dcv_parameters_reference }}text-line-specification/) parameters, users can now do two things:
+  - Put text lines in groups and also define the spatial relationship between different groups;
+  - Specify whether to concatenate text line results within a group, how to do the concatenation and whether to output the concatenated result.
 
 ### DynamsoftCaptureVisionRouter
 
