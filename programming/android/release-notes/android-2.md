@@ -25,13 +25,11 @@ noTitleIndex: true
 #### Improved
 
 - Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to a licensing issue.
-<!-- - Updated the method `stopCapturing`. Changed the default value of parameter `waitForRemaingTasks` from `false` to `true`. -->
 
 #### New
 
 - Added internal logics for usage count.
 - Added a new callback method [`onRawTextLinesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html#onrawtextlinesreceived) to the class `IntermediateResultReceiver`.
-<!-- - Added a new method `addItem` to the class `CapturedResult`. -->
 
 ### DynamsoftCore
 
@@ -44,7 +42,6 @@ noTitleIndex: true
   - -50058: [Document Normalizer] No license found.
   - -90012: [Code Parser] No license found.
 - Added a new enumeration member `IRUT_RAW_TEXT_LINES` to the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android).
-<!-- - Added a new method `Clone` to the class `CapturedResultItem`. -->
 
 #### Fixed
 
@@ -103,8 +100,6 @@ noTitleIndex: true
 - Added new properties to the [`QRCodeDetails`]({{ site.dbr_android_api }}auxiliary-QRCodeDetails.html) class
   - `getDataMaskPattern`
   - `getCodewords`
-<!-- - Added a new method `AddItem` to the class `DecodedBarcodesResult`.
-- Added a new method `SetLocation` to the class `BarcodeResultItem`. -->
 
 #### Changed
 
@@ -130,11 +125,8 @@ noTitleIndex: true
   - Added method `addRecognizedTextLine`
   - Added method `setRecognizedTextLine(index,element,matrixToOriginalImage)`
   - Deprecated method `setRecognizedTextLine(element,matrixToOriginalImage)`
-<!-- - Added a new method `createRawTextLine` to the class `LabelRecognizerModule`. -->
 - Added a new method `getRawText` to the class [`RecognizedTextLineELement`]({{ site.dlr_android_api }}recognized-text-line-element.html).
 - Added a new method `getRawText` to the class [`TextLineResultItem`]({{ site.dlr_android_api }}text-line-result-item.html).
-<!-- - Added a new method `AddItem` to the class `RecognizedTextLinesResult`.
-- Added a new method `SetLocation` to the class `TextLineResultItem`. -->
 
 #### Fixed
 
@@ -157,10 +149,6 @@ noTitleIndex: true
 - Small fixes and tweaks.
 
 ### DynamsoftCodeParser
-
-<!-- #### New
-
-- Added a new method `AddItem` to the class `ParsedResultItem`. -->
 
 #### Changed
 
