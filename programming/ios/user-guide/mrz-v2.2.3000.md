@@ -13,6 +13,10 @@ noTitleIndex: true
 In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision iOS SDK.
 
 - [iOS User Guide for MRZ Integration](#ios-user-guide-for-mrz-integration)
+	- [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
+		- [ID (TD1 Size)](#id-td1-size)
+		- [ID (TD2 Size)](#id-td2-size)
+		- [Passport (TD3 Size)](#passport-td3-size)
 	- [Requirements](#requirements)
 	- [Add the SDK](#add-the-sdk)
 		- [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
@@ -29,6 +33,39 @@ In this guide, you will learn step by step on how to build a MRZ scanner applica
 		- [Configure viewWillAppear, viewWillDisappear, viewDidLoad](#configure-viewwillappear-viewwilldisappear-viewdidload)
 		- [Configure Camera Privacy](#configure-camera-privacy)
 		- [Build and Run the Project](#build-and-run-the-project)
+
+## Supported Machine-Readable Travel Document Types
+
+The Machine Readable Travel Documents (MRTD) standard specified by the International Civil Aviation Organization (ICAO) defines how to encode information for optical character recognition on official travel documents.
+
+Currently, the SDK supports three types of MRTD:
+
+> Note: If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
+
+### ID (TD1 Size)
+
+The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containing 30 characters.
+
+<div>
+   <img src="{{ site.dcvb_root }}programming/assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
+</div>
+
+### ID (TD2 Size)
+
+The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
+
+<div>
+   <img src="{{ site.dcvb_root }}programming/assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
+</div>
+
+### Passport (TD3 Size)
+
+The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
+
+<div>
+   <img src="{{ site.dcvb_root }}programming/assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+</div>
+
 
 ## Requirements
 
