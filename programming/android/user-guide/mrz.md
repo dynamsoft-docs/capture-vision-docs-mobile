@@ -257,9 +257,9 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 >Note:
 >
->- When starting capturing, specify "ReadPassportAndId" to enable reading both Passport and ID cards.
->- If you only want to read a Passport, specify "ReadPassport" when starting capturing.
->- If you only want to read an ID card, specify "ReadId" when starting capturing.
+>- When using `startCapturing`, set the template to "ReadPassportAndId" to capture both Passports and ID cards.
+>- If you only need to capture Passports, set the template to "ReadPassport" when calling `startCapturing`.
+>- To capture only ID cards, set the template to "ReadId" during `startCapturing`.
 
 ### Extract Parsed Results
 

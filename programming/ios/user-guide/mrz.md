@@ -200,7 +200,6 @@ class ViewController: UIViewController {
     private func configureCVR() -> Void {
         cvr = CaptureVisionRouter()
 
-        try? cvr.initSettingsFromFile("MRZScanner.json")
         try? cvr.setInput(dce)
         
         // Add filter.
@@ -295,6 +294,12 @@ class ViewController: UIViewController, CapturedResultReceiver {
     }
 }
 ```
+
+>Note:
+>
+>- When using `startCapturing`, set the template to "ReadPassportAndId" to capture both Passports and ID cards.
+>- If you only need to capture Passports, set the template to "ReadPassport" when calling `startCapturing`.
+>- To capture only ID cards, set the template to "ReadId" during `startCapturing`.
 
 ### Configure Camera Privacy
 
