@@ -76,6 +76,7 @@ dcv_enumerations: /capture-vision/docs/core/enums/
 architecture: /capture-vision/docs/core/architecture/
 dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 dcvb_introduction: /capture-vision/docs/core/introduction/
+dcvb_root: /capture-vision/docs/core/
 
 
 dbr_maui: /barcode-reader/docs/mobile/programming/maui/

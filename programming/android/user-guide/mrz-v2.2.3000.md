@@ -42,7 +42,7 @@ Currently, the SDK supports three types of MRTD:
 The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containing 30 characters.
 
 <div>
-   <img src="../../assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
 </div>
 
 ### ID (TD2 Size)
@@ -50,7 +50,7 @@ The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containi
 The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
 
 <div>
-   <img src="../../assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
 </div>
 
 ### Passport (TD3 Size)
@@ -58,7 +58,7 @@ The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each li
 The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
 
 <div>
-   <img src="../../assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
 </div>
 
 ## Requirements
