@@ -16,7 +16,7 @@ The `LicenseManager` class provides a set of APIs to manage SDK licensing.
 
 *Namespace:* Dynamsoft.License.Maui
 
-*Assembly:* Dynamsoft.License.Maui
+*Assembly:* Dynamsoft.Core.Maui
 
 ```csharp
 class LicenseManager

@@ -5,11 +5,13 @@
         <li lang="maui"><a class="otherLinkColour">Getting Started</a>
             <ul lang="maui">
                 <li lang="maui"><a href="{{ site.dbr_maui }}user-guide.html" style="cursor:pointer;color:#3c3c3c">Read Barcodes</a></li>
+                <li lang="maui"><a href="{{ site.ddn_maui }}user-guide.html" style="cursor:pointer;color:#3c3c3c">Scan Documents</a></li>
+                <li lang="maui"><a href="{{ site.dcv_maui }}user-guide/mrz.html" style="cursor:pointer;color:#3c3c3c">Scan MRZ</a></li>
             </ul>
         </li>
     </ul>
 </li>
-<li lang="maui"><a class="otherLinkColour">API Reference</a>
+<li lang="maui"><a href="{{ site.dcv_maui_api }}" class="otherLinkColour">API Reference</a>
     <ul lang="maui">
         <li lang="maui"><a>Dynamsoft.CaptureVisionRouter.Maui</a>
             <ul lang="maui">
@@ -22,7 +24,7 @@
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}capture-vision-router/intermediate-result.html"  class="otherLinkColour">Intermediate Result</a></li>
                     </ul>
                 </li>
-                <li lang="maui"><a class="otherLinkColour">Classes</a>
+                <li lang="maui"><a class="otherLinkColour">Auxiliary Classes</a>
                     <ul lang="maui">
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/capture-vision-router-module.html" class="otherLinkColour">CaptureVisionRouterModule</a></li>
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html" class="otherLinkColour">CapturedResultFilter</a></li>
@@ -47,9 +49,41 @@
                 </li>
                 <li lang="maui"><a>Enumerations</a>
                     <ul lang="maui">
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}enum/barcode-format.html"  class="otherLinkColour">BarcodeFormat</a></li>
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}enum/deblur-mode.html"  class="otherLinkColour">DeblurMode</a></li>
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}enum/localization-mode.html"  class="otherLinkColour">LocalizationMode</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}enum/barcode-format.html"  class="otherLinkColour">EnumBarcodeFormat</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}enum/deblur-mode.html"  class="otherLinkColour">EnumDeblurMode</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}enum/localization-mode.html"  class="otherLinkColour">EnumLocalizationMode</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li lang="maui"><a>Dynamsoft.DocumentNormalizer.Maui</a>
+            <ul lang="maui">
+                <li lang="maui"><a class="otherLinkColour">Classes</a>
+                    <ul lang="maui">
+                        <li lang="maui"><a href="{{ site.ddn_maui_api }}detected-quad-result-item.html" class="otherLinkColour">DetectedQuadResultItem</a></li>
+                        <li lang="maui"><a href="{{ site.ddn_maui_api }}detected-quads-result.html" class="otherLinkColour">DetectedQuadsResult</a></li>
+                        <li lang="maui"><a href="{{ site.ddn_maui_api }}document-normalizer-module.html" class="otherLinkColour">DocumentNormalizerModule</a></li>
+                        <li lang="maui"><a href="{{ site.ddn_maui_api }}normalized-image-result-item.html" class="otherLinkColour">NormalizedImageResultItem</a></li>
+                        <li lang="maui"><a href="{{ site.ddn_maui_api }}normalized-images-result.html" class="otherLinkColour">NormalizedImagesResult</a></li>
+                        <li lang="maui"><a href="{{ site.ddn_maui_api }}simplified-document-normalizer-settings.html" class="otherLinkColour">SimplifiedDocumentNormalizerSettings</a></li>
+                    </ul>
+                </li>
+                <li lang="maui"><a>Enumerations</a>
+                    <ul lang="maui">
+                        <li lang="maui"><a href="{{ site.ddn_maui_api }}enum/colour-mode.html"  class="otherLinkColour">EnumColourMode</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li lang="maui"><a>Dynamsoft.LabelRecognizer.Maui</a>
+            <ul lang="maui">
+                <li lang="maui"><a class="otherLinkColour">Classes</a>
+                    <ul lang="maui">
+                        <li lang="maui"><a href="{{ site.dlr_maui_api }}character-result.html" class="otherLinkColour">CharacterResult</a></li>
+                        <li lang="maui"><a href="{{ site.dlr_maui_api }}label-recognizer-module.html" class="otherLinkColour">LabelRecognizerModule</a></li>
+                        <li lang="maui"><a href="{{ site.dlr_maui_api }}recognized-text-lines-result.html" class="otherLinkColour">RecognizedTextLinesResult</a></li>
+                        <li lang="maui"><a href="{{ site.dlr_maui_api }}simplified-label-recognizer-settings.html" class="otherLinkColour">SimplifiedLabelRecognizerSettings</a></li>
+                        <li lang="maui"><a href="{{ site.dlr_maui_api }}text-line-result-item.html" class="otherLinkColour">TextLineResultItem</a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,17 +92,24 @@
             <ul lang="maui">
                 <li lang="maui"><a class="otherLinkColour">Classes</a>
                     <ul lang="maui">
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}camera-enhancer-module.html" class="otherLinkColour">CameraEnhancerModule</a></li>
                         <li lang="maui"><a href="{{ site.dce_maui_api }}camera-enhancer.html" class="otherLinkColour">CameraEnhancer</a></li>
                         <li lang="maui"><a href="{{ site.dce_maui_api }}camera-view.html" class="otherLinkColour">CameraView</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}drawing-item.html" class="otherLinkColour">DrawingItem</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}drawing-layer.html" class="otherLinkColour">DrawingLayer</a></li>
                         <li lang="maui"><a href="{{ site.dce_maui_api }}feedback.html" class="otherLinkColour">Feedback</a></li>
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}torch-button.html" class="otherLinkColour">TorchButton</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}image-editor-view.html" class="otherLinkColour">ImageEditorView</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}quad-drawing-item.html" class="otherLinkColour">QuadDrawingItem</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}torch-button.html" class="otherLinkColour">TorchButton</a></li>
                     </ul>
                 </li>
                 <li lang="maui"><a>Enumerations</a>
                     <ul lang="maui">
-                        <li lang="maui"><a href="{{ site.dce_maui_api }}camera-position.html" class="otherLinkColour">CameraPosition</a></li>
-                        <li lang="maui"><a href="{{ site.dce_maui_api }}enhanced-features.html" class="otherLinkColour">EnhancedFeatures</a></li>
-                        <li lang="maui"><a href="{{ site.dce_maui_api }}focus-mode.html" class="otherLinkColour">FocusMode</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}enum/camera-position.html" class="otherLinkColour">EnumCameraPosition</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}enum/drawing-layer-id.html" class="otherLinkColour">EnumDrawingLayerId</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}enum/drawing-style-id.html" class="otherLinkColour">EnumDrawingStyleId</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}enum/enhanced-features.html" class="otherLinkColour">EnumEnhancedFeatures</a></li>
+                        <li lang="maui"><a href="{{ site.dce_maui_api }}enum/focus-mode.html" class="otherLinkColour">EnumFocusMode</a></li>
                     </ul>
                 </li>
             </ul>
@@ -78,16 +119,27 @@
                 <li lang="maui"><a class="otherLinkColour">Classes</a>
                     <ul lang="maui">
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}utility/multi-frame-result-cross-filter.html" class="otherLinkColour">MultiFrameResultCrossFilter</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}utility/image-manager.html" class="otherLinkColour">ImageManager</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}utility/utility-module.html" class="otherLinkColour">UtilityModule</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-
+        <li lang="maui"><a>Dynamsoft.ImageProcessing.Maui</a>
+            <ul lang="maui">
+                <li lang="maui"><a class="otherLinkColour">Classes</a>
+                    <ul lang="maui">
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}dip/image-processing-module.html" class="otherLinkColour">ImageProcessingModule</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
         <li lang="maui"><a>Dynamsoft.Core.Maui</a>
             <ul lang="maui">
                 <li lang="maui"><a class="otherLinkColour">Classes</a>
                     <ul lang="maui">
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}core/captured-result-item.html" class="otherLinkColour">CapturedResultItem</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/core-exception.html" class="otherLinkColour">CoreException</a></li>
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}core/core-module.html" class="otherLinkColour">CoreModule</a></li>
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}core/rect.html" class="otherLinkColour">DMRect</a></li>
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}core/image-data.html" class="otherLinkColour">ImageData</a></li>
@@ -104,11 +156,11 @@
 
                 <li lang="maui"><a>Enumerations</a>
                     <ul lang="maui">
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/captured-result-item-type.html"  class="otherLinkColour">CapturedResultItemType</a></li>
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/colour-channel-usage-type.html"  class="otherLinkColour">ColourChannelUsageType</a></li>
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/grayscale-enhancement-mode.html"  class="otherLinkColour">GrayscaleEnhancementMode</a></li>
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/grayscale-transformation-mode.html"  class="otherLinkColour">GrayscaleTransformationMode</a></li>
-                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/image-pixel-format.html"  class="otherLinkColour">ImagePixelFormat</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/captured-result-item-type.html"  class="otherLinkColour">EnumCapturedResultItemType</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/colour-channel-usage-type.html"  class="otherLinkColour">EnumColourChannelUsageType</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/grayscale-enhancement-mode.html"  class="otherLinkColour">EnumGrayscaleEnhancementMode</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/grayscale-transformation-mode.html"  class="otherLinkColour">EnumGrayscaleTransformationMode</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}core/enum/image-pixel-format.html"  class="otherLinkColour">EnumImagePixelFormat</a></li>
                     </ul>
                 </li>
             </ul>
@@ -118,6 +170,7 @@
                 <li lang="maui"><a class="otherLinkColour">Classes</a>
                     <ul lang="maui">
                         <li lang="maui"><a href="{{ site.dcv_maui_api }}license/license-manager.html" class="otherLinkColour">LicenseManger</a></li>
+                        <li lang="maui"><a href="{{ site.dcv_maui_api }}license/license-module.html" class="otherLinkColour">LicenseModule</a></li>
                     </ul>
                 </li>
                 <li lang="maui"><a class="otherLinkColour">Interfaces</a>
@@ -139,64 +192,15 @@
                 </li>
                 <li lang="maui"><a>Enumerations</a>
                     <ul lang="maui">
-                        <li lang="maui"><a href="{{ site.dcp_maui_api }}enum/mapping-status.html"  class="otherLinkColour">MappingStatus</a></li>
-                        <li lang="maui"><a href="{{ site.dcp_maui_api }}enum/validation-status.html"  class="otherLinkColour">ValiadtionStatus</a></li>
+                        <li lang="maui"><a href="{{ site.dcp_maui_api }}enum/mapping-status.html"  class="otherLinkColour">EnumMappingStatus</a></li>
+                        <li lang="maui"><a href="{{ site.dcp_maui_api }}enum/validation-status.html"  class="otherLinkColour">EnumValiadtionStatus</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <!-- <li lang="maui"><a>DynamsoftLabelRecognizer</a>
-            <ul lang="maui">
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}character-result.html" class="otherLinkColour">CharacterResult</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}label-recognizer-module.html" class="otherLinkColour">LabelRecognizerModule</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}localized-text-line-element.html" class="otherLinkColour">LocalizedTextLineElement</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}localized-text-lines-unit.html" class="otherLinkColour">LocalizedTextLinesUnit</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}simplified-label-recognizer-settings.html"  class="otherLinkColour">SimplifiedLabelRecognizerSettings</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}recognized-text-line-element.html" class="otherLinkColour">RecognizedTextLineElement</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}recognized-text-lines-result.html" class="otherLinkColour">RecognizedTextLinesResult</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}recognized-text-lines-unit.html" class="otherLinkColour">RecognizedTextLinesUnit</a></li>
-                <li lang="maui"><a href="{{ site.dlr_maui_api }}text-line-result-item.html" class="otherLinkColour">TextLineResultItem</a></li>
-            </ul>
-        </li>
-        <li lang="maui"><a>DynamsoftDocumentNormalizer</a>
-            <ul lang="maui">
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}candidate-quad-edges-unit.html" class="otherLinkColour">CandidateQuadEdgesUnit</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}corners-unit.html" class="otherLinkColour">CornersUnit</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}detected-quad-element.html" class="otherLinkColour">DetectedQuadElement</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}detected-quad-result-item.html" class="otherLinkColour">DetectedQuadResultItem</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}detected-quads-result.html" class="otherLinkColour">DetectedQuadsResult</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}detected-quads-unit.html" class="otherLinkColour">DetectedQuadsUnit</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}document-normalizer-module.html" class="otherLinkColour">DocumentNormalizerModule</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}long-lines-unit.html" class="otherLinkColour">LongLinesUnit</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}normalized-image-element.html" class="otherLinkColour">NormalizedImageElement</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}normalized-image-result-item.html" class="otherLinkColour">NormalizedImageResultItem</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}normalized-images-result.html" class="otherLinkColour">NormalizedImagesResult</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}normalized-image-unit.html" class="otherLinkColour">NormalizedImageUnit</a></li>
-                <li lang="maui"><a href="{{ site.ddn_maui_api }}simplified-document-normalizer-settings.html"  class="otherLinkColour">SimplifiedDocumentNormalizerSettings</a></li>
-            </ul>
-        </li> -->
     </ul>
 </li>
-<!-- <li lang="maui" class="category">USEFUL RESOURCES</li>
-<li lang="maui"><a href="{{ site.dcv_maui }}release-notes/" class="otherLinkColour">Release Notes</a>
-    <ul lang="maui">
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/cvr.html" class="otherLinkColour">DynamsoftCaptureVisionRouter</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dbr.html" class="otherLinkColour">DynamsoftBarcodeReader</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/ddn.html" class="otherLinkColour">DynamsoftDocumentNormalizer</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dlr.html" class="otherLinkColour">DynamsoftLabelRecognizer</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/core.html" class="otherLinkColour">DynamsoftCore</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dce.html" class="otherLinkColour">DynamsoftCameraEnhancer</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dcp.html" class="otherLinkColour">DynamsoftCodeParser</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dip.html" class="otherLinkColour">DynamsoftImageProcessing</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/license.html" class="otherLinkColour">DynamsoftLicense</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/utility.html" class="otherLinkColour">DynamsoftUtility</a></li>
-    </ul>
-</li>
-<li lang="maui"><a class="otherLinkColour">FAQ</a>
-    <ul lang="maui">
-        <li lang="maui"><a href="{{ site.dbr_maui }}faq/common-environment-issues.html" class="otherLinkColour">Common Environment Issues</a></li>
-    </ul>
-</li> -->
+
 <li lang="maui" class="category">UNDERSTANDING DCV</li>
 <li lang="maui"><a href="{{ site.dcvb_introduction }}index.html" class="otherLinkColour">Overview of DCV</a></li>
 <li lang="maui"><a href="{{ site.architecture }}" class="otherLinkColour">Architecture</a>
@@ -449,13 +453,6 @@
 <li lang="maui" class="category">USEFUL RESOURCES</li>
 <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/" class="otherLinkColour">Release Notes</a>
     <ul lang="maui">
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/core.html" class="otherLinkColour">DynamsoftCore</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/cvr.html" class="otherLinkColour">DynamsoftCaptureVisionRouter</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dbr.html" class="otherLinkColour">DynamsoftBarcodeReader</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dce.html" class="otherLinkColour">DynamsoftCameraEnhancer</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dcp.html" class="otherLinkColour">DynamsoftCodeParser</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/dip.html" class="otherLinkColour">DynamsoftImageProcessing</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/license.html" class="otherLinkColour">DynamsoftLicense</a></li>
-        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/utility.html" class="otherLinkColour">DynamsoftUtility</a></li>
+        <li lang="maui"><a href="{{ site.dcv_maui }}release-notes/maui-2.html" class="otherLinkColour">2.x</a></li>
     </ul>
 </li>

@@ -28,7 +28,7 @@ class LicenseModule
 | ------ | ----------- |
 | [`getVersion`](#getversion) | Get the version of Dynamsoft License module. |
 
-## getVersion
+### getVersion
 
 Get the version of Dynamsoft License module.
 

@@ -14,7 +14,6 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`InitSettings`](#initsettings) | Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`. |
 | [`InitSettingsFromFile`](#initsettingsfromfile) | Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`. |
-| [`InitSettingsFromFileAsync`](#initsettingsfromfile) | Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`. This method is asynchronous. |
 | [`GetSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision settings for a specific template. |
 | [`UpdateSettings`](#updatesettings) | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object. |
 | [`ResetSettings`](#resetsettings) | Restores all settings to their original default values. |
@@ -58,33 +57,6 @@ void InitSettingsFromFile(string filePath);
 **Parameters**
 
 `[in] file`: A JSON file that contains Capture Vision settings.
-
-**Possible Errors**
-
-| Error Code | Value | Description |
-| :--------- | :---- | :---------- |
-| EC_FILE_NOT_FOUND | -10005 | The file is not found. |
-| EC_JSON_PARSE_FAILED | -10030 | Failed to parse the JSON data. |
-| EC_JSON_TYPE_INVALID | -10031 | One or more parameters are allocated with wrong data type. |
-| EC_JSON_KEY_INVALID | -10032 | There exists invalid key in your JSON data. |
-| EC_JSON_VALUE_INVALID | -10033 | There exists invalid parameter value in your JSON data. |
-| EC_JSON_NAME_KEY_MISSING | -10034 | One or more `name` parameters are missing in your JSON data. Each section of the JSON data requires a unique `name` parameter. |
-| EC_JSON_NAME_VALUE_DUPLICATED | -10035 | There exists duplicated `name` parameters in your JSON data. The `name` parameter should be unique. |
-| EC_JSON_NAME_REFERENCE_INVALID | -10037 | You have referenced an invalid `name` value in your JSON data. |
-| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
-| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
-
-## InitSettingsFromFileAsync
-
-Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`. This method is asynchronous.
-
-```csharp
-Task InitSettingsFromFileAsync(string content);
-```
-
-**Parameters**
-
-`[in] content`: A real file path or a file name only.
 
 **Possible Errors**
 

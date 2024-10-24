@@ -82,7 +82,7 @@ void RemoveResultReceiver(ICapturedResultReceiver receiver);
 Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source.
 
 ```csharp
-void StartCapturing(string templateName = "", ICompletionListener completionHandler);
+void StartCapturing(string templateName, ICompletionListener completionHandler);
 ```
 
 **Parameters**

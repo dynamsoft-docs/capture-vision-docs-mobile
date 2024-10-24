@@ -16,7 +16,7 @@ The `MultiFrameResultCrossFilter` class implements the `CapturedResultFilter` in
 
 *Namespace:* Dynamsoft.Utility.Maui
 
-*Assembly:* Dynamsoft.Utility.Maui
+*Assembly:* Dynamsoft.CaptureVisionRouter.Maui
 
 ```csharp
 class MultiFrameResultCrossFilter
@@ -33,10 +33,6 @@ class MultiFrameResultCrossFilter
 | [`IsResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if deduplication is active for a given result item type. |
 | [`IsResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Checks if verification is active for a given result item type. |
 | [`GetDuplicateForgetTime`](#getduplicateforgettime) | Gets the interval during which duplicates are disregarded for specific result item types. |
-| [`EnableLatestOverlapping`](#enablelatestoverlapping) | Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming. |
-| [`IsLatestOverlappingEnabled`](#islatestoverlappingenabled) | Checks if to-the-latest overlapping is active for a given result item type. |
-| [`GetMaxOverlappingFrames`](#getmaxoverlappingframes) | Get the maximum overlapping frames count for a given result item type. |
-| [`SetMaxOverlappingFrames`](#setmaxoverlappingframes) | Set the maximum overlapping frames count for a given result item type. |
 
 ### MultiFrameResultCrossFilter
 
@@ -135,63 +131,3 @@ int GetDuplicateForgetTime(EnumCapturedResultItemType type);
 **Return Value**
 
 The set interval for the specified item type.
-
-### EnableLatestOverlapping
-
-Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming.
-
-```csharp
-void EnableLatestOverlapping(int type, bool enabled);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
-
-`[in] enabled`: A bool value to toggle to-the-latest overlapping on or off.
-
-### IsLatestOverlappingEnabled
-
-Checks if to-the-latest overlapping is active for a given result item type.
-
-```csharp
-bool IsLatestOverlappingEnabled(int type);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
-
-**Return Value**
-
-A bool value indicating the status of to-the-latest overlapping for the specified type.
-
-### GetMaxOverlappingFrames
-
-Get the maximum overlapping frames count for a given result item type.
-
-```csharp
-int GetMaxOverlappingFrames(int type);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
-
-**Return Value**
-
-The maximum overlapping frame count for the overlapping.
-
-### SetMaxOverlappingFrames
-
-Set the maximum overlapping frames count for a given result item type.
-
-```csharp
-void SetMaxOverlappingFrames(int type, int maxOverlappingFrames);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
-
-`[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.

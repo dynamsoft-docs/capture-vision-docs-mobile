@@ -16,7 +16,7 @@ The `ILicenseVerificationListener` is a interface that includes methods for moni
 
 *Namespace:* Dynamsoft.License.Maui
 
-*Assembly:* Dynamsoft.License.Maui
+*Assembly:* Dynamsoft.Core.Maui
 
 ```csharp
 interface ILicenseVerificationListener
