@@ -33,8 +33,6 @@ class SimplifiedCaptureVisionSettings
 | [`MinImageCaptureInterval`](#minimagecaptureinterval) | *int* | Set the minimum capture interval. It is measured in millisecond. |
 | [`Timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
 | [`BarcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings]({{ site.dbr_maui_api }}simplified-barcode-reader-settings.html)* | Specifies the settings for `DynamsoftBarcodeReader` tasks. |
-| [`LabelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dlr_maui_api }}simplified-label-recognizer-settings.html)* | Specifies the settings for `DynamsoftLabelRecognizer` tasks. |
-| [`DocumentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.ddn_maui_api }}simplified-document-normalizer-settings.html)* | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
 
 ### CapturedResultItemTypes
 
@@ -90,20 +88,4 @@ Specifies the settings for `DynamsoftBarcodeReader` tasks with a [`SimplifiedBar
 
 ```csharp
 SimplifiedBarcodeReaderSettings BarcodeSettings { get; set; }
-```
-
-### LabelSettings
-
-Specifies the settings for `DynamsoftLabelRecognizer` tasks with a [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_maui_api }}simplified-label-recognizer-settings.html) object.
-
-```csharp
-SimplifiedLabelRecognizerSettings LabelSettings { get; set; }
-```
-
-### DocumentSettings
-
-Specifies the settings for `DynamsoftDocumentNormalizer` tasks with a [`SimplifiedDocumentNormalizerSettings`]({{ site.ddn_maui_api }}simplified-document-normalizer-settings.html) object.
-
-```csharp
-SimplifiedDocumentNormalizerSettings DocumentSettings{ get; set; }
 ```

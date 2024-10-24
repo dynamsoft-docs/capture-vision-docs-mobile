@@ -29,9 +29,6 @@ interface ICapturedResultReceiver
 | [`OnCapturedResultReceived`](#oncapturedresultreceived) | This callback method delivers a `CapturedResult`, which is an object containning all kinds of captured result items that are captured from the image. |
 | [`OnDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback method delivers a `DecodedBarcodesResult`, which is an object containning all `CRIT_BARCODE` typed captured result items that are captured from the image. |
 | [`OnParsedResultsReceived`](#onparsedresultsreceived) | This callback method delivers a `ParsedResult`, which is an object containning all `CRIT_PARSED_RESULT` typed captured result items that are captured from the image. |
-| [`OnRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | This callback method delivers a `RecognizedTextLinesResult`, which is an object containning all `CRIT_TEXT_LINE` typed captured result items that are captured from the image. |
-| [`OnDetectedQuadsReceived`](#ondetectedquadsreceived) | This callback method delivers a `DetectedQuadsResult`, which is an object containning all `CRIT_DETECTED_QUAD` typed captured result items that are captured from the image. |
-| [`OnNormalizedImagesReceived`](#onnormalizedimagesreceived) | This callback method delivers a `NormalizedImagesResult`, which is an object containning all `CRIT_NORMALIZED_IMAGE` typed captured result items that are captured from the image. |
 
 ### OnCapturedResultReceived
 
@@ -68,39 +65,3 @@ void OnParsedResultsReceived(ParsedResult result);
 **Parameters**
 
 `[in] result`: The parsed result, an instance of [`ParsedResult`]({{site.dcp_maui_api}}parsed-result.html).
-
-### OnRecognizedTextLinesReceived
-
-This callback method delivers a `RecognizedTextLinesResult`, which is an object containning all `CRIT_TEXT_LINE` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
-
-```csharp
-void OnRecognizedTextLinesReceived(RecognizedTextLinesResult result);
-```
-
-**Parameters**
-
-`[in] result`: The recognized text line result, an instance of `RecognizedTextLinesResult`.
-
-### OnDetectedQuadsReceived
-
-This callback method delivers a `DetectedQuadsResult`, which is an object containning all `CRIT_DETECTED_QUAD` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
-
-```csharp
-void OnDetectedQuadsReceived(DetectedQuadsResult result);
-```
-
-**Parameters**
-
-`[in] result`: The detected quads result, an instance of `DetectedQuadsResult`.
-
-### OnNormalizedImagesReceived
-
-This callback method delivers a `NormalizedImagesResult`, which is an object containning all `CRIT_NORMALIZED_IMAGE` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
-
-```csharp
-void OnNormalizedImagesReceived(NormalizedImagesResult result);
-```
-
-**Parameters**
-
-`[in] result`: The normalized image result, an instance of `NormalizedImagesResult`.

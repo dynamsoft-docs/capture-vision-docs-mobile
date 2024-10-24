@@ -37,9 +37,6 @@ class CapturedResult
 | [`ErrorMessage`](#errormessage) | The error message associated with the capture result. |
 | [`DecodedBarcodesResult`](#decodedbarcodesresult) | An array of `BarcodeResultItem` objects, each representing a decoded barcode within the original image. |
 | [`ParsedResult`](#parsedresult) | An array of `ParsedResultItem` objects. |
-| [`RecognizedTextLinesResult`](#recognizedtextlinesresult) | An array of `RecognizedTextLinesResultItem` objects, each representing a recognized text line within the original image. |
-| [`DetectedQuadsResult`](#detectedquadsresult) | An array of `DetectedQuadsResultItem` objects, each representing a detected quad within the original image. |
-| [`NormalizedImagesResult`](#normalizedimagesresult) | An array of `NormalizedImagesResultItem` objects, each representing a normalized image within the original image. |
 
 ### OriginalImageHashId
 
@@ -87,28 +84,4 @@ A [`ParsedResult`]({{ site.dcp_maui_api }}parsed-result.html) that represents al
 
 ```csharp
 ParsedResult ParsedResult { get; }
-```
-
-### RecognizedTextLinesResult
-
-A [`RecognizedTextLinesResult`]({{ site.dtr_maui_api }}recognized-text-lines-result.html) object that represents all recognized text lines within the original image.
-
-```csharp
-RecognizedTextLinesResult RecognizedTextLinesResult { get; }
-```
-
-### DetectedQuadsResult
-
-A [`DetectedQuadsResult`]({{ site.dqr_maui_api }}detected-quads-result.html) object that represents all detected quads within the original image.
-
-```csharp
-DetectedQuadsResult DetectedQuadsResult { get; }
-```
-
-### NormalizedImagesResult
-
-A [`NormalizedImagesResult`]({{ site.dnr_maui_api }}normalized-images-result.html) object that represents all normalized images within the original image.
-
-```csharp
-NormalizedImagesResult NormalizedImagesResult { get; }
 ```

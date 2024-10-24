@@ -51,6 +51,8 @@ ddn_android_api: /document-normalizer/docs/mobile/programming/android/api-refere
 ddn_android: /document-normalizer/docs/mobile/programming/android/
 ddn_ios_api: /document-normalizer/docs/mobile/programming/ios/api-reference/
 ddn_ios: /document-normalizer/docs/mobile/programming/ios/
+ddn_maui_api: /document-normalizer/docs/mobile/programming/maui/api-reference/
+ddn_maui: /document-normalizer/docs/mobile/programming/maui/
 dce_android_api: /camera-enhancer/docs/mobile/programming/android/
 dce_ios_api: /camera-enhancer/docs/mobile/programming/ios/
 
@@ -65,7 +67,6 @@ dlr_android: /label-recognition/docs/mobile/programming/android/
 dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
 dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
 dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
-
 dcp_android: /code-parser/docs/mobile/programming/android/
 dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
 dcp_ios: /code-parser/docs/mobile/programming/ios/
@@ -81,6 +82,10 @@ dcvb_root: /capture-vision/docs/core/
 
 dbr_maui: /barcode-reader/docs/mobile/programming/maui/
 dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
+dlr_maui: /label-recognition/docs/mobile/programming/maui/
+dlr_maui_api: /label-recognition/docs/mobile/programming/maui/api-reference/
+ddn_maui: /document-normalizer/docs/mobile/programming/maui/
+ddn_maui_api: /document-normalizer/docs/mobile/programming/maui/api-reference/
 dcv_maui: /capture-vision/docs/mobile/programming/maui/
 dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
 dce_maui: /camera-enhancer/docs/mobile/programming/maui/
