@@ -29,6 +29,9 @@ interface ICapturedResultReceiver
 | [`OnCapturedResultReceived`](#oncapturedresultreceived) | This callback method delivers a `CapturedResult`, which is an object containning all kinds of captured result items that are captured from the image. |
 | [`OnDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback method delivers a `DecodedBarcodesResult`, which is an object containning all `CRIT_BARCODE` typed captured result items that are captured from the image. |
 | [`OnParsedResultsReceived`](#onparsedresultsreceived) | This callback method delivers a `ParsedResult`, which is an object containning all `CRIT_PARSED_RESULT` typed captured result items that are captured from the image. |
+| [`OnRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | This callback method delivers a `RecognizedTextLinesResult`, which is an object containning all `CRIT_TEXT_LINE` typed captured result items that are captured from the image. |
+| [`OnDetectedQuadsReceived`](#ondetectedquadsreceived) | This callback method delivers a `DetectedQuadsResult`, which is an object containning all `CRIT_DETECTED_QUAD` typed captured result items that are captured from the image. |
+| [`OnNormalizedImagesReceived`](#onnormalizedimagesreceived) | This callback method delivers a `NormalizedImagesResult`, which is an object containning all `CRIT_NORMALIZED_IMAGE` typed captured result items that are captured from the image. |
 
 ### OnCapturedResultReceived
 

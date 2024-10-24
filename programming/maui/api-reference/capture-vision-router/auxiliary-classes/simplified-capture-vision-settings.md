@@ -34,7 +34,7 @@ class SimplifiedCaptureVisionSettings
 | [`Timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
 | [`BarcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings]({{ site.dbr_maui_api }}simplified-barcode-reader-settings.html)* | Specifies the settings for `DynamsoftBarcodeReader` tasks. |
 | [`LabelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dlr_maui_api }}simplified-label-recognizer-settings.html)* | Specifies the settings for `DynamsoftLabelRecognizer` tasks. |
-| [`DocumentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.dlr_maui_api }}simplified-document-normalizer-settings.html)* | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
+| [`DocumentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.ddn_maui_api }}simplified-document-normalizer-settings.html)* | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
 
 ### CapturedResultItemTypes
 

@@ -25,7 +25,7 @@ Processes a single image or a file containing a single image to derive important
 > Note: The file should be a single image or a single page image file.
 
 ```csharp
-CapturedResult Capture(string filePath, string templateName = "");
+CapturedResult Capture(string filePath, string templateName);
 ```
 
 **Parameters**
@@ -62,7 +62,7 @@ Processes a single image in the memory with the fileBytes.
 > Note: The file should be a single image or a single page image file.
 
 ```csharp
-CapturedResult Capture(byte[] fileBytes, string templateName = "");
+CapturedResult Capture(byte[] fileBytes, string templateName);
 ```
 
 **Parameters**
@@ -95,7 +95,7 @@ If an error occurs when processing the image, the `CapturedResult` object will i
 Processes a single image with the `ImageData`.
 
 ```csharp
-CapturedResult Capture(ImageData imageData, string templateName = "");
+CapturedResult Capture(ImageData imageData, string templateName);
 ```
 
 **Parameters**
