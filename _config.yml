@@ -124,5 +124,40 @@ defaults:
       path: "Hide_Tree_Page.html"
     values:
       sitemap: false
+  - scope:
+      path: "programming/android"
+    values:
+      docRootName: "Capture Vision Android Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/android/"
+  - scope:
+      path: "programming/ios"
+    values:
+      docRootName: "Capture Vision iOS Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/ios/"
+  - scope:
+      path: "programming/maui"
+    values:
+      docRootName: "Capture Vision MAUI Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/maui/"
+  - scope:
+      path: "programming/flutter"
+    values:
+      docRootName: "Capture Vision Flutter Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/flutter/"      
+  - scope:
+      path: "programming/react-native"
+    values:
+      docRootName: "Capture Vision React-Native Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/react-native/" 
+  - scope:
+      path: "programming/xamarin"
+    values:
+      docRootName: "Capture Vision Xamarin Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/xamarin/" 
+  - scope:
+      path: "programming/cordova"
+    values:
+      docRootName: "Capture Vision Cordova Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/cordova/"
 
 url: "https://www.dynamsoft.com" # sitemap root
