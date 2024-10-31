@@ -132,7 +132,7 @@ Now you will learn how to create a SimpleMRZScanner using Dynamsoft Capture Visi
 >Note:
 >
 > - You can get the similar source code of the SimpleMRZScanner app from the following link
->   - [C#](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/MRZScanner){:target="_blank"}.
+>   - [C#](https://github.com/Dynamsoft/mrz-scanner-mobile-maui/tree/main/MRZScanner){:target="_blank"}.
 
 ### Set up Development Environment
 
@@ -396,11 +396,11 @@ Select your device and run the project.
 
 You can get the similar source code of the SimpleMRZScanner app from the following link:
 
-- [C#](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/MRZScanner){:target="_blank"}.
+- [C#](https://github.com/Dynamsoft/mrz-scanner-mobile-maui/tree/main/MRZScanner){:target="_blank"}.
 
 > Note: If you are running Android only on Visual Studio Windows, please manually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
 
-![Exclude iOS and Windows from targets](../../assets/maui-exclude.png)
+![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
 
 ## Licensing
 
