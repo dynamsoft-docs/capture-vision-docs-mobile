@@ -33,7 +33,7 @@ class SimplifiedCaptureVisionSettings
 | --------- | ---- | ----------- |
 | [`capturedResultItemTypes`](#capturedresultitemtypes) | *int* | Specifies the type(s) of CapturedItem(s) that will be captured. |
 | [`roi`](#roi) | *[Quadrilateral](../../core/basic-structures/quadrilateral.md)* | Specifies the region of interest (ROI) of the image or frame where the capture and recognition will take place. |
-| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *boolean* | pecifies whether the ROI is measured in pixels (false) or as a percentage of the image dimensions (true). |
+| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *boolean* | Specifies whether the ROI is measured in pixels (false) or as a percentage of the image dimensions (true). |
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *int* | Set the minimum capture interval, measured in milliseconds. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
