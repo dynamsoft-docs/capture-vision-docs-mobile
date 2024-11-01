@@ -14,7 +14,7 @@ The `DSSimplifiedCaptureVisionSettings` class contains settings for capturing an
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionRouter.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -33,19 +33,19 @@ class SimplifiedCaptureVisionSettings : NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`capturedResultItemTypes`](#capturedresultitemtypes) | *NSInteger* | Specifies the types of result items that are expected to be returned. |
-| [`roi`](#roi) | *DSQuadrilateral \** | Designates the region of interest (ROI) within an image, limiting the image processing activities exclusively to this specified area. |
-| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *BOOL* | Determines if the coordinates for the region of interest (ROI) are expressed in percentage terms (true) or as exact pixel measurements (false). |
+| [`capturedResultItemTypes`](#capturedresultitemtypes) | *NSInteger* | Specifies the type(s) of CapturedItem(s) that will be captured. |
+| [`roi`](#roi) | *[DSQuadrilateral](../../core/basic-structures/quadrilateral.md)* | Specifies the region of interest (ROI) of the image or frame where the capture and recognition will take place. |
+| [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *BOOL* | Specifies whether the ROI is measured in pixels (false) or as a percentage of the image dimensions (true). |
 | [`maxParallelTasks`](#maxparalleltasks) | *NSInteger* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
+| [`minImageCaptureInterval`](#minimagecaptureinterval) | *NSInteger* | Set the minimum capture interval, measured in milliseconds. |
 | [`timeout`](#timeout) | *NSInteger* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
-| [`barcodeSettings`](#barcodesettings) | *DSSimplifiedBarcodeReaderSettings \** | Specifies the basic settings for the barcode reader module. |
-| [`labelSettings`](#labelsettings) | *DSSimplifiedLabelRecognizerSettings \** | Specifies the basic settings for the label recognizer module. |
-| [`documentSettings`](#documentsettings) | *DSSimplifiedDocumentNormalizerSettings \** | Specifies the basic settings for document normalizer module. |
-| [`minImageCaptureInterval`](#minimagecaptureinterval) | *NSInteger* | Set the minimum capture interval. It is measured in millisecond. |
+| [`barcodeSettings`](#barcodesettings) | *[DSSimplifiedBarcodeReaderSettings]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html)* | Specifies the settings for the `DynamsoftBarcodeReader` task. |
+| [`labelSettings`](#labelsettings) | *[DSSimplifiedLabelRecognizerSettings]({{ site.dlr_ios_api }}simplified-label-recognizer-settings.html)* | Specifies the settings for the  `DynamsoftLabelRecognizer` task. |
+| [`documentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.ddn_ios_api }}simplified-document-normalizer-settings.html)* | Specifies the settings for the `DynamsoftDocumentNormalizer` task. |
 
 ### capturedResultItemTypes
 
-Specifies the types of result items that are expected to be returned.
+Specifies the type(s) of CapturedItem(s) that will be returned by the Capture Vision Router.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -59,6 +59,8 @@ Specifies the types of result items that are expected to be returned.
 ```swift
 var capturedResultItemTypes: Int { get set }
 ```
+
+**Remarks**
 
 You can specify multiple types. For example, you can use the following code to add `CRIT_ORIGINAL_IMAGE` to the captured results of `PT_READ_BARCODES` template.
 
@@ -79,11 +81,11 @@ simplifiedSettings.capturedResultItemTypes = [.barcode, .originalImage]
 try! cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: simplifiedSettings)
 ```
 
-> View [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift) about all supported result item types.
+> View [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift) to learn of all supported result item types.
 
 ### roi
 
-Specifies the region of interest (ROI) where the image capture and recognition will take place.
+Specifies the region of interest (ROI) of the image or frame where the capture and recognition will take place.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -100,7 +102,7 @@ var roi: DSQuadrilateral? { get set }
 
 ### roiMeasuredInPercentage
 
-Specifies whether the ROI is measured in pixels or as a percentage of the image size.
+Specifies whether the ROI is measured in pixels (false) or as a percentage of the image dimensions (true).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -132,6 +134,27 @@ Specifies the maximum number of parallel tasks that can be used for image captur
 var maxParallelTasks: Int { get set }
 ```
 
+### minImageCaptureInterval
+
+Set the minimum capture interval (in milliseconds) between consecutive frames when capturing via video. In other words, it is a measure of the frequency in which frames are fetched.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) NSInteger minImageCaptureInterval;
+```
+2. 
+```swift
+var minImageCaptureInterval: Int { get set }
+```
+
+**Remarks**
+
+If you find that the battery consumption when using any of the Dynamsoft Capture Vision products, we recommend setting this parameter to a higher value. Please see this [article]({{ site.dbr_ios }}faq/reduce-battery-consumption.html) for more info on how to reduce battery consumption.
+
 ### timeout
 
 Specifies the maximum time (in milliseconds) allowed for image capture and recognition.
@@ -151,7 +174,7 @@ var timeout: Int { get set }
 
 ### barcodeSettings
 
-Specifies the basic settings for the barcode reader module.
+Specifies the settings for the `DynamsoftBarcodeReader` task with a [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -168,7 +191,7 @@ var barcodeSettings: DSSimplifiedBarcodeReaderSettings? { get set }
 
 ### labelSettings
 
-Specifies the basic settings for the label recognizer module.
+Specifies the settings for the `DynamsoftLabelRecognizer` task with a [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_ios_api }}simplified-label-recognizer-settings.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -185,7 +208,7 @@ var labelSettings: DSSimplifiedLabelRecognizerSettings? { get set }
 
 ### documentSettings
 
-Specifies the basic settings for document normalizer module.
+Specifies the settings for the `DynamsoftDocumentNormalizer` task with a [`SimplifiedDocumentNormalizerSettings`]({{ site.ddn_ios_api }}simplified-document-normalizer-settings.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -198,21 +221,4 @@ Specifies the basic settings for document normalizer module.
 2. 
 ```swift
 var documentSettings: DSSimplifiedDocumentNormalizerSettings? { get set }
-```
-
-### minImageCaptureInterval
-
-Specifies the minimum image capture interval.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger minImageCaptureInterval;
-```
-2. 
-```swift
-var minImageCaptureInterval: Int { get set }
 ```
