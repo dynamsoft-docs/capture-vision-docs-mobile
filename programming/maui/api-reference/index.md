@@ -100,4 +100,4 @@ Related APIs:
 
 ### Camera View
 
-[`CameraView`]({{ site.dce_maui_api }}camera-view.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html).
+[`CameraView`]({{ site.dce_maui_api }}camera-view.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_maui_api }}camera-view.html).
