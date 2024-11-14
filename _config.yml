@@ -48,12 +48,12 @@ ddn_ios: /document-normalizer/docs-archive/mobile/programming/ios/
 dce_android_api: /camera-enhancer/docs-archive/mobile/programming/android/
 dce_ios_api: /camera-enhancer/docs-archive/mobile/programming/ios/
 
-dbr_android: /barcode-reader/docs-archive/mobile/programming/android/
-dbr_android_api: /barcode-reader/docs-archive/mobile/programming/android/api-reference/
-dbr_ios: /barcode-reader/docs-archive/mobile/programming/objectivec-swift/
-dbr_ios_api: /barcode-reader/docs-archive/mobile/programming/objectivec-swift/api-reference/
+dbr_android: /barcode-reader/docs/mobile/programming/android/
+dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
+dbr_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/
+dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
 
-dbr_features: /barcode-reader/docs-archive/core/programming/features/
+dbr_features: /barcode-reader/docs/core/programming/features/
 
 dlr_android: /label-recognition/docs-archive/mobile/programming/android/
 dlr_android_api: /label-recognition/docs-archive/mobile/programming/android/api-reference/
@@ -70,8 +70,8 @@ architecture: /capture-vision/docs-archive/core/architecture/
 dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
 
 
-dbr_maui: /barcode-reader/docs-archive/mobile/programming/maui/
-dbr_maui_api: /barcode-reader/docs-archive/mobile/programming/maui/api-reference/
+dbr_maui: /barcode-reader/docs/mobile/programming/maui/
+dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
 dcv_maui: /capture-vision/docs-archive/mobile/programming/maui/
 dcv_maui_api: /capture-vision/docs-archive/mobile/programming/maui/api-reference/
 dce_maui: /camera-enhancer/docs-archive/mobile/programming/maui/

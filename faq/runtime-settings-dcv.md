@@ -16,6 +16,6 @@ At the moment, the available runtime settings for the Barcode Reader module in D
 
 The only current exception is the Flutter edition which has *minBarcodeTextLength* and *minResultConfidence* on top of the ones mentioned above.
 
-For reference, here is the [DBRRuntimeSettings](https://www.dynamsoft.com/capture-vision/docs-archive/programming/react-native/api-reference/interface-dbr-runtime-settings.html?ver=latest) page of the React Native edition of DCV.
+For reference, here is the [DBRRuntimeSettings](https://www.dynamsoft.com/capture-vision/docs-archive/mobile/programming/react-native/api-reference/interface-dbr-runtime-settings.html?ver=latest) page of the React Native edition of DCV.
 
 The team is working to extend the runtime settings available in all editions of DCV to match the ones available in the regular editions of the Barcode Reader SDK.

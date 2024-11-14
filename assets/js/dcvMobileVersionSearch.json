@@ -2,7 +2,7 @@
     {
         "version": "2.2.300",
         "matchList": {
-            "maui":{
+            "ios":{
                 "dcvRepoMobile": [
                     {
                         "path": "/programming/objectivec-swift/api-reference/utility",
@@ -85,9 +85,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.2.30"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.2.11"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.2.20"
@@ -148,9 +145,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.2.30"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.2.11"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.2.30"
@@ -215,9 +209,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.2.10"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.2.10"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.2.10"
@@ -278,9 +269,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.2.10"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.2.10"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.2.10"
@@ -345,9 +333,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.0.20"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.0.21"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.0.21"
@@ -408,9 +393,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.0.20"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.0.21"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.0.21"
@@ -475,9 +457,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.0.20"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.0.20"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.0.20"
@@ -538,9 +517,6 @@
                     }, {
                         "path": "/enums/core",
                         "version": "3.0.20"
-                    }, {
-                        "path": "/enums/barcode-reader",
-                        "version": "10.0.20"
                     },{
                         "path": "/parameters/reference/capture-vision-template",
                         "version": "2.0.20"

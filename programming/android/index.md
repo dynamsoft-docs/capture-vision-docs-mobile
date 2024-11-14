@@ -44,7 +44,7 @@ Using DCV in JavaScript involves:
 2. Defining and binding an image source and a result receiver to the instance.
 3. Specifying a template which defines how to process images.
 
-Apparently, the use of DCV varies with the choice of template. Dynamsoft provides popular preset templates and will add more over time. To understand, adjust, or define your own template, read about [`CaptureVisionTemplate`]({{ site.docHomePage }}parameters/file/){:target="_blank"}.
+Apparently, the use of DCV varies with the choice of template. Dynamsoft provides popular preset templates and will add more over time. To understand, adjust, or define your own template, read about [`CaptureVisionTemplate`]({{ site.dcv_parameters_reference }}../file/){:target="_blank"}.
 
 ### Contact Us
 

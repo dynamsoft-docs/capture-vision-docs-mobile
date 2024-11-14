@@ -27,7 +27,7 @@ To build the passport application, it is essential to integrate the following li
    | `DynamsoftImageProcessing.aar` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer.  |
    | `DynamsoftNeuralNetwork.aar` | The Dynamsoft Neural Network module allows SDKs compliant with the DCV (Dynamsoft Capture Vision) architecture to leverage the power of deep learning when processing digital images. |
    | `DynamsoftLicense.aar` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
-   | `DynamsoftCameraEnhancer.aar` | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) module</a> controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. |
+   | `DynamsoftCameraEnhancer.aar` | The <a href="/camera-enhancer/docs-archive/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) module</a> controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. |
    | `DynamsoftUtility.aar` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter). These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
    | `DynamsoftCodeParser.aar` | The Dynamsoft Code Parser module converts data strings, typically encrypted in barcodes and machine-readable zones, into human-readable information. |
    | `DynamsoftCodeParserDedicator.aar` | The Dynamsoft Code Parser Dedicator module provides auxiliary functionality to enhance and extend the capabilities of DCP module. |
@@ -305,4 +305,4 @@ private String assembleString(ParsedResultItem item) {
 
 You can also download the similar source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/android/MRZScanner/" target="_blank">MRZScanner Sample(Java)</a>
+- <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/android/PassportMRZScanner/" target="_blank">PassportMRZScanner Sample(Java)</a>

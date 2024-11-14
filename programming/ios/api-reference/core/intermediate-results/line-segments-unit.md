@@ -33,7 +33,7 @@ class LineSegmentsUnit : IntermediateResultUnit
 
 | Method | Description |
 |------- |-------------|
-| [`getLineSegments`](#getlinesegments) | Gets an array of [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structure/line-segment.html) objects, each representing a segment of a line detected within the image. |
+| [`getLineSegments`](#getlinesegments) | Gets an array of [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html) objects, each representing a segment of a line detected within the image. |
 | [`getCount`](#getcount) | Returns the number of line segments. |
 | [`getLineSegment`](#getlinesegment) | Returns the line segment at the specified index. |
 | [`removeAllLineSegments`](#removealllinesegments) | Removes all line segments. |

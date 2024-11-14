@@ -73,13 +73,13 @@ class DBRRuntimeSettings extends Serializer{
 
 You can find detailed instructions of the mode parameters on **Dynamsoft Barcode Reader** documents
 
-- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/binarization-modes.html" target="_blank">binarizationModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/deblur-modes.html" target="_blank">deblurModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/localization-modes.html" target="_blank">localizationModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/region.html" target="_blank">region</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/scale-down-threshold.html" target="_blank">scaleDownThreshold</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/scale-up-modes.html" target="_blank">scaleUpModes</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/docs-archive/core/parameters/reference/text-result-order-modes.html" target="_blank">textResultOrderModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/binarization-modes.html" target="_blank">binarizationModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/deblur-modes.html" target="_blank">deblurModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/localization-modes.html" target="_blank">localizationModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/region.html" target="_blank">region</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/scale-down-threshold.html" target="_blank">scaleDownThreshold</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/scale-up-modes.html" target="_blank">scaleUpModes</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/text-result-order-modes.html" target="_blank">textResultOrderModes</a>
 
 ## Related API(s)
 
