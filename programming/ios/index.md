@@ -27,7 +27,7 @@ This documentation provides guidance to assist developers in utilizing DCV for i
 
 ### Get Started
 
-- [Read Barcode]({{ site.dbr_ios }}user-guide.html)
+- [Read Barcode]({{ site.dbr_ios }}user-guide.html){:target="_blank"}
 - [Scan MRZ]({{ site.dcv_ios }}user-guide/mrz.html)
 - [Detect & Normalize Documents]({{ site.ddn_ios }}user-guide.html)
 
