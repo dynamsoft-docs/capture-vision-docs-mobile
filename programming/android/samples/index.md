@@ -34,7 +34,9 @@ noTitleIndex: true
 
 - [View in Google Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mrzscanner){:target="_blank"}
 
-## [Barcode Decoding Samples]({{site.dbr_android}}samples/index.html)
+## Barcode Decoding Samples
+
+Please visit the [Barcode Decoding Samples]({{site.dbr_android}}samples/index.html) for more details.
 
 ## ID Scanning Samples
 

@@ -29,7 +29,9 @@ noTitleIndex: true
   - [View in Google Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mrzscanner){:target="_blank"}
   - [View in Apple Store](https://apps.apple.com/us/app/dynamsoft-mrz-scanner/id6736854735){:target="_blank"}
 
-## [Barcode Decoding Samples]({{site.dbr_maui}}samples/index.html)
+## Barcode Decoding Samples
+
+Please visit the [Barcode Decoding Samples]({{site.dbr_maui}}samples/index.html) for more details.
 
 ## ID Scanning Samples
 

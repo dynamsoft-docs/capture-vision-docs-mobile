@@ -29,7 +29,9 @@ noTitleIndex: true
 - MRZ Scanner Demo
   - [View in Apple Store](https://apps.apple.com/us/app/dynamsoft-mrz-scanner/id6736854735){:target="_blank"}
 
-## [Barcode Decoding Samples]({{site.dbr_ios}}samples/index.html)
+## Barcode Decoding Samples
+
+Please visit the [Barcode Decoding Samples]({{site.dbr_ios}}samples/index.html) for more details.
 
 ## ID Scanning Samples
 
