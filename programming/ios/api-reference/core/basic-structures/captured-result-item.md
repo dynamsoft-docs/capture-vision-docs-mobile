@@ -52,7 +52,7 @@ The type of the captured result item, indicating what kind of data it represents
 ```
 2. 
 ```swift
-var type: DSCapturedResultItemType { get }
+var type: CapturedResultItemType { get }
 ```
 
 ### referenceItem
