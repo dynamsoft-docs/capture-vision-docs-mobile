@@ -41,7 +41,7 @@ func captureFromFile(_ file:String, templateName:String) -> CaptureResult
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
@@ -86,7 +86,7 @@ func captureFromFileBytes(_ fileBytes:Data, templateName:String) -> CaptureResul
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
@@ -129,7 +129,7 @@ func captureFromBuffer(_ buffer:DSImageData, templateName:String) -> CaptureResu
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
@@ -164,7 +164,7 @@ Capture data from the given image. To learn more about what the captured data ca
 ```
 2. 
 ```swift
-func captureFromBuffer(_ image:UIImage, templateName:String) -> CaptureResult
+func captureFromImage(_ image:UIImage, templateName:String) -> CaptureResult
 ```
 
 **Parameters**
@@ -173,7 +173,7 @@ func captureFromBuffer(_ image:UIImage, templateName:String) -> CaptureResult
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
