@@ -15,7 +15,6 @@ noTitleIndex: true
 | [`initSettings`](#initsettings) | Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`. |
 | [`initSettingsFromFile`](#initsettingsfromfile) | Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`. |
 | [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a simplified version of the Capture Vision settings for a specific template. |
-| [`getTemplateNames`](#gettemplatenames) | Retrieves the names of all the currently available templates. |
 | [`updateSettings`](#updatesettings) | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object. |
 | [`resetSettings`](#resetsettings) | Restores all settings to their original default values. |
 | [`outputSettings`](#outputsettings) | Returns an object that contains settings for the specified `CaptureVisionTemplate`. |
@@ -132,18 +131,6 @@ An object of [`SimplifiedCaptureVisionSettings`](./auxiliary-classes/simplified-
 | EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
 | EC_CONVERT_COMPLEX_TEMPLATE_ERROR | -10061 | The template you specified is a complex template which can not be output as a `SimplifiedCaptureVisionSettings` object. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
-
-## getTemplateNames
-
-Retrieves the names of all the currently available templates.
-
-```java
-String[] getTemplateNames();
-```
-
-**Return Value**
-
-An array that contains all the currently available templates names.
 
 ## updateSettings
 
