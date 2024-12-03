@@ -9,6 +9,45 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 2.6.1000 (12/03/2024)
+
+### Highlights
+
+- Enhanced document detection delivers more reliable results, particularly for single-document scenarios. Key improvements include:
+  - Strengthened detection algorithms for greater accuracy and robustness.
+  - Optimized parameter configurations for better adaptability across diverse scenarios.
+  - Refined cross-verification rules to ensure more consistent detection outcomes.
+
+### Changelogs
+
+#### New
+
+- Added a new mode, `CICM_EDGE_ENHANCEMENT`, to the `ColourConversionModes` parameter, designed to enhance edge details when converting a color image to grayscale.
+- Introduced the concept of `LogicLines` to enhance the processing and analysis of document structures.
+  - Added a new value, `IRUT_LOGIC_LINES`, to the `IntermediateResultUnitType` enumeration.
+  - Added a new function `onLogicLinesReceived` to the class `IntermediateResultReceiver` which will be called when logic lines have been received.
+  - Added a new class, `LogicLinesUnit`, to represent an intermediate result unit containing logic lines.
+- Added the `getCrossVerificationStatus` function to both the `DetectedQuadResultItem` and `NormalizedImageResultItem` classes, along with a new `EnumCrossVerificationStatus` enumeration, to retrieve the cross-verification status of the result.
+- Added the `getParameterTemplateCount` and `getParameterTemplateName` functions to the `CaptureVisionRouter` class to improve accessibility and usability of templates.
+- Added the `getFieldRawValue` method to the `ParsedResultItem` class to retrieve the raw value of the field.
+
+#### Fixed
+
+- Fixed a bug in `TextZone` caused by the absence of a custom copy constructor, which led to improper memory management with the default copy constructor.
+- Fixed a bug where the `Default` preset template was not used when the default value was passed for the `templateName` parameter.
+- Fixed a potential crash bug during template reading.
+- Fixed a bug in DPM mode where the `isMirrored` value in the `BarcodeResultItem` was not correctly assigned.
+- Fixed a bug where DotCode could not be decoded in certain scenarios.
+- Small fixes and tweaks.
+  
+#### Changed
+
+- Updated the parameter configurations for the `DetectDocumentBoundaries_Default` and `DetectAndNormalizeDocument_Default` preset templates to default to single-document mode.
+- Changed default value of `ExpectedDocumentsCount` paramter from 0 to 1 to better support single-document mode.
+- Changed default value of `CornerAngleRange` paramter from [70, 110] to [60, 120] to support a wider range of document capture angles.
+- Modified the return logic for `DetectedQuadResultItem` and `NormalizedImageResultItem` when `ResultCrossVerification` is `enabled`. Previously, only verified results were returned; now, results are returned regardless of verification status, and the results include a `CrossVerificationStatus` to indicate the verification state.
+- Removed the `LineExtractMode` parameter and replaced it with `ShortlineDetectionMode` and `LineAssemblyMode` for more flexible and precise configuration.
+
 ## 2.4.2000 (10/11/2024)
 
 ### Highlights
