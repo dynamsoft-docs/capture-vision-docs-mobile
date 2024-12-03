@@ -178,7 +178,7 @@ noTitleIndex: true
 #### New
 
 - Added a new class [`BufferedItemsManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/buffered-items-manager.html) to manage the buffered character items.
-- Added a new method [`getBufferedItemsManger`]({{ site.dcv_android_api }}capture-vision-router/buffered-items.html#getbuffereditemsmanager) to get an object of `BufferedItemsManager`.
+- Added a new method [`getBufferedItemsManager`]({{ site.dcv_android_api }}capture-vision-router/buffered-items.html#getbuffereditemsmanager) to get an object of `BufferedItemsManager`.
 
 #### Fixed
 

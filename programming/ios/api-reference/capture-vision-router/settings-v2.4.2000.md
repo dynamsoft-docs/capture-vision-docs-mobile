@@ -15,7 +15,6 @@ noTitleIndex: true
 | [`initSettings`](#initsettings) | Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`. |
 | [`initSettingsFromFile`](#initsettingsfromfile) | Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`. |
 | [`getSimplifiedSettings`](#getsimplifiedsettings) | Retrieves a `SimplifiedCaptureVisionSettings` object that contains simplified settings for the specified `CaptureVisionTemplate`. |
-| [`getTemplateNames`](#gettemplatenames) | Retrieves the names of all the currently available templates. |
 | [`updateSettings`](#updatesettings) | Updates the specified `CaptureVisionTemplate` with a `SimplifiedCaptureVisionSettings` object. |
 | [`resetSettings`](#resetsettings) | Reset the Capture Vision settings. |
 | [`outputSettings`](#outputsettings) | Returns an object that contains settings for the specified `CaptureVisionTemplate`. |
@@ -195,27 +194,6 @@ A [`DSSimplifiedCaptureVisionSettings`](auxiliary-classes/simplified-capture-vis
 **Remarks**
 
 A single JSON string or file can define multiple Capture Vision templates. `getSimplifiedSettings` will only return the simplified settings of the template named in the input parameter, even though there could be several templates in the JSON string/file.
-
-## getTemplateNames
-
-Retrieves the names of all the currently available templates.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (NSArray<NSString*>*) getTemplateNames;
-```
-2. 
-```swift
-func getSimplifiedSettings() -> SimplifiedCaptureVisionSettings
-```
-
-**Return Value**
-
-An array that contains all the currently available templates names.
 
 ## updateSettings
 

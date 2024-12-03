@@ -57,7 +57,6 @@ protocol IntermediateResultReceiver: NSObjectProtocol
 | [onTextZonesUnitReceived](#ontextzonesunitreceived) | The callback triggered when a text zones unit is received. |
 | [onTextRemovedBinaryImageUnitReceived](#ontextremovedbinaryimageunitreceived) | The callback triggered when a text-removed binary image unit is received. |
 | [onShortLinesUnitReceived](#onshortlinesunitreceived) | The callback triggered when a short lines unit is received. |
-| [onLogicLinesUnitReceived](#onlogiclinesunitreceived) | The callback triggered when a logic lines unit is received. |
 | [onLongLinesUnitReceived](#onlonglinesunitreceived) | The callback triggered when a long lines unit is received. |
 | [onCornersUnitReceived](#oncornersunitreceived) | The callback triggered when a corners unit is received. |
 | [onCandidateQuadEdgesUnitReceived](#oncandidatequadedgesunitreceived) | The callback triggered when a candidate quad edges unit are detected. |
@@ -612,30 +611,6 @@ func onTextRemovedBinaryImageUnitReceived(_ unit: TextRemovedBinaryImageUnit, in
 **Parameters**
 
 `unit`: The intermediate result that contains the text removed binary images, of type `TextRemovedBinaryImageUnit`.
-
-`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
-
-### onLogicLinesUnitReceived
-
-The callback triggered when logic lines are received.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(void)onLogicLinesUnitReceived:(LogicLinesUnit *)unit
-                          info:(DSIntermediateResultExtraInfo *)info
-```
-2. 
-```swift
-func onLogicLinesUnitReceived(_ unit: LogicLinesUnit, info: IntermediateResultExtraInfo)
-```
-
-**Parameters**
-
-`unit`: The intermediate result that contains the logic lines, of type `LogicLinesUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 

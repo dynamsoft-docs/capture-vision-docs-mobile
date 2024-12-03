@@ -49,7 +49,6 @@ interface IntermediateResultReceiver
 | [`onTextZonesUnitReceived`](#ontextzonesunitreceived) | The callback triggered when a text zones unit is received. |
 | [`onTextRemovedBinaryImageUnitReceived`](#ontextremovedbinaryimageunitreceived) | The callback triggered when a text-removed binary image unit is received. |
 | [`onShortLinesUnitReceived`](#onshortlinesunitreceived) | The callback triggered when a short lines unit is received. |
-| [`onLogicLinesUnitReceived`](#onlogiclinesunitreceived) | The callback triggered when a logic lines unit is received. |
 | [`onLongLinesUnitReceived`](#onlonglinesunitreceived) | The callback triggered when a long lines unit is received. |
 | [`onCornersUnitReceived`](#oncornersunitreceived) | The callback triggered when a corners unit is received. |
 | [`onCandidateQuadEdgesUnitReceived`](#oncandidatequadedgesunitreceived) | The callback triggered when a candidate quad edges unit are detected. |
@@ -376,20 +375,6 @@ void onShortLinesUnitReceived(@NonNull ShortLinesUnit unit IntermediateResultExt
 **Parameters**
 
 `[in] unit`: The intermediate result that contains the short lines, of type `ShortLinesUnit`.
-
-`[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
-
-### onLogicLinesUnitReceived
-
-The callback triggered when logic lines are received.
-
-```java
-void onLogicLinesUnitReceived(@NonNull LongLinesUnit unit, IntermediateResultExtraInfo info);
-```
-
-**Parameters**
-
-`[in] unit`: The intermediate result that contains the long lines, of type `LongLinesUnit`.
 
 `[in] info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
