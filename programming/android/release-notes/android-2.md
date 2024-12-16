@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 2.6.1001 (12/16/2024)
+
+### Fixed
+
+- Fixed a bug where the app might be blocked by the method `initLicense`.
+
 ## 2.6.1000 (12/03/2024)
 
 ### Highlights

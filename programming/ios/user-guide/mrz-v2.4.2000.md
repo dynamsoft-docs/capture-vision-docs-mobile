@@ -83,7 +83,7 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
     target '{Your project name}' do
         use_frameworks!
 
-        pod 'DynamsoftCaptureVisionBundle','2.6.1001'
+        pod 'DynamsoftCaptureVisionBundle','2.4.2000'
         pod 'DynamsoftMRZ', '3.4.20'
 
     end
@@ -250,6 +250,7 @@ class ViewController: UIViewController, CapturedResultReceiver {
         let dateOfBirth = parsedFields["dateOfBirth"] ?? ""
         let dateOfExpiry = parsedFields["dateOfExpiry"] ?? ""
         let parsedString = "Name: " + secondaryIdentifier + " " + primaryIdentifier + "\n" + "Gender: " + sex + "\n" + "Issuing State: " + issuingState + "\n" + "Nationality: " + nationality + "\n" + "Date of Birth(YY-MM-DD): " + dateOfBirth + "\n" + "Date of Expiry(YY-MM-DD): " + dateOfExpiry
+        print(parsedString)
     }
 }
 ```
