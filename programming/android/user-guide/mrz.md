@@ -84,7 +84,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
     ```groovy
     dependencies {
-        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.6.1000'
+        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.6.1001'
         implementation 'com.dynamsoft:dynamsoftmrz:3.4.20'
     }
     ```
