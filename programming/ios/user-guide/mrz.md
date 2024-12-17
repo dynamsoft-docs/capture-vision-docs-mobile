@@ -244,7 +244,7 @@ class ViewController: UIViewController, CapturedResultReceiver {
         let passportNumber = parsedFields["passportNumber"] ?? parsedFields["documentNumber"] ?? ""
         let sex = parsedFields["sex"] ?? ""
         let issuingState = parsedFields["issuingState"] ?? ""
-        let nationality = parsedFields["nationality"] ?? ""
+        let nationality = firstItem.getFieldRawValue("nationality")
         let secondaryIdentifier = parsedFields["secondaryIdentifier"] ?? ""
         let primaryIdentifier = parsedFields["primaryIdentifier"] ?? ""
         let dateOfBirth = parsedFields["dateOfBirth"] ?? ""
