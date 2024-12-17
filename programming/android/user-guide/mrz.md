@@ -252,6 +252,17 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
             }
             mRouter.stopCapturing();
         }
+        private void showDialog(String title, String message) {
+            if (mAlertDialog == null) {
+                // Restart the capture when the dialog is closed
+                mAlertDialog = new AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
+                        .setOnDismissListener(dialog -> mRouter.startCapturing("", null))
+                        .create();
+            }
+            mAlertDialog.setTitle(title);
+            mAlertDialog.setMessage(message);
+            mAlertDialog.show();
+        }
     }
     ```
 
@@ -301,7 +312,7 @@ private String assembleString(ParsedResultItem item) {
             "Given name: " + entry.get("secondaryIdentifier") + "\n" +
             "Gender: " + entry.get("sex") + "\n" +
             "Issuing State: " + entry.get("issuingState") + "\n" +
-            "Nationality: " + entry.get("nationality") + "\n" +
+            "Nationality: " + item.getFieldRawValue("nationality") + "\n" +
             "Date of Birth(YY-MM-DD): " + entry.get("dateOfBirth") + "\n" +
             "Date of Expiry(YY-MM-DD): " + entry.get("dateOfExpiry") + "\n";
 }
