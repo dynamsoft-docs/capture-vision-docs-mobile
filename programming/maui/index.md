@@ -23,7 +23,7 @@ This documentation provides guidance to assist developers in utilizing DCV for M
 
 #### .Net
 
-- .NET 7.0 and above.
+- .NET 7.0 and .NET 8.0.
 
 #### Android
 
