@@ -13,32 +13,32 @@ noTitleIndex: true
 ## Table of Contents
 
 - [MAUI User Guide for MRZ Scanner Integration](#maui-user-guide-for-mrz-scanner-integration)
-	- [Table of Contents](#table-of-contents)
-	- [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
-		- [ID (TD1 Size)](#id-td1-size)
-		- [ID (TD2 Size)](#id-td2-size)
-		- [Passport (TD3 Size)](#passport-td3-size)
-	- [System Requirements](#system-requirements)
-		- [.Net](#net)
-		- [Android](#android)
-		- [iOS](#ios)
-	- [Installation](#installation)
-		- [Visual Studio for Mac](#visual-studio-for-mac)
-		- [Visual Studio for Windows](#visual-studio-for-windows)
-	- [Build Your MRZ Scanner App](#build-your-mrz-scanner-app)
-		- [Set up Development Environment](#set-up-development-environment)
-		- [Initialize the Project](#initialize-the-project)
-			- [Visual Studio](#visual-studio)
-			- [Visual Studio for Mac](#visual-studio-for-mac-1)
-		- [Include the Library](#include-the-library)
-		- [Initialize MauiProgram](#initialize-mauiprogram)
-		- [License Activation](#license-activation)
-		- [Initialize the Capture Vision SDK](#initialize-the-capture-vision-sdk)
-		- [Add the CameraView control in the Main Page](#add-the-cameraview-control-in-the-main-page)
-		- [Open the Camera and Start Reading MRZ](#open-the-camera-and-start-reading-mrz)
-		- [Obtaining Recognized Text Lines and Parsed MRZ](#obtaining-recognized-text-lines-and-parsed-mrz)
-		- [Run the Project](#run-the-project)
-	- [Licensing](#licensing)
+  - [Table of Contents](#table-of-contents)
+  - [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
+    - [ID (TD1 Size)](#id-td1-size)
+    - [ID (TD2 Size)](#id-td2-size)
+    - [Passport (TD3 Size)](#passport-td3-size)
+  - [System Requirements](#system-requirements)
+    - [.Net](#net)
+    - [Android](#android)
+    - [iOS](#ios)
+  - [Installation](#installation)
+    - [Visual Studio for Mac](#visual-studio-for-mac)
+    - [Visual Studio for Windows](#visual-studio-for-windows)
+  - [Build Your MRZ Scanner App](#build-your-mrz-scanner-app)
+    - [Set up Development Environment](#set-up-development-environment)
+    - [Initialize the Project](#initialize-the-project)
+      - [Visual Studio](#visual-studio)
+      - [Visual Studio for Mac](#visual-studio-for-mac-1)
+    - [Include the Library](#include-the-library)
+    - [Initialize MauiProgram](#initialize-mauiprogram)
+    - [License Activation](#license-activation)
+    - [Initialize the Capture Vision SDK](#initialize-the-capture-vision-sdk)
+    - [Add the CameraView control in the Main Page](#add-the-cameraview-control-in-the-main-page)
+    - [Open the Camera and Start Reading MRZ](#open-the-camera-and-start-reading-mrz)
+    - [Obtaining Recognized Text Lines and Parsed MRZ](#obtaining-recognized-text-lines-and-parsed-mrz)
+    - [Run the Project](#run-the-project)
+  - [Licensing](#licensing)
 
 ## Supported Machine-Readable Travel Document Types
 
@@ -76,7 +76,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ### .Net
 
-- .NET 7.0 and above.
+- .NET 7.0 and .NET 8.0.
 
 ### Android
 
