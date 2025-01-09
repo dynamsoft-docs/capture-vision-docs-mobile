@@ -65,7 +65,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 >
 >- Android Studio 2022.3.1 is used here in this guide.
 >- You can get similar source code from
->    - <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/android/PassportMRZScanner/" target="_blank">PassportMRZScanner Sample(Java)</a>
+>    - <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/android/MRZScanner/" target="_blank">PassportMRZScanner Sample(Java)</a>
 
 ### Create a New Project
 
@@ -306,4 +306,4 @@ private String assembleString(ParsedResultItem item) {
 
 You can also download the similar source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/android/PassportMRZScanner/" target="_blank">PassportMRZScanner Sample(Java)</a>
+- <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/android/MRZScanner/" target="_blank">PassportMRZScanner Sample(Java)</a>

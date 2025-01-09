@@ -28,7 +28,7 @@ This documentation provides guidance to assist developers in utilizing DCV for i
 ### Get Started
 
 - [Read Barcode]({{ site.dbr_ios }}user-guide.html){:target="_blank"}
-- [Scan MRZ]({{ site.dcv_ios }}user-guide/mrz.html)
+- [Scan MRZ](/mrz-scanner/docs/mobile/programming/ios/user-guide/index.html){:target="_blank"}
 - [Detect & Normalize Documents]({{ site.ddn_ios }}user-guide.html)
 
 ### Check APIs

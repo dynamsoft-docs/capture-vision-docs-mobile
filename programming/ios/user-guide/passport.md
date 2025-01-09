@@ -58,7 +58,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 >Note:
 >
 >- The following steps are completed in XCode 14.2
->- You can get similar source code from <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/ios/PassportMRZScanner" target="_blank">PassportScanner Sample(Swift)</a>
+>- You can get similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/ios/MRZScanner/" target="_blank">PassportScanner Sample(Swift)</a>
 
 ### Create a New Project
 
@@ -258,4 +258,4 @@ class ViewController: UIViewController, CapturedResultReceiver {
 1. Before deploying the project, select the device that you want to run your app on.
 2. Run the project, then your app will be installed on your device.
 
->Note: View the similar source code from <a href="https://github.com/Dynamsoft/passport-mrz-scanner-mobile/tree/main/ios/PassportMRZScanner" target="_blank">PassportScanner Sample(Swift)</a>
+>Note: View the similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/ios/MRZScanner/" target="_blank">PassportScanner Sample(Swift)</a>
