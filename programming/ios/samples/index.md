@@ -16,8 +16,7 @@ noTitleIndex: true
 		- [Scan a passport or an ID card (via MRZ)](#scan-a-passport-or-an-id-card-via-mrz)
 		- [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
 	- [Document Scanner Samples](#document-scanner-samples)
-		- [Scan a Document Page and Deskew automatically](#scan-a-document-page-and-deskew-automatically)
-		- [Scan, Edit and Deskew a Document Page](#scan-edit-and-deskew-a-document-page)
+		- [DocumentScanner](#documentscanner)
 	- [Other Use Case Samples](#other-use-case-samples)
 		- [Scan VIN Barcode or Text](#scan-vin-barcode-or-text)
 
@@ -39,11 +38,7 @@ Please visit the [Barcode Decoding Samples]({{site.dbr_ios}}samples/index.html) 
 
 Scan the MRZ code of a passport or an ID card and parse the information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/ios/MRZScanner){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/951b209a-6931-42f7-a770-974533a7f936">
-</video>
+[Check code on GitHub](https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/ios/samples/ScanMRZ){:target="_blank"}
 
 ### Scan a Driver's License (via PDF417 Barcode)
 
@@ -51,31 +46,13 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DriversLicenseScanner){:target="_blank"}
 
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/338a0bcc-afa0-4afd-8372-14373a112d36">
-</video>
-
 ## Document Scanner Samples
 
-### Scan a Document Page and Deskew automatically
+### DocumentScanner
 
-Scan a document page and normalize it automatically.
+Detect & Deskew the document pages. You can edit the document boundaries if required.
 
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DocumentScanner/AutoNormalize){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/9373f9a0-f2c1-45ef-90af-717e1aeac63f">
-</video>
-
-### Scan, Edit and Deskew a Document Page
-
-Scan a document page, edit the boundary and normalize it.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DocumentScanner/EditAndNormalize){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/88700258-df4d-46ef-bf4c-6706a18ee824">
-</video>
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DocumentScanner){:target="_blank"}
 
 ## Other Use Case Samples
 
@@ -84,7 +61,3 @@ Scan a document page, edit the boundary and normalize it.
 Scan the vin barcode or text and extract the vehicle information.
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/VINScanner){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/5d3200a0-1c9f-4428-a58b-f9d7a5a28693">
-</video>

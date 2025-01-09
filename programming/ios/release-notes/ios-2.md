@@ -8,6 +8,12 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftCaptureVisionRouter Module
+<!-- 
+## 2.6.1002 (01/09/2025)
+
+### Fixed
+
+- Fixed a crash bug when initializing the instance of the `DSImageEditorView` with `init`. -->
 
 ## 2.6.1001 (12/16/2024)
 

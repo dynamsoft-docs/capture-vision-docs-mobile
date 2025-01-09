@@ -18,8 +18,7 @@ noTitleIndex: true
 		- [Scan a passport or an ID card (via MRZ)](#scan-a-passport-or-an-id-card-via-mrz)
 		- [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
 	- [Document Scanner Samples](#document-scanner-samples)
-		- [Scan a Document Page and Deskew automatically](#scan-a-document-page-and-deskew-automatically)
-		- [Scan, Edit and Deskew a Document Page](#scan-edit-and-deskew-a-document-page)
+		- [DocumentScanner](#documentscanner)
 	- [Other Use Case Samples](#other-use-case-samples)
 		- [Scan VIN Barcode or Text](#scan-vin-barcode-or-text)
 
@@ -44,11 +43,7 @@ Please visit the [Barcode Decoding Samples]({{site.dbr_android}}samples/index.ht
 
 Scan the MRZ code of a passport or an ID card and parse the information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/android/MRZScanner){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/9e967311-10d5-4ea0-90ad-705b423037ff">
-</video>
+[Check code on GitHub](https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/android/samples/ScanMRZ){:target="_blank"}
 
 ### Scan a Driver's License (via PDF417 Barcode)
 
@@ -56,31 +51,13 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DriversLicenseScanner){:target="_blank"}
 
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/29299e71-936f-4f9b-94ce-d3857d393f3b">
-</video>
-
 ## Document Scanner Samples
 
-### Scan a Document Page and Deskew automatically
+### DocumentScanner
 
-Scan a document page and normalize it automatically.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DocumentScanner){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/075a851c-7802-48bd-a194-a55e5669bd1e">
-</video>
-
-### Scan, Edit and Deskew a Document Page
-
-Scan a document page, edit the boundary and normalize it.
+Detect & Deskew the document pages. You can edit the document boundaries if required.
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DocumentScanner){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/e487807c-fa13-4779-a7fc-d99ea633cd5f">
-</video>
 
 ## Other Use Case Samples
 
@@ -89,7 +66,3 @@ Scan a document page, edit the boundary and normalize it.
 Scan the vin barcode or text and extract the vehicle information.
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/VINScanner){:target="_blank"}
-
-<video controls width="250" autoplay="false">
-    <source src="https://github.com/user-attachments/assets/0d1e2cfe-7f6a-4992-b984-81ddaa1d271a">
-</video>

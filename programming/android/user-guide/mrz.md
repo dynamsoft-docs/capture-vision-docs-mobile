@@ -13,20 +13,20 @@ noTitleIndex: true
 In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision Android SDK.
 
 - [Android User Guide for MRZ Integration](#android-user-guide-for-mrz-integration)
-	- [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
-		- [ID (TD1 Size)](#id-td1-size)
-		- [ID (TD2 Size)](#id-td2-size)
-		- [Passport (TD3 Size)](#passport-td3-size)
-	- [Requirements](#requirements)
-	- [Add the SDK](#add-the-sdk)
-	- [Build Your First Application](#build-your-first-application)
-		- [Create a New Project](#create-a-new-project)
-		- [Include the Libraries](#include-the-libraries)
-		- [Initialize License](#initialize-license)
-		- [Initialize the Camera Module](#initialize-the-camera-module)
-		- [Initialize Capture Vision Router](#initialize-capture-vision-router)
-		- [Extract Parsed Results](#extract-parsed-results)
-		- [Build and Run the Project](#build-and-run-the-project)
+  - [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
+    - [ID (TD1 Size)](#id-td1-size)
+    - [ID (TD2 Size)](#id-td2-size)
+    - [Passport (TD3 Size)](#passport-td3-size)
+  - [Requirements](#requirements)
+  - [Add the SDK](#add-the-sdk)
+  - [Build Your First Application](#build-your-first-application)
+    - [Create a New Project](#create-a-new-project)
+    - [Include the Libraries](#include-the-libraries)
+    - [Initialize License](#initialize-license)
+    - [Initialize the Camera Module](#initialize-the-camera-module)
+    - [Initialize Capture Vision Router](#initialize-capture-vision-router)
+    - [Extract Parsed Results](#extract-parsed-results)
+    - [Build and Run the Project](#build-and-run-the-project)
 
 ## Supported Machine-Readable Travel Document Types
 
@@ -101,7 +101,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 >
 >- Android Studio 2024.1.1 is used here in this guide.
 >- You can get similar source code from
->    - <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/android/MRZScanner/" target="_blank">MRZScanner Sample(Java)</a>
+>    - <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/android/MRZScanner/" target="_blank">MRZScanner Sample(Java)</a>
 
 ### Create a New Project
 
@@ -326,4 +326,4 @@ private String assembleString(ParsedResultItem item) {
 
 You can also download the similar source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/android/MRZScanner/" target="_blank">MRZScanner Sample(Java)</a>
+- <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/android/MRZScanner/" target="_blank">MRZScanner Sample(Java)</a>

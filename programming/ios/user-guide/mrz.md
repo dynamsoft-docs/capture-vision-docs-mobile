@@ -13,25 +13,25 @@ noTitleIndex: true
 In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision iOS SDK.
 
 - [iOS User Guide for MRZ Integration](#ios-user-guide-for-mrz-integration)
-	- [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
-		- [ID (TD1 Size)](#id-td1-size)
-		- [ID (TD2 Size)](#id-td2-size)
-		- [Passport (TD3 Size)](#passport-td3-size)
-	- [Requirements](#requirements)
-	- [Add the SDK](#add-the-sdk)
-		- [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
-		- [Add the xcframeworks via Swift Package Manager](#add-the-xcframeworks-via-swift-package-manager)
-	- [Build Your First Application](#build-your-first-application)
-		- [Create a New Project](#create-a-new-project)
-		- [Include the Library](#include-the-library)
-		- [Initialize the License](#initialize-the-license)
-		- [Initialize the Camera Module](#initialize-the-camera-module)
-		- [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
-		- [Implement Result Receiver](#implement-result-receiver)
-		- [Extract Parsed Results](#extract-parsed-results)
-		- [Configure viewWillAppear, viewWillDisappear, viewDidLoad](#configure-viewwillappear-viewwilldisappear-viewdidload)
-		- [Configure Camera Privacy](#configure-camera-privacy)
-		- [Build and Run the Project](#build-and-run-the-project)
+  - [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
+    - [ID (TD1 Size)](#id-td1-size)
+    - [ID (TD2 Size)](#id-td2-size)
+    - [Passport (TD3 Size)](#passport-td3-size)
+  - [Requirements](#requirements)
+  - [Add the SDK](#add-the-sdk)
+    - [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
+    - [Add the xcframeworks via Swift Package Manager](#add-the-xcframeworks-via-swift-package-manager)
+  - [Build Your First Application](#build-your-first-application)
+    - [Create a New Project](#create-a-new-project)
+    - [Include the Library](#include-the-library)
+    - [Initialize the License](#initialize-the-license)
+    - [Initialize the Camera Module](#initialize-the-camera-module)
+    - [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
+    - [Implement Result Receiver](#implement-result-receiver)
+    - [Extract Parsed Results](#extract-parsed-results)
+    - [Configure viewWillAppear, viewWillDisappear, viewDidLoad](#configure-viewwillappear-viewwilldisappear-viewdidload)
+    - [Configure Camera Privacy](#configure-camera-privacy)
+    - [Build and Run the Project](#build-and-run-the-project)
 
 ## Supported Machine-Readable Travel Document Types
 
@@ -114,7 +114,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 >Note:
 >
 >- The following steps are completed in XCode 14.2
->- You can get similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/ios/MRZScanner" target="_blank">MRZScanner Sample(Swift)</a>
+>- You can get similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/ios/MRZScanner/" target="_blank">MRZScanner Sample(Swift)</a>
 
 ### Create a New Project
 
@@ -309,4 +309,4 @@ Add Privacy - Camera Usage Description to the info.plist of your project to requ
 1. Before deploying the project, select the device that you want to run your app on.
 2. Run the project, then your app will be installed on your device.
 
->Note: View the similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/main/ios/MRZScanner" target="_blank">MRZScanner Sample(Swift)</a>
+>Note: View the similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/ios/MRZScanner/" target="_blank">MRZScanner Sample(Swift)</a>
