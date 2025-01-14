@@ -8,12 +8,12 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftCaptureVisionBundle
-<!-- 
-## 2.6.1002 (01/09/2025)
+
+## 2.6.1002 (01/14/2025)
 
 ### Fixed
 
-- Fixed a bug where the coordinate of `DrawingItems` might be offset on the `ImageEditorView`. -->
+- Fixed a bug where the coordinate of `DrawingItems` might be offset on the `ImageEditorView`.
 
 ## 2.6.1001 (12/16/2024)
 
