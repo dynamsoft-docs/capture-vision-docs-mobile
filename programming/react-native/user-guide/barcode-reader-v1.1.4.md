@@ -15,21 +15,28 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 <span style="font-size:20px">Table of Contents</span>
 
-- [System Requirements](#system-requirements)
-- [Installation](#installation)
-- [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
-  - [Set up Development Environment](#set-up-development-environment)
-  - [Initialize the Project](#initialize-the-project)
-  - [Include the Library](#include-the-library)
-  - [Configure the Barcode Reader](#configure-the-barcode-reader)
-  - [Rendering the UI](#rendering-the-ui)
-  - [Configure Camera Permissions](#configure-camera-permissions)
-  - [Run the Project](#run-the-project)
-- [Customizing the Barcode Reader](#customizing-the-barcode-reader)
-  - [Using the settings templates](#using-the-settings-templates)
-  - [Using the DBRRuntimeSettings interface](#using-the-dbrruntimesettings-interface)
-  - [Customizing the scan region](#customizing-the-scan-region)
-- [Licensing](#licensing)
+- [Barcode Reader User Guide for React Native](#barcode-reader-user-guide-for-react-native)
+  - [System Requirements](#system-requirements)
+    - [React Native](#react-native)
+    - [Android](#android)
+    - [iOS](#ios)
+    - [Others](#others)
+  - [Installation](#installation)
+  - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
+    - [Set up Development Environment](#set-up-development-environment)
+    - [Initialize the Project](#initialize-the-project)
+    - [Include the Library](#include-the-library)
+    - [Configure the Barcode Reader](#configure-the-barcode-reader)
+    - [Rendering the UI](#rendering-the-ui)
+    - [Configure Camera Permissions](#configure-camera-permissions)
+    - [Run the Project](#run-the-project)
+      - [Run Android on Windows](#run-android-on-windows)
+      - [Run iOS on macOS](#run-ios-on-macos)
+  - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
+    - [Using the settings templates](#using-the-settings-templates)
+    - [Using the DBRRuntimeSettings interface](#using-the-dbrruntimesettings-interface)
+    - [Customizing the scan region](#customizing-the-scan-region)
+  - [Licensing](#licensing)
 
 ## System Requirements
 
@@ -72,7 +79,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Capture Vision SDK.
 
->Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/main/BarcodeReaderSimpleSample)
+>Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/v1.1.14/BarcodeReaderSimpleSample)
 
 ### Set up Development Environment
 
@@ -257,7 +264,7 @@ npx react-native run-ios
 >- On iOS, in order to run the React Native app on a physical device you will need to install the [`ios-deploy`](https://www.npmjs.com/package/ios-deploy) library. Afterwards, you can run the react native app from the terminal as such `npx react-native run-ios --device` assuming it's the only device connected to the Mac.
 >- Alternatively on iOS, you can simply open the `xcworkspace` of the project found in the `ios` folder using Xcode and run the sample on your connected iOS device from there. The advantage that this offers is that it is easier to deal with the developer signatures for deployment in there.
 
->Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/main/BarcodeReaderSimpleSample)
+>Note: You can get the full source code of a similar project:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/v1.1.14/BarcodeReaderSimpleSample)
 
 ## Customizing the Barcode Reader
 

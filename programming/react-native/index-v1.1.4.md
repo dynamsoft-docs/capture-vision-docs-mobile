@@ -17,7 +17,7 @@ breadcrumbText: React Native Index
 
 ## Samples
 
-- <a href = "https://github.com/Dynamsoft/capture-vision-react-native-samples" target="_blank">Dynamsoft Capture Vision - BarcodeReaderSimpleSample</a>
+- <a href = "https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/v1.1.14/" target="_blank">Dynamsoft Capture Vision - BarcodeReaderSimpleSample</a>
 
 ## API Reference
 

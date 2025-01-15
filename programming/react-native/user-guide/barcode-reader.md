@@ -72,7 +72,7 @@ In this guide, we will explore the Barcode Reader module of the Dynamsoft Captur
 
 Let's now walk through the steps needed in order to create a simple barcode scanning React Native project using the Dynamsoft Capture Vision SDK.
 
->Note: If you would like the full source code of the sample that we will walk through, please visit:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/main/BarcodeReaderSimpleSample)
+>Note: If you would like the full source code of the sample that we will walk through, please visit:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/v1.1.14/BarcodeReaderSimpleSample)
 
 ### Set up Development Environment
 
@@ -301,7 +301,7 @@ npx react-native run-ios
 >- On iOS, in order to run the React Native app on a physical device you will need to install the [`ios-deploy`](https://www.npmjs.com/package/ios-deploy) library. Afterwards, you can run the react native app from the terminal as such `npx react-native run-ios --device` assuming it's the only device connected to the Mac.
 >- Alternatively on iOS, you can simply open the `.xcworkspace` of the project found in the `ios` folder using Xcode and run the sample on your connected iOS device from there. The advantage that this offers is that it is easier to deal with the developer signatures for deployment in there.
 
->Note: You can get the full source code of the project above:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/main/BarcodeReaderSimpleSample)
+>Note: You can get the full source code of the project above:  [Barcode Reader Simple Sample](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/v1.1.14/BarcodeReaderSimpleSample)
 
 ## Customizing the Barcode Reader
 
