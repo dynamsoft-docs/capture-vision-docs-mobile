@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionRouter Module
 
+## 2.6.1003 (01/23/2025)
+
+### Fixed
+
+- Fixed a camera adaptation bug when using the iPad device.
+
 ## 2.6.1002 (01/14/2025)
 
 ### Fixed
