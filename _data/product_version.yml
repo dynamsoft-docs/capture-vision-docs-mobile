@@ -7,6 +7,8 @@ version_info_list_mobile:
   - value: latest version
   - value: 2.x
     child:
+      - 2.6.1002_android
+      - 2.6.1002_ios
       - 2.6.1001_android
       - 2.6.1001_ios
       - 2.6.1000_android

@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 2.6.1003 (01/23/2025)
+
+### Fixed
+
+- Fixed a security issue by rebuilding the affected libraries with enhanced protection mechanisms.
+
 ## 2.6.1002 (01/14/2025)
 
 ### Fixed
