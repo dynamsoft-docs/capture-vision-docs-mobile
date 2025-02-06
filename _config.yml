@@ -4,6 +4,8 @@ docFullPath: https://www.dynamsoft.com/capture-vision/docs/mobile/
 firstLevelUrl: /capture-vision/docs/mobile
 docHomePage: /capture-vision/docs/core/introduction/
 frontPageFolder: /capture-vision/docs/
+searchIndexName: Crawler-DCV-Docs-New
+searchNeedFilter: true
 
 productName: Dynamsoft Capture Vision
 
