@@ -40,7 +40,7 @@ This documentation provides guidance to assist developers in utilizing DCV for M
 
 ### Get Started
 
-- [Read Barcode]({{ site.dbr_maui }}user-guide.html){:target="_blank"}
+- [Read Barcode]({{ site.dbr_maui }}user-guide.html)
 - [Scan MRZ]({{ site.dcv_maui }}user-guide/mrz.html)
 - [Detect & Normalize Documents]({{ site.ddn_maui }}user-guide.html)
 
