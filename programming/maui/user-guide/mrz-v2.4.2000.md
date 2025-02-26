@@ -108,8 +108,8 @@ You have to Add the library via the project file and do some additional steps to
         ...
         <ItemGroup>
             ...
-            <PackageReference Include="Dynamsoft.CaptureVisionBundle.Maui" Version="2.6.1000" />
-            <PackageReference Include="Dynamsoft.MRZ.Maui" Version="3.4.201" />
+            <PackageReference Include="Dynamsoft.CaptureVisionBundle.Maui" Version="2.4.2000" />
+            <PackageReference Include="Dynamsoft.MRZ.Maui" Version="3.4.200" />
         </ItemGroup>
     </Project>
     ```
