@@ -76,7 +76,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ### .Net
 
-- .NET 7.0 and .NET 8.0.
+- .NET 7.0, 8.0 and 9.0.
 
 ### Android
 
