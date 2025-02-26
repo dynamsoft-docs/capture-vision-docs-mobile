@@ -340,7 +340,7 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 ### Obtaining Recognized Text Lines and Parsed MRZ
 
-In **MainPage.xaml.cs**, implement [`ICapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.html) to receive recognized text lines and parsed MRZ result in  [`OnRecognizedTextLinesReceived`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.html#onrecognizedtextlinesreceived) and [`OnParsedResultsReceived`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.htmlonparsedresultsreceived) callback function.
+In **MainPage.xaml.cs**, implement [`ICapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive recognized text lines and parsed MRZ result in  [`OnRecognizedTextLinesReceived`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived) and [`OnParsedResultsReceived`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.htmlonparsedresultsreceived) callback function.
 
 ```c#
 ......
