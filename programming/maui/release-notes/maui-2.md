@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionRouter Module
 
-## 2.6.1000 (02/25/2025)
+## 2.6.1000 (02/26/2025)
 
 ### New
 
