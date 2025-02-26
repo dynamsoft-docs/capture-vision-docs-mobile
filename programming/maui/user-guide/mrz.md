@@ -160,7 +160,7 @@ Please view the [installation section](#installation) on how to add the library.
 
 ### Initialize MauiProgram
 
-In **MauiProgram.cs**, add a custom handler for the `CameraView` control. Specifically, it maps the `CameraView` type to the `CameraViewHandler` type.
+In **MauiProgram.cs**, add a custom handler for the [`CameraView`]({{ site.dce_maui_api }}camera-view.html) control. Specifically, it maps the [`CameraView`]({{ site.dce_maui_api }}camera-view.html) type to the `CameraViewHandler` type.
 
 ```c#
 namespace SimpleMRZScanner;
@@ -260,7 +260,7 @@ public partial class MainPage : ContentPage, ILicenseVerificationListener, ICapt
 
 ### Add the CameraView control in the Main Page
 
-In the **MainPage.xaml**, add a `CameraView` control:
+In the **MainPage.xaml**, add a [`CameraView`]({{ site.dce_maui_api }}camera-view.html) control:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -340,7 +340,7 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 ### Obtaining Recognized Text Lines and Parsed MRZ
 
-In **MainPage.xaml.cs**, implement `ICapturedResultReceiver` to receive recognized text lines and parsed MRZ result in  `OnRecognizedTextLinesReceived` and `OnParsedResultsReceived` callback function.
+In **MainPage.xaml.cs**, implement [`ICapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.html) to receive recognized text lines and parsed MRZ result in  [`OnRecognizedTextLinesReceived`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.html#onrecognizedtextlinesreceived) and [`OnParsedResultsReceived`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.htmlonparsedresultsreceived) callback function.
 
 ```c#
 ......
