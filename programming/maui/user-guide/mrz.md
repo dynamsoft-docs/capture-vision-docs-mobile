@@ -76,7 +76,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ### .Net
 
-- .NET 7.0 and .NET 8.0.
+- .NET 7.0, 8.0 and 9.0.
 
 ### Android
 
@@ -400,7 +400,7 @@ You can get the similar source code of the SimpleMRZScanner app from the followi
 
 > Note: If you are running Android only on Visual Studio Windows, please manually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
 
-![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
+![Exclude iOS and Windows from targets](../../assets/maui-exclude.png)
 
 ## Licensing
 
