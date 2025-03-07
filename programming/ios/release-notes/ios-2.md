@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionRouter Module
 
+## 2.6.1004 (03/07/2025)
+
+### Fixed
+
+- Fixed a bug where the `scanRegion` might not effect when configured before the creation of `CameraView`.
+
 ## 2.6.1003 (01/23/2025)
 
 ### Fixed
