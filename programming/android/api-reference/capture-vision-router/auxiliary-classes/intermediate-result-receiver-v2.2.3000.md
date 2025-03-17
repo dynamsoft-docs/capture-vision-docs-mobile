@@ -14,9 +14,9 @@ The `IntermediateResultReceiver` class is designed as a standardized way for ret
 
 ## Definition
 
-*Namespace:* com.dynamsoft.core.intermediate_results
+*Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java
 interface IntermediateResultReceiver
