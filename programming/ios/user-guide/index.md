@@ -10,3 +10,7 @@ ignore: true
 ---
 
 # User Guide - iOS
+
+- [Read Barcodes]({{ site.dbr_ios }}user-guide.html)
+- [Scan MRZ](/mrz-scanner/docs/mobile/programming/ios/user-guide/index.html)
+- [Detect & Normalize Documents]({{ site.ddn_ios }}user-guide.html)

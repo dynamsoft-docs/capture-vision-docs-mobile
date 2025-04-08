@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionRouter Module
 
+## 2.6.1001 (03/20/2025)
+
+### Fixed
+
+- Fixed a bug where the `FragmentActivity` was not supported.
+
 ## 2.6.1000 (02/26/2025)
 
 ### New

@@ -10,3 +10,7 @@ ignore: true
 ---
 
 # User Guide - Android
+
+- [Read Barcodes]({{ site.dbr_android }}user-guide.html)
+- [Scan MRZ](/mrz-scanner/docs/mobile/programming/android/user-guide/index.html)
+- [Detect & Normalize Documents]({{ site.ddn_android }}user-guide.html)
