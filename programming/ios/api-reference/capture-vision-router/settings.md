@@ -134,7 +134,7 @@ The following steps shows how to read a template file under the `DynamsoftResour
    try! cvr.initSettingsFromFile("ReadPDF417.json")
    ```
 
-5. To use your template, you have to specify the template name in the `startCapturing` or `capture` method.
+5. To use your template, you have to specify the template name in the `startCapturing` or `capture` method. The template name is the name of `CaptureVisionTemplates` in your template file (see in the image of step 3).
 
    <div class="sample-code-prefix"></div>
    >- Objective-C

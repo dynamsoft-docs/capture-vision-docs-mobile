@@ -93,7 +93,9 @@ try {
 }
 ```
 
-To use your template, you have to specify the template name in the `startCapturing` or `capture` method. For example:
+To use your template, you have to specify the template name in the `startCapturing` or `capture` method. The template name is the name of `CaptureVisionTemplates` in your template file (see in the image of step 3).
+
+For example:
 
 ```java
 mRouter.startCapturing("ReadPDF417", new CompletionListener() {

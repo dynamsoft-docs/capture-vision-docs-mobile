@@ -12,8 +12,6 @@ noTitleIndex: true
 
 In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision Android SDK.
 
-> This is the guide for developing a full customizable MRZ scanning application. If you'd like to start with a Ready-to-Use component, you can read [MRZScanner documentation](/mrz-scanner/docs/mobile/programming/android/user-guide/index.html){:target="_blank"} instead.
-
 - [Android User Guide for MRZ Integration](#android-user-guide-for-mrz-integration)
   - [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
     - [ID (TD1 Size)](#id-td1-size)
@@ -86,7 +84,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
     ```groovy
     dependencies {
-        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.6.1003'
+        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.6.1002'
         implementation 'com.dynamsoft:dynamsoftmrz:3.4.20'
     }
     ```
