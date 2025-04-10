@@ -83,7 +83,7 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
     target '{Your project name}' do
         use_frameworks!
 
-        pod 'DynamsoftCaptureVisionBundle','2.6.1004'
+        pod 'DynamsoftCaptureVisionBundle','2.6.1002'
         pod 'DynamsoftMRZ', '3.4.20'
 
     end
