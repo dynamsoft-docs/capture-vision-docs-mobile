@@ -12,6 +12,8 @@ noTitleIndex: true
 
 In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision iOS SDK.
 
+> This is the guide for developing a full customizable MRZ scanning application. If you'd like to start with a Ready-to-Use component, you can read [MRZScanner documentation](/mrz-scanner/docs/mobile/programming/ios/user-guide/index.html){:target="_blank"} instead.
+
 - [iOS User Guide for MRZ Integration](#ios-user-guide-for-mrz-integration)
   - [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
     - [ID (TD1 Size)](#id-td1-size)
