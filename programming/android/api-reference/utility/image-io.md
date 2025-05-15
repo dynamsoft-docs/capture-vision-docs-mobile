@@ -16,7 +16,7 @@ The class `ImageIO` is a utility class for managing the image data. It provides 
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ImageIO

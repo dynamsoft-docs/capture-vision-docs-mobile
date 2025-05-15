@@ -16,7 +16,7 @@ The `PredetectedRegionElement` class represents a pre-detected region element, w
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class PredetectedRegionElement extends RegionObjectElement

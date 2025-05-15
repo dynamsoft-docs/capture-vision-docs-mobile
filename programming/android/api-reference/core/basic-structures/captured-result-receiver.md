@@ -19,7 +19,7 @@ The `CapturedResultReceiver` interface provides methods for monitoring the outpu
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 interface CapturedResultReceiver

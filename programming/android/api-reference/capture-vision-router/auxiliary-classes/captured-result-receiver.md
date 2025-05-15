@@ -16,7 +16,7 @@ The `CapturedResultReceiver` interface is designed as a standardized way for ret
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 interface CapturedResultReceiver

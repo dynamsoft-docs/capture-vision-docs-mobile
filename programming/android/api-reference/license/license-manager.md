@@ -16,7 +16,7 @@ The `LicenseManager` class provides a set of APIs to manage SDK licensing.
 
 *Namespace:* com.dynamsoft.license
 
-*Assembly:* DynamsoftLicense.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class LicenseManager

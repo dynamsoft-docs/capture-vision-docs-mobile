@@ -16,7 +16,7 @@ The `OriginalImageResultItem` class extends the [`CapturedResultItem`](captured-
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class OriginalImageResultItem extends CapturedResultItem

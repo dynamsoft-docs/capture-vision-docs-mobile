@@ -14,7 +14,7 @@ The `DSDirectoryFetcher` class is a utility class that retrieves a list of files
 
 ## Definition
 
-*Assembly:* DynamsoftUtility.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

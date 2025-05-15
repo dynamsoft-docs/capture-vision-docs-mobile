@@ -16,7 +16,7 @@ The `TransformedGrayscaleImageUnit` class extends the `IntermediateResultUnit` c
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class TransformedGrayscaleImageUnit extends IntermediateResultUnit

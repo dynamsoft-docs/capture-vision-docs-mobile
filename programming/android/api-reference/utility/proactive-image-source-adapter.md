@@ -16,7 +16,7 @@ The `ProactiveImageSourceAdapter` class is an abstract base class that extends t
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 abstract class ProactiveImageSourceAdapter extends ImageSourceAdapter

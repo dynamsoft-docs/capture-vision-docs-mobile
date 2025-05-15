@@ -17,7 +17,7 @@ The `DSIntermediateResultManager` class manages intermediate results generated d
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

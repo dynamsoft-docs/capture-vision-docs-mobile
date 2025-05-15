@@ -16,7 +16,7 @@ noTitleIndex: true
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class UtilityException extends Exception

@@ -16,7 +16,7 @@ The `FileImageTag` class represents an image tag that is associated with a file.
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class FileImageTag extends ImageTag

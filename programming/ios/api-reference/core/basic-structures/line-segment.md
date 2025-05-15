@@ -14,7 +14,7 @@ The `DSLineSegment` class represents a line segment defined by two `Points`.
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

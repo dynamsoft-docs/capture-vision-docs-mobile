@@ -14,7 +14,7 @@ The `DSCaptureStateListener` protocol defines the methods for monitoring the cap
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

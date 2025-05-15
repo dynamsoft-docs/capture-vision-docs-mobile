@@ -16,7 +16,7 @@ The `SimplifiedCaptureVisionSettings` class contains settings for capturing and 
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class SimplifiedCaptureVisionSettings

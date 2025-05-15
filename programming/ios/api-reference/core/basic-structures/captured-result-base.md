@@ -15,7 +15,7 @@ The `DSCapturedResultBase` class is the base class of all types of captured resu
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

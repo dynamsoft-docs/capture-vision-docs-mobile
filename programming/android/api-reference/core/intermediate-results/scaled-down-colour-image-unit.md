@@ -16,7 +16,7 @@ The `ScaledDownColourImageUnit` class extends the `IntermediateResultUnit` class
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ScaledDownColourImageUnit extends IntermediateResultUnit

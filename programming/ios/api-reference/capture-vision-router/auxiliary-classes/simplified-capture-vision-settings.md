@@ -14,7 +14,7 @@ The `DSSimplifiedCaptureVisionSettings` class contains settings for capturing an
 
 ## Definition
 
-*Assembly:* DynamsoftCaptureVisionRouter.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

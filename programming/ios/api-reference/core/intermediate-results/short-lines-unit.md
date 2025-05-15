@@ -14,7 +14,7 @@ The `DSShortLinesUnit` class extends the `DSIntermediateResultUnit` class and re
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

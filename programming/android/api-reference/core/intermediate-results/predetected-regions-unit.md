@@ -16,7 +16,7 @@ The `PredetectedRegionsUnit` class extends the `IntermediateResultUnit` class an
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class PredetectedRegionsUnit extends IntermediateResultUnit

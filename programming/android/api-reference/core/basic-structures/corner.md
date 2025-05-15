@@ -16,7 +16,7 @@ The `Corner` class represents a corner, typically where two line segments meet
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class Corner

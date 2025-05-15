@@ -16,7 +16,7 @@ The `LicenseVerificationListener` is a interface that includes methods for monit
 
 *Namespace:* com.dynamsoft.license
 
-*Assembly:* DynamsoftLicense.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 interface LicenseVerificationListener

@@ -16,7 +16,7 @@ The class `ImageDrawer` is a utility class for drawing graphics on images.
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ImageDrawer

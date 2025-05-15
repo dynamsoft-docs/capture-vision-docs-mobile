@@ -14,7 +14,7 @@ The `DSImageTag` class represents an image tag that can be attached to an image 
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

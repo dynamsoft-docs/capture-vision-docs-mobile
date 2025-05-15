@@ -14,7 +14,7 @@ The `IntermediateResultExtraInfo` class represents the extra information associa
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

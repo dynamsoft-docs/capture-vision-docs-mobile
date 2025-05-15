@@ -24,7 +24,7 @@ The `CapturedResult` class represents the result of a capture operation on an im
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class CapturedResult

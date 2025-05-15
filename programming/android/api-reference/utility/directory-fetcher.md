@@ -16,7 +16,7 @@ The `DirectoryFetcher` class is a utility class that retrieves a list of files f
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class DirectoryFetcher extends ProactiveImageSourceAdapter

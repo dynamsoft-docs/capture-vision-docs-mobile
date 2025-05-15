@@ -16,7 +16,7 @@ The `MultiFrameResultCrossFilter` class is responsible for filtering captured re
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class MultiFrameResultCrossFilter implements CapturedResultFilter

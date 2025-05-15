@@ -16,7 +16,7 @@ The `ColourImageUnit` class represents a unit that contains a colour image.
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ColourImageUnit extends IntermediateResultUnit

@@ -14,7 +14,7 @@ The `DSImageProcessingModule` class defines common functionality in the `Dynamso
 
 ## Definition
 
-*Assembly:* DynamsoftImageProcessing.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

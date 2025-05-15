@@ -16,7 +16,7 @@ The `Quadrilateral` class represents a quadrilateral shape in 2D space, which co
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class Quadrilateral

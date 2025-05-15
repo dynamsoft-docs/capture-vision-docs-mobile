@@ -16,7 +16,7 @@ The `CoreModule` class defines general functions of the core module.
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class CoreModule

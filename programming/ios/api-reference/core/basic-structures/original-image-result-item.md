@@ -14,7 +14,7 @@ The `OriginalImageResultItem` class extends the [`CapturedResultItem`](captured-
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

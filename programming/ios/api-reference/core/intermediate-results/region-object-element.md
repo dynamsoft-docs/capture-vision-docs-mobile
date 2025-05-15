@@ -14,7 +14,7 @@ The `DSRegionObjectElement` class represents a basic element of a region object,
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

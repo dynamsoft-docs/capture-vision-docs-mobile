@@ -14,7 +14,7 @@ The `DSNeuralNetworkModule` class defines common functionality in the `Dynamsoft
 
 ## Definition
 
-*Assembly:* DynamsoftNeuralNetwork.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

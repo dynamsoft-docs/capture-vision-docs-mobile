@@ -16,7 +16,7 @@ The `TextureDetectionResultUnit` class extends the `IntermediateResultUnit` clas
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class TextureDetectionResultUnit extends IntermediateResultUnit

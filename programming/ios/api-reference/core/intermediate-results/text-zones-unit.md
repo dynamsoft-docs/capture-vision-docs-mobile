@@ -14,7 +14,7 @@ The `DSTextZonesUnit` class extends the `DSIntermediateResultUnit` class and rep
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

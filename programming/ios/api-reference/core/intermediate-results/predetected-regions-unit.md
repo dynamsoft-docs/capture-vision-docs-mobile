@@ -14,7 +14,7 @@ The `DSPredetectedRegionsUnit` class extends the `DSIntermediateResultUnit` clas
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

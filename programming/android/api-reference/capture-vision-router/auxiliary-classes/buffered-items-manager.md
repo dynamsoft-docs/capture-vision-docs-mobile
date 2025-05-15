@@ -16,7 +16,7 @@ The `BufferedItemsManager` class is used to manage the buffered items.
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class BufferedItemsManager

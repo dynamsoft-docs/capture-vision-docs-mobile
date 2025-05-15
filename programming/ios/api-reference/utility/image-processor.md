@@ -16,7 +16,7 @@ The class `ImageProcesser` is a utility class for managing the image data. It pr
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ImageProcesser

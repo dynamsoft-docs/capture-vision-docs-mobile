@@ -16,7 +16,7 @@ The `RegionObjectElement` class represents a basic element of a region object, i
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class RegionObjectElement

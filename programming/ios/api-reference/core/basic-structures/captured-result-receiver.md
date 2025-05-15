@@ -15,7 +15,7 @@ The `DSCapturedResultReceiver` protocol provides methods for monitoring the outp
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

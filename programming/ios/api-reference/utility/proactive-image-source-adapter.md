@@ -14,7 +14,7 @@ The `DSProactiveImageSourceAdapter` class is an abstract base class that extends
 
 ## Definition
 
-*Assembly:* DynamsoftUtility.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

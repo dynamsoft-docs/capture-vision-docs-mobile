@@ -16,7 +16,7 @@ The `ContoursUnit` class represents a unit that contains contours as intermediat
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ContoursUnit: IntermediateResultUnit

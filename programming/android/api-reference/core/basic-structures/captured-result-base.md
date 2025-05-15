@@ -17,7 +17,7 @@ The `CapturedResultBase` class is the base class of all types of captured result
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class CapturedResultBase

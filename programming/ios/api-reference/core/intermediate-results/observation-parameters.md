@@ -14,7 +14,7 @@ The `DSObservationParameters` class is used to set filter conditions for the `DS
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

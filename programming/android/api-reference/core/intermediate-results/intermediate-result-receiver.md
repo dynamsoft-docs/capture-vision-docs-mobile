@@ -19,7 +19,7 @@ The `IntermediateResultReceiver` interface includes methods for monitoring the o
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 interface IntermediateResultReceiver

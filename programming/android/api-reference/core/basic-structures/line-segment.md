@@ -16,7 +16,7 @@ The `LineSegment` class represents a line segment in 2D space, which contains th
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class LineSegment
