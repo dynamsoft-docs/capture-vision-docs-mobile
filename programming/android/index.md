@@ -28,7 +28,7 @@ This documentation provides guidance to assist developers in utilizing DCV for A
 ### Get Started
 
 - [Read Barcode]({{ site.dbr_android }}user-guide.html){:target="_blank"}
-- [Scan MRZ](/mrz-scanner/docs/mobile/programming/android/user-guide/index.html){:target="_blank"}
+- [Scan MRZ](user-guide/mrz.md)
 - [Detect & Normalize Documents]({{ site.ddn_android }}user-guide.html)
 
 ### Check APIs

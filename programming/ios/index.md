@@ -21,14 +21,14 @@ This documentation provides guidance to assist developers in utilizing DCV for i
 
 ### System Requirements
 
-- Supported OS: iOS 11+ (iOS 13+ recommended).
+- Supported OS: iOS 13+.
 - Supported ABI: arm64 and x86_64.
 - Development Environment: Xcode 13+ (Xcode 14.1+ recommended).
 
 ### Get Started
 
 - [Read Barcode]({{ site.dbr_ios }}user-guide.html){:target="_blank"}
-- [Scan MRZ](/mrz-scanner/docs/mobile/programming/ios/user-guide/index.html){:target="_blank"}
+- [Scan MRZ](user-guide/mrz.md)
 - [Detect & Normalize Documents]({{ site.ddn_ios }}user-guide.html)
 
 ### Check APIs
