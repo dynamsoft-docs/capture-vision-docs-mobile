@@ -16,7 +16,7 @@ The `UtilityModule` class defines common functionality in the `DynamsoftUtility`
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class UtilityModule

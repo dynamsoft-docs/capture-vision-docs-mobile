@@ -14,7 +14,7 @@ The `DSMultiFrameResultCrossFilter` class is responsible for filtering captured 
 
 ## Definition
 
-*Assembly:* DynamsoftUtility.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -69,7 +69,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ## Requirements
 
-- Supported OS: iOS 11+ (iOS 13+ recommended).
+- Supported OS: **iOS 13** or higher.
 - Supported ABI: arm64 and x86_64.
 - Development Environment: Xcode 13+ (Xcode 14.1+ recommended).
 
@@ -77,7 +77,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 There are two ways to add the SDK into your project - **CocoaPods**, or via **Swift Package Manager**.
 
-### Add the xcframeworks via CocoaPods
+### Option 1: Add the xcframeworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace *TargetName* with your real target name.
 
@@ -85,13 +85,10 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
     target '{Your project name}' do
         use_frameworks!
 
-        pod 'DynamsoftCaptureVisionBundle','2.6.1004'
-        pod 'DynamsoftMRZ', '3.4.20'
+        pod 'DynamsoftMRZScannerBundle','3.0.0'
 
     end
     ```
-
-    > Read more about the modules of [DynamsoftCaptureVisionBundle](../api-reference/index.md)
 
 2. Execute the pod command to install the frameworks and generate workspace(**{Your project name}.xcworkspace**):
 
@@ -99,15 +96,15 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
    pod install
    ```
 
-### Add the xcframeworks via Swift Package Manager
+### Option 2: Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
-2. In the top-right section of the window, search "https://github.com/Dynamsoft/capture-vision-spm"
+2. In the top-right section of the window, search "https://github.com/Dynamsoft/mrz-scanner-spm"
 
-3. Select `capture-vision-spm`, choose `Exact version`, enter **2.4.2000**, then click **Add Package**.
+3. Select `mrz-scanner-spm`, choose `Exact version`, enter **3.0.0**, then click **Add Package**.
 
-4. Check all the frameworks and add.
+4. Check all the **xcframeworks** and add them.
 
 ## Build Your First Application
 

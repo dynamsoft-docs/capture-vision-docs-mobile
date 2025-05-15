@@ -14,7 +14,7 @@ The `DSImageSourceStateListener` protocol defines methods for monitoring the sta
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -16,7 +16,7 @@ The `TextRemovedBinaryImageUnit` class represents a unit that contains a text-re
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class TextRemovedBinaryImageUnit extends IntermediateResultUnit

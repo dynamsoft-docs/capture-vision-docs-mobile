@@ -70,28 +70,59 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ## Add the SDK
 
-1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
+1. Open the file `[App Project Root Path]\settings.gradle` and add the Maven repository:
 
-    ```groovy
-    allprojects {
-        repositories {
-            maven {
+   <div class="sample-code-prefix"></div>
+   >- groovy
+   >- kts
+   >
+   >1. 
+   ```groovy
+   dependencyResolutionManagement {
+      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+      repositories {
+             google()
+             mavenCentral()
+             maven {
                 url "https://download2.dynamsoft.com/maven/aar"
-            }
-        }
-    }
-    ```
+             }
+      }
+   }
+   ```
+   2. 
+   ```kotlin
+   dependencyResolutionManagement {
+      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+      repositories {
+             google()
+             mavenCentral()
+             maven {
+                url = uri("https://download2.dynamsoft.com/maven/aar")
+             }
+      }
+   }
+   ```
 
-2. Add the references in the dependencies:
+   > Note: If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
 
-    ```groovy
-    dependencies {
-        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.6.1003'
-        implementation 'com.dynamsoft:dynamsoftmrz:3.4.20'
-    }
-    ```
+2. Open the file `[App Project Root Path]\app\build.gradle` and add the dependencies:
 
-    > Read more about the modules of [dynamsoftcapturevisionbundle](../api-reference/index.md)
+   <div class="sample-code-prefix"></div>
+   >- groovy
+   >- kts
+   >
+   >1. 
+   ```groovy
+   dependencies {
+      implementation 'com.dynamsoft:mrzscannerbundle:3.0.0'
+   }
+   ```
+   2. 
+   ```kotlin
+   dependencies {
+      implementation("com.dynamsoft:mrzscannerbundle:3.0.0")
+   }
+   ```
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 

@@ -16,7 +16,7 @@ The `ShortLinesUnit` class extends the `IntermediateResultUnit` class and repres
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ShortLinesUnit extends IntermediateResultUnit

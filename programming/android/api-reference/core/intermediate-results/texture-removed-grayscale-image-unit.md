@@ -16,7 +16,7 @@ The `TextureRemovedGrayscaleImageUnit` class extends the `IntermediateResultUnit
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit

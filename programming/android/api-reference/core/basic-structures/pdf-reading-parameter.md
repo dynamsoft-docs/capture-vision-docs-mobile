@@ -17,7 +17,7 @@ The `PDFReadingParameter` class represents the parameters for reading a PDF file
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class PDFReadingParameter

@@ -14,7 +14,7 @@ The `DSRegionObjectElement` class represents a basic element of a region object,
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -37,6 +37,7 @@ class RegionObjectElement : NSObject
 | [`setLocation`](#setlocation) | Sets the location of the region object. |
 | [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
 | [`getRegionObjectElementType`](#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
+| [`getImageData`](#getimagedata) | Gets the image data of this region object element. |
 
 ### getLocation
 
@@ -121,3 +122,24 @@ func getRegionObjectElementType() -> RegionObjectElementType
 **Return Value**
 
 The type of the region object element.
+
+### getImageData
+
+Gets the image data of this region object element.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable DSImageData *)getImageData;
+```
+2. 
+```swift
+func getImageData() -> DSImageData?
+```
+
+**Return Value**
+
+A `DSImageData` object that represents the image data of this region object element.

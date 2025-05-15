@@ -16,7 +16,7 @@ The `CompletionListener` interface defines methods to receive callback when [`st
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 interface CompletionListener

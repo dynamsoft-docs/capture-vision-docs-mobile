@@ -14,7 +14,7 @@ The `DSLineSegmentsUnit` class extends the `DSIntermediateResultUnit` class and 
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

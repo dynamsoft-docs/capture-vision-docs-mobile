@@ -16,7 +16,7 @@ The `TextZonesUnit` class extends the `IntermediateResultUnit` class and represe
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class TextZonesUnit extends IntermediateResultUnit

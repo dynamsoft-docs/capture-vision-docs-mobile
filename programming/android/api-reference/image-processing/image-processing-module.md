@@ -15,7 +15,7 @@ The `ImageProcessingModule` class defines general functions of the image process
 ## Definition
 
 *Namespace:* com.dynamsoft.dip
-*Assembly:* DynamsoftImageProcessing.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ImageProcessingModule

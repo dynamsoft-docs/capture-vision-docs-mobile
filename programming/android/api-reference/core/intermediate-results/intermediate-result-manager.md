@@ -19,7 +19,7 @@ The `IntermediateResultManager` class is responsible for handling intermediate r
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class IntermediateResultManager

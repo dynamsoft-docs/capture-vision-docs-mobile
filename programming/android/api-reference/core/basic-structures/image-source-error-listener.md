@@ -16,7 +16,7 @@ The `ImageSourceErrorListener` interface that defines methods for monitoring the
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 interface ImageSourceErrorListener 

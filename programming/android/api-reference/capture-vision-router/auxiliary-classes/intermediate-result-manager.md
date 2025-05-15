@@ -16,7 +16,7 @@ The `IntermediateResultManager` class manages intermediate results generated dur
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class IntermediateResultManager

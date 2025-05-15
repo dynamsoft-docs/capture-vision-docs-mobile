@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: DSScaledDownColourImageUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSScaledDownColourImageUnit of Dynamsoft Core Module represents a unit that contains a down-scaled colour image.
+title: DSScaledColourImageUnit - Dynamsoft Core Module iOS Edition API Reference
+description: The class DSScaledColourImageUnit of Dynamsoft Core Module represents a unit that contains a down-scaled colour image.
 keywords: scaled down colour image unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# DSScaledDownColourImageUnit
+# DSScaledColourImageUnit
 
 The `ScaledDownColourImageUnit` class extends the `IntermediateResultUnit` class and represents a scaled-down colour image unit.
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -22,7 +22,7 @@ The `ScaledDownColourImageUnit` class extends the `IntermediateResultUnit` class
 >
 >1. 
 ```objc
-@interface DSScaledDownColourImageUnit : DSIntermediateResultUnit
+@interface DSScaledColourImageUnit : DSIntermediateResultUnit
 ```
 2. 
 ```swift

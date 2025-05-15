@@ -16,7 +16,7 @@ The `Vector4` class represents a four-dimensional vector.
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class Vector4

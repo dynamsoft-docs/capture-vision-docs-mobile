@@ -16,7 +16,7 @@ The `RegionObjectElement` class represents a basic element of a region object, i
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class RegionObjectElement
@@ -30,6 +30,7 @@ class RegionObjectElement
 | [`setLocation`](#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
 | [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
 | [`getRegionObjectElementType`](#getregionobjectelementtype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
+| [`getImageData`](#getimagedata) | Gets the image data of this region object element. |
 
 ### getLocation
 
@@ -78,3 +79,15 @@ EnumRegionObjectElementType getType();
 **Return Value**
 
 The type of the region object element.
+
+### getImageData
+
+Gets the image data of this region object element.
+
+```java
+ImageData getImageData();
+```
+
+**Return Value**
+
+The image data of this region object element.

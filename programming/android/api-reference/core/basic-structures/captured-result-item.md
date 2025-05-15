@@ -16,7 +16,7 @@ The `CapturedResultItem` class provides a common structure for representing diff
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class CapturedResultItem

@@ -16,7 +16,7 @@ The `VideoFrameTag` class represents a video frame tag, which is a type of image
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class VideoFrameTag extends ImageTag

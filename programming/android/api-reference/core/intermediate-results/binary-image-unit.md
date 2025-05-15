@@ -16,7 +16,7 @@ The `BinaryImageUnit` class extends the `IntermediateResultUnit` class and repre
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class BinaryImageUnit extends IntermediateResultUnit

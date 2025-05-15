@@ -16,7 +16,7 @@ The `CapturedResultFilter` interface represents a captured result filter, which 
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 interface CapturedResultFilter
@@ -29,8 +29,7 @@ interface CapturedResultFilter
 | [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `OriginalImageResultItem`. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DecodedBarcodesResult`. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `RecognizedTextLinesResult`. |
-| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DetectedQuadsResult`. |
-| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The method for monitoring the output of `NormalizedImagesResult`. |
+| [`onProcessedDocumentResultReceived`](#onprocesseddocumentresultreceived) | The method for monitoring the output of `ProcessedDocumentResult`, which includes the detected quad, deskewed image and enhanced image. |
 | [`onParsedResultsReceived`](#onparsedresultsreceived) | The method for monitoring the output of `ParsedResult`. |
 
 ### onOriginalImageResultReceived
@@ -69,29 +68,17 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 
 `[in] result`: A `RecognizedTextLinesResult` object as a recognized text line result.
 
-### onDetectedQuadsReceived
+### onProcessedDocumentResultReceived
 
-The method for monitoring the output of [`DetectedQuadsResult`]({{site.ddn_android_api}}detected-quads-result.html).
+The method for monitoring the output of `ProcessedDocumentResult`, which includes the detected quad, deskewed image and enhanced image.
 
 ```java
-void onDetectedQuadsReceived(DetectedQuadsResult result);
+void onProcessedDocumentResultReceived(ProcessedDocumentResult result);
 ```
 
 **Parameters**
 
-`[in] result`: A [`DetectedQuadsResult`]({{site.ddn_android_api}}detected-quads-result.html) object as a detected quad result.
-
-### onNormalizedImagesReceived
-
-The method for monitoring the output of [`NormalizedImagesResult`]({{site.ddn_android_api}}normalized-images-result.html).
-
-```java
-void onNormalizedImagesReceived(NormalizedImagesResult result);
-```
-
-**Parameters**
-
-`[in] result`: A [`NormalizedImagesResult`]({{site.ddn_android_api}}normalized-images-result.html) object as a normalized image result.
+`[in] result`: A `ProcessedDocumentResult` object as a processed document result.
 
 ### onParsedResultsReceived
 

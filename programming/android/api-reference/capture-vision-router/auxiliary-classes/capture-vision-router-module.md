@@ -16,7 +16,7 @@ The `CaptureVisionRouterModule` class defines common functionality in the `Captu
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class CaptureVisionRouterModule

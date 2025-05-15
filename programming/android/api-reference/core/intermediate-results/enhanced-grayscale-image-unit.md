@@ -16,7 +16,7 @@ The `EnhancedGrayscaleImageUnit` class represents a unit that contains a graysca
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class EnhancedGrayscaleImageUnit extends IntermediateResultUnit

@@ -14,7 +14,7 @@ The `DSUtilityModule` class defines common functionality in the `DynamsoftUtilit
 
 ## Definition
 
-*Assembly:* DynamsoftUtility.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

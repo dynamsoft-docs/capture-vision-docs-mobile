@@ -16,7 +16,7 @@ The `ObservationParameters` class is used to set filter conditions for the `Inte
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ObservationParameters

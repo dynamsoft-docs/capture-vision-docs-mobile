@@ -14,7 +14,7 @@ The `DSLicenseManager` class provides a set of APIs to manage SDK licensing.
 
 ## Definition
 
-*Assembly:* DynamsoftLicense.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

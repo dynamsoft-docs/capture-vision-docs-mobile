@@ -16,7 +16,7 @@ The `ImageData` class represents image data, which contains the image bytes, wid
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class ImageData

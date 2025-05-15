@@ -16,7 +16,7 @@ The `SimplifiedCaptureVisionSettings` class contains settings for capturing and 
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionRouter.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class SimplifiedCaptureVisionSettings
@@ -31,7 +31,7 @@ class SimplifiedCaptureVisionSettings
 
 | Attribute | Type | Description |
 | --------- | ---- | ----------- |
-| [`capturedResultItemTypes`](#capturedresultitemtypes) | *int* | Specifies the type(s) of CapturedItem(s) that will be captured. |
+| [`outputOriginalImage`](#capturedresultitemtypes) | *int* | Specifies whether to output the original image or not. |
 | [`roi`](#roi) | *[Quadrilateral](../../core/basic-structures/quadrilateral.md)* | Specifies the region of interest (ROI) of the image or frame where the capture and recognition will take place. |
 | [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *boolean* | Specifies whether the ROI is measured in pixels (false) or as a percentage of the image dimensions (true). |
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
@@ -65,30 +65,20 @@ static SimplifiedCaptureVisionSettings fromJSON(String jsonString);
 
 The generated `SimplifiedCaptureVisionSettings` object.
 
-### capturedResultItemTypes
+### outputOriginalImage
 
-Specifies the type(s) of CapturedItem(s) that will be returned by the Capture Vision Router.
+Specifies whether to output the original image or not.
 
 ```java
-@EnumCapturedResultItemType
-int capturedResultItemTypes;
+boolean outputOriginalImage;
 ```
 
 **Remarks**
 
-You can specify multiple types. For example, you can use the following code to add `CRIT_ORIGINAL_IMAGE` to the captured results of `PT_READ_BARCODES` template.
+The property determines:
 
-```java
-try {
-    SimplifiedCaptureVisionSettings settings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-    settings.capturedResultItemTypes = EnumCapturedResultItemType.CRIT_BARCODE | EnumCapturedResultItemType.CRIT_ORIGINAL_IMAGE;
-    cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
-} catch (CaptureVisionRouterException e) {
-    throw new RuntimeException(e);
-}
-```
-
-> View [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android) to learn of all supported result item types.
+1. Whether the [`CapturedResult`](captured-result.html) object contains the original image.
+2. Whether you can receive the original image via [`onOriginalImageResultReceived`](captured-result-receiver.md#onoriginalimageresultreceived).
 
 ### roi
 

@@ -14,7 +14,7 @@ The `DSFileImageTag` class represents an image tag that is associated with a fil
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

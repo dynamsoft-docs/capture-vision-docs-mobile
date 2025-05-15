@@ -16,7 +16,7 @@ The `IntermediateResultExtraInfo` class represents the extra information associa
 
 *Namespace:* com.dynamsoft.core.intermediate_results
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class IntermediateResultExtraInfo

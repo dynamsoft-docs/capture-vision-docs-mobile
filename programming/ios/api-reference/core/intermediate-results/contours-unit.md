@@ -14,7 +14,7 @@ The `DSContoursUnit` class extends the `DSIntermediateResultUnit` class and repr
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

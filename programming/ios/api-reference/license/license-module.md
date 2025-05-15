@@ -14,7 +14,7 @@ The `DSLicenseModule` class defines common functionality in the `DynamsoftLicens
 
 ## Definition
 
-*Assembly:* DynamsoftLicense.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

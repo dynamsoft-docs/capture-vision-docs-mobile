@@ -16,7 +16,7 @@ The `Quadrilateral` class represents a quadrilateral shape in 2D space, which co
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class Quadrilateral
@@ -27,6 +27,7 @@ class Quadrilateral
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *android.graphics.Point[]* | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`id`](#id) | *int* | The ID of the quadrilateral. |
 
 | Method | Description |
 | ------ | ----------- |
@@ -40,6 +41,14 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 
 ```java
 Point[] points;
+```
+
+### id
+
+The ID of the quadrilateral.
+
+```java
+int id;
 ```
 
 ### contains

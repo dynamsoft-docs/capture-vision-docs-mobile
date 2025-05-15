@@ -16,7 +16,7 @@ The `FileFetcher` class is a utility class that partitions a multi-page image fi
 
 *Namespace:* com.dynamsoft.utility
 
-*Assembly:* DynamsoftUtility.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class FileFetcher

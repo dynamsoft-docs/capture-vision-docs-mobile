@@ -15,7 +15,7 @@ The IntermediateResultReceiver class is designed as a standardized way for retri
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -35,36 +35,39 @@ protocol IntermediateResultReceiver: NSObjectProtocol
 | Method | Description |
 | ------ | ----------- |
 | [getObservationParameters](#getobservationparameters) | Gets the observed parameters of the intermediate result receiver. |
-| [onTaskResultsReceived](#ontaskresultsreceived) | The callback triggered when task results are received. |
-| [onPredetectedRegionsReceived](#onpredetectedregionsreceived) | The callback triggered when pre-detected regions are received. |
-| [onLocalizedBarcodesReceived](#onlocalizedbarcodesreceived) | The callback triggered when localized barcodes are received. |
-| [onDecodedBarcodesReceived](#ondecodedbarcodesreceived) | The callback triggered when decoded barcodes are received. |
-| [onLocalizedTextLinesReceived](#onlocalizedtextlinesreceived) | The callback triggered when localized text lines are received. |
-| [onRecognizedTextLinesReceived](#onrecognizedtextlinesreceived) | The callback triggered when recognized text lines are received. |
-| [onDetectedQuadsReceived](#ondetectedquadsreceived) | The callback triggered when detected quads are received. |
-| [onNormalizedImagesReceived](#onnormalizedimagesreceived) | The callback triggered when normalized images are received. |
-| [onColourImageUnitReceived](#oncolourimageunitreceived) | The callback triggered when a colour image unit is received. |
-| [onScaledDownColourImageUnitReceived](#onscaleddowncolourimageunitreceived) | The callback triggered when a scaled-down colour image unit is received. |
-| [onGrayscaleImageUnitReceived](#ongrayscaleimageunitreceived) | The callback triggered when a grayscale image unit is received. |
-| [onTransformedGrayscaleImageUnitReceived](#ontransformedgrayscaleimageunitreceived) | The callback triggered when a transformed grayscale image unit is received. |
-| [onEnhancedGrayscaleImageUnitReceived](#onenhancedgrayscaleimageunitreceived) | The callback triggered when an enhanced grayscale image unit is received. |
-| [onBinaryImageUnitReceived](#onbinaryimageunitreceived) | The callback triggered when a binary image unit is received. |
-| [onTextureDetectionResultUnitReceived](#ontexturedetectionresultunitreceived) | The callback triggered when a texture detection result unit is received. |
-| [onTextureRemovedGrayscaleImageUnitReceived](#ontextureremovedgrayscaleimageunitreceived) | The callback triggered when a texture-removed grayscale image unit is received. |
-| [onTextureRemovedBinaryImageUnitReceived](#ontextureremovedbinaryimageunitreceived) | The callback triggered when a texture-removed binary image unit is received. |
-| [onContoursUnitReceived](#oncontoursunitreceived) | The callback triggered when a contours unit is received. |
-| [onLineSegmentsUnitReceived](#onlinesegmentsunitreceived) | The callback triggered when a line segments unit is received. |
-| [onTextZonesUnitReceived](#ontextzonesunitreceived) | The callback triggered when a text zones unit is received. |
-| [onTextRemovedBinaryImageUnitReceived](#ontextremovedbinaryimageunitreceived) | The callback triggered when a text-removed binary image unit is received. |
-| [onShortLinesUnitReceived](#onshortlinesunitreceived) | The callback triggered when a short lines unit is received. |
-| [onLogicLinesUnitReceived](#onlogiclinesunitreceived) | The callback triggered when a logic lines unit is received. |
-| [onLongLinesUnitReceived](#onlonglinesunitreceived) | The callback triggered when a long lines unit is received. |
-| [onCornersUnitReceived](#oncornersunitreceived) | The callback triggered when a corners unit is received. |
-| [onCandidateQuadEdgesUnitReceived](#oncandidatequadedgesunitreceived) | The callback triggered when a candidate quad edges unit are detected. |
-| [onCandidateBarcodeZonesUnitReceived](#oncandidatebarcodezonesunitreceived) | The callback triggered when a candidate barcode zones unit are detected. |
-| [onScaledUpBarcodeImageUnitReceived](#onscaledupbarcodeimageunitreceived) | The callback triggered when a scaled-up barcode image unit is received. |
-| [onDeformationResistedBarcodeImageUnitReceived](#ondeformationresistedbarcodeimageunitreceived) | The callback triggered when a deformation-resisted barcode image unit is received. |
-| [onComplementedBarcodeImageUnitReceived](#oncomplementedbarcodeimageunitreceived) | The callback triggered when a complemented barcode image unit is received. |
+| [`onTargetROIResultsReceived`](#ontargetroiresultsreceived) | The callback triggered when the processing of a target-ROI is finished. |
+| [`onTaskResultsReceived`](#ontaskresultsreceived) | The callback triggered when the processing of a task is finished. |
+| [`onPredetectedRegionsReceived`](#onpredetectedregionsreceived) | The callback triggered when pre-detected regions are received. |
+| [`onLocalizedBarcodesReceived`](#onlocalizedbarcodesreceived) | The callback triggered when localized barcodes are received. |
+| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The callback triggered when decoded barcodes are received. |
+| [`onLocalizedTextLinesReceived`](#onlocalizedtextlinesreceived) | The callback triggered when localized text lines are received. |
+| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The callback triggered when recognized text lines are received. |
+| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The callback triggered when detected quads are received. |
+| [`onDeskewedImagesReceived`](#ondeskewedimagesreceived) | The callback triggered when deskewed images are received. |
+| [`onEnhancedImageReceived`](#onenhancedimagesreceived) | The callback triggered when enhanced images are received. |
+| [`onColourImageUnitReceived`](#oncolourimageunitreceived) | The callback triggered when a colour image unit is received. |
+| [`onScaledColourImageUnitReceived`](#onscaledcolourimageunitreceived) | The callback triggered when a scaled-down colour image unit is received. |
+| [`onGrayscaleImageUnitReceived`](#ongrayscaleimageunitreceived) | The callback triggered when a grayscale image unit is received. |
+| [`onTransformedGrayscaleImageUnitReceived`](#ontransformedgrayscaleimageunitreceived) | The callback triggered when a transformed grayscale image unit is received. |
+| [`onEnhancedGrayscaleImageUnitReceived`](#onenhancedgrayscaleimageunitreceived) | The callback triggered when an enhanced grayscale image unit is received. |
+| [`onBinaryImageUnitReceived`](#onbinaryimageunitreceived) | The callback triggered when a binary image unit is received. |
+| [`onTextureDetectionResultUnitReceived`](#ontexturedetectionresultunitreceived) | The callback triggered when a texture detection result unit is received. |
+| [`onTextureRemovedGrayscaleImageUnitReceived`](#ontextureremovedgrayscaleimageunitreceived) | The callback triggered when a texture-removed grayscale image unit is received. |
+| [`onTextureRemovedBinaryImageUnitReceived`](#ontextureremovedbinaryimageunitreceived) | The callback triggered when a texture-removed binary image unit is received. |
+| [`onContoursUnitReceived`](#oncontoursunitreceived) | The callback triggered when a contours unit is received. |
+| [`onLineSegmentsUnitReceived`](#onlinesegmentsunitreceived) | The callback triggered when a line segments unit is received. |
+| [`onTextZonesUnitReceived`](#ontextzonesunitreceived) | The callback triggered when a text zones unit is received. |
+| [`onTextRemovedBinaryImageUnitReceived`](#ontextremovedbinaryimageunitreceived) | The callback triggered when a text-removed binary image unit is received. |
+| [`onShortLinesUnitReceived`](#onshortlinesunitreceived) | The callback triggered when a short lines unit is received. |
+| [`onLogicLinesUnitReceived`](#onlogiclinesunitreceived) | The callback triggered when a logic lines unit is received. |
+| [`onLongLinesUnitReceived`](#onlonglinesunitreceived) | The callback triggered when a long lines unit is received. |
+| [`onCornersUnitReceived`](#oncornersunitreceived) | The callback triggered when a corners unit is received. |
+| [`onCandidateQuadEdgesUnitReceived`](#oncandidatequadedgesunitreceived) | The callback triggered when a candidate quad edges unit are detected. |
+| [`onCandidateBarcodeZonesUnitReceived`](#oncandidatebarcodezonesunitreceived) | The callback triggered when a candidate barcode zones unit are detected. |
+| [`onScaledBarcodeImageUnitReceived`](#onscaledbarcodeimageunitreceived) | The callback triggered when a scaled-up barcode image unit is received. |
+| [`onDeformationResistedBarcodeImageUnitReceived`](#ondeformationresistedbarcodeimageunitreceived) | The callback triggered when a deformation-resisted barcode image unit is received. |
+| [`onComplementedBarcodeImageUnitReceived`](#oncomplementedbarcodeimageunitreceived) | The callback triggered when a complemented barcode image unit is received. |
+| [`onRawTextLinesUnitReceived`](#onrawtextlinesunitreceived) | The callback triggered when a raw text lines unit is received. |
 
 ### getObservationParameters
 
@@ -87,9 +90,27 @@ func getObservationParameters() -> ObservationParameters
 
 An `ObservationParameters` object.
 
+### onTargetROIResultsReceived
+
+The callback triggered when the processing of a target ROI is finished.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)onTargetROIResultsReceived:(IntermediateResult *)unit
+                             info:(DSIntermediateResultExtraInfo *)info
+```
+2. 
+```swift
+func onTargetROIResultsReceived(_ unit: IntermediateResult, info: IntermediateResultExtraInfo)
+```
+
 ### onTaskResultsReceived
 
-The callback triggered when task results are received.
+The callback triggered when the processing of a task is finished.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -255,9 +276,9 @@ func onDetectedQuadsReceived(_ unit: DetectedQuadsUnit, info: IntermediateResult
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
-### onNormalizedImagesReceived
+### onDeskewedImagesReceived
 
-The callback triggered when normalized images are received.
+The callback triggered when deskewed images are received.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -265,17 +286,41 @@ The callback triggered when normalized images are received.
 >
 >1. 
 ```objc
--(void)onNormalizedImagesReceived:(NormalizedImagesUnit *)unit
-                             info:(IntermediateResultExtraInfo *)info
+-(void)onDeskewedImagesReceived:(DeskewedImagesUnit *)unit
+                           info:(IntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
-func onNormalizedImagesReceived(_ unit: NormalizedImagesUnit, info: IntermediateResultExtraInfo)
+func onDeskewedImagesReceived(_ unit: DeskewedImagesUnit, info: IntermediateResultExtraInfo)
 ```
 
 **Parameters**
 
-`unit`: The intermediate result that contains the normalized images, of type `NormalizedImagesUnit`.
+`unit`: The intermediate result that contains the deskewed images, of type `DeskewedImagesUnit`.
+
+`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
+
+### onEnhancedImagesReceived
+
+The callback triggered when enhanced images are received.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)onEnhancedImagesReceived:(EnhancedImagesUnit *)unit
+                             info:(IntermediateResultExtraInfo *)info
+```
+2. 
+```swift
+func onEnhancedImagesReceived(_ unit: EnhancedImagesUnit, info: IntermediateResultExtraInfo)
+```
+
+**Parameters**
+
+`unit`: The intermediate result that contains the enhanced images, of type `EnhancedImagesUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
@@ -303,9 +348,9 @@ func onColourImageUnitReceived(_ unit: ColourImageUnit, info: IntermediateResult
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
-### onScaledDownColourImageUnitReceived
+### onScaledColourImageUnitReceived
 
-The callback triggered when scaled-down colour images are received.
+The callback triggered when up or down scaled colour images are received.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -313,17 +358,17 @@ The callback triggered when scaled-down colour images are received.
 >
 >1. 
 ```objc
--(void)onScaledDownColourImageUnitReceived:(ScaledDownColourImageUnit *)unit
+-(void)onScaledColourImageUnitReceived:(ScaledColourImageUnit *)unit
                                       info:(IntermediateResultExtraInfo *)info
 ```
-2. 
+1. 
 ```swift
-func onScaledDownColourImageUnitReceived(_ unit: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo)
+func onScaledColourImageUnitReceived(_ unit: ScaledColourImageUnit, info: IntermediateResultExtraInfo)
 ```
 
 **Parameters**
 
-`unit`: The intermediate result that contains the scaled-down colour images, of type `ScaledDownColourImageUnit`.
+`unit`: The intermediate result that contains the up or down scaled colour images, of type `ScaledColourImageUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
@@ -735,7 +780,7 @@ func onCandidateBarcodeZonesUnitReceived(_ unit: CandidateBarcodeZonesUnit, info
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
-### onScaledUpBarcodeImageUnitReceived
+### onScaledBarcodeImageUnitReceived
 
 The callback triggered when scaled up barcode images are received.
 
@@ -745,17 +790,17 @@ The callback triggered when scaled up barcode images are received.
 >
 >1. 
 ```objc
--(void)onScaledUpBarcodeImageUnitReceived:(ScaledUpBarcodeImageUnit *)unit
+-(void)onScaledBarcodeImageUnitReceived:(ScaledBarcodeImageUnit *)unit
                                      info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
-func onScaledUpBarcodeImageUnitReceived(_ unit: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo)
+func onScaledBarcodeImageUnitReceived(_ unit: ScaledBarcodeImageUnit, info: IntermediateResultExtraInfo)
 ```
 
 **Parameters**
 
-`unit`: The intermediate result that contains the scaled up barcode images, of type `ScaledUpBarcodeImageUnit`.
+`unit`: The intermediate result that contains the scaled up barcode images, of type `ScaledBarcodeImageUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
@@ -804,5 +849,29 @@ func onComplementedBarcodeImageUnitReceived(_ unit: ComplementedBarcodeImageUnit
 **Parameters**
 
 `unit`: The intermediate result that contains the complemented barcode images, of type `ComplementedBarcodeImageUnit`.
+
+`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
+
+### onRawTextLinesUnitReceived
+
+The callback triggered when a raw text lines unit is received.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)onRawTextLinesUnitReceived:(RawTextLinesUnit *)unit
+                             info:(DSIntermediateResultExtraInfo *)info
+```
+2. 
+```swift
+func onRawTextLinesUnitReceived(_ unit: RawTextLinesUnit, info: IntermediateResultExtraInfo)
+```
+
+**Parameters**
+
+`unit`: The intermediate result that contains the raw text lines, of type `RawTextLinesUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.

@@ -14,7 +14,7 @@ The `DSCaptureVisionRouterModule` class defines general functions of the capture
 
 ## Definition
 
-*Assembly:* DynamsoftCore.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

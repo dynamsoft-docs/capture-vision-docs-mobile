@@ -16,7 +16,7 @@ The `Contour` class represents a contour made up of multiple points.
 
 *Namespace:* com.dynamsoft.core.basic_structures
 
-*Assembly:* DynamsoftCore.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class Contour

@@ -14,7 +14,7 @@ The `DSFileFetcher` class is a utility class that partitions a multi-page image 
 
 ## Definition
 
-*Assembly:* DynamsoftUtility.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
