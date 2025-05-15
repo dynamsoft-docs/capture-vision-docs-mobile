@@ -28,6 +28,7 @@ class LineSegment
 | ---------- | ---- | ----------- |
 | [`startPoint`](#startpoint) | *android.graphics.Point* | The starting point of the line segment. |
 | [`endPoint`](#endpoint) | *android.graphics.Point* | The ending point of the line segment. |
+| [`id`](#id) | *int* | The ID of the line segment. |
 
 | Method | Description |
 | ------ | ----------- |
@@ -47,6 +48,14 @@ The end point of the line segment.
 
 ```java
 Point endPoint;
+```
+
+### id
+
+The ID of the line segment.
+
+```java
+int id;
 ```
 
 ### LineSegment

@@ -35,6 +35,7 @@ class LineSegment : NSObject
 | ---------- | ---- | ----------- |
 | [`startPoint`](#startpoint) | *CGPoint* | The starting point of the line segment. |
 | [`endPoint`](#endpoint) | *CGPoint* | The ending point of the line segment. |
+| [`id`](#id) | *int* | The ID of the line segment. |
 
 ### startPoint
 
@@ -68,4 +69,21 @@ The ending point of the line segment.
 2. 
 ```swift
 var endPoint: CGPoint { get set }
+```
+
+### id
+
+The ID of the line segment.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic) NSInteger *lineId;
+```
+2. 
+```swift
+var lineId: Int { get set }
 ```

@@ -38,8 +38,7 @@ protocol CapturedResultReceiver: NSObjectProtocol
 | [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The callback triggered when the original image result is available, occurring each time an image finishes its processing. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The callback triggered when recognized text lines are available, occurring each time an image finishes its processing. |
-| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The callback triggered when detected quads are available, occurring each time an image finishes its processing. |
-| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The callback triggered when normalized images are available, occurring each time an image finishes its processing. |
+| [`onProcessedDocumentResultReceived`](#onprocesseddocumentresultreceived) | The callback triggered when processed document results are available, occurring each time an image finishes its processing. |
 | [`onParsedResultsReceived`](#onparsedresultsreceived) | The callback triggered when parsed results are available, occurring each time an image finishes its processing. |
 
 ### onCapturedResultReceived
@@ -86,7 +85,7 @@ func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
 
 ### onDecodedBarcodesReceived
 
-The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing. This callback is used to handle barcodes that have been successfully decoded by Dynamsoft Barcode Reader
+The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -96,7 +95,7 @@ The callback triggered when decoded barcodes are available, occurring each time 
 ```objc
 - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult*)result;
 ```
-2. 
+1. 
 ```swift
 func onDecodedBarcodesReceived(_ result: DSDecodedBarcodesResult)
 ```
@@ -107,7 +106,7 @@ func onDecodedBarcodesReceived(_ result: DSDecodedBarcodesResult)
 
 ### onRecognizedTextLinesReceived
 
-The callback triggered when recognized text lines are available, occurring each time an image finishes its processing. This callback is used to handle the result of text recognition by Dynamsoft Label Recognizer.
+The callback triggered when recognized text lines are available, occurring each time an image finishes its processing.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -117,7 +116,7 @@ The callback triggered when recognized text lines are available, occurring each 
 ```objc
 - (void)onRecognizedTextLinesReceived:(DSRecognizedTextLinesResult*)result;
 ```
-2. 
+1. 
 ```swift
 func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
 ```
@@ -126,30 +125,9 @@ func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
 
 `result` : A [`DSRecognizedTextLinesResult`]({{site.dlr_ios_api}}recognized-text-lines-result.html) object as a recognized text line result.
 
-### onDetectedQuadsReceived
+### onProcessedDocumentResultReceived
 
-The callback triggered when detected quads are available, occurring each time an image finishes its processing. This callback is used to handle the detection of quadrilateral shapes, typically used as document boundaries, by Dynamsoft Document Normalizer.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)onDetectedQuadsReceived:(DSDetectedQuadsResult*)result;
-```
-2. 
-```swift
-func onDetectedQuadsReceived(_ result: DSDetectedQuadsResult)
-```
-
-**Parameters**
-
-`result` : A [`DSDetectedQuadsResult`]({{site.ddn_ios_api}}detected-quads-result.html) object as a detected quad result.
-
-### onNormalizedImagesReceived
-
-The callback triggered when normalized images are available, occurring each time an image finishes its processing. This callback is used for handling images that have been processed or normalized (e.g., corrected for skew or perspective), by Dynamsoft Document Normalizer.
+The callback triggered when processed document results are available, occurring each time an image finishes its processing.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -157,20 +135,20 @@ The callback triggered when normalized images are available, occurring each time
 >
 >1. 
 ```objc
-- (void)onNormalizedImagesReceived:(DSNormalizedImagesResult*)result;
+- (void)onProcessedDocumentResultReceived:(DSProcessedDocumentResult*)result;
 ```
 2. 
 ```swift
-func onNormalizedImagesReceived(_ result: DSNormalizedImagesResult)
+func onProcessedDocumentResultReceived(_ result: ProcessedDocumentResult)
 ```
 
 **Parameters**
 
-`result` : A [`DSNormalizedImagesResult`]({{site.ddn_ios_api}}normalized-images-result.html) object as a normalized image result.
+`result`: A [`DSProcessedDocumentResult`]({{site.ddn_ios_api}}processed-document-result.html) object as a processed document result.
 
 ### onParsedResultsReceived
 
-The callback triggered when parsed results are available, occurring each time an image finishes its processing. This callback is used for handling results that have been parsed into a structured format by Dynamsoft Code Parser.
+The callback triggered when parsed results are available, occurring each time an image finishes its processing.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -180,7 +158,7 @@ The callback triggered when parsed results are available, occurring each time an
 ```objc
 - (void)onParsedResultsReceived:(DSParsedResult*)result;
 ```
-2. 
+1. 
 ```swift
 func onParsedResultsReceived(_ result: DSParsedResult)
 ```
