@@ -14,12 +14,19 @@ The class `ImageDrawer` is a utility class for drawing graphics on images.
 
 ## Definition
 
-*Namespace:* com.dynamsoft.utility
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
-*Assembly:* DynamsoftCaptureVisionBundle.aar
-
-```java
-class ImageDrawer
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSImageDrawer : NSObject
+```
+2. 
+```swift
+class ImageDrawer : NSObject
 ```
 
 ## Methods
