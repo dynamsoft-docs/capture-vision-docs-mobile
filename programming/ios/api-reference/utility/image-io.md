@@ -14,12 +14,19 @@ The class `ImageIO` is a utility class for managing the image data. It provides 
 
 ## Definition
 
-*Namespace:* com.dynamsoft.utility
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
-*Assembly:* DynamsoftCaptureVisionBundle.aar
-
-```java
-class ImageIO
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSImageIO : NSObject
+```
+2. 
+```swift
+class ImageIO : NSObject
 ```
 
 ## Methods

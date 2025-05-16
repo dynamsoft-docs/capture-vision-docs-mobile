@@ -14,12 +14,19 @@ The class `ImageProcesser` is a utility class for managing the image data. It pr
 
 ## Definition
 
-*Namespace:* com.dynamsoft.utility
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
-*Assembly:* DynamsoftCaptureVisionBundle.aar
-
-```java
-class ImageProcesser
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSImageProcesser : NSObject
+```
+2. 
+```swift
+class ImageProcesser : NSObject
 ```
 
 ## Methods
