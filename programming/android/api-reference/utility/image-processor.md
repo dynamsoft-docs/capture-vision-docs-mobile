@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: ImageProcesser - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The class ImageProcesser of Dynamsoft Capture Vision Router Module is a utility class for processing images. It provides functionality like croping or converting images.
+title: ImageProcessor - Dynamsoft Capture Vision Router Module Android Edition API Reference
+description: The class ImageProcessor of Dynamsoft Capture Vision Router Module is a utility class for processing images. It provides functionality like croping or converting images.
 keywords: image io, image manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# ImageProcesser
+# ImageProcessor
 
-The class `ImageProcesser` is a utility class for managing the image data. It provides functionality for saving images to files and reading images from files.
+The class `ImageProcessor` is a utility class for managing the image data. It provides functionality for saving images to files and reading images from files.
 
 ## Definition
 
@@ -19,7 +19,7 @@ The class `ImageProcesser` is a utility class for managing the image data. It pr
 *Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
-class ImageProcesser
+class ImageProcessor
 ```
 
 ## Methods
