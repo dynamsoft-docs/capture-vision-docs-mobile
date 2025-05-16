@@ -186,11 +186,11 @@ void setColourChannelUsageType(EnumColourChannelUsageType type);
 
 **Parameters**
 
-`[in] type`: One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
+`[in] type`: One of the [`EnumColourChannelUsageType`]({{ site.dcv_android_api }}core/enum/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
 
 **Return Value**
 
-One of the [`EnumColourChannelUsageType`]({{site.dcv_enumerations}}core/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
+One of the [`EnumColourChannelUsageType`]({{ site.dcv_android_api }}core/enum/colour-channel-usage-type.html) that indicates whether the colour channel usage type.
 
 ### setErrorListener
 

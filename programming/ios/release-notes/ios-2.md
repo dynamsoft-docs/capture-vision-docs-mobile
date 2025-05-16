@@ -104,7 +104,7 @@ noTitleIndex: true
   - -40103: [Label Recognizer] No license found.
   - -50058: [Document Normalizer] No license found.
   - -90012: [Code Parser] No license found.
-- Added a new enumeration member `IntermediateResultUnitTypeRawTextLines` to the enumeration [`DSIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift).
+- Added a new enumeration member `IntermediateResultUnitTypeRawTextLines` to the enumeration [`DSIntermediateResultUnitType`]({{ site.dcv_ios_api }}core/enum/intermediate-result-unit-type.html?lang=objc,swift).
 
 #### Fixed
 
@@ -182,7 +182,7 @@ noTitleIndex: true
 - Added a new algorithm stage `RawTextLines`.  Corresponding APIs are added to obtain the intermediate result of this stage.
   - Class [`DSRawTextLinesUnit`]({{ site.dlr_ios_api }}raw-text-lines-unit.html)
   - Class [`DSRawTextLine`]({{ site.dlr_ios_api }}raw-text-line.html)
-  - Enumeration [`DSRawTextLineStatus`]({{ site.dcv_enumerations }}label-recognizer/raw-text-line-status.html?lang=objc,swift)
+  - Enumeration [`DSRawTextLineStatus`]({{ site.dlr_ios_api }}enumlabel-recognizer/raw-text-line-status.html?lang=objc,swift)
 - Changed the intermediate result altering methods of the class [`DSRecognizedTextLinesUnit`]({{ site.dlr_ios_api }}recognized-text-lines-unit.html).
   - Added a new method `removeRecognizedTextLine`
   - Added a new method `addRecognizedTextLine`

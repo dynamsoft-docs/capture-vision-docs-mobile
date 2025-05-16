@@ -36,7 +36,7 @@ class RegionObjectElement : NSObject
 | [`getLocation`](#getlocation) | Gets the location of the region object, represented as a quadrilateral. |
 | [`setLocation`](#setlocation) | Sets the location of the region object. |
 | [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`](#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
+| [`getRegionObjectElementType`](#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html?lang=objc,swift). |
 
 ### getLocation
 
@@ -103,7 +103,7 @@ The referenced element that supports the capturing of this element.
 
 ### getRegionObjectElementType
 
-Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift).
+Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

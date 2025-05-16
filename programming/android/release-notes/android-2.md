@@ -98,7 +98,7 @@ noTitleIndex: true
   - -40103: [Label Recognizer] No license found.
   - -50058: [Document Normalizer] No license found.
   - -90012: [Code Parser] No license found.
-- Added a new enumeration member `IRUT_RAW_TEXT_LINES` to the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android).
+- Added a new enumeration member `IRUT_RAW_TEXT_LINES` to the enumeration [`IntermediateResultUnitType`]({{ site.dcv_android_api }}core/enum/intermediate-result-unit-type.html?lang=android).
 
 #### Fixed
 
@@ -176,7 +176,7 @@ noTitleIndex: true
 - Added a new algorithm stage `IRUT_RAW_TEXT_LINES`.  Corresponding APIs are added to obtain the intermediate result of this stage.
   - Class [`RawTextLinesUnit`]({{ site.dlr_android_api }}raw-text-lines-unit.html)
   - Class [`RawTextLine`]({{ site.dlr_android_api }}raw-text-line.html)
-  - Enumeration [`RawTextLineStatus`]({{ site.dcv_enumerations }}label-recognizer/raw-text-line-status.html?lang=android)
+  - Enumeration [`RawTextLineStatus`]({{ site.dlr_android_api }}enumlabel-recognizer/raw-text-line-status.html?lang=android)
 - Changed the intermediate result altering methods of the class [`RecognizedTextLinesUnit`]({{ site.dlr_android_api }}recognized-text-lines-unit.html).
   - Added method `removeRecognizedTextLine`
   - Added method `addRecognizedTextLine`

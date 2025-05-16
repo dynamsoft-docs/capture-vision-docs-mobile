@@ -146,7 +146,7 @@ void EnableLatestOverlapping(int type, bool enabled);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=maui).
 
 `[in] enabled`: A bool value to toggle to-the-latest overlapping on or off.
 
@@ -160,7 +160,7 @@ bool IsLatestOverlappingEnabled(int type);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=maui).
 
 **Return Value**
 
@@ -176,7 +176,7 @@ int GetMaxOverlappingFrames(int type);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=maui).
 
 **Return Value**
 
@@ -192,6 +192,6 @@ void SetMaxOverlappingFrames(int type, int maxOverlappingFrames);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=maui).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=maui).
 
 `[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.

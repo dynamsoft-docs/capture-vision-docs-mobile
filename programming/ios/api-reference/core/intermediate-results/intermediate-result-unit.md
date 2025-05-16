@@ -36,8 +36,8 @@ class IntermediateResultUnit : NSObject
 | [`getHashId`](#gethashid) | Gets the hash ID of the unit. The hash ID is the unique identifier for the intermediate result unit. |
 | [`getOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the original image associated with this unit. |
 | [`getOriginalImageTag`](#getoriginalimagetag) | Gets the tag associated with the original image. |
-| [`getType`](#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift). |
-| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html). |
+| [`getType`](#gettype) | Gets the type of the intermediate result unit, defined by the enumeration [`IntermediateResultUnitType`]({{ site.dcv_ios_api }}core/enum/intermediate-result-unit-type.html?lang=objc,swift). |
+| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{ site.dcv_ios_api }}core/enum/transform-matrix-type.html). |
 | [`clone`](#clone) | Creates a copy of the intermediate result unit. |
 | [`replace`](#replace) | Replaces the content of the intermediate result unit. |
 
@@ -98,7 +98,7 @@ The image tag of the original image.
 
 ### getType
 
-Gets the type of the intermediate result unit, defined by the enumeration [`DSIntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift).
+Gets the type of the intermediate result unit, defined by the enumeration [`DSIntermediateResultUnitType`]({{ site.dcv_ios_api }}core/enum/intermediate-result-unit-type.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -119,7 +119,7 @@ The type of the intermediate result unit.
 
 ### getTransformMatrix
 
-Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}/core/transform-matrix-type.html).
+Gets the transformation matrix via [`DSTransformMatrixType`]({{ site.dcv_ios_api }}core/enum/transform-matrix-type.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
