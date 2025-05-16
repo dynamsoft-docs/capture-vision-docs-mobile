@@ -46,4 +46,4 @@ See also:
 
 - [IntermediateResultManager](auxiliary-classes/intermediate-result-manager.md)
 - [IntermediateResultReceiver](auxiliary-classes/intermediate-result-receiver.md)
-- [EnumIntermediateResultUnitType]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android)
+- [EnumIntermediateResultUnitType]({{ site.dcv_android_api }}core/enum/intermediate-result-unit-type.html?lang=android)

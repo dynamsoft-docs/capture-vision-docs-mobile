@@ -69,7 +69,7 @@ The referenced element that supports the capturing of this element.
 
 ### getRegionObjectElementType
 
-Gets the type of the region object element, defined by the enumeration [`EnumRegionObjectElementType`]({{site.dcv_enumerations}}core/region-object-element-type.html).
+Gets the type of the region object element, defined by the enumeration [`EnumRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html).
 
 ```java
 EnumRegionObjectElementType getType();

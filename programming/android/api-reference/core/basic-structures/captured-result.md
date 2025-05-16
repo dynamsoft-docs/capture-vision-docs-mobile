@@ -62,7 +62,7 @@ The tag of the original image that records the information of the original image
 
 ### getItems
 
-Get an array of [`CapturedResultItem`](captured-result-item.md), which is the basic unit of the captured results. A [`CapturedResultItem`](captured-result-item.md) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{site.dcv_enumerations}}core/captured-result-item-type.html) for all available types.
+Get an array of [`CapturedResultItem`](captured-result-item.md), which is the basic unit of the captured results. A [`CapturedResultItem`](captured-result-item.md) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html) for all available types.
 
 ```java
 CapturedResultItem[] getItems();

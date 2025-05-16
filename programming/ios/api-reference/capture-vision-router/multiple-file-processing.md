@@ -203,7 +203,7 @@ func startCapturing(_ templateName:String) -> BOOL
 
 `templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-- One of the [`DSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- One of the [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/enum/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 

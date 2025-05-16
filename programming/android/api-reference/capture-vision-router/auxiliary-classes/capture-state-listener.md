@@ -38,4 +38,4 @@ void onCaptureStateChanged(EnumCaptureState state);
 
 **Parameters**
 
-`[in] state`: One of the [`EnumCaptureState`]({{site.dcv_enumerations}}capture-vision-router/capture-state.html) value that indicates the capture state.
+`[in] state`: One of the [`EnumCaptureState`]({{ site.dcv_android_api }}capture-vision-router/enum/capture-state.html) value that indicates the capture state.

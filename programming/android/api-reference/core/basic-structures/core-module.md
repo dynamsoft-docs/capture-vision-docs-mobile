@@ -52,7 +52,7 @@ static void enableLogging(int logMode);
 
 **Parameters**
 
-`logMode`: One of the [`EnumLogMode`]({{ site.dcv_enumerations }}core/log-mode.html?lang=android) value.
+`logMode`: One of the [`EnumLogMode`]({{ site.dcv_android_api }}core/enum/log-mode.html?lang=android) value.
 
 ### disableLogging
 

@@ -66,7 +66,7 @@ EnumImageTagType getType();
 
 **Return Value**
 
-The [`EnumImageTagType`]({{site.dcv_enumerations}}core/image-tag-type.html) of the image.
+The [`EnumImageTagType`]({{ site.dcv_android_api }}core/enum/image-tag-type.html) of the image.
 
 ### setDistanceMode
 
@@ -90,4 +90,4 @@ EnumImageCaptureDistanceMode getDistanceMode()
 
 **Return Value**
 
-The [`EnumImageCaptureDistanceMode`]({{site.dcv_enumerations}}core/image-capture-distance-mode.html) of the image.
+The [`EnumImageCaptureDistanceMode`]({{ site.dcv_android_api }}core/enum/image-capture-distance-mode.html) of the image.

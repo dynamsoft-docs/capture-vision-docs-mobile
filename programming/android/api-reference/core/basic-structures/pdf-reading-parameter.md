@@ -29,7 +29,7 @@ class PDFReadingParameter
 | ---------- | ---- | ----------- |
 | [`mode`](#mode) | *int* | Set the processing mode of the PDF file. You can either read the PDF info from vecter data or transform the PDF file into an image. The library will transform the PDF file into an image by default. |
 | [`dpi`](#dpi) | *int* | Set the DPI (dots per inch) of the PDF file. |
-| [`rasterDataSource`](#rasterdatasource) | *int* | Set the raster data source type of the image. The default type is [`RDS_RASTERIZED_PAGES`]({{site.dcv_enumerations}}core/raster-data-source.html). |
+| [`rasterDataSource`](#rasterdatasource) | *int* | Set the raster data source type of the image. The default type is [`RDS_RASTERIZED_PAGES`]({{ site.dcv_android_api }}core/enum/raster-data-source.html). |
 
 ### mode
 
@@ -49,7 +49,7 @@ int dpi;
 
 ### rasterDataSource
 
-Set the raster data source type of the image. The default type is [`RDS_RASTERIZED_PAGES`]({{site.dcv_enumerations}}core/raster-data-source.html).
+Set the raster data source type of the image. The default type is [`RDS_RASTERIZED_PAGES`]({{ site.dcv_android_api }}core/enum/raster-data-source.html).
 
 ```java
 int rasterDataSource;

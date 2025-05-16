@@ -47,7 +47,7 @@ void enableLatestOverlapping(@EnumCapturedResultItemType int type, boolean enabl
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 `[in] enable`: Boolean to toggle to-the-latest overlapping on or off.
 
@@ -61,7 +61,7 @@ void enableResultCrossVerification(@EnumCapturedResultItemType int resultItemTyp
 
 **Parameters**
 
-`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 `[in] enable`: Boolean to toggle verification on or off.
 
@@ -75,7 +75,7 @@ void enableResultDeduplication(@EnumCapturedResultItemType int resultItemTypes, 
 
 **Parameters**
 
-`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 `[in] enable`: Boolean to toggle deduplication on or off.
 
@@ -89,7 +89,7 @@ int getDuplicateForgetTime(@EnumCapturedResultItemType int type);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
@@ -105,7 +105,7 @@ int getMaxOverlappingFrames(@EnumCapturedResultItemType int type);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
@@ -121,7 +121,7 @@ boolean isLatestOverlappingEnabled(@EnumCapturedResultItemType int type);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
@@ -137,7 +137,7 @@ boolean isResultDeduplicationEnabled(@EnumCapturedResultItemType int type);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
@@ -153,7 +153,7 @@ boolean isResultCrossVerificationEnabled(@EnumCapturedResultItemType int type);
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 **Return Value**
 
@@ -169,7 +169,7 @@ void setDuplicateForgetTime(@EnumCapturedResultItemType int resultItemTypes, int
 
 **Parameters**
 
-`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 `[in] time`: Time in milliseconds during which duplicates are disregarded.
 
@@ -186,6 +186,6 @@ void setMaxOverlappingFrames(@EnumCapturedResultItemType int type, int maxOverla
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 `[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.

@@ -64,7 +64,7 @@ func enableLatestOverlapping(resultItemTypes: DSCapturedResultItemType, isEnable
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 `[in] enable`: Bool to toggle to-the-latest overlapping on or off.
 
@@ -88,7 +88,7 @@ func enableResultCrossVerification(resultItemType: DSCapturedResultItemType, isE
 
 **Parameters**
 
-`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 `isEnabled`: A BOOL value that indicates whether to enable the result cross verification feature.
 
@@ -112,7 +112,7 @@ func enableResultDeduplication(resultItemType: DSCapturedResultItemType, isEnabl
 
 **Parameters**
 
-`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 `isEnabled`: A BOOL value that indicates whether to enable the result deduplication feature.
 
@@ -135,7 +135,7 @@ func getDuplicateForgetTime(resultItemType: DSCapturedResultItemType) -> Int
 
 **Parameters**
 
-`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
@@ -160,7 +160,7 @@ func getMaxOverlappingFrames(resultItemType: DSCapturedResultItemType) -> Int
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
@@ -185,7 +185,7 @@ func isLatestOverlappingEnabled(resultItemType: DSCapturedResultItemType) -> Boo
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
@@ -210,7 +210,7 @@ func isResultDeduplicationEnabled(resultItemType: DSCapturedResultItemType) -> B
 
 **Parameters**
 
-`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
@@ -235,7 +235,7 @@ func isResultCrossVerificationEnabled(resultItemType: DSCapturedResultItemType) 
 
 **Parameters**
 
-`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
@@ -261,7 +261,7 @@ func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateF
 
 **Parameters**
 
-`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 `duplicateForgetTime`: The duplicate forget time of the specified capture result type.
 
@@ -285,6 +285,6 @@ func setMaxOverlappingFrames(resultItemType: DSCapturedResultItemType, maxOverla
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift).
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 `[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.

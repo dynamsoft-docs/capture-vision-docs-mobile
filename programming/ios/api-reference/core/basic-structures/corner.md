@@ -33,14 +33,14 @@ class Corner: NSObject
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`type`](#type) | *DSCornerType* | The type of the corner, represented by the enumeration [`DSCornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=objc,swift). |
+| [`type`](#type) | *DSCornerType* | The type of the corner, represented by the enumeration [`DSCornerType`]({{ site.dcv_ios_api }}core/enum/corner-type.html?lang=objc,swift). |
 | [`intersection`](#intersection) | *CGPoint* | The point of intersection of the two lines forming the corner. |
 | [`line1`](#line1) | *DSLineSegment \** | The first line segment forming the corner. |
 | [`line2`](#line2) | *DSLineSegment \** | The second line segment forming the corner. |
 
 ### type
 
-The type of the corner, represented by the enumeration [`DSCornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=objc,swift).
+The type of the corner, represented by the enumeration [`DSCornerType`]({{ site.dcv_ios_api }}core/enum/corner-type.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

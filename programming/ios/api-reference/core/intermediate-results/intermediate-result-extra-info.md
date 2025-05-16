@@ -36,7 +36,7 @@ class IntermediateResultExtraInfo : NSObject
 | [`targetROIDefName`](#targetroidefname) | *NSString \** | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object that generates the intermediate result. |
 | [`taskName`](#taskname) | *NSString \** | The property indicates the name of the processing task to which this result belongs. |
 | [`isSectionLevelResult`](#issectionlevelresult) | *bool \** | The property indicates whether the result is at the section level. |
-| [`sectionType`](#sectiontype) | *[DSSectionType]({{ site.dcv_enumerations }}core/section-type.html?lang=objc,swift)* | The property indicates the type of section that generates the result, if applicable, as defined by the enumeration `DSSectionType`. |
+| [`sectionType`](#sectiontype) | *[DSSectionType]({{ site.dcv_ios_api }}core/enum/section-type.html?lang=objc,swift)* | The property indicates the type of section that generates the result, if applicable, as defined by the enumeration `DSSectionType`. |
 
 ### targetROIDefName
 

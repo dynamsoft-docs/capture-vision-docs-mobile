@@ -92,7 +92,7 @@ class func enableLogging(_ logMode:Int)
 
 **Parameters**
 
-`logMode`: One of the [`EnumLogMode`]({{ site.dcv_enumerations }}core/log-mode.html?lang=objc&swift) value.
+`logMode`: One of the [`EnumLogMode`]({{ site.dcv_ios_api }}core/enum/log-mode.html?lang=objc&swift) value.
 
 ### disableLogging
 
