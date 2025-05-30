@@ -1,5 +1,17 @@
 [
     {
+        "version": "3.0.3100",
+        "matchVersion": {
+            "android": "11.0.3100",
+            "maui": "11.0.3100"
+        }
+    },{
+        "version": "3.0.3000",
+        "matchVersion": {
+            "android": "11.0.3000",
+            "ios": "11.0.3000"
+        }
+    },{
         "version": "2.6.1003",
         "matchVersion": {
             "android": "10.4.3001",
