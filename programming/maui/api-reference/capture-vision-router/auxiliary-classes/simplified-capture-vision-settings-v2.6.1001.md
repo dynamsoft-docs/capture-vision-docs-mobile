@@ -26,6 +26,7 @@ class SimplifiedCaptureVisionSettings
 
 | Property | Type | Description |
 | ---------- | ---- | ----------- |
+| [`CapturedResultItemTypes`](#capturedresultitemtypes) | *EnumCapturedResultItemType* | Specifies the type(s) of CapturedItem(s) that will be captured. |
 | [`Roi`](#roi) | *[Quadrilateral]({{ site.dcv_maui_api }}core/quadrilateral.html)* | Specifies the region of interest (ROI) where the image capture and recognition will take place. |
 | [`RoiMeasuredInPercentage`](#roimeasuredinpercentage) | *bool* | Specifies whether the ROI is measured in pixels or as a percentage of the image size. |
 | [`MaxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
@@ -34,6 +35,14 @@ class SimplifiedCaptureVisionSettings
 | [`BarcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings]({{ site.dbr_maui_api }}simplified-barcode-reader-settings.html)* | Specifies the settings for `DynamsoftBarcodeReader` tasks. |
 | [`LabelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dlr_maui_api }}simplified-label-recognizer-settings.html)* | Specifies the settings for `DynamsoftLabelRecognizer` tasks. |
 | [`DocumentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.ddn_maui_api }}simplified-document-normalizer-settings.html)* | Specifies the settings for `DynamsoftDocumentNormalizer` tasks. |
+
+### CapturedResultItemTypes
+
+Specifies the type(s) of CapturedItem(s) that will be captured.
+
+```csharp
+EnumCapturedResultItemType CapturedResultItemTypes { get; set; }
+```
 
 ### Roi
 

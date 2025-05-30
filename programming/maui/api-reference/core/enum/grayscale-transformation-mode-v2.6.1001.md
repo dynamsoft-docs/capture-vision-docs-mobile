@@ -29,8 +29,6 @@ public enum EnumGrayscaleTransformationMode
     /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
     GTM_ORIGINAL = 1 << 1,
     /**Lets the library choose an algorithm automatically for grayscale transformation. */
-    GTM_AUTO = 1 << 2,
-    /**Placeholder value with no functional meaning. */
-    GTM_END = 0xFFFFFFFF
+    GTM_AUTO = 1 << 2
 }
 ```

@@ -28,5 +28,7 @@ public @interface EnumGrayscaleTransformationMode
    public static final int GTM_SKIP = 0;
    /** Reserved setting for grayscale transformation mode. */
    public static final int GTM_REV = -2147483648;
+   /**Placeholder value with no functional meaning. */
+   public static final int GTM_END = 0xFFFFFFFF;
 }
 ```

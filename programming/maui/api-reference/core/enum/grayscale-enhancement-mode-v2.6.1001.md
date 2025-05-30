@@ -33,8 +33,6 @@ public enum EnumGrayscaleEnhancementMode
     /**Preprocesses the image using the gray smoothing algorithm. Check @ref IPM for available argument settings. */
     GEM_GRAY_SMOOTH = 1 << 3,
     /**Preprocesses the image using the sharpening and smoothing algorithm. Check @ref IPM for available argument settings. */
-    GEM_SHARPEN_SMOOTH = 1 << 4,
-    /**Placeholder value with no functional meaning. */
-    GEM_END = 0xFFFFFFFF
+    GEM_SHARPEN_SMOOTH = 1 << 4
 }
 ```

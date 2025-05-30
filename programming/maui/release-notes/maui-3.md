@@ -1,23 +1,15 @@
 ---
 layout: default-layout
-title: Release Notes v3.x - DynamsoftCaptureVisionBundle Android Edition
-description:  The release notes of DynamsoftCaptureVisionBundle Android v3.x.
-keywords: release notes, capture vision bundle, Android, dcv
+title: Release Notes v3.x - DynamsoftCaptureVisionBundle MAUI Edition
+description:  The release notes of DynamsoftCaptureVisionBundle MAUI Edition v3.x.
+keywords: release notes, capture vision bundle, MAUI, dcv
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Release Notes - DynamsoftCaptureVision Android v3.x
+# Release Notes v3.x - DynamsoftCaptureVisionRouter Module
 
 ## 3.0.3100 (05/30/2025)
-
-### Fixed
-
-- Fixed a bug where `CameraEnhancer.open ` might not work when triggered before the finish of the onCreate of the lifecycle.
-- Fixed a bug where the click event of the `ArcDrawingItem` might not be triggered when there is a `ScanRegion`.
-- Fixed a bug where the `ArcDrawingItem` might be displayed incorrectly when there is a `ScanRegion`.
-
-## 3.0.3000 (05/15/2025)
 
 ### [Highlights](https://www.dynamsoft.com/release-highlights/?product=dcv3.0)
 

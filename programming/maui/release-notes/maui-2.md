@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Release Notes - DynamsoftCaptureVisionBundle MAUI Edition
-description:  The release notes of DynamsoftCaptureVisionBundle MAUI Edition.
+title: Release Notes v2.x - DynamsoftCaptureVisionBundle MAUI Edition
+description:  The release notes of DynamsoftCaptureVisionBundle MAUI Edition v2.x.
 keywords: release notes, capture vision bundle, MAUI, dcv
 needAutoGenerateSidebar: true
 noTitleIndex: true

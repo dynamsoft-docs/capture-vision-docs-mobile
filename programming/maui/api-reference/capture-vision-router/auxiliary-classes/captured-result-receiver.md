@@ -30,8 +30,7 @@ interface ICapturedResultReceiver
 | [`OnDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback method delivers a `DecodedBarcodesResult`, which is an object containning all `CRIT_BARCODE` typed captured result items that are captured from the image. |
 | [`OnParsedResultsReceived`](#onparsedresultsreceived) | This callback method delivers a `ParsedResult`, which is an object containning all `CRIT_PARSED_RESULT` typed captured result items that are captured from the image. |
 | [`OnRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | This callback method delivers a `RecognizedTextLinesResult`, which is an object containning all `CRIT_TEXT_LINE` typed captured result items that are captured from the image. |
-| [`OnDetectedQuadsReceived`](#ondetectedquadsreceived) | This callback method delivers a `DetectedQuadsResult`, which is an object containning all `CRIT_DETECTED_QUAD` typed captured result items that are captured from the image. |
-| [`OnNormalizedImagesReceived`](#onnormalizedimagesreceived) | This callback method delivers a `NormalizedImagesResult`, which is an object containning all `CRIT_NORMALIZED_IMAGE` typed captured result items that are captured from the image. |
+| [`OnProcessedDocumentReceived`](#onprocesseddocumentreceived) | This callback method delivers a `ProcessedDocumentResult`, which is an object containning all `CRIT_DETECTED_QUAD` typed captured result items that are captured from the image. |
 
 ### OnCapturedResultReceived
 
@@ -47,7 +46,7 @@ void OnCapturedResultReceived(CapturedResult result);
 
 ### OnDecodedBarcodesReceived
 
-This callback method delivers a `DecodedBarcodesResult`, which is an object containning all `CRIT_BARCODE` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
+This callback method delivers a `DecodedBarcodesResult`, which is an object containning all `Barcode` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
 
 ```csharp
 void OnDecodedBarcodesReceived(DecodedBarcodesResult result);
@@ -59,7 +58,7 @@ void OnDecodedBarcodesReceived(DecodedBarcodesResult result);
 
 ### OnParsedResultsReceived
 
-This callback method delivers a `ParsedResult`, which is an object containning all `CRIT_PARSED_RESULT` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
+This callback method delivers a `ParsedResult`, which is an object containning all `ParsedResult` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
 
 ```csharp
 void OnParsedResultsReceived(ParsedResult result);
@@ -71,7 +70,7 @@ void OnParsedResultsReceived(ParsedResult result);
 
 ### OnRecognizedTextLinesReceived
 
-This callback method delivers a `RecognizedTextLinesResult`, which is an object containning all `CRIT_TEXT_LINE` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
+This callback method delivers a `RecognizedTextLinesResult`, which is an object containning all `TextLine` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
 
 ```csharp
 void OnRecognizedTextLinesReceived(RecognizedTextLinesResult result);
@@ -81,26 +80,14 @@ void OnRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 
 `[in] result`: The recognized text line result, an instance of `RecognizedTextLinesResult`.
 
-### OnDetectedQuadsReceived
+### OnProcessedDocumentReceived
 
-This callback method delivers a `DetectedQuadsResult`, which is an object containning all `CRIT_DETECTED_QUAD` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
+This callback method delivers a `ProcessedDocumentResult`, which is an object containning all `DetectedQuad`, `DeskewedImage` and `EnhancedImage` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
 
 ```csharp
-void OnDetectedQuadsReceived(DetectedQuadsResult result);
+void OnProcessedDocumentReceived(ProcessedDocumentResult result);
 ```
 
 **Parameters**
 
-`[in] result`: The detected quads result, an instance of `DetectedQuadsResult`.
-
-### OnNormalizedImagesReceived
-
-This callback method delivers a `NormalizedImagesResult`, which is an object containning all `CRIT_NORMALIZED_IMAGE` typed captured result items that are captured from the image. The callback is triggered each time when an image finishes its processing.
-
-```csharp
-void OnNormalizedImagesReceived(NormalizedImagesResult result);
-```
-
-**Parameters**
-
-`[in] result`: The normalized image result, an instance of `NormalizedImagesResult`.
+`[in] result`: The processed document result, an instance of `ProcessedDocumentResult`.
