@@ -14,27 +14,12 @@ codeAutoHeight: true
 
 `ImageFileFormat` defines the file format of the image file.
 
-<div class="sample-code-prefix template2"></div>
-   >- Objective-C
-   >- Swift
-   >
->
-```objc
-typedef NS_ENUM(NSInteger, DSImageFileFormat)
+```java
+public @interface EnumImageFileFormat
 {
-    DSImageFileFormatJPEG = 0,
-    DSImageFileFormatPNG = 1,
-    DSImageFileFormatBMP = 2,
-    DSImageFileFormatPDF = 3
-};
-```
->
-```swift
-public enum ImageFileFormat : Int
-{
-    case jpeg = 0
-    case png = 1
-    case bmp = 2
-    case pdf = 3
+    public static final int IFF_JPEG = 0;
+    public static final int IFF_PNG = 1;
+    public static final int IFF_BMP = 2;
+    public static final int IFF_PDF = 3;
 }
 ```
