@@ -16,7 +16,7 @@ The `CapturedResult` class represents the result of a capture operation on an im
 >
 > - [DecodedBarcodesResult]({{ site.dbr_android_api }}decoded-barcodes-result.html)
 > - [RecognizedTextLinesResult]({{ site.dlr_android_api }}recognized-text-lines-result.html)
-> - [DetectedQuadsResult]({{ site.ddn_android_api }}detected-quads-result.html)
+> - [ProcessedDocumentResult]({{ site.ddn_android_api }}detected-quads-result.html)
 > - [NormalizedImagesResult]({{ site.ddn_android_api }}normalized-images-result.html)
 > - [ParsedResults]({{ site.dcp_android_api }}parsed-result.html)
 
@@ -37,8 +37,7 @@ class CapturedResult
 | [`getItems`](#getitems) | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
 | [`getDecodedBarcodesResult`](#getdecodedbarcodesresult) | Get a [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html) object that contains all the [`BarcodeResultItems`]({{ site.dbr_android_api }}barcode-result-item.html) in the `CapturedResult`. |
 | [`getRecognizedTextLinesResult`](#getrecognizedtextlinesresult) | Get a [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html) object that contains all the [`TextLineResultItems`]({{ site.dlr_android_api }}text-line-result-item.html) in the `CapturedResult`. |
-| [`getDetectedQuadsResult`](#getdetectedquadsresult) | Get a [`DetectedQuadsResult`]({{ site.ddn_android_api }}detected-quads-result.html) object that contains all the [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html) in the `CapturedResult`. |
-| [`getNormalizedImagesResult`](#getnormalizedimagesresult) | Get a [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html) object that contains all the [`NormalizedImageResultItem`]({{ site.ddn_android_api }}normalized-image-result-item.html) in the `CapturedResult`. |
+| [`getProcessedDocumentResult`](#getprocesseddocumentresult) | Get a [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object that contains all the results with the type of deskewed image, detected quads, and enhanced images. |
 | [`getParsedResult`](#getparsedresult) | Get the parsed result. |
 
 The following methods are inherited from [`CapturedResultBase`]({{ site.dcv_android_api }}core/basic-structures/captured-result-base.html):
@@ -87,29 +86,21 @@ RecognizedTextLinesResult getRecognizedTextLinesResult();
 
 A [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html) that contains all the [`TextLineResultItems`]({{ site.dlr_android_api }}text-line-result-item.html) of the `CapturedResult`.
 
-### getDetectedQuadsResult
+### getProcessedDocumentResult
 
-Get all the quad detection results of the `CapturedResult`.
+Get a [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object that contains all the results with the type of deskewed image, detected quads, and enhanced images.
 
 ```java
-DetectedQuadsResult getDetectedQuadsResult();
+ProcessedDocumentResult getProcessedDocumentResult();
 ```
 
 **Return Value**
 
-A [`DetectedQuadsResult`]({{ site.ddn_android_api }}detected-quads-result.html) that contains all the [`DetectedQuadResultItems`]({{ site.ddn_android_api }}detected-quad-result-item.html) of the `CapturedResult`.
+A [`ProcessedDocumentResult`]({{ site.ddn_android_api }}detected-quads-result.html) object. It consists of:
 
-### getNormalizedImagesResult
-
-Get all the image normalization results of the `CapturedResult`.
-
-```java
-NormalizedImagesResult getNormalizedImagesResult();
-```
-
-**Return Value**
-
-A [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html) that contains all the [`NormalizedImageResultItems`]({{ site.ddn_android_api }}normalized-image-result-item.html) of the `CapturedResult`.
+- [`DeskewedImageResultItem`]({{ site.ddn_android_api }}deskewed-image-result-item.html)
+- [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html)
+- [`EnhancedImageResultItem`]({{ site.ddn_android_api }}enhanced-image-result-item.html)
 
 ### getParsedResult
 

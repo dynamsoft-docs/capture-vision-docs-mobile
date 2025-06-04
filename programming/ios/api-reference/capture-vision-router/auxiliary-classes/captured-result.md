@@ -36,8 +36,7 @@ class CapturedResult : CapturedResultBase
 | [`items`](#items) | *NSArray<DSCapturedResultItem*> \** | An array of `DSCapturedResultItems`, which are the basic item of the captured results. A `DSCapturedResultItem` can be an original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View DSCapturedResultItemType for all available types. |
 | [`decodedBarcodesResult`](#decodedbarcodesresult) | *DSDecodedBarcodesResult* | A [`DSDecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html) object that contains all the [`DSBarcodeResultItems`]({{ site.dbr_ios_api }}barcode-result-item.html) in the DSCapturedResult. |
 | [`recognizedTextLinesResult`](#recognizedtextlinesresult) | *DSRecognizedTextLinesResult* | A [`DSRecognizedTextLinesResult`]({{ site.dlr_ios_api }}recognized-text-lines-result.html) object that contains all the [`DSTextLineResultItems`]({{ site.dlr_ios_api }}text-line-result-item.html) in the DSCapturedResult. |
-| [`detectedQuadsResult`](#detectedquadsresult) | *DSDetectedQuadsResult* | A [`DSDetectedQuadsResult`]({{ site.ddn_ios_api }}detected-quads-result.html) object that contains all the [`DSDetectedQuadResultItem`]({{ site.ddn_ios_api }}detected-quad-result-item.html) in the DSCapturedResult. |
-| [`normalizedImagesResult`](#normalizedimagesresult) | *DSNormalizedImagesResult* | A [`DSNormalizedImagesResult`]({{ site.ddn_ios_api }}normalized-images-result.html) object that contains all the [`DSNormalizedImageResultItem`]({{ site.ddn_ios_api }}normalized-image-result-item.html) in the DSCapturedResult. |
+| [`processedDocumentResult`](#processeddocumentresult) | *DSProcessedDocumentResult* | A [`DSProcessedDocumentResult`]({{ site.ddn_ios_api }}processed-document-result.html) object that contains all the results with the type of deskewed image, detected quads, and enhanced images. |
 | [`parsedResult`](#parsedresult) | *DSParsedResult* | A [`DSParsedResult`]({{ site.dcp_ios_api }}parsed-result.html) object that contains all the [`DSParsedResultItem`]({{ site.dcp_ios_api }}parsed-result-item.html) in the DSCapturedResult. |
 
 The following attributes are inherited from [`DSCapturedResultBase`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-base.html):
@@ -101,26 +100,9 @@ A [`DSRecognizedTextLinesResult`]({{site.dlr_ios_api}}recognized-text-lines-resu
 var recognizedTextLinesResult: RecognizedTextLinesResult? { get }
 ```
 
-### detectedQuadsResult
+### processedDocumentResult
 
-A [`DSDetectedQuadsResult`]({{site.ddn_ios_api}}detected-quads-result.html) object that contains all the [`DSDetectedQuadResultItem`]({{ site.ddn_ios_api }}detected-quad-result-item.html) in the DSCapturedResult.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly, strong, nullable) DSDetectedQuadsResult * detectedQuadsResult;
-```
-2. 
-```swift
-var detectedQuadsResult: DetectedQuadsResult? { get }
-```
-
-### normalizedImagesResult
-
-A [`DSNormalizedImagesResult`]({{site.ddn_ios_api}}normalized-images-result.html) object that contains all the [`DSNormalizedImageResultItem`]({{ site.ddn_ios_api }}normalized-image-result-item.html) in the DSCapturedResult.
+A [`DSProcessedDocumentResult`]({{ site.ddn_ios_api }}processed-document-result.html) object that contains all the results with the type of deskewed image, detected quads, and enhanced images.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -128,11 +110,11 @@ A [`DSNormalizedImagesResult`]({{site.ddn_ios_api}}normalized-images-result.html
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, strong, nullable) DSNormalizedImagesResult * normalizedImagesResult;
+@property (nonatomic, readonly, strong, nullable) DSProcessedDocumentResult * processedDocumentResult;
 ```
 2. 
 ```swift
-var normalizedImagesResult: NormalizedImagesResult? { get }
+var processedDocumentResult: ProcessedDocumentResult? { get }
 ```
 
 ### parsedResult
