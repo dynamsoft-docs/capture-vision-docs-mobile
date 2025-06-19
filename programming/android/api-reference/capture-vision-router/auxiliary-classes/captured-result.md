@@ -16,8 +16,7 @@ The `CapturedResult` class represents the result of a capture operation on an im
 >
 > - [DecodedBarcodesResult]({{ site.dbr_android_api }}decoded-barcodes-result.html)
 > - [RecognizedTextLinesResult]({{ site.dlr_android_api }}recognized-text-lines-result.html)
-> - [ProcessedDocumentResult]({{ site.ddn_android_api }}detected-quads-result.html)
-> - [NormalizedImagesResult]({{ site.ddn_android_api }}normalized-images-result.html)
+> - [ProcessedDocumentResult]({{ site.ddn_android_api }}processed-document-result.html)
 > - [ParsedResults]({{ site.dcp_android_api }}parsed-result.html)
 
 ## Definition
@@ -96,7 +95,7 @@ ProcessedDocumentResult getProcessedDocumentResult();
 
 **Return Value**
 
-A [`ProcessedDocumentResult`]({{ site.ddn_android_api }}detected-quads-result.html) object. It consists of:
+A [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object. It consists of:
 
 - [`DeskewedImageResultItem`]({{ site.ddn_android_api }}deskewed-image-result-item.html)
 - [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html)
