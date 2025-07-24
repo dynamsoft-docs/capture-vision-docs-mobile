@@ -11,6 +11,15 @@ breadcrumbText: 1.x
 
 # Release Notes for Flutter SDK - 1.x
 
+## 1.4.0 (02/14/2025)
+
+- Updated the Android Gradle Plugin (AGP) of the library to support the latest Flutter version. The lowest supported AGP version is 8.0.
+
+## 1.3.2 (01/02/2025)
+
+- Added a new method setFocus to trigger a auto-focus at the specified point.
+- Added the support of the ultra-wide angle camera of iOS devices. Users can specify the CP_BACK_ULTRA_WIDE or CP_BACK_DUAL_WIDE_AUTO via the method selectCamera to use the ultra-wide camera.
+
 ## 1.3.1 (07/08/2024)
 
 - Added a new method [`setDeviceFriendlyName`]({{ site.flutter-api }}barcode-reader.html#setdevicefriendlyname) to the class `DCVBarcodeReader` for users to set human readable names for the devices.
