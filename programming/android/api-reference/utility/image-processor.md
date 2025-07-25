@@ -26,8 +26,10 @@ class ImageProcessor
 
 | Method | Description |
 | ------ | ----------- |
-| [`cropImage`](#cropimageimagedatarect) | Crops an image based on the provided rectangle or quadrilateral. |
-| [`cropImage`](#cropimageimagedataquad) | Crops an image based on the provided rectangle or quadrilateral. |
+| [`cropImage`](#cropimageimagedatarect) | Crops an image based on the provided rectangle. |
+| [`cropImage`](#cropimageimagedataquad) | Crops an image based on the provided quadrilateral. |
+| [`cropAndDeskewImage(imageData,quad,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
+| [`cropAndDeskewImage(imageData,quad)`](#cropanddeskewimageimagedataquad) | Crops and deskew an image based on the provided quadrilateral. | 
 | [`adjustBrightness`](#adjustbrightness) | Adjusts the brightness of an image. |
 | [`adjustContrast`](#adjustcontrast) | Adjusts the contrast of an image. |
 | [`filterImage`](#filterimage) | Applies a filter to an image. |
@@ -73,6 +75,22 @@ ImageData cropImage(ImageData imageData, Quadrilateral quad) throws UtilityExcep
 **Return Value**
 
 The cropped `ImageData`.
+
+### cropAndDeskewImage(imageData,quad,dstWidth,dstHeight,padding,errorCode)
+
+Crops and deskews an image based on the provided quadrilateral and additional information.
+
+```java
+public ImageData cropAndDeskewImage(CImageData imageData, CQuadrilateral quad, int dstWidth, int dstHeight, int padding) throws UtilityException{}
+```
+
+### cropAndDeskewImage(imageData,quad)
+
+Crops and deskews an image based on the provided quadrilateral. The arguments dstWidth, dstHeight, and padding are set to 0.
+
+```java
+public ImageData cropAndDeskewImage(CImageData imageData, CQuadrilateral quad) throws UtilityException{}
+```
 
 ### adjustBrightness
 

@@ -35,6 +35,8 @@ class ImageProcessor : NSObject
 | ------ | ----------- |
 | [`cropImage(imageData,rect)`](#cropimageimagedatarect) | Crops an image based on the provided rectangle or quadrilateral. |
 | [`cropImage(imageData,quad)`](#cropimageimagedataquad) | Crops an image based on the provided rectangle or quadrilateral. |
+| [`cropAndDeskewImage(imageData,quad,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
+| [`cropAndDeskewImage(imageData,quad)`](#cropanddeskewimageimagedataquad) | Crops and deskew an image based on the provided quadrilateral. |
 | [`adjust(imageData,brightness)`](#adjustbrightness) | Adjusts the brightness of an image. |
 | [`adjust(imageData,contrast)`](#adjustcontrast) | Adjusts the contrast of an image. |
 | [`filterImage`](#filterimage) | Applies a filter to an image. |
@@ -106,6 +108,69 @@ func cropImage(imageData: ImageData, quad: Quadrilateral, error: UnsafeMutablePo
 **Return Value**
 
 The cropped `ImageData`.
+
+### cropAndDeskewImage(imageData,quad,dstWidth,dstHeight,padding)
+
+Crops and deskews an image based on the provided quadrilateral and additional information.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (nullable ImageData*)cropAndDeskewImage:(DSImageData*)imageData
+                                     quad:(DSQuadrilateral*)quad
+                                 dstWidth:(NSInteger)dstWidth
+                                dstHeight:(NSInteger)dstHeight
+                                  padding:(NSInteger)padding
+                                    error:(NSError * _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func cropAndDeskewImage(imageData: ImageData, quad: Quadrilateral, dstWidth: Int, dstHeight: Int, padding: Int) throws -> ImageData
+```
+
+**Parameters**
+
+`imageData`: The `ImageData` to modify.
+
+`quad`: The `Quadrilateral` to crop the image.
+
+`dstWidth`: The width of the destination image.
+
+`dstHeight`: The height of the destination image.
+
+`padding`: The padding value.
+
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+### cropAndDeskewImage(imageData,quad)
+
+Crops and deskews an image based on the provided quadrilateral. The arguments dstWidth, dstHeight, and padding are set to 0.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (nullable ImageData*)cropAndDeskewImage:(DSImageData*)imageData
+                                     quad:(DSQuadrilateral*)quad;
+                                    error:(NSError * _Nullable * _Nullable)error
+```
+2. 
+```swift
+func cropAndDeskewImage(imageData: ImageData, quad: Quadrilateral) throws -> ImageData
+```
+
+**Parameters**
+
+`imageData`: The `ImageData` to modify.
+
+`quad`: The `Quadrilateral` to crop the image.
+
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 ### adjust(imageData,brightness)
 

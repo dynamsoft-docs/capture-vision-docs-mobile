@@ -91,6 +91,9 @@ void onTargetROIResultsReceived(@NonNull IntermediateResult result, Intermediate
 
 The callback triggered when the processing of a task is finished.
 
+> [!Note]
+> This callback may be invoked on different threads. Ensure that any shared resources accessed within the callback are properly synchronized to avoid data corruption or crashes.
+
 ```java
 void onTaskResultsReceived(@NonNull IntermediateResult result, IntermediateResultExtraInfo info);
 ```

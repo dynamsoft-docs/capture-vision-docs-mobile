@@ -16,16 +16,20 @@ noTitleIndex: true
 | [`getInput`](#getinput) | Returns the image source object. |
 | [`addResultReceiver`](#addresultreceiver) | Adds a [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object as the receiver of captured results. |
 | [`removeResultReceiver`](#removeresultreceiver) | Removes the specified [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object. |
+| [`removeAllResultReceivers`](#removeallresultreceivers) | Removes all user-added [`CapturedResultReceivers`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html). |
 | [`startCapturing`](#startcapturing) | Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source. |
 | [`stopCapturing`](#stopcapturing) | Stops the capturing process. |
 | [`pauseCapturing`](#pausecapturing) | Pauses the Capture Vision Router. |
 | [`resumeCapturing`](#resumecapturing) | Resumes the Capture Vision Router. |
 | [`addCaptureStateListener`](#addcapturestatelistener) | Registers a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html) to be used as a callback when capture state is received. |
 | [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html) that has been configured for the Capture Vision Router. |
+| [`removeAllCaptureStateListeners`](#removeallcapturestatelisteners) | Removes all user-added [`CaptureStateListeners`](auxiliary-classes/capture-state-listener.html). |
 | [`addResultFilter`](#addresultfilter) | Adds a `CapturedResultFilter` object to filter non-essential results. |
 | [`removeResultFilter`](#removeresultfilter) | Removes the specified `CapturedResultFilter` object. |
+| [`removeAllResultFilters`](#removeallresultfilters) | Removes all user-added `CapturedResultFilters`. |
 | [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) received. |
 | [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) from the Capture Vision Router. |
+| [`removeAllImageSourceStateListeners`](#removeallimagesourcestatelisteners) | Removes all user-added [`ImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html). |
 
 ## setInput
 
@@ -86,6 +90,14 @@ void removeResultReceiver(CapturedResultReceiver receiver);
 **Parameters**
 
 `[in] receiver`: The receiver object, of type [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
+
+## removeAllResultReceivers
+
+Removes all user-added [`CapturedResultReceivers`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
+
+```java
+void removeAllResultReceivers();
+```
 
 ## startCapturing
 
@@ -153,6 +165,14 @@ void removeResultFilter(CapturedResultFilter filter);
 
 `[in] filter`: The filter object, of type [`CapturedResultFilter`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html).
 
+## removeResultFilter
+
+Removes all user-added`CapturedResultFilters`.
+
+```java
+void removeAllResultFilters();
+```
+
 ## addCaptureStateListener
 
 Registers a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html) to be used as a callback when capture state is received.
@@ -177,6 +197,14 @@ void removeCaptureStateListener(CaptureStateListener listener);
 
 `[in] listener`: An object of [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html)
 
+## removeAllCaptureStateListeners
+
+Removes all user-added [`CaptureStateListeners`](auxiliary-classes/capture-state-listener.html).
+
+```java
+void removeAllCaptureStateListeners();
+```
+
 ## addImageSourceStateListener
 
 Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) received.
@@ -200,3 +228,11 @@ void removeImageSourceStateListener(ImageSourceStateListener listener);
 **Parameters**
 
 `[in] listener`: An object of [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html).
+
+## removeAllImageSourceStateListeners
+
+Removes all user-added [`ImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html).
+
+```java
+void removeAllImageSourceStateListeners();
+```
