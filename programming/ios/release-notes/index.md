@@ -9,6 +9,7 @@ noTitleIndex: true
 
 # Release Notes Index - DynamsoftCaptureVisionBundle iOS
 
+- [3.0.5000 (07/29/2025)](ios-2.html#305000-07292025)
 - [3.0.3000 (05/15/2025)](ios-2.html#303000-05152025)
 - [2.6.1004 (03/07/2025)](ios-2.html#261004-03072025)
 - [2.6.1003 (01/23/2025)](ios-2.html#261003-01232025)
