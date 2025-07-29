@@ -131,6 +131,8 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    DSErrorPDFLicenseNotFound               = -10079,
    /**The rectangle is invalid.*/
    DSErrorRectInvalid                      = -10080,
+   /*The template version is incompatible. Please use a compatible template.*/
+   DSErrorTemplateVersionIncompatible      = -10081,
    /**No license.*/
    DSErrorNoLicense                        = -20000,
    /**Failed to read or write license cache. */
@@ -145,6 +147,10 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    DSErrorInstanceCountOverLimit           = -20008,
    /**Trial License*/
    DSErrorTrialLicense                     = -20010,
+   /*License authentication failed: quota exceeded.*/
+   DSErrorLicenseAuthQuotaExceeded         = -20013,
+   /**License restriction: the number of results has exceeded the allowed limit.*/
+   DSErrorLicenseResultsLimitExceeded      = -20014,
    /**The license is not valid for current version*/
    DSErrorLicenseVersionNotMatch           = -20011,
    /** -30000~-39999: DBR error code. */
@@ -191,7 +197,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /**No content has been detected. */
    DSErrorContentNotFound                  = -50056,
    /*The quardrilateral is invalid. */
-   DSErrorQuardrilateralInvalid            = -50057,
+   DSErrorQuadrilateralInvalid            = -50057,
    /*[Document Normalizer] No license found.*/
    DSErrorDDNLicenseNotFound               = -50058,
    /** -60000~-69999: DCE error code. */

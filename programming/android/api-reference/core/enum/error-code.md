@@ -137,6 +137,8 @@ public @interface EnumErrorCode
    public static final int EC_PDF_LIBRARY_LOAD_FAILED = -10075,
    /*The license is initialized successfully but detected invalid content in your key.*/
    public static final int EC_LICENSE_WARNING = -10076,
+   /*The template version is incompatible. Please use a compatible template.*/
+   public static final int EC_TEMPLATE_VERSION_INCOMPATIBLE = -10081
    /** -20000~-29999: DLS license error code. */
    /** No license. */
    public static final int EC_NO_LICENSE = -20000,
@@ -154,6 +156,10 @@ public @interface EnumErrorCode
    public static final int EC_INSTANCE_COUNT_OVER_LIMIT = -20008,
    /** Trial License */
    public static final int EC_TRIAL_LICENSE = -20010,
+   /*License authentication failed: quota exceeded.*/
+   public static final int EC_LICENSE_AUTH_QUOTA_EXCEEDED = -20013,
+   /**License restriction: the number of results has exceeded the allowed limit.*/
+   public static final int EC_LICENSE_RESULTS_LIMIT_EXCEEDED = -20014,
    /** Failed to reach License Server. */
    public static final int EC_FAILED_TO_REACH_DLS = -20200,
    /** -30000~-39999: DBR error code. */
