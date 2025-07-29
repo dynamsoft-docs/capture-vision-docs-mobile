@@ -27,7 +27,6 @@ class ImageProcessor
 | Method | Description |
 | ------ | ----------- |
 | [`cropImage`](#cropimageimagedatarect) | Crops an image based on the provided rectangle. |
-| [`cropImage`](#cropimageimagedataquad) | Crops an image based on the provided quadrilateral. |
 | [`cropAndDeskewImage(imageData,quad,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
 | [`cropAndDeskewImage(imageData,quad)`](#cropanddeskewimageimagedataquad) | Crops and deskew an image based on the provided quadrilateral. | 
 | [`adjustBrightness`](#adjustbrightness) | Adjusts the brightness of an image. |
@@ -53,24 +52,6 @@ ImageData cropImage(ImageData imageData, Rect rect) throws UtilityException{}
 `[in] imageData`: The `ImageData` to modify.
 
 `[in] rect`: The `Rect` to crop the image.
-
-**Return Value**
-
-The cropped `ImageData`.
-
-### cropImage(imageData,quad)
-
-Crops an image based on the provided quadrilateral.
-
-```java
-ImageData cropImage(ImageData imageData, Quadrilateral quad) throws UtilityException{}
-```
-
-**Parameters**
-
-`[in] imageData`: The `ImageData` to modify.
-
-`[in] quad`: The `Quadrilateral` to crop the image.
 
 **Return Value**
 

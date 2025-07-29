@@ -34,7 +34,6 @@ class ImageProcessor : NSObject
 | Method | Description |
 | ------ | ----------- |
 | [`cropImage(imageData,rect)`](#cropimageimagedatarect) | Crops an image based on the provided rectangle or quadrilateral. |
-| [`cropImage(imageData,quad)`](#cropimageimagedataquad) | Crops an image based on the provided rectangle or quadrilateral. |
 | [`cropAndDeskewImage(imageData,quad,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
 | [`cropAndDeskewImage(imageData,quad)`](#cropanddeskewimageimagedataquad) | Crops and deskew an image based on the provided quadrilateral. |
 | [`adjust(imageData,brightness)`](#adjustbrightness) | Adjusts the brightness of an image. |
@@ -71,37 +70,6 @@ func cropImage(imageData: ImageData, rect: Rect, error: UnsafeMutablePointer<NSE
 `imageData`: The `ImageData` to modify.
 
 `rect`: The `Rect` to crop the image.
-
-`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
-
-**Return Value**
-
-The cropped `ImageData`.
-
-### cropImage(imageData,quad,error)
-
-Crops an image based on the provided quadrilateral.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (DSImageData *)cropImage:(DSImageData *)imageData
-                      quad:(DSQuadrilateral *)quad
-                     error:(NSError * _Nullable * _Nullable)error;
-```
-2. 
-```swift
-func cropImage(imageData: ImageData, quad: Quadrilateral, error: UnsafeMutablePointer<NSError?>?) -> ImageData
-```
-
-**Parameters**
-
-`imageData`: The `ImageData` to modify.
-
-`quad`: The `Quadrilateral` to crop the image.
 
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
