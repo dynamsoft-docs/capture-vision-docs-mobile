@@ -9,6 +9,18 @@ noTitleIndex: true
 
 # Release Notes v3.x - DynamsoftCaptureVisionRouter Module
 
+## 3.0.5200 (08/18/2025)
+
+### Fixed
+
+- Fixed an xcframework signature issue.
+
+## 3.0.5100 (08/12/2025)
+
+### Fixed
+
+- Small fixes and tweaks.
+
 ## 3.0.3100 (05/30/2025)
 
 ### [Highlights](https://www.dynamsoft.com/release-highlights/?product=dcv3.0)

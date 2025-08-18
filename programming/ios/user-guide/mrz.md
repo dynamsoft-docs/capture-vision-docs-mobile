@@ -85,7 +85,7 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
     target '{Your project name}' do
         use_frameworks!
 
-        pod 'DynamsoftMRZScannerBundle','3.0.5100'
+        pod 'DynamsoftMRZScannerBundle','3.0.5200'
 
     end
     ```
@@ -102,7 +102,7 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/mrz-scanner-spm"
 
-3. Select `mrz-scanner-spm`, choose `Exact version`, enter **3.0.5100**, then click **Add Package**.
+3. Select `mrz-scanner-spm`, choose `Exact version`, enter **3.0.5200**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add them.
 
