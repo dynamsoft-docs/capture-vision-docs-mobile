@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Add Resource Files - Dynamsoft Capture Vision iOS Edition
+title: Get Original Image - Dynamsoft Capture Vision iOS Edition
 description: This page introduce how to get original image for Dynamsoft Capture Vision iOS Edition.
 keywords: iOS, original image
 needAutoGenerateSidebar: true

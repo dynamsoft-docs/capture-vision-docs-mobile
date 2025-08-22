@@ -6,6 +6,7 @@ keywords: image processing module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # DSNeuralNetworkModule

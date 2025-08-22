@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Add Resource Files - Dynamsoft Capture Vision Android Edition
+title: Get Original Image - Dynamsoft Capture Vision Android Edition
 description: This page introduce how to get original image for Dynamsoft Capture Vision Android Edition.
 keywords: Android, original image
 needAutoGenerateSidebar: true
