@@ -6,6 +6,7 @@ keywords: image manager, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 ---
 
 # DSImageManager
