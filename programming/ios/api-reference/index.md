@@ -25,18 +25,18 @@ The table below describes details the functionalities of these modules:
 
 | File | Description |
 |:-----|:------------|
-| `DynamsoftCaptureVisionRouter` (CVR) | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. |
-| `DynamsoftBarcodeReader`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |
-| `DynamsoftDocumentNormalizer`(DBR) | The Dynamsoft Document Normalizer module extracts structural information from document images, including document boundaries, shadow areas, and text areas. It uses this information to generate normalized document images through processes such as deskewing, shadow removal, and distortion correction. |
-| `DynamsoftLabelRecognizer` (DLR) | The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. |
-| `DynamsoftCore` (Core) | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs.|
-| `DynamsoftImageProcessing` (DIP) | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer.  |
-| `DynamsoftNeuralNetwork` (DNN) | The Dynamsoft Neural Network module allows SDKs compliant with the DCV (Dynamsoft Capture Vision) architecture to leverage the power of deep learning when processing digital images. |
-| `DynamsoftLicense` (License) | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
-| `DynamsoftCameraEnhancer` (DCE) | The Dynamsoft Camera Enhancer (DCE) module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. |
-| `DynamsoftUtility` (Utility) | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter). These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
-| `DynamsoftCodeParser` (DCP) | The Dynamsoft Code Parser module converts data strings, typically encrypted in barcodes and machine-readable zones, into human-readable information. |
-| `DynamsoftCodeParserDedicator` (DCPD) | The Dynamsoft Code Parser Dedicator module provides auxiliary functionality to enhance and extend the capabilities of DCP module. |
+| `DynamsoftCaptureVisionRouter.xcframework` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. |
+| `DynamsoftBarcodeReader.xcframework`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |
+| `DynamsoftDocumentNormalizer.xcframework`(DBR) | The Dynamsoft Document Normalizer module extracts structural information from document images, including document boundaries, shadow areas, and text areas. It uses this information to generate normalized document images through processes such as deskewing, shadow removal, and distortion correction. |
+| `DynamsoftLabelRecognizer.xcframework` (DLR) | The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. |
+| `DynamsoftCore.xcframework` | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs.|
+| `DynamsoftImageProcessing.xcframework` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer.  |
+| `DynamsoftNeuralNetwork.xcframework` | The Dynamsoft Neural Network module allows SDKs compliant with the DCV (Dynamsoft Capture Vision) architecture to leverage the power of deep learning when processing digital images. |
+| `DynamsoftLicense.xcframework` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
+| `DynamsoftCameraEnhancer.xcframework` | The Dynamsoft Camera Enhancer (DCE) module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. |
+| `DynamsoftUtility.xcframework` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter). These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
+| `DynamsoftCodeParser.xcframework` | The Dynamsoft Code Parser module converts data strings, typically encrypted in barcodes and machine-readable zones, into human-readable information. |
+| `DynamsoftCodeParserDedicator.xcframework` | The Dynamsoft Code Parser Dedicator module provides auxiliary functionality to enhance and extend the capabilities of DCP module. |
 
 ## Main APIs
 
@@ -74,14 +74,15 @@ Related APIs:
 
 Callback methods that are related to document scanning:
 
-- [`onProcessedDocumentResultReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onprocesseddocumentresultreceived): The callback of document boundary detection. The result you received in the callback method is a [`DSProcessedDocumentResult`]({{ site.ddn_ios_api }}processed-document-result.html) object, which contains the detected boundaries, the deskewed images, and the enhanced images from the processed image.
+- [`onDetectedQuadsReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondetectedquadsreceived): The callback of document boundary detection. The result you received in the callback method is a [`DetectedQuadResult`]({{ site.ddn_ios_api }}detected-quads-result.html) object, which contains all the detected quads from the processed image.
+- [`onNormalizedImagesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onnormalizedimagesreceived): The callback of image normalization. The result you received in the callback method is a [`NormalizedImagesResult`]({{ site.ddn_ios_api }}normalized-images-result.html) object, which contains all the normalized images from the processed image.
 
 Related APIs:
 
-- [`DSProcessedDocumentResult`]({{ site.ddn_ios_api }}processed-document-result.html): A combination of all kinds of document processing results.
-- [`DSDetectedQuadResultItem`]({{ site.ddn_ios_api }}detected-quad-result-item.html): The boundary detection result of a single document page.
-- [`DSDeskewedImageResultItem`]({{ site.ddn_ios_api }}deskewed-image-result-item.html): The deskewing result of a single document page.
-- [`DSEnhancedImageResultItem`]({{ site.ddn_ios_api }}enhanced-image-result-item.html): The enhanced result of a single document page.
+- [`DetectedQuadResult`]({{ site.ddn_ios_api }}detected-quads-result.html): All quads that detected from the processed image.
+- [`DetectedQuadResultItem`]({{ site.ddn_ios_api }}detected-quad-result-item.html): The boundary detection result of a single document page.
+- [`NormalizedImagesResult`]({{ site.ddn_ios_api }}normalized-images-result.html): All normalized images that deskewed from the processed image.
+- [`NormalizedImageResultItem`]({{ site.ddn_ios_api }}normalized-image-result-item.html): The deskewing result of a single document page.
 
 #### MRZ Scanning
 

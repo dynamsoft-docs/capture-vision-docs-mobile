@@ -30,12 +30,10 @@ typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
    DSCapturedResultItemTypeTextLine = 4,
    /** The captured result is a detected quadrilateral. You can convert it into a DSDetectedQuadResultItem. */
    DSCapturedResultItemTypeDetectedQuad = 8,
-   /** The captured result is a deskewed image. You can convert it into a DSDeskewedImageResultItem. */
-   DSCapturedResultItemTypeDeskewedImage = 16,
+   /** The captured result is a normalized image. You can convert it into a DSNormalizedImageResultItem. */
+   DSCapturedResultItemTypeNormalizedImage = 16,
    /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
    DSCapturedResultItemTypeParsedResult = 32,
-   /** The captured result is a enhanced image. You can convert it into a DSEnhancedImageItem. */
-   DSCapturedResultItemTypeEnhancedImage = 64
 };
 ```
 >
@@ -50,11 +48,9 @@ public enum CapturedResultItemType : Int
    textLine = 4
    /** The captured result is a detected quadrilateral. You can convert it into a DSDetectedQuadResultItem. */
    detectedQuad = 8
-   /** The captured result is a Deskewed image. You can convert it into a DSDeskewedImageResultItem. */
-   deskewedImage = 16
+   /** The captured result is a normalized image. You can convert it into a DSNormalizedImageResultItem. */
+   normalizedImage = 16
    /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
    parsedResult = 32
-   /** The captured result is a enhanced image. You can convert it into a DSEnhancedImageItem. */
-   enhancedImage = 64
 };
 ```

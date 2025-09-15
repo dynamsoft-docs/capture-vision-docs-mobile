@@ -34,7 +34,8 @@ protocol CapturedResultFilter : NSObjectProtocol
 | [`onOriginalImageResultReceived`](#onoriginalimageresultreceived) | The method for monitoring the output of `DSOriginalImageResultItem`. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The method for monitoring the output of `DSDecodedBarcodesResult`. |
 | [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | The method for monitoring the output of `DSRecognizedTextLinesResult`. |
-| [`onProcessedDocumentResultReceived`](#onprocesseddocumentresultreceived) | The method for monitoring the output of `ProcessedDocumentResult`, which includes the detected quad, deskewed image and enhanced image. |
+| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | The method for monitoring the output of `DSDetectedQuadsResult`. |
+| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | The method for monitoring the output of `DSNormalizedImagesResult`. |
 | [`onParsedResultsReceived`](#onparsedresultsreceived) | The method for monitoring the output of `DSParsedResult`. |
 
 ### onOriginalImageResultReceived
@@ -100,9 +101,9 @@ func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
 
 `result`: A `DSRecognizedTextLinesResult` object as a recognized text line result.
 
-### onProcessedDocumentResultReceived
+### onDetectedQuadsReceived
 
-The method for monitoring the output of [DSProcessedDocumentResult]({{site.ddn_ios_api}}processed-document-result.html).
+The method for monitoring the output of [`DSDetectedQuadsResult`]({{site.ddn_ios_api}}detected-quads-result.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -110,16 +111,37 @@ The method for monitoring the output of [DSProcessedDocumentResult]({{site.ddn_i
 >
 >1. 
 ```objc
-- (void)onProcessedDocumentResultReceived:(DSProcessedDocumentResult*)result;
+- (void)onDetectedQuadsReceived:(DSDetectedQuadsResult*)result;
 ```
 2. 
 ```swift
-func onProcessedDocumentResultReceived(_ result: ProcessedDocumentResult)
+func onDetectedQuadsReceived(_ result: DSDetectedQuadsResult)
 ```
 
 **Parameters**
 
-`result`: A [`DSProcessedDocumentResult`]({{site.ddn_ios_api}}processed-document-result.html) object as a processed document result.
+`result`: A `DSDetectedQuadsResult` object as a detected quad result.
+
+### onNormalizedImagesReceived
+
+The method for monitoring the output of [DSNormalizedImagesResult]({{ site.ddn_ios_api }}normalized-images-result.html).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)onNormalizedImagesReceived:(DSNormalizedImagesResult*)result;
+```
+2. 
+```swift
+func onNormalizedImagesReceived(_ result: DSNormalizedImagesResult)
+```
+
+**Parameters**
+
+`result`: A `DSNormalizedImagesResult` object as a normalized image result.
 
 ### onParsedResultsReceived
 

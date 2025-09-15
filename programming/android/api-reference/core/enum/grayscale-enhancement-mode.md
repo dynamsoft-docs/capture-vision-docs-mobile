@@ -30,7 +30,5 @@ codeAutoHeight: true
    public static final int GEM_REV = -2147483648;
    /**Skips image preprocessing. */
    public static final int GEM_SKIP = 0;
-   /**Placeholder value with no functional meaning. */
-   public static final int GEM_END = 0xFFFFFFFF;
 }
 ```

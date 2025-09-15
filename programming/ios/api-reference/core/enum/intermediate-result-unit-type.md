@@ -23,8 +23,8 @@ codeAutoHeight: true
 typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType) {
     /** No intermediate result. */
     DSIntermediateResultUnitTypeNull = 0,
-    /** A scaled full-color image. */
-    DSIntermediateResultUnitTypeScaledColourImage = 1,
+    /** A full-color image. */
+    DSIntermediateResultUnitTypeColourImage = 1,
     /** A color image that has been scaled down for efficiency. */
     DSIntermediateResultUnitTypeScaledDownColourImage = 1 << 1,
     /** A grayscale image derived from the original input. */
@@ -55,8 +55,8 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType) {
     DSIntermediateResultUnitTypeCandidateBarcodeZones = 1 << 14,
     /** Barcodes that have been localized but not yet decoded. */
     DSIntermediateResultUnitTypeLocalizedBarcodes = 1 << 15,
-    /** Barcode images scaled up or down for improving the speed, readability or decoding accuracy. */
-    DSIntermediateResultUnitTypeScaledBarcodeImage = 1 << 16,
+    /** Barcode images scaled up for improved readability or decoding accuracy. */
+    DSIntermediateResultUnitTypeScaledUpBarcodeImage = 1 << 16,
     /** Images of barcodes processed to resist deformation and improve decoding success. */
     DSIntermediateResultUnitTypeDeformationResistedBarcodeImage = 1 << 17,
     /** Barcode images that have been complemented. */
@@ -75,16 +75,14 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType) {
     DSIntermediateResultUnitTypeLocalizedTextLines = 1 << 24,
     /** Successfully recognized text lines. */
     DSIntermediateResultUnitTypeRecognizedTextLines = 1 << 25,
-    /** Successfully deskewed images. */
-    DSIntermediateResultUnitTypeDeskewedImages = 1 << 26,
+    /** Successfully normalized images. */
+    DSIntermediateResultUnitTypeNormalizedImages = 1 << 26,
     /** Detected short lines. */
     DSIntermediateResultUnitTypeShortLines = 1 << 27,
     /** Recognized raw text lines. */
     DSIntermediateResultUnitTypeRawTextLines = 1 << 28,
     /**Detected logic lines.*/
     DSIntermediateResultUnitTypeLogicLines = 1 << 29,
-    /** Successfully enhanced images. */
-    DSIntermediateResultUnitTypeEnhancedImages = 1 << 30,
     /** A mask to select all types of intermediate results. */
     DSIntermediateResultUnitTypeAll = 0xFFFFFFFFFFFFFFFF
 };
@@ -94,8 +92,8 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType) {
 public enum IntermediateResultUnitType: Int {
     /** No intermediate result. */
     case null = 0
-    /** A scaled full-color image. */
-    case scaledColourImage = 1
+    /** A full-color image. */
+    case colourImage = 1
     /** A color image that has been scaled down for efficiency. */
     case scaledDownColourImage = 1 << 1
     /** A grayscale image derived from the original input. */
@@ -126,8 +124,8 @@ public enum IntermediateResultUnitType: Int {
     case candidateBarcodeZones = 1 << 14
     /** Barcodes that have been localized but not yet decoded. */
     case localizedBarcodes = 1 << 15
-    /** Barcode images scaled up or down for improving speed, readability or decoding accuracy. */
-    case scaledBarcodeImage = 1 << 16
+    /** Barcode images scaled up for improved readability or decoding accuracy. */
+    case scaledUpBarcodeImage = 1 << 16
     /** Images of barcodes processed to resist deformation and improve decoding success. */
     case deformationResistedBarcodeImage = 1 << 17
     /** Barcode images that have been complemented. */
@@ -146,16 +144,14 @@ public enum IntermediateResultUnitType: Int {
     case localizedTextLines = 1 << 24
     /** Successfully recognized text lines. */
     case recognizedTextLines = 1 << 25
-    /** Successfully deskewed images. */
-    case deskewedImages = 1 << 26
+    /** Successfully normalized images. */
+    case normalizedImages = 1 << 26
     /** Detected short lines. */
     case shortLines = 1 << 27
     /** Recognized raw text lines. */
     rawTextLines = 1 << 28
     /**Detected logic lines.*/
     logicLines = 1 << 29
-    /** Successfully enhanced images. */
-    enhancedImages = 1 << 30
     /** A mask to select all types of intermediate results. */
     case all = 0xFFFFFFFFFFFFFFFF
 }

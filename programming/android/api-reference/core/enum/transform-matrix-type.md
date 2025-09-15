@@ -23,9 +23,5 @@ public @interface EnumTransformMatrixType {
     int TMT_ROTATED_TO_ORIGINAL_IMAGE = 2;
     /**Represents a transformation matrix that converts coordinates from the original image to the rotated image.*/
     int TMT_ORIGINAL_TO_ROTATED_IMAGE = 3;
-    /**Represents a transformation matrix that converts coordinates from the local image to the section image.*/
-    int TMT_LOCAL_TO_SECTION_IMAGE = 4;
-    /**Represents a transformation matrix that converts coordinates from the section image to the local image.*/
-    int TMT_SECTION_TO_LOCAL_IMAGE = 5;
 }
 ```

@@ -14,7 +14,7 @@ The `DSQuadrilateral` class represents a quadrilateral defined by four points.
 
 ## Definition
 
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -34,7 +34,6 @@ class Quadrilateral : NSObject
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *NSArray* | An array of four `Point` objects defining the vertices of the quadrilateral. |
-| [`id`](#id) | *NSInteger* | The ID of the quadrilateral. |
 
 | Method | Description |
 | ------ | ----------- |
@@ -60,24 +59,7 @@ An array of four `Point` objects defining the vertices of the quadrilateral.
 var points: [CGPoint] { get set }
 ```
 
-### id
-
-The ID of the quadrilateral.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic) NSInteger *quadId;
-```
-2. 
-```swift
-var quadId: Int { get set }
-```
-
-### contains
+## contains
 
 Check whether the input point is contained by the quadrilateral.
 
@@ -117,7 +99,7 @@ BOOL result = [quadrilateral contains:point];
 let result = quadrilateral.contains(point)
 ```
 
-### boundingRect
+## boundingRect
 
 Get the bounding rectangle of the quadrilateral.
 
@@ -153,7 +135,7 @@ CGRect rect = [quadrilateral getBoundingRect];
 let rect = quadrilateral.getBoundingRect()
 ```
 
-### centrePoint
+## centrePoint
 
 Get the centre point of the quadrilateral.
 
@@ -189,7 +171,7 @@ CGPoint center = [quadrilateral getCentrePoint];
 let center = quadrilateral.getCentrePoint()
 ```
 
-### area
+## area
 
 Get the area of the quadrilateral.
 

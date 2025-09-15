@@ -30,9 +30,7 @@ public @interface EnumRegionObjectElementType
    public static final int ROET_RECOGNIZED_TEXT_LINE = 4;
    /**The type of subclass DetectedQuadElement.*/
    public static final int ROET_DETECTED_QUAD = 5;
-   /**The type of subclass DeskewedImageElement.*/
-   public static final int ROET_DESKEWED_IMAGE = 6;
-   /**The type of subclass EnhancedImageElement.*/
-   public static final int ROET_ENHANCED_IMAGE = 6;
+   /**The type of subclass NormalizedImageElement.*/
+   public static final int ROET_NORMALIZED_IMAGE = 6;
 }
 ```

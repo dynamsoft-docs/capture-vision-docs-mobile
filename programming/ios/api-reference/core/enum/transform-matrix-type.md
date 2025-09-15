@@ -22,17 +22,13 @@ breadcrumbText: TransformMatrixType
 typedef NS_ENUM(NSInteger, DSTransformMatrixType)
 {
     /**Represents a transformation matrix that converts coordinates from the local image to the original image.*/
-   DSTransformMatrixTypeLocalToOriginalImage,
+   DSTransformMatrixTypeLocalToOriginalImage = 0,
     /**Represents a transformation matrix that converts coordinates from the original image to the local image.*/
-   DSTransformMatrixTypeOriginalToLocalImage,
+   DSTransformMatrixTypeOriginalToLocalImage = 1,
     /**Represents a transformation matrix that converts coordinates from the rotated image to the original image.*/
-   DSTransformMatrixTypeRotatedToOriginalImage,
+   DSTransformMatrixTypeRotatedToOriginalImage = 2,
     /**Represents a transformation matrix that converts coordinates from the original image to the rotated image.*/
-   DSTransformMatrixTypeOriginalToRotatedImage,
-    /**Represents a transformation matrix that converts coordinates from the local image to the section image.*/
-    DSTransformMatrixTypeLocalToSectionImage,
-    /**Represents a transformation matrix that converts coordinates from the section image to the local image.*/
-    DSTransformMatrixTypeSectionToLocalImage
+   DSTransformMatrixTypeOriginalToRotatedImage = 3
 }NS_SWIFT_NAME(TransformMatrixType);
 ```
 >
@@ -40,12 +36,12 @@ typedef NS_ENUM(NSInteger, DSTransformMatrixType)
 public enum TransformMatrixType : Int
 {
     /**Represents a transformation matrix that converts coordinates from the local image to the original image.*/
-   localToOriginalImage
+   localToOriginalImage = 0,
     /**Represents a transformation matrix that converts coordinates from the original image to the local image.*/
-   originalToLocalImage
+   originalToLocalImage = 1,
     /**Represents a transformation matrix that converts coordinates from the rotated image to the original image.*/
-   rotatedToOriginalImage
+   rotatedToOriginalImage = 2,
     /**Represents a transformation matrix that converts coordinates from the original image to the rotated image.*/
-   originalToRotatedImage
+   originalToRotatedImage = 3
 }
 ```

@@ -189,12 +189,10 @@ void resetSettings() throws CaptureVisionRouterException;
 Returns an object that contains settings for the specified `CaptureVisionTemplate`.
 
 ```java
-String outputSettings(String templateName, boolean includeDefaultValues) throws CaptureVisionRouterException;
+String outputSettings(String templateName) throws CaptureVisionRouterException;
 ```
 
 `[in] templateName`: The name of the template that you want to output.
-
-`[in] includeDefaultValues`: A boolean value that indicates whether to include default values in the output.
 
 **Return Value**
 
@@ -212,7 +210,7 @@ The Capture Vision settings in a JSON string.
 Generates a JSON file download containing the settings for the specified `CaptureVisionTemplate`.
 
 ```java
-void outputSettingsToFile(String templateName, String filePath, boolean includeDefaultValues) throws CaptureVisionRouterException;
+void outputSettingsToFile(String templateName, String filePath) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -220,8 +218,6 @@ void outputSettingsToFile(String templateName, String filePath, boolean includeD
 `[in] templateName`: The name of the template that you want to output.
 
 `[in] file`: The file path and name that you want to save the template.
-
-`[in] includeDefaultValues`: A boolean value that indicates whether to include default values in the output.
 
 **Exception**
 
@@ -243,7 +239,7 @@ try {
     //     file.mkdirs();
     // }
     // You have to specify the template name and the file path. Here we use the preset template "PT_READ_BARCODES" as an example.
-    mRouter.outputSettingsToFile(EnumPresetTemplate.PT_READ_BARCODES, outputPath+"/outputTemplate.json", false);
+    mRouter.outputSettingsToFile(EnumPresetTemplate.PT_READ_BARCODES, outputPath+"/outputTemplate.json");
 } catch (CaptureVisionRouterException e) {
     throw new RuntimeException(e);
 }

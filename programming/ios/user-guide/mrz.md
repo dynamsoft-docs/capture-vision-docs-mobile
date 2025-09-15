@@ -48,7 +48,7 @@ Currently, the SDK supports three types of MRTD:
 The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containing 30 characters.
 
 <div>
-   <img src="../../assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
 </div>
 
 ### ID (TD2 Size)
@@ -56,7 +56,7 @@ The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containi
 The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
 
 <div>
-   <img src="../../assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
 </div>
 
 ### Passport (TD3 Size)
@@ -64,12 +64,12 @@ The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each li
 The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
 
 <div>
-   <img src="../../assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
 </div>
 
 ## Requirements
 
-- Supported OS: **iOS 13** or higher.
+- Supported OS: iOS 11+ (iOS 13+ recommended).
 - Supported ABI: arm64 and x86_64.
 - Development Environment: Xcode 13+ (Xcode 14.1+ recommended).
 
@@ -77,7 +77,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 There are two ways to add the SDK into your project - **CocoaPods**, or via **Swift Package Manager**.
 
-### Option 1: Add the xcframeworks via CocoaPods
+### Add the xcframeworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace *TargetName* with your real target name.
 
@@ -85,10 +85,13 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
     target '{Your project name}' do
         use_frameworks!
 
-        pod 'DynamsoftMRZScannerBundle','3.0.5200'
+        pod 'DynamsoftCaptureVisionBundle','2.6.1004'
+        pod 'DynamsoftMRZ', '3.4.20'
 
     end
     ```
+
+    > Read more about the modules of [DynamsoftCaptureVisionBundle](../api-reference/index.md)
 
 2. Execute the pod command to install the frameworks and generate workspace(**{Your project name}.xcworkspace**):
 
@@ -96,15 +99,15 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
    pod install
    ```
 
-### Option 2: Add the xcframeworks via Swift Package Manager
+### Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
-2. In the top-right section of the window, search "https://github.com/Dynamsoft/mrz-scanner-spm"
+2. In the top-right section of the window, search "https://github.com/Dynamsoft/capture-vision-spm"
 
-3. Select `mrz-scanner-spm`, choose `Exact version`, enter **3.0.5200**, then click **Add Package**.
+3. Select `capture-vision-spm`, choose `Exact version`, enter **2.4.2000**, then click **Add Package**.
 
-4. Check all the **xcframeworks** and add them.
+4. Check all the frameworks and add.
 
 ## Build Your First Application
 

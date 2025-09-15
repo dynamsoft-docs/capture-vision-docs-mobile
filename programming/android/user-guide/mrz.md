@@ -12,7 +12,6 @@ noTitleIndex: true
 
 In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision Android SDK.
 
-> [!Note]
 > This is the guide for developing a full customizable MRZ scanning application. If you'd like to start with a Ready-to-Use component, you can read [MRZScanner documentation](/mrz-scanner/docs/mobile/programming/android/user-guide/index.html){:target="_blank"} instead.
 
 - [Android User Guide for MRZ Integration](#android-user-guide-for-mrz-integration)
@@ -37,15 +36,14 @@ The Machine Readable Travel Documents (MRTD) standard specified by the Internati
 
 Currently, the SDK supports three types of MRTD:
 
-  > [!Note]
-  > If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
+> Note: If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
 
 ### ID (TD1 Size)
 
 The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containing 30 characters.
 
 <div>
-   <img src="../../assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
 </div>
 
 ### ID (TD2 Size)
@@ -53,7 +51,7 @@ The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containi
 The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
 
 <div>
-   <img src="../../assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
 </div>
 
 ### Passport (TD3 Size)
@@ -61,7 +59,7 @@ The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each li
 The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
 
 <div>
-   <img src="../../assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
 </div>
 
 ## Requirements
@@ -72,61 +70,28 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ## Add the SDK
 
-1. Open the file `[App Project Root Path]\settings.gradle` and add the Maven repository:
+1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
-   <div class="sample-code-prefix"></div>
-   >- groovy
-   >- kts
-   >
-   >1. 
-   ```groovy
-   dependencyResolutionManagement {
-      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-      repositories {
-             google()
-             mavenCentral()
-             maven {
+    ```groovy
+    allprojects {
+        repositories {
+            maven {
                 url "https://download2.dynamsoft.com/maven/aar"
-             }
-      }
-   }
-   ```
-   2. 
-   ```kotlin
-   dependencyResolutionManagement {
-      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-      repositories {
-             google()
-             mavenCentral()
-             maven {
-                url = uri("https://download2.dynamsoft.com/maven/aar")
-             }
-      }
-   }
-   ```
+            }
+        }
+    }
+    ```
 
-  > [!Note]
-  >
-  > If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
+2. Add the references in the dependencies:
 
-2. Open the file `[App Project Root Path]\app\build.gradle` and add the dependencies:
+    ```groovy
+    dependencies {
+        implementation 'com.dynamsoft:dynamsoftcapturevisionbundle:2.6.1003'
+        implementation 'com.dynamsoft:dynamsoftmrz:3.4.20'
+    }
+    ```
 
-   <div class="sample-code-prefix"></div>
-   >- groovy
-   >- kts
-   >
-   >1. 
-   ```groovy
-   dependencies {
-      implementation 'com.dynamsoft:mrzscannerbundle:3.0.5000'
-   }
-   ```
-   2. 
-   ```kotlin
-   dependencies {
-      implementation("com.dynamsoft:mrzscannerbundle:3.0.5000")
-   }
-   ```
+    > Read more about the modules of [dynamsoftcapturevisionbundle](../api-reference/index.md)
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -134,7 +99,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 In this section, we will explain how to create a `HelloWorld` implementation similar to our simple `MRZScanner` app for reading the MRZ zone from camera video input.
 
-> [!Note]
+>Note:
 >
 >- Android Studio 2024.1.1 is used here in this guide.
 >- You can get similar source code from
@@ -147,8 +112,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 2. Choose the correct template for your project. In this sample, we use **Empty Views Activity**.
 
 3. When prompted, set your app name to  `HelloWorld` and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-
-    > [!Note]
+    > Note:
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
 
@@ -176,10 +140,10 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    }
    ```
 
-    > [!Note]  
-    >
-    >- The license string here grants a time-limited free trial which requires network connection to work.
-    >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=android" target="_blank">Trial License link</a>.
+   >Note:  
+   >
+   >- The license string here grants a time-limited free trial which requires network connection to work.
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=android" target="_blank">Trial License link</a>.
 
 ### Initialize the Camera Module
 
@@ -304,11 +268,11 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
     }
     ```
 
-    > [!Note]
-    >
-    >- When using `startCapturing`, set the template to "ReadPassportAndId" to capture both Passports and ID cards.
-    >- If you only need to capture Passports, set the template to "ReadPassport" when calling `startCapturing`.
-    >- To capture only ID cards, set the template to "ReadId" during `startCapturing`.
+>Note:
+>
+>- When using `startCapturing`, set the template to "ReadPassportAndId" to capture both Passports and ID cards.
+>- If you only need to capture Passports, set the template to "ReadPassport" when calling `startCapturing`.
+>- To capture only ID cards, set the template to "ReadId" during `startCapturing`.
 
 ### Extract Parsed Results
 

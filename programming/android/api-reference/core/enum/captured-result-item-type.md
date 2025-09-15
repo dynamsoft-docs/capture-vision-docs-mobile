@@ -26,11 +26,9 @@ public @interface EnumCapturedResultItemType
    public static final int CRIT_TEXT_LINE = 4;
    /** The type of the CapturedResultItem is "detected quad". */
    public static final int CRIT_DETECTED_QUAD = 8;
-   /** The type of the CapturedResultItem is "deskewed image". */
-   public static final int CRIT_DESKEWED_IMAGE = 16;
+   /** The type of the CapturedResultItem is "normalized image". */
+   public static final int CRIT_NORMALIZED_IMAGE = 16;
    /** The type of the CapturedResultItem is "parsed result". */
    public static final int CRIT_PARSED_RESULT = 32;
-   /** The type of the CapturedResultItem is "enhanced image". */
-   public static final int CRIT_ENHANCED_IMAGE = 16;
 }
 ```

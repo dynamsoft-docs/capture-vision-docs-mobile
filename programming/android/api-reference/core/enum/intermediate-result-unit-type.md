@@ -19,8 +19,8 @@ codeAutoHeight: true
 public @interface EnumIntermediateResultUnitType {
     /** No intermediate result. */
     long IRUT_NULL = 0L;
-    /** A scaled full-color image. */
-    long IRUT_SCALED_COLOUR_IMAGE = 1L;
+    /** A full-color image. */
+    long IRUT_COLOUR_IMAGE = 1L;
     /** A color image that has been scaled down for efficiency. */
     long IRUT_SCALED_DOWN_COLOUR_IMAGE = 1L << 1;
     /** A grayscale image derived from the original input. */
@@ -51,8 +51,8 @@ public @interface EnumIntermediateResultUnitType {
     long IRUT_CANDIDATE_BARCODE_ZONES = 1L << 14;
     /** Barcodes that have been localized but not yet decoded. */
     long IRUT_LOCALIZED_BARCODES = 1L << 15;
-    /** Barcode images scaled up or down for improving speed, readability or decoding accuracy. */
-    long IRUT_SCALED_BARCODE_IMAGE = 1L << 16;
+    /** Barcode images scaled up for improved readability or decoding accuracy. */
+    long IRUT_SCALED_UP_BARCODE_IMAGE = 1L << 16;
     /** Images of barcodes processed to resist deformation and improve decoding success. */
     long IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE = 1L << 17;
     /** Barcode images that have been complemented. */
@@ -71,16 +71,14 @@ public @interface EnumIntermediateResultUnitType {
     long IRUT_LOCALIZED_TEXT_LINES = 1L << 24;
     /** Successfully recognized text lines. */
     long IRUT_RECOGNIZED_TEXT_LINES = 1L << 25;
-    /** Successfully deskewed images. */
-    long IRUT_DESKEWED_IMAGES = 1L << 26;
+    /** Successfully normalized images. */
+    long IRUT_NORMALIZED_IMAGES = 1L << 26;
     /** Detected short lines. */
     long IRUT_SHORT_LINES = 1L << 27;
     /** Recognized raw text lines. */
     public static final long IRUT_RAW_TEXT_LINES = 1L << 28;
     /**Detected logic lines.*/
     public static final long IRUT_LOGIC_LINES = 1L << 29;
-    /**Detected logic lines.*/
-    public static final long IRUT_ENHANCED_IMAGE = 1L << 30;
     /** A mask to select all types of intermediate results. */
     long IRUT_ALL = 0xFFFFFFFFFFFFFFFF;
 }

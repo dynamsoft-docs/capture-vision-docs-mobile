@@ -34,10 +34,8 @@ typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
    DSRegionObjectElementTypeRecognizedTextLine = 4,
    /**The type of subclass DetectedQuadElement.*/
    DSRegionObjectElementTypeDetectedQuad = 5,
-   /**The type of subclass DeskewedImageElement.*/
-   DSRegionObjectElementTypeDeskewedImage = 6,
-   /**The type of subclass EnhancedImageElement.*/
-   DSRegionObjectElementTypeEnhancedImage = 7
+   /**The type of subclass NormalizedImageElement.*/
+   DSRegionObjectElementTypeNormalizedImage = 6
 };
 ```
 >
@@ -56,9 +54,7 @@ public enum RegionObjectElementType : Int
    recognizedTextLine = 4,
    /**The type of subclass DetectedQuadElement.*/
    detectedQuad = 5,
-   /**The type of subclass DeskewedImageElement.*/
-   deskewedImage = 6
-   /**The type of subclass EnhancedImageElement.*/
-   enhancedImage = 7
+   /**The type of subclass NormalizedImageElement.*/
+   normalizedImage = 6
 }
 ```

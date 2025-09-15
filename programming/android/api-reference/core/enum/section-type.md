@@ -32,9 +32,7 @@ public @interface EnumSectionType
    public static final int ST_TEXT_LINE_RECOGNITION = 5;
    /**The result is output by "document detection" section.*/
    public static final int ST_DOCUMENT_DETECTION = 6;
-   /**The result is output by "document deskewing" section.*/
-   public static final int ST_DOCUMENT_DESKEWING = 7;
-   /**The result is output by "document enhancement" section.*/
-   public static final int ST_IMAGE_ENHANCEMENT = 8;
+   /**The result is output by "document normalization" section.*/
+   public static final int ST_DOCUMENT_NORMALIZATION = 7;
 }
 ```

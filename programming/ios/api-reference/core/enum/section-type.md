@@ -59,9 +59,7 @@ public enum SectionType : Int
    textLineRecognition = 5,
    /**The result is output by "document detection" section.*/
    documentDetection = 6,
-   /**The result is output by "document deskewing" section.*/
-   documentDeskewing = 7,
-   /**The result is output by "document enhancement" section.*/
-   documentEnhancement = 8
+   /**The result is output by "document normalization" section.*/
+   documentNormalization = 7
 }
 ```

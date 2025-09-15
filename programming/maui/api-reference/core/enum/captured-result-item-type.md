@@ -23,18 +23,16 @@ breadcrumbText: CapturedResultItemType
 public enum EnumCapturedResultItemType
 {
     /** The type of the CapturedResultItem is "original image". */
-    OriginalImage = 1 << 0,
+    CRIT_ORIGINAL_IMAGE = 1 << 0,
     /** The type of the CapturedResultItem is "barcode". */
-    Barcode = 1 << 1,
+    CRIT_BARCODE = 1 << 1,
     /** The type of the CapturedResultItem is "text line". */
-    TextLine = 1 << 2,
+    CRIT_TEXT_LINE = 1 << 2,
     /** The type of the CapturedResultItem is "detected quad". */
-    DetectedQuad = 1 << 3,
+    CRIT_DETECTED_QUAD = 1 << 3,
     /** The type of the CapturedResultItem is "normalized image". */
-    DeskewedImage = 1 << 4,
+    CRIT_NORMALIZED_IMAGE = 1 << 4,
     /** The type of the CapturedResultItem is "parsed result". */
-    ParsedResult = 1 << 5,
-    /** The type of the CapturedResultItem is "Enhanced image". */
-    EnhancedImage = 1 << 6
+    CRIT_PARSED_RESULT = 1 << 5
 }
 ```

@@ -4,19 +4,4 @@ useGroupedVersion: true
 #   - latest version
 
 version_info_list_mobile:
-  - value: latest version
   - value: 2.x
-    child:
-      - 2.6.1004_ios
-      - 2.6.1003_android
-      - 2.6.1003_ios
-      - 2.6.1002_android
-      - 2.6.1002_ios
-      - 2.6.1001_android
-      - 2.6.1001_ios
-      - 2.6.1000_android
-      - 2.6.1000_ios
-      - 2.4.2000_android
-      - 2.4.2000_ios
-      - 2.2.3000_android
-      - 2.2.3000_ios

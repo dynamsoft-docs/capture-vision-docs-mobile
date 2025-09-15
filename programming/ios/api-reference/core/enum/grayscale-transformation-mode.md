@@ -31,9 +31,7 @@ typedef NS_ENUM(NSInteger, DSGrayscaleTransformationMode)
    /** Skips grayscale transformation. */
    DSGrayscaleTransformationModeSkip     = 0x00,
    /** Reserved setting for grayscale transformation mode. */
-   DSGrayscaleTransformationModeRev      = -2147483648,
-   /** Placeholder value with no functional meaning. */
-   DSGrayscaleTransformationModeEnd      = 0xFFFFFFFF
+   DSGrayscaleTransformationModeRev      = -2147483648
 };
 ```
 >
@@ -50,7 +48,5 @@ public enum GrayscaleTransformationMode : Int
    skip     = 0x00
    /** Reserved setting for grayscale transformation mode. */
    rev      = -2147483648
-   /** Placeholder value with no functional meaning. */
-   end      = 0xFFFFFFFF
 }
 ```

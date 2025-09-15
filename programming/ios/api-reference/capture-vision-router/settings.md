@@ -296,19 +296,14 @@ Returns an object that contains settings for the specified `CaptureVisionTemplat
 >1. 
 ```objc
 - (nullable NSString *)outputSettings:(NSString *)templateName
-                 includeDefaultValues:(BOOL)includeDefaultValues
                                 error:(NSError * _Nullable * _Nullable)error
 ```
 2. 
 ```swift
-func outputSettings(_ templateName:String, includeDefaultValues:Bool) throws -> String
+func outputSettings(_ templateName:String) throws -> String
 ```
 
 **Parameters**
-
-`templateName`: The name of the template that you want to output.
-
-`includeDefaultValues`: A bool value that indicates whether to include default values in the output.
 
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
@@ -335,22 +330,17 @@ Output a JSON file containing the settings for the specified `CaptureVisionTempl
 ```objc
 - (BOOL)outputSettingsToFile:(NSString *)templateName
                         file:(NSString *)file
-        includeDefaultValues:(BOOL)includeDefaultValues
                        error:(NSError * _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
-func outputSettingsToFile(_ templateName:String, file:String, includeDefaultValues:Bool) throws -> BOOL
+func outputSettingsToFile(_ templateName:String, file:String) throws -> BOOL
 ```
 
 **Parameters**
 
-`templateName`: The name of the template that you want to output.
-
-`file`: The file path and name where the template will be output and saved.
-
-`includeDefaultValues`: A bool value that indicates whether to include default values in the output.
-
+`templateName`: The name of the template that you want to output.  
+`file`: The file path and name where the template will be output and saved.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**

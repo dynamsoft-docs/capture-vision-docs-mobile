@@ -14,7 +14,7 @@ The `DSPredetectedRegionElement` class extends the `DSRegionObjectElement` class
 
 ## Definition
 
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+*Assembly:* DynamsoftCore.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -29,14 +29,11 @@ The `DSPredetectedRegionElement` class extends the `DSRegionObjectElement` class
 class PredetectedRegionElement : RegionObjectElement
 ```
 
-## Methods
+## Attributes
 
-| Method | Description |
-| ------ | ----------- |
+| Attributes | Description |
+| ---------- | ----------- |
 | [`getModeName`](#getmodename) | Gets the name of the detection mode used to detect this region element. |
-| [`setLocation`](#setlocation) | Sets the location of the pre-detected region object. |
-| [`getLabelId`](#getlabelid) | Gets the label ID of the pre-detected region object. |
-| [`getLabelName`](#getlabelname) | Gets the label name of the pre-detected region object. |
 
 ### getModeName
 
@@ -60,74 +57,3 @@ The name of the detection mode used to detect this region element. It can be one
 ```swift
 func getModeName() -> String
 ```
-
-**Return Value**
-
-The name of the detection mode used to detect this region element.
-
-### setLocation
-
-Sets the location of the pre-detected region object.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (NSInteger)setLocation:(DSQuadrilateral *)location;
-```
-2. 
-```swift
-func setLocation(_ location: Quadrilateral?)
-```
-
-**Parameters**
-
-`location`: The location info of the element that defined in DSQuadrilateral.
-
-**Return Value**
-
-The location info of the element that defined in DSQuadrilateral.
-
-### getLabelId
-
-Gets the label ID of this pre-detected region.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (NSInteger)getLabelId;
-```
-2. 
-```swift
-func getLabelId() -> Int
-```
-
-**Return Value**
-
-The label ID of this pre-detected region.
-
-### getLabelName
-
-Gets the label name of this pre-detected region element.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (NSString *)getLabelName;
-```
-2. 
-```swift
-func getLabelName() -> String
-```
-
-**Return Value**
-
-The label name of this pre-detected region element.

@@ -74,14 +74,15 @@ Related APIs:
 
 Callback methods that are related to document scanning:
 
-- [`onProcessedDocumentResultReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onprocesseddocumentresultreceived): The callback of document boundary detection. The result you received in the callback method is a [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object, which contains the detected boundaries, the deskewed images, and the enhanced images from the processed image.
+- [`onDetectedQuadsReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondetectedquadsreceived): The callback of document boundary detection. The result you received in the callback method is a [`DetectedQuadResult`]({{ site.ddn_android_api }}detected-quads-result.html) object, which contains all the detected quads from the processed image.
+- [`onNormalizedImagesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onnormalizedimagesreceived): The callback of image normalization. The result you received in the callback method is a [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html) object, which contains all the normalized images from the processed image.
 
 Related APIs:
 
-- [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html): A combination of all kinds of document processing results.
+- [`DetectedQuadResult`]({{ site.ddn_android_api }}detected-quads-result.html): All quads that detected from the processed image.
 - [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html): The boundary detection result of a single document page.
-- [`DeskewedImageResultItem`]({{ site.ddn_android_api }}deskewed-image-result-item.html): The deskewing result of a single document page.
-- [`EnhancedImageResultItem`]({{ site.ddn_android_api }}enhanced-image-result-item.html): The enhanced result of a single document page.
+- [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html): All normalized images that deskewed from the processed image.
+- [`NormalizedImageResultItem`]({{ site.ddn_android_api }}normalized-image-result-item.html): The deskewing result of a single document page.
 
 #### MRZ Scanning
 

@@ -75,10 +75,22 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    DSErrorParameterValueInvalid            = -10038,
    /**The domain of your current site does not match the domain bound in the current product key.*/
    DSErrorDomainNotMatch                   = -10039,
+   /**The reserved info does not match the reserved info bound in the current product key.*/
+   DSErrorReservedInfoNotMatch             = -10040,
    /**The license key does not match the license content.*/
    DSErrorLicenseKeyNotMatch               = -10043,
+   /**Failed to request the license content.*/
+   DSErrorRequestFailed                    = -10044,
+   /**Failed to init the license.*/
+   DSErrorLicenseInitFailed                = -10045,
    /**Failed to set mode's argument.*/
    DSErrorSetModeArgumentError             = -10051,
+   /**The license content is invalid.*/
+   DSErrorLicenseContentInvalid            = -10052,
+   /**The license key is invalid.*/
+   DSErrorLicenseKeyInvalid                = -10053,
+   /**The license key has no remaining quota.*/
+   DSErrorLicenseDeviceRunsOut             = -10054,
    /**Failed to get mode's argument.*/
    DSErrorGetModeArgumentError             = -10055,
    /**The Intermediate Result Types license is invalid.*/
@@ -123,18 +135,10 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    DSErrorPDFLibraryLoadFailed             = -10075,
    /*The license is initialized successfully but detected invalid content in your key.*/
    DSErrorLicenseWarning                   = -10076,
-   /*One or more unsupported JSON keys were encountered and ignored from the template.*/
-   DSErrorUnsupportedJsonKeyWarning        = -10077,
-   /**Model file is not found*/
-   DSErrorModelFileNotFount                = -10078,
-   /**[PDF] No license found.*/
-   DSErrorPDFLicenseNotFound               = -10079,
-   /**The rectangle is invalid.*/
-   DSErrorRectInvalid                      = -10080,
-   /*The template version is incompatible. Please use a compatible template.*/
-   DSErrorTemplateVersionIncompatible      = -10081,
    /**No license.*/
    DSErrorNoLicense                        = -20000,
+   /**The handshake code is invalid. */
+   DSErrorHandshakeCodeInvalid             = -20001,
    /**Failed to read or write license cache. */
    DSErrorLicenseBufferFailed              = -20002,
    /**Falied to synchronize license info wirh license tracking server. */
@@ -147,12 +151,10 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    DSErrorInstanceCountOverLimit           = -20008,
    /**Trial License*/
    DSErrorTrialLicense                     = -20010,
-   /*License authentication failed: quota exceeded.*/
-   DSErrorLicenseAuthQuotaExceeded         = -20013,
-   /**License restriction: the number of results has exceeded the allowed limit.*/
-   DSErrorLicenseResultsLimitExceeded      = -20014,
    /**The license is not valid for current version*/
    DSErrorLicenseVersionNotMatch           = -20011,
+   /**Failed to reach License Tracking Server.*/
+   DSErrorFailedToReachDLS                 = -20200
    /** -30000~-39999: DBR error code. */
    /** The barcode format is invalid. */
    DSErrorBarcodeFormatInvalid             = -30009,
@@ -174,6 +176,10 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    DSErrorPostalCodeLicenseInvalid         = -30047,
    /** The DPM license is invalid. */
    DSErrorDPMLicenseInvalid                = -30048,
+   /** The frame decoding thread already exists. */
+   DSErrorFrameDecodingThreadExists        = -30049,
+   /** Failed to stop the frame decoding thread. */
+   DSErrorStopDecodingThreadFailed         = -30050,
    /** The Maxicode license is invalid. */
    DSErrorMaxiCodeLicenseInvalid           = -30057,
    /** The GS1 Databar license is invalid. */
@@ -187,6 +193,8 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /*[Barcode Reader] No license found.*/
    DSErrorDBRLicenseNotFound               = -30063,
    /** -40000~-49999: DLR error code */
+   /** Character Model file is not found. */
+   DSErrorCharacterModelFileNotFound       = -40100,
    /** There is a conflict in the layout of TextLineGroup. */
    DSErrorTextLineGroupLayoutConflict      = -40101,
    /** There is a conflict in the regex of TextLineGroup. */
@@ -197,7 +205,7 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
    /**No content has been detected. */
    DSErrorContentNotFound                  = -50056,
    /*The quardrilateral is invalid. */
-   DSErrorQuadrilateralInvalid            = -50057,
+   DSErrorQuardrilateralInvalid            = -50057,
    /*[Document Normalizer] No license found.*/
    DSErrorDDNLicenseNotFound               = -50058,
    /** -60000~-69999: DCE error code. */
@@ -298,10 +306,22 @@ public enum ErrorCode : Int
    parameterValueInvalid            = -10038
    /**The domain of your current site does not match the domain bound in the current product key.*/
    domainNotMatch                   = -10039
+   /**The reserved info does not match the reserved info bound in the current product key.*/
+   reservedInfoNotMatch             = -10040
    /**The license key does not match the license content.*/
    licenseKeyNotMatch               = -10043
+   /**Failed to request the license content.*/
+   requestFailed                    = -10044
+   /**Failed to init the license.*/
+   licenseInitFailed                = -10045
    /**Failed to set mode's argument.*/
    setModeArgumentError             = -10051
+   /**The license content is invalid.*/
+   licenseContentInvalid            = -10052
+   /**The license key is invalid.*/
+   licenseKeyInvalid                = -10053
+   /**The license key has no remaining quota.*/
+   licenseDeviceRunsOut             = -10054
    /**Failed to get mode's argument.*/
    getModeArgumentError             = -10055
    /**The Intermediate Result Types license is invalid.*/
@@ -346,16 +366,10 @@ public enum ErrorCode : Int
    pdfLibraryLoadFailed             = -10075
    /*The license is initialized successfully but detected invalid content in your key.*/
    licenseWarning                   = -10076
-   /*One or more unsupported JSON keys were encountered and ignored from the template.*/
-   unsupportedJsonKeyWarning        = -10077,
-   /**Model file is not found*/
-   modelFileNotFount                = -10078,
-   /**[PDF] No license found.*/
-   pdfLicenseNotFound               = -10079,
-   /**The rectangle is invalid.*/
-   rectInvalid                      = -10080,
    /**No license.*/
    noLicense                        = -20000
+   /**The handshake code is invalid. */
+   handshakeCodeInvalid             = -20001
    /**Failed to read or write license cache. */
    licenseBufferFailed              = -20002
    /**Falied to synchronize license info wirh license tracking server. */
@@ -370,14 +384,48 @@ public enum ErrorCode : Int
    trialLicense                     = -20010
    /**The license is not valid for current version*/
    licenseVersionNotMatch           = -20011
+   /**Failed to reach License Tracking Server.*/
+   failedToReachDLS                 = -20200
    /** -30000~-39999: DBR error code. */
    /** The barcode format is invalid. */
    barcodeFormatInvalid             = -30009
+   /** The QR Code license is invalid. */
+   qrLicenseInvalid                 = -30016
+   /** The 1D Barcode license is invalid. */
+   1DLicenseInvalid                 = -30017
+   /** The PDF417 license is invalid. */
+   pdf417LicenseInvalid             = -30019
+   /** The DATAMATRIX license is invalid. */
+   dataMatrixLicenseInvalid         = -30020
    /** The custom module size is invalid. */
    customModuleSizeInvalid          = -30025
+   /** The AZTEC license is invalid. */
+   aztecLicenseInvalid              = -30041
+   /** The Patchcode license is invalid. */
+   patchCodeLicenseInvalid          = -30046
+   /** The Postal code license is invalid. */
+   postalCodeLicenseInvalid         = -30047
+   /** The DPM license is invalid. */
+   dpmLicenseInvalid                = -30048
+   /** The frame decoding thread already exists. */
+   frameDecodingThreadExists        = -30049
+   /** Failed to stop the frame decoding thread. */
+   stopDecodingThreadFailed         = -30050
+   /** The Maxicode license is invalid. */
+   maxiCodeLicenseInvalid           = -30057
+   /** The GS1 Databar license is invalid. */
+   gs1DatabarLicenseInvalid         = -30058
+   /** The GS1 Composite code license is invalid. */
+   gs1CompositeLicenseInvalid       = -30059
+   /** The DotCode license is invalid. */
+   dotCodeLicenseInvalid            = -30061
+   /** The Pharmacode license is invalid. */
+   pharmaCodeLicenseInvalid         = -30062
    /*[Barcode Reader] No license found.*/
    dbrLicenseNotFound               = -30063
    /** -40000~-49999: DLR error code */
+   /** Character Model file is not found. */
+   characterModelFileNotFound       = -40100
    /** There is a conflict in the layout of TextLineGroup. */
    textLineGroupLayoutConflict      = -40101
    /** There is a conflict in the regex of TextLineGroup. */
@@ -415,6 +463,18 @@ public enum ErrorCode : Int
    fullCodeEmpty                    = -90004
    /** Failed to preprocess the full code string */
    fullCodePreprocessFailed         = -90005
+   /** The license for parsing South Africa Driver License is invalid. */
+   zadlLicenseInvalid               = -90006
+   /** The license for parsing North America DL/ID is invalid. */
+   aamvadlidLicenseInvalid          = -90007
+   /** The license for parsing Aadhaar is invalid. */
+   aadhaarLicenseInvalid            = -90008
+   /** The license for parsing Machine Readable Travel Documents is invalid. */
+   mrtdLicenseInvalid               = -90009
+   /** The license for parsing Vehicle Identification Number is invalid. */
+   vinLicenseInvalid                = -90010
+   /** The license for parsing customized code type is invalid. */
+   customizedCodeTypeLicenseInvalid = -90011
    /*[Code Parser] No license found.*/
    dcpLicenseNotFound               = -90012
 }

@@ -16,42 +16,63 @@ The `CapturedResult` class represents the result of a capture operation on an im
 >
 > - [DecodedBarcodesResult]({{ site.dbr_android_api }}decoded-barcodes-result.html)
 > - [RecognizedTextLinesResult]({{ site.dlr_android_api }}recognized-text-lines-result.html)
-> - [ProcessedDocumentResult]({{ site.ddn_android_api }}processed-document-result.html)
+> - [DetectedQuadsResult]({{ site.ddn_android_api }}detected-quads-result.html)
+> - [NormalizedImagesResult]({{ site.ddn_android_api }}normalized-images-result.html)
 > - [ParsedResults]({{ site.dcp_android_api }}parsed-result.html)
 
 ## Definition
 
 *Namespace:* com.dynamsoft.cvr
 
-*Assembly:* DynamsoftCaptureVisionBundle.aar
+*Assembly:* DynamsoftCaptureVisionRouter.aar
 
 ```java
 class CapturedResult
 ```
 
-## Methods
+## Attributes
 
 | Method | Description |
 | ------ | ----------- |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the hash id of the original image. You can use this ID to get the original image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | The [ImageTag]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) associated with the original image. |
 | [`getItems`](#getitems) | Get an array of `CapturedResultItems`, which are the basic unit of the captured results. A `CapturedResultItem` can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image or a parsed result. View CapturedResultItemType for all available types. |
+| [`getrotationTransformMatrix`](#getrotationtransformmatrix) | Get the  rotation transformation matrix of the original image relative to the rotated image. |
+| [`getErrorCode`](#geterrorcode) | Get the error code associated with the capture result. |
+| [`getErrorMessage`](#geterrormessage) | Get the error message associated with the capture result. |
 | [`getDecodedBarcodesResult`](#getdecodedbarcodesresult) | Get a [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html) object that contains all the [`BarcodeResultItems`]({{ site.dbr_android_api }}barcode-result-item.html) in the `CapturedResult`. |
 | [`getRecognizedTextLinesResult`](#getrecognizedtextlinesresult) | Get a [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html) object that contains all the [`TextLineResultItems`]({{ site.dlr_android_api }}text-line-result-item.html) in the `CapturedResult`. |
-| [`getProcessedDocumentResult`](#getprocesseddocumentresult) | Get a [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object that contains all the results with the type of deskewed image, detected quads, and enhanced images. |
+| [`getDetectedQuadsResult`](#getdetectedquadsresult) | Get a [`DetectedQuadsResult`]({{ site.ddn_android_api }}detected-quads-result.html) object that contains all the [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html) in the `CapturedResult`. |
+| [`getNormalizedImagesResult`](#getnormalizedimagesresult) | Get a [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html) object that contains all the [`NormalizedImageResultItem`]({{ site.ddn_android_api }}normalized-image-result-item.html) in the `CapturedResult`. |
 | [`getParsedResult`](#getparsedresult) | Get the parsed result. |
 
-The following methods are inherited from [`CapturedResultBase`]({{ site.dcv_android_api }}core/basic-structures/captured-result-base.html):
+### getOriginalImageHashId
 
-| Method | Description |
-| ------ | ----------- |
-| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/basic-structures/captured-result-base.html#getoriginalimagehashid) | Gets the hash id of the original image. |
-| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/basic-structures/captured-result-base.html#getoriginalimagetag) | Gets the [ImageTag](image-tag.md) of the original image. |
-| [`getRotationTransformMatrix`]({{ site.dcv_android_api }}core/basic-structures/captured-result-base.html#getrotationtransformmatrix) | Gets the rotation transformation matrix of the original image relative to the rotated image. |
-| [`getErrorCode`]({{ site.dcv_android_api }}core/basic-structures/captured-result-base.html#geterrorcode) | Gets the error code of this result. |
-| [`getErrorMessage`]({{ site.dcv_android_api }}core/basic-structures/captured-result-base.html#geterrormessage) | Gets the error message of this result. |
+Get the hash ID of the original image which can be used to get the original image via the [IntermediateResultManager]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
+
+```java
+String getOriginalImageHashId();
+```
+
+**Return Value**
+
+The hash id of the original image.
+
+### getOriginalImageTag
+
+Get the [ImageTag]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) of the original image that records information such as the image ID of the original image.
+
+```java
+ImageTag getOriginalImageTag();
+```
+
+**Return Value**
+
+The tag of the original image that records the information of the original image.
 
 ### getItems
 
-Get an array of [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html), which is the basic unit of the captured results. A [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html) for all available types.
+Get an array of [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html), which is the basic unit of the captured results. A [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html) for all available types.
 
 ```java
 CapturedResultItem[] getItems();
@@ -60,6 +81,34 @@ CapturedResultItem[] getItems();
 **Return Value**
 
 An array containing the [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) objects within the captured result.
+
+### getRotationTransformMatrix
+
+Get the rotation transformation matrix of the original image relative to the rotated image.
+
+```java
+Matrix getRotationTransformMatrix();
+```
+
+**Return Value**
+
+Return the rotation transformation matrix of the original image relative to the rotated image.
+
+### getErrorCode
+
+Get the error code if an error occurs when processing the image.
+
+```java
+int getErrorCode();
+```
+
+### getErrorMessage
+
+Get the error message if an error occurs when processing the image.
+
+```java
+String getErrorMessage();
+```
 
 ### getDecodedBarcodesResult
 
@@ -85,21 +134,29 @@ RecognizedTextLinesResult getRecognizedTextLinesResult();
 
 A [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html) that contains all the [`TextLineResultItems`]({{ site.dlr_android_api }}text-line-result-item.html) of the `CapturedResult`.
 
-### getProcessedDocumentResult
+### getDetectedQuadsResult
 
-Get a [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object that contains all the results with the type of deskewed image, detected quads, and enhanced images.
+Get all the quad detection results of the `CapturedResult`.
 
 ```java
-ProcessedDocumentResult getProcessedDocumentResult();
+DetectedQuadsResult getDetectedQuadsResult();
 ```
 
 **Return Value**
 
-A [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object. It consists of:
+A [`DetectedQuadsResult`]({{ site.ddn_android_api }}detected-quads-result.html) that contains all the [`DetectedQuadResultItems`]({{ site.ddn_android_api }}detected-quad-result-item.html) of the `CapturedResult`.
 
-- [`DeskewedImageResultItem`]({{ site.ddn_android_api }}deskewed-image-result-item.html)
-- [`DetectedQuadResultItem`]({{ site.ddn_android_api }}detected-quad-result-item.html)
-- [`EnhancedImageResultItem`]({{ site.ddn_android_api }}enhanced-image-result-item.html)
+### getNormalizedImagesResult
+
+Get all the image normalization results of the `CapturedResult`.
+
+```java
+NormalizedImagesResult getNormalizedImagesResult();
+```
+
+**Return Value**
+
+A [`NormalizedImagesResult`]({{ site.ddn_android_api }}normalized-images-result.html) that contains all the [`NormalizedImageResultItems`]({{ site.ddn_android_api }}normalized-image-result-item.html) of the `CapturedResult`.
 
 ### getParsedResult
 

@@ -46,8 +46,7 @@ The Machine Readable Travel Documents (MRTD) standard specified by the Internati
 
 Currently, the SDK supports three types of MRTD:
 
-> [!Note]
-> If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
+> Note: If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
 
 ### ID (TD1 Size)
 
@@ -77,7 +76,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ### .Net
 
-- 8.0 and 9.0.
+- .NET 7.0, 8.0 and 9.0.
 
 ### Android
 
@@ -88,7 +87,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 ### iOS
 
-- Supported OS: **iOS 13.0** or higher.
+- Supported OS: **iOS 11.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Visual Studio 2022 for Mac and Xcode 14.3+ recommended.
 
@@ -109,7 +108,8 @@ You need to add the library via the project file and complete additional steps f
         ...
         <ItemGroup>
             ...
-            <PackageReference Include="Dynamsoft.MRZScannerBundle.Maui" Version="3.0.5200" />
+            <PackageReference Include="Dynamsoft.CaptureVisionBundle.Maui" Version="2.6.1001" />
+            <PackageReference Include="Dynamsoft.MRZ.Maui" Version="3.4.201" />
         </ItemGroup>
     </Project>
     ```
@@ -120,18 +120,18 @@ You need to add the library via the project file and complete additional steps f
     dotnet build
     ```
 
-> [!Note]
+> Note:
 >
 > - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.200\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
 > - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
 
 ## Build Your MRZ Scanner App
 
-Now you will learn how to create a simple mrz scanner using Dynamsoft Capture Vision MAUI SDK.
+Now you will learn how to create a SimpleMRZScanner using Dynamsoft Capture Vision MAUI SDK.
 
->[!Note]
+>Note:
 >
-> - You can get the similar source code of the ScanMRZ app from the following link
+> - You can get the similar source code of the SimpleMRZScanner app from the following link
 >   - [C#](https://github.com/Dynamsoft/mrz-scanner-mobile-maui/tree/main/MRZScanner){:target="_blank"}.
 
 ### Set up Development Environment
@@ -144,152 +144,261 @@ If you are a beginner with MAUI, please follow the guide on the <a href="https:/
 
 1. Open the Visual Studio and select **Create a new project**.
 2. Select **.Net MAUI App** and click **Next**.
-3. Name the project **ScanMRZ**. Select a location for the project and click **Next**.
-4. Select **.Net 9.0** and click **Create**.
+3. Name the project **SimpleMRZScanner**. Select a location for the project and click **Next**.
+4. Select **.Net 7.0** and click **Create**.
 
 #### Visual Studio for Mac
 
 1. Open Visual Studio and select **New**.
 2. Select **Multiplatform > App > .Net MAUI App > C#** and click **Continue**.
-3. Select **.Net 9.0** and click **Continue**.
-4. Name the project **ScanMRZ** and select a location, click **Create**.
+3. Select **.Net 7.0** and click **Continue**.
+4. Name the project **SimpleMRZScanner** and select a location, click **Create**.
 
 ### Include the Library
 
 Please view the [installation section](#installation) on how to add the library.
 
-Add the following code to the **App.xaml.cs** file to use the library:
+### Initialize MauiProgram
+
+In **MauiProgram.cs**, add a custom handler for the [`CameraView`]({{ site.dce_maui_api }}camera-view.html) control. Specifically, it maps the [`CameraView`]({{ site.dce_maui_api }}camera-view.html) type to the `CameraViewHandler` type.
 
 ```c#
-using Dynamsoft.MRZScannerBundle.Maui;
+namespace SimpleMRZScanner;
+using Microsoft.Extensions.Logging;
+using Dynamsoft.CameraEnhancer.Maui;
+using Dynamsoft.CameraEnhancer.Maui.Handlers;
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            })
+            .ConfigureMauiHandlers(handlers =>
+            {
+                handlers.AddHandler(typeof(CameraView), typeof(CameraViewHandler));
+            });
+
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
+
+        return builder.Build();
+    }
+}
 ```
 
-### Add Your Code for MRZ Scanning
+### License Activation
 
-1. Edit the **MainPage.xaml** file.
+The Dynamsoft Capture Vision SDK needs a valid license to work. Please refer to the [Licensing](#licensing) section for more info on how to obtain a license.
 
-   Replace your **MainPage.xaml** with the following code.
+Go to **MainPage.xaml.cs**. Add the following code to activate the license:
 
-   ```c#
-   using System.Collections.ObjectModel;
-   using Dynamsoft.MRZScannerBundle.Maui;
-   
-   namespace ScanMRZ;
-   
-   public partial class MainPage : ContentPage
-   {
-       public ObservableCollection<TableItem> TableItems { get; set; } = new();
-   
-       public MainPage()
-       {
-           InitializeComponent();
-           BindingContext = this;
-       }
-   
-       private async void OnScanMRZ(object sender, EventArgs e)
-       {
-           // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here grants a time-limited free trial which requires network connection to work.
-           // You can request a 30-day trial license via the Request a Trial License page https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=maui.
-           var config = new MRZScannerConfig("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
-           var result = await MRZScanner.Start(config);
-   
-           TableItems.Clear();
-   
-           if (result.ResultStatus == EnumResultStatus.Finished && result.Data is not null)
-           {
-               var data = result.Data;
-   
-               TableItems.Add(new TableItem { Key = "Name", Value = $"{data.FirstName} {data.LastName}" });
-               TableItems.Add(new TableItem { Key = "Sex", Value = data.Sex.ToUpperInvariant() });
-               TableItems.Add(new TableItem { Key = "Age", Value = data.Age.ToString() });
-               TableItems.Add(new TableItem { Key = "Document Type", Value = data.DocumentType });
-               TableItems.Add(new TableItem { Key = "Document Number", Value = data.DocumentNumber });
-               TableItems.Add(new TableItem { Key = "Issuing State", Value = data.IssuingState });
-               TableItems.Add(new TableItem { Key = "Nationality", Value = data.Nationality });
-               TableItems.Add(new TableItem { Key = "Date Of Birth (YYYY-MM-DD)", Value = data.DateOfBirth });
-               TableItems.Add(new TableItem { Key = "Date Of Expire (YYYY-MM-DD)", Value = data.DateOfExpire });
-           }
-           else
-           {
-               var msg = result.ResultStatus == EnumResultStatus.Canceled
-                   ? "Scanning canceled"
-                   : result.ErrorString ?? "Unknown error";
-   
-               TableItems.Add(new TableItem { Key = "Result", Value = msg });
-           }
-       }
-   }
-   
-   public class TableItem
-   {
-       public string Key { get; set; }
-       public string Value { get; set; }
-   }
-   ```
+```c#
+namespace SimpleMRZScanner;
+using Dynamsoft.License.Maui;
+using System.Diagnostics;
 
-2. Edit the MainPage.xaml file.
+public partial class MainPage : ContentPage, ILicenseVerificationListener
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        LicenseManager.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
+    }
+    public void OnLicenseVerified(bool isSuccess, string message)
+    {
+        if (!isSuccess)
+        {
+            Debug.WriteLine(message);
+        }
+    }
+}
+```
 
-   Add the following code to the **MainPage.xaml** file:
+### Initialize the Capture Vision SDK
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               x:Class="ScanMRZ.MainPage">
+In the **MainPage.xaml.cs**, add the following code to initialize the Capture Vision SDK:
 
-       <Grid RowDefinitions="*,Auto" Padding="10">
-           <CollectionView Grid.Row="0"
-                           ItemsSource="{Binding TableItems}">
-               <CollectionView.ItemTemplate>
-                   <DataTemplate>
-                       <VerticalStackLayout Padding="5">
-                           <Label Text="{Binding Key}"
-                               FontAttributes="Bold"
-                               FontSize="16"
-                               TextColor="Black" />
-                           <BoxView HeightRequest="1"
-                                   BackgroundColor="LightGray"
-                                   Margin="0,3"/>
-                           <Label Text="{Binding Value}"
-                               FontSize="14"
-                               TextColor="Gray" />
-                           <BoxView HeightRequest="1"
-                                   BackgroundColor="LightGray"
-                                   Margin="0,3"/>
-                       </VerticalStackLayout>
-                   </DataTemplate>
-               </CollectionView.ItemTemplate>
-           </CollectionView>
+```c#
+......
+using Dynamsoft.CaptureVisionRouter.Maui;
+using Dynamsoft.CameraEnhancer.Maui;
+using Dynamsoft.Core.Maui;
+using Dynamsoft.Utility.Maui;
 
-           <Button Grid.Row="1"
-                   x:Name="ScanBtn"
-                   Text="Scan MRZ"
-                   Clicked="OnScanMRZ"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="End"
-                   Margin="0,10,0,0" />
-       </Grid>
-   </ContentPage>
-   ```
+public partial class MainPage : ContentPage, ILicenseVerificationListener, ICapturedResultReceiver
+{
+    CameraEnhancer enhancer;
+    CaptureVisionRouter router;
 
-### Configure the Camera Permission
+    public MainPage()
+    {
+        ......
+
+        // Create an instance of CameraEnhancer
+        enhancer = new CameraEnhancer();
+        // Create an instance of CaptureVisionRouter
+        router = new CaptureVisionRouter();
+        // Bind the router with the created CameraEnhancer
+        router.SetInput(enhancer);
+        // Add the result receiver to receive the textline result and parsed MRZ result
+        router.AddResultReceiver(this);
+        // Add the result filter to verify the result across multiple frames
+        var filter = new MultiFrameResultCrossFilter();
+        filter.EnableResultCrossVerification(EnumCapturedResultItemType.CRIT_TEXT_LINE, true);
+        router.AddResultFilter(filter);
+    }
+}
+```
+
+### Add the CameraView control in the Main Page
+
+In the **MainPage.xaml**, add a [`CameraView`]({{ site.dce_maui_api }}camera-view.html) control:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Dynamsoft.CameraEnhancer.Maui;assembly=Dynamsoft.CaptureVisionRouter.Maui"
+             x:Class="SimpleMRZScanner.MainPage"
+             Title="MainPage">
+    <AbsoluteLayout>
+        <controls:CameraView x:Name="cameraView"
+                             AbsoluteLayout.LayoutBounds="0,0,1,1"
+                             AbsoluteLayout.LayoutFlags="All"/>
+    </AbsoluteLayout>
+</ContentPage>
+```
+
+### Open the Camera and Start Reading MRZ
+
+In this section, we are going to add code to start reading MRZ in the **MainPage.xaml.cs**.
+
+```c#
+......
+
+public partial class MainPage : ContentPage, ILicenseVerificationListener, ICapturedResultReceiver, ICompletionListener
+{
+    ......
+   protected override void OnHandlerChanged()
+    {
+        base.OnHandlerChanged();
+
+        if (this.Handler != null)
+        {
+            enhancer.SetCameraView(cameraView);
+        }
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        // Request camera permission
+        await Permissions.RequestAsync<Permissions.Camera>();
+        // Open camera
+        enhancer?.Open();
+        // Start reading MRZ
+        router?.StartCapturing("ReadPassportAndId", this);
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        // Close camera
+        enhancer?.Close();
+        // Stop reading MRZ
+        router?.StopCapturing();
+    }
+
+    // It is called when StartCapturing is successful
+    public void OnSuccess()
+    {
+        Debug.WriteLine("Success");
+    }
+
+    // It is called when StartCapturing is failed
+    public void OnFailure(int errorCode, string errorMessage)
+    {
+        Debug.WriteLine(errorMessage);
+    }
+}
+```
 
 Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML Text Editor). Add the following lines to request camera permission on iOS platform:
 
 ```xml
 <key>NSCameraUsageDescription</key>
-<string>The APP needs to access your camera.</string>
+<string>The sample needs to access your camera.</string>
+```
+
+### Obtaining Recognized Text Lines and Parsed MRZ
+
+In **MainPage.xaml.cs**, implement [`ICapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive recognized text lines and parsed MRZ result in  [`OnRecognizedTextLinesReceived`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived) and [`OnParsedResultsReceived`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.htmlonparsedresultsreceived) callback function.
+
+```c#
+......
+using Dynamsoft.LabelRecognizer.Maui;
+using Dynamsoft.CodeParser.Maui;
+
+public partial class MainPage : ContentPage, ILicenseVerificationListener, ICapturedResultReceiver, ICompletionListener
+{
+    ......
+    public void OnRecognizedTextLinesReceived(RecognizedTextLinesResult result)
+    {
+        if (result.Items == null)
+        {
+            return;
+        }
+        List<TextLineResultItem> items = result.Items;
+        items.ForEach(item =>
+        {
+            text += item.Text + "\n\n";
+        });
+    }
+
+    public void OnParsedResultsReceived(ParsedResult result)
+    {
+        if (result.Items == null)
+            return;
+        if (result.Items.Count() == 0)
+        {
+            if (text.Length != 0)
+            {
+                Debug.WriteLine("Error: Failed to parse the MRZ text: " + text);
+            }
+        }
+        else
+        {
+
+            Dictionary<string, ParsedField> entry = result.Items[0].ParsedFields;
+            string number = entry.ContainsKey("passportNumber") ? entry["passportNumber"].Value : entry.ContainsKey("documentNumber") ? entry["documentNumber"].Value : "";
+            string firstName = entry.ContainsKey("secondaryIdentifier") ? " " + entry["secondaryIdentifier"].Value : "";
+            string lastName = entry.TryGetValue("primaryIdentifier", out var identifier) ? identifier.Value ?? "" : "";
+            string name = lastName + firstName;
+            // Process the results according to your needs.
+
+            Debug.WriteLine("MRZ Result:\n" + "Number:" + number + "\nName:" + name);
+        }
+    }
+}
 ```
 
 ### Run the Project
 
 Select your device and run the project.
 
-You can get the similar source code of the ScanMRZ app from the following link:
+You can get the similar source code of the SimpleMRZScanner app from the following link:
 
 - [C#](https://github.com/Dynamsoft/mrz-scanner-mobile-maui/tree/main/MRZScanner){:target="_blank"}.
 
-> [!Note] If you are running Android only on Visual Studio Windows, please manually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
+> Note: If you are running Android only on Visual Studio Windows, please manually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
 
 ![Exclude iOS and Windows from targets](../../assets/maui-exclude.png)
 

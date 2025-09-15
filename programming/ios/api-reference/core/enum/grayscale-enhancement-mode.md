@@ -35,9 +35,7 @@ typedef NS_ENUM(NSInteger, DSGrayscaleEnhancementMode)
    /**Reserved setting for image preprocessing mode.*/
    DSGrayscaleEnhancementModeRev = -2147483648,
    /**Skips image preprocessing. */
-   DSGrayscaleEnhancementModeSkip = 0,
-   /**Placeholder value with no functional meaning. */
-   DSGrayscaleEnhancementModeEnd = 0xFFFFFFFF
+   DSGrayscaleEnhancementModeSkip = 0
 };
 ```
 >
@@ -58,7 +56,5 @@ public enum GrayscaleEnhancementMode : Int
    rev = -2147483648
    /**Skips image preprocessing. */
    skip = 0
-   /**Placeholder value with no functional meaning. */
-   end = 0xFFFFFFFF
 }
 ```
