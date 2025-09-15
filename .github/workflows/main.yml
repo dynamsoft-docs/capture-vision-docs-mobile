@@ -39,6 +39,5 @@ jobs:
     with:
       doc-repo: capture-vision-docs-mobile
       doc-url: capture-vision/docs/v2/mobile
-      doc-branch: v2
     secrets: inherit
 
