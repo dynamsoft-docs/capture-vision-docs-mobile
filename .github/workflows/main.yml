@@ -32,3 +32,12 @@ jobs:
       doc-url: capture-vision/docs/mobile
     secrets: inherit
 
+  Build-Preview:
+    if: ${{ github.ref == 'refs/heads/v2' }}
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-testing.yml@DCV-v2
+    with:
+      doc-repo: capture-vision-docs-mobile
+      doc-url: capture-vision/docs/v2/mobile
+      doc-branch: v2
+    secrets: inherit
+
