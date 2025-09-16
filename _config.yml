@@ -45,9 +45,11 @@ xamarin-guide: /capture-vision/docs/mobile/programming/xamarin/user-guide/
 
 dcv_android: /capture-vision/docs/mobile/programming/android/
 dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcv_android_v2: /capture-vision/docs/v2/mobile/programming/android/
 
 dcv_ios: /capture-vision/docs/mobile/programming/ios/
 dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+dcv_ios_v2: /capture-vision/docs/v2/mobile/programming/ios/
 
 ddn_android_api: /document-normalizer/docs/mobile/programming/android/api-reference/
 ddn_android: /document-normalizer/docs/mobile/programming/android/
@@ -90,6 +92,7 @@ ddn_maui: /document-normalizer/docs/mobile/programming/maui/
 ddn_maui_api: /document-normalizer/docs/mobile/programming/maui/api-reference/
 dcv_maui: /capture-vision/docs/mobile/programming/maui/
 dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
+dcv_maui_v2: /capture-vision/docs/v2/mobile/programming/maui/
 dce_maui: /camera-enhancer/docs/mobile/programming/maui/
 dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
 dcp_maui: /code-parser/docs/mobile/programming/maui/
@@ -108,6 +111,7 @@ dnt_icon: /capture-vision/docs/mobile/assets/img-icon/icon-dnt.svg
 download: /capture-vision/downloads/1000024-confirmation/
 
 useVersionTree: true
+useJSVersionV3: true
 
 baseurl: "/capture-vision/docs/mobile/"
 plugins:
