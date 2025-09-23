@@ -16,8 +16,6 @@ noTitleIndex: true
 		- [Scan a passport or an ID card (via MRZ)](#scan-a-passport-or-an-id-card-via-mrz)
 	- [VIN Scanner Sample](#vin-scanner-sample)
 	- [Document Scanner Samples](#document-scanner-samples)
-		- [Scan a Document Page and Deskew automatically](#scan-a-document-page-and-deskew-automatically)
-		- [Scan, Edit and Deskew a Document Page](#scan-edit-and-deskew-a-document-page)
 
 ## Demos
 
@@ -40,24 +38,16 @@ Please visit the [Barcode Decoding Samples]({{site.dbr_maui}}samples/index.html)
 
 Scan the MRZ code of a passport or an ID card and parse the information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/mrz-scanner-mobile-maui/tree/main/MRZScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/mrz-scanner-mobile-maui/tree/main/ScanMRZ){:target="_blank"}
 
 ## VIN Scanner Sample
 
 Scan the vin barcode or text and extract the vehicle information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/VINScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/ScanVIN){:target="_blank"}
 
 ## Document Scanner Samples
 
-### Scan a Document Page and Deskew automatically
+Scan a document page.
 
-Scan a document page and normalize it automatically.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/DocumentScanner/AutoNormalize){:target="_blank"}
-
-### Scan, Edit and Deskew a Document Page
-
-Scan a document page, edit the boundary and normalize it.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/DocumentScanner/EditAndNormalize){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/ScanDocument){:target="_blank"}
