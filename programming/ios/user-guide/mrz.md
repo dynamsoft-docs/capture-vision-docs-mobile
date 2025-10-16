@@ -41,7 +41,8 @@ The Machine Readable Travel Documents (MRTD) standard specified by the Internati
 
 Currently, the SDK supports three types of MRTD:
 
-> Note: If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
+<div class="blockquote-note"></div>
+> If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
 
 ### ID (TD1 Size)
 
@@ -85,7 +86,7 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
     target '{Your project name}' do
         use_frameworks!
 
-        pod 'DynamsoftMRZScannerBundle','3.0.5200'
+        pod 'DynamsoftMRZScannerBundle','3.2.1000'
 
     end
     ```
@@ -102,7 +103,7 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/mrz-scanner-spm"
 
-3. Select `mrz-scanner-spm`, choose `Exact version`, enter **3.0.5200**, then click **Add Package**.
+3. Select `mrz-scanner-spm`, choose `Exact version`, enter **3.2.1000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add them.
 
@@ -110,7 +111,7 @@ There are two ways to add the SDK into your project - **CocoaPods**, or via **Sw
 
 In this section, we will explain how to create a `HelloWorld` implementation similar to our simple `MRZScanner` app for reading the MRZ zone from camera video input.
 
->Note:
+<div class="blockquote-note"></div>
 >
 >- The following steps are completed in XCode 14.2
 >- You can get similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/ios/MRZScanner/" target="_blank">MRZScanner Sample(Swift)</a>
@@ -153,7 +154,7 @@ To add the SDK to your new project, please read [Add the SDK](#add-the-sdk) sect
     }
     ```
 
-   >Note:  
+   <div class="blockquote-note"></div> 
    >
    >- The license string here grants a time-limited free trial which requires network connection to work.
    >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=ios" target="_blank">Trial License link</a>.
@@ -293,7 +294,7 @@ class ViewController: UIViewController, CapturedResultReceiver {
 }
 ```
 
->Note:
+<div class="blockquote-note"></div>
 >
 >- When using `startCapturing`, set the template to "ReadPassportAndId" to capture both Passports and ID cards.
 >- If you only need to capture Passports, set the template to "ReadPassport" when calling `startCapturing`.
@@ -308,4 +309,5 @@ Add Privacy - Camera Usage Description to the info.plist of your project to requ
 1. Before deploying the project, select the device that you want to run your app on.
 2. Run the project, then your app will be installed on your device.
 
->Note: View the similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/ios/MRZScanner/" target="_blank">MRZScanner Sample(Swift)</a>
+<div class="blockquote-note"></div>
+> View the similar source code from <a href="https://github.com/Dynamsoft/mrz-scanner-mobile/tree/v1.0.0/ios/MRZScanner/" target="_blank">MRZScanner Sample(Swift)</a>

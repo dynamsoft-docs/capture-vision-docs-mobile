@@ -12,7 +12,7 @@ noTitleIndex: true
 
 This page introduces the `capture` APIs of the `CaptureVisionRouter` that designed for processing a single image (or single page file).
 
-> Note:
+<div class="blockquote-note"></div>
 >
 > - [Use the `DirectoryFetcher` to process a set of image files]({{ site.dcv_android_api }}utility/directory-fetcher.html).
 > - [Use the `FileFetcher` to process the multi-page files such as PDF and TIFF]({{ site.dcv_android_api }}utility/file-fetcher.html).

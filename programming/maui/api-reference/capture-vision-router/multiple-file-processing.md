@@ -33,7 +33,8 @@ void SetInput(ImageSourceAdapter adapter);
 
 `[in] adapter`: An object of [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html).
 
-> Note: You can use an object of [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) as the `ImageSourceAdapter` object.
+<div class="blockquote-note"></div>
+> You can use an object of [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) as the `ImageSourceAdapter` object.
 
 **Possible Errors**
 

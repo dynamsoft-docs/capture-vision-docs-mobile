@@ -30,6 +30,7 @@ noTitleIndex: true
 | [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) received. |
 | [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) from the Capture Vision Router. |
 | [`removeAllImageSourceStateListeners`](#removeallimagesourcestatelisteners) | Removes all user-added [`ImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html). |
+| [`switchCapturingTemplate`](#switchcapturingtemplate) | Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow. |
 
 
 ## setInput
@@ -52,7 +53,7 @@ func setInput(_ adapter: DSImageSourceAdapter) throws -> BOOL
 
 **Parameters**
 
-`adapter`: An object of [`DSImageSourceAdapter`](../core/basic-structures/image-source-adapter.md). You can use an internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` or `FileFetcher`.
+`adapter`: An object of [`DSImageSourceAdapter`](../core/basic-structures/image-source-adapter.md). You can use an internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` or `FileFetcher`.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
@@ -447,3 +448,34 @@ Removes all user-added `DSCapturedResultFilters`.
 ```swift
 func removeAllResultFilters()
 ```
+
+## switchCapturingTemplate
+
+Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(BOOL)switchCapturingTemplate:(NSString *)templateName
+                         error:(NSError * _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func switchCapturingTemplate(_ templateName:String) throws -> Bool
+```
+
+**Parameters**
+
+`templateName`: The name of the new capturing template to apply.  
+`error`: An `NSError` pointer. If an error occurs, it will represent the error information.
+
+**Return Value**
+
+A BOOL value that indicates whether the capture starts successfully.
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.1000 and Dynamsoft Capture Vision version 3.2.1000.
