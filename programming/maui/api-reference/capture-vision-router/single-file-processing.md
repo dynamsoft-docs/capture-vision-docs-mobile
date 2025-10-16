@@ -22,7 +22,8 @@ This page introduces the `capture` APIs of the `CaptureVisionRouter` that design
 
 Processes a single image or a file containing a single image to derive important information with the file path.
 
-> Note: The file should be a single image or a single page image file.
+<div class="blockquote-note"></div>
+> The file should be a single image or a single page image file.
 
 ```csharp
 CapturedResult Capture(string filePath, string templateName);
@@ -59,7 +60,8 @@ If an error occurs when processing the image, the `CapturedResult` object will i
 
 Processes a single image in the memory with the fileBytes.
 
-> Note: The file should be a single image or a single page image file.
+<div class="blockquote-note"></div>
+> The file should be a single image or a single page image file.
 
 ```csharp
 CapturedResult Capture(byte[] fileBytes, string templateName);

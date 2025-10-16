@@ -62,6 +62,7 @@ class CaptureVisionRouter : NSObject
 | [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a DSCaptureStateListener. |
 | [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Adds a `CaptureResultFilter` object to filter non-essential results. |
 | [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes the specified `CaptureResultFilter` object. |
+| [`switchCapturingTemplate`](multiple-file-processing.md#switchcapturingtemplate) | Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow. |
 
 ## Settings
 
@@ -74,6 +75,8 @@ class CaptureVisionRouter : NSObject
 | [`resetSettings`](settings.md#resetsettings) | Resets all templates to factory settings. |
 | [`outputSettings`](settings.md#outputsettings) | Output the targeting Capture Vision settings to a JSON string. |
 | [`outputSettingsToFile`](settings.md#outputsettingstofile) | Output the targeting Capture Vision settings to a JSON file. |
+| [`clearDLModelBuffers`](settings.md#cleardlmodelbuffers) | Clear the buffered deep learning models to release the memory. |
+| [`setGlobalIntraOpNumThreads`](settings.md#setglobalintraopnumthreads) | Sets the global number of threads used internally for model execution. |
 
 ## Intermediate Result
 

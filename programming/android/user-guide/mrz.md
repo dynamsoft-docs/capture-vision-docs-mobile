@@ -12,7 +12,7 @@ noTitleIndex: true
 
 In this guide, you will learn step by step on how to build a MRZ scanner application with Dynamsoft Capture Vision Android SDK.
 
-> [!Note]
+<div class="blockquote-note"></div>
 > This is the guide for developing a full customizable MRZ scanning application. If you'd like to start with a Ready-to-Use component, you can read [MRZScanner documentation](/mrz-scanner/docs/mobile/programming/android/user-guide/index.html){:target="_blank"} instead.
 
 - [Android User Guide for MRZ Integration](#android-user-guide-for-mrz-integration)
@@ -37,7 +37,7 @@ The Machine Readable Travel Documents (MRTD) standard specified by the Internati
 
 Currently, the SDK supports three types of MRTD:
 
-  > [!Note]
+  <div class="blockquote-note"></div>
   > If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
 
 ### ID (TD1 Size)
@@ -105,7 +105,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
    }
    ```
 
-  > [!Note]
+  <div class="blockquote-note"></div>
   >
   > If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
 
@@ -118,13 +118,13 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:mrzscannerbundle:3.0.5000'
+      implementation 'com.dynamsoft:mrzscannerbundle:3.2.1000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:mrzscannerbundle:3.0.5000")
+      implementation("com.dynamsoft:mrzscannerbundle:3.2.1000")
    }
    ```
 
@@ -134,7 +134,7 @@ The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each lin
 
 In this section, we will explain how to create a `HelloWorld` implementation similar to our simple `MRZScanner` app for reading the MRZ zone from camera video input.
 
-> [!Note]
+<div class="blockquote-note"></div>
 >
 >- Android Studio 2024.1.1 is used here in this guide.
 >- You can get similar source code from
@@ -148,7 +148,7 @@ In this section, we will explain how to create a `HelloWorld` implementation sim
 
 3. When prompted, set your app name to  `HelloWorld` and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
 
-    > [!Note]
+    <div class="blockquote-note"></div>
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
 
@@ -176,7 +176,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    }
    ```
 
-    > [!Note]  
+    <div class="blockquote-note"></div>  
     >
     >- The license string here grants a time-limited free trial which requires network connection to work.
     >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=android" target="_blank">Trial License link</a>.
@@ -304,7 +304,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
     }
     ```
 
-    > [!Note]
+    <div class="blockquote-note"></div>
     >
     >- When using `startCapturing`, set the template to "ReadPassportAndId" to capture both Passports and ID cards.
     >- If you only need to capture Passports, set the template to "ReadPassport" when calling `startCapturing`.

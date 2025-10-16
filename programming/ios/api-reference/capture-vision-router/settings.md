@@ -20,6 +20,8 @@ noTitleIndex: true
 | [`resetSettings`](#resetsettings) | Reset the Capture Vision settings. |
 | [`outputSettings`](#outputsettings) | Returns an object that contains settings for the specified `CaptureVisionTemplate`. |
 | [`outputSettingsToFile`](#outputsettingstofile) | Output the targeted Capture Vision settings to a JSON file. |
+| [`clearDLModelBuffers`](#cleardlmodelbuffers) | Clear the buffered deep learning models to release the memory. |
+| [`setGlobalIntraOpNumThreads`](#setglobalintraopnumthreads) | Sets the global number of threads used internally for model execution. |
 
 ## initSettings
 
@@ -363,3 +365,41 @@ func outputSettingsToFile(_ templateName:String, file:String, includeDefaultValu
 **Return Value**
 
 A BOOL value that indicates whether the template is output successfully.
+
+## clearDLModelBuffers
+
+Clear the buffered deep learning models to release the memory.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
++(void)clearDLModelBuffers;
+```
+2. 
+```swift
+class func clearDLModelBuffers()
+```
+
+## setGlobalIntraOpNumThreads
+
+Sets the global number of threads used internally for model execution.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
++(void)setGlobalIntraOpNumThreads:(NSInteger)intraOpNumThreads;
+```
+2. 
+```swift
+class func setGlobalIntraOpNumThreads(_ intraOpNumThreads:Int)
+```
+
+**Parameters**
+
+`intraOpNumThreads`: Number of threads used internally for model execution. Valid range: [0, 256]. Default: 2.

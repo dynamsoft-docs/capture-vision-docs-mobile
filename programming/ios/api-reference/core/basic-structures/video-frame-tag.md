@@ -33,6 +33,7 @@ class VideoFrameTag : ImageTag
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
+| [`clarity`](#clarity) | *NSInteger* | The clarity of the video frame. |
 | [`quality`](#quality) | *DSVideoFrameQuality* | The quality of the video frame. |
 | [`isCropped`](#iscropped) | *BOOL* | Indicates whether the video frame is cropped. |
 | [`cropRegion`](#cropregion) | *CGRect* | The region based on which the original frame was cropped. If `isCropped` is false, the region covers the entire original image. |
@@ -42,6 +43,23 @@ class VideoFrameTag : ImageTag
 | Method | Description |
 |------- |-------------|
 | [`initWithImageId`](#initwithimageid) | The constructor of `DSVideoFrameTag`. |
+
+### clarity
+
+The clarity of the video frame.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, readonly, assign) NSInteger clarity;
+```
+2. 
+```swift
+var clarity: Int { get }
+```
 
 ### quality
 
@@ -53,11 +71,11 @@ The quality of the video frame.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) DSVideoFrameQuality quality;
+@property (nonatomic, readonly, assign) DSFrameQuality quality;
 ```
 2. 
 ```swift
-var quality: EnumVideoFrameQuality { get set }
+var quality: EnumVideoFrameQuality { get }
 ```
 
 ### isCropped
@@ -70,11 +88,11 @@ Whether the video frame is cropped.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) BOOL isCropped;
+@property (nonatomic, readonly, assign) BOOL isCropped;
 ```
 2. 
 ```swift
-var isCropped: Bool { get set }
+var isCropped: Bool { get }
 ```
 
 ### cropRegion
@@ -87,11 +105,11 @@ The region based on which the original frame was cropped. If `isCropped` is fals
 >
 >1. 
 ```objc
-@property (nonatomic, assign) CGRect cropRegion;
+@property (nonatomic, readonly, assign) CGRect cropRegion;
 ```
 2. 
 ```swift
-var cropRegion: CGRect { get set }
+var cropRegion: CGRect { get }
 ```
 
 ### originalWidth
@@ -104,11 +122,11 @@ The original width of the video frame.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger originalWidth;
+@property (nonatomic, readonly, assign) NSInteger originalWidth;
 ```
 2. 
 ```swift
-var originalWidth: Int { get set }
+var originalWidth: Int { get }
 ```
 
 ### originalHeight
@@ -121,11 +139,11 @@ The original height of the video frame.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger originalHeight;
+@property (nonatomic, readonly, assign) NSInteger originalHeight;
 ```
 2. 
 ```swift
-var originalHeight: Int { get set }
+var originalHeight: Int { get }
 ```
 
 ### initWithImageId
@@ -139,6 +157,7 @@ The constructor of `DSVideoFrameTag`.
 >1. 
 ```objc
 - (instancetype)initWithImageId:(NSInteger)imageId
+                        clarity:(NSInteger)clarity
                         quality:(DSVideoFrameQuality)quality
                       isCropped:(BOOL)isCropped
                      cropRegion:(CGRect)cropRegion
@@ -147,12 +166,13 @@ The constructor of `DSVideoFrameTag`.
 ```
 2. 
 ```swift
-init(imageId: Int, quality: EnumVideoFrameQuality, isCropped: Bool, cropRegion: CGRect, originalWidth: Int, originalHeight: Int)
+init(imageId: Int, clarity: Int, quality: EnumVideoFrameQuality, isCropped: Bool, cropRegion: CGRect, originalWidth: Int, originalHeight: Int)
 ```
 
 **Parameters**
 
 `imageId`: The image ID of the video frame.  
+`clarity`: The clarity of the video frame.  
 `quality`: The quality of the video frame.  
 `isCropped`: Whether the video frame is cropped.  
 `cropRegion`: The crop region of the video frame.  
@@ -162,23 +182,3 @@ init(imageId: Int, quality: EnumVideoFrameQuality, isCropped: Bool, cropRegion: 
 **Return Value**
 
 An instance of the `DSVideoFrameTag`.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSVideoFrameTag *videoFrameTag = [[DSVideoFrameTag alloc] initWithImageId:imageId
-                                                                  quality:quality
-                                                                isCropped:isCropped
-                                                               cropRegion:cropRegion
-                                                            originalWidth:originalWidth
-                                                           originalHeight:originalHeight];
-```
-2. 
-```swift
-let videoFrameTag = VideoFrameTag(imageId: imageId, quality: quality, isCropped: isCropped, cropRegion: cropRegion, originalWidth: originalWidth, originalHeight: originalHeight)
-```

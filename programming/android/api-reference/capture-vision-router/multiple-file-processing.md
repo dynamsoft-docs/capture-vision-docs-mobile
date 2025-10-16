@@ -30,6 +30,7 @@ noTitleIndex: true
 | [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) received. |
 | [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) from the Capture Vision Router. |
 | [`removeAllImageSourceStateListeners`](#removeallimagesourcestatelisteners) | Removes all user-added [`ImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html). |
+| [`switchCapturingTemplate`](#switchcapturingtemplate) | Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow. |
 
 ## setInput
 
@@ -236,3 +237,25 @@ Removes all user-added [`ImageSourceStateListeners`](auxiliary-classes/image-sou
 ```java
 void removeAllImageSourceStateListeners();
 ```
+
+## switchCapturingTemplate
+
+Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow.
+
+```java
+void switchCapturingTemplate(String templateName) throws CaptureVisionException;
+```
+
+**Parameters**
+
+`[in] templateName`: The name of the new capturing template to apply.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.1000 and Dynamsoft Capture Vision version 3.2.1000.

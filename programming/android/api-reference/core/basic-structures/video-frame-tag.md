@@ -26,12 +26,21 @@ class VideoFrameTag extends ImageTag
 
 | Methods | Description |
 | ---------- | ----------- |
+| [`getClarity`](#getquality) | Get the clarity of the video frame. |
 | [`getQuality`](#getquality) | Get the quality of the video frame. |
 | [`isCropped`](#iscropped) | Check whether the video frame is cropped. |
 | [`getCropRegion`](#getcropregion) | Get the crop region of the video frame. |
 | [`getOriginalWidth`](#getoriginalwidth) | Get the original width of the video frame. |
 | [`getOriginalHeight`](#getoriginalheight) | Get the original height of the video frame. |
 | [`VideoFrameTag(frameID,quality,isCropped,cropRegion,originalWidth,originalHeight)`](#videoframetagframeidqualityiscroppedcropregionoriginalwidthoriginalheight) | The constructor. |
+
+### getClarity
+
+The clarity of the video frame.
+
+```java
+int getClarity();
+```
 
 ### getQuality
 
