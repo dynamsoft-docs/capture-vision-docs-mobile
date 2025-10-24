@@ -27,10 +27,9 @@ class RegionObjectElement
 | Method | Description |
 | ------ | ----------- |
 | [`getLocation`](#getlocation) | Gets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
-| [`setLocation`](#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
 | [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`](#getregionobjectelementtype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
-| [`getImageData`](#getimagedata) | Gets the image data of this region object element. |
+| [`getType`](#gettype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
+| [`getImageData`](#getimagedata) | Gets the original image that produce this element. |
 
 ### getLocation
 
@@ -44,18 +43,6 @@ Quadrilateral getLocation();
 
 The location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md).
 
-### setLocation
-
-Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md).
-
-```java
-void setLocation(Quadrilateral location);
-```
-
-**Parameters**
-
-`[in] location`: A `Quadrilateral` object that defines the location of the region object.
-
 ### getReferencedElement
 
 Gets the referenced element that supports the capturing of this element.
@@ -68,12 +55,13 @@ RegionObjectElement getReferencedElement();
 
 The referenced element that supports the capturing of this element.
 
-### getRegionObjectElementType
+### getType
 
 Gets the type of the region object element, defined by the enumeration [`EnumRegionObjectElementType`]({{ site.dcv_android_api }}core/enum/region-object-element-type.html).
 
 ```java
-EnumRegionObjectElementType getType();
+@EnumRegionObjectElementType
+int getType();
 ```
 
 **Return Value**
@@ -82,7 +70,7 @@ The type of the region object element.
 
 ### getImageData
 
-Gets the image data of this region object element.
+Gets the original image that produce this element.
 
 ```java
 ImageData getImageData();
@@ -90,4 +78,4 @@ ImageData getImageData();
 
 **Return Value**
 
-The image data of this region object element.
+An `ImageData` object represents the original image that produce this element.

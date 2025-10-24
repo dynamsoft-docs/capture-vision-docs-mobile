@@ -26,7 +26,7 @@ class ImageData
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`Bytes`](#bytes) | *byte[]* | The image data content in a byte array. |
+| [`Bytes`](#bytes) | *IList<byte>* | The image data content in a byte array. |
 | [`Width`](#width) | *int* | The width of the image in pixels. |
 | [`Height`](#height) | *int* | The height of the image in pixels. |
 | [`Stride`](#stride) | *int* | The stride (or scan width) of the image. |
@@ -42,7 +42,7 @@ class ImageData
 The image data content in a byte array.
 
 ```csharp
-byte[] Bytes { get; set; }
+IList<byte> Bytes { get; set; }
 ```
 
 ### Width

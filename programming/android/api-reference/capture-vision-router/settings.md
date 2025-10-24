@@ -28,7 +28,7 @@ noTitleIndex: true
 Configures runtime settings using a provided JSON string, which contains settings for one or more `CaptureVisionTemplates`.
 
 ```java
-void initSettings(String content) throws CaptureVisionRouterException;
+void initSettings(@NonNull String content) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -54,7 +54,7 @@ void initSettings(String content) throws CaptureVisionRouterException;
 Configures runtime settings using a provided JSON file, which contains settings for one or more `CaptureVisionTemplates`.
 
 ```java
-void initSettingsFromFile(String filePath) throws CaptureVisionRouterException;
+void initSettingsFromFile(@NonNull String filePath) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -214,7 +214,7 @@ The Capture Vision settings in a JSON string.
 Generates a JSON file download containing the settings for the specified `CaptureVisionTemplate`.
 
 ```java
-void outputSettingsToFile(String templateName, String filePath, boolean includeDefaultValues) throws CaptureVisionRouterException;
+void outputSettingsToFile(String templateName, @NonNull String filePath, boolean includeDefaultValues) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
@@ -263,12 +263,12 @@ static void clearDLModelBuffers();
 
 - Introduced in Dynamsoft Barcode Reader SDK version 11.2.1000 and Dynamsoft Capture Vision version 3.2.1000.
 
-## SetGlobalIntraOpNumThreads
+## setGlobalIntraOpNumThreads
 
 Sets the global number of threads used internally for model execution.
 
 ```java
-static void setGlobalIntraOpNumThreads(int intraOpNumThreads);
+native static void setGlobalIntraOpNumThreads(int numThreads);
 ```
 
 **Parameters**
