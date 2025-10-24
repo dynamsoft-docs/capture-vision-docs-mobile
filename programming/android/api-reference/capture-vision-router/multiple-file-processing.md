@@ -37,12 +37,12 @@ noTitleIndex: true
 Sets up an image source to provide images for continuous processing.
 
 ```java
-void setInput(ImageSourceAdapter adapter) throws CaptureVisionRouterException;
+void setInput(ImageSourceAdapter imageSourceAdapter) throws CaptureVisionRouterException;
 ```
 
 **Parameters**
 
-`[in] adapter`: An object of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html).
+`[in] imageSourceAdapter`: An object of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html).
 
 You can use the following officially implemented `ImageSourceAdapter` classes:
 

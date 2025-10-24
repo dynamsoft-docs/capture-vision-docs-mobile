@@ -34,10 +34,9 @@ class RegionObjectElement : NSObject
 | Method | Description |
 |------- |-------------|
 | [`getLocation`](#getlocation) | Gets the location of the region object, represented as a quadrilateral. |
-| [`setLocation`](#setlocation) | Sets the location of the region object. |
 | [`getReferencedElement`](#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`](#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html?lang=objc,swift). |
-| [`getImageData`](#getimagedata) | Gets the image data of this region object element. |
+| [`getRegionObjectElementType`](#gettype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html?lang=objc,swift). |
+| [`getImageData`](#getimagedata) | Gets the original image that produce this element. |
 
 ### getLocation
 
@@ -60,27 +59,6 @@ func getLocation() -> DSQuadrilateral?
 
 The location info of the element that defined in DSQuadrilateral.
 
-### setLocation
-
-Sets the location of the region object.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(void)setLocation:(DSQuadrilateral *)location;
-```
-2. 
-```swift
-func setLocation(_ location: DSQuadrilateral?)
-```
-
-**Parameters**
-
-`location`: The location info of the element that defined in DSQuadrilateral.
-
 ### getReferencedElement
 
 Get the referenced element that supports the capturing of this element.
@@ -102,7 +80,7 @@ func getReferencedElement() -> RegionObjectElement?
 
 The referenced element that supports the capturing of this element.
 
-### getRegionObjectElementType
+### getType
 
 Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html?lang=objc,swift).
 
@@ -112,11 +90,11 @@ Gets the type of the region object element, defined by the enumeration [`DSRegio
 >
 >1. 
 ```objc
--(DSRegionObjectElementType)getRegionObjectElementType;
+- (DSRegionObjectElementType)getType;
 ```
 2. 
 ```swift
-func getRegionObjectElementType() -> RegionObjectElementType
+func getType() -> DSRegionObjectElementType
 ```
 
 **Return Value**
@@ -125,7 +103,7 @@ The type of the region object element.
 
 ### getImageData
 
-Gets the image data of this region object element.
+Gets the original image that produce this element.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -142,4 +120,4 @@ func getImageData() -> DSImageData?
 
 **Return Value**
 
-A `DSImageData` object that represents the image data of this region object element.
+A `DSImageData` object represents the original image that produce this element.
