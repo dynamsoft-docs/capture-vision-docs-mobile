@@ -62,7 +62,7 @@ The cropped `ImageData`.
 Crops and deskews an image based on the provided quadrilateral and additional information.
 
 ```java
-public ImageData cropAndDeskewImage(CImageData imageData, CQuadrilateral quad, int dstWidth, int dstHeight, int padding) throws UtilityException{}
+public ImageData cropAndDeskewImage(ImageData imageData, Quadrilateral quad, int dstWidth, int dstHeight, int padding) throws UtilityException{}
 ```
 
 ### cropAndDeskewImage(imageData,quad)
@@ -70,7 +70,7 @@ public ImageData cropAndDeskewImage(CImageData imageData, CQuadrilateral quad, i
 Crops and deskews an image based on the provided quadrilateral. The arguments dstWidth, dstHeight, and padding are set to 0.
 
 ```java
-public ImageData cropAndDeskewImage(CImageData imageData, CQuadrilateral quad) throws UtilityException{}
+public ImageData cropAndDeskewImage(ImageData imageData, Quadrilateral quad) throws UtilityException{}
 ```
 
 ### adjustBrightness
@@ -78,7 +78,7 @@ public ImageData cropAndDeskewImage(CImageData imageData, CQuadrilateral quad) t
 Adjusts the brightness of an image.
 
 ```java
-ImageData adjustBrightness(ImageData imageData, int brightness){}
+ImageData adjustBrightness(ImageData imageData, @IntRange(from = -100, to = 100) int brightness){}
 ```
 
 **Parameters**
@@ -96,7 +96,7 @@ The modified `ImageData`.
 Adjusts the contrast of an image.
 
 ```java
-ImageData adjustContrast(ImageData imageData, int contrast){}
+ImageData adjustContrast(ImageData imageData, @IntRange(from = -100, to = 100) int contrast){}
 ```
 
 **Parameters**
@@ -114,7 +114,7 @@ The modified `ImageData`.
 Applies a filter to an image.
 
 ```java
-ImageData filterImage(ImageData imageData, EnumFilterType filterType){}
+ImageData filterImage(ImageData imageData, @EnumFilterType int filterType){}
 ```
 
 **Parameters**
@@ -148,7 +148,7 @@ The converted grayscale `ImageData`.
 Converts an image to grayscale.
 
 ```java
-ImageData convertToGray(ImageData imageData, float r, float g, float b){}
+ImageData convertToGray(ImageData imageData, @FloatRange(from = 0, to = 1) float r, @FloatRange(from = 0, to = 1) float g, @FloatRange(from = 0, to = 1) float b){}
 ```
 
 **Parameters**
@@ -186,7 +186,7 @@ The converted binary `ImageData`.
 Converts an image to binary using a global threshold.
 
 ```java
-ImageData convertToBinaryGlobal(ImageData imageData, int threshold, boolean invert){}
+ImageData convertToBinaryGlobal(ImageData imageData, @IntRange(from = -1, to = 255) int threshold, boolean invert){}
 ```
 
 **Parameters**

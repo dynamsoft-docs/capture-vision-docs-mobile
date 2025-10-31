@@ -22,11 +22,17 @@ The `Contour` class represents a contour made up of multiple points.
 class Contour
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *android.graphics.Point[]* | An array of `Point` objects defining the vertices of the contour. |
+
+| Method | Description |
+|------- |-------------|
+| [`Contour`](#contour-1) | The default constructor. |
+| [`Contour(Point[])`](#contourpoint-points) | Constructs a contour from an array of points. |
+| [`transformByMatrix`](#transformbymatrix) | Transforms the coordinates of the contour by a transformation matrix. |
 
 ### points
 
@@ -35,3 +41,33 @@ An array of `android.graphics.Point` objects defining the vertices of the contou
 ```java
 Point[] points;
 ```
+
+### Contour
+
+The default constructor.
+
+```java
+Contour();
+```
+
+### Contour(Point[] points)
+
+Constructs a contour from an array of points.
+
+```java
+Contour(Point[] points);
+```
+
+### transformByMatrix
+
+```java
+Contour transformByMatrix(Matrix matrix);
+```
+
+**Parameters**
+
+`matrix`: The transformation matrix.
+
+**Return Value**
+
+The transformed contour.

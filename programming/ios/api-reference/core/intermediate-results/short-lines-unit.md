@@ -171,7 +171,7 @@ Adds a short line to this unit.
 >1. 
 ```objc
 -(NSInteger)addShortLine:(DSLineSegment*)line
-    matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+   matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
 ```
 2. 
 ```swift

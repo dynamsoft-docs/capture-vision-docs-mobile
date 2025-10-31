@@ -18,14 +18,16 @@ codeAutoHeight: true
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumPDFReadingMode
 {
+    /** Lets the Library choose the reading mode automatically. Not supported yet. */
+    int PDFRM_AUTO = 0x01;
    /** Capture content from vector data in PDF file. */
-   public static final int PDFRM_VECTOR = 1;
+   int PDFRM_VECTOR = 0x02;
    /** The default value.
     * Outputs raster data found in the PDFs.
     * Depending on the argument Resolution, the SDK may rasterize the PDF pages.
     * Check the template for available argument settings. */
-   public static final int PDFRM_RASTER = 2;
+   int PDFRM_RASTER = 0x02;
    /** Reserved setting for PDF reading mode.*/
-   public static final int PDFRM_REV = -2147483648;
+   int PDFRM_REV = -2147483648;
 }
 ```

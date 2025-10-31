@@ -25,11 +25,11 @@ typedef NS_ENUM(NSInteger, DSLogMode)
     /**
      * Output the log information in the console.
      */
-    DSLogModeConsole = 1,
+    DSLogModeConsole = 1 << 0,
     /**
      * Output the log information to a log file.
      */
-    DSLogModeFile = 2,
+    DSLogModeFile = 1 << 1,
 };
 ```
 >
@@ -39,10 +39,10 @@ public enum LogMode : Int
    /**
     * Output the log information in the console.
     */
-   console = 0x01
+   case console = 1 << 0
    /**
     * Output the log information to a log file.
     */
-   file = 0x02
+   case file = 1 << 1
 };
 ```

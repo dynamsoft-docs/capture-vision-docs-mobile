@@ -66,7 +66,7 @@ interface IntermediateResultReceiver
 Gets the observed parameters of the intermediate result receiver.
 
 ```java
-ObservationParameters getObservationParameters();
+default ObservationParameters getObservationParameters();
 ```
 
 **Return Value**
@@ -78,7 +78,7 @@ An `ObservationParameters` object.
 The callback triggered when the processing of a target-ROI is finished.
 
 ```java
-void onTargetROIResultsReceived(@NonNull IntermediateResult result, IntermediateResultExtraInfo info);
+default void onTargetROIResultsReceived(@NonNull IntermediateResult result, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -95,7 +95,7 @@ The callback triggered when the processing of a task is finished.
 > This callback may be invoked on different threads. Ensure that any shared resources accessed within the callback are properly synchronized to avoid data corruption or crashes.
 
 ```java
-void onTaskResultsReceived(@NonNull IntermediateResult result, IntermediateResultExtraInfo info);
+default void onTaskResultsReceived(@NonNull IntermediateResult result, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -109,7 +109,7 @@ void onTaskResultsReceived(@NonNull IntermediateResult result, IntermediateResul
 The callback triggered when pre-detected regions are received.
 
 ```java
-void onPredetectedRegionsReceived(@NonNull PredetectedRegionsUnit unit, IntermediateResultExtraInfo info);
+default void onPredetectedRegionsReceived(@NonNull PredetectedRegionsUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -123,7 +123,7 @@ void onPredetectedRegionsReceived(@NonNull PredetectedRegionsUnit unit, Intermed
 The callback triggered when localized barcodes are received.
 
 ```java
-void onLocalizedBarcodesReceived(@NonNull LocalizedBarcodesUnit unit, IntermediateResultExtraInfo info);
+default void onLocalizedBarcodesReceived(@NonNull LocalizedBarcodesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -137,7 +137,7 @@ void onLocalizedBarcodesReceived(@NonNull LocalizedBarcodesUnit unit, Intermedia
 The callback triggered when decoded barcodes are received.
 
 ```java
-void onDecodedBarcodesReceived(@NonNull DecodedBarcodesUnit unit, IntermediateResultExtraInfo info);
+default void onDecodedBarcodesReceived(@NonNull DecodedBarcodesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -151,7 +151,7 @@ void onDecodedBarcodesReceived(@NonNull DecodedBarcodesUnit unit, IntermediateRe
 The callback triggered when localized text lines are received.
 
 ```java
-void onLocalizedTextLinesReceived(@NonNull LocalizedTextLinesUnit unit, IntermediateResultExtraInfo info);
+default void onLocalizedTextLinesReceived(@NonNull LocalizedTextLinesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -165,7 +165,7 @@ void onLocalizedTextLinesReceived(@NonNull LocalizedTextLinesUnit unit, Intermed
 The callback triggered when recognized text lines are received.
 
 ```java
-void onRecognizedTextLinesReceived(@NonNull RecognizedTextLinesUnit unit, IntermediateResultExtraInfo info);
+default void onRecognizedTextLinesReceived(@NonNull RecognizedTextLinesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -179,7 +179,7 @@ void onRecognizedTextLinesReceived(@NonNull RecognizedTextLinesUnit unit, Interm
 The callback triggered when detected quads are received.
 
 ```java
-void onDetectedQuadsReceived(@NonNull DetectedQuadsUnit unit, IntermediateResultExtraInfo info);
+default void onDetectedQuadsReceived(@NonNull DetectedQuadsUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -193,7 +193,7 @@ void onDetectedQuadsReceived(@NonNull DetectedQuadsUnit unit, IntermediateResult
 The callback triggered when deskewed images are received.
 
 ```java
-void onDeskewedImagesReceived(@NonNull DeskewedImagesUnit unit, IntermediateResultExtraInfo info);
+default void onDeskewedImagesReceived(@NonNull DeskewedImagesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -207,7 +207,7 @@ void onDeskewedImagesReceived(@NonNull DeskewedImagesUnit unit, IntermediateResu
 The callback triggered when enhanced images are received.
 
 ```java
-void onEnhancedImagesReceived(@NonNull EnhancedImagesUnit unit, IntermediateResultExtraInfo info);
+default void onEnhancedImagesReceived(@NonNull EnhancedImagesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -221,7 +221,7 @@ void onEnhancedImagesReceived(@NonNull EnhancedImagesUnit unit, IntermediateResu
 The callback triggered when colour images are received.
 
 ```java
-void onColourImageUnitReceived(@NonNull ColourImageUnit unit, IntermediateResultExtraInfo info);
+default void onColourImageUnitReceived(@NonNull ColourImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -235,7 +235,7 @@ void onColourImageUnitReceived(@NonNull ColourImageUnit unit, IntermediateResult
 The callback triggered when scaled-down colour images are received.
 
 ```java
-void onScaledColourImageUnitReceived(@NonNull ScaledColourImageUnit unit, IntermediateResultExtraInfo info);
+default void onScaledColourImageUnitReceived(@NonNull ScaledColourImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -249,7 +249,7 @@ void onScaledColourImageUnitReceived(@NonNull ScaledColourImageUnit unit, Interm
 The callback triggered when grayscale images are received.
 
 ```java
-void onGrayscaleImageUnitReceived(@NonNull GrayscaleImageUnit unit, IntermediateResultExtraInfo info);
+default void onGrayscaleImageUnitReceived(@NonNull GrayscaleImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -263,7 +263,7 @@ void onGrayscaleImageUnitReceived(@NonNull GrayscaleImageUnit unit, Intermediate
 The callback triggered when transformed grayscale images are received.
 
 ```java
-void onTransformedGrayscaleImageUnitReceived(@NonNull TransformedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
+default void onTransformedGrayscaleImageUnitReceived(@NonNull TransformedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -277,7 +277,7 @@ void onTransformedGrayscaleImageUnitReceived(@NonNull TransformedGrayscaleImageU
 The callback triggered when enhanced grayscale images are received.
 
 ```java
-void onEnhancedGrayscaleImageUnitReceived(@NonNull EnhancedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
+default void onEnhancedGrayscaleImageUnitReceived(@NonNull EnhancedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -291,7 +291,7 @@ void onEnhancedGrayscaleImageUnitReceived(@NonNull EnhancedGrayscaleImageUnit un
 The callback triggered when binary images are received.
 
 ```java
-void onBinaryImageUnitReceived(@NonNull BinaryImageUnit unit, IntermediateResultExtraInfo info);
+default void onBinaryImageUnitReceived(@NonNull BinaryImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -305,7 +305,7 @@ void onBinaryImageUnitReceived(@NonNull BinaryImageUnit unit, IntermediateResult
 The callback triggered when texture detection results are received.
 
 ```java
-void onTextureDetectionResultUnitReceived(@NonNull TextureDetectionResultUnit unit, IntermediateResultExtraInfo info);
+default void onTextureDetectionResultUnitReceived(@NonNull TextureDetectionResultUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -319,7 +319,7 @@ void onTextureDetectionResultUnitReceived(@NonNull TextureDetectionResultUnit un
 The callback triggered when texture removed grayscale images are received.
 
 ```java
-void onTextureRemovedGrayscaleImageUnitReceived(@NonNull TextureRemovedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
+default void onTextureRemovedGrayscaleImageUnitReceived(@NonNull TextureRemovedGrayscaleImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -333,7 +333,7 @@ void onTextureRemovedGrayscaleImageUnitReceived(@NonNull TextureRemovedGrayscale
 The callback triggered when texture removed binary images are received.
 
 ```java
-void onTextureRemovedBinaryImageUnitReceived(@NonNull TextureRemovedBinaryImageUnit unit, IntermediateResultExtraInfo info);
+default void onTextureRemovedBinaryImageUnitReceived(@NonNull TextureRemovedBinaryImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -347,7 +347,7 @@ void onTextureRemovedBinaryImageUnitReceived(@NonNull TextureRemovedBinaryImageU
 The callback triggered when contours are received.
 
 ```java
-void onContoursUnitReceived(@NonNull ContoursUnit unit, IntermediateResultExtraInfo info);
+default void onContoursUnitReceived(@NonNull ContoursUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -361,7 +361,7 @@ void onContoursUnitReceived(@NonNull ContoursUnit unit, IntermediateResultExtraI
 The callback triggered when line segments are received.
 
 ```java
-void onLineSegmentsUnitReceived(@NonNull LineSegmentsUnit unit, IntermediateResultExtraInfo info);
+default void onLineSegmentsUnitReceived(@NonNull LineSegmentsUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -375,7 +375,7 @@ void onLineSegmentsUnitReceived(@NonNull LineSegmentsUnit unit, IntermediateResu
 The callback triggered when text zones are received.
 
 ```java
-void onTextZonesUnitReceived(@NonNull TextZonesUnit unit, IntermediateResultExtraInfo info);
+default void onTextZonesUnitReceived(@NonNull TextZonesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -389,7 +389,7 @@ void onTextZonesUnitReceived(@NonNull TextZonesUnit unit, IntermediateResultExtr
 The callback triggered when text removed binary images are received.
 
 ```java
-void onTextRemovedBinaryImageUnitReceived(@NonNull TextRemovedBinaryImageUnit unit, IntermediateResultExtraInfo info);
+default void onTextRemovedBinaryImageUnitReceived(@NonNull TextRemovedBinaryImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -403,7 +403,7 @@ void onTextRemovedBinaryImageUnitReceived(@NonNull TextRemovedBinaryImageUnit un
 The callback triggered when short lines are received.
 
 ```java
-void onShortLinesUnitReceived(@NonNull ShortLinesUnit unit IntermediateResultExtraInfo info);
+default void onShortLinesUnitReceived(@NonNull ShortLinesUnit unit IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -417,7 +417,7 @@ void onShortLinesUnitReceived(@NonNull ShortLinesUnit unit IntermediateResultExt
 The callback triggered when logic lines are received.
 
 ```java
-void onLogicLinesUnitReceived(@NonNull LongLinesUnit unit, IntermediateResultExtraInfo info);
+default void onLogicLinesUnitReceived(@NonNull LongLinesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -431,7 +431,7 @@ void onLogicLinesUnitReceived(@NonNull LongLinesUnit unit, IntermediateResultExt
 The callback triggered when long lines are received.
 
 ```java
-void onLongLinesUnitReceived(@NonNull LongLinesUnit unit, IntermediateResultExtraInfo info);
+default void onLongLinesUnitReceived(@NonNull LongLinesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -445,7 +445,7 @@ void onLongLinesUnitReceived(@NonNull LongLinesUnit unit, IntermediateResultExtr
 The callback triggered when corners are received.
 
 ```java
-void onCornersUnitReceived(@NonNull CornersUnit unit, IntermediateResultExtraInfo info);
+default void onCornersUnitReceived(@NonNull CornersUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -459,7 +459,7 @@ void onCornersUnitReceived(@NonNull CornersUnit unit, IntermediateResultExtraInf
 The callback triggered when candidate quad edges are received.
 
 ```java
-void onCandidateQuadEdgesUnitReceived(@NonNull CandidateQuadEdgesUnit unit, IntermediateResultExtraInfo info);
+default void onCandidateQuadEdgesUnitReceived(@NonNull CandidateQuadEdgesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -473,7 +473,7 @@ void onCandidateQuadEdgesUnitReceived(@NonNull CandidateQuadEdgesUnit unit, Inte
 The callback triggered when candidate barcode zones are received.
 
 ```java
-void onCandidateBarcodeZonesUnitReceived(@NonNull CandidateBarcodeZonesUnit unit, IntermediateResultExtraInfo info);
+default void onCandidateBarcodeZonesUnitReceived(@NonNull CandidateBarcodeZonesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -487,7 +487,7 @@ void onCandidateBarcodeZonesUnitReceived(@NonNull CandidateBarcodeZonesUnit unit
 The callback triggered when scaled up barcode images are received.
 
 ```java
-void onScaledBarcodeImageUnitReceived(@NonNull ScaledBarcodeImageUnit unit, IntermediateResultExtraInfo info);
+default void onScaledBarcodeImageUnitReceived(@NonNull ScaledBarcodeImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -501,7 +501,7 @@ void onScaledBarcodeImageUnitReceived(@NonNull ScaledBarcodeImageUnit unit, Inte
 The callback triggered when deformation resisted barcode images are received.
 
 ```java
-void onDeformationResistedBarcodeImageUnitReceived(@NonNull DeformationResistedBarcodeImageUnit unit, IntermediateResultExtraInfo info);
+default void onDeformationResistedBarcodeImageUnitReceived(@NonNull DeformationResistedBarcodeImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -515,7 +515,7 @@ void onDeformationResistedBarcodeImageUnitReceived(@NonNull DeformationResistedB
 The callback triggered when complemented barcode images are received.
 
 ```java
-void onComplementedBarcodeImageUnitReceived(@NonNull ComplementedBarcodeImageUnit unit, IntermediateResultExtraInfo info);
+default void onComplementedBarcodeImageUnitReceived(@NonNull ComplementedBarcodeImageUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**
@@ -529,7 +529,7 @@ void onComplementedBarcodeImageUnitReceived(@NonNull ComplementedBarcodeImageUni
 The callback triggered when a raw text lines unit is received.
 
 ```java
-void onRawTextLinesUnitReceived(@NonNull RawTextLinesUnit unit, IntermediateResultExtraInfo info);
+default void onRawTextLinesUnitReceived(@NonNull RawTextLinesUnit unit, IntermediateResultExtraInfo info);
 ```
 
 **Parameters**

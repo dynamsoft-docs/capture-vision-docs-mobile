@@ -37,12 +37,12 @@ typedef NS_ENUM(NSInteger, DSCornerType)
 public enum CornerType : Int
 {
    /** The corner is formed by two intersecting line segments. */
-   intersected
+   case intersected
    /** The corner is formed by two T intersecting line segments. */
-   tIntersected
+   case tIntersected
    /** The corner is formed by two cross intersecting line segments. */
-   crossIntersected
+   case crossIntersected
    /** The two line segments are not intersected but they definitely consist a corner. */
-   notIntersected
+   case notIntersected
 };
 ```

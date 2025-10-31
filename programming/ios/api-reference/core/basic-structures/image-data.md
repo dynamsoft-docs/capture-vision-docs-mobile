@@ -29,7 +29,7 @@ The `DSImageData` class defines the structure of an object that represents an im
 class ImageData : NSObject
 ```
 
-## Methods & Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -55,7 +55,7 @@ The image data content in a byte array.
 >
 >1. 
 ```objc
-@property(nonatomic, copy) NSData *bytes;
+@property (nonatomic, copy) NSData *bytes;
 ```
 2. 
 ```swift
@@ -72,7 +72,7 @@ The width of the image in pixels.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger width
+@property (nonatomic, assign) NSUInteger width
 ```
 2. 
 ```swift
@@ -89,7 +89,7 @@ The height of the image in pixels.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger height
+@property (nonatomic, assign) NSUInteger height
 ```
 2. 
 ```swift
@@ -106,7 +106,7 @@ The stride (or scan width) of the image.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger stride
+@property (nonatomic, assign) NSUInteger stride
 ```
 2. 
 ```swift
@@ -157,7 +157,7 @@ The tag of the image.
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nullable) DSImageTag *tag;
+@property (nonatomic, strong, nullable) DSImageTag *tag;
 ```
 2. 
 ```swift
@@ -174,7 +174,7 @@ Transform the DSImageData to a UIImage.
 >
 >1. 
 ```objc
-- (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
+- (nullable UIImage *)toUIImage:(NSError *_Nullable *_Nullable)error;
 ```
 2. 
 ```swift

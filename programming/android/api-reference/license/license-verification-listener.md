@@ -31,7 +31,7 @@ interface LicenseVerificationListener
 The callback triggered when the license verification result is available.
 
 ```java
-void onLicenseVerified(boolean isSuccess, Exception error);
+void onLicenseVerified(boolean isSuccess, @Nullable Exception error);
 ```
 
 **Parameters**

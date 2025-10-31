@@ -48,6 +48,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 Gets the image data for the scaled-down colour image.
 
 ```java
+@Nullable
 ImageData getImageData();
 ```
 

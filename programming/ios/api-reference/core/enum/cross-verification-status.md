@@ -35,10 +35,10 @@ typedef NS_ENUM(NSInteger, DSCrossVerificationStatus)
 public enum CrossVerificationStatus : Int
 {
     /** The cross verification has not been performed yet. */
-    notVerified,
+    case notVerified
     /** The cross verification has been passed successfully. */
-    passed,
+    case passed
     /** The cross verification has failed. */
-    failed
+    case failed
 };
 ```

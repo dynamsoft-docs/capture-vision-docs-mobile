@@ -18,11 +18,11 @@ ignore: true
 
 ```java
 @Retention(RetentionPolicy.CLASS)
-public @interface EnumImageSourceState
+public @interface EnumImageSourceAdapterStatus
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
-   public static final int ISS_BUFFER_EMPTY = 0;
+   int ISAS_BUFFER_EMPTY = 0;
    /** The source of ImageSourceAdapter is empty. */
-   public static final int ISS_EXHAUSTED = 1;
+   int ISAS_EXHAUSTED = 1;
 }
 ```

@@ -48,7 +48,7 @@ The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-d
 >
 >1. 
 ```objc
-@property(nonatomic, copy, readonly) NSString *targetROIDefName;
+@property (nonatomic, readonly, copy) NSString *targetROIDefName;
 ```
 2. 
 ```swift
@@ -65,7 +65,7 @@ The name of the processing task to which this result belongs.
 >
 >1. 
 ```objc
-@property(nonatomic, copy, readonly) NSString *taskName;
+@property (nonatomic, readonly, copy) NSString *taskName;
 ```
 2. 
 ```swift
@@ -82,7 +82,7 @@ The property indicates whether the result is at the section level.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) bool *isSectionLevelResult;
+@property (nonatomic, readonly, assign) BOOL isSectionLevelResult;
 ```
 2. 
 ```swift
@@ -99,9 +99,9 @@ The type of section that generates the result, if applicable, as defined by the 
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) DSSectionType sectionType;
+@property (nonatomic, readonly, assign) DSSectionType sectionType;
 ```
 2. 
 ```swift
-var sectionType: EnumSectionType { get }
+var sectionType: SectionType { get }
 ```

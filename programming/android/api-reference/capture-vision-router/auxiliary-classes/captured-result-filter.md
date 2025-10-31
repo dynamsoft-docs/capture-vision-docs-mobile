@@ -37,7 +37,7 @@ interface CapturedResultFilter
 The method for monitoring the output of [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html).
 
 ```java
-void onOriginalImageResultReceived(OriginalImageResultItem result);
+default void onOriginalImageResultReceived(@NonNull OriginalImageResultItem result);
 ```
 
 **Parameters**
@@ -49,7 +49,7 @@ void onOriginalImageResultReceived(OriginalImageResultItem result);
 The method for monitoring the output of DecodedBarcodesResult.
 
 ```java
-void onDecodedBarcodesReceived(DecodedBarcodesResult result);
+default void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result);
 ```
 
 **Parameters**
@@ -61,7 +61,7 @@ void onDecodedBarcodesReceived(DecodedBarcodesResult result);
 The method for monitoring the output of RecognizedTextLinesResult.
 
 ```java
-void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
+default void onRecognizedTextLinesReceived(@NonNull RecognizedTextLinesResult result);
 ```
 
 **Parameters**
@@ -73,7 +73,7 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 The method for monitoring the output of `ProcessedDocumentResult`, which includes the detected quad, deskewed image and enhanced image.
 
 ```java
-void onProcessedDocumentResultReceived(ProcessedDocumentResult result);
+default void onProcessedDocumentResultReceived(@NonNull ProcessedDocumentResult result);
 ```
 
 **Parameters**
@@ -85,7 +85,7 @@ void onProcessedDocumentResultReceived(ProcessedDocumentResult result);
 The method for monitoring the output of ParsedResult.
 
 ```java
-void onParsedResultsReceived(ParsedResult result);
+default void onParsedResultsReceived(@NonNull ParsedResult result);
 ```
 
 **Parameters**

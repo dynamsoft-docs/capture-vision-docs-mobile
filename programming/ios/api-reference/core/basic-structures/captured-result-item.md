@@ -69,7 +69,7 @@ A property of type `DSCapturedResultItem` that represents a reference to another
 ```
 2. 
 ```swift
-var referenceItem: DSCapturedResultItem? { get }
+var referenceItem: CapturedResultItem? { get }
 ```
 
 ### targetROIDefName
@@ -82,7 +82,7 @@ The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-d
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) NSString *targetROIDefName
+@property (nonatomic, readonly) NSString *targetROIDefName
 ```
 2. 
 ```swift
@@ -99,7 +99,7 @@ The name of the task that generated the result.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) NSString *taskName
+@property (nonatomic, readonly) NSString *taskName
 ```
 2. 
 ```swift

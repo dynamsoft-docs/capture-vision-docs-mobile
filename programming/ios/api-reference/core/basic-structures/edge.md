@@ -29,12 +29,16 @@ The `DSEdge` class represents an edge defined by two `Corners`.
 class Edge : NSObject
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`startCorner`](#startcorner) | *DSCorner \** | The starting corner of the edge. |
 | [`endCorner`](#endcorner) | *DSCorner \** | The ending corner of the edge. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`initWithStartCorner`](#initwithstartcorner) | The constructor. Creates an instance from start corner and end corner. |
 
 ### startCorner
 
@@ -46,7 +50,7 @@ The starting corner of the edge.
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nullable) DSCorner *startCorner;
+@property (nonatomic, strong) DSCorner *startCorner;
 ```
 2. 
 ```swift
@@ -63,9 +67,27 @@ The ending corner of the edge.
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nullable) DSCorner *endCorner;
+@property (nonatomic, strong) DSCorner *endCorner;
 ```
 2. 
 ```swift
 var endCorner: Corner? { get set }
+```
+
+### initWithStartCorner
+
+The constructor. Creates an instance from start corner and end corner.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithStartCorner:(DSCorner *)startCorner
+                          endCorner:(DSCorner *)endCorner;
+```
+2. 
+```swift
+init(startCorner: Corner, endCorner: Corner)
 ```

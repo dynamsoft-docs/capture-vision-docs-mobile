@@ -110,7 +110,7 @@ Gets the type of the intermediate result unit, defined by the enumeration [`DSIn
 ```
 2. 
 ```swift
-func getType() -> DSIntermediateResultUnitType
+func getType() -> IntermediateResultUnitType
 ```
 
 **Return Value**
@@ -131,7 +131,7 @@ Gets the transformation matrix via [`DSTransformMatrixType`]({{ site.dcv_ios_api
 ```
 2. 
 ```swift
-func getTransformMatrix(_ type: DSTransformMatrixType) -> CGAffineTransform
+func getTransformMatrix(_ type: TransformMatrixType) -> CGAffineTransform
 ```
 
 **Parameters**
@@ -182,7 +182,7 @@ Replaces the content of the intermediate result unit.
 ```
 2. 
 ```swift
-func replace(_ oldUnit: DSIntermediateResultUnit) -> NSInteger
+func replace(_ oldUnit: IntermediateResultUnit) -> NSInteger
 ```
 
 **Parameters**

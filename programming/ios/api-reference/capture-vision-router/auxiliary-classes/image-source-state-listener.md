@@ -49,7 +49,7 @@ The methods for monitoring the state of the ImageSourceAdapter.
 ```
 2. 
 ```swift
-func onImageSourceStateReceived(_ state: DSImageSourceState)
+func onImageSourceStateReceived(_ state: ImageSourceState)
 ```
 
 **Parameters**
@@ -68,5 +68,5 @@ func onImageSourceStateReceived(_ state: DSImageSourceState)
 ```
 2. 
 ```swift
-stateListener.onImageSourceStateReceived(DSImageSourceState.connected)
+stateListener.onImageSourceStateReceived(ImageSourceState.connected)
 ```

@@ -94,7 +94,7 @@ Gets the type of the region object element, defined by the enumeration [`DSRegio
 ```
 2. 
 ```swift
-func getType() -> DSRegionObjectElementType
+func getType() -> RegionObjectElementType
 ```
 
 **Return Value**
@@ -115,7 +115,7 @@ Gets the original image that produce this element.
 ```
 2. 
 ```swift
-func getImageData() -> DSImageData?
+func getImageData() -> ImageData?
 ```
 
 **Return Value**

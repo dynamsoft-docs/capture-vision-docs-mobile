@@ -204,7 +204,7 @@ Sets a line segment.
 ```objc
 -(NSInteger)setLineSegment:(NSInteger)index
                       line:(DSLineSegment *)line
-    matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+     matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
 ```
 2. 
 ```swift

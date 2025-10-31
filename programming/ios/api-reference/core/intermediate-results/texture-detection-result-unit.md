@@ -30,14 +30,14 @@ NS_SWIFT_NAME(TextureDetectionResultUnit)
 class TextureDetectionResultUnit : IntermediateResultUnit
 ```
 
-## Attributes
+## Methods
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`xSpacing`](#xspacing) | *NSInteger* | This value represents the detected horizontal distance in pixels between consecutive texture patterns, providing an indication of the texture's density and orientation within the image. |
-| [`ySpacing`](#yspacing) | *NSInteger* | The spacing between texture stripes in the y-direction. Similar to `xSpacing`, this value measures the vertical distance between texture patterns. texture's characteristics and spatial distribution. |
-
-## Inherited Methods
+| Method | Description |
+|------- |-------------|
+| [`getXSpacing`](#xspacing) | Gets the detected horizontal distance in pixels between consecutive texture patterns, providing an indication of the texture's density and orientation within the image. |
+| [`setXSpacing`](#xspacing) | Sets the x-direction spacing of the texture. |
+| [`getYSpacing`](#yspacing) | Gets the spacing between texture stripes in the y-direction. Similar to `xSpacing`, this value measures the vertical distance between texture patterns. texture's characteristics and spatial distribution. |
+| [`setYSpacing`](#yspacing) | Sets the y-direction spacing of the texture. |
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -51,26 +51,9 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 | [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
 | [`replace`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#replace) | Replaces the content of the intermediate result unit. |
 
-### xSpacing
+### getXSpacing
 
-This value represents the detected horizontal distance in pixels between consecutive texture patterns, providing an indication of the texture's density and orientation within the image.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger xSpacing
-```
-2. 
-```swift
-var xSpacing: Int { get set }
-```
-
-### ySpacing
-
-The spacing between texture stripes in the y-direction. Similar to `xSpacing`, this value measures the vertical distance between texture patterns. texture's characteristics and spatial distribution.
+Gets the detected horizontal distance in pixels between consecutive texture patterns, providing an indication of the texture's density and orientation within the image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -78,9 +61,60 @@ The spacing between texture stripes in the y-direction. Similar to `xSpacing`, t
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger ySpacing
+- (NSInteger)getXSpacing;
 ```
 2. 
 ```swift
-var ySpacing: Int { get set }
+func getXSpacing() -> Int
+```
+
+### setXSpacing
+
+Sets the x-direction spacing of the texture.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setXSpacing:(NSInteger)xSpacing;
+```
+2. 
+```swift
+func setXSpacing(xSpacing: Int)
+```
+
+### getYSpacing
+
+Sets the spacing between texture stripes in the y-direction. Similar to `xSpacing`, this value measures the vertical distance between texture patterns. texture's characteristics and spatial distribution.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)getYSpacing;
+```
+2. 
+```swift
+func getYSpacing() -> Int
+```
+
+### setYSpacing
+
+Sets the y-direction spacing of the texture.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setYSpacing:(NSInteger)ySpacing;
+```
+2. 
+```swift
+func setYSpacing(ySpacing: Int)
 ```

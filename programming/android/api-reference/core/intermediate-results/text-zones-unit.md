@@ -53,6 +53,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 Gets an array of `TextZone` objects, each representing the geometric boundaries of a detected text zone within the image.
 
 ```java
+@Nullable
 TextZone[] getTextZones()
 ```
 
@@ -77,6 +78,7 @@ The number of text zones.
 Gets the text zone at the specified index.
 
 ```java
+@Nullable
 TextZone getTextZone(int index)
 ```
 

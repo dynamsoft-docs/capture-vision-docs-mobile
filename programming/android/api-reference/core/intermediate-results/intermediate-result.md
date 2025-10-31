@@ -26,11 +26,11 @@ class IntermediateResult
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getIntermediateResultUnits`](#getintermediateresultunits) | Get an array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects, each representing a different type of intermediate result. |
+| [`getIntermediateResultUnits`](#getintermediateresultunits) | Gets an array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects, each representing a different type of intermediate result. |
 
 ### getIntermediateResultUnits
 
-Get an array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects, each representing a different type of intermediate result.
+Gets an array of [`IntermediateResultUnit`](intermediate-result-unit.md) objects, each representing a different type of intermediate result.
 
 ```java
 IntermediateResultUnit[] getIntermediateResultUnits()

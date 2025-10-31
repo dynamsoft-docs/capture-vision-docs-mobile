@@ -51,7 +51,7 @@ Add quadrilaterals on the image.
 ```objc
 - (DSImageData *)drawOnImage:(DSImageData *)image
                        quads:(NSArray<DSQuadrilateral *> *)quads
-                      colour:(UIColor)colour
+                      colour:(UIColor *)colour
                    thickness:(NSInteger)thickness;
 ```
 2. 
@@ -85,7 +85,7 @@ Add lines on the image.
 ```objc
 - (DSImageData *)drawOnImage:(DSImageData *)image
                 lineSegments:(NSArray<DSLineSegment *> *)lineSegments
-                      colour:(UIColor)colour
+                      colour:(UIColor *)colour
                    thickness:(NSInteger)thickness;
 ```
 2. 
@@ -118,7 +118,7 @@ Add contours on the image.
 ```objc
 - (DSImageData *)drawOnImage:(DSImageData *)image
                     contours:(NSArray<DSContour *> *)contours
-                      colour:(UIColor)colour
+                      colour:(UIColor *)colour
                    thickness:(NSInteger)thickness;
 ```
 2. 
@@ -151,7 +151,7 @@ Add corners on the image.
 ```objc
 - (DSImageData *)drawOnImage:(DSImageData *)image
                      corners:(NSArray<DSCorner *> *)corners
-                      colour:(UIColor)colour
+                      colour:(UIColor *)colour
                    thickness:(NSInteger)thickness;
 ```
 2. 
@@ -184,7 +184,7 @@ Add edges on the image.
 ```objc
 - (DSImageData *)drawOnImage:(DSImageData *)image
                        edges:(NSArray<DSEdge *> *)edges
-                      colour:(UIColor)colour
+                      colour:(UIColor *)colour
                    thickness:(NSInteger)thickness;
 ```
 2. 

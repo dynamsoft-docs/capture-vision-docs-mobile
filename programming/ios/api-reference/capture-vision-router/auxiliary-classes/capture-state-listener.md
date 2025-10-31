@@ -55,18 +55,3 @@ func onCapturedStateChanged(_ state: DSCaptureState)
 **Parameters**
 
 `state`: One of the `DSCaptureState` value that indicates the capture state.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[self.delegate onCapturedStateChanged:state];
-```
-2. 
-```swift
-delegate?.onCapturedStateChanged(state)
-```

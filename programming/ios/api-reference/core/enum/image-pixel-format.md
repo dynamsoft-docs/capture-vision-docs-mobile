@@ -31,27 +31,29 @@ typedef NS_ENUM(NSInteger, DSImagePixelFormat)
    /** NV21 */
    DSImagePixelFormatNV21,
    /** 16bit with RGB channel order stored in memory from high to low address*/
-   DSImagePixelFormatRGB_565,
+   DSImagePixelFormatRGB565,
    /** 16bit with RGB channel order stored in memory from high to low address*/
-   DSImagePixelFormatRGB_555,
+   DSImagePixelFormatRGB555,
    /** 24bit with RGB channel order stored in memory from high to low address*/
-   DSImagePixelFormatRGB_888,
+   DSImagePixelFormatRGB888,
    /** 32bit with ARGB channel order stored in memory from high to low address*/
-   DSImagePixelFormatARGB_8888,
+   DSImagePixelFormatARGB8888,
    /** 48bit with RGB channel order stored in memory from high to low address*/
-   DSImagePixelFormatRGB_161616,
+   DSImagePixelFormatRGB161616,
    /** 64bit with ARGB channel order stored in memory from high to low address*/
-   DSImagePixelFormatARGB_16161616,
+   DSImagePixelFormatARGB16161616,
    /** 32bit with ABGB channel order stored in memory from high to low address */
-   DSImagePixelFormatABGR_8888,
+   DSImagePixelFormatABGR8888,
    /** 64bit with ABGR channel order stored in memory from high to low address*/
-   DSImagePixelFormatABGR_16161616,
+   DSImagePixelFormatABGR16161616,
    /** 24bit with BGR channel order stored in memory from high to low address*/
-   DSImagePixelFormatBGR_888,
+   DSImagePixelFormatBGR888,
    /**  0:black, 255:white */
-   DSImagePixelFormatBinary_8,
+   DSImagePixelFormatBinary8,
    /**NV12 */
-   DSImagePixelFormatNV12
+   DSImagePixelFormatNV12,
+   /** 0:white, 255:black */
+   DSImagePixelFormatBinary8Inverted
 };
 ```
 >
@@ -59,34 +61,36 @@ typedef NS_ENUM(NSInteger, DSImagePixelFormat)
 public enum ImagePixelFormat : Int
 {
    /** 0:black, 1:white */
-   binary
+   case binary
    /** 0:white, 1:black */
-   binaryInverted
+   case binaryInverted
    /** 8-bit gray */
-   grayScaled
+   case grayScaled
    /** NV21 */
-   NV21
+   case NV21
    /** 16bit with RGB channel order stored in memory from high to low address*/
-   RGB_565
+   case RGB565
    /** 16bit with RGB channel order stored in memory from high to low address*/
-   RGB_555
+   case RGB555
    /** 24bit with RGB channel order stored in memory from high to low address*/
-   RGB_888
+   case RGB888
    /** 32bit with ARGB channel order stored in memory from high to low address*/
-   ARGB_8888
+   case ARGB8888
    /** 48bit with RGB channel order stored in memory from high to low address*/
-   RGB_161616
+   case RGB161616
    /** 64bit with ARGB channel order stored in memory from high to low address*/
-   ARGB_16161616
+   case ARGB16161616
    /** 32bit with ABGB channel order stored in memory from high to low address */
-   ABGR_8888
+   case ABGR8888
    /** 64bit with ABGR channel order stored in memory from high to low address*/
-   ABGR_16161616
+   case ABGR16161616
    /** 24bit with BGR channel order stored in memory from high to low address*/
-   BGR_888
+   case BGR888
    /**  0:black, 255:white */
-   binary8
+   case binary8
    /**NV12 */
-   NV12
+   case NV12
+   /**NV12 */
+   case binary8Inverted
 }
 ```

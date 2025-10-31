@@ -36,8 +36,8 @@ class ImageProcessor : NSObject
 | [`cropImage(imageData,rect)`](#cropimageimagedatarect) | Crops an image based on the provided rectangle or quadrilateral. |
 | [`cropAndDeskewImage(imageData,quad,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
 | [`cropAndDeskewImage(imageData,quad)`](#cropanddeskewimageimagedataquad) | Crops and deskew an image based on the provided quadrilateral. |
-| [`adjust(imageData,brightness)`](#adjustbrightness) | Adjusts the brightness of an image. |
-| [`adjust(imageData,contrast)`](#adjustcontrast) | Adjusts the contrast of an image. |
+| [`adjust(imageData,brightness)`](#adjustimagedatabrightness) | Adjusts the brightness of an image. |
+| [`adjust(imageData,contrast)`](#adjustimagedatacontrast) | Adjusts the contrast of an image. |
 | [`filterImage`](#filterimage) | Applies a filter to an image. |
 | [`convertToGray(imageData)`](#converttograyimagedata) | Converts an image to grayscale. |
 | [`convertToGray(imageData,rgb)`](#converttograyimagedatargb) | Converts an image to grayscale. |
@@ -56,9 +56,9 @@ Crops an image based on the provided rectangle.
 >
 >1. 
 ```objc
-- (DSImageData *)cropImage:(DSImageData *)imageData
-                      rect:(DSRect *)rect
-                     error:(NSError * _Nullable * _Nullable)error;
+- (nullable DSImageData *)cropImage:(DSImageData *)imageData
+                               rect:(DSRect *)rect
+                              error:(NSError * _Nullable * _Nullable)error;
 ```
 2. 
 ```swift

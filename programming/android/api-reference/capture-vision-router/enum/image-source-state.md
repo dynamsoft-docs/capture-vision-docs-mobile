@@ -16,7 +16,8 @@ codeAutoHeight: true
 `ImageSourceState` describes the state of an object that conforms to the `ImageSourceAdapter` interface and is designated as the image source in a `CaptureVisionRouter` object.
 
 ```java
-@Retention(RetentionPolicy.CLASS)
+@Retention(SOURCE)
+@IntDef({CS_STARTED, CS_STOPPED, CS_PAUSED, CS_RESUME})
 public @interface EnumImageSourceState
 {
    /** Indicates that the buffer of the image source is currently empty. */

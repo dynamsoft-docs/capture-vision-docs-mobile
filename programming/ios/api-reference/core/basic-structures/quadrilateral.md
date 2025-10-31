@@ -29,19 +29,21 @@ The `DSQuadrilateral` class represents a quadrilateral defined by four points.
 class Quadrilateral : NSObject
 ```
 
-## Methods & Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *NSArray* | An array of four `Point` objects defining the vertices of the quadrilateral. |
 | [`id`](#id) | *NSInteger* | The ID of the quadrilateral. |
+| [`boundingRect`](#boundingrect) | *CGRect* | Get the bounding rectangle of the quadrilateral. |
+| [`centrePoint`](#centrepoint) | *CGPoint* | Get the centre point of the quadrilateral. |
+| [`area`](#area) | *NSUInteger* | Get the area of the quadrilateral. |
 
 | Method | Description |
 | ------ | ----------- |
+| [`initWithPointArray(points:)`](#initwithpointarraypoints) | The constructor. Creates a quadrilateral from an array of points. |
+| [`initWithPointArray(points:quadId:)`](#initwithpointarraypointsquadid) | The constructor. Creates a quadrilateral from an array of points and an ID. |
 | [`contains`](#contains) | Check whether the input point is contained by the quadrilateral. |
-| [`boundingRect`](#boundingrect) | Get the bounding rectangle of the quadrilateral. |
-| [`centrePoint`](#centrepoint) | Get the centre point of the quadrilateral. |
-| [`area`](#area) | Get the area of the quadrilateral. |
 
 ### points
 
@@ -53,11 +55,11 @@ An array of four `Point` objects defining the vertices of the quadrilateral.
 >
 >1. 
 ```objc
-@property (nonatomic, copy) NSArray *points;
+@property (nonatomic, readonly, copy) NSArray<NSValue *> *points;
 ```
 2. 
 ```swift
-var points: [CGPoint] { get set }
+var points: [NSValue] { get }
 ```
 
 ### id
@@ -70,11 +72,108 @@ The ID of the quadrilateral.
 >
 >1. 
 ```objc
-@property (nonatomic) NSInteger *quadId;
+@property (nonatomic, assign) NSInteger quadId;
 ```
 2. 
 ```swift
 var quadId: Int { get set }
+```
+
+### boundingRect
+
+Get the bounding rectangle of the quadrilateral.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, readonly) CGRect boundingRect;
+```
+2. 
+```swift
+var boundingRect: CGRect { get }
+```
+
+**Return Value**
+
+The bounding rectangle of the quadrilateral.
+
+### centrePoint
+
+Get the centre point of the quadrilateral.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, readonly) CGPoint centrePoint;
+```
+2. 
+```swift
+var centrePoint: CGPoint { get }
+```
+
+**Return Value**
+
+The centre point of the quadrilateral.
+
+### area
+
+Get the area of the quadrilateral.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, readonly) NSUInteger area;
+```
+2. 
+```swift
+var area: Int { get }
+```
+
+**Return Value**
+
+The area of the quadrilateral.
+
+### initWithPointArray(points:)
+
+The constructor. Creates a quadrilateral from an array of points.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithPointArray:(NSArray<NSValue *> *)points;
+```
+2. 
+```swift
+init(points: [NSValue])
+```
+
+### initWithPointArray(points:quadId:)
+
+The constructor. Creates a quadrilateral from an array of points and an ID.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithPointArray:(NSArray<NSValue *> *)points quadId:(NSInteger)quadId;
+```
+2. 
+```swift
+init(points: [NSValue], quadId: Int)
 ```
 
 ### contains
@@ -101,126 +200,3 @@ func contains(_ point: CGPoint) -> Bool
 **Return Value**
 
 A `BOOL` value that indicates whether the point is contained by the quadrilateral.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-BOOL result = [quadrilateral contains:point];
-```
-2. 
-```swift
-let result = quadrilateral.contains(point)
-```
-
-### boundingRect
-
-Get the bounding rectangle of the quadrilateral.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly) CGRect *boundingRect;
-```
-2. 
-```swift
-var boundingRect: CGRect { get }
-```
-
-**Return Value**
-
-The bounding rectangle of the quadrilateral.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-CGRect rect = [quadrilateral getBoundingRect];
-```
-2. 
-```swift
-let rect = quadrilateral.getBoundingRect()
-```
-
-### centrePoint
-
-Get the centre point of the quadrilateral.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly) CGPoint *centrePoint;
-```
-2. 
-```swift
-var centrePoint: CGPoint { get }
-```
-
-**Return Value**
-
-The centre point of the quadrilateral.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-CGPoint center = [quadrilateral getCentrePoint];
-```
-2. 
-```swift
-let center = quadrilateral.getCentrePoint()
-```
-
-### area
-
-Get the area of the quadrilateral.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly) NSInteger *area;
-```
-2. 
-```swift
-var area: Int { get }
-```
-
-**Return Value**
-
-The area of the quadrilateral.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSInteger area = [quadrilateral getArea];
-```
-2. 
-```swift
-let area = quadrilateral.getArea()
-```

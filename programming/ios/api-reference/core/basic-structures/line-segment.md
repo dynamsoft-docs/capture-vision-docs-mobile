@@ -29,13 +29,17 @@ The `DSLineSegment` class represents a line segment defined by two `Points`.
 class LineSegment : NSObject
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`startPoint`](#startpoint) | *CGPoint* | The starting point of the line segment. |
 | [`endPoint`](#endpoint) | *CGPoint* | The ending point of the line segment. |
 | [`id`](#id) | *int* | The ID of the line segment. |
+
+| Methods | Description |
+| ------- | ----------- |
+| [`initWithStartPoint`](#initwithstartpoint) | The constructor. Creates an instance from start point, end point and line ID. |
 
 ### startPoint
 
@@ -47,7 +51,7 @@ The starting point of the line segment.
 >
 >1. 
 ```objc
-@property(nonatomic, assign) CGPoint startPoint;
+@property (nonatomic, assign) CGPoint startPoint;
 ```
 2. 
 ```swift
@@ -64,7 +68,7 @@ The ending point of the line segment.
 >
 >1. 
 ```objc
-@property(nonatomic, assign) CGPoint endPoint;
+@property (nonatomic, assign) CGPoint endPoint;
 ```
 2. 
 ```swift
@@ -81,9 +85,28 @@ The ID of the line segment.
 >
 >1. 
 ```objc
-@property (nonatomic) NSInteger *lineId;
+@property (nonatomic, assign) NSInteger lineId;
 ```
 2. 
 ```swift
 var lineId: Int { get set }
+```
+
+### initWithStartPoint
+
+The constructor. Creates an instance from start point, end point and line ID.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithStartPoint:(CGPoint)startPoint
+                          endPoint:(CGPoint)endPoint
+                            lineId:(NSInteger)lineId;
+```
+2. 
+```swift
+init(startPoint: CGPoint, endPoint: CGPoint, lineId: Int)
 ```

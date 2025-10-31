@@ -36,7 +36,7 @@ class ImageIO
 Saves an image to the specified path and format. The desired file format is inferred from the file extension provided in the `path` parameter.
 
 ```java
-void saveToFile(ImageData imageData, String path, boolean overWrite) throws UtilityException{}
+void saveToFile(@NonNull ImageData imageData, @NonNull String path, boolean overWrite) throws UtilityException{}
 ```
 
 **Parameters**
@@ -96,7 +96,7 @@ public void onOriginalImageResultReceived(@NonNull OriginalImageResultItem resul
 Saves an image to the memory.
 
 ```java
-byte[] SaveToMemory(ImageData imageData, EnumImageFileFormat imageFormat) throws UtilityException{}
+byte[] SaveToMemory(@NonNull ImageData imageData, @EnumImageFileFormat int imageFormat) throws UtilityException{}
 ```
 
 **Parameters**
@@ -121,7 +121,7 @@ The image bytes.
 Reads an image from the specified path and format.
 
 ```java
-ImageData readFromFile(String filePath) throws UtilityException{}
+ImageData readFromFile(@NonNull String filePath) throws UtilityException{}
 ```
 
 **Parameters**
@@ -143,7 +143,7 @@ The image data of type `ImageData`.
 Reads an image from the memory.
 
 ```java
-ImageData readFromMemory(byte[] fileBytes) throws UtilityException{}
+ImageData readFromMemory(@NonNull byte[] fileBytes) throws UtilityException{}
 ```
 
 **Parameters**

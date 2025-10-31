@@ -91,72 +91,73 @@ typedef NS_OPTIONS(NSUInteger, DSIntermediateResultUnitType) {
 ```
 >
 ```swift
-public enum IntermediateResultUnitType: Int {
-    /** No intermediate result. */
-    case null = 0
-    /** A scaled full-color image. */
-    case scaledColourImage = 1
-    /** A color image that has been scaled down for efficiency. */
-    case scaledDownColourImage = 1 << 1
-    /** A grayscale image derived from the original input. */
-    case grayscaleImage = 1 << 2
-    /** A grayscale image that has undergone transformation. */
-    case transformedGrayscaleImage = 1 << 3
-    /** A grayscale image enhanced for further processing. */
-    case enhancedGrayscaleImage = 1 << 4
-    /** Regions pre-detected as potentially relevant for further analysis. */
-    case predetectedRegions = 1 << 5
-    /** A binary (black and white) image. */
-    case binaryImage = 1 << 6
-    /** Results from detecting textures within the image. */
-    case textureDetectionResult = 1 << 7
-    /** A grayscale image with textures removed to enhance subject details like text or barcodes. */
-    case textureRemovedGrayscaleImage = 1 << 8
-    /** A binary image with textures removed, useful for clear detection of subjects without background noise. */
-    case textureRemovedBinaryImage = 1 << 9
-    /** Detected contours within the image, which can help in identifying shapes and objects. */
-    case contours = 1 << 10
-    /** Detected line segments, useful in structural analysis of the image content. */
-    case lineSegments = 1 << 11
-    /** Identified text zones, indicating areas with potential textual content. */
-    case textZones = 1 << 12
-    /** A binary image with text regions removed. */
-    case textRemovedBinaryImage = 1 << 13
-    /** Zones identified as potential barcode areas, aiding in focused barcode detection. */
-    case candidateBarcodeZones = 1 << 14
-    /** Barcodes that have been localized but not yet decoded. */
-    case localizedBarcodes = 1 << 15
-    /** Barcode images scaled up or down for improving speed, readability or decoding accuracy. */
-    case scaledBarcodeImage = 1 << 16
-    /** Images of barcodes processed to resist deformation and improve decoding success. */
-    case deformationResistedBarcodeImage = 1 << 17
-    /** Barcode images that have been complemented. */
-    case complementedBarcodeImage = 1 << 18
-    /** Successfully decoded barcodes. */
-    case decodedBarcodes = 1 << 19
-    /** Detected long lines. */
-    case longLines = 1 << 20
-    /** Detected corners within the image. */
-    case corners = 1 << 21
-    /** Candidate edges identified as potential components of quadrilaterals. */
-    case candidateQuadEdges = 1 << 22
-    /** Successfully detected quadrilaterals. */
-    case detectedQuads = 1 << 23
-    /** Text lines that have been localized in preparation for recognition. */
-    case localizedTextLines = 1 << 24
-    /** Successfully recognized text lines. */
-    case recognizedTextLines = 1 << 25
-    /** Successfully deskewed images. */
-    case deskewedImages = 1 << 26
-    /** Detected short lines. */
-    case shortLines = 1 << 27
-    /** Recognized raw text lines. */
-    rawTextLines = 1 << 28
-    /**Detected logic lines.*/
-    logicLines = 1 << 29
-    /** Successfully enhanced images. */
-    enhancedImages = 1 << 30
-    /** A mask to select all types of intermediate results. */
-    case all = 0xFFFFFFFFFFFFFFFF
+struct IntermediateResultUnitType: OptionSet {
+   let rawValue: Int
+   /** No intermediate result. */
+   static let null = IntermediateResultUnitType(rawValue: 0)
+   /** A scaled full-color image. */
+   static let scaledColourImage = IntermediateResultUnitType(rawValue: 1 << 0)
+   /** A color image that has been scaled down for efficiency. */
+   static let scaledDownColourImage = IntermediateResultUnitType(rawValue: 1 << 1)
+   /** A grayscale image derived from the original input. */
+   static let grayscaleImage = IntermediateResultUnitType(rawValue: 1 << 2)
+   /** A grayscale image that has undergone transformation. */
+   static let transformedGrayscaleImage = IntermediateResultUnitType(rawValue: 1 << 3)
+   /** A grayscale image enhanced for further processing. */
+   static let enhancedGrayscaleImage = IntermediateResultUnitType(rawValue: 1 << 4)
+   /** Regions pre-detected as potentially relevant for further analysis. */
+   static let predetectedRegions = IntermediateResultUnitType(rawValue: 1 << 5)
+   /** A binary (black and white) image. */
+   static let binaryImage = IntermediateResultUnitType(rawValue: 1 << 6)
+   /** Results from detecting textures within the image. */
+   static let textureDetectionResult = IntermediateResultUnitType(rawValue: 1 << 7)
+   /** A grayscale image with textures removed to enhance subject details like text or barcodes. */
+   static let textureRemovedGrayscaleImage = IntermediateResultUnitType(rawValue: 1 << 8)
+   /** A binary image with textures removed, useful for clear detection of subjects without background noise. */
+   static let textureRemovedBinaryImage = IntermediateResultUnitType(rawValue: 1 << 9)
+   /** Detected contours within the image, which can help in identifying shapes and objects. */
+   static let contours = IntermediateResultUnitType(rawValue: 1 << 10)
+   /** Detected line segments, useful in structural analysis of the image content. */
+   static let lineSegments = IntermediateResultUnitType(rawValue: 1 << 11)
+   /** Identified text zones, indicating areas with potential textual content. */
+   static let textZones = IntermediateResultUnitType(rawValue: 1 << 12)
+   /** A binary image with text regions removed. */
+   static let textRemovedBinaryImage = IntermediateResultUnitType(rawValue: 1 << 13)
+   /** Zones identified as potential barcode areas, aiding in focused barcode detection. */
+   static let candidateBarcodeZones = IntermediateResultUnitType(rawValue: 1 << 14)
+   /** Barcodes that have been localized but not yet decoded. */
+   static let localizedBarcodes = IntermediateResultUnitType(rawValue: 1 << 15)
+   /** Barcode images scaled up or down for improving speed, readability or decoding accuracy. */
+   static let scaledBarcodeImage = IntermediateResultUnitType(rawValue: 1 << 16)
+   /** Images of barcodes processed to resist deformation and improve decoding success. */
+   static let deformationResistedBarcodeImage = IntermediateResultUnitType(rawValue: 1 << 17)
+   /** Barcode images that have been complemented. */
+   static let complementedBarcodeImage = IntermediateResultUnitType(rawValue: 1 << 18)
+   /** Successfully decoded barcodes. */
+   static let decodedBarcodes = IntermediateResultUnitType(rawValue: 1 << 19)
+   /** Detected long lines. */
+   static let longLines = IntermediateResultUnitType(rawValue: 1 << 20)
+   /** Detected corners within the image. */
+   static let corners = IntermediateResultUnitType(rawValue: 1 << 21)
+   /** Candidate edges identified as potential components of quadrilaterals. */
+   static let candidateQuadEdges = IntermediateResultUnitType(rawValue: 1 << 22)
+   /** Successfully detected quadrilaterals. */
+   static let detectedQuads = IntermediateResultUnitType(rawValue: 1 << 23)
+   /** Text lines that have been localized in preparation for recognition. */
+   static let localizedTextLines = IntermediateResultUnitType(rawValue: 1 << 24)
+   /** Successfully recognized text lines. */
+   static let recognizedTextLines = IntermediateResultUnitType(rawValue: 1 << 25)
+   /** Successfully deskewed images. */
+   static let deskewedImages = IntermediateResultUnitType(rawValue: 1 << 26)
+   /** Detected short lines. */
+   static let shortLines = IntermediateResultUnitType(rawValue: 1 << 27)
+   /** Recognized raw text lines. */
+   rawTextLines = IntermediateResultUnitType(rawValue: 1 << 28)
+   /**Detected logic lines.*/
+   logicLines = IntermediateResultUnitType(rawValue: 1 << 29)
+   /** Successfully enhanced images. */
+   enhancedImages = IntermediateResultUnitType(rawValue: 1 << 30)
+   /** A mask to select all types of intermediate results. */
+   static let all = 0xFFFFFFFFFFFFFFFF
 }
 ```

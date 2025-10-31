@@ -23,9 +23,9 @@ codeAutoHeight: true
 typedef NS_ENUM(NSInteger, DSBufferOverflowProtectionMode)
 {
    /** New images are blocked when the buffer is full.*/
-   DSBufferOverflowProtectionModeBlock = 0,
+   DSBufferOverflowProtectionModeBlock,
    /** New images are appended at the end, and oldest images are pushed out from the beginning if thebuffer is full.*/
-   DSBufferOverflowProtectionModeUpdate = 1,
+   DSBufferOverflowProtectionModeUpdate,
 }NS_SWIFT_NAME(BufferOverflowProtectionMode);
 ```
 >
@@ -33,8 +33,8 @@ typedef NS_ENUM(NSInteger, DSBufferOverflowProtectionMode)
 public enum BufferOverflowProtectionMode : Int
 {
    /** New images are blocked when the buffer is full.*/
-   block = 0
+   case block = 0
    /** New images are appended at the end, and oldest images are pushed out from the beginning if thebuffer is full.*/
-   update = 1
+   case update = 1
 }
 ```

@@ -36,6 +36,7 @@ class RegionObjectElement
 Gets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md).
 
 ```java
+@NonNull
 Quadrilateral getLocation();
 ```
 
@@ -48,6 +49,7 @@ The location of the region object, represented as a [`Quadrilateral`](../basic-s
 Gets the referenced element that supports the capturing of this element.
 
 ```java
+@Nullable
 RegionObjectElement getReferencedElement();
 ```
 
@@ -73,6 +75,7 @@ The type of the region object element.
 Gets the original image that produce this element.
 
 ```java
+@Nullable
 ImageData getImageData();
 ```
 

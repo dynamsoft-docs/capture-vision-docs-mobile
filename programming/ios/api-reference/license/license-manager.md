@@ -23,7 +23,7 @@ The `DSLicenseManager` class provides a set of APIs to manage SDK licensing.
 >1. 
 ```objc
 @interface DSLicenseManager:NSObject
-```
+``` 
 2. 
 ```swift
 class LicenseManager : NSObject
@@ -47,7 +47,7 @@ Initializes the license for the application using a license key.
 >
 >1. 
 ```objc
-+ (void)initLicense:(NSString* )license verificationDelegate:(id<DSLicenseVerificationListener> _Nullable)delegate;
++ (void)initLicense:(NSString* )license verificationDelegate:(nullable id<DSLicenseVerificationListener> _Nullable)delegate;
 ```
 2. 
 ```swift
@@ -70,7 +70,7 @@ Assigns a distinctive name to the device, correlating it with its UUID.
 >
 >1. 
 ```objc
-+ (void)setDeviceFriendlyName:(NSString* )name;
++ (void)setDeviceFriendlyName:(NSString *)name;
 ```
 2. 
 ```swift
@@ -91,11 +91,11 @@ Get the unique identifier of the device.
 >
 >1. 
 ```objc
-+ (NSString *)getDeviceUUID;
++ (nullable NSString *)getDeviceUUID;
 ```
 2. 
 ```swift
-class func getDeviceUUID() -> String
+class func getDeviceUUID() -> String?
 ```
 
 **Return Value**

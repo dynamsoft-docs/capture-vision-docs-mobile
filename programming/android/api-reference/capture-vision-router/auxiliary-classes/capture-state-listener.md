@@ -33,7 +33,7 @@ interface CaptureStateListener
 The method for monitoring the capture state.
 
 ```java
-void onCaptureStateChanged(EnumCaptureState state);
+void onCaptureStateChanged(@EnumCaptureState int state);
 ```
 
 **Parameters**

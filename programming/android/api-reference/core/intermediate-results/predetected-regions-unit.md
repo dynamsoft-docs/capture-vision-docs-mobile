@@ -53,6 +53,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 Get the array of `PredetectedRegionElement` objects.
 
 ```java
+@Nullable
 PredetectedRegionElement[] getPredetectedRegions();
 ```
 
@@ -77,6 +78,7 @@ The number of `PredetectedRegionElement` objects.
 Get the `PredetectedRegionElement` object at the specified index.
 
 ```java
+@Nullable
 PredetectedRegionElement getPredetectedRegion(int index);
 ```
 

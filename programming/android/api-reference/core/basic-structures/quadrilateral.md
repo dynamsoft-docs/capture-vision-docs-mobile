@@ -22,7 +22,7 @@ The `Quadrilateral` class represents a quadrilateral shape in 2D space, which co
 class Quadrilateral
 ```
 
-## Methods & Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -31,7 +31,12 @@ class Quadrilateral
 
 | Method | Description |
 | ------ | ----------- |
-| [`contains`](#contains) | Check whether the input point is contained by the quadrilateral. |
+| [`Quadrilateral`](#quadrilateral-1) | The constructor. |
+| [`Quadrilateral(quad)`](#quadrilateralquad) | Constructs a quadrilateral from another quadrilateral. |
+| [`Quadrilateral(point1,point2,point3,point4)`](#quadrilateralpoint1point2point3point4) | Constructs a quadrilateral from four points. |
+| [`Quadrilateral(point1,point2,point3,point4,id)`](#quadrilateralpoint1point2point3point4id) | Constructs a quadrilateral from four points and an ID. |
+| [`fromJson`](#fromjson) | Constructs a quadrilateral from a JSON string. |
+| [`transformByMatrix`](#transformbymatrix) | Transforms the coordinates of the quadrilateral by a transformation matrix. |
 | [`getBoundingRect`](#getboundingrect) | Get the bounding rectangle of the quadrilateral. |
 | [`getArea`](#getarea) | Get the area of the quadrilateral. |
 
@@ -50,6 +55,67 @@ The ID of the quadrilateral.
 ```java
 int id;
 ```
+
+### Quadrilateral
+
+The constructor.
+
+```java
+Quadrilateral();
+```
+
+### Quadrilateral(quad)
+
+Constructs a quadrilateral from another quadrilateral.
+
+```java
+Quadrilateral(Quadrilateral quad);
+```
+
+### Quadrilateral(point1,point2,point3,point4)
+
+Constructs a quadrilateral from four points.
+
+```java
+Quadrilateral(Point point1,Point point2,Point point3,Point point4);
+```
+
+### Quadrilateral(point1,point2,point3,point4,id)
+
+Constructs a quadrilateral from four points and an ID.
+
+```java
+Quadrilateral(Point point1,Point point2,Point point3,Point point4,int id);
+```
+
+### fromJson
+
+Constructs a quadrilateral from a JSON string.
+
+```java
+
+Quadrilateral fromJson(String jsonString);
+```
+
+**Return Value**
+
+The constructed quadrilateral.
+
+### transformByMatrix
+
+Transforms the coordinates of the quadrilateral by a transformation matrix.
+
+```java
+Quadrilateral transformByMatrix(Matrix matrix);
+```
+
+**Parameters**
+
+`matrix`: The transformation matrix.
+
+**Return Value**
+
+The transformed quadrilateral.
 
 ### contains
 

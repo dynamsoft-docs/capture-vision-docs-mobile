@@ -76,12 +76,12 @@ public @interface EnumIntermediateResultUnitType {
     /** Detected short lines. */
     long IRUT_SHORT_LINES = 1L << 27;
     /** Recognized raw text lines. */
-    public static final long IRUT_RAW_TEXT_LINES = 1L << 28;
+    long IRUT_RAW_TEXT_LINES = 1L << 28;
     /**Detected logic lines.*/
-    public static final long IRUT_LOGIC_LINES = 1L << 29;
+    long IRUT_LOGIC_LINES = 1L << 29;
     /**Detected logic lines.*/
-    public static final long IRUT_ENHANCED_IMAGE = 1L << 30;
+    long IRUT_ENHANCED_IMAGE = 1L << 30;
     /** A mask to select all types of intermediate results. */
-    long IRUT_ALL = 0xFFFFFFFFFFFFFFFF;
+    long IRUT_ALL = 0xFFFFFFFFFFFFFFFFL;
 }
 ```

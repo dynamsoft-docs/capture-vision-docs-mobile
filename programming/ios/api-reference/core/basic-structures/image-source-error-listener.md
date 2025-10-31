@@ -45,11 +45,11 @@ The callback method for monitoring the errors that occur in the [`ImageSourceAda
 >
 >1. 
 ```objc
-- (void)onErrorReceived:( NSError *_Nullable error)imageSourceError;
+- (void)onErrorReceived:(NSError *)error;
 ```
 2. 
 ```swift
-func onErrorReceived(_ error: Error)
+func onErrorReceived(_error: Error)
 ```
 
 **Parameters**

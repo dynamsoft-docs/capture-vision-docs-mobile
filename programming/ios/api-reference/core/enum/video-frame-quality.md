@@ -20,14 +20,14 @@ codeAutoHeight: true
    >
 >
 ```objc
-typedef NS_ENUM(NSInteger, DSVideoFrameQuality)
+typedef NS_ENUM(NSInteger, DSFrameQuality)
 {
    /**The frame quality is measured to be high.*/
-   VideoFrameQualityHigh,
+   FrameQualityHIGH,
    /**The frame quality is measured to be low.*/
-   VideoFrameQualityLow,
+   FrameQualityLOW,
    /**The frame quality is unknown.*/
-   VideoFrameQualityUnknown
+   FrameQualityUNKNOWN
 };
 ```
 >
@@ -35,10 +35,10 @@ typedef NS_ENUM(NSInteger, DSVideoFrameQuality)
 public enum VideoFrameQuality : Int
 {
    /**The frame quality is measured to be high.*/
-   high,
+   case high
    /**The frame quality is measured to be low.*/
-   low,
+   case low
    /**The frame quality is unknown.*/
-   unknown
+   case unknown
 }
 ```

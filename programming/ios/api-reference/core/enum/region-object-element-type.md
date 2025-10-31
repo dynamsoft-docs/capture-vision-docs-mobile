@@ -23,21 +23,21 @@ codeAutoHeight: true
 typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
 {
    /**The type of subclass PredetectedRegionElement.*/
-   DSRegionObjectElementTypePredetectedRegion = 0,
+   DSRegionObjectElementTypePredetectedRegion,
    /**The type of subclass LocalizedBarcodeElement.*/
-   DSRegionObjectElementTypeLocalizedBarcode = 1,
+   DSRegionObjectElementTypeLocalizedBarcode,
    /**The type of subclass DecodedBarcodeElement.*/
-   DSRegionObjectElementTypeDecodedBarcode = 2,
+   DSRegionObjectElementTypeDecodedBarcode,
    /**The type of subclass LocalizedTextLineElement.*/
-   DSRegionObjectElementTypeLocalizedTextLine = 3,
+   DSRegionObjectElementTypeLocalizedTextLine,
    /**The type of subclass RecognizedTextLineElement.*/
-   DSRegionObjectElementTypeRecognizedTextLine = 4,
+   DSRegionObjectElementTypeRecognizedTextLine,
    /**The type of subclass DetectedQuadElement.*/
-   DSRegionObjectElementTypeDetectedQuad = 5,
+   DSRegionObjectElementTypeDetectedQuad,
    /**The type of subclass DeskewedImageElement.*/
-   DSRegionObjectElementTypeDeskewedImage = 6,
+   DSRegionObjectElementTypeDeskewedImage,
    /**The type of subclass EnhancedImageElement.*/
-   DSRegionObjectElementTypeEnhancedImage = 7
+   DSRegionObjectElementTypeEnhancedImage
 };
 ```
 >
@@ -45,20 +45,20 @@ typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
 public enum RegionObjectElementType : Int
 {
    /**The type of subclass PredetectedRegionElement.*/
-   predetectedRegion = 0,
+   case predetectedRegion
    /**The type of subclass LocalizedBarcodeElement.*/
-   localizedBarcode = 1,
+   case localizedBarcode
    /**The type of subclass DecodedBarcodeElement.*/
-   decodedBarcode = 2,
+   case decodedBarcode
    /**The type of subclass LocalizedTextLineElement.*/
-   localizedTextLine = 3,
+   case localizedTextLine
    /**The type of subclass RecognizedTextLineElement.*/
-   recognizedTextLine = 4,
+   case recognizedTextLine
    /**The type of subclass DetectedQuadElement.*/
-   detectedQuad = 5,
+   case detectedQuad
    /**The type of subclass DeskewedImageElement.*/
-   deskewedImage = 6
+   case deskewedImag
    /**The type of subclass EnhancedImageElement.*/
-   enhancedImage = 7
+   case enhancedImage
 }
 ```

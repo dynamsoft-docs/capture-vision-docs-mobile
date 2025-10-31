@@ -22,9 +22,9 @@ breadcrumbText: RasterDataSource
 typedef NS_ENUM(NSInteger, DSRasterDataSource)
 {
    /**The raster data source type of the PDF file is "pages". Only available for PDFReadingMode raster.*/
-   DSRasterDataSourceRasterizedPages = 0,
+   DSRasterDataSourceRasterizedPages,
    /**The raster data source type of the PDF file is "images".*/
-   DSRasterDataSourceExtractedImages = 1
+   DSRasterDataSourceExtractedImages
 }NS_SWIFT_NAME(RasterDataSource);
 ```
 >
@@ -32,8 +32,8 @@ typedef NS_ENUM(NSInteger, DSRasterDataSource)
 public enum RasterDataSource : Int
 {
    /**The raster data source type of the PDF file is "pages". Only available for PDFReadingMode raster.*/
-   rasterizedPages = 0,
+   case rasterizedPages
    /**The raster data source type of the PDF file is "images".*/
-   extractedImages = 1
+   case extractedImages
 }
 ```

@@ -19,20 +19,20 @@ codeAutoHeight: true
 public @interface EnumRegionObjectElementType
 {
    /**The type of subclass PredetectedRegionElement.*/
-   public static final int ROET_PREDETECTED_REGION = 0;
+   int ROET_PREDETECTED_REGION = 0;
    /**The type of subclass LocalizedBarcodeElement.*/
-   public static final int ROET_LOCALIZED_BARCODE = 1;
+   int ROET_LOCALIZED_BARCODE = 1;
    /**The type of subclass DecodedBarcodeElement.*/
-   public static final int ROET_DECODED_BARCODE = 2;
+   int ROET_DECODED_BARCODE = 2;
    /**The type of subclass LocalizedTextLineElement.*/
-   public static final int ROET_LOCALIZED_TEXT_LINE = 3;
+   int ROET_LOCALIZED_TEXT_LINE = 3;
    /**The type of subclass RecognizedTextLineElement.*/
-   public static final int ROET_RECOGNIZED_TEXT_LINE = 4;
+   int ROET_RECOGNIZED_TEXT_LINE = 4;
    /**The type of subclass DetectedQuadElement.*/
-   public static final int ROET_DETECTED_QUAD = 5;
+   int ROET_DETECTED_QUAD = 5;
    /**The type of subclass DeskewedImageElement.*/
-   public static final int ROET_DESKEWED_IMAGE = 6;
+   int ROET_DESKEWED_IMAGE = 6;
    /**The type of subclass EnhancedImageElement.*/
-   public static final int ROET_ENHANCED_IMAGE = 6;
+   int ROET_ENHANCED_IMAGE = 6;
 }
 ```

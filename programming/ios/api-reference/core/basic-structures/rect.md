@@ -29,7 +29,7 @@ The `DSRect` class represents a rectangle in 2D space, which contains four integ
 class Rect : NSObject
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -38,6 +38,10 @@ class Rect : NSObject
 | [`right`](#right) | *CGFloat* | The distance between the right of the rect and the y-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the width of the parent. If measuredInPercentage = 0, the value specifies a pixel length. |
 | [`bottom`](#bottom) | *CGFloat* | The distance between the bottom of the rect and the x-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the height of the parent. If measuredInPercentage = 0, the value specifies a pixel length. |
 | [`measuredInPercentage`](#measuredinpercentage) | *BOOL* | Indicates if the rectangle's measurements are in percentages. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`initWith(left:top:right:bottom:measuredInPercentage:)`](#initwithlefttoprightbottommeasuredinpercentage) | The constructor. Creates a DSRect from the specified parameters. |
 
 ### top
 
@@ -122,4 +126,25 @@ Sets whether to use percentages to measure the region size.
 2. 
 ```swift
 var measuredInPercentage: Bool { get set }
+```
+
+### initWith(left:top:right:bottom:measuredInPercentage:)
+
+The constructor. Creates a DSRect from the specified parameters.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithLeft:(CGFloat)left
+                         top:(CGFloat)top
+                       right:(CGFloat)right
+                      bottom:(CGFloat)bottom
+        measuredInPercentage:(BOOL)measuredInPercentage;
+```
+2. 
+```swift
+init(left: CGFloat, top: CGFloat, right: CGFloat, bottom: CGFloat, measuredInPercentage: Bool)
 ```

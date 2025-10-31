@@ -53,6 +53,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 Gets the array of [`LineSegment`](../basic-structures/line-segment.html).
 
 ```java
+@Nullable
 LineSegment[] getLineSegments();
 ```
 
@@ -77,6 +78,7 @@ The number of line segments.
 Gets the [`LineSegment`](../basic-structures/line-segment.html) at the specified index.
 
 ```java
+@Nullable
 LineSegment getLineSegment(int index);
 ```
 

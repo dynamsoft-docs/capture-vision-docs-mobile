@@ -26,17 +26,20 @@ class VideoFrameTag extends ImageTag
 
 | Methods | Description |
 | ---------- | ----------- |
-| [`getClarity`](#getquality) | Get the clarity of the video frame. |
-| [`getQuality`](#getquality) | Get the quality of the video frame. |
-| [`isCropped`](#iscropped) | Check whether the video frame is cropped. |
-| [`getCropRegion`](#getcropregion) | Get the crop region of the video frame. |
-| [`getOriginalWidth`](#getoriginalwidth) | Get the original width of the video frame. |
-| [`getOriginalHeight`](#getoriginalheight) | Get the original height of the video frame. |
-| [`VideoFrameTag(frameID,quality,isCropped,cropRegion,originalWidth,originalHeight)`](#videoframetagframeidqualityiscroppedcropregionoriginalwidthoriginalheight) | The constructor. |
+| [`getClarity`](#getquality) | Gets the clarity of the video frame. |
+| [`getQuality`](#getquality) | Gets the quality of the video frame. |
+| [`isCropped`](#iscropped) | Checks whether the video frame is cropped. |
+| [`getCropRegion`](#getcropregion) | Gets the crop region of the video frame. |
+| [`getOriginalWidth`](#getoriginalwidth) | Gets the original width of the video frame. |
+| [`setOriginalWidth`](#setoriginalwidth) | Sets the original width of the video frame. |
+| [`getOriginalHeight`](#getoriginalheight) | Gets the original height of the video frame. |
+| [`setOriginalHeight`](#setoriginalheight) | Sets the original height of the video frame. |
+| [`VideoFrameTag`](#videoframetag) | The constructor. |
+| [`VideoFrameTag(imageID,distanceMode,quality,isCropped,cropRegion,originalWidth,originalHeight)`](#videoframetagframeidqualityiscroppedcropregionoriginalwidthoriginalheight) | Constructs a VideoFrameTag from the specified parameters. |
 
 ### getClarity
 
-The clarity of the video frame.
+Gets the clarity of the video frame.
 
 ```java
 int getClarity();
@@ -44,10 +47,11 @@ int getClarity();
 
 ### getQuality
 
-The quality of the video frame.
+Gets the quality of the video frame.
 
 ```java
-EnumFrameQuality getQuality();
+@EnumVideoFrameQuality
+int getQuality();
 ```
 
 ### isCropped
@@ -60,7 +64,7 @@ boolean isCropped();
 
 ### getCropRegion
 
-The crop region of the video frame.
+Gets the crop region of the video frame.
 
 ```java
 Rect getCropRegion();
@@ -68,26 +72,42 @@ Rect getCropRegion();
 
 ### getOriginalWidth
 
-The original width of the video frame.
+Gets the original width of the video frame.
 
 ```java
 int getOriginalWidth();
 ```
 
+### setOriginalWidth
+
+Sets the original width of the video frame.
+
+```java
+void setOriginalWidth(int originalWidth);
+```
+
 ### getOriginalHeight
 
-The original height of the video frame.
+Gets the original height of the video frame.
 
 ```java
 int getOriginalHeight();
 ```
 
-### VideoFrameTag(frameID,quality,isCropped,cropRegion,originalWidth,originalHeight)
+### setOriginalHeight
+
+Sets the original height of the video frame.
+
+```java
+void setOriginalHeight(int originalHeight);
+```
+
+### VideoFrameTag(imageID,distanceMode,quality,isCropped,cropRegion,originalWidth,originalHeight)
 
 The constructor.
 
 ```java
-VideoFrameTag(int frameID, EnumFrameQuality quality, boolean isCropped, Rect cropRegion, int originalWidth, int originalHeight);
+VideoFrameTag(int imageId, @EnumImageCaptureDistanceMode int distanceMode, @EnumVideoFrameQuality int quality, boolean isCropped, Rect cropRegion, int originalWidth, int originalHeight);
 ```
 
 **Parameters**

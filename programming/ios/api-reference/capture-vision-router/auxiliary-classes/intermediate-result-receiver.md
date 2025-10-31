@@ -79,7 +79,7 @@ Get the observed parameters of the intermediate result receiver.
 >
 >1. 
 ```objc
--(ObservationParameters *)getObservationParameters;
+-(DSObservationParameters *)getObservationParameters;
 ```
 2. 
 ```swift
@@ -100,7 +100,7 @@ The callback triggered when the processing of a target ROI is finished.
 >
 >1. 
 ```objc
--(void)onTargetROIResultsReceived:(IntermediateResult *)unit
+-(void)onTargetROIResultsReceived:(DSIntermediateResult *)unit
                              info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -118,7 +118,7 @@ The callback triggered when the processing of a task is finished.
 >
 >1. 
 ```objc
--(void)onTaskResultsReceived:(IntermediateResult *)unit
+-(void)onTaskResultsReceived:(DSIntermediateResult *)unit
                         info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -142,8 +142,8 @@ The callback triggered when pre-detected regions are received.
 >
 >1. 
 ```objc
--(void)onPredetectedRegionsReceived:(PredetectedRegionsUnit *)unit
-                               info:(IntermediateResultExtraInfo *)info
+-(void)onPredetectedRegionsReceived:(DSPredetectedRegionsUnit *)unit
+                               info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -166,8 +166,8 @@ The callback triggered when localized barcodes are received.
 >
 >1. 
 ```objc
--(void)onLocalizedBarcodesReceived:(LocalizedBarcodesUnit *)unit
-                              info:(IntermediateResultExtraInfo *)info
+-(void)onLocalizedBarcodesReceived:(DSLocalizedBarcodesUnit *)unit
+                              info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -190,8 +190,8 @@ The callback triggered when decoded barcodes are received.
 >
 >1. 
 ```objc
--(void)onDecodedBarcodesReceived:(DecodedBarcodesUnit *)unit
-                            info:(IntermediateResultExtraInfo *)info
+-(void)onDecodedBarcodesReceived:(DSDecodedBarcodesUnit *)unit
+                            info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -214,8 +214,8 @@ The callback triggered when localized text lines are received.
 >
 >1. 
 ```objc
--(void)onLocalizedTextLinesReceived:(LocalizedTextLinesUnit *)unit
-                               info:(IntermediateResultExtraInfo *)info
+-(void)onLocalizedTextLinesReceived:(DSLocalizedTextLinesUnit *)unit
+                               info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -238,8 +238,8 @@ The callback triggered when recognized text lines are received.
 >
 >1. 
 ```objc
--(void)onRecognizedTextLinesReceived:(RecognizedTextLinesUnit *)unit
-                                info:(IntermediateResultExtraInfo *)info
+-(void)onRecognizedTextLinesReceived:(DSRecognizedTextLinesUnit *)unit
+                                info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -262,8 +262,8 @@ The callback triggered when detected quads are received.
 >
 >1. 
 ```objc
--(void)onDetectedQuadsReceived:(DetectedQuadsUnit *)unit
-                          info:(IntermediateResultExtraInfo *)info
+-(void)onDetectedQuadsReceived:(DSDetectedQuadsUnit *)unit
+                          info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -286,8 +286,8 @@ The callback triggered when deskewed images are received.
 >
 >1. 
 ```objc
--(void)onDeskewedImagesReceived:(DeskewedImagesUnit *)unit
-                           info:(IntermediateResultExtraInfo *)info
+-(void)onDeskewedImagesReceived:(DSDeskewedImagesUnit *)unit
+                           info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -310,8 +310,8 @@ The callback triggered when enhanced images are received.
 >
 >1. 
 ```objc
--(void)onEnhancedImagesReceived:(EnhancedImagesUnit *)unit
-                             info:(IntermediateResultExtraInfo *)info
+-(void)onEnhancedImagesReceived:(DSEnhancedImagesUnit *)unit
+                             info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -334,8 +334,8 @@ The callback triggered when colour images are received.
 >
 >1. 
 ```objc
--(void)onColourImageUnitReceived:(ColourImageUnit *)unit
-                            info:(IntermediateResultExtraInfo *)info
+-(void)onColourImageUnitReceived:(DSColourImageUnit *)unit
+                            info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -358,8 +358,8 @@ The callback triggered when up or down scaled colour images are received.
 >
 >1. 
 ```objc
--(void)onScaledColourImageUnitReceived:(ScaledColourImageUnit *)unit
-                                      info:(IntermediateResultExtraInfo *)info
+-(void)onScaledColourImageUnitReceived:(DSScaledColourImageUnit *)unit
+                                  info:(DSIntermediateResultExtraInfo *)info
 ```
 1. 
 ```swift
@@ -382,8 +382,8 @@ The callback triggered when grayscale images are received.
 >
 >1. 
 ```objc
--(void)onGrayscaleImageUnitReceived:(GrayscaleImageUnit *)unit
-                               info:(IntermediateResultExtraInfo *)info
+-(void)onGrayscaleImageUnitReceived:(DSGrayscaleImageUnit *)unit
+                               info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -406,8 +406,8 @@ The callback triggered when transformed grayscale images are received.
 >
 >1. 
 ```objc
--(void)onTransformedGrayscaleImageUnitReceived:(TransformedGrayscaleImageUnit *)unit
-                                          info:(IntermediateResultExtraInfo *)info
+-(void)onTransformedGrayscaleImageUnitReceived:(DSTransformedGrayscaleImageUnit *)unit
+                                          info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -430,8 +430,8 @@ The callback triggered when enhanced grayscale images are received.
 >
 >1. 
 ```objc
--(void)onEnhancedGrayscaleImageUnitReceived:(EnhancedGrayscaleImageUnit *)unit
-                                       info:(IntermediateResultExtraInfo *)info
+-(void)onEnhancedGrayscaleImageUnitReceived:(DSEnhancedGrayscaleImageUnit *)unit
+                                       info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -454,8 +454,8 @@ The callback triggered when binary images are received.
 >
 >1. 
 ```objc
--(void)onBinaryImageUnitReceived:(BinaryImageUnit *)unit
-                            info:(IntermediateResultExtraInfo *)info
+-(void)onBinaryImageUnitReceived:(DSBinaryImageUnit *)unit
+                            info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -478,8 +478,8 @@ The callback triggered when texture detection results are received.
 >
 >1. 
 ```objc
--(void)onTextureDetectionResultUnitReceived:(TextureDetectionResultUnit *)unit
-                                       info:(IntermediateResultExtraInfo *)info
+-(void)onTextureDetectionResultUnitReceived:(DSTextureDetectionResultUnit *)unit
+                                       info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -502,8 +502,8 @@ The callback triggered when texture removed grayscale images are received.
 >
 >1. 
 ```objc
--(void)onTextureRemovedGrayscaleImageUnitReceived:(TextureRemovedGrayscaleImageUnit *)unit
-                                             info:(IntermediateResultExtraInfo *)info
+-(void)onTextureRemovedGrayscaleImageUnitReceived:(DSTextureRemovedGrayscaleImageUnit *)unit
+                                             info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -526,8 +526,8 @@ The callback triggered when texture removed binary images are received.
 >
 >1. 
 ```objc
--(void)onTextureRemovedBinaryImageUnitReceived:(TextureRemovedBinaryImageUnit *)unit
-                                          info:(IntermediateResultExtraInfo *)info
+-(void)onTextureRemovedBinaryImageUnitReceived:(DSTextureRemovedBinaryImageUnit *)unit
+                                          info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -550,7 +550,7 @@ The callback triggered when contours are received.
 >
 >1. 
 ```objc
--(void)onContoursUnitReceived:(ContoursUnit *)unit
+-(void)onContoursUnitReceived:(DSContoursUnit *)unit
                          info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -598,7 +598,7 @@ The callback triggered when line segments are received.
 >
 >1. 
 ```objc
--(void)onLineSegmentsUnitReceived:(LineSegmentsUnit *)unit
+-(void)onLineSegmentsUnitReceived:(DSLineSegmentsUnit *)unit
                              info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -622,7 +622,7 @@ The callback triggered when text zones are received.
 >
 >1. 
 ```objc
--(void)onTextZonesUnitReceived:(TextZonesUnit *)unit
+-(void)onTextZonesUnitReceived:(DSTextZonesUnit *)unit
                           info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -646,7 +646,7 @@ The callback triggered when text removed binary images are received.
 >
 >1. 
 ```objc
--(void)onTextRemovedBinaryImageUnitReceived:(TextRemovedBinaryImageUnit *)unit
+-(void)onTextRemovedBinaryImageUnitReceived:(DSTextRemovedBinaryImageUnit *)unit
                                        info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -670,8 +670,8 @@ The callback triggered when logic lines are received.
 >
 >1. 
 ```objc
--(void)onLogicLinesUnitReceived:(LogicLinesUnit *)unit
-                          info:(DSIntermediateResultExtraInfo *)info
+-(void)onLogicLinesUnitReceived:(DSLogicLinesUnit *)unit
+                           info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -694,7 +694,7 @@ The callback triggered when long lines are received.
 >
 >1. 
 ```objc
--(void)onLongLinesUnitReceived:(LongLinesUnit *)unit
+-(void)onLongLinesUnitReceived:(DSLongLinesUnit *)unit
                           info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -718,7 +718,7 @@ The callback triggered when corners are received.
 >
 >1. 
 ```objc
--(void)onCornersUnitReceived:(CornersUnit *)unit
+-(void)onCornersUnitReceived:(DSCornersUnit *)unit
                         info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -742,7 +742,7 @@ The callback triggered when candidate quad edges are received.
 >
 >1. 
 ```objc
--(void)onCandidateQuadEdgesUnitReceived:(CandidateQuadEdgesUnit *)unit
+-(void)onCandidateQuadEdgesUnitReceived:(DSCandidateQuadEdgesUnit *)unit
                                    info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -766,7 +766,7 @@ The callback triggered when candidate barcode zones are received.
 >
 >1. 
 ```objc
--(void)onCandidateBarcodeZonesUnitReceived:(CandidateBarcodeZonesUnit *)unit
+-(void)onCandidateBarcodeZonesUnitReceived:(DSCandidateBarcodeZonesUnit *)unit
                                       info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -790,8 +790,8 @@ The callback triggered when scaled up barcode images are received.
 >
 >1. 
 ```objc
--(void)onScaledBarcodeImageUnitReceived:(ScaledBarcodeImageUnit *)unit
-                                     info:(DSIntermediateResultExtraInfo *)info
+-(void)onScaledBarcodeImageUnitReceived:(DSScaledBarcodeImageUnit *)unit
+                                   info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
 ```swift
@@ -814,7 +814,7 @@ The callback triggered when deformation resisted barcode images are received.
 >
 >1. 
 ```objc
--(void)onDeformationResistedBarcodeImageUnitReceived:(DeformationResistedBarcodeImageUnit *)unit
+-(void)onDeformationResistedBarcodeImageUnitReceived:(DSDeformationResistedBarcodeImageUnit *)unit
                                                 info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -838,7 +838,7 @@ The callback triggered when complemented barcode images are received.
 >
 >1. 
 ```objc
--(void)onComplementedBarcodeImageUnitReceived:(ComplementedBarcodeImageUnit *)unit
+-(void)onComplementedBarcodeImageUnitReceived:(DSComplementedBarcodeImageUnit *)unit
                                          info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 
@@ -862,7 +862,7 @@ The callback triggered when a raw text lines unit is received.
 >
 >1. 
 ```objc
--(void)onRawTextLinesUnitReceived:(RawTextLinesUnit *)unit
+-(void)onRawTextLinesUnitReceived:(DSRawTextLinesUnit *)unit
                              info:(DSIntermediateResultExtraInfo *)info
 ```
 2. 

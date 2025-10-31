@@ -15,7 +15,7 @@ The `NeuralNetworkModule` class defines general functions of the `DynamsoftNeura
 
 ## Definition
 
-*Namespace:* com.dynamsoft.dip
+*Namespace:* com.dynamsoft.dnn
 
 *Assembly:* DynamsoftCaptureVisionBundle.aar
 

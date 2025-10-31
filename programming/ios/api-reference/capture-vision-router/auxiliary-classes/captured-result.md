@@ -59,7 +59,7 @@ An array of [DSCapturedResultItem]({{ site.dcv_ios_api }}core/basic-structures/c
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nullable, readonly) NSArray<DSCapturedResultItem *> *items;
+@property (nonatomic, readonly, copy, nullable) NSArray<DSCapturedResultItem *> *items;
 ```
 2. 
 ```swift

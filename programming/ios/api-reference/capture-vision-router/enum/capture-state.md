@@ -24,7 +24,9 @@ typedef NS_ENUM(NSInteger, DSCaptureState)
    /** The data capturing is started. */
    DSCaptureStateStarted,
    /** The data capturing is stopped. */
-   DSCaptureStateStopped
+   DSCaptureStateStopped,
+   /** The data capturing is paused. */
+   DSCaptureStatePaused
 };
 ```
 >
@@ -35,5 +37,7 @@ public enum CaptureState : Int
    started
    /** The data capturing is stopped. */
    stopped
+   /** The data capturing is paused. */
+   paused
 };
 ```

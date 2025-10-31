@@ -27,8 +27,8 @@ Capture data from the file specified by the file path. To learn more about what 
 >
 >1. 
 ```objc
-- (nullable DSCapturedResult *)captureFromFile:(NSString *)file
-                                  templateName:(nonnull NSString*)templateName;
+- (DSCapturedResult *)captureFromFile:(NSString *)file
+                         templateName:(NSString*)templateName;
 ```
 2. 
 ```swift
@@ -72,8 +72,8 @@ Capture data from a given file in memory. To learn more about what the captured 
 >
 >1. 
 ```objc
-- (nullable DSCapturedResult *)captureFromFileBytes:(NSData *)fileBytes
-                                       templateName:(nonnull NSString*)templateName;
+- (DSCapturedResult *)captureFromFileBytes:(NSData *)fileBytes
+                              templateName:(NSString*)templateName;
 ```
 2. 
 ```swift
@@ -115,8 +115,8 @@ Capture data from the memory buffer via a `DSImageData` object. To learn more ab
 >
 >1. 
 ```objc
-- (nullable DSCapturedResult *)captureFromBuffer:(DSImageData *)buffer
-                                    templateName:(nonnull NSString*)templateName;
+- (DSCapturedResult *)captureFromBuffer:(DSImageData *)buffer
+                           templateName:(NSString*)templateName;
 ```
 2. 
 ```swift
@@ -159,8 +159,8 @@ Capture data from the given image. To learn more about what the captured data ca
 >
 >1. 
 ```objc
-- (nullable DSCapturedResult *)captureFromImage:(UIImage *)image
-                                    templateName:(nonnull NSString*)templateName;
+- (DSCapturedResult *)captureFromImage:(UIImage *)image
+                          templateName:(NSString*)templateName;
 ```
 2. 
 ```swift

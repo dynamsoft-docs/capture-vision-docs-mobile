@@ -47,7 +47,7 @@ The version of the `DynamsoftCore` module.
 Enable the output of logs.
 
 ```java
-static void enableLogging(int logMode);
+static void enableLogging(Context context, @EnumLogMode int logMode);
 ```
 
 **Parameters**

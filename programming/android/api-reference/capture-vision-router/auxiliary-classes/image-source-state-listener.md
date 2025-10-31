@@ -33,7 +33,7 @@ interface ImageSourceStateListener
 The methods for monitoring the state of the ImageSourceAdapter.
 
 ```java
-void onImageSourceStateReceived(EnumImageSourceState status);
+void onImageSourceStateReceived(@EnumImageSourceState int status);
 ```
 
 **Parameters**

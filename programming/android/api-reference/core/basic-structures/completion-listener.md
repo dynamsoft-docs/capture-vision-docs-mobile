@@ -42,14 +42,14 @@ void onSuccess();
 The methods is triggered when the `startCapturing` failed.
 
 ```java
-void onFailure(int errorCode, String errorMessage);
+void onFailure(int errorCode, String errorString);
 ```
 
 **Parameters**
 
 `[in] errorCode`: The error code that describes why the `startCapturing` failed.
 
-`[in] errorMessage`: The error message that describes why the `startCapturing` failed.
+`[in] errorString`: The error message that describes why the `startCapturing` failed.
 
 Possible Errors:
 

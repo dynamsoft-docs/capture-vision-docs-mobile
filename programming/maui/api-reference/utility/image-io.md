@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: ImageIO - Dynamsoft Capture Vision Router Module MAUI Edition API Reference
-description: The class ImageIO of Dynamsoft Capture Vision MAUI is a utility class that provides functionality for reading and saving images.
+title: DMImageIO - Dynamsoft Capture Vision Router Module MAUI Edition API Reference
+description: The class DMImageIO of Dynamsoft Capture Vision MAUI is a utility class that provides functionality for reading and saving images.
 keywords: image IO, MAUI
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# ImageIO
+# DMImageIO
 
-The `ImageIO` class is a utility class that provides functionality for reading and saving images.
+The `DMImageIO` class is a utility class that provides functionality for reading and saving images.
 
 ## Definition
 
@@ -19,7 +19,7 @@ The `ImageIO` class is a utility class that provides functionality for reading a
 *Assembly:* Dynamsoft.Utility.Maui
 
 ```csharp
-class ImageIO
+class DMImageIO
 ```
 
 ## Methods

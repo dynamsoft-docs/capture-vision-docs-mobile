@@ -33,40 +33,16 @@ class MultiFrameResultCrossFilter: NSObject, CapturedResultFilter
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableLatestOverlapping`](#enablelatestoverlapping) | Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming. |
 | [`enableResultCrossVerification`](#enableresultcrossverification) | Enables or disables the verification of one or multiple specific result item types. |
+| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Checks if verification is active for a given result item type. |
 | [`enableResultDeduplication`](#enableresultdeduplication) | Enables or disables the deduplication process for one or multiple specific result item types. |
+| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the interval during which duplicates are disregarded for specific result item types. |
 | [`getDuplicateForgetTime`](#getduplicateforgettime) | Gets the interval during which duplicates are disregarded for a given result item type. |
+| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if deduplication is active for a given result item type. |
+| [`enableLatestOverlapping`](#enablelatestoverlapping) | Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming. |
+| [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Set the maximum overlapping frames count for a given result item type. |
 | [`getMaxOverlappingFrames`](#getmaxoverlappingframes) | Get the maximum overlapping frames count for a given result item type. |
 | [`isLatestOverlappingEnabled`](#islatestoverlappingenabled) | Checks if to-the-latest overlapping is active for a given result item type. |
-| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Checks if verification is active for a given result item type. |
-| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if deduplication is active for a given result item type. |
-| [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the interval during which duplicates are disregarded for specific result item types. |
-| [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Set the maximum overlapping frames count for a given result item type. |
-
-### enableLatestOverlapping
-
-Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)enableLatestOverlapping:(DSCapturedResultItemType)resultItemTypes
-                      isEnabled:(BOOL)isEnabled;
-```
-2. 
-```swift
-func enableLatestOverlapping(resultItemTypes: DSCapturedResultItemType, isEnabled: Bool)
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
-
-`[in] enable`: Bool to toggle to-the-latest overlapping on or off.
 
 ### enableResultCrossVerification
 
@@ -79,7 +55,7 @@ Enables or disables the verification of one or multiple specific result item typ
 >1. 
 ```objc
 - (void)enableResultCrossVerification:(DSCapturedResultItemType)resultItemType
-                    isEnabled:(BOOL)isEnabled;
+                            isEnabled:(BOOL)isEnabled;
 ```
 2. 
 ```swift
@@ -91,6 +67,31 @@ func enableResultCrossVerification(resultItemType: DSCapturedResultItemType, isE
 `resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 `isEnabled`: A BOOL value that indicates whether to enable the result cross verification feature.
+
+### isResultCrossVerificationEnabled
+
+Checks if verification is active for a given result item type.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (bool)isResultCrossVerificationEnabled:(DSCapturedResultItemType)resultItemType;
+```
+2. 
+```swift
+func isResultCrossVerificationEnabled(resultItemType: DSCapturedResultItemType) -> Bool
+```
+
+**Parameters**
+
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+**Return Value**
+
+Boolean indicating the status of verification for the specified type.
 
 ### enableResultDeduplication
 
@@ -116,6 +117,30 @@ func enableResultDeduplication(resultItemType: DSCapturedResultItemType, isEnabl
 
 `isEnabled`: A BOOL value that indicates whether to enable the result deduplication feature.
 
+### setDuplicateForgetTime
+
+Sets the interval during which duplicates are disregarded for specific result item types.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setDuplicateForgetTime:(DSCapturedResultItemType)resultItemType
+            duplicateForgetTime:(NSInteger)duplicateForgetTime;
+```
+2. 
+```swift
+func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateForgetTime: Int)
+```
+
+**Parameters**
+
+`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+`duplicateForgetTime`: The duplicate forget time of the specified capture result type.
+
 ### getDuplicateForgetTime
 
 Gets the interval during which duplicates are disregarded for a given result item type.
@@ -140,6 +165,79 @@ func getDuplicateForgetTime(resultItemType: DSCapturedResultItemType) -> Int
 **Return Value**
 
 The set interval for the specified item type.
+
+### isResultDeduplicationEnabled
+
+Checks if deduplication is active for a given result item type.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (bool)isResultDeduplicationEnabled:(DSCapturedResultItemType)resultItemType;
+```
+2. 
+```swift
+func isResultDeduplicationEnabled(resultItemType: DSCapturedResultItemType) -> Bool
+```
+
+**Parameters**
+
+`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+**Return Value**
+
+Boolean indicating the deduplication status for the specified type.
+
+### enableLatestOverlapping
+
+Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)enableLatestOverlapping:(DSCapturedResultItemType)resultItemTypes
+                      isEnabled:(BOOL)isEnabled;
+```
+2. 
+```swift
+func enableLatestOverlapping(resultItemTypes: DSCapturedResultItemType, isEnabled: Bool)
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+`[in] enable`: Bool to toggle to-the-latest overlapping on or off.
+
+### setMaxOverlappingFrames
+
+Set the maximum overlapping frames count for a given result item type.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setMaxOverlappingFrames:(DSCapturedResultItemType)resultItemTypes
+           maxOverlappingFrames:(NSInteger)maxOverlappingFrames;
+```
+2. 
+```swift
+func setMaxOverlappingFrames(resultItemType: DSCapturedResultItemType, maxOverlappingFrames: Int)
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+`[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.
 
 ### getMaxOverlappingFrames
 
@@ -190,101 +288,3 @@ func isLatestOverlappingEnabled(resultItemType: DSCapturedResultItemType) -> Boo
 **Return Value**
 
 Boolean indicating the to-the-latest overlapping status for the specified type.
-
-### isResultDeduplicationEnabled
-
-Checks if deduplication is active for a given result item type.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (bool)isResultDeduplicationEnabled:(DSCapturedResultItemType)resultItemType;
-```
-2. 
-```swift
-func isResultDeduplicationEnabled(resultItemType: DSCapturedResultItemType) -> Bool
-```
-
-**Parameters**
-
-`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
-
-**Return Value**
-
-Boolean indicating the deduplication status for the specified type.
-
-### isResultCrossVerificationEnabled
-
-Checks if verification is active for a given result item type.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (bool)isResultCrossVerificationEnabled:(DSCapturedResultItemType)resultItemType;
-```
-2. 
-```swift
-func isResultCrossVerificationEnabled(resultItemType: DSCapturedResultItemType) -> Bool
-```
-
-**Parameters**
-
-`resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
-
-**Return Value**
-
-Boolean indicating the status of verification for the specified type.
-
-### setDuplicateForgetTime
-
-Sets the interval during which duplicates are disregarded for specific result item types.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setDuplicateForgetTime:(DSCapturedResultItemType)resultItemType
-            duplicateForgetTime:(NSInteger)duplicateForgetTime;
-```
-2. 
-```swift
-func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateForgetTime: Int)
-```
-
-**Parameters**
-
-`resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
-
-`duplicateForgetTime`: The duplicate forget time of the specified capture result type.
-
-### setMaxOverlappingFrames
-
-Set the maximum overlapping frames count for a given result item type.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setMaxOverlappingFrames:(DSCapturedResultItemType)resultItemTypes
-           maxOverlappingFrames:(NSInteger)maxOverlappingFrames;
-```
-2. 
-```swift
-func setMaxOverlappingFrames(resultItemType: DSCapturedResultItemType, maxOverlappingFrames: Int)
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
-
-`[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.

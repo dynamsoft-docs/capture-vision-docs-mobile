@@ -22,16 +22,19 @@ The `SimplifiedCaptureVisionSettings` class contains settings for capturing and 
 class SimplifiedCaptureVisionSettings
 ```
 
-## Methods & Attributes
+## Attributes & Methods
 
 | Method               | Description |
 |----------------------|-------------|
 | [`toJSON`](#tojson) | Generate the current `SimplifiedCaptureVisionSettings` object to a JSON string. |
 | [`fromJSON`](#fromjson) | Generate a `SimplifiedCaptureVisionSettings` object from a JSON string. |
+| [`toString`](#tostring) | Generate the current `SimplifiedCaptureVisionSettings` object to a string. |
+
+
 
 | Attribute | Type | Description |
 | --------- | ---- | ----------- |
-| [`outputOriginalImage`](#capturedresultitemtypes) | *int* | Specifies whether to output the original image or not. |
+| [`outputOriginalImage`](#capturedresultitemtypes) | *boolean* | Specifies whether to output the original image or not. |
 | [`roi`](#roi) | *[Quadrilateral](../../core/basic-structures/quadrilateral.md)* | Specifies the region of interest (ROI) of the image or frame where the capture and recognition will take place. |
 | [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *boolean* | Specifies whether the ROI is measured in pixels (false) or as a percentage of the image dimensions (true). |
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Specifies the maximum number of parallel tasks that can be used for image capture and recognition. |
@@ -64,6 +67,20 @@ static SimplifiedCaptureVisionSettings fromJSON(String jsonString);
 **Return Value**
 
 The generated `SimplifiedCaptureVisionSettings` object.
+
+### toString
+
+Generate the current `SimplifiedCaptureVisionSettings` object to a string.
+
+```java
+@NonNull
+@Override
+public String toString();
+```
+
+**Return Value**
+
+A string representation of the current `SimplifiedCaptureVisionSettings` object.
 
 ### outputOriginalImage
 

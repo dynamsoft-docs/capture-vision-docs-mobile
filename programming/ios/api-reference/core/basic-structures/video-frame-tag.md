@@ -29,7 +29,7 @@ The `DSVideoFrameTag` class represents a video frame tag, which is a type of ima
 class VideoFrameTag : ImageTag
 ```
 
-## Methods & Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -75,7 +75,7 @@ The quality of the video frame.
 ```
 2. 
 ```swift
-var quality: EnumVideoFrameQuality { get }
+var quality: FrameQuality { get }
 ```
 
 ### isCropped
@@ -122,7 +122,7 @@ The original width of the video frame.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger originalWidth;
+@property (nonatomic, readonly, assign) NSUInteger originalWidth;
 ```
 2. 
 ```swift
@@ -139,7 +139,7 @@ The original height of the video frame.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger originalHeight;
+@property (nonatomic, readonly, assign) NSUInteger originalHeight;
 ```
 2. 
 ```swift
@@ -157,27 +157,27 @@ The constructor of `DSVideoFrameTag`.
 >1. 
 ```objc
 - (instancetype)initWithImageId:(NSInteger)imageId
-                        clarity:(NSInteger)clarity
                         quality:(DSVideoFrameQuality)quality
                       isCropped:(BOOL)isCropped
                      cropRegion:(CGRect)cropRegion
-                  originalWidth:(NSInteger)originalWidth
-                 originalHeight:(NSInteger)originalHeight;
+                  originalWidth:(NSUInteger)originalWidth
+                 originalHeight:(NSUInteger)originalHeight
+                        clarity:(NSInteger)clarity;
 ```
 2. 
 ```swift
-init(imageId: Int, clarity: Int, quality: EnumVideoFrameQuality, isCropped: Bool, cropRegion: CGRect, originalWidth: Int, originalHeight: Int)
+init(imageId: Int, quality: FrameQuality, isCropped: Bool, cropRegion: CGRect, originalWidth: Int, originalHeight: Int, clarity: Int)
 ```
 
 **Parameters**
 
 `imageId`: The image ID of the video frame.  
-`clarity`: The clarity of the video frame.  
 `quality`: The quality of the video frame.  
 `isCropped`: Whether the video frame is cropped.  
 `cropRegion`: The crop region of the video frame.  
 `originalWidth`: The original width of the video frame.  
 `originalHeight`: The original height of the video frame.
+`clarity`: The clarity of the video frame.  
 
 **Return Value**
 
