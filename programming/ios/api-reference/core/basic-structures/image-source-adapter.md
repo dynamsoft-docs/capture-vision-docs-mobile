@@ -254,7 +254,7 @@ Sets an error listener to receive notifications about errors that occur during i
 ```
 2. 
 ```swift
-func setErrorListener(listener: ImageSourceErrorListener?)
+func setErrorListener(_ listener: ImageSourceErrorListener?)
 ```
 
 **Parameters**

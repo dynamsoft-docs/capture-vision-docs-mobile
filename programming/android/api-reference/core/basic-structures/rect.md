@@ -34,8 +34,8 @@ class DSRect
 
 | Method | Description |
 | ------ | ----------- |
-| [`DSRect`]() | The constructor. |
-| [`DSRect(left,top,right,bottom,measuredInPercentage)`]() | Constructs a DSRect from the specified parameters. |
+| [`DSRect`](#dsrect-1) | The constructor. |
+| [`DSRect(left,top,right,bottom,measuredInPercentage)`](#dsrectlefttoprightbottommeasuredinpercentage) | Constructs a DSRect from the specified parameters. |
 | [`fromJson`](#fromjson) | Constructs a DSRect from a JSON string. |
 
 ### top

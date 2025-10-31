@@ -31,7 +31,7 @@ class Vector4
 | Methods | Description |
 | ------- | ----------- |
 | [`Vector4`](#vector4-1) | The constructor. |
-| [`Vector4(v1,v2,v3,v4)`](#init) | Constructs a Vector4 from 4 integer values. |
+| [`Vector4(v1,v2,v3,v4)`](#vector4v1v2v3v4) | Constructs a Vector4 from 4 integer values. |
 
 
 ### value
