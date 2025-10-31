@@ -36,6 +36,7 @@ class PDFReadingParameter
 Set the processing mode of the PDF file. You can either read the PDF info from vector data or transform the PDF file into an image. The library will transform the PDF file into an image by default.
 
 ```java
+@EnumPDFReadingMode
 int mode;
 ```
 
@@ -52,5 +53,6 @@ int dpi;
 Set the raster data source type of the image. The default type is [`RDS_RASTERIZED_PAGES`]({{ site.dcv_android_api }}core/enum/raster-data-source.html).
 
 ```java
+@EnumRasterDataSource
 int rasterDataSource;
 ```

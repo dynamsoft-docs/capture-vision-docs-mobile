@@ -19,8 +19,8 @@ codeAutoHeight: true
 public @interface EnumBufferOverflowProtectionMode
 {
    /** New images are blocked when the buffer is full.*/
-   public static final int BOPM_BLOCK = 0;
+   int BOPM_BLOCK = 0;
    /** New images are appended at the end, and oldest images are pushed out from the beginning if thebuffer is full.*/
-   public static final int BOPM_UPDATE = 1;
+   int BOPM_UPDATE = 1;
 }
 ```

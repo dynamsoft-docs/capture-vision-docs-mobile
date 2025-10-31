@@ -22,7 +22,7 @@ The `DSRect` class represents a rectangle in 2D space, which contains four integ
 class DSRect
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -31,6 +31,12 @@ class DSRect
 | [`right`](#right) | *float* | The distance between the right of the rect and the y-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the width of the parent. If measuredInPercentage = 0, the value specifies a pixel length. |
 | [`bottom`](#bottom) | *float* | The distance between the bottom of the rect and the x-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the height of the parent. If measuredInPercentage = 0, the value specifies a pixel length. |
 | [`measuredInPercentage`](#measuredinpercentage) | *boolean* | Indicates if the rectangle's measurements are in percentages. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`DSRect`]() | The constructor. |
+| [`DSRect(left,top,right,bottom,measuredInPercentage)`]() | Constructs a DSRect from the specified parameters. |
+| [`fromJson`](#fromjson) | Constructs a DSRect from a JSON string. |
 
 ### top
 
@@ -70,4 +76,28 @@ Sets whether to use percentages to measure the region size.
 
 ```java
 boolean isMeasuredInPercentage;
+```
+
+### DSRect
+
+The constructor.
+
+```java
+DSRect();
+```
+
+### DSRect(left,top,right,bottom,measuredInPercentage)
+
+Constructs a DSRect from the specified parameters.
+
+```java
+DSRect(float left, float top, float right, float bottom, boolean measuredInPercentage);
+```
+
+### fromJson
+
+Constructs a DSRect from a JSON string.
+
+```java
+DSRect fromJson(String jsonString);
 ```

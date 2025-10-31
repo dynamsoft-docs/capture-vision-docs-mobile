@@ -26,6 +26,7 @@ class MultiFrameResultCrossFilter implements CapturedResultFilter
 
 | Method | Description |
 | ------ | ----------- |
+| [`MultiFrameResultCrossFilter`](#multiframeresultcrossfilter-1) | The constructor. |
 | [`enableLatestOverlapping`](#enablelatestoverlapping) | Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming. |
 | [`enableResultCrossVerification`](#enableresultcrossverification) | Enables or disables the verification of one or multiple specific result item types. |
 | [`enableResultDeduplication`](#enableresultdeduplication) | Enables or disables the deduplication process for one or multiple specific result item types. |
@@ -37,26 +38,20 @@ class MultiFrameResultCrossFilter implements CapturedResultFilter
 | [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the interval during which duplicates are disregarded for specific result item types. |
 | [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Set the maximum overlapping frames count for a given result item type. |
 
-### enableLatestOverlapping
+### MultiFrameResultCrossFilter
 
-Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming.
+The constructor.
 
 ```java
-void enableLatestOverlapping(@EnumCapturedResultItemType int type, boolean enable);
+MultiFrameResultCrossFilter();
 ```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
-
-`[in] enable`: Boolean to toggle to-the-latest overlapping on or off.
 
 ### enableResultCrossVerification
 
 Enables or disables the verification of one or multiple specific result item types.
 
 ```java
-void enableResultCrossVerification(@EnumCapturedResultItemType int resultItemTypes, bool enable);
+void enableResultCrossVerification(@EnumCapturedResultItemType int resultItemTypes, boolean enable);
 ```
 
 **Parameters**
@@ -64,84 +59,6 @@ void enableResultCrossVerification(@EnumCapturedResultItemType int resultItemTyp
 `[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 `[in] enable`: Boolean to toggle verification on or off.
-
-### enableResultDeduplication
-
-Enables or disables the deduplication process for one or multiple specific result item types.
-
-```java
-void enableResultDeduplication(@EnumCapturedResultItemType int resultItemTypes, bool enable);
-```
-
-**Parameters**
-
-`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
-
-`[in] enable`: Boolean to toggle deduplication on or off.
-
-### getDuplicateForgetTime
-
-Gets the interval during which duplicates are disregarded for a given result item type.
-
-```java
-int getDuplicateForgetTime(@EnumCapturedResultItemType int type);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
-
-**Return Value**
-
-The set interval for the specified item type.
-
-### getMaxOverlappingFrames
-
-Get the maximum overlapping frames count for a given result item type.
-
-```java
-int getMaxOverlappingFrames(@EnumCapturedResultItemType int type);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
-
-**Return Value**
-
-The maximum overlapping frame count for the overlapping.
-
-### isLatestOverlappingEnabled
-
-Checks if to-the-latest overlapping is active for a given result item type.
-
-```java
-boolean isLatestOverlappingEnabled(@EnumCapturedResultItemType int type);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
-
-**Return Value**
-
-Boolean indicating the to-the-latest overlapping status for the specified type.
-
-### isResultDeduplicationEnabled
-
-Checks if deduplication is active for a given result item type.
-
-```java
-boolean isResultDeduplicationEnabled(@EnumCapturedResultItemType int type);
-```
-
-**Parameters**
-
-`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
-
-**Return Value**
-
-Boolean indicating the deduplication status for the specified type.
 
 ### isResultCrossVerificationEnabled
 
@@ -159,6 +76,36 @@ boolean isResultCrossVerificationEnabled(@EnumCapturedResultItemType int type);
 
 Boolean indicating the status of verification for the specified type.
 
+### enableResultDeduplication
+
+Enables or disables the deduplication process for one or multiple specific result item types.
+
+```java
+void enableResultDeduplication(@EnumCapturedResultItemType int resultItemTypes, boolean enable);
+```
+
+**Parameters**
+
+`[in] type`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
+
+`[in] enable`: Boolean to toggle deduplication on or off.
+
+### isResultDeduplicationEnabled
+
+Checks if deduplication is active for a given result item type.
+
+```java
+boolean isResultDeduplicationEnabled(@EnumCapturedResultItemType int type);
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
+
+**Return Value**
+
+Boolean indicating the deduplication status for the specified type.
+
 ### setDuplicateForgetTime
 
 Sets the interval during which duplicates are disregarded for a given result item type.
@@ -173,6 +120,52 @@ void setDuplicateForgetTime(@EnumCapturedResultItemType int resultItemTypes, int
 
 `[in] time`: Time in milliseconds during which duplicates are disregarded.
 
+### getDuplicateForgetTime
+
+Gets the interval during which duplicates are disregarded for a given result item type.
+
+```java
+int getDuplicateForgetTime(@EnumCapturedResultItemType int type);
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
+
+**Return Value**
+
+The set interval for the specified item type.
+
+### enableLatestOverlapping
+
+Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can sharpenly increase the read-rate performance when decoding multiple barcodes under the video streaming.
+
+```java
+void enableLatestOverlapping(@EnumCapturedResultItemType int resultItemTypes, boolean enable);
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
+
+`[in] enable`: Boolean to toggle to-the-latest overlapping on or off.
+
+### isLatestOverlappingEnabled
+
+Checks if to-the-latest overlapping is active for a given result item type.
+
+```java
+boolean isLatestOverlappingEnabled(@EnumCapturedResultItemType int type);
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
+
+**Return Value**
+
+Boolean indicating the to-the-latest overlapping status for the specified type.
+
 ### setMaxOverlappingFrames
 
 Set the maximum overlapping frames count for a given result item type. You can set it higher if:
@@ -181,7 +174,7 @@ Set the maximum overlapping frames count for a given result item type. You can s
 - You want to further improve the read-rate.
 
 ```java
-void setMaxOverlappingFrames(@EnumCapturedResultItemType int type, int maxOverlappingFrames);
+void setMaxOverlappingFrames(@EnumCapturedResultItemType int resultItemTypes, int maxFramesToCheck);
 ```
 
 **Parameters**
@@ -189,3 +182,19 @@ void setMaxOverlappingFrames(@EnumCapturedResultItemType int type, int maxOverla
 `[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
 
 `[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.
+
+### getMaxOverlappingFrames
+
+Get the maximum overlapping frames count for a given result item type.
+
+```java
+int getMaxOverlappingFrames(@EnumCapturedResultItemType int type);
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html?lang=android).
+
+**Return Value**
+
+The maximum overlapping frame count for the overlapping.

@@ -34,6 +34,7 @@ class TextZone
 The location of the text zone.
 
 ```java
+@NonNull
 Quadrilateral location
 ```
 
@@ -42,5 +43,6 @@ Quadrilateral location
 The indices of the character contours.
 
 ```java
+@NonNull
 int[] charContoursIndices
 ```

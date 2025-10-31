@@ -54,6 +54,8 @@ The following methods are inherited from [`CapturedResultBase`]({{ site.dcv_andr
 Get an array of [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html), which is the basic unit of the captured results. A [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) can be a original image, a decoded barcode, a recognized text, a detected quad, a normalized image, or a parsed result. View [`CapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html) for all available types.
 
 ```java
+@Size(min = 0)
+@NonNull
 CapturedResultItem[] getItems();
 ```
 
@@ -66,6 +68,7 @@ An array containing the [`CapturedResultItem`]({{ site.dcv_android_api }}core/ba
 Get all the barcode decoding results of the `CapturedResult`.
 
 ```java
+@Nullable
 DecodedBarcodesResult getDecodedBarcodesResult();
 ```
 
@@ -78,6 +81,7 @@ A [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.ht
 Get all the text line recognition results of the `CapturedResult`.
 
 ```java
+@Nullable
 RecognizedTextLinesResult getRecognizedTextLinesResult();
 ```
 
@@ -90,6 +94,7 @@ A [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-
 Get a [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-result.html) object that contains all the results with the type of deskewed image, detected quads, and enhanced images.
 
 ```java
+@Nullable
 ProcessedDocumentResult getProcessedDocumentResult();
 ```
 
@@ -106,6 +111,7 @@ A [`ProcessedDocumentResult`]({{ site.ddn_android_api }}processed-document-resul
 Get all the parsed results of the `CapturedResult`.
 
 ```java
+@Nullable
 ParsedResult getParsedResult();
 ```
 

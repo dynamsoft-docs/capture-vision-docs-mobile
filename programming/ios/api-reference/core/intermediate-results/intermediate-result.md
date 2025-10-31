@@ -45,7 +45,7 @@ An array of `DSIntermediateResultUnit` objects, each representing a different ty
 >
 >1. 
 ```objc
-@property(nonatomic, strong, nonnull, readonly) NSArray<DSIntermediateResultUnit *> * intermediateResultUnits;
+@property (nonatomic, readonly, copy, nullable) NSArray<DSIntermediateResultUnit *> * intermediateResultUnits;
 ```
 2. 
 ```swift

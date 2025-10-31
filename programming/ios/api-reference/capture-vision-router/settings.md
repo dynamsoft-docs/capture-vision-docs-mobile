@@ -75,7 +75,7 @@ Configures runtime settings using a provided JSON file, which contains settings 
 >1. 
 ```objc
 - (BOOL)initSettingsFromFile:(NSString *)file
-                        error:(NSError * _Nullable * _Nullable)error
+                       error:(NSError * _Nullable * _Nullable)error
 ```
 2. 
 ```swift

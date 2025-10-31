@@ -17,9 +17,9 @@ codeAutoHeight: true
 ```java
 public @interface EnumImageFileFormat
 {
-    public static final int IFF_JPEG = 0;
-    public static final int IFF_PNG = 1;
-    public static final int IFF_BMP = 2;
-    public static final int IFF_PDF = 3;
+    int IFF_JPEG = 0;
+    int IFF_PNG = 1;
+    int IFF_BMP = 2;
+    int IFF_PDF = 3;
 }
 ```

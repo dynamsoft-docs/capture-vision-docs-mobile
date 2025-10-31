@@ -160,5 +160,5 @@ let observed = observationParameters.isTaskObserved("TextRecognition")
 Defines the type of intermediate result unit that indicates skipping default calculations and replacing with input data units.
 
 ```objc
-@property (nonatomic, nullable, copy) DSIntermediateResultUnitType resultUnitTypesOnlyForInput;
+@property (nonatomic, assign) DSIntermediateResultUnitType resultUnitTypesOnlyForInput;
 ```

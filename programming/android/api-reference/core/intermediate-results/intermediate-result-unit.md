@@ -39,6 +39,7 @@ class IntermediateResultUnit
 Creates a copy of the intermediate result unit.
 
 ```java
+@NonNull
 IntermediateResultUnit clone();
 ```
 
@@ -51,6 +52,7 @@ A copy of the intermediate result unit.
 Gets the hash ID of the unit.
 
 ```java
+@NonNull
 String getHashId();
 ```
 
@@ -63,6 +65,7 @@ The hash ID of the unit.
 Gets the hash ID of the original image. You can use this ID to get the original image via `IntermediateResultManager` class.
 
 ```java
+@NonNull
 String getOriginalImageHashId();
 ```
 
@@ -75,6 +78,7 @@ The hash ID of the original image.
 Gets the image tag of the original image.
 
 ```java
+@Nullable
 ImageTag getOriginalImageTag();
 ```
 
@@ -87,6 +91,7 @@ The image tag of the original image.
 Gets the type of the intermediate result unit.
 
 ```java
+@EnumIntermediateResultUnitType
 long getType();
 ```
 
@@ -99,7 +104,8 @@ The type of the intermediate result unit.
 Gets the transformation matrix via [`EnumTransformMatrixType`]({{ site.dcv_android_api }}core/enum/transform-matrix-type.html).
 
 ```java
-Matrix getTransformMatrix(int matrixType);
+@Nullable
+Matrix getTransformMatrix(@EnumTransformMatrixType int matrixType);
 ```
 
 **Parameters**

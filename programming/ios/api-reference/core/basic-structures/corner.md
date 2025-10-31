@@ -29,7 +29,7 @@ The `DSCorner` class represents a corner, typically where two line segments meet
 class Corner: NSObject
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -37,6 +37,10 @@ class Corner: NSObject
 | [`intersection`](#intersection) | *CGPoint* | The point of intersection of the two lines forming the corner. |
 | [`line1`](#line1) | *DSLineSegment \** | The first line segment forming the corner. |
 | [`line2`](#line2) | *DSLineSegment \** | The second line segment forming the corner. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`initWithCornerType`](#initwithcornertype) | The constructor. Creates an instance from corner type, intersection and lines. |
 
 ### type
 
@@ -52,7 +56,7 @@ The type of the corner, represented by the enumeration [`DSCornerType`]({{ site.
 ```
 2. 
 ```swift
-var type: DSCornerType { get set }
+var type: CornerType { get set }
 ```
 
 ### intersection
@@ -82,11 +86,11 @@ The first line segment forming the corner.
 >
 >1. 
 ```objc
-@property (nonatomic, strong, nullable) DSLineSegment *line1;
+@property (nonatomic, strong) DSLineSegment *line1;
 ```
 2. 
 ```swift
-var line1: DSLineSegment? { get set }
+var line1: LineSegment? { get set }
 ```
 
 ### line2
@@ -99,9 +103,29 @@ The second line segment forming the corner.
 >
 >1. 
 ```objc
-@property (nonatomic, strong, nullable) DSLineSegment *line2;
+@property (nonatomic, strong) DSLineSegment *line2;
 ```
 2. 
 ```swift
-var line2: DSLineSegment? { get set }
+var line2: LineSegment? { get set }
+```
+
+### initWithCornerType
+
+The constructor. Creates an instance from corner type, intersection and lines.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithCornerType:(DSCornerType)type
+                      intersection:(CGPoint)intersection
+                             line1:(DSLineSegment *)line1
+                             line2:(DSLineSegment *)line2;
+```
+2. 
+```swift
+init(type: CornerType, intersection: CGPoint, line1: LineSegment?, line2: LineSegment?)
 ```

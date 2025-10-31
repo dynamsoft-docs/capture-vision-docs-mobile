@@ -26,6 +26,7 @@ class ImageSourceAdapter
 
 | Method | Description |
 | ------ | ----------- |
+| [`ImageSourceAdapter`](#imagesourceadapter-1 ) | The constructor. |
 | [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the internal buffer. |
 | [`clearBuffer`](#clearbuffer) | Clears all images from the buffer, resetting the state for new image fetching. |
 | [`getBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Get the current mode for handling buffer overflow. |
@@ -44,6 +45,14 @@ class ImageSourceAdapter
 | [`setNextImageToReturn(imageId,keepInBuffer)`](#setnextimagetoreturnimageidkeepinbuffer) | Sets the processing priority of a specific image. This can affect the order in which images are returned by getImage. |
 | [`startFetching`](#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
 | [`stopFetching`](#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+
+### ImageSourceAdapter
+
+The constructor.
+
+```java
+ImageSourceAdapter();
+```
 
 ### addImageToBuffer
 
@@ -70,7 +79,8 @@ void clearBuffer();
 Get the current mode for handling buffer overflow.
 
 ```java
-BufferOverflowProtectionMode getBufferOverflowProtectionMode();
+@EnumBufferOverflowProtectionMode
+int getBufferOverflowProtectionMode();
 ```
 
 ### getColourChannelUsageType
@@ -78,7 +88,8 @@ BufferOverflowProtectionMode getBufferOverflowProtectionMode();
 Get the current usage type for color channels in images.
 
 ```java
-EnumColourChannelUsageType getColourChannelUsageType();
+@EnumColourChannelUsageType
+int getColourChannelUsageType();
 ```
 
 ### getImageCount
@@ -165,7 +176,7 @@ A boolean value that indicates whether the Video Buffer is empty.
 Sets the behavior for handling new incoming images when the buffer is full.
 
 ```java
-void setBufferOverflowProtectionMode(BufferOverflowProtectionMode mode);
+void setBufferOverflowProtectionMode(@EnumBufferOverflowProtectionMode int mode);
 ```
 
 **Parameters**
@@ -181,7 +192,7 @@ The buffer overflow protection mode.
 Sets the usage type for color channels in images.
 
 ```java
-void setColourChannelUsageType(EnumColourChannelUsageType type);
+void setColourChannelUsageType(@EnumColourChannelUsageType int type);
 ```
 
 **Parameters**
@@ -197,7 +208,7 @@ One of the [`EnumColourChannelUsageType`]({{ site.dcv_android_api }}core/enum/co
 Sets an error listener to receive notifications about errors that occur during image source operations.
 
 ```java
-void setErrorListener(ImageSourceErrorListener* listener);
+void setErrorListener(ImageSourceErrorListener listener);
 ```
 
 **Parameters**

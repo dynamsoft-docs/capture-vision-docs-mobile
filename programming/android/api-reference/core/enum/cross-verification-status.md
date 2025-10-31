@@ -19,10 +19,10 @@ codeAutoHeight: true
 public @interface EnumCrossVerificationStatus
 {
     /** The cross verification has not been performed yet. */
-    public static final int CVS_NOT_VERIFIED;
+    int CVS_NOT_VERIFIED;
     /** The cross verification has been passed successfully. */
-    public static final int CVS_PASSED;
+    int CVS_PASSED;
     /** The cross verification has failed. */
-    public static final int CVS_FAILED;
+    int CVS_FAILED;
 }
 ```

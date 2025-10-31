@@ -29,7 +29,7 @@ The `DSFileImageTag` class represents an image tag that is associated with a fil
 class FileImageTag : ImageTag
 ```
 
-## Methods & Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -51,7 +51,7 @@ The file path of the image.
 >
 >1. 
 ```objc
-@property(nonatomic, copy, readonly) NSString *filePath;
+@property (nonatomic, readonly, copy, nullable) NSString *filePath;
 ```
 2. 
 ```swift
@@ -68,7 +68,7 @@ The page number of the current image in the multi-page.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly) NSInteger pageNumber;
+@property (nonatomic, readonly, assign) NSUInteger pageNumber;
 ```
 2. 
 ```swift
@@ -85,7 +85,7 @@ The total page number of the multi-page.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly) NSInteger totalPages;
+@property (nonatomic, readonly, assign) NSUInteger totalPages;
 ```
 2. 
 ```swift

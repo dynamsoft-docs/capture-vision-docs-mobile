@@ -20,41 +20,41 @@ codeAutoHeight: true
    >
 >
 ```objc
-typedef NS_ENUM(NSInteger, DSCapturedResultItemType)
+typedef NS_OPTIONS(NSInteger, DSCapturedResultItemType)
 {
-   /** The captured result is a original image. You can convert it into a DSOriginalImageResultItem. */
-   DSCapturedResultItemTypeOriginalImage = 1,
-   /** The captured result is a decoded barcode. You can convert it into a DSBarcodeResultItem. */
-   DSCapturedResultItemTypeBarcode = 2,
-   /** The captured result is a recognized text line. You can convert it into a DSTextLineResultItem. */
-   DSCapturedResultItemTypeTextLine = 4,
-   /** The captured result is a detected quadrilateral. You can convert it into a DSDetectedQuadResultItem. */
-   DSCapturedResultItemTypeDetectedQuad = 8,
-   /** The captured result is a deskewed image. You can convert it into a DSDeskewedImageResultItem. */
-   DSCapturedResultItemTypeDeskewedImage = 16,
-   /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
-   DSCapturedResultItemTypeParsedResult = 32,
-   /** The captured result is a enhanced image. You can convert it into a DSEnhancedImageItem. */
-   DSCapturedResultItemTypeEnhancedImage = 64
+   /** Captured result item type original image.*/
+   DSCapturedResultItemTypeOriginalImage = 1 << 0,
+   /** Captured result item type barcode.*/
+   DSCapturedResultItemTypeBarcode = 1 << 1,
+   /** Captured result item type text line.*/
+   DSCapturedResultItemTypeTextLine = 1 << 2,
+   /** Captured result item type detected quad.*/
+   DSCapturedResultItemTypeDetectedQuad = 1 << 3,
+   /** Captured result item type deskewed image.*/
+   DSCapturedResultItemTypeDeskewedImage = 1 << 4,
+   /** Captured result item type parsed content.*/
+   DSCapturedResultItemTypeParsedResult = 1 << 5,
+   /** Captured result item type enhanced image.*/
+   DSCapturedResultItemTypeEnhancedImage = 1 << 6
 };
 ```
 >
 ```swift
-public enum CapturedResultItemType : Int
-{
-   /** The captured result is a original image. You can convert it into a DSOriginalImageResultItem. */
-   originalImage = 1
-   /** The captured result is a decoded barcode. You can convert it into a DSBarcodeResultItem. */
-   barcode = 2
-   /** The captured result is a recognized text line. You can convert it into a DSTextLineResultItem. */
-   textLine = 4
-   /** The captured result is a detected quadrilateral. You can convert it into a DSDetectedQuadResultItem. */
-   detectedQuad = 8
-   /** The captured result is a Deskewed image. You can convert it into a DSDeskewedImageResultItem. */
-   deskewedImage = 16
-   /** The captured result is a parsed result. You can convert it into a DSParsedResultItem. */
-   parsedResult = 32
-   /** The captured result is a enhanced image. You can convert it into a DSEnhancedImageItem. */
-   enhancedImage = 64
-};
+struct CapturedResultItemType: OptionSet {
+   let rawValue: Int
+   /** Captured result item type original image.*/
+   static let originalImage   = CapturedResultItemType(rawValue: 1 << 0)
+   /** Captured result item type barcode.*/
+   static let barcode         = CapturedResultItemType(rawValue: 1 << 1)
+   /** Captured result item type text line.*/
+   static let textLine        = CapturedResultItemType(rawValue: 1 << 2)
+   /** Captured result item type detected quad.*/
+   static let detectedQuad    = CapturedResultItemType(rawValue: 1 << 3)
+   /** Captured result item type deskewed image.*/
+   static let deskewedImage   = CapturedResultItemType(rawValue: 1 << 4)
+   /** Captured result item type parsed content.*/
+   static let parsedResult    = CapturedResultItemType(rawValue: 1 << 5)
+   /** Captured result item type enhanced image.*/
+   static let enhancedImage   = CapturedResultItemType(rawValue: 1 << 6)
+}
 ```

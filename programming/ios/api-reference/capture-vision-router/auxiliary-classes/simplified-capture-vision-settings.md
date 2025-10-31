@@ -77,11 +77,11 @@ Specifies the region of interest (ROI) of the image or frame where the capture a
 >
 >1. 
 ```objc
-@property (nonatomic, strong, nullable) DSQuadrilateral *roi;
+@property (nonatomic, nullable) DSQuadrilateral *roi;
 ```
 2. 
 ```swift
-var roi: DSQuadrilateral? { get set }
+var roi: Quadrilateral? { get set }
 ```
 
 ### roiMeasuredInPercentage
@@ -166,11 +166,11 @@ Specifies the settings for the `DynamsoftBarcodeReader` task with a [`Simplified
 >
 >1. 
 ```objc
-@property (nonatomic, strong, nullable) DSSimplifiedBarcodeReaderSettings *barcodeSettings;
+@property (nonatomic, nullable) DSSimplifiedBarcodeReaderSettings *barcodeSettings;
 ```
 2. 
 ```swift
-var barcodeSettings: DSSimplifiedBarcodeReaderSettings? { get set }
+var barcodeSettings: SimplifiedBarcodeReaderSettings? { get set }
 ```
 
 ### labelSettings
@@ -183,11 +183,11 @@ Specifies the settings for the `DynamsoftLabelRecognizer` task with a [`Simplifi
 >
 >1. 
 ```objc
-@property (nonatomic, strong, nullable) DSSimplifiedLabelRecognizerSettings *labelSettings;
+@property (nonatomic, nullable) DSSimplifiedLabelRecognizerSettings *labelSettings;
 ```
 2. 
 ```swift
-var labelSettings: DSSimplifiedLabelRecognizerSettings? { get set }
+var labelSettings: SimplifiedLabelRecognizerSettings? { get set }
 ```
 
 ### documentSettings
@@ -200,9 +200,9 @@ Specifies the settings for the `DynamsoftDocumentNormalizer` task with a [`Simpl
 >
 >1. 
 ```objc
-@property (nonatomic, strong, nullable) DSSimplifiedDocumentNormalizerSettings *documentSettings;
+@property (nonatomic, nullable) DSSimplifiedDocumentNormalizerSettings *documentSettings;
 ```
 2. 
 ```swift
-var documentSettings: DSSimplifiedDocumentNormalizerSettings? { get set }
+var documentSettings: SimplifiedDocumentNormalizerSettings? { get set }
 ```

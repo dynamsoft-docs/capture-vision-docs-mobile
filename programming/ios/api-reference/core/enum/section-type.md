@@ -24,21 +24,23 @@ codeAutoHeight: true
 typedef NS_ENUM(NSInteger, DSSectionType)
 {
    /**No section type is specified.*/
-   DSSectionTypeNull = 0,
+   DSSectionTypeNull,
    /**The result is output by "region prediction" section.*/
-   DSSectionTypeRegionPredection = 1,
+   DSSectionTypeRegionPredection,
    /**The result is output by "barcode localization" section.*/
-   DSSectionTypeBarcodeLocalization = 2,
+   DSSectionTypeBarcodeLocalization,
    /**The result is output by "barcode decoding" section.*/
-   DSSectionTypeBarcodeDecoding = 3,
+   DSSectionTypeBarcodeDecoding,
    /**The result is output by "text line localization" section.*/
-   DSSectionTypeTextLineLocalization = 4,
+   DSSectionTypeTextLineLocalization,
    /**The result is output by "text line  recognition" section.*/
-   DSSectionTypeTextLineRecognition = 5,
+   DSSectionTypeTextLineRecognition,
    /**The result is output by "document detection" section.*/
-   DSSectionTypeDocumentDetection = 6,
-   /**The result is output by "document normalization" section.*/
-   DSSectionTypeDocumentNormalization = 7
+   DSSectionTypeDocumentDetection,
+   /** The section type is "document deskewing".*/
+   DSSectionTypeDocumentDeskewing,
+   /** The section type is "image enhancement".*/
+   DSSectionTypeImageEnhancement
 };
 ```
 >
@@ -46,22 +48,22 @@ typedef NS_ENUM(NSInteger, DSSectionType)
 public enum SectionType : Int
 {
    /**No section type is specified.*/
-   null = 0,
+   case null
    /**The result is output by "region prediction" section.*/
-   regionPredection = 1,
+   case regionPredection
    /**The result is output by "barcode localization" section.*/
-   barcodeLocalization = 2,
+   case barcodeLocalization
    /**The result is output by "barcode decoding" section.*/
-   barcodeDecoding = 3,
+   case barcodeDecoding
    /**The result is output by "text line localization" section.*/
-   textLineLocalization = 4,
+   case textLineLocalization
    /**The result is output by "text line  recognition" section.*/
-   textLineRecognition = 5,
+   case textLineRecognition
    /**The result is output by "document detection" section.*/
-   documentDetection = 6,
+   case documentDetection
    /**The result is output by "document deskewing" section.*/
-   documentDeskewing = 7,
+   case documentDeskewing
    /**The result is output by "document enhancement" section.*/
-   documentEnhancement = 8
+   case documentEnhancement
 }
 ```

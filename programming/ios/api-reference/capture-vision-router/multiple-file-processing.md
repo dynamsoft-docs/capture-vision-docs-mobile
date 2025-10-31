@@ -43,12 +43,12 @@ Sets an image source that will provide images to be consecutively processed.
 >
 >1. 
 ```objc
-- (BOOL)setInput:(DSImageSourceAdapter *)adapter
+- (BOOL)setInput:(nullable DSImageSourceAdapter *)adapter
            error:(NSError * _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
-func setInput(_ adapter: DSImageSourceAdapter) throws -> BOOL
+func setInput(_ adapter: ImageSourceAdapter) throws -> BOOL
 ```
 
 **Parameters**
@@ -76,11 +76,11 @@ Gets the attached image source adapter (`DSImageSourceAdapter`) object of the Ca
 >
 >1. 
 ```objc
-- (DSImageSourceAdapter *)getInput;
+- (nullable DSImageSourceAdapter *)getInput;
 ```
 2. 
 ```swift
-func getInput() -> DSImageSourceAdapter
+func getInput() -> ImageSourceAdapter
 ```
 
 **Return Value**
@@ -97,20 +97,16 @@ Registers a `DSImageSourceStateListener` object to be used as a callback when th
 >
 >1. 
 ```objc
-- (BOOL)addImageSourceStateListener:(id<DSImageSourceStateListener>)listener;
+- (void)addImageSourceStateListener:(id<DSImageSourceStateListener>)listener;
 ```
 2. 
 ```swift
-func addImageSourceStateListener(_ listener:DSImageSourceStateListener) -> BOOL
+func addImageSourceStateListener(_ listener:ImageSourceStateListener)
 ```
 
 **Parameters**
 
 `listener`: An object of [`DSImageSourceStateListener`](auxiliary-classes/image-source-state-listener.md).
-
-**Return Value**
-
-A BOOL value that indicates whether the `DSImageSourceStateListener` is added successfully.
 
 ## removeImageSourceStateListener
 
@@ -122,20 +118,16 @@ Removes a `DSImageSourceStateListener` from the Capture Vision Router.
 >
 >1. 
 ```objc
-- (BOOL)removeImageSourceStateListener:(id<DSImageSourceStateListener>)listener;
+- (void)removeImageSourceStateListener:(id<DSImageSourceStateListener>)listener;
 ```
 2. 
 ```swift
-func removeImageSourceStateListener(_ listener:DSImageSourceStateListener) -> BOOL
+func removeImageSourceStateListener(_ listener:ImageSourceStateListener)
 ```
 
 **Parameters**
 
 `listener`: An object of `DSImageSourceStateListener`.
-
-**Return Value**
-
-A BOOL value that indicates whether the `DSImageSourceStateListener` is removed successfully.
 
 ## removeAllImageSourceStateListeners
 
@@ -147,7 +139,7 @@ Removes all user-added `DSImageSourceStateListeners`.
 >
 >1. 
 ```objc
-- (BOOL)removeAllImageSourceStateListeners;
+- (void)removeAllImageSourceStateListeners;
 ```
 2. 
 ```swift
@@ -164,24 +156,20 @@ Adds a [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/au
 >
 >1. 
 ```objc
-- (BOOL)addResultReceiver:(id<DSCapturedResultReceiver>)receiver;
+- (void)addResultReceiver:(id<DSCapturedResultReceiver>)receiver;
 ```
 2. 
 ```swift
-func addResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
+func addResultReceiver(_ listener:CapturedResultReceiver)
 ```
 
 **Parameters**
 
 `listener`: An object of [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
 
-**Return Value**
-
-A BOOL value that indicates whether the result receiver is added successfully.
-
 ## removeResultReceiver
 
-emoves the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object.
+Removes the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -189,11 +177,11 @@ emoves the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vi
 >
 >1. 
 ```objc
-- (BOOL)removeResultReceiver:(id<DSCapturedResultReceiver>)receiver;
+- (void)removeResultReceiver:(id<DSCapturedResultReceiver>)receiver;
 ```
 2. 
 ```swift
-func removeResultReceiver(_ listener:DSCapturedResultReceiver) -> BOOL
+func removeResultReceiver(_ listener:CapturedResultReceiver)
 ```
 
 **Parameters**
@@ -325,11 +313,11 @@ Registers a `DSCaptureStateListener` to be used as a callback when capture state
 >
 >1. 
 ```objc
-- (BOOL)addCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener;
+- (void)addCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener;
 ```
 2. 
 ```swift
-func addCaptureStateListener(_ listener:DSCaptureStateListener) -> BOOL
+func addCaptureStateListener(_ listener:CaptureStateListener)
 ```
 
 **Parameters**
@@ -350,11 +338,11 @@ Removes a `DSCaptureStateListener` that has been configured for the Capture Visi
 >
 >1. 
 ```objc
-- (BOOL)removeCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener;
+- (void)removeCaptureStateListener:(nonnull id<DSCaptureStateListener>)listener;
 ```
 2. 
 ```swift
-func removeCaptureStateListener(_ listener:DSCaptureStateListener) -> BOOL
+func removeCaptureStateListener(_ listener:CaptureStateListener)
 ```
 
 **Parameters**
@@ -375,7 +363,7 @@ Removes all user-added `DSCaptureStateListeners`.
 >
 >1. 
 ```objc
-- (BOOL)removeAllCaptureStateListeners;
+- (void)removeAllCaptureStateListeners;
 ```
 2. 
 ```swift
@@ -392,11 +380,11 @@ Adds a [`DSCapturedResultFilter`]({{ site.dcv_ios_api }}capture-vision-router/au
 >
 >1. 
 ```objc
-- (BOOL)addResultFilter:(nonnull id<DSCapturedResultFilter>)filter;
+- (void)addResultFilter:(nonnull id<DSCapturedResultFilter>)filter;
 ```
 2. 
 ```swift
-func addResultFilter(_ filter:DSCapturedResultFilter) -> BOOL
+func addResultFilter(_ filter:CapturedResultFilter)
 ```
 
 **Parameters**
@@ -417,11 +405,11 @@ Removes the specified `DSCapturedResultFilter` object.
 >
 >1. 
 ```objc
-- (BOOL)removeResultFilter:(nonnull id<DSCapturedResultFilter>)filter;
+- (void)removeResultFilter:(nonnull id<DSCapturedResultFilter>)filter;
 ```
 2. 
 ```swift
-func removeResultFilter(_ filter:DSCapturedResultFilter) -> BOOL
+func removeResultFilter(_ filter:CapturedResultFilter)
 ```
 
 **Parameters**
@@ -442,7 +430,7 @@ Removes all user-added `DSCapturedResultFilters`.
 >
 >1. 
 ```objc
-- (BOOL)removeAllResultFilters;
+- (void)removeAllResultFilters;
 ```
 2. 
 ```swift

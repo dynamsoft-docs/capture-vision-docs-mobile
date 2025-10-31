@@ -245,177 +245,177 @@ typedef NS_ERROR_ENUM(DSErrorDomain, DSError) {
 public enum ErrorCode : Int
 {
    /**Successful. */
-   oK                               = 0
+   case ok                               = 0
    /**Unknown error. */
-   unknown                          = -10000
+   case unknown                          = -10000
    /**Not enough memory to perform the operation. */
-   noMemory                         = -10001
+   case noMemory                         = -10001
    /**Null pointer */
-   nullPointer                      = -10002
+   case nullPointer                      = -10002
    /**License invalid*/
-   licenseInvalid                   = -10003
+   case licenseInvalid                   = -10003
    /**License expired*/
-   licenseExpired                   = -10004
+   case licenseExpired                   = -10004
    /**File not found*/
-   fileNotFound                     = -10005
+   case fileNotFound                     = -10005
    /**The file type is not supported. */
-   filetypeNotSupported             = -10006
+   case filetypeNotSupported             = -10006
    /**The BPP (Bits Per Pixel) is not supported. */
-   bppNotSupported                  = -10007
+   case bppNotSupported                  = -10007
    /**Failed to read the image. */
-   imageReadFailed                  = -10012
+   case imageReadFailed                  = -10012
    /**Failed to read the TIFF image. */
-   tiffReadFailed                   = -10013
+   case tiffReadFailed                   = -10013
    /**The DIB (Device-Independent Bitmaps) buffer is invalid. */
-   dibBufferInvalid                     = -10018,
+   case dibBufferInvalid                     = -10018,
    /**Failed to read the PDF image. */
-   pdfReadFailed                    = -10021
+   case pdfReadFailed                    = -10021
    /**The PDF DLL is missing. */
-   pdfDllMissing                    = -10022
+   case pdfDllMissing                    = -10022
    /**The page number is invalid. */
-   pageNumberInvalid                = -10023
+   case pageNumberInvalid                = -10023
    /**The custom size is invalid. */
-   customSizeInvalid                = -10024
+   case customSizeInvalid                = -10024
    /** timeout. */
-   timeout                          = -10026
+   case timeout                          = -10026
    /**Json parse failed*/
-   jsonParseFailed                  = -10030
+   case jsonParseFailed                  = -10030
    /**Json type invalid*/
-   jsonTypeInvalid                  = -10031
+   case jsonTypeInvalid                  = -10031
    /**Json key invalid*/
-   jsonKeyInvalid                   = -10032
+   case jsonKeyInvalid                   = -10032
    /**Json value invalid*/
-   jsonValueInvalid                 = -10033
+   case jsonValueInvalid                 = -10033
    /**Json name key missing*/
-   jsonNameKeyMissing               = -10034
+   case jsonNameKeyMissing               = -10034
    /**The value of the key "Name" is duplicated.*/
-   jsonNameValueDuplicated          = -10035
+   case jsonNameValueDuplicated          = -10035
    /**Template name invalid*/
-   templateNameInvalid              = -10036
+   case templateNameInvalid              = -10036
    /**The name reference is invalid.*/
-   jsonNameReferenceInvalid         = -10037
+   case jsonNameReferenceInvalid         = -10037
    /**Parameter value invalid*/
-   parameterValueInvalid            = -10038
+   case parameterValueInvalid            = -10038
    /**The domain of your current site does not match the domain bound in the current product key.*/
-   domainNotMatch                   = -10039
+   case domainNotMatch                   = -10039
    /**The license key does not match the license content.*/
-   licenseKeyNotMatch               = -10043
+   case licenseKeyNotMatch               = -10043
    /**Failed to set mode's argument.*/
-   setModeArgumentError             = -10051
+   case setModeArgumentError             = -10051
    /**Failed to get mode's argument.*/
-   getModeArgumentError             = -10055
+   case getModeArgumentError             = -10055
    /**The Intermediate Result Types license is invalid.*/
-   irtLicenseInvalid                = -10056
+   case irtLicenseInvalid                = -10056
    /**Failed to save file.*/
-   fileSaveFailed                   = -10058
+   case fileSaveFailed                   = -10058
    /**The stage type is invalid.*/
-   stageTypeInvalid                 = -10059
+   case stageTypeInvalid                 = -10059
    /**The image orientation is invalid.*/
-   imageOrientationInvalid          = -10060
+   case imageOrientationInvalid          = -10060
    /**Failed to convert complex tempalte to simplified settings.*/
-   convertComplexTemplateError      = -10061
+   case convertComplexTemplateError      = -10061
    /**Reject function call while capturing in progress.*/
-   callRejectedWhenCapturing        = -10062
+   case callRejectedWhenCapturing        = -10062
    /**The input image source was not found.*/
-   noImageSource                    = -10063
+   case noImageSource                    = -10063
    /**Failed to read directory.*/
-   readDirectoryFailed              = -10064
+   case readDirectoryFailed              = -10064
    /**[Name] Module not found.*/
    /**Name : */
    /**DynamsoftBarcodeReader*/
    /**DynamsoftLabelRecognizer*/
    /**DynamsoftDocumentNormalizer*/
-   moduleNotFound                   = -10065
+   case moduleNotFound                   = -10065
    /**The file already exists but overwriting is disabled.*/
-   fileAlreadyExists                = -10067
+   case fileAlreadyExists                = -10067
    /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
-   createFileFailed                 = -10068
+   case createFileFailed                 = -10068
    /**The input ImageData object contains invalid parameter(s).*/
-   imageDataInvalid                 = -10069
+   case imageDataInvalid                 = -10069
    /**The size of the input image does not meet the requirements.*/
-   imageSizeNotMatch                = -10070
+   case imageSizeNotMatch                = -10070
    /**The pixel format of the input image does not meet the requirements.*/
-   imagePixelFormatNotMatch         = -10071
+   case imagePixelFormatNotMatch         = -10071
    /**The section level result is irreplaceable.*/
-   sectionLevelResultIrreplaceable  = -10072
+   case sectionLevelResultIrreplaceable  = -10072
    /**The axis definition is incorrect.*/
-   axisDefinitionIncorrect          = -10073
+   case axisDefinitionIncorrect          = -10073
    /**The result is not replaceable due to type mismatch*/
-   resultTypeMismatchIrreplaceable  = -10074
+   case resultTypeMismatchIrreplaceable  = -10074
    /**Failed to load the PDF library.*/
-   pdfLibraryLoadFailed             = -10075
+   case pdfLibraryLoadFailed             = -10075
    /*The license is initialized successfully but detected invalid content in your key.*/
-   licenseWarning                   = -10076
+   case licenseWarning                   = -10076
    /*One or more unsupported JSON keys were encountered and ignored from the template.*/
-   unsupportedJsonKeyWarning        = -10077,
+   case unsupportedJsonKeyWarning        = -10077,
    /**Model file is not found*/
-   modelFileNotFount                = -10078,
+   case modelFileNotFount                = -10078,
    /**[PDF] No license found.*/
-   pdfLicenseNotFound               = -10079,
+   case pdfLicenseNotFound               = -10079,
    /**The rectangle is invalid.*/
-   rectInvalid                      = -10080,
+   case rectInvalid                      = -10080,
    /**No license.*/
-   noLicense                        = -20000
+   case noLicense                        = -20000
    /**Failed to read or write license cache. */
-   licenseBufferFailed              = -20002
+   case licenseBufferFailed              = -20002
    /**Falied to synchronize license info wirh license tracking server. */
-   licenseSyncFailed                = -20003
+   case licenseSyncFailed                = -20003
    /**Device does not match with license buffer. */
-   deviceNotMatch                   = -20004
+   case deviceNotMatch                   = -20004
    /**Falied to bind device. */
-   bindDeviceFailed                 = -20005
+   case bindDeviceFailed                 = -20005
    /**Install.*/
-   instanceCountOverLimit           = -20008
+   case instanceCountOverLimit           = -20008
    /**Trial License*/
-   trialLicense                     = -20010
+   case trialLicense                     = -20010
    /**The license is not valid for current version*/
-   licenseVersionNotMatch           = -20011
+   case licenseVersionNotMatch           = -20011
    /** -30000~-39999: DBR error code. */
    /** The barcode format is invalid. */
-   barcodeFormatInvalid             = -30009
+   case barcodeFormatInvalid             = -30009
    /** The custom module size is invalid. */
-   customModuleSizeInvalid          = -30025
+   case customModuleSizeInvalid          = -30025
    /*[Barcode Reader] No license found.*/
-   dbrLicenseNotFound               = -30063
+   case dbrLicenseNotFound               = -30063
    /** -40000~-49999: DLR error code */
    /** There is a conflict in the layout of TextLineGroup. */
-   textLineGroupLayoutConflict      = -40101
+   case textLineGroupLayoutConflict      = -40101
    /** There is a conflict in the regex of TextLineGroup. */
-   textLineGroupRegexConflict       = -40102
+   case textLineGroupRegexConflict       = -40102
    /*[Label Recognizer] No license found.*/
-   dlrLicenseNotFound               = -40103
+   case dlrLicenseNotFound               = -40103
    /** -50000~-59999: DDN error code. */
    /** No content has been detected. */
-   contentNotFound                  = -50056
+   case contentNotFound                  = -50056
    /*The quardrilateral is invalid. */
-   quardrilateralInvalid            = -50057
+   case quardrilateralInvalid            = -50057
    /*[Document Normalizer] No license found.*/
-   ddnLicenseNotFound               = -50058
+   case ddnLicenseNotFound               = -50058
    /** -60000~-69999: DCE error code. */
    /** The camera module is not exist. */
-   cameraModelNotExist              = -60003
+   case cameraModelNotExist              = -60003
    /** The camera id does not exist. */
-   cameraIDNotExist                 = -60006
+   case cameraIDNotExist                 = -60006
    /** The sensor does not exist. */
-   noSensor                         = -60045
+   case noSensor                         = -60045
    /** The camera type is not supported.*/
-   cameraTypeNotSupported           = -60046;
+   case cameraTypeNotSupported           = -60046;
    /**-70000~-79999: Panorama error code. */
    /**The panorama license is invalid. */
-   panoramaLicenseInvalid           = -70060
+   case panoramaLicenseInvalid           = -70060
    /** -80000~-89999: Reserved error code. */
    /**-90000~-99999: DCP error code. */
    /** The resource path is not exist. */
-   resourcePathNotExist             = -90001
+   case resourcePathNotExist             = -90001
    /** Failed to load resource. */
-   resourceLoadFailed               = -90002
+   case resourceLoadFailed               = -90002
    /** The code specification is not found. */
-   codeSpecificationNotFound        = -90003
+   case codeSpecificationNotFound        = -90003
    /** The full code string is empty. */
-   fullCodeEmpty                    = -90004
+   case fullCodeEmpty                    = -90004
    /** Failed to preprocess the full code string */
-   fullCodePreprocessFailed         = -90005
+   case fullCodePreprocessFailed         = -90005
    /*[Code Parser] No license found.*/
-   dcpLicenseNotFound               = -90012
+   case dcpLicenseNotFound               = -90012
 }
 ```

@@ -22,43 +22,43 @@ codeAutoHeight: true
 ```objc
 typedef NS_ENUM(NSInteger, DSGrayscaleEnhancementMode)
 {
-   /**Not supported yet. */
-   DSGrayscaleEnhancementModeAuto = 1,
-   /**Takes the unpreprocessed image for following operations.*/
-   DSGrayscaleEnhancementModeGeneral = 2,
-   /**Preprocesses the image using the gray equalization algorithm. Check @ref IPM for available argument settings.*/
-   DSGrayscaleEnhancementModeGrayEqualize = 4,
-   /**Preprocesses the image using the gray smoothing algorithm. Check @ref IPM for available argument settings.*/
-   DSGrayscaleEnhancementModeGraySmooth = 8,
-   /**Preprocesses the image using the sharpening and smoothing algorithm. Check @ref IPM for available argument settings.*/
-   DSGrayscaleEnhancementModeSharpenSmooth = 16,
-   /**Reserved setting for image preprocessing mode.*/
-   DSGrayscaleEnhancementModeRev = -2147483648,
    /**Skips image preprocessing. */
    DSGrayscaleEnhancementModeSkip = 0,
+   /**Not supported yet. */
+   DSGrayscaleEnhancementModeAuto = 1 << 0,
+   /**Takes the unpreprocessed image for following operations.*/
+   DSGrayscaleEnhancementModeGeneral = 1 << 1,
+   /**Preprocesses the image using the gray equalization algorithm. Check @ref IPM for available argument settings.*/
+   DSGrayscaleEnhancementModeGrayEqualize = 1 << 2,
+   /**Preprocesses the image using the gray smoothing algorithm. Check @ref IPM for available argument settings.*/
+   DSGrayscaleEnhancementModeGraySmooth = 1 << 3,
+   /**Preprocesses the image using the sharpening and smoothing algorithm. Check @ref IPM for available argument settings.*/
+   DSGrayscaleEnhancementModeSharpenSmooth = 1 << 4,
    /**Placeholder value with no functional meaning. */
-   DSGrayscaleEnhancementModeEnd = 0xFFFFFFFF
+   DSGrayscaleEnhancementModeEnd = -1,
+   /**Reserved setting for image preprocessing mode.*/
+   DSGrayscaleEnhancementModeRev = NSIntegerMin
 };
 ```
 >
 ```swift
 public enum GrayscaleEnhancementMode : Int
 {
-   /**Not supported yet. */
-   auto = 1
-   /**Takes the unpreprocessed image for following operations.*/
-   general = 2
-   /**Preprocesses the image using the gray equalization algorithm. Check @ref IPM for available argument settings.*/
-   grayEqualize = 4
-   /**Preprocesses the image using the gray smoothing algorithm. Check @ref IPM for available argument settings.*/
-   graySmooth = 8
-   /**Preprocesses the image using the sharpening and smoothing algorithm. Check @ref IPM for available argument settings.*/
-   sharpenSmooth = 16
-   /**Reserved setting for image preprocessing mode.*/
-   rev = -2147483648
    /**Skips image preprocessing. */
-   skip = 0
+   case skip = 0
+   /**Not supported yet. */
+   case auto = 1 << 0
+   /**Takes the unpreprocessed image for following operations.*/
+   case general = 1 << 1
+   /**Preprocesses the image using the gray equalization algorithm. Check @ref IPM for available argument settings.*/
+   case grayEqualize = 1 << 2
+   /**Preprocesses the image using the gray smoothing algorithm. Check @ref IPM for available argument settings.*/
+   case graySmooth = 1 << 3
+   /**Preprocesses the image using the sharpening and smoothing algorithm. Check @ref IPM for available argument settings.*/
+   case sharpenSmooth = 1 << 4
    /**Placeholder value with no functional meaning. */
-   end = 0xFFFFFFFF
+   case end = -1
+   /**Reserved setting for image preprocessing mode.*/
+   case rev = Int.min
 }
 ```

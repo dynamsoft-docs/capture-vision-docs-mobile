@@ -48,7 +48,7 @@ Set the processing mode of the PDF file. You can either read the PDF info from v
 >
 >1. 
 ```objc
-@property(nonatomic, assign) DSPDFReadingMode mode;
+@property (nonatomic, assign) DSPDFReadingMode mode;
 ```
 2. 
 ```swift
@@ -65,7 +65,7 @@ Set the DPI (dots per inch) of the PDF file.
 >
 >1. 
 ```objc
-@property(nonatomic, assign) NSInteger dpi;
+@property (nonatomic, assign) NSInteger dpi;
 ```
 2. 
 ```swift
@@ -82,9 +82,9 @@ Set the raster data source type of the image. The default type is pages.
 >
 >1. 
 ```objc
-@property(nonatomic, assign) DSRasterDataSource rasterDataSource;
+@property (nonatomic, assign) DSRasterDataSource rasterDataSource;
 ```
 2. 
 ```swift
-var rasterDataSource: DSRasterDataSource { get set }
+var rasterDataSource: RasterDataSource { get set }
 ```

@@ -29,7 +29,7 @@ class IntermediateResultExtraInfo
 | [`targetROIDefName`](#targetroidefname) | *String* | The property indicates the name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object that generates the intermediate result. |
 | [`taskName`](#taskname) | *String* | The property indicates the name of the processing task to which this result belongs. |
 | [`isSectionLevelResult`](#issectionlevelresult) | *boolean* | The property indicates whether the result is at the section level. |
-| [`sectionType`](#sectiontype) | *[EnumSectionType]({{ site.dcv_android_api }}core/enum/section-type.html?lang=android)* | The property indicates the type of section that generates the result, if applicable, as defined by the enumeration `EnumSectionType`. |
+| [`sectionType`](#sectiontype) | *int* | The property indicates the type of section that generates the result, if applicable, as defined by the enumeration `EnumSectionType`. |
 
 ### targetROIDefName
 
@@ -60,5 +60,6 @@ boolean isSectionLevelResult;
 The type of section that generates the result, if applicable, as defined by the enumeration [`EnumSectionType`]({{ site.dcv_android_api }}core/enum/section-type.html?lang=android).
 
 ```java
-EnumSectionType sectionType;
+@EnumSectionType
+int sectionType;
 ```

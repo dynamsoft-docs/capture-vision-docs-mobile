@@ -22,35 +22,35 @@ codeAutoHeight: true
 ```objc
 typedef NS_ENUM(NSInteger, DSColourChannelUsageType)
 {
-    /** Automatic color channel usage determination based on image pixel format and scene. */
-    DSColourChannelUsageTypeAuto = 0,
-    /** Use all available color channels for processing. */
-    DSColourChannelUsageTypeFullChannel = 1,
-    /** Use only the Y (luminance) channel for processing in images represented in the NV21 format. */
-    DSColourChannelUsageTypeNV21YChannelOnly = 2,
-    /** Use only the red channel for processing in RGB images.*/
-    DSColourChannelUsageTypeRGBRChannelOnly = 3,
-    /** Use only the green channel for processing in RGB images.*/
-    DSColourChannelUsageTypeRGBGChannelOnly = 4,
-    /** Use only the blue channel for processing in RGB images.*/
-    DSColourChannelUsageTypeRGBBChannelOnly = 5
+   /** Automatic color channel usage determination based on image pixel format and scene. */
+   DSColourChannelUsageTypeAuto,
+   /** Use all available color channels for processing. */
+   DSColourChannelUsageTypeFullChannel,
+   /** Use only the Y (luminance) channel for processing in images represented in the NV21 format. */
+   DSColourChannelUsageTypeYChannelOnly,
+   /** Use only the red channel for processing in RGB images.*/
+   DSColourChannelUsageTypeRGBRChannelOnly,
+   /** Use only the green channel for processing in RGB images.*/
+   DSColourChannelUsageTypeRGBGChannelOnly,
+   /** Use only the blue channel for processing in RGB images.*/
+   DSColourChannelUsageTypeRGBBChannelOnly
 };
 ```
 >
 ```swift
 public enum ColourChannelUsageType : Int
 {
-    /** Automatic color channel usage determination based on image pixel format and scene. */
-   auto = 0,
-    /** Use all available color channels for processing. */
-   fullChannel = 1,
-    /** Use only the Y (luminance) channel for processing in images represented in the NV21 format. */
-   nv21YChannelOnly = 2,
-    /** Use only the red channel for processing in RGB images.*/
-   rgbrChannelOnly = 3,
-    /** Use only the green channel for processing in RGB images.*/
-   rgbgChannelOnly = 4,
-    /** Use only the blue channel for processing in RGB images.*/
-   rgbbChannelOnly = 5
+   /** Automatic color channel usage determination based on image pixel format and scene. */
+   case auto = 0
+   /** Use all available color channels for processing. */
+   case fullChannel = 1
+   /** Use only the Y (luminance) channel for processing in images represented in the NV21 format. */
+   case yChannelOnly = 2
+   /** Use only the red channel for processing in RGB images.*/
+   case rgbrChannelOnly = 3
+   /** Use only the green channel for processing in RGB images.*/
+   case rgbgChannelOnly = 4
+   /** Use only the blue channel for processing in RGB images.*/
+   case rgbbChannelOnly = 5
 };
 ```

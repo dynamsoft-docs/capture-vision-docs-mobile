@@ -19,16 +19,16 @@ codeAutoHeight: true
 public @interface EnumColourChannelUsageType
 {
     /** Automatic color channel usage determination based on image pixel format and scene. */
-    public static final int CCUT_AUTO = 0;
+    int CCUT_AUTO = 0;
     /** Use all available color channels for processing. */
-    public static final int CCUT_FULL_CHANNEL = 1;
+    int CCUT_FULL_CHANNEL = 1;
     /** Use only the Y (luminance) channel for processing in images represented in the NV21 format. */
-    public static final int CCUT_NV21_Y_CHANNEL_ONLY = 2;
+    int CCUT_Y_CHANNEL_ONLY = 2;
     /** Use only the red channel for processing in RGB images.*/
-    public static final int CCUT_RGB_R_CHANNEL_ONLY = 3;
+    int CCUT_RGB_R_CHANNEL_ONLY = 3;
     /** Use only the green channel for processing in RGB images.*/
-    public static final int CCUT_RGB_G_CHANNEL_ONLY = 4;
+    int CCUT_RGB_G_CHANNEL_ONLY = 4;
     /** Use only the blue channel for processing in RGB images.*/
-    public static final int CCUT_RGB_B_CHANNEL_ONLY = 5;
+    int CCUT_RGB_B_CHANNEL_ONLY = 5;
 }
 ```

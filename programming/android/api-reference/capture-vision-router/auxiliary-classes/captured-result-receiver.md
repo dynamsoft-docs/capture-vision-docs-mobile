@@ -38,7 +38,7 @@ interface CapturedResultReceiver
 The callback method triggered when a generic captured result is available, occurring each time an image finishes its processing. This callback can be used for any result that does not fit into the specific categories of the other callbacks.
 
 ```java
-void onCapturedResultReceived(CapturedResult result);
+default void onCapturedResultReceived(@NonNull CapturedResult result);
 ```
 
 **Parameters**
@@ -50,7 +50,7 @@ void onCapturedResultReceived(CapturedResult result);
 The callback method triggered when the original image result is available, occurring each time an image finishes its processing. This callback is used to handle the original image that used as the input of this capture process.
 
 ```java
-void onOriginalImageResultReceived(OriginalImageResultItem result);
+default void onOriginalImageResultReceived(@NonNull OriginalImageResultItem result);
 ```
 
 **Parameters**
@@ -62,7 +62,7 @@ void onOriginalImageResultReceived(OriginalImageResultItem result);
 The callback triggered when decoded barcodes are available, occurring each time an image finishes its processing.
 
 ```java
-void onDecodedBarcodesReceived(DecodedBarcodesResult result);
+default void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result);
 ```
 
 **Parameters**
@@ -74,7 +74,7 @@ void onDecodedBarcodesReceived(DecodedBarcodesResult result);
 The callback triggered when recognized text lines are available, occurring each time an image finishes its processing.
 
 ```java
-void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
+default void onRecognizedTextLinesReceived(@NonNull RecognizedTextLinesResult result);
 ```
 
 **Parameters**
@@ -86,7 +86,7 @@ void onRecognizedTextLinesReceived(RecognizedTextLinesResult result);
 The callback triggered when processed document results are available, occurring each time an image finishes its processing.
 
 ```java
-void onProcessedDocumentResultReceived(ProcessedDocumentResult result);
+default void onProcessedDocumentResultReceived(@NonNull ProcessedDocumentResult result);
 ```
 
 **Parameters**
@@ -98,7 +98,7 @@ void onProcessedDocumentResultReceived(ProcessedDocumentResult result);
 The callback triggered when parsed results are available, occurring each time an image finishes its processing.
 
 ```java
-void onParsedResultsReceived(ParsedResult result);
+default void onParsedResultsReceived(@NonNull ParsedResult result);
 ```
 
 **Parameters**

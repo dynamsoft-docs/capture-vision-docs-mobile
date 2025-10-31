@@ -55,7 +55,7 @@ The callback method triggered when a generic captured result is available, occur
 ```
 2. 
 ```swift
-func onCapturedResultReceived(_ result: DSCapturedResult)
+func onCapturedResultReceived(_ result: CapturedResult)
 ```
 
 **Parameters**
@@ -76,7 +76,7 @@ The callback method triggered when the original image result is available, occur
 ```
 2. 
 ```swift
-func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
+func onOriginalImageResultReceived(_ result: OriginalImageResultItem)
 ```
 
 **Parameters**
@@ -95,9 +95,9 @@ The callback triggered when decoded barcodes are available, occurring each time 
 ```objc
 - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult*)result;
 ```
-1. 
+2. 
 ```swift
-func onDecodedBarcodesReceived(_ result: DSDecodedBarcodesResult)
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult)
 ```
 
 **Parameters**
@@ -116,9 +116,9 @@ The callback triggered when recognized text lines are available, occurring each 
 ```objc
 - (void)onRecognizedTextLinesReceived:(DSRecognizedTextLinesResult*)result;
 ```
-1. 
+2. 
 ```swift
-func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
+func onRecognizedTextLinesReceived(_ result: RecognizedTextLinesResult)
 ```
 
 **Parameters**
@@ -158,9 +158,9 @@ The callback triggered when parsed results are available, occurring each time an
 ```objc
 - (void)onParsedResultsReceived:(DSParsedResult*)result;
 ```
-1. 
+2. 
 ```swift
-func onParsedResultsReceived(_ result: DSParsedResult)
+func onParsedResultsReceived(_ result: ParsedResult)
 ```
 
 **Parameters**

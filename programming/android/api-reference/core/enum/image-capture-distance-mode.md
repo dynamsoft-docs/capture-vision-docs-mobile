@@ -19,8 +19,8 @@ codeAutoHeight: true
 public @interface EnumImageCaptureDistanceMode
 {
    /** The image is taken by close-up shot camera. */
-   public static final int ICDM_NEAR = 0;
+   int ICDM_NEAR = 0;
    /** The image is taken by long shot camera. */
-   public static final int ICDM_FAR = 1;
+   int ICDM_FAR = 1;
 }
 ```

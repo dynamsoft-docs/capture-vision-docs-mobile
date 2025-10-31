@@ -19,12 +19,12 @@ codeAutoHeight: true
 public @interface EnumCornerType
 {
    /** The corner is formed by two intersecting line segments. */
-   public static final int CT_NORMAL_INTERSECTED = 0;
+   int CT_NORMAL_INTERSECTED = 0;
    /** The corner is formed by two T intersecting line segments. */
-   public static final int CT_T_INTERSECTED = 1;
+   int CT_T_INTERSECTED = 1;
    /** The corner is formed by two cross intersecting line segments. */
-   public static final int CT_CROSS_INTERSECTED = 2;
+   int CT_CROSS_INTERSECTED = 2;
    /** The two line segments are not intersected but they definitely consist a corner. */
-   public static final int CT_NOT_INTERSECTED = 3;
+   int CT_NOT_INTERSECTED = 3;
 }
 ```

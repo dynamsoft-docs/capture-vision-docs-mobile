@@ -53,6 +53,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 Gets an array of `LineSegment` objects, each representing a short line detected within the image.
 
 ```java
+@Nullable
 LineSegment[] getShortLines()
 ```
 
@@ -77,6 +78,7 @@ The number of short lines.
 Gets the short line at the specified index.
 
 ```java
+@Nullable
 LineSegment getShortLine(int index)
 ```
 

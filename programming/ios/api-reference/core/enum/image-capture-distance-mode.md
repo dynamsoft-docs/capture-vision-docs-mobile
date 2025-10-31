@@ -33,8 +33,8 @@ typedef NS_ENUM(NSInteger, DSImageCaptureDistanceMode)
 public enum ImageCaptureDistanceMode : Int
 {
    /** The image is taken by close-up shot camera. */
-   near
+   case near
    /** The image is taken by long shot camera. */
-   far
+   case far
 }
 ```

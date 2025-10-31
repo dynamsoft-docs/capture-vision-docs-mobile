@@ -48,7 +48,7 @@ Adds a [DSIntermediateResultReceiver](intermediate-result-receiver.md) object as
 >
 >1. 
 ```objc
-- (BOOL)addResultReceiver:(id<DSIntermediateResultReceiver>)receiver;
+- (void)addResultReceiver:(id<DSIntermediateResultReceiver>)receiver;
 ```
 2. 
 ```swift
@@ -88,7 +88,7 @@ Removes the specified [DSIntermediateResultReceiver](intermediate-result-receive
 >
 >1. 
 ```objc
-- (BOOL)removeResultReceiver:(id<DSIntermediateResultReceiver>)receiver;
+- (void)removeResultReceiver:(id<DSIntermediateResultReceiver>)receiver;
 ```
 2. 
 ```swift

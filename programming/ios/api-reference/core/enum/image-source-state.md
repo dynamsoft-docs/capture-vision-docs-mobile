@@ -35,8 +35,8 @@ typedef NS_ENUM(NSInteger, DSImageSourceState)
 public enum ImageSourceState : Int
 {
    /** The buffer of ImageSourceAdapter is temporarily empty. */
-   bufferEmpty = 0
+   case bufferEmpty = 0
    /** The source of ImageSourceAdapter is empty. */
-   exhausted = 1
+   case exhausted = 1
 };
 ```

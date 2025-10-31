@@ -23,9 +23,9 @@ codeAutoHeight: true
 typedef NS_ENUM(NSInteger, DSImageTagType)
 {
    /**The image tag is a DSFileImageTag.*/
-   DSImageTagTypeFileImage = 0,
+   DSImageTagTypeFileImage,
    /**The image tag is a DSVideoFrameTag.*/
-   DSImageTagTypeVideoFrame = 1,
+   DSImageTagTypeVideoFrame
 };
 ```
 >
@@ -33,8 +33,8 @@ typedef NS_ENUM(NSInteger, DSImageTagType)
 public enum ImageTagType : Int
 {
    /**The image tag is a DSFileImageTag.*/
-   fileImage = 0,
+   case fileImage
    /**The image tag is a DSVideoFrameTag.*/
-   videoFrame = 1,
+   case videoFrame
 }
 ```

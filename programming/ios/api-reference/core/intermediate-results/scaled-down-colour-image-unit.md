@@ -64,7 +64,7 @@ Sets the image data for the scaled-down colour image.
 ```
 2. 
 ```swift
-func setImageData(_ imageData: DSImageData?) -> Int
+func setImageData(_ imageData: ImageData?) -> Int
 ```
 
 **Parameters**
@@ -89,7 +89,7 @@ Gets the image data for the scaled-down colour image.
 ```
 2. 
 ```swift
-func getImageData() -> DSImageData?
+func getImageData() -> ImageData?
 ```
 
 **Return Value**

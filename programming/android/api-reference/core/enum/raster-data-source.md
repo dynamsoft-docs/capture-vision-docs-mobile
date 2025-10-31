@@ -16,8 +16,8 @@ breadcrumbText: RasterDataSource
 ```java
 public @interface EnumRasterDataSource {
    /**The raster data source type of the PDF file is "pages". Only available for PDFReadingMode raster.*/
-   public static final int RDS_RASTERIZED_PAGES = 0;
+   int RDS_RASTERIZED_PAGES = 0;
    /**The raster data source type of the PDF file is "images".*/
-   public static final int RDS_EXTRACTED_IMAGES = 1;
+   int RDS_EXTRACTED_IMAGES = 1;
 }
 ```

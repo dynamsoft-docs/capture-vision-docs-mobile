@@ -17,7 +17,7 @@ codeAutoHeight: true
 ```java
 public @interface EnumLogMode
 {
-    public static final int LGM_CONSOLE = 1;
-    public static final int LGM_FILE = 2;
+    int LGM_CONSOLE = 1;
+    int LGM_FILE = 2;
 }
 ```

@@ -131,11 +131,11 @@ Removes the text zone at the specified index.
 >
 >1. 
 ```objc
--(void)removeTextZone:(NSInteger)index;
+- (NSInteger)removeTextZone:(NSInteger)index;
 ```
 2. 
 ```swift
-func removeTextZone(index: Int)
+func removeTextZone(_ index: Int) -> Int
 ```
 
 **Parameters**
@@ -153,7 +153,7 @@ Adds a text zone to this unit.
 >1. 
 ```objc
 -(NSInteger)addTextZone:(DSTextZone*)textZone
-    matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+  matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
 ```
 2. 
 ```swift
@@ -182,7 +182,7 @@ Sets the text zone at the specified index.
 ```objc
 -(NSInteger)setTextZone:(NSInteger)index
                textZone:(DSTextZone*)textZone
-    matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+  matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
 ```
 2. 
 ```swift

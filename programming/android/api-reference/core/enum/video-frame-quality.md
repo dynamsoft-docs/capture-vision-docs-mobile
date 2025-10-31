@@ -18,10 +18,10 @@ codeAutoHeight: true
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumVideoFrameQuality {
    /**The frame quality is measured to be high.*/
-   public static final int VFQ_HIGH = 0;
+   int VFQ_HIGH = 0;
    /**The frame quality is measured to be low.*/
-   public static final int VFQ_LOW = 1;
+   int VFQ_LOW = 1;
    /**The frame quality is unknown.*/
-   public static final int VFQ_UNKNOWN = 2;
+   int VFQ_UNKNOWN = 2;
 }
 ```

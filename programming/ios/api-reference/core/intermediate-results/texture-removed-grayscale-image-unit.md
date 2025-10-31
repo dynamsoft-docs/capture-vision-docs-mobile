@@ -36,8 +36,6 @@ class TextureRemovedGrayscaleImageUnit : IntermediateResultUnit
 | [`setImageData`](#setimagedata) | Sets the image data for the texture-removed grayscale image. |
 | [`getImageData`](#getimagedata) | Gets the image data for the texture-removed grayscale image. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 | Method | Description |
@@ -64,7 +62,7 @@ Sets the image data for the texture-removed grayscale image.
 ```
 2. 
 ```swift
-func setImageData(_ imageData: DSImageData?) -> Int
+func setImageData(_ imageData: ImageData?) -> Int
 ```
 
 **Parameters**
@@ -89,7 +87,7 @@ Gets the image data for the texture-removed grayscale image.
 ```
 2. 
 ```swift
-func getImageData() -> DSImageData?
+func getImageData() -> ImageData?
 ```
 
 **Return Value**

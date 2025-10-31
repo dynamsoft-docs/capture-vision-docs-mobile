@@ -33,11 +33,9 @@ interface ImageSourceErrorListener
 The callback method for monitoring the errors that occur in the [`ImageSourceAdapter`](image-source-adapter.md).
 
 ```java
-void onErrorReceived(int errorCode, String errorMessage);
+void onErrorReceived(CoreException imageSourceError);
 ```
 
 **Parameters**
 
-`errorCode`: An enumeration value of type `EnumErrorCode` indicating the type of error..
-
-`errorMessage`: A string containing the error message providing additional information about the error.
+`imageSourceError`: A CoreException containing the error code and error message.

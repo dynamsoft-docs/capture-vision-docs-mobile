@@ -54,7 +54,7 @@ The image data of the captured original image result item.
 >
 >1. 
 ```objc
-@property (nonatomic, nonnull, readonly) DSImageData* imageData;
+@property (nonatomic, readonly, strong, nullable) DSImageData *imageData;
 ```
 2. 
 ```swift

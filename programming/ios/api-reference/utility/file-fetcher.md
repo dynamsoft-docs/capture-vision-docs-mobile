@@ -78,8 +78,9 @@ Sets the file with a file path.
 ```
 2. 
 ```swift
-func setFile(withPath filePath: String) throws
+func setFileWithPath( _filePath: String) throws
 ```
+
 **Parameters**
 
 `filePath`: The file path.
@@ -108,7 +109,7 @@ Sets the file with file bytes.
 ```
 2. 
 ```swift
-func setFile(withBytes fileBytes: Data) throws
+func setFileWithBytes( _fileBytes: Data) throws
 ```
 
 **Parameters**
@@ -138,7 +139,7 @@ Sets the file with a `DSImageData` object.
 ```
 2. 
 ```swift
-func setFile(withBuffer buffer: ImageData) throws
+func setFileWithBuffer( _buffer: ImageData) throws
 ```
 **Parameters**
 
@@ -167,7 +168,7 @@ Sets the file with a `UIImage`.
 ```
 2. 
 ```swift
-func setFile(withImage image: UIImage) throws
+func setFileWithImage( _image: UIImage) throws
 ```
 **Parameters**
 
@@ -202,27 +203,6 @@ func hasNextImageToFetch() -> Bool
 
 A bool value that indicates whether there is a next image to fetch.
 
-### getImage
-
-Get the image data of the image.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(DSImageData *)getImage;
-```
-2. 
-```swift
-func getImage() -> ImageData
-```
-
-**Return Value**
-
-A `DSImageData` as the image.
-
 ### setPages
 
 Set the pages to read.
@@ -233,7 +213,7 @@ Set the pages to read.
 >
 >1. 
 ```objc
--(BOOL)setPages:(NSArray *)pages
+-(BOOL)setPages:(NSArray<NSNumber *> *)pages
           error:(NSError *_Nullable *_Nullable)error;
 ```
 2. 

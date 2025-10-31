@@ -22,35 +22,35 @@ codeAutoHeight: true
 ```objc
 typedef NS_ENUM(NSInteger, DSGrayscaleTransformationMode)
 {
-   /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
-   DSGrayscaleTransformationModeInverted = 0x01,
-   /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
-   DSGrayscaleTransformationModeOriginal = 0x02,
-   /**Lets the library choose an algorithm automatically for grayscale transformation.*/
-   DSGrayscaleTransformationModeAuto     = 0x04,
    /** Skips grayscale transformation. */
-   DSGrayscaleTransformationModeSkip     = 0x00,
-   /** Reserved setting for grayscale transformation mode. */
-   DSGrayscaleTransformationModeRev      = -2147483648,
+   DSGrayscaleTransformationModeSkip     = 0,
+   /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
+   DSGrayscaleTransformationModeInverted = 1 << 0,
+   /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
+   DSGrayscaleTransformationModeOriginal = 1 << 1,
+   /**Lets the library choose an algorithm automatically for grayscale transformation.*/
+   DSGrayscaleTransformationModeAuto     = 1 << 2,
    /** Placeholder value with no functional meaning. */
-   DSGrayscaleTransformationModeEnd      = 0xFFFFFFFF
+   DSGrayscaleTransformationModeEnd      = -1,
+   /** Reserved setting for grayscale transformation mode. */
+   DSGrayscaleTransformationModeRev      = NSIntegerMin
 };
 ```
 >
 ```swift
 public enum GrayscaleTransformationMode : Int
 {
-   /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
-   inverted = 0x01
-   /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
-   original = 0x02
-   /**Lets the library choose an algorithm automatically for grayscale transformation.*/
-   auto     = 0x04
    /** Skips grayscale transformation. */
-   skip     = 0x00
-   /** Reserved setting for grayscale transformation mode. */
-   rev      = -2147483648
+   case skip     = 0
+   /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
+   case inverted = 1 << 0
+   /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
+   case original = 1 << 1
+   /**Lets the library choose an algorithm automatically for grayscale transformation.*/
+   case auto     = 1 << 2
    /** Placeholder value with no functional meaning. */
-   end      = 0xFFFFFFFF
+   case end      = -1
+   /** Reserved setting for grayscale transformation mode. */
+   case rev      = Int.min
 }
 ```

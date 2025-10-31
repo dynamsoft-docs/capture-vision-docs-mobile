@@ -48,6 +48,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 Gets the image data for the text-removed binary image.
 
 ```java
+@Nullable
 ImageData getImageData();
 ```
 
@@ -60,7 +61,7 @@ The `ImageData` object as the image data of the text-removed binary  image.
 Sets the image data for the text-removed binary image.
 
 ```java
-int setImageData(ImageData imageData);
+int setImageData(@Nullable ImageData imageData);
 ```
 
 **Parameter**

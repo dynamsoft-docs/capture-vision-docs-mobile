@@ -114,9 +114,9 @@ Sets the directory path and filter for the file search.
 >1. 
 ```objc
 - (BOOL)setDirectory:(NSString *)directoryPath
-                filter:(nullable NSString *)filter
-                recursive:(BOOL)recursive
-                error:(NSError * _Nullable * _Nullable)error;
+              filter:(NSString *)filter
+           recursive:(BOOL)recursive
+               error:(NSError * _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
@@ -173,7 +173,7 @@ Set the pages to read.
 >
 >1. 
 ```objc
--(BOOL)setPages:(NSArray *)pages
+-(BOOL)setPages:(NSArray<NSNumber *> *)pages
           error:(NSError *_Nullable *_Nullable)error;
 ```
 2. 

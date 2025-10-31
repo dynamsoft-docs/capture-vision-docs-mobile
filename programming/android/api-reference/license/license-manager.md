@@ -29,20 +29,19 @@ class LicenseManager
 | [`initLicense`](#initlicense) | Initializes the license for the application using a license key. |
 | [`setDeviceFriendlyName`](#setdevicefriendlyname) | Assigns a distinctive name to the device, correlating it with its UUID. |
 | [`getDeviceUUID`](#getdeviceuuid) | Returns the unique identifier of the device. |
+| [`isInitLicenseFinished`](#isinitlicensefinished) | Returns whether the license initialization is finished. |
 
 ### initLicense
 
 Initializes the license for the application using a license key.
 
 ```java
-static void initLicense(String license, @NonNull Context context, LicenseVerificationListener listener);
+static void initLicense(final String license, @Nullable final LicenseVerificationListener listener);
 ```
 
 **Parameters**
 
 `[in] license`: The license key to be used for initialization.
-
-`[in] context`: The context that you want to initialize the license.
 
 `[in] listener`: A listener object of `LicenseVerificationListener` to monitor the license activation status.
 
@@ -69,3 +68,11 @@ static String getDeviceUUID(){}
 **Return Value**
 
 The unique identifier of the device.
+
+### isInitLicenseFinished
+
+Returns whether the license initialization is finished.
+
+```java
+static boolean isInitLicenseFinished();
+```

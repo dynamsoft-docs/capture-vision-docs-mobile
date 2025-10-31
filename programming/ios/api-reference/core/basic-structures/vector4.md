@@ -29,11 +29,15 @@ The `DSVector4` class represents a four-dimensional vector.
 class Vector4 : NSObject
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`value`](#value) | *NSArray* | The components value of a four-dimensional vector. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`initWithIntegerValue`](#initwithintegervalue) | The constructor. Creates a DSVector4 from the specified parameters. |
 
 ### value
 
@@ -45,9 +49,29 @@ The components value of a four-dimensional vector.
 >
 >1. 
 ```objc
-@property (nonatomic, copy) NSArray *value;
+@property (nonatomic, copy, readonly) NSArray *values;
 ```
 2. 
 ```swift
-var value: [Int] { get set }
+var value: [Int] { get }
+```
+
+### initWithIntegerValue
+
+The constructor. Creates a DSVector4 from the specified parameters.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithIntegerValue:(NSInteger)v1
+                                  v2:(NSInteger)v2
+                                  v3:(NSInteger)v3
+                                  v4:(NSInteger)v4;
+```
+2. 
+```swift
+init(v1: Int, v2: Int, v3: Int, v4: Int)
 ```

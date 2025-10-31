@@ -42,6 +42,7 @@ class OriginalImageResultItem extends CapturedResultItem
 Get the image data of the captured original image result item.
 
 ```java
+@Nullable
 ImageData getImageData();
 ```
 

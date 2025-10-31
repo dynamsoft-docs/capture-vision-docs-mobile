@@ -43,7 +43,8 @@ The callback triggered when the license verification result is available.
 >
 >1. 
 ```objc
-- (void)onLicenseVerified:(BOOL)isSuccess error:(NSError * _Nullable)error;
+- (void)onLicenseVerified:(BOOL)isSuccess
+                    error:(nullable NSError *)error;
 ```
 2. 
 ```swift

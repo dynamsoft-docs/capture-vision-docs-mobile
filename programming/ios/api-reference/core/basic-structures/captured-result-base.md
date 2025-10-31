@@ -50,7 +50,7 @@ The hash id of the original image.
 >
 >1. 
 ```objc
-@property(nonatomic, copy, readonly) NSString *originalImageHashId;
+@property (nonatomic, copy, readonly) NSString *originalImageHashId;
 ```
 2. 
 ```swift
@@ -67,7 +67,7 @@ The [DSImageTag](image-tag.md) of the original image.
 >
 >1. 
 ```objc
-@property(nonatomic, readonly) DSImageTag *originalImageTag;
+@property (nonatomic, readonly, strong, nullable) DSImageTag *originalImageTag;
 ```
 2. 
 ```swift
@@ -84,7 +84,7 @@ The rotation transformation matrix of the original image relative to the rotated
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) CGAffineTransform rotationTransformMatrix;
+@property (nonatomic, assign, readonly) CGAffineTransform rotationTransformMatrix;
 ```
 2. 
 ```swift
@@ -118,7 +118,7 @@ The error message of this result.
 >
 >1. 
 ```objc
-@property (nonatomic, assign, readonly) NSString * errorMessage;
+@property (nonatomic, readonly, copy, nullable) NSString * errorMessage;
 ```
 2. 
 ```swift

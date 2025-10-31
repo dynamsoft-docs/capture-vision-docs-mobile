@@ -19,22 +19,22 @@ codeAutoHeight: true
 public @interface EnumSectionType
 {
    /**No section type is specified.*/
-   public static final int ST_NULL = 0;
+   int ST_NULL = 0;
    /**The result is output by "region prediction" section.*/
-   public static final int ST_REGION_PREDETECTION = 1;
+   int ST_REGION_PREDETECTION = 1;
    /**The result is output by "barcode localization" section.*/
-   public static final int ST_BARCODE_LOCALIZATION = 2;
+   int ST_BARCODE_LOCALIZATION = 2;
    /**The result is output by "barcode decoding" section.*/
-   public static final int ST_BARCODE_DECODING = 3;
+   int ST_BARCODE_DECODING = 3;
    /**The result is output by "text line localization" section.*/
-   public static final int ST_TEXT_LINE_LOCALIZATION = 4;
+   int ST_TEXT_LINE_LOCALIZATION = 4;
    /**The result is output by "text line  recognition" section.*/
-   public static final int ST_TEXT_LINE_RECOGNITION = 5;
+   int ST_TEXT_LINE_RECOGNITION = 5;
    /**The result is output by "document detection" section.*/
-   public static final int ST_DOCUMENT_DETECTION = 6;
+   int ST_DOCUMENT_DETECTION = 6;
    /**The result is output by "document deskewing" section.*/
-   public static final int ST_DOCUMENT_DESKEWING = 7;
+   int ST_DOCUMENT_DESKEWING = 7;
    /**The result is output by "document enhancement" section.*/
-   public static final int ST_IMAGE_ENHANCEMENT = 8;
+   int ST_IMAGE_ENHANCEMENT = 8;
 }
 ```

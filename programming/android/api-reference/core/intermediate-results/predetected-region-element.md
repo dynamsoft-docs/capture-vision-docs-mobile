@@ -54,7 +54,7 @@ The name of the detection mode used to detect this region element. It can be one
 Sets the location of the pre-detected region object.
 
 ```java
-void setLocation(Quadrilateral location);
+void setLocation(@NonNull Quadrilateral location);
 ```
 
 **Parameters**
@@ -82,6 +82,7 @@ The label ID of this pre-detected region.
 Gets the label name of this pre-detected region element.
 
 ```java
+@NonNull
 String getLabelName();
 ```
 

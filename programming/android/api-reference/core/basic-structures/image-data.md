@@ -30,7 +30,7 @@ class ImageData
 | [`width`](#width) | *int* | The width of the image in pixels. |
 | [`height`](#height) | *int* | The height of the image in pixels. |
 | [`stride`](#stride) | *int* | The stride (or scan width) of the image. |
-| [`format`](#format) | *[EnumImagePixelFormat]({{ site.dcv_android_api }}core/enum/image-pixel-format.html?lang=android)* | The image pixel format used in the image byte array. |
+| [`format`](#format) | *int* | The image pixel format used in the image byte array. |
 | [`orientation`](#orientation) | *int* | The orientation information of the image. The library is able to read the orientation information from the EXIF data of the image file. |
 | [`tag`](#tag) | *[ImageTag](image-tag.md)* | The tag of the image. |
 
@@ -38,7 +38,9 @@ class ImageData
 
 | Method | Description |
 | ------ | ----------- |
+| [`ImageData`](#imagedata-1) | The constructor. |
 | [`toBitmap`](#tobitmap) | Transform the ImageData to an `android.graphics.Bitmap`. |
+| [`fromBitmap`](#frombitmap) | Convert an `android.graphics.Bitmap` to an ImageData. |
 | [`toString`](#tostring) | Transform the ImageData to a string. |
 
 ### bytes
@@ -78,8 +80,13 @@ int stride;
 The image pixel format used in the image byte array.
 
 ```java
+@EnumImagePixelFormat
 int format;
 ```
+
+Related APIs:
+
+- [EnumImagePixelFormat]({{ site.dcv_android_api }}core/enum/image-pixel-format.html?lang=android)
 
 ### orientation
 
@@ -94,7 +101,15 @@ int orientation;
 The tag of the image.
 
 ```java
-ImageTag tag;
+ImageTag imageTag;
+```
+
+### ImageData
+
+The constructor.
+
+```java
+ImageData();
 ```
 
 ### toBitmap
@@ -114,6 +129,14 @@ Bitmap toBitmap() throws CoreException;
 **Return Value**
 
 An `android.graphics.Bitmap` that converted from the `ImageData`.
+
+### fromBitmap
+
+Convert an `android.graphics.Bitmap` to an ImageData.
+
+```java
+static ImageData fromBitmap(Bitmap bitmap);
+```
 
 ### toString
 

@@ -51,7 +51,7 @@ The method for monitoring the output of [`DSOriginalImageResultItem`]({{ site.dc
 ```
 2. 
 ```swift
-func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
+func onOriginalImageResultReceived(_ result: OriginalImageResultItem)
 ```
 
 **Parameters**
@@ -72,7 +72,7 @@ The method for monitoring the output of [DSDecodedBarcodesResult]({{ site.dbr_io
 ```
 2. 
 ```swift
-func onDecodedBarcodesReceived(_ result: DSDecodedBarcodesResult)
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult)
 ```
 
 **Parameters**
@@ -93,7 +93,7 @@ The method for monitoring the output of [DSRecognizedTextLinesResult]({{ site.dl
 ```
 2. 
 ```swift
-func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
+func onRecognizedTextLinesReceived(_ result: RecognizedTextLinesResult)
 ```
 
 **Parameters**
@@ -135,7 +135,7 @@ The method for monitoring the output of [DSParsedResult]({{ site.dcp_ios_api }}p
 ```
 2. 
 ```swift
-func onParsedResultsReceived(_ result: DSParsedResult)
+func onParsedResultsReceived(_ result: ParsedResult)
 ```
 
 **Parameters**

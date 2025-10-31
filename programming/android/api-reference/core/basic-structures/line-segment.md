@@ -22,7 +22,7 @@ The `LineSegment` class represents a line segment in 2D space, which contains th
 class LineSegment
 ```
 
-## Methods & Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
@@ -33,6 +33,9 @@ class LineSegment
 | Method | Description |
 | ------ | ----------- |
 | [`LineSegment`](#linesegment-1) | The constructor. |
+| [`LineSegment(startPoint,endPoint)`](#linesegmentstartpointendpoint) | Constructs a line segment from the start point and end point. |
+| [`LineSegment(startPoint,endPoint,id)`](#linesegmentstartpointendpointid) | Constructs a line segment from the start point, end point, and ID. |
+| [`transformByMatrix`](#transformbymatrix) | Transforms the coordinates of the line segment by a transformation matrix. |
 
 ### startPoint
 
@@ -64,4 +67,28 @@ The constructor.
 
 ```java
 LineSegment();
+```
+
+### LineSegment(startPoint,endPoint)
+
+Constructs a line segment from the start point and end point.
+
+```java
+LineSegment(Point startPoint,Point endPoint);
+```
+
+### LineSegment(startPoint,endPoint,id)
+
+Constructs a line segment from the start point, end point, and ID.
+
+```java
+LineSegment(Point startPoint,Point endPoint,int id);
+```
+
+### transformByMatrix
+
+Transforms the coordinates of the line segment by a transformation matrix.
+
+```java
+LineSegment transformByMatrix(Matrix matrix);
 ```

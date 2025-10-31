@@ -83,11 +83,11 @@ Enable the output of logs.
 >
 >1. 
 ```objc
-+(BOOL)enableLogging:(NSInteger)logMode;
++(void)enableLogging:(DSLogMode)mode;
 ```
 2. 
 ```swift
-class func enableLogging(_ logMode:Int)
+class func enableLogging(_ mode:Int)
 ```
 
 **Parameters**

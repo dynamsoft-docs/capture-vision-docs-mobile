@@ -38,30 +38,6 @@ class ImageIO : NSObject
 | [`saveToFile`](#savetofile) | Saves an image to the specified path and format. |
 | [`saveToMemory`](#savetomemory) | Saves an image to the memory. |
 
-```objc
-/**
- * Reads an image from a file.
- * @param [in] filePath The path of the image file.
- * @param [in,out] error An NSError pointer.
- *
- * @return Returns a DSImageData object representing the image.
- */
-- (DSImageData *)readFromFile:(NSString *)filePath
-                        error:(NSError * _Nullable * _Nullable)error;
-
-/**
- * Reads an image from a file in memory.
- * @param [in] fileBytes A NSData object that points to a file in memory.
- * @param [in,out] error An NSError pointer.
- *
- * @return Returns a DSImageData object representing the image.
- */
-- (DSImageData *)readFromMemory:(NSData *)fileBytes
-                          error:(NSError * _Nullable * _Nullable)error;
-
-
-```
-
 ### saveToFile
 
 Saves an image to the specified path and format. The desired file format is inferred from the file extension provided in the `path` parameter.
@@ -79,7 +55,7 @@ Saves an image to the specified path and format. The desired file format is infe
 ```
 2. 
 ```swift
-func save(toFile imageData: ImageData, path: String, overWrite: Bool) throws -> Bool
+func saveToFile( _imageData: ImageData, path: String, overWrite: Bool) throws -> Bool
 ```
 
 **Parameters**
@@ -116,9 +92,9 @@ Saves an image to the memory.
 >
 >1. 
 ```objc
-- (NSData *)saveToMemory:(DSImageData *)imageData
-             imageFormat:(DSImageFileFormat)imageFormat
-                   error:(NSError * _Nullable * _Nullable)error;
+- (nullable NSData *)saveToMemory:(DSImageData *)imageData
+                      imageFormat:(DSImageFileFormat)imageFormat
+                            error:(NSError * _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
@@ -154,8 +130,8 @@ Reads an image from the specified path and format.
 >
 >1. 
 ```objc
-- (DSImageData *)readFromFile:(NSString *)filePath
-                        error:(NSError * _Nullable * _Nullable)error;
+- (nullable DSImageData *)readFromFile:(NSString *)filePath
+                                 error:(NSError * _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
@@ -188,8 +164,8 @@ Reads an image from the memory.
 >
 >1. 
 ```objc
-- (DSImageData *)readFromMemory:(NSData *)fileBytes
-                          error:(NSError * _Nullable * _Nullable)error;
+- (nullable DSImageData *)readFromMemory:(NSData *)fileBytes
+                                   error:(NSError * _Nullable * _Nullable)error;
 ```
 2. 
 ```swift

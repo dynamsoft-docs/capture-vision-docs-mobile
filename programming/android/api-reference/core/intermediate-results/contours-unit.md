@@ -49,6 +49,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 Gets the contour array of the unit.
 
 ```java
+@Nullable
 Contour[] getContours()
 ```
 
@@ -81,6 +82,7 @@ Returns the `ErrorCode` if failed. Otherwise, returns 0.
 Gets the contour hierarchies as an array of `Vector4` objects.
 
 ```java
+@Nullable
 Vector4[] getHierarchies()
 ```
 

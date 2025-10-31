@@ -29,12 +29,16 @@ The `TextZone` class describes a text zone.
 class TextZone: NSObject
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`location`](#location) | *DSQuadrilateral * \** | The location of the text zone. |
 | [`charContoursIndices`](#charcontourindices) | *NSArray * \** | The indices of the character contours. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`initWithLocation`](#initwithlocation) | The constructor. Creates a DSRect from the specified parameters. |
 
 ### location
 
@@ -46,7 +50,7 @@ The location of the text zone.
 >
 >1. 
 ```objc
-@property (nonatomic, copy) DSQuadrilateral * location;
+@property (nonatomic, strong) DSQuadrilateral * location;
 ```
 2. 
 ```swift
@@ -63,9 +67,27 @@ The indices of the character contours.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, copy) NSArray * charContoursIndices;
+@property (nonatomic, copy, nullable) NSArray<NSNumber *> *charContoursIndices;
 ```
 2. 
 ```swift
-var charContoursIndices: [Int]? { get set }
+var charContoursIndices: [NSNumber]? { get set }
+```
+
+### initWithLocation
+
+The constructor. Creates a `DSTextZone` from the location and the character contour indices.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithLocation:(DSQuadrilateral *)location
+         charContoursIndiceArray:(nullable NSArray<NSNumber *> *)charContoursIndices;
+```
+2. 
+```swift
+init(location: Quadrilateral, charContoursIndices: [NSNumber]?)
 ```

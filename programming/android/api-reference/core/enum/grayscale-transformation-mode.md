@@ -19,16 +19,16 @@ codeAutoHeight: true
 public @interface EnumGrayscaleTransformationMode
 {
    /** Transforms to the inverted grayscale for further reference. This value is recommended for light on dark images. */
-   public static final int GTM_INVERTED = 1;
+   int GTM_INVERTED = 1;
    /** Keeps the original grayscale for further reference. This value is recommended for dark on light images. */
-   public static final int GTM_ORIGINAL = 2;
+   int GTM_ORIGINAL = 2;
    /**Lets the library choose an algorithm automatically for grayscale transformation.*/
-   public static final int GTM_AUTO = 4;
+   int GTM_AUTO = 4;
    /** Skips grayscale transformation. */
-   public static final int GTM_SKIP = 0;
+   int GTM_SKIP = 0;
    /** Reserved setting for grayscale transformation mode. */
-   public static final int GTM_REV = -2147483648;
+   int GTM_REV = -2147483648;
    /**Placeholder value with no functional meaning. */
-   public static final int GTM_END = 0xFFFFFFFF;
+   int GTM_END = 0xFFFFFFFF;
 }
 ```

@@ -29,11 +29,16 @@ The `Contour` class represents a contour made up of multiple points.
 class Contour : NSObject
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`points`](#points) | *NSArray \** | An array of `Point` objects defining the vertices of the contour. |
+
+
+| Method | Description |
+| ------ | ----------- |
+| [`initWithPointArray`](#initwithpointarray) | The constructor. Creates an instance from an array of points. |
 
 ### points
 
@@ -45,9 +50,26 @@ An array of `Point` objects defining the vertices of the contour.
 >
 >1. 
 ```objc
-@property(nonatomic, copy) NSArray *points;
+@property (nonatomic, copy, nullable) NSArray *points;
 ```
 2. 
 ```swift
 var points: [Point] { get set }
+```
+
+### initWithPointArray
+
+The constructor. Creates an instance from an array of points.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)initWithPointArray:(nullable NSArray *)points;
+```
+2. 
+```swift
+init(points: [Point]?)
 ```
