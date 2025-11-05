@@ -9,6 +9,15 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision Android v3.x
 
+## 3.2.3000 (11/05/2025)
+
+### Fixed
+
+- Resolved an issue where `CaptureVisionRouter.startCapturing` could take longer than expected to complete.
+- Fixed an issue where `initLicense` could take longer than expected to complete.
+- Fixed an issue where the app could crash when a `CameraView` instance was created using `new CameraView()`.
+- Fixed a potential crash that could occur in certain scenarios.
+
 ## 3.2.1000 (10/16/2025)
 
 ### 🎉Milestone Release
