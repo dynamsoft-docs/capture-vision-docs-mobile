@@ -33,6 +33,8 @@ cordova-api: /capture-vision/docs/mobile/programming/cordova/api-reference/
 cordova-release-notes: /capture-vision/docs/mobile/programming/cordova/release-notes/
 cordova-guide: /capture-vision/docs/mobile/programming/cordova/user-guide/
 
+dcv_flutter: /capture-vision/docs/mobile/programming/flutter/
+dcv_flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
 dbr_flutter: /barcode-reader/docs/mobile/programming/flutter/
 dbr_flutter_api: /barcode-reader/docs/mobile/programming/flutter/api-reference/
 dcp_flutter: /code-parser/docs/mobile/programming/flutter/
