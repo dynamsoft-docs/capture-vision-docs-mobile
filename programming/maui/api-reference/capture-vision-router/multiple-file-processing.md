@@ -20,6 +20,7 @@ noTitleIndex: true
 | [`StopCapturing`](#stopcapturing) | Stops the capturing process. |
 | [`AddResultFilter`](#addresultfilter) | Adds a `CaptureResultFilter` object to filter non-essential results. |
 | [`RemoveResultFilter`](#removeresultfilter) | Removes the specified `CaptureResultFilter` object. |
+| [`SwitchCapturingTemplate`](#switchcapturingtemplate) | Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow. |
 
 ## SetInput
 
@@ -127,3 +128,25 @@ void RemoveResultFilter(ICapturedResultFilter filter);
 **Parameters**
 
 `[in] filter`: The filter object, of type [`CapturedResultFilter`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html).
+
+## SwitchCapturingTemplate
+
+Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow.
+
+```csharp
+partial void SwitchCapturingTemplate(string template);
+```
+
+**Parameters**
+
+`[in] template`: The name of the new capturing template to apply.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.3000 and Dynamsoft Capture Vision version 3.2.3000.
