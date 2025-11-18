@@ -31,7 +31,7 @@ In this guide, you will learn step by step on how to build a MRZ scanner applica
     - [Initialize Capture Vision Router](#initialize-capture-vision-router)
     - [Extract Parsed Results](#extract-parsed-results)
     - [Build and Run the Project](#build-and-run-the-project)
-+++++
+
 ## Supported Machine-Readable Travel Document Types
 
 The Machine Readable Travel Documents (MRTD) standard specified by the International Civil Aviation Organization (ICAO) defines how to encode information for optical character recognition on official travel documents.
