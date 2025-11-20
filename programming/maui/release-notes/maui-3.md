@@ -21,21 +21,21 @@ This release focuses on practical performance gains for production environments 
 
 #### AI-Powered Barcode Detection and Decoding
 
-- New Localization Models – Introduces [`OneDLocalization`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) and [`DataMatrixQRCodeLocalization`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) neural network models for improved detection of **blurred / low-resolution 1D codes**, or **partially damaged DataMatrix/QR codes**.
-- Specialized Decoders – Adds [`EAN13Decoder`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) and [`Code128Decoder`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) models optimized for **long-distance** and **motion-blurred** decoding scenarios.
-- Redesigned Deblur Model – The [`OneDDeblur`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) model now provides more effective recovery from **motion and focus blur**.
+- New Localization Models – Introduces [`OneDLocalization`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) and [`DataMatrixQRCodeLocalization`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) neural network models for improved detection of **blurred / low-resolution 1D codes**, or **partially damaged DataMatrix/QR codes**.
+- Specialized Decoders – Adds [`EAN13Decoder`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) and [`Code128Decoder`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) models optimized for **long-distance** and **motion-blurred** decoding scenarios.
+- Redesigned Deblur Model – The [`OneDDeblur`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) model now provides more effective recovery from **motion and focus blur**.
 - Configurable Model Selection – The new `ModelNameArray` parameter supports flexible model loading and fine-grained control for specific barcode types.
 
 #### Precision and Processing Control
 
-- Enhanced Deblur Methods – [`DM_DEEP_ANALYSIS`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#dm_deep_analysis) now includes sub-level control with `OneDGeneral`, `TwoDGeneral`, and `EAN13Enhanced` options.
-- Barcode Count Expectation – The new [`ExpectedBarcodesCount`]({{ site.dcvb_parameters_reference }}barcode-format-specification/expected-barcodes-count.html) parameter enables **format-specific quantity control** and **early termination** in fixed-count workflows.
-- Improved Region Detection – The new [`RPM_GRAY_CONSISTENCY`]({{ site.dcvb_parameters_reference }}image-parameter/region-predetection-modes.html#rpm_gray_consistency) mode provides more precise region extraction based on **grayscale uniformity** and **local consistency** for document and label processing.
+- Enhanced Deblur Methods – [`DM_DEEP_ANALYSIS`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#dm_deep_analysis) now includes sub-level control with `OneDGeneral`, `TwoDGeneral`, and `EAN13Enhanced` options.
+- Barcode Count Expectation – The new [`ExpectedBarcodesCount`]({{ site.dcv_parameters_reference }}barcode-format-specification/expected-barcodes-count.html) parameter enables **format-specific quantity control** and **early termination** in fixed-count workflows.
+- Improved Region Detection – The new [`RPM_GRAY_CONSISTENCY`]({{ site.dcv_parameters_reference }}image-parameter/region-predetection-modes.html#rpm_gray_consistency) mode provides more precise region extraction based on **grayscale uniformity** and **local consistency** for document and label processing.
 
 #### AI-Powered MRZ Detection
 
-- Neural MRZ Localization – The new [`MRZLocalization`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/localization-modes.html#modelnamearray) model improves region detection accuracy and delivers up to **42.7%** faster processing for MRZ-based document workflows.
-- Configurable Localization Control – The new [`LocalizationModes`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/localization-modes.html) parameter allows configuration for text line detection.
+- Neural MRZ Localization – The new [`MRZLocalization`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/localization-modes.html#modelnamearray) model improves region detection accuracy and delivers up to **42.7%** faster processing for MRZ-based document workflows.
+- Configurable Localization Control – The new [`LocalizationModes`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/localization-modes.html) parameter allows configuration for text line detection.
 
 #### Smart Document Capture
 
@@ -64,21 +64,20 @@ This release focuses on practical performance gains for production environments 
 
 ### New
 
-- Added a new method, [`switchCapturingTemplate`]({{ site.dcv_maui_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
-- Added a new method, [`clearDLModelBuffers`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
-- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
+- Added a new method, [`SwitchCapturingTemplate`]({{ site.dcv_maui_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
+- Added a new method, [`ClearDLModelBuffers`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
+- Added a new method, [`SetGlobalIntraOpNumThreads`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
 - Added a new method, [`TakePhoto`]({{ site.dce_maui_api }}camera-enhancer.html#takephoto) for capturing photos.
-- Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
-The following APIs are provided for configuring the `cameraToggleButton`:
-  - [`setCameraToggleButton`]({{ site.dce_maui_api }}camera-view.html#setcameratogglebutton)
-  - [`setCameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#setcameratogglebuttonvisible)
-  - [`getCameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#getcameratogglebuttonvisible)
+- Added a new button, `CameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
+The following APIs are provided for configuring the `CameraToggleButton`:
+  - [`CameraToggleButton`]({{ site.dce_maui_api }}camera-view.html#cameratogglebutton)
+  - [`CameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#cameratogglebuttonvisible)
 - Added new methods to class `ImageIO` for reading and saving images:
   - [`ReadFromMemory`]({{ site.dcv_maui_api }}utility/image-io.html#readfrommemory)
   - [`SaveToMemory`]({{ site.dcv_maui_api }}utility/image-io.html#savetomemory)
 - Added new methods to class `ImageProcessor` for cropping images:
-  - [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode)
-  - [`CropAndDeskewImage(imageData,quadrilateral)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquad)
+  - [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquadrilateraldstwidthdstheightpaddingerrorcode)
+  - [`CropAndDeskewImage(imageData,quadrilateral)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquadrilateral)
 
 ## 3.0.5200 (08/18/2025)
 

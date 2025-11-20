@@ -27,8 +27,8 @@ class ImageProcessor
 | Method | Description |
 | ------ | ----------- |
 | [`CropImage`](#cropimagerect) | Crops an image based on the provided rectangle or quadrilateral. |
-| [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
-| [`CropAndDeskewImage(imageData,quadrilateral)`](#cropanddeskewimageimagedataquad) | Crops and deskew an image based on the provided quadrilateral. |
+| [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquadrilateraldstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
+| [`CropAndDeskewImage(imageData,quadrilateral)`](#cropanddeskewimageimagedataquadrilateral) | Crops and deskew an image based on the provided quadrilateral. |
 | [`AdjustBrightness`](#adjustbrightness) | Adjusts the brightness of an image. |
 | [`AdjustContrast`](#adjustcontrast) | Adjusts the contrast of an image. |
 | [`FilterImage`](#filterimage) | Applies a filter to an image. |
