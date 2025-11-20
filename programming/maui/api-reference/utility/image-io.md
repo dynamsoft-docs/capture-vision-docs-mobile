@@ -26,10 +26,52 @@ class DMImageIO
 
 | Method | Description |
 | ------ | ----------- |
+| [`ReadFromFile`](#readfromfile) | Reads an image from the specified path and format. |
+| [`ReadFromMemory`](#readfrommemory) | Reads an image from the memory. |
 | [`SaveToFile`](#savetofile) | Saves an image to the specified path and format. |
-| [`ReadFromFile`](#readfromfile) | Read an image from file with the file path. |
+| [`SaveToMemory`](#savetomemory) | Saves an image to the memory. |
 
-### saveToFile
+### ReadFromFile
+
+Read an image from file with the file path
+
+```csharp
+ImageData? ReadFromFile(string path);
+```
+
+**Parameters**
+
+`[in] path`: The file path.
+
+**Return Value**
+
+The read image data of type `ImageData`.
+
+### ReadFromMemory
+
+Reads an image from the memory.
+
+```csharp
+partial ImageData? ReadFromMemory(byte[] imageFileBytes);
+```
+
+**Parameters**
+
+`[in] imageFileBytes`: The image bytes.
+
+**Return Value**
+
+The image data of type `ImageData`.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The fileBytes you input is null. |
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.3000 and Dynamsoft Capture Vision version 3.2.3000.
+
+### SaveToFile
 
 Saves an image to the specified path and format. The desired file format is inferred from the file extension provided in the `path` parameter.
 
@@ -59,18 +101,29 @@ void SaveToFile(ImageData imageData, string path, bool overWrite);
 
 A boolean value that indicates whether the file is saved successfully.
 
-### ReadFromFile
+### SaveToMemory
 
-Read an image from file with the file path
+Saves an image to the memory.
 
 ```csharp
-ImageData? ReadFromFile(string path);
+partial byte[]? SaveToMemory(ImageData imageData, EnumImageFileFormat imageFileFormat);
 ```
 
 **Parameters**
 
-`[in] path`: The file path.
+`[in] imageData`: The image to be saved, of type `ImageData`.
+
+`[in] imageFileFormat`: The image format.
 
 **Return Value**
 
-The read image data of type `ImageData`.
+The image bytes.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_NULL_POINTER | -10002 | The ImageData object is null. |
+| EC_IMGAE_DATA_INVALID | -10069 | The input ImageData object contains invalid parameter(s). |
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.3000 and Dynamsoft Capture Vision version 3.2.3000.

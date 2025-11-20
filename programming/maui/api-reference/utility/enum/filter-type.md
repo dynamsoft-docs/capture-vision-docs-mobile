@@ -10,7 +10,7 @@ codeAutoHeight: true
 
 `EnumFilterType` describes the specified image filter applied to an input image.
 
-```java
+```csharp
 public enum EnumFilterType : int
 {
    HighPass,

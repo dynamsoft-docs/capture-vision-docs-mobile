@@ -20,6 +20,8 @@ noTitleIndex: true
 | [`ResetSettings`](#resetsettings) | Restores all settings to their original default values. |
 | [`OutputSettings`](#outputsettings) | Returns an object that contains settings for the specified `CaptureVisionTemplate`. |
 | [`OutputSettingsToFile`](#outputsettingstofile) | Generates a JSON file download containing the settings for the specified `CaptureVisionTemplate`. |
+| [`ClearDLModelBuffers`](#cleardlmodelbuffers) | Clear the buffered deep learning models to release the memory. |
+| [`SetGlobalIntraOpNumThreads`](#setglobalintraopnumthreads) | Sets the global number of threads used internally for model execution. |
 
 ## InitSettings
 
@@ -203,3 +205,31 @@ void OutputSettingsToFile(string templateName, string filePath);
 | :--------- | :---- | :---------- |
 | EC_FILE_SAVE_FAILED | -10058 | The file path is unavailable or the file can't be created for any other reasons. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+## ClearDLModelBuffers
+
+Clear the buffered deep learning models to release the memory.
+
+```csharp
+static partial void ClearDLModelBuffers();
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.3000 and Dynamsoft Capture Vision version 3.2.3000.
+
+## SetGlobalIntraOpNumThreads
+
+Sets the global number of threads used internally for model execution.
+
+```csharp
+static partial void SetGlobalIntraOpNumThreads(int numThreads);
+```
+
+**Parameters**
+
+`numThreads`: Number of threads used internally for model execution. Valid range: [0, 256]. Default: 2.
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.2.3000 and Dynamsoft Capture Vision version 3.2.3000.

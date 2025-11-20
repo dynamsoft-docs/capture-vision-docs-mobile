@@ -27,7 +27,8 @@ class ImageProcessor
 | Method | Description |
 | ------ | ----------- |
 | [`CropImage`](#cropimagerect) | Crops an image based on the provided rectangle or quadrilateral. |
-| [`CropImage`](#cropimagequadrilateral) | Crops an image based on the provided rectangle or quadrilateral. |
+| [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`](#cropanddeskewimageimagedataquadrilateraldstwidthdstheightpaddingerrorcode) | Crops and deskew an image based on the provided quadrilateral and additional information. |
+| [`CropAndDeskewImage(imageData,quadrilateral)`](#cropanddeskewimageimagedataquadrilateral) | Crops and deskew an image based on the provided quadrilateral. |
 | [`AdjustBrightness`](#adjustbrightness) | Adjusts the brightness of an image. |
 | [`AdjustContrast`](#adjustcontrast) | Adjusts the contrast of an image. |
 | [`FilterImage`](#filterimage) | Applies a filter to an image. |
@@ -56,12 +57,12 @@ ImageData? CropImage(ImageData imageData, DMRect rect);
 
 The cropped `ImageData`.
 
-### CropImage(quadrilateral)
+### CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding,errorCode)
 
-Crops an image based on the provided quadrilateral.
+Crops and deskews an image based on the provided quadrilateral and additional information.
 
 ```csharp
-ImageData? CropImage(ImageData imageData, Quadrilateral quadrilateral);
+partial ImageData? CropAndDeskewImage(ImageData imageData, Quadrilateral quadrilateral, int dstWidth, int dstHeight, int padding);
 ```
 
 **Parameters**
@@ -70,9 +71,25 @@ ImageData? CropImage(ImageData imageData, Quadrilateral quadrilateral);
 
 `[in] quadrilateral`: The `Quadrilateral` specifying the region to crop.
 
-**Return Value**
+`[in] dstWidth`: The width of the destination image.
 
-The cropped `ImageData`.
+`[in] dstHeight`: The height of the destination image.
+
+`[in] padding`: The padding value to be added to the destination image.
+
+### CropAndDeskewImage(imageData,quadrilateral)
+
+Crops and deskews an image based on the provided quadrilateral. The arguments dstWidth, dstHeight, and padding are set to 0.
+
+```csharp
+partial ImageData? CropAndDeskewImage(ImageData imageData, Quadrilateral quadrilateral);
+```
+
+**Parameters**
+
+`[in] imageData`: The `ImageData` to crop.
+
+`[in] quadrilateral`: The `Quadrilateral` specifying the region to crop.
 
 ### AdjustBrightness
 
