@@ -102,6 +102,12 @@ dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
 dcp_maui: /code-parser/docs/mobile/programming/maui/
 dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
 
+dcv_cpp: /capture-vision/docs/server/programming/cplusplus/
+dcv_python: /capture-vision/docs/server/programming/python/
+dcv_java: /capture-vision/docs/server/programming/java/
+dcv_dotnet: /capture-vision/docs/server/programming/dotnet/
+dcv_js: /capture-vision/docs/web/programming/javascript/
+
 code_types: /code-parser/docs/core/code-types/
 
 assets: /capture-vision/docs/mobile/assets/

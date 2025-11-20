@@ -6,7 +6,6 @@ keywords: Android, MRZ, passport, id card, visa
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-ignore: true
 ---
 
 # Android User Guide for MRZ Integration

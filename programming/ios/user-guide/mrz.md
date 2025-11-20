@@ -6,7 +6,6 @@ keywords: iOS, MRZ, passport, id card, visa
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-ignore: true
 ---
 
 # iOS User Guide for MRZ Integration

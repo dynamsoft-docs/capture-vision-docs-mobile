@@ -13,7 +13,7 @@ noTitleIndex: true
 
 ### 🎉Milestone Release
 
-Version 3.2.1000 introduces a series of AI-driven improvements designed to enhance barcode and MRZ detection accuracy, processing speed, and configuration flexibility.
+Version 3.2.3000 introduces a series of AI-driven improvements designed to enhance barcode and MRZ detection accuracy, processing speed, and configuration flexibility.
 
 This release focuses on practical performance gains for production environments across retail, logistics, manufacturing, and identity verification workflows.
 
