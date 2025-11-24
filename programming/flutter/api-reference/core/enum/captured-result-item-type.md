@@ -21,9 +21,13 @@ breadcrumbText: EnumCapturedResultItemType
 
 ```dart
 enum EnumCapturedResultItemType {
-    originalImage,
-    barcode,
-    parsedResult
+  originalImage(1),
+  barcode(1 << 1),
+  textLine(1 << 2),
+  detectedQuad(1 << 3),
+  deskewedImage(1 << 4),
+  parsedResult(1 << 5),
+  enhancedImage(1 << 6);
 }
 ```
 

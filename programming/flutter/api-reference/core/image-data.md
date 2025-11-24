@@ -20,7 +20,29 @@ The `ImageData` class encapsulates all of an image's data, as well as metadata. 
 class ImageData
 ```
 
+## Constructors
+
+```dart
+ImageData({
+  required this.bytes,
+  required this.width,
+  required this.height,
+  required this.orientation,
+  required this.format,
+  required this.stride,
+});
+```
+
 ## Properties
+
+| Property | Type | Description |
+| --------- | ---- | ----------- |
+| [`bytes`](#bytes) | *Uint8List* | Represents the raw bytes of the image. |
+| [`width`](#width) | *int* | Represents the width of the image in *pixels*. |
+| [`height`](#height) | *int* | Represents the height of the image in *pixels*. |
+| [`orientation`](#orientation) | *int* | Represents the orientation of the image as an angle. |
+| [`format`](#format) | *EnumImagePixelFormat* | Represents the pixel format of the image as a [`EnumImagePixelFormat`](enum/image-pixel-format.md). |
+| [`stride`](#stride) | *int* | Represents the number of bytes in a single row of the image. |
 
 ### bytes
 

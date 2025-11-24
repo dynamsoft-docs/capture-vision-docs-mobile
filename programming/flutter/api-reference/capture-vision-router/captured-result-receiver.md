@@ -24,9 +24,11 @@ class CapturedResultReceiver
 
 | Method | Description |
 | ------ | ----------- |
-| [`onCapturedResultReceived`](#oncapturedresultreceived) | This callback is triggered when any kind of captured result is available at the end of the recognition process. |
-| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
-| [`onParsedResultsReceived`](#onparsedreultsreceived) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
+| [`onCapturedResultReceived`](#oncapturedresultreceived) | The callback invoked when captured results become available. It is triggered once for each image after its processing is completed. |
+| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | The callback invoked when decoded barcodes become available. It is triggered once for each image after its processing is completed. |
+| [`onParsedResultsReceived`](#onparsedreultsreceived) | The callback invoked when parsed results become available. It is triggered once for each image after its processing is completed.|
+| [`onProcessedDocumentResultReceived`](#onparsedreultsreceived) | The callback invoked when processed document results become available. It is triggered once for each image after its processing is completed. |
+| [`onRecognizedTextLinesReceived`](#onparsedreultsreceived) | The callback invoked when recognized text lines become available. It is triggered once for each image after its processing is completed. |
 
 ### onCapturedResultReceived
 
@@ -59,3 +61,31 @@ This callback method delivers a [`ParsedResult`]({{ site.dcp_flutter_api }}parse
 ```dart
 Future<void> Function(ParsedResult result)? onParsedResultsReceived;
 ```
+
+**Parameters**
+
+`result`: The parsed result, an instance of [`ParsedResult`]({{ site.dcp_flutter_api }}parsed-result.html).
+
+### onProcessedDocumentResultReceived
+
+This callback method delivers a [`ProcessedDocumentResult`]({{ site.ddn_flutter_api }}processed-document-result.html), which is an object representing any captured result of type `detectedQuad`, `deskewedImage` and `enhancedImage` that is taken from an image or a video frame. The callback is triggered each time an image finishes processing, regardless of whether there is a valid result or not.
+
+```dart
+Future<void> Function(ProcessedDocumentResult result)? onProcessedDocumentResultReceived;
+```
+
+**Parameters**
+
+`result`: The document processing results, an instance of [`ProcessedDocumentResult`]({{ site.ddn_flutter_api }}processed-document-result.html).
+
+### onRecognizedTextLinesReceived
+
+This callback method delivers a [`RecognizedTextLinesResult`]({{ site.dlr_flutter_api }}recognized-text-lines-result.html), which is an object representing any captured result of type `recognizedTextLines` that is taken from an image or a video frame. The callback is triggered each time an image finishes processing, regardless of whether there is a valid result or not.
+
+```dart
+Future<void> Function(RecognizedTextLinesResult result)? onRecognizedTextLinesReceived;
+```
+
+**Parameters**
+
+`result`: The text recognition result, an instance of [`RecognizedTextLinesResult`]({{ site.dlr_flutter_api }}recognized-text-lines-result.html).

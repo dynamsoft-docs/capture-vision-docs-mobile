@@ -23,55 +23,56 @@ The `CapturedResult` class represents the result of a capture operation on an im
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-class CapturedResult
+class CapturedResult extends CapturedResultBase
 ```
 
 ## Properties
 
 | Property | Type | Description |
-| --------- | ----------- |
-| [`originalImageHashId`](#originalimagehashid) | *String* | The hash ID of the original image. You can use this ID to get the original image via the `IntermediateResultManager` class. |
-| [`rotationTransformMatrix`](#rotationtransformmatrix) |  *Matrix4* | The rotation transformation matrix of the original image relative to the rotated image. |
-| [`errorCode`](#errorcode) | *int* | The error code associated with the capture result. |
-| [`errorMessage`](#errormessage) | *String* | The error message associated with the capture result. |
-| [`decodedBarcodesResult`](#decodedbarcodesresult) | [*DecodedBarcodesResult*]({{ site.dbr_flutter_api }}barcode-reader/decoded-barcodes-result.html) | A [`DecodedBarcodesResult`](decoded-barcodes-result.md) object that represents all of the decoded barcode(s) within the original image. |
+| -------- | ---- | ----------- |
+| [`items`](#items) | *List\<CapturedResultItem\>?* | A list of [`CapturedResultItem`](captured-result-item.md) objects. |
+| [`decodedBarcodesResult`](#decodedbarcodesresult) | [*DecodedBarcodesResult*]({{ site.dbr_flutter_api }}barcode-reader/decoded-barcodes-result.html) | All results of type `barcode` in the `CapturedResult` as a `DecodedBarcodesResult` object. |
+| [`recognizedTextLinesResult`](#recognizedtextlinesresult) | [*RecognizedTextLinesResult*]({{ site.dlr_flutter_api }}recognized-text-lines-result.html) | All results of type `textLine` in the `CapturedResult` as a `RecognizedTextLinesResult` object. |
+| [`processedDocumentResult`](#processeddocumentresult) | [*ProcessedDocumentResult*]({{ site.ddn_flutter_api }}processed-document-result.html) | All results of type `detectedQuad`, `deskewedImage` and `enhancedImage` in the `CapturedResult` as a `ProcessedDocumentResult` object. |
+| [`parsedResult`](#parsedresult) | [*ParsedResult*]({{ site.dcp_flutter_api }}parsed-result.html) | All results of type `parsedResult` in the `CapturedResult` as a `ParsedResult` object. |
 
-### originalImageHashId
 
-Returns the hash ID of the original image that contains the captured result. You can use this ID to get the original image via the [`IntermediateResultManager`](./intermediate-result-manager.md) class.
+### items
 
-```dart
-String originalImageHashId,
-```
-
-### rotationTransformMatrix
-
-The rotation transformation matrix (represented as a [`Matrix4`](https://api.flutter.dev/flutter/package-vector_math_vector_math_64/Matrix4-class.html)]) of the original image relative to the rotated image.
+A list of [`CapturedResultItem`]({{ site.crr_flutter_api }}captured-result-item.html) objects.
 
 ```dart
-Matrix4 rotationTransformMatrix;
-```
-
-### errorCode
-
-The error code produced by the library and associated with the captured result should something go wrong during the recognition process.
-
-```dart
-int errorCode;
-```
-
-### errorMessage
-
-The error string associated with the error code, providing details about the error.
-
-```dart
-String errorMessage;
+List<CapturedResultItem>? items;
 ```
 
 ### decodedBarcodesResult
 
-A [`DecodedBarcodesResult`]({{ site.dbr_flutter_api }}barcode-reader/decoded-barcodes-result.html) object that represents all of the decoded barcode(s) within the original image.
+All results of type `barcode` in the `CapturedResult` as a `DecodedBarcodesResult` object.
 
 ```dart
 DecodedBarcodesResult? decodedBarcodesResult;
+```
+
+### recognizedTextLinesResult
+
+All results of type `textLine` in the `CapturedResult` as a `RecognizedTextLinesResult` object.
+
+```dart
+RecognizedTextLinesResult? recognizedTextLinesResult;
+```
+
+#### processedDocumentResult
+
+All results of type `detectedQuad`, `deskewedImage` and `enhancedImage` in the `CapturedResult` as a `ProcessedDocumentResult` object.
+
+```dart
+ProcessedDocumentResult? processedDocumentResult;
+```
+
+### parsedResult
+
+All results of type `parsedResult` in the `CapturedResult` as a `ParsedResult` object.
+
+```dart
+ParsedResult? parsedResult;
 ```

@@ -33,6 +33,6 @@ public @interface EnumRegionObjectElementType
    /**The type of subclass DeskewedImageElement.*/
    int ROET_DESKEWED_IMAGE = 6;
    /**The type of subclass EnhancedImageElement.*/
-   int ROET_ENHANCED_IMAGE = 6;
+   int ROET_ENHANCED_IMAGE = 7;
 }
 ```

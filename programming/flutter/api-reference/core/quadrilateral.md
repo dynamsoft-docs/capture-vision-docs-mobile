@@ -20,7 +20,17 @@ The `Quadrilateral` class is used to define a quadrilateral shape. This class is
 class Quadrilateral
 ```
 
+## Constructors
+
+```dart
+Quadrilateral({required this.points});
+```
+
 ## Properties
+
+| Property | Type | Description |
+| --------- | ---- | ----------- |
+| [`points`](#points) | *List\<Point\>* | A list of four points that make up the quadrilateral. |
 
 ### points
 

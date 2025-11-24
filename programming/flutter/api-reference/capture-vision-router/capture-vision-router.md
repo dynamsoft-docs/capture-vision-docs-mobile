@@ -23,20 +23,35 @@ A `CaptureVisionRouter` instance accepts and processes images from an image sour
 class CaptureVisionRouter
 ```
 
-## Capture Methods
+## Static Properties
+
+Returns the singleton instance of `CaptureVisionRouter`.
+
+```dart
+static CaptureVisionRouter get instance;
+```
+
+## Methods
+
+- Capture from an Image
 
 | Method | Description |
-| --- | --- |
+| ------ | ----------- |
 | [`capture`](#capture) | Processes an image using the specified template and outputs a CapturedResult. |
 | [`captureFile`](#capturefile) | Processes an image from a file path using the specified template. |
 | [`captureFileBytes`](#capturefilebytes) | Processes an image from a byte array using the specified template. |
+
+- Capture from the Camera
+
+| Method | Description |
+| ------ | ----------- |
 | [`startCapturing`](#startcapturing) | Starts the capturing process using the specified template. |
 | [`stopCapturing`](#stopcapturing) | Stops the capturing process and closes the camera. |
 
 ## Settings Management Methods
 
 | Method | Description |
-| --- | --- |
+| ------ | ----------- |
 | [`getSimplifiedSettings`](#getsimplifiedsettings) | Returns a subset of the full applied settings as a SimplifiedCaptureVisionSettings object. |
 | [`getTemplateNames`](#gettemplatenames) | Returns a list of all available Capture Vision template names. |
 | [`initSettings`](#initsettings) | Initializes the settings using a JSON template string. |
