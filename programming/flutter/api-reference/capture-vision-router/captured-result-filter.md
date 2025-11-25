@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultFilter
 
-Abstract class `CapturedResultFilter` is responsible for filtering captured results. It is officially implemented as [MultiFrameResultCrossFilter](multi-frame-result-cross-filter.md).
+Abstract class `CapturedResultFilter` is responsible for filtering captured results. It is officially implemented as [MultiFrameResultCrossFilter](multi-frame-cross-filter.md).
 
 ## Definition
 

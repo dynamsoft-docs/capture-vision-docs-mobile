@@ -12,11 +12,12 @@ noTitleIndex: true
 
 The `CapturedResult` class represents the result of a capture operation on an image. Internally, `CapturedResult` stores an array of [`CapturedResultItem`](captured-result-item.md), each of which may be a barcode, text line, detected quad, normalized image, original image, or parsed item depending on the functional product that is used.
 
-> [!TIP]
-> In the context of the Barcode Reader, you will most likely be using the [`DecodedBarcodesResult`]({{ site.dbr_flutter_api }}barcode-reader/decoded-barcodes-result.html) as the main result type. 
-
 > [!NOTE]
-> The type of `CapturedResult` is dependent on the functional product that is used by the Capture Vision Router instance. To learn about the different types of functional products that Capture Vision supports, please visit the [Capture Vision Introduction]({{ site.introduction }}index.html#functional-products).
+>
+> - Barcode decoding: [`DecodedBarcodesResult`]({{ site.dbr_flutter_api }}barcode-reader/decoded-barcodes-result.html)
+> - Text line: [`RecognizedTextLinesResult`]({{ site.dlr_flutter_api }}recognized-text-lines-result.html)
+> - Document page(s): [`ProcessedDocumentResult`]({{ site.ddn_flutter_api }}processed-document-result.html)
+> - Parsed content (DL, MRZ, VIN, GS1 AI, etc.): [`ParsedResult`]({{ site.dcp_flutter_api }}parsed-result.html)
 
 ## Definition
 

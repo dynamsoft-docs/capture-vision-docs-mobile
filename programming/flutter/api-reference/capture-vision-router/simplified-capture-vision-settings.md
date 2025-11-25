@@ -29,7 +29,9 @@ class SimplifiedCaptureVisionSettings
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Determines the maximum number of parallel tasks allowed for image capture and recognition. |
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *int* | Sets the minimum interval (in milliseconds) between image captures. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
-| [`barcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings](simplified-barcode-reader-settings.md)* | The settings for the `DynamsoftBarcodeReader` tasks. |
+| [`barcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings]({{ site.dbr_flutter_api }}barcode-reader/simplified-barcode-reader-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
+| [`labelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dbr_flutter_api }}simplified-label-recognizer-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
+| [`documentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.dbr_flutter_api }}simplified-document-normalizer-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
 
 ### roi
 
@@ -73,12 +75,24 @@ int Timeout { get; set; }
 
 ### barcodeSettings
 
-The settings for the `DynamsoftBarcodeReader` tasks as a [`SimplifiedBarcodeReaderSettings`](simplified-barcode-reader-settings.md) object.
+The settings for the `DynamsoftBarcodeReader` tasks as a [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_flutter_api }}barcode-reader/simplified-barcode-reader-settings.html) object.
 
 ```dart
-SimplifiedBarcodeReaderSettings barcodeSettings;
+SimplifiedBarcodeReaderSettings? barcodeSettings;
 ```
 
-**Remarks**
+### labelSettings
 
-If you would like to learn more on how to configure the Barcode Reader, please refer to the [User Guide (Foundational Edition)](../../foundational-user-guide.md#configuring-the-barcode-reader-optional).
+The settings for the `DynamsoftLabelRecognizer` tasks as a [`SimplifiedLabelRecognizerSettings`]({{ site.dbr_flutter_api }}simplified-label-recognizer-settings.html) object.
+
+```dart
+SimplifiedLabelRecognizerSettings? labelSettings;
+```
+
+### documentSettings
+
+The settings for the `DynamsoftDocumentNormalizer` tasks as a [`SimplifiedDocumentNormalizerSettings`]({{ site.dbr_flutter_api }}simplified-document-normalizer-settings.html) object.
+
+```dart
+SimplifiedDocumentNormalizerSettings? documentSettings;
+```

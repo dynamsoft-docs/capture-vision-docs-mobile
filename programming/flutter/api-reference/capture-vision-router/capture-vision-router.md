@@ -33,7 +33,7 @@ static CaptureVisionRouter get instance;
 
 ## Methods
 
-- Capture from an Image
+Capture from an Image
 
 | Method | Description |
 | ------ | ----------- |
@@ -41,195 +41,115 @@ static CaptureVisionRouter get instance;
 | [`captureFile`](#capturefile) | Processes an image from a file path using the specified template. |
 | [`captureFileBytes`](#capturefilebytes) | Processes an image from a byte array using the specified template. |
 
-- Capture from the Camera
+Process Multiple Images
 
 | Method | Description |
 | ------ | ----------- |
-| [`startCapturing`](#startcapturing) | Starts the capturing process using the specified template. |
-| [`stopCapturing`](#stopcapturing) | Stops the capturing process and closes the camera. |
-
-## Settings Management Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getSimplifiedSettings`](#getsimplifiedsettings) | Returns a subset of the full applied settings as a SimplifiedCaptureVisionSettings object. |
-| [`getTemplateNames`](#gettemplatenames) | Returns a list of all available Capture Vision template names. |
-| [`initSettings`](#initsettings) | Initializes the settings using a JSON template string. |
-| [`initSettingsFromFile`](#initsettingsfromfile) | Initializes the settings using a JSON template file. |
-| [`outputSettings`](#outputsettings) | Outputs the specified template's settings as a JSON string. |
-| [`outputSettingsToFile`](#outputsettingstofile) | Outputs the specified template's settings to a JSON file. |
-| [`resetSettings`](#resetsettings) | Resets all settings to their default values. |
-| [`switchCapturingTemplate`](#switchcapturingtemplate) | Switches the template used by the Capture Vision Router instance to the specified template name. |
-| [`updateSettings`](#updatesettings) | Updates the specified template settings using a SimplifiedCaptureVisionSettings object. |
-
-## Resource Management Methods
-
-| Method | Description |
-| --- | --- |
-| [`clearDLModelBuffers`](#cleardlmodelbuffers) | Clears the buffer used by deep learning models to free up memory and resources. |
-| [`getIntermediateResultManager`](#getintermediateresultmanager) | Retrieves the IntermediateResultManager instance which allows the user to snap the original image. |
-| [`setGlobalIntraOpNumThreads`](#setglobalintraopnumthreads) | Sets the global number of threads used internally by the library for model execution. |
-
-## Result Management Methods
-
-| Method | Description |
-| --- | --- |
 | [`addResultFilter`](#addresultfilter) | Adds a result filter to process the captured results. |
 | [`addResultReceiver`](#addresultreceiver) | Adds a result receiver that listens for any captured results. |
 | [`removeAllResultFilters`](#removeallresultfilters) | Removes all the result filters from the Capture Vision Router instance. |
 | [`removeAllResultReceivers`](#removeallresultreceivers) | Removes all result receivers from the Capture Vision Router instance. |
 | [`removeResultFilter`](#removeresultfilter) | Removes a previously added result filter. |
 | [`removeResultReceiver`](#removeresultreceiver) | Removes a previously added result receiver. |
+| [`setInput`](#setinput) | Sets up an image source to provide images for continuous processing. |
+| [`startCapturing`](#startcapturing) | Starts the capturing process using the specified template. |
+| [`stopCapturing`](#stopcapturing) | Stops the capturing process and closes the camera. |
+| [`switchCapturingTemplate`](#switchcapturingtemplate) | Switches the template used by the Capture Vision Router instance to the specified template name. |
 
-## Input Source Methods
+Settings
 
 | Method | Description |
-| --- | --- |
-| [`setInput`](#setinput) | Sets up an image source to provide images for continuous processing. |
+| ------ | ----------- |
+| [`clearDLModelBuffers`](#cleardlmodelbuffers) | Clears the buffer used by deep learning models to free up memory. |
+| [`getSimplifiedSettings`](#getsimplifiedsettings) | Returns a simplified version of the Capture Vision settings for a specific template. |
+| [`getTemplateNames`](#gettemplatenames) | Returns a list of all currently available Capture Vision template names. |
+| [`initSettings`](#initsettings) | Initializes the settings using a JSON template string. |
+| [`initSettingsFromFile`](#initsettingsfromfile) | Initializes the settings using a JSON template file. |
+| [`outputSettings`](#outputsettings) | Outputs the specified template's settings as a JSON string. |
+| [`outputSettingsToFile`](#outputsettingstofile) | Outputs the specified template's settings to a JSON file. |
+| [`resetSettings`](#resetsettings) | Resets all settings to their default values. |
+| [`updateSettings`](#updatesettings) | Updates the specified template settings using a `SimplifiedCaptureVisionSettings` object. |
+| [`setGlobalIntraOpNumThreads`](#setglobalintraopnumthreads) | Sets the global number of threads used internally by the library for model execution. |
 
-### addResultFilter
+Intermediate Results
 
-Adds a result filter to process the captured results. This filter is of type [`MultiFrameResultCrossFilter`](../utility/multi-frame-cross-filter.md).
-
-```dart
-Future<void> addResultFilter(MultiFrameResultCrossFilter filter)
-```
-
-**Remarks**
-
-Adding a result filter is not needed for the operation of the Capture Vision Router, but it can help improve the accuracy of the results by verifying them across multiple image frames.
-
-### addResultReceiver
-
-Adds a result receiver that listens for any captured results. This receiver is a callback function that is triggered once a captured result is produced - whether it is successful, cancelled, or failed.
-
-```dart
-Future<void> addResultReceiver(CapturedResultReceiver receiver)
-```
-
-**Remarks**
-
-To learn about the different result receivers that you can add, please refer to [`CapturedResultReceiver`](captured-result-receiver.md). Please note that adding a result receiver is necessary to getting the results that are produced by the Capture Vision Router instance.
+| Method | Description |
+| ------ | ----------- |
+| [`getIntermediateResultManager`](#getintermediateresultmanager) | Retrieves the IntermediateResultManager instance. |
 
 ### capture
 
-Processes an image using the specified template and processes it - outputting a [`CapturedResult`](captured-result.md) containing the result(s) if there was no exception or error thrown.
+Processes an image using the specified template.
 
 ```dart
 Future<CapturedResult> capture(ImageData imageData, String templateName) async
 ```
 
-**Remarks**
+**Parameters**
 
-The template that is used during processing can be a preset template (one of [`EnumPresetTemplate`](../enum/preset-template.md)) or a customized JSON template that you create or that is provided to you by the Dynamsoft team. This method is to be used specifically when working with *static images*.
+`[in] imageData`: A [`ImageData`]({{ site.dcv_flutter_api }}core/image-data.html) object that contains image info.
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 ### captureFile
 
-Processes an image from a file (specified by a file path) using the specified template, returning the [`CapturedResult`](captured-result.md) once the process is done.
+Processes an image from a file (specified by a file path) using the specified template.
 
 ```dart
 Future<CapturedResult> captureFile(String filePath, String templateName) async
 ```
 
-**Remarks**
+**Parameters**
 
-The template that is used during processing can be a preset template (one of [`EnumPresetTemplate`](../enum/preset-template.md)) or a customized JSON template that you create or that is provided to you by the Dynamsoft team. This method is to be used specifically when working with *static images*.
+`[in] filePath`: The file path and name that you want to capture data from. You have to specify the file name with extension name in the `filePath`. Supported file type includes ".bmp", ".jpg", ".png", ".gif" or one-page ".tiff".
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 ### captureFileBytes
 
-Processes an image from a byte array using the specified template, returning the [`CapturedResult`](captured-result.md) once the process is done.
+Processes an image from a byte array using the specified template.
 
 ```dart
 Future<CapturedResult> captureFileBytes(Uint8List bytes, String templateName) async
 ```
 
-**Remarks**
+**Parameters**
 
-The template that is used during processing can be a preset template (one of [`EnumPresetTemplate`](../enum/preset-template.md)) or a customized JSON template that you create or that is provided to you by the Dynamsoft team. This method is to be used specifically when working with *static images*.
+`[in] bytes`: A byte array that points to a file in memory.
 
-### clearDLModelBuffers
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-Clears the buffer used by deep learning models to free up memory and resources used by the Capture Vision Router instance for its operation.
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
-```dart
-static Future<void> clearDLModelBuffers()
-```
+### addResultFilter
 
-### getIntermediateResultManager
+Adds a result filter to process the captured results. This filter is of type [`MultiFrameResultCrossFilter`](multi-frame-cross-filter.md). Supported filters:
 
-Retrieves the [`IntermediateResultManager`](../utility/intermediate-result-manager.md) instance which allows the user to snap the original image that contains the captured result.
-
-```dart
-IntermediateResultManager getIntermediateResultManager()
-```
-
-**Remarks**
-
-In order to get the original image that the captured result was taken from (especially in an interactive video scenario where the input is a camera feed), you will need to use the [`getOriginalImage`](../utility/intermediate-result-manager.md#getoriginalimage) method of the `IntermediateResultManager` instance.
-
-### getSimplifiedSettings
-
-Returns a subset of the full applied settings as a [`SimplifiedCaptureVisionSettings`](simplified-capture-vision-settings.md) object. This object contains the simplified settings of the Capture Vision Router instance, which in turn contains the simplified settings of the functional product used.
+- Cross-Verification: Improve the accuracy by cross-verifying the results.
+- De-duplication: Removes the duplicated results.
+- Overlapping: Improve the read-rate of multiple barcode scanning by overlaping the results.
 
 ```dart
-Future<SimplifiedCaptureVisionSettings?> getSimplifiedSettings(String templateName) async
+Future<void> addResultFilter(MultiFrameResultCrossFilter filter)
 ```
 
-**Remarks**
+### addResultReceiver
 
-The templateName parameter represents the Capture Vision template that has been applied, whether it is a [preset template](../enum/preset-template.md) or a custom template defined in a JSON template file or string. To learn how to use the `getSimplifiedSettings`, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-simplifiedcapturevisionsettings).
-
-### getTemplateNames
-
-Returns a list of all available Capture Vision template names when a custom template is used via [`initSettings`](#initsettings).
+Adds a [`CapturedResultReceiver`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result-receiver.html) object as the receiver of captured results.
 
 ```dart
-Future<List<String>> getTemplateNames() async
+Future<void> addResultReceiver(CapturedResultReceiver receiver)
 ```
-
-**Remarks**
-
-A single template file/string can contain multiple Capture Vision templates, so this method will list each of the template(s) contained within the single template file/string. Each template can then be used with any of the capture methods, but only one at a time.
-
-### initSettings
-
-Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON string). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-a-json-template).
-
-```dart
-Future<void> initSettings(String content)
-```
-
-> *Exception* - "Failed to initialize settings"
-
-### initSettingsFromFile
-
-Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON file). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-a-json-template).
-
-```dart
-Future<void> initSettingsFromFile(String filePath) async
-```
-
-> *Exception* - "Failed to initialize settings from file"
-
-### outputSettings
-
-Outputs the specified Capture Vision template's settings as a JSON string. If `includeDefaultValues` is set to true, the output will include the default settings values.
-
-```dart
-Future<String?> outputSettings(String templateName, bool includeDefaultValues) async
-```
-
-> *Exception* - "Failed to output settings"
-
-### outputSettingsToFile
-
-Outputs the specified Capture Vision template's settings to a JSON file. If `includeDefaultValues` is set to true, the output will include the default settings values.
-
-```dart
-Future<void> outputSettingsToFile(String templateName, String filePath, bool includeDefaultValues) async
-```
-
-> *Exception* - "Failed to output settings to file"
 
 ### removeAllResultFilters
 
@@ -263,28 +183,6 @@ Removes a previously added result receiver.
 Future<void> removeResultReceiver(CapturedResultReceiver receiver)
 ```
 
-### resetSettings
-
-Resets all of the settings to their default values.
-
-```dart
-Future<void> resetSettings() async
-```
-
-> *Exception* - "Failed to reset settings"
-
-### setGlobalIntraOpNumThreads
-
-Sets the global number of threads used internally by the library for model execution. This parameter could help regulate the resources needed to operate the Capture Vision Router instance.
-
-```dart
-static Future<void> setGlobalIntraOpNumThreads(int intraOpNumThreads)
-```
-
-**Remarks**
-
-Setting the `intraOpNumThreads` input parameter to 0 lets the system decide the optimal number of threads. The default value is 0.
-
 ### setInput
 
 Sets up an image source to provide images for continuous processing. This method is mainly used when configuring a camera (via the [`CameraEnhancer`](../camera-enhancer/camera-enhancer.md)) as an input source.
@@ -293,29 +191,39 @@ Sets up an image source to provide images for continuous processing. This method
 Future<void> setInput(ImageSourceAdapter input) async
 ```
 
-**Remarks**
+**Parameters**
 
-In most cases, the `ImageSourceAdapter` that will be used is a Camera Enhancer ([`CameraEnhancer`](../camera-enhancer/camera-enhancer.md)) instance to allow the user to use their phone's built-in camera.
+`[in] imageSourceAdapter`: An object of [`ImageSourceAdapter`]({{ site.dcv_flutter_api }}core/image-source-adapter.html).
 
-> *Exception* - "Failed to set input"
+You can use the following officially implemented `ImageSourceAdapter` classes:
+
+- [`CameraEnhancer`]({{ site.dce_flutter_api }}camera-enhancer.html): A camera class that can capture video frames continuously.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 ### startCapturing
 
-Starts the capturing process using the specified template. Any result(s) (of type [`CapturedResult`](captured-result.md)) that are received while the capture process is underway will be relayed by a result receiver, which is a callback function that is triggered once a captured result is found.
+Starts the capturing process using the specified template. Any result(s) that are received while the capture process is underway will be relayed by a result receiver, which is a callback function that is triggered once a captured result is found.
 
 ```dart
 Future<void> startCapturing(String templateName)
 ```
 
-**Remarks**
+**Parameters**
 
-The template that is used during processing can be a preset template (one of [`EnumPresetTemplate`](../enum/preset-template.md)) or a customized JSON template that you create or that is provided to you by the Dynamsoft team.
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-> *Exception* - "Failed to start capturing"
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
 ### stopCapturing
 
-Stops the capturing process and closes the camera.
+Stops the capturing process.
 
 ```dart
 Future<void> stopCapturing()
@@ -323,17 +231,176 @@ Future<void> stopCapturing()
 
 ### switchCapturingTemplate
 
-Switched the template used by the Capture Vision Router instance to the specified template name.
+Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow.
 
 ```dart
 Future<void> switchCapturingTemplate(String templateName) async
 ```
 
-**Remarks**
+**Parameters**
 
-For the `templateName` input parameter, this can be either the name of the `CaptureVisionTemplate` in a custom JSON template file/string or the name of one of the preset templates available via [`EnumPresetTemplate`](../enum/preset-template.md).
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 
-> *Exception* - "Failed to switch template"
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+
+### getSimplifiedSettings
+
+Returns a subset of the full applied settings as a [`SimplifiedCaptureVisionSettings`](simplified-capture-vision-settings.md) object. This object contains the simplified settings of the Capture Vision Router instance, which in turn contains the simplified settings of the functional product used.
+
+```dart
+Future<SimplifiedCaptureVisionSettings?> getSimplifiedSettings(String templateName) async
+```
+
+**Parameters**
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CONVERT_COMPLEX_TEMPLATE_ERROR | -10061 | The template you specified is a complex template which can not be output as a `SimplifiedCaptureVisionSettings` object. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+### getTemplateNames
+
+Returns all the currently available Capture Vision template names.
+
+```dart
+Future<List<String>> getTemplateNames() async
+```
+
+### initSettings
+
+Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON string). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-a-json-template).
+
+```dart
+Future<void> initSettings(String content)
+```
+
+**Parameters**
+
+`[in] content`: A JSON string that contains Capture Vision settings.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_JSON_PARSE_FAILED | -10030 | Failed to parse the JSON data. |
+| EC_JSON_TYPE_INVALID | -10031 | One or more parameters are allocated with wrong data type. |
+| EC_JSON_KEY_INVALID | -10032 | There exists invalid key in your JSON data. |
+| EC_JSON_VALUE_INVALID | -10033 | There exists invalid parameter value in your JSON data. |
+| EC_JSON_NAME_KEY_MISSING | -10034 | One or more `name` parameters are missing in your JSON data. Each section of the JSON data requires a unique `name` parameter. |
+| EC_JSON_NAME_VALUE_DUPLICATED | -10035 | There exists duplicated `name` parameters in your JSON data. The `name` parameter should be unique. |
+| EC_JSON_NAME_REFERENCE_INVALID | -10037 | You have referenced an invalid `name` value in your JSON data. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+### initSettingsFromFile
+
+Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON file). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-a-json-template).
+
+```dart
+Future<void> initSettingsFromFile(String filePath) async
+```
+
+**Parameters**
+
+`[in] filePath`: A JSON file that contains Capture Vision settings.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_NOT_FOUND | -10005 | The file is not found. |
+| EC_JSON_PARSE_FAILED | -10030 | Failed to parse the JSON data. |
+| EC_JSON_TYPE_INVALID | -10031 | One or more parameters are allocated with wrong data type. |
+| EC_JSON_KEY_INVALID | -10032 | There exists invalid key in your JSON data. |
+| EC_JSON_VALUE_INVALID | -10033 | There exists invalid parameter value in your JSON data. |
+| EC_JSON_NAME_KEY_MISSING | -10034 | One or more `name` parameters are missing in your JSON data. Each section of the JSON data requires a unique `name` parameter. |
+| EC_JSON_NAME_VALUE_DUPLICATED | -10035 | There exists duplicated `name` parameters in your JSON data. The `name` parameter should be unique. |
+| EC_JSON_NAME_REFERENCE_INVALID | -10037 | You have referenced an invalid `name` value in your JSON data. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your JSON data. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+### outputSettings
+
+Outputs the specified Capture Vision template's settings as a JSON string. If `includeDefaultValues` is set to true, the output will include the default settings values.
+
+```dart
+Future<String?> outputSettings(String templateName, bool includeDefaultValues) async
+```
+
+**Parameters**
+
+`[in] templateName`: The name of the template that you want to output.
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+`[in] includeDefaultValues`: A boolean value that indicates whether to include default values in the output.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+### outputSettingsToFile
+
+Outputs the specified Capture Vision template's settings to a JSON file. If `includeDefaultValues` is set to true, the output will include the default settings values.
+
+```dart
+Future<void> outputSettingsToFile(String templateName, String filePath, bool includeDefaultValues) async
+```
+
+**Parameters**
+
+`[in] templateName`: The name of the template that you want to output.
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+`[in] file`: The file path and name that you want to save the template.
+
+`[in] includeDefaultValues`: A boolean value that indicates whether to include default values in the output.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_FILE_SAVE_FAILED | -10058 | The file path is unavailable or the file can't be created for any other reasons. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+### resetSettings
+
+Resets all of the settings to their default values.
+
+```dart
+Future<void> resetSettings() async
+```
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 
 ### updateSettings
 
@@ -343,9 +410,49 @@ Updates the specified template settings of the `CaptureVisionRouter` instance us
 Future<void> updateSettings(String templateName, SimplifiedCaptureVisionSettings settings)
 ```
 
-**Remarks**
+**Parameters**
 
-For the `templateName` input parameter, this can be either the name of the `CaptureVisionTemplate` in a custom JSON template file/string or the name of one of the preset templates available via [`EnumPresetTemplate`](../enum/preset-template.md).
+`[in] templateName`: Specify the name of the template that you want to update.
 
-> *Exception* - "Failed to update settings"
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
 
+`[in] settings`: An object of `SimplifiedCaptureVisionSettings`.
+
+**Exception**
+
+| Error Code | Value | Description |
+| :--------- | :---- | :---------- |
+| EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
+| EC_PARAMETER_VALUE_INVALID | -10038 | There exists invalid parameter value in your `SimplifiedCaptureVisionSettings`. |
+| EC_CONVERT_COMPLEX_TEMPLATE_ERROR | -10061 | The template you specified is a complex template which can not be updated via a `SimplifiedCaptureVisionSettings` object. |
+| EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
+
+### setGlobalIntraOpNumThreads
+
+Sets the global number of threads used internally by the library for model execution. This parameter could help regulate the resources needed to operate the Capture Vision Router instance.
+
+```dart
+static Future<void> setGlobalIntraOpNumThreads(int intraOpNumThreads)
+```
+
+**Parameters**
+
+`intraOpNumThreads`: Number of threads used internally for model execution. Valid range: [0, 256]. Default: 2.
+
+### clearDLModelBuffers
+
+Clears the buffer used by deep learning models to free up memory and resources used by the Capture Vision Router instance for its operation.
+
+```dart
+static Future<void> clearDLModelBuffers()
+```
+
+### getIntermediateResultManager
+
+Retrieves the [`IntermediateResultManager`](intermediate-result-manager.md) instance.
+
+```dart
+IntermediateResultManager getIntermediateResultManager();
+```
