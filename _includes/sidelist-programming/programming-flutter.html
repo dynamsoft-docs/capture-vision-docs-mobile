@@ -338,6 +338,179 @@
                 </li>
             </ul>
         </li>
+        <li><a href="{{ site.parameter }}file/task-settings/label-recognizer-task-settings.html" class="otherLinkColour">LabelRecognizerTaskSetting Object</a>
+            <ul>
+                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/name.html" class="otherLinkColour">Name</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/base-label-recognizer-task-setting-name.html" class="otherLinkColour">BaseLabelRecognizerTaskSettingName</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/max-threads-in-one-task.html" class="otherLinkColour">MaxThreadsInOneTask</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/text-line-specification-name-array.html" class="otherLinkColour">TextLineSpecificationNameArray</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-array.html" class="otherLinkColour">SectionArray</a>
+                    <ul>
+                        <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-regions-predetection.html" class="otherLinkColour">RegionsPredetectionSection Object</a>
+                            <ul>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-regions-predetection.html#section" class="otherLinkColour">Section</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-regions-predetection.html#imageparametername" class="otherLinkColour">ImageParameterName</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-regions-predetection.html#stagearray" class="otherLinkColour">StageArray</a>
+                                    <ul>
+                                        <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-predetect-regions.html" class="otherLinkColour">PredetectRegionsStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-predetect-regions.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}image-parameter/region-predetection-modes.html" class="otherLinkColour">RegionPredetectionModes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-localization.html" class="otherLinkColour">TextLinesLocalizationSection Object</a>
+                            <ul>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-localization.html#section" class="otherLinkColour">Section</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-localization.html#imageparametername" class="otherLinkColour">ImageParameterName</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-localization.html#stagearray" class="otherLinkColour">StageArray</a>
+                                    <ul>
+                                        <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-localize-text-lines.html" class="otherLinkColour">LocalizeTextLinesStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-localize-text-lines.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcvb_parameters_reference }}label-recognizer-task-settings/localization-modes.html" class="otherLinkColour">LocalizationModes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>   
+                            </ul>                      
+                        </li>
+                        <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html" class="otherLinkColour">TextLinesRecognitionSection Object</a>
+                            <ul>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html#section" class="otherLinkColour">Section</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html#imageparametername" class="otherLinkColour">ImageParameterName</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/section-text-lines-recognition.html#stagearray" class="otherLinkColour">StageArray</a>
+                                    <ul>
+                                        <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-recognize-raw-text-lines.html" class="otherLinkColour">RecognizeRawTextLinesStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-recognize-raw-text-lines.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/dictionary-path.html" class="otherLinkColour">DictionaryPath</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/dictionary-correction-thresholds.html" class="otherLinkColour">DictionaryCorrectionThresholds</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/confusable-characters-path.html" class="otherLinkColour">ConfusableCharactersPath</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/cluster-samples-count-threshold.html" class="otherLinkColour">ClusterSamplesCountThreshold</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/overlapping-characters-path.html" class="otherLinkColour">OverlappingCharactersPath</a></li>                                
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/enable-regex-force-correction.html" class="otherLinkColour">EnableRegexForceCorrection</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-assemble-text-lines.html" class="otherLinkColour">AssembleTextLinesStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-assemble-text-lines.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/string-regex-pattern.html" class="otherLinkColour">StringRegExPattern</a></li>                                
+                                                <li><a href="{{ site.dcv_parameters_reference }}label-recognizer-task-settings/string-length-range.html" class="otherLinkColour">StringLengthRange</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+        <li><a href="{{ site.parameter }}file/task-settings/document-normalizer-task-settings.html" class="otherLinkColour">DocumentNormalizerTaskSetting Object</a>
+            <ul>
+                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/base-document-normalizer-task-setting-name.html" class="otherLinkColour">BaseDocumentNormalizerTaskSettingName</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/expected-documents-count.html" class="otherLinkColour">ExpectedDocumentsCount</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/max-threads-in-one-task.html" class="otherLinkColour">MaxThreadsInOneTask</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/name.html" class="otherLinkColour">Name</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-array.html" class="otherLinkColour">SectionArray</a>
+                    <ul>
+                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-regions-predetection.html" class="otherLinkColour">RegionsPredetectionSection Object</a>
+                            <ul>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-regions-predetection.html#section" class="otherLinkColour">Section</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-regions-predetection.html#imageparametername" class="otherLinkColour">ImageParameterName</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-regions-predetection.html#stagearray" class="otherLinkColour">StageArray</a>
+                                    <ul>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-predetect-regions.html" class="otherLinkColour">PredetectRegionsStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-predetect-regions.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}image-parameter/region-predetection-modes.html" class="otherLinkColour">RegionPredetectionModes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-detection.html" class="otherLinkColour">DocumentDetectionSection Object</a>
+                            <ul>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-detection.html#section" class="otherLinkColour">Section</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-detection.html#imageparametername" class="otherLinkColour">ImageParameterName</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-detection.html#stagearray" class="otherLinkColour">StageArray</a>
+                                    <ul>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-assemble-long-lines.html" class="otherLinkColour">AssembleLongLinesStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-assemble-long-lines.html#stage" class="otherLinkColour">Stage</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-assemble-logical-lines.html.html" class="otherLinkColour">AssembleLogicalLinesStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-assemble-logical-lines.html#stage" class="otherLinkColour">Stage</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/detect-corners.html" class="otherLinkColour">DetectCornersStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/detect-corners.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/corner-angle-range.html" class="otherLinkColour">CornerAngleRange</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/detect-edges.html" class="otherLinkColour">DetectEdgesStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/detect-edges.html#stage" class="otherLinkColour">Stage</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/detect-quads.html" class="otherLinkColour">DetectQuadsStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/detect-quads.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/quadrilateral-detection-modes.html" class="otherLinkColour">QuadrilateralDetectionModes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html" class="otherLinkColour">DocumentDeskewingSection Object</a>
+                            <ul>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html#section" class="otherLinkColour">Section</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html#imageparametername" class="otherLinkColour">ImageParameterName</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-document-deskewing.html#stagearray" class="otherLinkColour">StageArray</a>
+                                    <ul>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-deskew-image.html" class="otherLinkColour">DeskewImageStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-deskew-image.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/deskew-mode.html" class="otherLinkColour">DeskewMode</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/page-size.html" class="otherLinkColour">PageSize</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-image-enhancement.html" class="otherLinkColour">ImageEnhancementSection Object</a>
+                            <ul>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-image-enhancement.html#section" class="otherLinkColour">Section</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-image-enhancement.html#imageparametername" class="otherLinkColour">ImageParameterName</a></li>
+                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/section-image-enhancement.html#stagearray" class="otherLinkColour">StageArray</a>
+                                    <ul>
+                                        <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-enhance-image.html" class="otherLinkColour">EnhanceImageStage Object</a>
+                                            <ul>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/stage-enhance-image.html#stage" class="otherLinkColour">Stage</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/colour-mode.html" class="otherLinkColour">ColourMode</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/brightness.html" class="otherLinkColour">Brightness</a></li>
+                                                <li><a href="{{ site.dcv_parameters_reference }}document-normalizer-task-settings/contrast.html" class="otherLinkColour">Contrast</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
         <li><a href="{{ site.parameters }}file/task-settings/code-parser-task-settings.html" class="otherLinkColour">CodeParserTaskSetting Object</a>
             <ul>
                 <li><a href="{{ site.dcv_parameters_reference }}code-parser-task-settings/code-specifications.html" class="otherLinkColour">CodeSpecifications</a></li>
@@ -472,6 +645,32 @@
                 <li><a href="{{ site.dcv_parameters_reference }}barcode-format-specification/standard-format.html" class="otherLinkColour">StandardFormat</a></li>
                 <li><a href="{{ site.dcv_parameters_reference }}barcode-format-specification/tail-module-ratio.html" class="otherLinkColour">TailModuleRatio</a></li>
                 <li><a href="{{ site.dcv_parameters_reference }}barcode-format-specification/verify-check-digit.html" class="otherLinkColour">VerifyCheckDigit</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ site.parameter }}file/auxiliary/textline-specification.html" class="otherLinkColour">TextLineSpecification Object</a>
+            <ul>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/applicable-text-line-numbers.html" class="otherLinkColour">ApplicableTextLineNumbers</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/base-text-line-specification-name.html" class="otherLinkColour">BaseTextLineSpecificationName</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/binarization-modes.html" class="otherLinkColour">BinarizationModes</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/char-height-range.html" class="otherLinkColour">CharHeightRange</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/character-model-name.html" class="otherLinkColour">CharacterModelName</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/text-line-rec-model-name.html" class="otherLinkColour">TextLineRecModelName</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/character-normalization-modes.html" class="otherLinkColour">CharacterNormalizationModes</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/grayscale-enhancement-modes.html" class="otherLinkColour">GrayscaleEnhancementModes</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/name.html" class="otherLinkColour">Name</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/string-length-range.html" class="otherLinkColour">StringLengthRange</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/string-regex-pattern.html" class="otherLinkColour">StringRegExPattern</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/position.html" class="otherLinkColour">Text line position parameters</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/concat-string-length-range.html" class="otherLinkColour">ConcatStringLengthRange</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/concat-string-regex-pattern.html" class="otherLinkColour">ConcatStringRegExPattern</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/concat-separator.html" class="otherLinkColour">ConcatSeparator</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/concat-results.html" class="otherLinkColour">ConcatResults</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/output-results.html" class="otherLinkColour">OutputResults</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/sub-groups.html" class="otherLinkColour">SubGroups</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/reference-group-name.html" class="otherLinkColour">ReferenceGroupName</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/text-lines-count.html" class="otherLinkColour">TextLinesCount</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/confusable-characters-correction.html" class="otherLinkColour">ConfusableCharactersCorrection</a></li>
+                <li><a href="{{ site.dcv_parameters_reference }}text-line-specification/expected-groups-count.html" class="otherLinkColour">ExpectedGroupsCount</a></li>
             </ul>
         </li>
         <li><a href="{{ site.parameters }}file/auxiliary/capture-vision-model.html" class="otherLinkColour">CaptureVisionModel Object</a>
