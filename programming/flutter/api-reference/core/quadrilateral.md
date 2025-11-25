@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Quadrilateral
 
-The `Quadrilateral` class is used to define a quadrilateral shape. This class is mainly used by the `roi` parameter of [`SimplifiedCaptureVisionSettings`](simplified-capture-vision-settings.md).
+The `Quadrilateral` class is used to define a quadrilateral shape. This class is mainly used by the `roi` parameter of [`SimplifiedCaptureVisionSettings`](../capture-vision-router/simplified-capture-vision-settings.md).
 
 ## Definition
 

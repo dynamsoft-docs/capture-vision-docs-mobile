@@ -54,4 +54,4 @@ enum EnumLocalizationMode {
 | `end` | Placeholder value with no functional meaning. |
 
 > [!NOTE]
-> To learn about the localization modes in depth, please visit the full [LocalizationModes Parameter]({{ site.dcvb_parameters }}reference/barcode-reader-task-settings/localization-modes.html?q=localizationmodes#candidate-modes-descriptions) page.
+> View more about [LocalizationModes Parameters]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html) page.

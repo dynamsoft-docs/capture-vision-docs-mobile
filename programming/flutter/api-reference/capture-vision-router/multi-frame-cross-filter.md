@@ -57,11 +57,11 @@ Future<void> enableLatestOverlapping(int resultItemTypes, bool enable)
 
 **Remarks**
 
-`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
+`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
 
 ### enableResultCrossVerification
 
-Enables or disables result cross verification for the specified result item types (represented as a combination of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md)). Cross verification helps in validating results across multiple frames, improving accuracy as a result.
+Enables or disables result cross verification for the specified result item types (represented as a combination of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md)). Cross verification helps in validating results across multiple frames, improving accuracy as a result.
 
 ```dart
 Future<void> enableResultCrossVerification(int resultItemTypes, bool enable)
@@ -69,11 +69,11 @@ Future<void> enableResultCrossVerification(int resultItemTypes, bool enable)
 
 **Remarks**
 
-`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
+`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
 
 ### enableResultDeduplication
 
-Enables or disables result deduplication for the specified result item types (represented as a combination of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md)). If this filter is activated, the library will not scan a barcode for an amount of time again after it is scanned successfully for the first time. In order to set the amount of time that the barcode is remembered, please refer to `setDuplicateForgetTime`.
+Enables or disables result deduplication for the specified result item types (represented as a combination of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md)). If this filter is activated, the library will not scan a barcode for an amount of time again after it is scanned successfully for the first time. In order to set the amount of time that the barcode is remembered, please refer to `setDuplicateForgetTime`.
 
 ```dart
 Future<void> enableResultDeduplication(int resultItemTypes, bool enable)
@@ -81,7 +81,7 @@ Future<void> enableResultDeduplication(int resultItemTypes, bool enable)
 
 **Remarks**
 
-`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
+`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
 
 ### getDuplicateForgetTime
 
@@ -93,7 +93,7 @@ Future<int> getDuplicateForgetTime(int type)
 
 **Remarks**
 
-`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md).
+`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md).
 
 ### getMaxOverlappingFrames
 
@@ -105,7 +105,7 @@ Future<int> getMaxOverlappingFrames(int type)
 
 **Remarks**
 
-`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md).
+`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md).
 
 ### isLatestOverlappingEnabled
 
@@ -117,7 +117,7 @@ Future<bool> isLatestOverlappingEnabled(int type)
 
 **Remarks**
 
-`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md).
+`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md).
 
 ### isResultCrossVerificationEnabled
 
@@ -129,7 +129,7 @@ Future<bool> isResultCrossVerificationEnabled(int type)
 
 **Remarks**
 
-`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md).
+`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md).
 
 ### isResultDeduplicationEnabled
 
@@ -141,7 +141,7 @@ Future<bool> isResultDeduplicationEnabled(int type)
 
 **Remarks**
 
-`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md).
+`type` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md).
 
 ### setDuplicateForgetTime
 
@@ -153,7 +153,7 @@ Future<void> setDuplicateForgetTime(int resultItemTypes, int time)
 
 **Remarks**
 
-`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md). `time` specifies the target time in *milliseconds*.
+`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `time` specifies the target time in *milliseconds*.
 
 
 Sets the maximum number of overlapping frames to check when the latest overlap filter is on for the specified result item type(s).
@@ -164,7 +164,7 @@ Future<void> setMaxOverlappingFrames(int resultItemTypes, int maxFramesToCheck)
 
 **Remarks**
 
-`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md). `maxFramesToCheck` specifies the target number of frames that the filter should not exceed.
+`resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `maxFramesToCheck` specifies the target number of frames that the filter should not exceed.
 
 ## Code Snippet
 

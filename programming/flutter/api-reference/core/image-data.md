@@ -78,15 +78,11 @@ int orientation;
 
 ### format
 
-Represents the pixel format of the image as a [`EnumImagePixelFormat`](../enum/image-pixel-format.md).
+Represents the pixel format of the image as a [`EnumImagePixelFormat`](enum/image-pixel-format.md).
 
 ```dart
 EnumImagePixelFormat format;
 ```
-
-**Remarks**
-
-If you would like to change the pixel format of the image, please refer to the method [`setColourChannelUsageType`](camera-enhancer.md#setcolourchannelusagetype) of the `CameraEnhancer` class.
 
 ### stride
 

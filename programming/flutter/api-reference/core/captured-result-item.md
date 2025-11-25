@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultItem
 
-The `CapturedResultItem` class represents the most basic item in the captured result. Depending on the type of the [`CapturedResult`](captured-result.md), the captured result item can be a barcode, a text line, a normalized image, a detected quad, a parsed item, or an original image.
+The `CapturedResultItem` class represents the most basic item in the captured result. Depending on the type of the [`CapturedResult`](../capture-vision-router/captured-result.md), the captured result item can be a barcode, a text line, a normalized image, a detected quad, a parsed item, or an original image.
 
 > [!NOTE]
 > Sub classes:

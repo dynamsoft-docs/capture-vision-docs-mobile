@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResult
 
-The `CapturedResult` class represents the result of a capture operation on an image. Internally, `CapturedResult` stores an array of [`CapturedResultItem`](captured-result-item.md), each of which may be a barcode, text line, detected quad, normalized image, original image, or parsed item depending on the functional product that is used.
+The `CapturedResult` class represents the result of a capture operation on an image. Internally, `CapturedResult` stores an array of [`CapturedResultItem`](../core/captured-result-item.md), each of which may be a barcode, text line, detected quad, normalized image, original image, or parsed item depending on the functional product that is used.
 
 ## Definition
 
@@ -33,7 +33,7 @@ class CapturedResult extends CapturedResultBase
 
 ### items
 
-A list of [`CapturedResultItem`]({{ site.crr_flutter_api }}captured-result-item.html) objects.
+A list of [`CapturedResultItem`]({{ site.dcv_flutter_api }}captured-result-item.html) objects.
 
 ```dart
 List<CapturedResultItem>? items;

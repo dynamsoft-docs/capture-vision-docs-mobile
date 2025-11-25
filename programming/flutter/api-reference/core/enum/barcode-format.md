@@ -80,7 +80,7 @@ class EnumBarcodeFormat {
 | `none` | No barcode format specified. |
 | `all` | Represents all supported barcode formats. Useful for scanning operations where any type of barcode is acceptable. |
 | `defaultFormat` | Default barcode formats that are commonly used. This is a subset of `all` tailored for general use. |
-| `oned` | One-dimensional barcode formats, including BF_CODE_39, BF_CODE_128, BF_CODE_93, BF_CODABAR, BF_ITF, BF_EAN_13, BF_EAN_8, BF_UPC_A, BF_UPC_E, INDUSTRIAL_25, BF_CODE_39_Extended and BF_MSI_CODE. |
+| `oned` | One-dimensional barcode formats, including code39, code128, code93, codabar, itf, ean13, ean8, upcA, upcE, industrial25, code39Extended and msiCode. |
 | `code39` | Code 39 format, widely used in various industries for inventory and manufacturing. |
 | `code128` | Code 128 format, a high-density barcode for alphanumeric or numeric-only data. |
 | `code93` | Code 93 format, similar to Code 39 but more compact and secure with support for the full ASCII character set. |
@@ -92,7 +92,7 @@ class EnumBarcodeFormat {
 | `upcE` | UPC-E format, a smaller version of the UPC-A barcode used for smaller packages. |
 | `industrial25` | Industrial 2 of 5 format, an older, numeric-only barcode used in the industrial sector. |
 | `code39Extended` | Extended Code 39 format, capable of encoding the full ASCII character set by combining standard Code 39 characters. |
-| `gs1Databar` | GS1 DataBar barcode formats, including BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED. These barcodes are designed for use in retail and healthcare for fresh foods and small items. |
+| `gs1Databar` | GS1 DataBar barcode formats, including gs1DatabarOmnidirectional, gs1DatabarTruncated, gs1DatabarStacked, gs1DatabarStackedOmnidirectional, gs1DatabarExpanded, gs1DatabarExpandedStacked, gs1DatabarLimited. These barcodes are designed for use in retail and healthcare for fresh foods and small items. |
 | `gs1DatabarStackedOmnidirectional` | GS1 DataBar Stacked Omnidirectional format. |
 | `gs1DatabarTruncated` | GS1 DataBar Truncated format. |
 | `gs1DatabarStacked` | GS1 DataBar Stacked format. |
@@ -116,11 +116,11 @@ class EnumBarcodeFormat {
 | `gs1Composite` | GS1 Composite, a group of barcodes used in conjunction with GS1 DataBar or linear barcodes to provide additional information. |
 | `nonStandardBarcode` | Nonstandard barcode, a placeholder for barcodes that do not conform to established industry standards. |
 | `dotcode` | DotCode, a two-dimensional barcode designed for high-speed printing applications. |
-| `pharmacode` | PharmaCode, a general category that includes both BF_PHARMACODE_ONE_TRACK and BF_PHARMACODE_TWO_TRACK. |
+| `pharmacode` | PharmaCode, a general category that includes both pharmacodeOneTrack and pharmacodeTwoTrack. |
 | `pharmacodeOneTrack` | PharmaCode One Track, used in the pharmaceutical industry for packaging control. |
 | `pharmacodeTwoTrack` | PharmaCode Two Track, an extension of PharmaCode for encoding additional data. |
 | `matrix25` | Matrix 2 of 5, an older form of barcode used in warehouse sorting and conveyor systems. |
-| `postalCode` | Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC, BF_KIX. |
+| `postalCode` | Combined value of uspsIntelligentMail, postnet, planet, australianPost, rm4scc, kix. |
 | `uspsIntelligentMail` | USPS Intelligent Mail, a barcode used by the United States Postal Service to provide greater information and tracking capabilities. |
 | `postnet` | Postnet, used by the USPS for automating the sorting of mail. |
 | `planet` | Planet, another USPS barcode, similar to Postnet, but with additional data capacity. |

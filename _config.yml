@@ -43,8 +43,8 @@ dce_flutter: /camera-enhancer/docs/mobile/programming/flutter/
 dce_flutter_api: /camera-enhancer/docs/mobile/programming/flutter/api-reference/
 ddn_flutter: /document-normalizer/docs/mobile/programming/flutter/
 ddn_flutter_api: /document-normalizer/docs/mobile/programming/flutter/api-reference/ 
-dlr_flutter: /label-recognizer/docs/mobile/programming/flutter/
-dlr_flutter_api: /label-recognizer/docs/mobile/programming/flutter/api-reference/
+dlr_flutter: /label-recognition/docs/mobile/programming/flutter/
+dlr_flutter_api: /label-recognition/docs/mobile/programming/flutter/api-reference/
 
 xamarin: /capture-vision/docs/mobile/programming/xamarin/
 xamarin-api: /capture-vision/docs/mobile/programming/xamarin/api-reference/

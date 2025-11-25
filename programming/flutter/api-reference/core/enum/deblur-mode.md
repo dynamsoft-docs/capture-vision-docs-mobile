@@ -51,4 +51,4 @@ enum EnumDeblurMode {
 | `end` | Placeholder value with no functional meaning. |
 
 > [!NOTE]
-> To learn more about the different deblur modes, we recommend visiting the full [DeblurModes Parameter]({{ site.dcvb_parameters }}reference/barcode-reader-task-settings/deblur-modes.html#candidate-modes-introduction) page.
+> View more about [DeblurModes Parameters]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#candidate-modes-introduction) page.

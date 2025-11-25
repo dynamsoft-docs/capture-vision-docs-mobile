@@ -185,7 +185,7 @@ Future<void> removeResultReceiver(CapturedResultReceiver receiver)
 
 ### setInput
 
-Sets up an image source to provide images for continuous processing. This method is mainly used when configuring a camera (via the [`CameraEnhancer`](../camera-enhancer/camera-enhancer.md)) as an input source.
+Sets up an image source to provide images for continuous processing. This method is mainly used when configuring a camera (via the [`CameraEnhancer`]({{ site.dce_flutter_api }}camera-enhancer.html)) as an input source.
 
 ```dart
 Future<void> setInput(ImageSourceAdapter input) async
@@ -285,7 +285,7 @@ Future<List<String>> getTemplateNames() async
 
 ### initSettings
 
-Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON string). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-a-json-template).
+Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON string). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.html#using-a-json-template).
 
 ```dart
 Future<void> initSettings(String content)
@@ -311,7 +311,7 @@ Future<void> initSettings(String content)
 
 ### initSettingsFromFile
 
-Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON file). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-a-json-template).
+Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON file). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.html#using-a-json-template).
 
 ```dart
 Future<void> initSettingsFromFile(String filePath) async
@@ -404,7 +404,7 @@ Future<void> resetSettings() async
 
 ### updateSettings
 
-Updates the specified template settings of the `CaptureVisionRouter` instance using a [`SimplifiedCaptureVisionSettings`](simplified-capture-vision-settings.md) object. To learn how to update the settings using the SimplifiedCaptureVisionSettings class - please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.md#using-simplifiedcapturevisionsettings).
+Updates the specified template settings of the `CaptureVisionRouter` instance using a [`SimplifiedCaptureVisionSettings`](simplified-capture-vision-settings.md) object. To learn how to update the settings using the SimplifiedCaptureVisionSettings class - please refer to this [section of the Foundational User Guide]({{ site.dbr_flutter }}foundational-user-guide.html#using-simplifiedcapturevisionsettings).
 
 ```dart
 Future<void> updateSettings(String templateName, SimplifiedCaptureVisionSettings settings)
