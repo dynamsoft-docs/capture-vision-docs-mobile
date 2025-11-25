@@ -13,8 +13,8 @@ noTitleIndex: true
 The `CapturedResultItem` class represents the most basic item in the captured result. Depending on the type of the [`CapturedResult`](captured-result.md), the captured result item can be a barcode, a text line, a normalized image, a detected quad, a parsed item, or an original image.
 
 > [!NOTE]
->
-> - Barcode: [BarcodeResultItem]({{ site.dbr_flutter_api }}barcode-reader/barcode-result-item.html)
+> Sub classes:
+> - Barcode: [`BarcodeResultItem`]({{ site.dbr_flutter_api }}barcode-reader/barcode-result-item.html)
 > - Text line: [`TextLineResultItem`]({{ site.dlr_flutter_api }}text-line-result-item.html)
 > - Document page(s): 
 >   - [`DeskewedImageResultItem`]({{ site.ddn_flutter_api }}deskewed-image-result-item.html)
@@ -72,4 +72,11 @@ EnumCapturedResultItemType type;
 
 **Remarks**
 
-The type of `CapturedResultItem` is dependent on the functional product that is used by the Capture Vision Router instance. To learn about the different types of functional products that Capture Vision supports, please visit the [Capture Vision Introduction]({{ site.introduction }}index.html#functional-products)
+| CapturedResultItemType | Sub Class |
+| ---------------------- | --------- |
+| `barcode` | [`BarcodeResultItem`]({{ site.dbr_flutter_api }}barcode-reader/barcode-result-item.html) |
+| `textLine` | [`TextLineResultItem`]({{ site.dlr_flutter_api }}text-line-result-item.html) |
+| `detectedQuad` | [`DetectedQuadResultItem`]({{ site.ddn_flutter_api }}detected-quad-result-item.html) |
+| `deskewedImage` | [`DeskewedImageResultItem`]({{ site.ddn_flutter_api }}deskewed-image-result-item.html) |
+| `parsedResult` | [`ParsedResultItem`]({{ site.dcp_flutter_api }}parsed-result-item.html) |
+| `enhancedImage` | [`EnhancedImageResultItem`]({{ site.ddn_flutter_api }}enhanced-image-result-item.html) |

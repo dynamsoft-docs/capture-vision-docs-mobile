@@ -30,8 +30,8 @@ class SimplifiedCaptureVisionSettings
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *int* | Sets the minimum interval (in milliseconds) between image captures. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
 | [`barcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings]({{ site.dbr_flutter_api }}barcode-reader/simplified-barcode-reader-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
-| [`labelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dbr_flutter_api }}simplified-label-recognizer-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
-| [`documentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.dbr_flutter_api }}simplified-document-normalizer-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
+| [`labelSettings`](#labelsettings) | *[SimplifiedLabelRecognizerSettings]({{ site.dlr_flutter_api }}simplified-label-recognizer-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
+| [`documentSettings`](#documentsettings) | *[SimplifiedDocumentNormalizerSettings]({{ site.ddn_flutter_api }}simplified-document-normalizer-settings.html)* | The settings for the `DynamsoftBarcodeReader` tasks. |
 
 ### roi
 
@@ -83,7 +83,7 @@ SimplifiedBarcodeReaderSettings? barcodeSettings;
 
 ### labelSettings
 
-The settings for the `DynamsoftLabelRecognizer` tasks as a [`SimplifiedLabelRecognizerSettings`]({{ site.dbr_flutter_api }}simplified-label-recognizer-settings.html) object.
+The settings for the `DynamsoftLabelRecognizer` tasks as a [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_flutter_api }}simplified-label-recognizer-settings.html) object.
 
 ```dart
 SimplifiedLabelRecognizerSettings? labelSettings;
@@ -91,7 +91,7 @@ SimplifiedLabelRecognizerSettings? labelSettings;
 
 ### documentSettings
 
-The settings for the `DynamsoftDocumentNormalizer` tasks as a [`SimplifiedDocumentNormalizerSettings`]({{ site.dbr_flutter_api }}simplified-document-normalizer-settings.html) object.
+The settings for the `DynamsoftDocumentNormalizer` tasks as a [`SimplifiedDocumentNormalizerSettings`]({{ site.ddn_flutter_api }}simplified-document-normalizer-settings.html) object.
 
 ```dart
 SimplifiedDocumentNormalizerSettings? documentSettings;

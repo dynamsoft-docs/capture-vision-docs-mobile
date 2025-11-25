@@ -10,7 +10,7 @@ breadcrumbText: ImageColourMode
 codeAutoHeight: true
 ---
 
-# Enumeration ImageColourMode
+# EnumImageColourMode
 
 `ImageColourMode` defines the colour mode of the enhanced image.
 

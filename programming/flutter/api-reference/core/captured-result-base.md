@@ -13,6 +13,13 @@ ignore: true
 
 The `CapturedResultBase` class is the base class of all types of captured results.
 
+> [!NOTE]
+> Sub classes:
+> - Barcode: [`DecodedBarcodesResult`]({{ site.dbr_flutter_api }}barcode-reader/decoded-barcodes-result.html)
+> - Text line: [`RecognizedTextLinesResult`]({{ site.dlr_flutter_api }}recognized-text-lines-result.html)
+> - Document page(s): [`ProcessedDocumentResult`]({{ site.ddn_flutter_api }}processed-document-result.html)
+> - Parsed content (DL, MRZ, VIN, GS1 AI, etc.): [`ParsedResult`]({{ site.dcp_flutter_api }}parsed-result.html)
+
 ## Definition
 
 *Assembly:* dynamsoft_capture_vision_flutter

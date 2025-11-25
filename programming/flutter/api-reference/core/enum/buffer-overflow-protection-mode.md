@@ -10,7 +10,7 @@ breadcrumbText: BufferOverflowProtectionMode
 codeAutoHeight: true
 ---
 
-# Enumeration BufferOverflowProtectionMode
+# EnumBufferOverflowProtectionMode
 
 `BufferOverflowProtectionMode` describes the protection modes to manage situations when the `ImageSourceAdapter`'s buffer exceeds its capacity. 
 
