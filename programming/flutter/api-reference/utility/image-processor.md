@@ -24,7 +24,7 @@ class ImageProcessor
 
 ### cropImage
 
-Crops the image (as an [`ImageData`](image-data.md) object) to the region defined by the rectangle.
+Crops the image (as an [`ImageData`](../core/image-data.md) object) to the region defined by the rectangle.
 
 ```dart
 Future<ImageData?> cropImage(ImageData image, DSRect rect) async
@@ -32,11 +32,11 @@ Future<ImageData?> cropImage(ImageData image, DSRect rect) async
 
 **Remarks**
 
-The method returns an [`ImageData`](image-data.md) object that represents the newly cropped image. The method returns `null` if the cropping fails (invalid rectangle, out of bounds, a null `ImageData` object, etc.).
+The method returns an [`ImageData`](../core/image-data.md) object that represents the newly cropped image. The method returns `null` if the cropping fails (invalid rectangle, out of bounds, a null `ImageData` object, etc.).
 
 ### cropAndDeskewImage
 
-Crops the image (as an [`ImageData`](image-data.md) object) to the region defined by the Quadrilateral.
+Crops the image (as an [`ImageData`](../core/image-data.md) object) to the region defined by the Quadrilateral.
 
 ```dart
 Future<ImageData?> cropAndDeskewImage(ImageData image, Quadrilateral quadrilateral, {
@@ -48,11 +48,11 @@ Future<ImageData?> cropAndDeskewImage(ImageData image, Quadrilateral quadrilater
 
 **Remarks**
 
-The `quadrilateral` input parameter defines the region to extract as four corner points. The method returns an [`ImageData`](image-data.md) object that represents the newly cropped image. The method returns `null` if the cropping fails (invalid Quadrilateral, out of bounds, a null `ImageData` object, etc.).
+The `quadrilateral` input parameter defines the region to extract as four corner points. The method returns an [`ImageData`](../core/image-data.md) object that represents the newly cropped image. The method returns `null` if the cropping fails (invalid Quadrilateral, out of bounds, a null `ImageData` object, etc.).
 
 ### adjustBrightness
 
-Adjusts the brightness of the image (as an [`ImageData`](image-data.md) object) based on the specified brightness value.
+Adjusts the brightness of the image (as an [`ImageData`](../core/image-data.md) object) based on the specified brightness value.
 
 ```dart
 Future<ImageData?> adjustBrightness(ImageData image, int brightness) async
@@ -64,7 +64,7 @@ The `brightness` input parameter ranges from -100 to 100. Positive values increa
 
 ### adjustContrast
 
-Adjusts the contrast of the image (as an [`ImageData`](image-data.md) object) based on the specified contrast value.
+Adjusts the contrast of the image (as an [`ImageData`](../core/image-data.md) object) based on the specified contrast value.
 
 ```dart
 Future<ImageData?> adjustContrast(ImageData image, int contrast) async
@@ -76,7 +76,7 @@ The `contrast` input parameter ranges from -100 to 100. Positive values increase
 
 ### filterImage
 
-Applies a filter (represented with [`EnumFilterType`](../enum/filter-type.md)) to the image (as an [`ImageData`](image-data.md) object).
+Applies a filter (represented with [`EnumFilterType`](enum/filter-type.md)) to the image (as an [`ImageData`](../core/image-data.md) object).
 
 ```dart
 Future<ImageData?> filterImage(ImageData image, EnumFilterType type) async
@@ -88,7 +88,7 @@ The method returns `null` if the filtering fails.
 
 ### convertToGray
 
-Converts the image (as an [`ImageData`](image-data.md) object) to grayscale using specified channel weights.
+Converts the image (as an [`ImageData`](../core/image-data.md) object) to grayscale using specified channel weights.
 
 ```dart
 Future<ImageData?> convertToGray(ImageData image, {
@@ -108,7 +108,7 @@ The method returns `null` if the conversion fails.
 
 ### convertToBinaryGlobal
 
-Converts the image (as an [`ImageData`](image-data.md) object) to a binary (black and white) format using global thresholding.
+Converts the image (as an [`ImageData`](../core/image-data.md) object) to a binary (black and white) format using global thresholding.
 
 ```dart
 Future<ImageData?> convertToBinaryGlobal(ImageData image, {
@@ -124,7 +124,7 @@ Remarks
 
 ### convertToBinaryLocal
 
-Converts the image (as an [`ImageData`](image-data.md) object) to a binary (black and white) format using local adaptive thresholding.
+Converts the image (as an [`ImageData`](../core/image-data.md) object) to a binary (black and white) format using local adaptive thresholding.
 
 ```dart
 Future<ImageData?> convertToBinaryLocal(

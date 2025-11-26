@@ -102,7 +102,7 @@ CapturedResult capture(ImageData imageData, String templateName);
 
 **Parameters**
 
-`[in] buffer`: A [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object that contains image info.
+`[in] imageData`: A [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object that contains image info.
 
 `[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
 

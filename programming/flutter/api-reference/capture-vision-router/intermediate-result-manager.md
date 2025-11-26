@@ -32,9 +32,9 @@ Future<ImageData?> getOriginalImage(String hashId) async
 
 **Remarks**
 
-In order to get the hashID input parameter, please access the `originalImageHashId` of the [`CapturedResult`](captured-result.md). The `CapturedResult` can be a [`DecodedBarcodesResult`](decoded-barcodes-result.md) (if the Barcode Reader is used) and so the `originalImageHashId` can be obtained from the `DecodedBarcodesResult` object directly since it extends the `CapturedResult` class.
+In order to get the hashID input parameter, please access the `originalImageHashId` of the [`CapturedResult`](captured-result.md). The `CapturedResult` can be a [`DecodedBarcodesResult`]({{ site.dbr_flutter_api }}barcode-reader/decoded-barcodes-result.html) (if the Barcode Reader is used) and so the `originalImageHashId` can be obtained from the `DecodedBarcodesResult` object directly since it extends the `CapturedResult` class.
 
-The method returns a [`ImageData`](image-data.md) object which contains all the info of the original image, including a byte array to represent the raw image.
+The method returns a [`ImageData`]({{ site.dcv_flutter_api }}core/image-data.html) object which contains all the info of the original image, including a byte array to represent the raw image.
 
 ## Code Snippet
 

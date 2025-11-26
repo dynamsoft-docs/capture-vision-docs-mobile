@@ -161,7 +161,7 @@ void updateSettings(String templateName, SimplifiedCaptureVisionSettings setting
 
 `[in] templateName`: Specify the name of the template that you want to update.
 
-`[in] settings`: An object of SimplifiedCaptureVisionSettings.
+`[in] settings`: An object of `SimplifiedCaptureVisionSettings`.
 
 **Exception**
 
@@ -193,6 +193,8 @@ Returns an object that contains settings for the specified `CaptureVisionTemplat
 ```java
 String outputSettings(String templateName, boolean includeDefaultValues) throws CaptureVisionRouterException;
 ```
+
+**Parameters**
 
 `[in] templateName`: The name of the template that you want to output.
 

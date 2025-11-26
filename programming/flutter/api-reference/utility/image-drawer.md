@@ -37,4 +37,4 @@ Future<ImageData> drawOnImage(ImageData image, List<Quadrilateral> quadrilateral
 - `color`: ARGB colour value (0xAARRGGBB format)
 - `thickness`: The line thickness in pixels.
 
-The method returns an [`ImageData`](image-data.md) object that represents the new image with the rendered shapes.
+The method returns an [`ImageData`](../core/image-data.md) object that represents the new image with the rendered shapes.

@@ -32,7 +32,7 @@ class ImageSourceAdapter
 | [`getBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Get the current mode for handling buffer overflow. |
 | [`getColourChannelUsageType`](#getcolourchannelusagetype) | Get the current usage type for color channels in images. |
 | [`getImageCount`](#getimagecount) | Get the current number of images in the buffer. |
-| [`getImage`](#getimage) | Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `DSImageData`. |
+| [`getImage`](#getimage) | Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `ImageData`. |
 | [`getMaxImageCount`](#getmaximagecount) | Get the maximum number of images that can be buffered. |
 | [`hasImage`](#hasimage) | Checks if an image with the specified ID is present in the buffer. |
 | [`hasNextImageToFetch`](#hasnextimagetofetch) | Determines whether there are more images available to fetch. |

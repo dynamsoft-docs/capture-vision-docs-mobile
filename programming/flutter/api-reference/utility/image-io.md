@@ -24,7 +24,7 @@ class ImageIO
 
 ### saveToFile
 
-Saves the provided [`ImageData`](image-data.md) object (which represents an image) to a file at the specified file path.
+Saves the provided [`ImageData`](../core/image-data.md) object (which represents an image) to a file at the specified file path.
 
 ```dart
 Future<void> saveToFile(ImageData image, String path, bool overwrite) async
@@ -36,7 +36,7 @@ The `overwrite` input parameter should be set to true if the file already exists
 
 ### readFromFile
 
-Reads an image from a file at the specified file path and returns an [`ImageData`](image-data.md) object that represents the image.
+Reads an image from a file at the specified file path and returns an [`ImageData`](../core/image-data.md) object that represents the image.
 
 ```dart
 Future<ImageData?> readFromFile(String path) async
