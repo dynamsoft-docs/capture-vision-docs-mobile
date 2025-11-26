@@ -7,7 +7,6 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: CharacterResult
-permalink: /programming/android/api-reference/character-result.html
 ---
 
 # CharacterResult
