@@ -46,6 +46,19 @@ ddn_flutter_api: /document-normalizer/docs/mobile/programming/flutter/api-refere
 dlr_flutter: /label-recognition/docs/mobile/programming/flutter/
 dlr_flutter_api: /label-recognition/docs/mobile/programming/flutter/api-reference/
 
+dcv_react_native: /capture-vision/docs/mobile/programming/react-native/
+dcv_react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+dce_react_native: /camera-enhancer/docs/mobile/programming/react-native/
+dce_react_native_api: /camera-enhancer/docs/mobile/programming/react-native/api-reference/
+dcp_react_native: /code-parser/docs/mobile/programming/react-native/
+dcp_react_native_api: /code-parser/docs/mobile/programming/react-native/api-reference/
+dbr_react_native: /barcode-reader/docs/mobile/programming/react-native/
+dbr_react_native_api: /barcode-reader/docs/mobile/programming/react-native/api-reference/
+ddn_react_native: /document-normalizer/docs/mobile/programming/react_native/
+ddn_react_native_api: /document-normalizer/docs/mobile/programming/react_native/api-reference/ 
+dlr_react_native: /label-recognition/docs/mobile/programming/react_native/
+dlr_react_native_api: /label-recognition/docs/mobile/programming/react_native/api-reference/
+
 xamarin: /capture-vision/docs/mobile/programming/xamarin/
 xamarin-api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
 xamarin-release-notes: /capture-vision/docs/mobile/programming/xamarin/release-notes/

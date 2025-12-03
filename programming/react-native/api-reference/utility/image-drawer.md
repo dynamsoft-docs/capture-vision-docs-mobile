@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageDrawer Class - Dynamsoft Capture Vision Flutter
-description: ImageDrawer class of DCV Flutter provides API to render shapes on images.
+title: ImageDrawer Class - Dynamsoft Capture Vision React Native
+description: ImageDrawer class of DCV React Native provides API to render shapes on images.
 keywords: image drawer, intermediate, capture vision, original image, result, draw
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -14,29 +14,33 @@ The `ImageDrawer` class provides API to render geometric shapes such as quadrila
 
 ## Definition
 
-*Assembly:* dynamsoft_capture_vision_flutter
+*Assembly:* dynamsoft-capture-vision-react-native
 
-```dart
+```js
 class ImageDrawer
 ```
 
 ## Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`drawOnImage`](#drawonimage) | Draws quadrilaterals on the image with the specified style parameters. |
+
 ### drawOnImage
 
 Draws quadrilaterals on the image with the specified style parameters.
 
-```dart
-Future<ImageData> drawOnImage(ImageData image, List<Quadrilateral> quadrilaterals, int color, int thickness) async
+```js
+drawOnImage(imageData: ImageData | null | undefined, quads: Quadrilateral[] | null | undefined, colour: number | ColorValue, thickness: number): ImageData | null | undefined
 ```
 
 **Parameters**
 
-`image`: The source image to draw on.
+`imageData`: The source image to draw on.
 
-`quadrilaterals`: List of Quadrilateral objects to render onto the image.
+`quads`: List of Quadrilateral objects to render onto the image.
 
-`color`: ARGB colour value (0xAARRGGBB format)
+`colour`: ARGB colour value (0xAARRGGBB format)
 
 `thickness`: The line thickness in pixels.
 
