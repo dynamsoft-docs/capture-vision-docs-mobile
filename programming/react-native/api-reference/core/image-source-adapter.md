@@ -2,7 +2,7 @@
 layout: default-layout
 title: ImageSourceAdapter - Dynamsoft Capture Vision React Native API Reference
 description: The class ImageSourceAdapter of Dynamsoft Capture Vision React Native represents an interface for fetching and buffering images.
-keywords: image source adapter, Java, Kotlin
+keywords: image source adapter, react native
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true

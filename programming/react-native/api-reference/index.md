@@ -58,12 +58,12 @@ Implement the callback methods of [`CapturedResultReceiver`]({{ site.dcv_react_n
 
 Callback methods that are related to barcode decoding:
 
-- [`onDecodedBarcodesReceived`]({{ site.dcv_react_native_api }}capture-vision-router/captured-result-receiver.html#ondecodedbarcodesreceived): The callback of barcode decoding. The result you received in the callback method is a [`DecodedBarcodesResult`]({{ site.dbr_react_native_api }}decoded-barcodes-result.html) object, which contains all the decoded barcodes from the processed image.
+- [`onDecodedBarcodesReceived`]({{ site.dcv_react_native_api }}capture-vision-router/captured-result-receiver.html#ondecodedbarcodesreceived): The callback of barcode decoding. The result you received in the callback method is a [`DecodedBarcodesResult`]({{ site.dbr_react_native_api }}barcode-reader/decoded-barcodes-result.html) object, which contains all the decoded barcodes from the processed image.
 
 Related APIs:
 
-- [`DecodedBarcodesResult`]({{ site.dbr_react_native_api }}decoded-barcodes-result.html): All barcodes that decoded from the processed image.
-- [`BarcodeResultItem`]({{ site.dbr_react_native_api }}barcode-result-item.html): The barcode decoding result of a single barcode.
+- [`DecodedBarcodesResult`]({{ site.dbr_react_native_api }}barcode-reader/decoded-barcodes-result.html): All barcodes that decoded from the processed image.
+- [`BarcodeResultItem`]({{ site.dbr_react_native_api }}barcode-reader/barcode-result-item.html): The barcode decoding result of a single barcode.
 
 #### Document Scanning
 
