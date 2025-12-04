@@ -6,7 +6,6 @@ keywords: captured result base, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-ignore: true
 ---
 
 # DSCapturedResultBase

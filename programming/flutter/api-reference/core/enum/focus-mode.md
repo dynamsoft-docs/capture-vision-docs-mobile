@@ -12,9 +12,6 @@ breadcrumbText: EnumFocusMode
 
 `EnumFocusMode` is an enumeration that specifies the different modes of focus that the Camera Enhancer can apply to the camera feed.
 
-> [!TIP]
-> If you choose to use the locked focus mode, the focal length used is determined by the input value of [`setFocus`](../camera-enhancer.md#setfocus).
-
 ## Definition
 
 *Assembly:* dynamsoft_capture_vision_flutter
@@ -30,5 +27,5 @@ enum EnumFocusMode {
 
 | Member | Description |
 | ------ | ----------- |
-| `locked` | Lock the focal length with an input value. |
+| `locked` | Lock the focal length. |
 | `continuousAuto` | Implements a continuous autoFocus. |

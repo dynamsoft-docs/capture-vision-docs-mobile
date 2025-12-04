@@ -1,0 +1,39 @@
+---
+layout: default-layout
+title: EnumGrayscaleEnhancementMode - Dynamsoft Capture Vision React Native
+description: Enumeration EnumGrayscaleEnhancementMode of Dynamsoft Capture Vision React Native Edition describes all available grayscale enhancement modes.
+keywords: Grayscale enhancement modes
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+breadcrumbText: EnumGrayscaleEnhancementMode
+---
+
+# EnumGrayscaleEnhancementMode
+
+`EnumGrayscaleEnhancementMode` is an enumeration that determines which grayscale enhancement modes the library will apply before the detection process to improve the read rate of the barcodes in a given image or frame.
+
+## Definition
+
+*Assembly:* dynamsoft-capture-vision-react-native
+
+```js
+enum EnumGrayscaleEnhancementMode {
+  GEM_SKIP = 0x0,
+  GEM_AUTO = 0x1,
+  GEM_GENERAL = 0x2,
+  GEM_GRAY_EQUALIZE = 0x4,
+  GEM_GRAY_SMOOTH = 0x8,
+  GEM_SHARPEN_SMOOTH = 0x10
+}
+```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `GEM_SKIP` | Disables any grayscale image preprocessing. Selecting this mode skips the preprocessing step, passing the image through to subsequent operations without modification. |
+| `GEM_AUTO` | Automatic selection of grayscale enhancement mode which is currently not supported. Future implementations may automatically choose the most suitable enhancement based on image analysis. |
+| `GEM_GENERAL` | Uses the original, unprocessed image for subsequent operations. This mode is selected when no specific grayscale enhancement is required, maintaining the image in its natural state. |
+| `GEM_GRAY_EQUALIZE` | Applies a grayscale equalization algorithm to the image, enhancing contrast and detail in gray level. Suitable for images with poor contrast. |
+| `GEM_GRAY_SMOOTH` | Implements a grayscale smoothing algorithm to reduce noise and smooth the image. This can be beneficial for images with high levels of grain or noise. |
+| `GEM_SHARPEN_SMOOTH` | Enhances the image by applying both sharpening and smoothing algorithms. This mode aims to increase clarity and detail while reducing noise, offering a balanced approach to image preprocessing. |

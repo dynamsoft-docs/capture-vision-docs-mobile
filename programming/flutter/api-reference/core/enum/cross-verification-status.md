@@ -20,13 +20,8 @@ codeAutoHeight: true
 
 ```dart
 enum EnumCrossVerificationStatus {
-  /// The item has not been verified.
   notVerified,
-
-  /// The item has passed verification.
   passed,
-
-  /// The item has failed verification.
   failed
 }
 ```

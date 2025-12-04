@@ -6,7 +6,6 @@ keywords: captured result base, Flutter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-ignore: true
 ---
 
 # CapturedResultBase

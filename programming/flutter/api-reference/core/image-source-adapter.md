@@ -29,7 +29,7 @@ abstract class ImageSourceAdapter
 | Method | Description |
 | ------ | ----------- |
 | [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the internal buffer. |
-| [`clearBuffer`](#clearbuffer) | Clears all images from the buffer, resetting the state for new image fetching. |
+| [`clearBuffer`](#clearbuffer) | Clears all images from the buffer. |
 | [`getBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Get the current mode for handling buffer overflow. |
 | [`getColourChannelUsageType`](#getcolourchannelusagetype) | Get the current usage type for color channels in images. |
 | [`getImage`](#getimage) | Get a buffered image. Implementing classes should return a Promise that resolves with an instance of `ImageData`. |
@@ -52,7 +52,7 @@ Future<void> addImageToBuffer(ImageData image);
 
 ### clearBuffer
 
-Clears all images from the buffer, resetting the state for new image fetching.
+Clears all images from the buffer.
 
 ```dart
 Future<void> clearBuffer();
@@ -74,10 +74,6 @@ Get the current usage type for color channels in images.
 ```dart
 Future<EnumColourChannelUsageType> getColourChannelUsageType();
 ```
-
-**Remarks**
-
-This method should be used to verify which colour channel the camera is using, and in turn verify what pixel type any images retrieved during the capture process will come out in.
 
 ### getImage
 
@@ -118,10 +114,6 @@ Sets the usage type for color channels in images.
 ```dart
 Future<void> setColourChannelUsageType(EnumColourChannelUsageType type);
 ```
-
-**Remarks**
-
-This method should be used to change the pixel type of the original image or captured frame should you choose to retrieve it after the capture process. In order to retrieve the original image after the barcode is decoded or the captured result is received, please refer to [this article].
 
 ### setMaximumImageCount
 

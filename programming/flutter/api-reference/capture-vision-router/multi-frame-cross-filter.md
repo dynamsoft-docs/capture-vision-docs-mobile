@@ -10,10 +10,11 @@ noTitleIndex: true
 
 # MultiFrameResultCrossFilter
 
-The `MultiFrameResultCrossFilter` class provides a filter that allows the library to manage and filter results by crosschecking the results across multiple images frames. This filter will compare consecutive frames of the video stream to perform operations like cross-verification, deduplication, and overlapping result management.
+The `MultiFrameResultCrossFilter` class is an officially implemented `CapturedResultFilter` that provides:
 
-> [!NOTE]
->  This filter is especially handy in increasing the accuracy when trying to capture barcodes, documents, or MRZ zones via a camera in an interactive video scenario.
+- **Overlapping**: Improves the read rate of multi-barcode scanning.
+- **Cross Verification**: Improves the accuracy.
+- **Deduplication**: Removes the duplicated results.
 
 ## Definition
 
