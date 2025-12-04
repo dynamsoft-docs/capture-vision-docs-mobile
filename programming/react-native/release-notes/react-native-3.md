@@ -64,9 +64,9 @@ This release focuses on practical performance gains for production environments 
 
 ### New
 
-- Added a new method, [`switchCapturingTemplate`]({{ site.dcv_react_native_api }}capture-vision-router.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
-- Added a new method, [`clearDLModelBuffers`]({{ site.dcv_react_native_api }}capture-vision-router.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
-- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_react_native_api }}capture-vision-router.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
+- Added a new method, [`switchCapturingTemplate`]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
+- Added a new method, [`clearDLModelBuffers`]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
+- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
 - Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
 The following APIs are provided for configuring the `cameraToggleButton`:
   - [`cameraToggleButton`]({{ site.dce_react_native_api }}camera-view.html#cameratogglebutton)
