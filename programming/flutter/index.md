@@ -21,7 +21,7 @@ This page provides an overview of the various modules and highlights the most es
 The hierarchical structure diagram below illustrates the various modules of the Barcode Reader SDK (with modules at the top depending on those below).
 
 <div align="center">
-    <p><img src="../../assets/dcv-dependencies.png" width="70%" alt="dcv-dependencies"></p>
+    <p><img src="../../assets/img/dcv-dependencies.png" width="70%" alt="dcv-dependencies"></p>
     <p>Modules hierarchical of the DBR SDK</p>
 </div>
 
