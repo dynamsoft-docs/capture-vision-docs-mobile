@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Capture Vision MAUI SDK - Release Notes
 
+- [3.2.5000 (12/18/2025)]({{ site.dcv_maui }}release-notes/maui-3.html#325000-12182025)
 - [3.2.3000 (11/20/2025)]({{ site.dcv_maui }}release-notes/maui-3.html#323000-11202025)
 - [3.0.5200 (08/18/2025)]({{ site.dcv_maui }}release-notes/maui-3.html#305200-08182025)
 - [3.0.5100 (08/12/2025)]({{ site.dcv_maui }}release-notes/maui-3.html#305100-08122025)
