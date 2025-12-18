@@ -9,6 +9,14 @@ noTitleIndex: true
 
 # Release Notes v3.x - DynamsoftCaptureVisionRouter Module
 
+## 3.2.5000 (12/18/2025)
+ 
+This release includes security maintenance updates to ensure continued protection of the product.
+ 
+### Security Updates
+ 
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 3.2.3000 (11/20/2025)
 
 ### 🎉Milestone Release
