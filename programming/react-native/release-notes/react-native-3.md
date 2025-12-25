@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes v3.x - dynamsoft-capture-vision-react-native
 
+## 3.2.5001 (12/25/2025)
+ 
+Fixed a bug where the build might fail when building an Expo project.
+
 ## 3.2.5000 (12/18/2025)
  
 This release includes security maintenance updates to ensure continued protection of the product.
