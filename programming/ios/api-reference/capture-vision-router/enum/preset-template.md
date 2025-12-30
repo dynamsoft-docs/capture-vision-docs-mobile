@@ -12,60 +12,31 @@ noTitleIndex: true
 
 `PresetTemplate` describes the preset template names.
 
-## Definition
-
-<div class="sample-code-prefix template2"></div>
-   >- Objective-C
-   >- Swift
-   >
->
-```objc
-typedef NSString * DSPresetTemplate NS_STRING_ENUM NS_SWIFT_NAME(PresetTemplate);
-FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateDefault NS_SWIFT_NAME(presetDefault);
-FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateReadBarcodes NS_SWIFT_NAME(readBarcodes);
-FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateRecognizeTextLines NS_SWIFT_NAME(recognizeTextLines);
-FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateDetectDocumentBoundaries NS_SWIFT_NAME(detectDocumentBoundaries);
-FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateDetectAndNormalizeDocument NS_SWIFT_NAME(detectAndNormalizeDocument);
-FOUNDATION_EXPORT DSPresetTemplate const _Nonnull DSPresetTemplateNormalizeDocument NS_SWIFT_NAME(normalizeDocument);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateReadBarcodesSpeedFirst NS_SWIFT_NAME(readBarcodesSpeedFirst);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateReadBarcodesReadRateFirst NS_SWIFT_NAME(readBarcodesReadRateFirst);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateReadSingleBarcode NS_SWIFT_NAME(readSingleBarcode);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateRecognizeNumbers NS_SWIFT_NAME(recognizeNumbers);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateRecognizeLetters NS_SWIFT_NAME(recognizeLetters);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateRecognizeNumbersAndLetters NS_SWIFT_NAME(recognizeNumbersAndLetters);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateRecognizeNumbersAndUppercaseLetters NS_SWIFT_NAME(recognizeNumbersAndUppercaseLetters);
-FOUNDATION_EXPORT PresetTemplate const _Nonnull DSPresetTemplateRecognizeUppercaseLetters NS_SWIFT_NAME(recognizeUppercaseLetters);
-```
->
-```swift
-struct PresetTemplate
-{
-   static let default = "default"
-   static let readBarcodes = "read-barcodes"
-   static let recognizeTextLines = "recognize-textLines"
-   static let detectDocumentBoundaries = "detect-document-boundaries"
-   static let detectAndNormalizeDocument = "DetectAndNormalizeDocument_Default"
-   static let normalizeDocument = "NormalizeDocument_Default"
-   static let readBarcodesSpeedFirst = "ReadBarcodes_SpeedFirst"
-   static let readBarcodesReadRateFirst = "ReadBarcodes_ReadRateFirst"
-   static let readSingleBarcode = "ReadSingleBarcode"
-   static let recognizeNumbers = "RecognizeNumbers"
-   static let recognizeLetters = "RecognizeLetters"
-   static let recognizeNumbersAndLetters = "RecognizeNumbersAndLetters"
-   static let recognizeNumbersAndUppercaseLetters = "RecognizeNumbersAndUppercaseLetters"
-   static let recognizeUppercaseLetters = "RecognizeUppercaseLetters"
-}
-```
-
 ## Members
-
-### presetDefault
-
-The default template that performs barcode decoding, label recognizing, boundary detecting and document normalizing. The template name is "Default".
 
 ### readBarcodes
 
 The default template for the barcode reading tasks.
+
+**Code Snippet**
+
+Specify the preset template in the `startCapturing` method for scanning from the video.
+
+```swift
+cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
+    if (!isSuccess) {
+        if let error = error {
+            self.showResult("Error", error.localizedDescription)
+        }
+    }
+}
+```
+
+Specify the preset template in the `capture` method for reading from an image.
+
+```swift
+let result = cvr.captureFromFile("Your file path", templateName: PresetTemplate.readBarcodes.rawValue)
+```
 
 ### readBarcodesSpeedFirst
 
@@ -114,3 +85,7 @@ The default template for the document detection and normalization.
 ### normalizeDocument
 
 The default template for the document normalization.
+
+### presetDefault
+
+The default template that performs barcode decoding, label recognizing, boundary detecting and document normalizing. The template name is "Default".

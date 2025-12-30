@@ -12,38 +12,31 @@ noTitleIndex: true
 
 `PresetTemplate` describes the preset template names.
 
-## Definition
-
-```java
-@Retention(RetentionPolicy.CLASS)
-public @interface EnumPresetTemplate
-{
-   String PT_DEFAULT = "Default";
-   String PT_READ_BARCODES = "ReadBarcodes_Default";
-   String PT_RECOGNIZE_TEXT_LINES = "RecognizeTextLines_Default";
-   String PT_DETECT_DOCUMENT_BOUNDARIES = "DetectDocumentBoundaries_Default";
-   String PT_DETECT_AND_NORMALIZE_DOCUMENT = "DetectAndNormalizeDocument_Default";
-   String PT_NORMALIZE_DOCUMENT = "NormalizeDocument_Default";
-   String PT_READ_BARCODES_SPEED_FIRST = "ReadBarcodes_SpeedFirst";
-   String PT_READ_BARCODES_READ_RATE_FIRST = "ReadBarcodes_ReadRateFirst";
-   String PT_READ_SINGLE_BARCODE = "ReadSingleBarcode";
-   String PT_RECOGNIZE_NUMBERS = "RecognizeNumbers";
-   String PT_RECOGNIZE_LETTERS = "RecognizeLetters";
-   String PT_RECOGNIZE_NUMBERS_AND_LETTERS = "RecognizeNumbersAndLetters";
-   String PT_RECOGNIZE_NUMBERS_AND_UPPERCASE_LETTERS = "RecognizeNumbersAndUppercaseLetters";
-   String PT_RECOGNIZE_UPPERCASE_LETTERS = "RecognizeUppercaseLetters";
-}
-```
-
 ## Members
-
-### PT_DEFAULT
-
-The default template that performs barcode decoding, label recognizing, boundary detecting and document normalizing. The template name is "Default".
 
 ### PT_READ_BARCODES
 
 The default template for the barcode reading tasks.
+
+**Code Snippet**
+
+Specify the preset template in the `startCapturing` method for scanning from the video.
+
+```java
+mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, new CompletionListener() {
+    @Override
+    public void onSuccess() {}
+
+    @Override
+    public void onFailure(int errorCode, String errorString) {}
+});
+```
+
+Specify the preset template in the `capture` method for reading from an image.
+
+```java
+mRouter.capture("Your file path", EnumPresetTemplate.PT_READ_BARCODES);
+```
 
 ### PT_READ_BARCODES_SPEED_FIRST
 
@@ -92,3 +85,7 @@ The default template for the document detection and normalization.
 ### PT_NORMALIZE_DOCUMENT
 
 The default template for the document normalization.
+
+### PT_DEFAULT
+
+The default template that performs barcode decoding, label recognizing, boundary detecting and document normalizing. The template name is "Default".
