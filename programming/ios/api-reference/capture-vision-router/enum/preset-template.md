@@ -12,6 +12,8 @@ noTitleIndex: true
 
 `PresetTemplate` describes the preset template names.
 
+## Definition
+
 <div class="sample-code-prefix template2"></div>
    >- Objective-C
    >- Swift
@@ -55,58 +57,60 @@ struct PresetTemplate
 }
 ```
 
-## presetDefault
+## Members
+
+### presetDefault
 
 The default template that performs barcode decoding, label recognizing, boundary detecting and document normalizing. The template name is "Default".
 
-## readBarcodes
+### readBarcodes
 
 The default template for the barcode reading tasks.
 
-## readBarcodesSpeedFirst
+### readBarcodesSpeedFirst
 
 The barcode reading template that prioritizes speed over read rate.
 
-## readBarcodesReadRateFirst
+### readBarcodesReadRateFirst
 
 The barcode reading template that prioritizes read rate over speed.
 
-## readSingleBarcode
+### readSingleBarcode
 
 The barcode reading template that specifically focuses on the single-barcode-scanning scenario.
 
-## recognizeTextLines
+### recognizeTextLines
 
 The preset template for the text line recognition tasks.
 
-## recognizeNumbers
+### recognizeNumbers
 
 The preset template for the number recognition tasks.
 
-## recognizeLetters
+### recognizeLetters
 
 The preset template for the letter recognition tasks.
 
-## recognizeNumbersAndLetters
+### recognizeNumbersAndLetters
 
 The preset template for the number and letter recognition tasks.
 
-## recognizeNumbersAndUppercaseLetters
+### recognizeNumbersAndUppercaseLetters
 
 The preset template for the number and uppercase letter recognition tasks.
 
-## recognizeUppercaseLetters
+### recognizeUppercaseLetters
 
 The preset template for the uppercase letter recognition tasks.
 
-## detectDocumentBoundaries
+### detectDocumentBoundaries
 
 The default template for the document boundary detection.
 
-## detectAndNormalizeDocument
+### detectAndNormalizeDocument
 
 The default template for the document detection and normalization.
 
-## normalizeDocument
+### normalizeDocument
 
 The default template for the document normalization.

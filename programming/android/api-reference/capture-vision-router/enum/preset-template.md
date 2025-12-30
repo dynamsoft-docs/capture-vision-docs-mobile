@@ -12,6 +12,8 @@ noTitleIndex: true
 
 `PresetTemplate` describes the preset template names.
 
+## Definition
+
 ```java
 @Retention(RetentionPolicy.CLASS)
 public @interface EnumPresetTemplate
@@ -33,58 +35,60 @@ public @interface EnumPresetTemplate
 }
 ```
 
-## PT_DEFAULT
+## Members
+
+### PT_DEFAULT
 
 The default template that performs barcode decoding, label recognizing, boundary detecting and document normalizing. The template name is "Default".
 
-## PT_READ_BARCODES
+### PT_READ_BARCODES
 
 The default template for the barcode reading tasks.
 
-## PT_READ_BARCODES_SPEED_FIRST
+### PT_READ_BARCODES_SPEED_FIRST
 
 The barcode reading template that prioritizes speed over read rate.
 
-## PT_READ_BARCODES_READ_RATE_FIRST
+### PT_READ_BARCODES_READ_RATE_FIRST
 
 The barcode reading template that prioritizes read rate over speed.
 
-## PT_READ_SINGLE_BARCODE
+### PT_READ_SINGLE_BARCODE
 
 The barcode reading template that specifically focuses on the single-barcode-scanning scenario.
 
-## PT_RECOGNIZE_TEXT_LINES
+### PT_RECOGNIZE_TEXT_LINES
 
 The preset template for the text line recognition tasks.
 
-## PT_RECOGNIZE_NUMBERS
+### PT_RECOGNIZE_NUMBERS
 
 The preset template for the number recognition tasks.
 
-## PT_RECOGNIZE_LETTERS
+### PT_RECOGNIZE_LETTERS
 
 The preset template for the letter recognition tasks.
 
-## PT_RECOGNIZE_NUMBERS_AND_LETTERS
+### PT_RECOGNIZE_NUMBERS_AND_LETTERS
 
 The preset template for the number and letter recognition tasks.
 
-## PT_RECOGNIZE_NUMBERS_AND_UPPERCASE_LETTERS
+### PT_RECOGNIZE_NUMBERS_AND_UPPERCASE_LETTERS
 
 The preset template for the number and uppercase letter recognition tasks.
 
-## PT_RECOGNIZE_UPPERCASE_LETTERS
+### PT_RECOGNIZE_UPPERCASE_LETTERS
 
 The preset template for the uppercase letter recognition tasks.
 
-## PT_DETECT_DOCUMENT_BOUNDARIES
+### PT_DETECT_DOCUMENT_BOUNDARIES
 
 The default template for the document boundary detection.
 
-## PT_DETECT_AND_NORMALIZE_DOCUMENT
+### PT_DETECT_AND_NORMALIZE_DOCUMENT
 
 The default template for the document detection and normalization.
 
-## PT_NORMALIZE_DOCUMENT
+### PT_NORMALIZE_DOCUMENT
 
 The default template for the document normalization.
