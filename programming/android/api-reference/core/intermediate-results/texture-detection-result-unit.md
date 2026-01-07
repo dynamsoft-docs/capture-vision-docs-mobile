@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TextureDetectionResultUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class TextureDetectionResultUnit of Dynamsoft Core Module represents an intermediate result unit for texture detection, which contains the x-direction spacing and y-direction spacing of the texture stripes.
+title: TextureDetectionResultUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class TextureDetectionResultUnit of Dynamsoft Capture Vision Android represents an intermediate result unit for texture detection, which contains the x-direction spacing and y-direction spacing of the texture stripes.
 keywords: texture detection, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

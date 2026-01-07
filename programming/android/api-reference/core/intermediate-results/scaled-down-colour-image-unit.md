@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ScaledDownColourImageUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class ScaledDownColourImageUnit of Dynamsoft Core Module represents a unit that contains a down-scaled colour image.
+title: ScaledDownColourImageUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class ScaledDownColourImageUnit of Dynamsoft Capture Vision Android represents a unit that contains a down-scaled colour image.
 keywords: scaled down colour image unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

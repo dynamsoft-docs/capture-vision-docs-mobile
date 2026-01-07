@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CapturedResultItemType - Dynamsoft Core Enumerations
-description: The enumeration CapturedResultItemType of Dynamsoft Core describes all types of captured result item.
+title: CapturedResultItemType - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration CapturedResultItemType of Dynamsoft Capture Vision Android describes all types of captured result item.
 keywords: Captured result types
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CharacterResult - Dynamsoft Label Recognizer Android Edition
-description: The class CharacterResult of Dynamsoft Label Recognizer Android edition represents the result of a character recognition process.
+title: CharacterResult - Dynamsoft Capture Vision Flutter Edition
+description: The class CharacterResult of Dynamsoft Capture Vision Flutter edition represents the result of a character recognition process.
 keywords: Character result
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

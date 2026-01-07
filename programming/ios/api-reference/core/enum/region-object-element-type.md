@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: RegionObjectElementType - Dynamsoft Core Enumerations
-description: The enumeration RegionObjectElementType of Dynamsoft Core describes the types of RegionObjectElement.
+title: RegionObjectElementType - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration RegionObjectElementType of Dynamsoft Capture Vision iOS describes the types of RegionObjectElement.
 keywords: Region object element type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

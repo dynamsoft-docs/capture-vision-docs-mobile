@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: LicenseModule - Dynamsoft Core Module MAUI Edition API Reference
+title: LicenseModule - Dynamsoft Capture Vision MAUI Edition API Reference
 description: The class LicenseModule of DynamsoftCore MAUI represents the license module, which provides general functions for managing licenses.
 keywords: license module, MAUI
 needGenerateH3Content: true

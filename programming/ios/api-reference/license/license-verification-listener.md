@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSLicenseVerificationListener - Dynamsoft Core Module iOS Edition API Reference
-description: The protocol DSLicenseVerificationListener of Dynamsoft Core Module includes methods for monitoring the license verification status.
+title: DSLicenseVerificationListener - Dynamsoft Capture Vision iOS Edition API Reference
+description: The protocol DSLicenseVerificationListener of Dynamsoft Capture Vision iOS includes methods for monitoring the license verification status.
 keywords: license verification, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

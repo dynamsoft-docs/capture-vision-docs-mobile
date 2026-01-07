@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Configure Settings - Dynamsoft Capture Vision Router Module Android Edition API Reference
+title: Configure Settings - Dynamsoft Capture Vision Android Edition API Reference
 description: Settings configuration APIs of CaptureVisionRouter class for DCV Android edition.
 keywords: capture vision, Java, Kotlin
 needGenerateH3Content: true

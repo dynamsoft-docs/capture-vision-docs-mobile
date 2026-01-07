@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: BinarizationMode - Dynamsoft Core Enumerations
-description: The enumeration BinarizationMode of Dynamsoft Core describes how the corner is formed by its sides.
+title: BinarizationMode - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration BinarizationMode of Dynamsoft Capture Vision Android describes how the corner is formed by its sides.
 keywords: Corner type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

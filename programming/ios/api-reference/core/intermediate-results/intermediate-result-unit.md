@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSIntermediateResultUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSIntermediateResultUnit of Dynamsoft Core Module represents an intermediate result unit used in image processing, which is an abstract base class with multiple subclasses.
+title: DSIntermediateResultUnit - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSIntermediateResultUnit of Dynamsoft Capture Vision iOS represents an intermediate result unit used in image processing, which is an abstract base class with multiple subclasses.
 keywords: intermediate result unit, image processing, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

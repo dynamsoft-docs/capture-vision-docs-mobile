@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: OriginalImageResultItem - Dynamsoft Core Module Android Edition API Reference
-description: The class OriginalImageResultItem of Dynamsoft Core Module represents a captured original image result item, which provides an property to get the image data.
+title: OriginalImageResultItem - Dynamsoft Capture Vision Android Edition API Reference
+description: The class OriginalImageResultItem of Dynamsoft Capture Vision Android represents a captured original image result item, which provides an property to get the image data.
 keywords: original image result item, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

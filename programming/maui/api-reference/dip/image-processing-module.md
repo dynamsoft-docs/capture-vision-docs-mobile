@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ImageProcessingModule - Dynamsoft Core Module MAUI Edition API Reference
+title: ImageProcessingModule - Dynamsoft Capture Vision MAUI Edition API Reference
 description: The class ImageProcessingModule of DynamsoftCore MAUI represents the image processing module.
 keywords: image processing module, MAUI
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSUtilityModule - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The class DSUtilityModule of Dynamsoft Capture Vision Router Module represents general functions of the utility module.
+title: DSUtilityModule - Dynamsoft Capture Vision iOS API Reference
+description: The class DSUtilityModule of Dynamsoft Capture Vision iOS represents general functions of the utility module.
 keywords: utility module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

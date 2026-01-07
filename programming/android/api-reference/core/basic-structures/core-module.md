@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CoreModule - Dynamsoft Core Module Android Edition API Reference
-description: The class CoreModule of Dynamsoft Core Module defines general functions of the core module.
+title: CoreModule - Dynamsoft Capture Vision Android Edition API Reference
+description: The class CoreModule of Dynamsoft Capture Vision Android defines general functions of the core module.
 keywords: core module, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

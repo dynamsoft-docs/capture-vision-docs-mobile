@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSFileFetcher - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The class DSFileFetcher of Dynamsoft Capture Vision Router Module is a utility class that partitions a multi-page image file into multiple independent ImageData objects.
+title: DSFileFetcher - Dynamsoft Capture Vision iOS API Reference
+description: The class DSFileFetcher of Dynamsoft Capture Vision iOS is a utility class that partitions a multi-page image file into multiple independent ImageData objects.
 keywords: file fetcher, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

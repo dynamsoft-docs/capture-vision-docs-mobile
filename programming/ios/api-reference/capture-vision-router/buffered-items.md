@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Buffered Items APIs of CaptureVisionRouter - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+title: Buffered Items APIs of CaptureVisionRouter - Dynamsoft Capture Vision iOS Edition API Reference
 description: Buffered items APIs references for DCV iOS Edition.
 keywords: capture vision, intermediate result, Objc, Swift
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageData - Dynamsoft Core Module Android Edition API Reference
-description: The class ImageData of Dynamsoft Core Module represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
+title: ImageData - Dynamsoft Capture Vision Android Edition API Reference
+description: The class ImageData of Dynamsoft Capture Vision Android represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
 keywords: image data, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

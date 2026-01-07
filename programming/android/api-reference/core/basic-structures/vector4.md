@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Vector4 - Dynamsoft Core Module Android Edition API Reference
-description: The class Vector4 of Dynamsoft Core Module represents a a four-dimensional vector.
+title: Vector4 - Dynamsoft Capture Vision Android Edition API Reference
+description: The class Vector4 of Dynamsoft Capture Vision Android represents a a four-dimensional vector.
 keywords: vector4, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

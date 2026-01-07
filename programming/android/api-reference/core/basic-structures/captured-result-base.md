@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CapturedResultBase - Dynamsoft Core Module Android Edition API Reference
-description: The class CapturedResultBase of Dynamsoft Core Module Android edition is the base class of all types of captured results.
+title: CapturedResultBase - Dynamsoft Capture Vision Android Edition API Reference
+description: The class CapturedResultBase of Dynamsoft Capture Vision Android edition is the base class of all types of captured results.
 keywords: captured result base, Android
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

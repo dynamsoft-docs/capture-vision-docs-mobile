@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: GrayscaleImageUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class GrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a grayscale image. It is derived from the IntermediateResultUnit class.
+title: GrayscaleImageUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class GrayscaleImageUnit of Dynamsoft Capture Vision Android represents a unit that contains a grayscale image. It is derived from the IntermediateResultUnit class.
 keywords: grayscale image unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

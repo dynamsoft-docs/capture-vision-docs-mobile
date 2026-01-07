@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSProactiveImageSourceAdapter - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The class DSProactiveImageSourceAdapter of Dynamsoft Capture Vision Router Module is an abstract class that provides an interface for proactively fetching images in a separate thread.
+title: DSProactiveImageSourceAdapter - Dynamsoft Capture Vision iOS API Reference
+description: The class DSProactiveImageSourceAdapter of Dynamsoft Capture Vision iOS is an abstract class that provides an interface for proactively fetching images in a separate thread.
 keywords: Proactive image source adapter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

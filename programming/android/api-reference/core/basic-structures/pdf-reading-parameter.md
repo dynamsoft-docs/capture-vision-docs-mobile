@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: PDFReadingParameter - Dynamsoft Core Module Android Edition API Reference
-description: The class PDFReadingParameter of Dynamsoft Core Module represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
+title: PDFReadingParameter - Dynamsoft Capture Vision Android Edition API Reference
+description: The class PDFReadingParameter of Dynamsoft Capture Vision Android represents the parameters for reading a PDF file, including the mode of PDF reading, the DPI (dots per inch) value, and the data source type.
 keywords: PDF reading parameter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

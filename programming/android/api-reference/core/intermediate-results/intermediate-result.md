@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: IntermediateResult - Dynamsoft Core Module Android Edition API Reference
-description: The class IntermediateResult of Dynamsoft Core Module represents a container containing a collection of IntermediateResultUnit objects.
+title: IntermediateResult - Dynamsoft Capture Vision Android Edition API Reference
+description: The class IntermediateResult of Dynamsoft Capture Vision Android represents a container containing a collection of IntermediateResultUnit objects.
 keywords: intermediate result, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: VideoFrameQuality - Dynamsoft Core Enumerations
-description: The enumeration VideoFrameQuality of Dynamsoft Core describes the quality of video frames.
+title: VideoFrameQuality - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration VideoFrameQuality of Dynamsoft Capture Vision iOS describes the quality of video frames.
 keywords: Video frame quality
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

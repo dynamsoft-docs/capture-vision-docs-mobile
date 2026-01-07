@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Intermediate Result APIs of CaptureVisionRouter - Dynamsoft Capture Vision Router Module Android Edition API Reference
+title: Intermediate Result APIs of CaptureVisionRouter - Dynamsoft Capture Vision Android Edition API Reference
 description: Intermediate Result APIs references of CaptureVisionRouter.
 keywords: capture vision, intermediate result, Java, Kotlin
 needGenerateH3Content: true

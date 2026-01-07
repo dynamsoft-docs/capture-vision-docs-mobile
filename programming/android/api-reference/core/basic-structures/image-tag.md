@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageTag - Dynamsoft Core Module Android Edition API Reference
-description: The class ImageTag of Dynamsoft Core Module represents an image tag that can be attached to an image in a system. It contains information about the image, such as the image ID and the image capture distance mode.
+title: ImageTag - Dynamsoft Capture Vision Android Edition API Reference
+description: The class ImageTag of Dynamsoft Capture Vision Android represents an image tag that can be attached to an image in a system. It contains information about the image, such as the image ID and the image capture distance mode.
 keywords: image tag, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

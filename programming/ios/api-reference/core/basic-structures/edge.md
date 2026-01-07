@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSEdge - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSEdge of Dynamsoft Core Module represents an edge of candidate quadrilaterals, which consists of two corners.
+title: DSEdge - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSEdge of Dynamsoft Capture Vision iOS represents an edge of candidate quadrilaterals, which consists of two corners.
 keywords: edge, quadrilateral, corner, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

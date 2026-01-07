@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: LineSegmentsUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class LineSegmentsUnit of Dynamsoft Core Module represents a collection of line segments in 2D space.
+title: LineSegmentsUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class LineSegmentsUnit of Dynamsoft Capture Vision Android represents a collection of line segments in 2D space.
 keywords: line segments, 2D space, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

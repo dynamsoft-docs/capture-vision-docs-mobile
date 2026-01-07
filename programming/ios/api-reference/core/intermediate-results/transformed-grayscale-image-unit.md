@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSTransformedGrayscaleImageUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSTransformedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a transformed grayscale image.
+title: DSTransformedGrayscaleImageUnit - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSTransformedGrayscaleImageUnit of Dynamsoft Capture Vision iOS represents a unit that contains a transformed grayscale image.
 keywords: transformed grayscale image, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

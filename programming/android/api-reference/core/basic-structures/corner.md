@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Corner - Dynamsoft Core Module Android Edition API Reference
-description: The class Corner of Dynamsoft Core Module represents a detected corner, which consists of an intersection and two lines.
+title: Corner - Dynamsoft Capture Vision Android Edition API Reference
+description: The class Corner of Dynamsoft Capture Vision Android represents a detected corner, which consists of an intersection and two lines.
 keywords: corner, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

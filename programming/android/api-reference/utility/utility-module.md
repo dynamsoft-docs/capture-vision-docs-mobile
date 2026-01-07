@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: UtilityModule - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The class UtilityModule of Dynamsoft Capture Vision Router Module represents general functions of the utility module.
+title: UtilityModule - Dynamsoft Capture Vision Android Edition API Reference
+description: The class UtilityModule of Dynamsoft Capture Vision Android represents general functions of the utility module.
 keywords: utility module, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

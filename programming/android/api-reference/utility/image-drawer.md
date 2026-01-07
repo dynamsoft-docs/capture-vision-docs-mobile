@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageDrawer - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The class ImageDrawer of Dynamsoft Capture Vision Router Module is a utility class for drawing graphics on images.
+title: ImageDrawer - Dynamsoft Capture Vision Android Edition API Reference
+description: The class ImageDrawer of Dynamsoft Capture Vision Android is a utility class for drawing graphics on images.
 keywords: image manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

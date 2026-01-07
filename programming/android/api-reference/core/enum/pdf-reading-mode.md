@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: PDFReadingMode - Dynamsoft Core Enumerations
-description: The enumeration PDFReadingMode of Dynamsoft Core describes all available PDF reading modes.
+title: PDFReadingMode - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration PDFReadingMode of Dynamsoft Capture Vision Android describes all available PDF reading modes.
 keywords: PDF Reading Mode
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

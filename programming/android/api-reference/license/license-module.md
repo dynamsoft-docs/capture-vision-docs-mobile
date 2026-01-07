@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: LicenseModule - Dynamsoft Core Module Android Edition API Reference
-description: The class LicenseModule of Dynamsoft Core Module represents the license module, which provides general functions for managing licenses.
+title: LicenseModule - Dynamsoft Capture Vision Android Edition API Reference
+description: The class LicenseModule of Dynamsoft Capture Vision Android represents the license module, which provides general functions for managing licenses.
 keywords: license module, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

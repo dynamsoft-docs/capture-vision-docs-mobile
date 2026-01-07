@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageSourceErrorListener - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The protocol ImageSourceErrorListener of Dynamsoft Capture Vision Router Module defines methods for monitoring the errors that occur in the ImageSourceAdapter.
+title: ImageSourceErrorListener - Dynamsoft Capture Vision iOS API Reference
+description: The protocol ImageSourceErrorListener of Dynamsoft Capture Vision iOS defines methods for monitoring the errors that occur in the ImageSourceAdapter.
 keywords: Error listener, ImageSourceAdapter, objc, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

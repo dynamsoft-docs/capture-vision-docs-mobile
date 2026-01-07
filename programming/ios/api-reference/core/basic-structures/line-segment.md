@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSLineSegment - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSLineSegment of Dynamsoft Core Module represents a line segment in 2D space, which contains the start point and end point of the line segment.
+title: DSLineSegment - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSLineSegment of Dynamsoft Capture Vision iOS represents a line segment in 2D space, which contains the start point and end point of the line segment.
 keywords: line segment, 2D, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

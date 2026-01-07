@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Intermediate Result APIs of DSCaptureVisionRouter - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+title: Intermediate Result APIs of DSCaptureVisionRouter - Dynamsoft Capture Vision iOS API Reference
 description: Intermediate Result APIs references of DSCaptureVisionRouter.
 keywords: cvr, CaptureVisionRouter, objective-c, swift, getIntermediateResultManager
 needGenerateH3Content: true

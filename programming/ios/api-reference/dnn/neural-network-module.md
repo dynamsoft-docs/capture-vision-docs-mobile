@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSNeuralNetworkModule - Dynamsoft Neural Network Module iOS Edition API Reference
-description: The class DSNeuralNetworkModule of Dynamsoft Neural Network Module represents general functions of the Neural Network module.
+title: DSNeuralNetworkModule - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSNeuralNetworkModule of Dynamsoft Capture Vision iOS represents general functions of the Neural Network module.
 keywords: image processing module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

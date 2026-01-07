@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSColourImageUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSColourImageUnit of Dynamsoft Core Module represents a unit that contains a colour image.
+title: DSColourImageUnit - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSColourImageUnit of Dynamsoft Capture Vision iOS represents a unit that contains a colour image.
 keywords: colour image unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

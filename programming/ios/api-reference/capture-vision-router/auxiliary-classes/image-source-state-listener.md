@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSImageSourceStateListener - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The protocol DSImageSourceStateListener of Dynamsoft Capture Vision Router Module defines methods for monitoring the state of the ImageSourceAdapter.
+title: DSImageSourceStateListener - Dynamsoft Capture Vision iOS API Reference
+description: The protocol DSImageSourceStateListener of Dynamsoft Capture Vision iOS defines methods for monitoring the state of the ImageSourceAdapter.
 keywords: image source state listener, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

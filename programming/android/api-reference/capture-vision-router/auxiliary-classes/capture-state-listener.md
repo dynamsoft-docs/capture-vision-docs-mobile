@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CaptureStateListener - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The interface CaptureStateListener of Dynamsoft Capture Vision Router Module defines the methods for monitoring the capture state.
+title: CaptureStateListener - Dynamsoft Capture Vision Android Edition API Reference
+description: The interface CaptureStateListener of Dynamsoft Capture Vision Android defines the methods for monitoring the capture state.
 keywords: capture state, monitoring, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

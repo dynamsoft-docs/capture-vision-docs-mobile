@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: NeuralNetworkModule - Dynamsoft Neural Network Module Android Edition API Reference
+title: NeuralNetworkModule - Dynamsoft Capture Vision Android Edition API Reference
 description: The class NeuralNetworkModule of Dynamsoft Neural Network Module represents general functions of the Neural Network module.
 keywords: Neural Network module, Java, Kotlin
 needGenerateH3Content: true

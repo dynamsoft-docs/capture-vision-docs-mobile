@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageSourceErrorListener - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The interface ImageSourceErrorListener of Dynamsoft Capture Vision Router Module defines methods for monitoring the errors that occur in the ImageSourceAdapter.
+title: ImageSourceErrorListener - Dynamsoft Capture Vision Android Edition API Reference
+description: The interface ImageSourceErrorListener of Dynamsoft Capture Vision Android defines methods for monitoring the errors that occur in the ImageSourceAdapter.
 keywords: Error listener, ImageSourceAdapter, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

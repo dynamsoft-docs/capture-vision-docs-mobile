@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Constructors of DSCaptureVisionRouter - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+title: Constructors of DSCaptureVisionRouter - Dynamsoft Capture Vision iOS API Reference
 description: The API references of the constructors of DSCaptureVisionRouter.
 keywords: cvr, CaptureVisionRouter, constructor, objective-c, swift
 needGenerateH3Content: true

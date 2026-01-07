@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DMImageIO - Dynamsoft Capture Vision Router Module MAUI Edition API Reference
+title: DMImageIO - Dynamsoft Capture Vision MAUI API Reference
 description: The class DMImageIO of Dynamsoft Capture Vision MAUI is a utility class that provides functionality for reading and saving images.
 keywords: image IO, MAUI
 needGenerateH3Content: true

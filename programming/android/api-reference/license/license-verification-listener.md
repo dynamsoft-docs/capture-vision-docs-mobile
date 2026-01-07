@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: LicenseVerificationListener - Dynamsoft Core Module Android Edition API Reference
-description: The interface LicenseVerificationListener of Dynamsoft Core Module includes methods for monitoring the license verification status.
+title: LicenseVerificationListener - Dynamsoft Capture Vision Android Edition API Reference
+description: The interface LicenseVerificationListener of Dynamsoft Capture Vision Android includes methods for monitoring the license verification status.
 keywords: license verification, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

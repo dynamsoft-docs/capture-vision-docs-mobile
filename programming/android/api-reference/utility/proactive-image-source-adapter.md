@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ProactiveImageSourceAdapter - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The class ProactiveImageSourceAdapter of Dynamsoft Capture Vision Router Module is an abstract class that provides an interface for proactively fetching images in a separate thread.
+title: ProactiveImageSourceAdapter - Dynamsoft Capture Vision Android Edition API Reference
+description: The class ProactiveImageSourceAdapter of Dynamsoft Capture Vision Android is an abstract class that provides an interface for proactively fetching images in a separate thread.
 keywords: Proactive image source adapter, Android
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

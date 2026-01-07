@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSBinaryImageUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a binary image.
+title: DSBinaryImageUnit - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSBinaryImageUnit of Dynamsoft Capture Vision iOS represents a unit that contains a binary image.
 keywords: binary image, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

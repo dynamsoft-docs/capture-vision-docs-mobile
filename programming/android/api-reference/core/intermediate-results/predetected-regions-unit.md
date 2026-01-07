@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: PredetectedRegionsUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class PredetectedRegionsUnit of Dynamsoft Core Module represents a unit that contains a collection of pre-detected regions.
+title: PredetectedRegionsUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class PredetectedRegionsUnit of Dynamsoft Capture Vision Android represents a unit that contains a collection of pre-detected regions.
 keywords: pre-detected regions, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

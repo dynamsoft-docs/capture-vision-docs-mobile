@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ImageProcessor - Dynamsoft Capture Vision Router Module MAUI Edition API Reference
+title: ImageProcessor - Dynamsoft Capture Vision MAUI API Reference
 description: The class ImageProcessor of Dynamsoft Capture Vision MAUI is a utility class that provides functionality for processing.
 keywords: image processor, MAUI
 needGenerateH3Content: true

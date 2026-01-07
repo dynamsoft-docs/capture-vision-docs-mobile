@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSOriginalImageResultItem - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSOriginalImageResultItem of Dynamsoft Core Module represents a captured original image result item, which provides an property to get the image data.
+title: DSOriginalImageResultItem - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSOriginalImageResultItem of Dynamsoft Capture Vision iOS represents a captured original image result item, which provides an property to get the image data.
 keywords: original image result item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

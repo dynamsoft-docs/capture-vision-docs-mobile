@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSGrayscaleImageUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a grayscale image. It is derived from the DSIntermediateResultUnit class.
+title: DSGrayscaleImageUnit - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSGrayscaleImageUnit of Dynamsoft Capture Vision iOS represents a unit that contains a grayscale image. It is derived from the DSIntermediateResultUnit class.
 keywords: grayscale image unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

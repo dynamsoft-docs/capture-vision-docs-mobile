@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSTextZone - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSTextZone of Dynamsoft Core Module represents a single text zone.
+title: DSTextZone - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSTextZone of Dynamsoft Capture Vision iOS represents a single text zone.
 keywords: text zones unit, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

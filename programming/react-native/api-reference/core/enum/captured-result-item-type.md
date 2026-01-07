@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumCapturedResultItemType - Dynamsoft Capture Vision React Native
+title: EnumCapturedResultItemType - Dynamsoft Capture Vision React Native Enumeration
 description: Enumeration EnumCapturedResultItemType of Dynamsoft Capture Vision React Native Edition defines the accepted result types that the Capture Vision instance will output.
 keywords: captured result, react native, capture vision, settings, barcode reader
 needAutoGenerateSidebar: true

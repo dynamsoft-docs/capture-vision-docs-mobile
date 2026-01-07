@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: GrayscaleTransformationMode - Dynamsoft Core Enumerations
-description: The enumeration GrayscaleTransformationMode of Dynamsoft Core describes all available grayscale transformation modes.
+title: GrayscaleTransformationMode - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration GrayscaleTransformationMode of Dynamsoft Capture Vision Android describes all available grayscale transformation modes.
 keywords: Grayscale transformation modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

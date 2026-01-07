@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ColourChannelUsageType - Dynamsoft Core Enumerations
-description: The enumeration ColourChannelUsageType of Dynamsoft Core describes how the color channel is used in the image.
+title: ColourChannelUsageType - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration ColourChannelUsageType of Dynamsoft Capture Vision iOS describes how the color channel is used in the image.
 keywords: Corner type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

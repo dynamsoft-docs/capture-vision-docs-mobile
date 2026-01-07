@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSCoreModule - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSCoreModule of Dynamsoft Core Module defines general functions of the core module.
+title: DSCoreModule - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSCoreModule of Dynamsoft Capture Vision iOS defines general functions of the core module.
 keywords: core module, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

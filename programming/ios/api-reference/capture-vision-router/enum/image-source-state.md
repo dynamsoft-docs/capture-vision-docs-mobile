@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageSourceState - Dynamsoft Core Enumerations
-description: The enumeration ImageSourceState of Dynamsoft Core describes the state of ImageSourceAdapter.
+title: ImageSourceState - Dynamsoft Vision Router iOS Enumerations
+description: The enumeration ImageSourceState of Dynamsoft Vision Router iOS describes the state of ImageSourceAdapter.
 keywords: Image source state
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

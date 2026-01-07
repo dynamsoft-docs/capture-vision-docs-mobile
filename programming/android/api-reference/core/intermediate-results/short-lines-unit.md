@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ShortLinesUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class ShortLinesUnit of Dynamsoft Core Module represents a unit that contains the information of the detected short lines.
+title: ShortLinesUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class ShortLinesUnit of Dynamsoft Capture Vision Android represents a unit that contains the information of the detected short lines.
 keywords: short lines unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

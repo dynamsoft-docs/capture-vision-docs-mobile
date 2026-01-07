@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: IntermediateResultExtraInfo - Dynamsoft Core Module Android Edition API Reference
-description: The class IntermediateResultExtraInfo of Dynamsoft Core Module represents the extra information for generating an intermediate result unit, which contains the name of the TargetROIDef object, the name of the task object, whether the intermediate result is section-level result, and the type of the section that generates the intermediate result.
+title: IntermediateResultExtraInfo - Dynamsoft Capture Vision Android Edition API Reference
+description: The class IntermediateResultExtraInfo of Dynamsoft Capture Vision Android represents the extra information for generating an intermediate result unit, which contains the name of the TargetROIDef object, the name of the task object, whether the intermediate result is section-level result, and the type of the section that generates the intermediate result.
 keywords: intermediate result extra info, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

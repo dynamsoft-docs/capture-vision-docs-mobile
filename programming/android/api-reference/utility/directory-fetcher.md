@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DirectoryFetcher - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The class DirectoryFetcher of Dynamsoft Capture Vision Router Module is a utility class that retrieves a list of files from a specified directory based on certain criteria.
+title: DirectoryFetcher - Dynamsoft Capture Vision Android Edition API Reference
+description: The class DirectoryFetcher of Dynamsoft Capture Vision Android is a utility class that retrieves a list of files from a specified directory based on certain criteria.
 keywords: directory fetcher, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

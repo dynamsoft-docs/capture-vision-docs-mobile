@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: IntermediateResultUnitType - Dynamsoft Core Enumerations
-description: The enumeration IntermediateResultUnitType of Dynamsoft Core describes the type of the intermediate result unit.
+title: IntermediateResultUnitType - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration IntermediateResultUnitType of Dynamsoft Capture Vision Android describes the type of the intermediate result unit.
 keywords: Intermediate result unit type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

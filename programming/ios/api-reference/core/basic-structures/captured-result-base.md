@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSCapturedResultBase - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSCapturedResultBase of Dynamsoft Core Module is the base class of all types of captured results.
+title: DSCapturedResultBase - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSCapturedResultBase of Dynamsoft Capture Vision iOS is the base class of all types of captured results.
 keywords: captured result base, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

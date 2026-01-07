@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: SectionType - Dynamsoft Core Enumerations
-description: The enumeration SectionType of Dynamsoft Core describes the section of the algorithm.
+title: SectionType - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration SectionType of Dynamsoft Capture Vision Android describes the section of the algorithm.
 keywords: Section type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

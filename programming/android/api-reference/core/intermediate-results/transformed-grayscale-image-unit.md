@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TransformedGrayscaleImageUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class TransformedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a transformed grayscale image.
+title: TransformedGrayscaleImageUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class TransformedGrayscaleImageUnit of Dynamsoft Capture Vision Android represents a unit that contains a transformed grayscale image.
 keywords: transformed grayscale image, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

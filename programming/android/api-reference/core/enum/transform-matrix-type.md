@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TransformMatrixType - Dynamsoft Core Enumerations
-description: The enumeration TransformMatrixType of Dynamsoft Core describes transform matrix types.
+title: TransformMatrixType - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration TransformMatrixType of Dynamsoft Capture Vision Android describes transform matrix types.
 keywords: Target type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

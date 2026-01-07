@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: BufferedItemsManager - Dynamsoft Capture Vision Router Module Android Edition API Reference
+title: BufferedItemsManager - Dynamsoft Capture Vision Android Edition API Reference
 description: The BufferedItemsManager class of DCV Android edition is used to manage the buffered items.
 keywords: buffered items, manager, Java, Kotlin
 needGenerateH3Content: true
