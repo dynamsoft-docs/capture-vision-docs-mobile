@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: SimplifiedCaptureVisionSettings - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The class SimplifiedCaptureVisionSettings of Dynamsoft Capture Vision Router Module contains settings for capturing and recognizing images with the CaptureVisionRouter class.
+title: SimplifiedCaptureVisionSettings - Dynamsoft Capture Vision Android Edition API Reference
+description: The class SimplifiedCaptureVisionSettings of Dynamsoft Capture Vision Android contains settings for capturing and recognizing images with the CaptureVisionRouter class.
 keywords: Capture Vision settings, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CornerType - Dynamsoft Core Enumerations
-description: The enumeration CornerType of Dynamsoft Core describes how the corner is formed by its sides.
+title: CornerType - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration CornerType of Dynamsoft Capture Vision iOS describes how the corner is formed by its sides.
 keywords: Corner type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

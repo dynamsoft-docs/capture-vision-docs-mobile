@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageTagType - Dynamsoft Core Enumerations
-description: The enumeration ImageTagType of Dynamsoft Core describes the types of image tags.
+title: ImageTagType - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration ImageTagType of Dynamsoft Capture Vision iOS describes the types of image tags.
 keywords: Image tag type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

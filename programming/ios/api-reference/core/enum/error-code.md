@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ErrorCode - Dynamsoft Core Enumerations
-description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
+title: ErrorCode - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration ErrorCode of Dynamsoft Capture Vision iOS describes all error codes.
 keywords: Error code
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

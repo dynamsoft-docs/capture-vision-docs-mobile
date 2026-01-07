@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSRect - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSRect of Dynamsoft Core Module iOS edition represents a rectangle in 2D space, which contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
+title: DSRect - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSRect of Dynamsoft Capture Vision iOS edition represents a rectangle in 2D space, which contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
 keywords: rectangle, 2D space, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

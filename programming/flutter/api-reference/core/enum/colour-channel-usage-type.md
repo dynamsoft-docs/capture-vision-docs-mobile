@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumColourChannelUsageType - Dynamsoft Barcode Reader Flutter
+title: EnumColourChannelUsageType - Dynamsoft Capture Vision Flutter Enumerations
 description: Enumeration EnumColourChannelUsageType of DBR Flutter Edition defines the available colour channels for the Camera Enhancer to use when capturing images or frames
 keywords: colour channel, capture vision, camera, enhancer, pixel, format
 needAutoGenerateSidebar: true

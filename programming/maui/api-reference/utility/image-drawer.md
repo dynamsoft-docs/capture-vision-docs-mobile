@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ImageDrawer - Dynamsoft Capture Vision Router Module MAUI Edition API Reference
+title: ImageDrawer - Dynamsoft Capture Vision MAUI API Reference
 description: The class ImageDrawer of Dynamsoft Capture Vision MAUI is a utility class that provides functionality for drawing various shapes on images.
 keywords: image drawer, MAUI
 needGenerateH3Content: true

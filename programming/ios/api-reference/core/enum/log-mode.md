@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: LogMode - Dynamsoft Core Enumerations
-description: The enumeration LogMode of Dynamsoft Core describes the logging mode of the library.
+title: LogMode - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration LogMode of Dynamsoft Capture Vision iOS describes the logging mode of the library.
 keywords: logging mode
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

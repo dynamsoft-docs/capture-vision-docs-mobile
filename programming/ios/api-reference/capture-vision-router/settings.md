@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Configure Settings - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+title: Configure Settings - Dynamsoft Capture Vision iOS API Reference
 description: Settings configuration APIs of CaptureVisionRouter class for DCV iOS edition.
 keywords: cvr, CaptureVisionRouter, objective-c, swift, initSettings, updateSettings
 needGenerateH3Content: true

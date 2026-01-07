@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ColourImageUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class ColourImageUnit of Dynamsoft Core Module represents a unit that contains a colour image.
+title: ColourImageUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class ColourImageUnit of Dynamsoft Capture Vision Android represents a unit that contains a colour image.
 keywords: colour image unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

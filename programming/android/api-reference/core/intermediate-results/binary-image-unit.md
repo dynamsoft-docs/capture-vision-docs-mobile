@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: BinaryImageUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class BinaryImageUnit of Dynamsoft Core Module represents a unit that contains a binary image.
+title: BinaryImageUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class BinaryImageUnit of Dynamsoft Capture Vision Android represents a unit that contains a binary image.
 keywords: binary image, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

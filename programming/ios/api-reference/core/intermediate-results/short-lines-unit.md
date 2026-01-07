@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSShortLinesUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSShortLinesUnit of Dynamsoft Core Module represents a unit that contains the detected short lines.
+title: DSShortLinesUnit - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSShortLinesUnit of Dynamsoft Capture Vision iOS represents a unit that contains the detected short lines.
 keywords: short lines, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

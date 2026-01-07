@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TextZonesUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class TextZonesUnit of Dynamsoft Core Module represents a unit that contains text zones, which is derived from IntermediateResultUnit class.
+title: TextZonesUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class TextZonesUnit of Dynamsoft Capture Vision Android represents a unit that contains text zones, which is derived from IntermediateResultUnit class.
 keywords: text zones unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

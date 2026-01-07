@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImagePixelFormat - Dynamsoft Core Enumerations
-description: The enumeration ImagePixelFormat of Dynamsoft Core describes all supported image pixel formats.
+title: ImagePixelFormat - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration ImagePixelFormat of Dynamsoft Capture Vision iOS describes all supported image pixel formats.
 keywords: Image pixel format
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

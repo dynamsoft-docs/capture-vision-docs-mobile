@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageFileFormat - Dynamsoft Core Enumerations
-description: The enumeration ImageFileFormat of Dynamsoft Core defines the file format of the image file.
+title: ImageFileFormat - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration ImageFileFormat of Dynamsoft Capture Vision Android defines the file format of the image file.
 keywords: Image file format
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

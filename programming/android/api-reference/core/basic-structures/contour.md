@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Contour - Dynamsoft Core Module Android Edition API Reference
-description: The class Contour of Dynamsoft Core Module represents a contour in 2D space, which contains an array of CPoint objects, representing the vertices of the contour.
+title: Contour - Dynamsoft Capture Vision Android Edition API Reference
+description: The class Contour of Dynamsoft Capture Vision Android represents a contour in 2D space, which contains an array of CPoint objects, representing the vertices of the contour.
 keywords: contour, 2D space, CPoint, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

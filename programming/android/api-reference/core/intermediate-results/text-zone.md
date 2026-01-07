@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TextZone - Dynamsoft Core Module Android Edition API Reference
-description: The class TextZone of Dynamsoft Core Module represents a single text zone.
+title: TextZone - Dynamsoft Capture Vision Android Edition API Reference
+description: The class TextZone of Dynamsoft Capture Vision Android represents a single text zone.
 keywords: text zone, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

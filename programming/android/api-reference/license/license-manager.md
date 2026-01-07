@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: LicenseManager - Dynamsoft Core Module Android Edition API Reference
-description: The class LicenseManager of Dynamsoft Core Module provides a set of APIs to manage SDK licensing.
+title: LicenseManager - Dynamsoft Capture Vision Android Edition API Reference
+description: The class LicenseManager of Dynamsoft Capture Vision Android provides a set of APIs to manage SDK licensing.
 keywords: license manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageDrawer - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The class ImageDrawer of Dynamsoft Capture Vision Router Module is a utility class for drawing graphics on images.
+title: ImageDrawer - Dynamsoft Capture Vision iOS API Reference
+description: The class ImageDrawer of Dynamsoft Capture Vision iOS is a utility class for drawing graphics on images.
 keywords: image manager, Objective-C, OC, Swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

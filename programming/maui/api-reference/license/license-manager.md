@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: LicenseManager - Dynamsoft Capture Vision MAUI API Reference
-description: The class LicenseManager of Dynamsoft Core Module provides a set of APIs to manage SDK licensing.
+description: The class LicenseManager of Dynamsoft Capture Vision MAUI provides a set of APIs to manage SDK licensing.
 keywords: license manager
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

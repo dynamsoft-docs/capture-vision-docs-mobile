@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ImageManager - Dynamsoft Capture Vision Router Module MAUI Edition API Reference
+title: ImageManager - Dynamsoft Capture Vision MAUI API Reference
 description: The class ImageManager of Dynamsoft Capture Vision MAUI is a utility class for managing and manipulating images. It provides functionality for saving images to files and drawing various shapes on images.
 keywords: image manager, MAUI
 needGenerateH3Content: true

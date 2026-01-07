@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CapturedResultBase - Dynamsoft Core Module MAUI Edition API Reference
-description: The class CapturedResultBase of Dynamsoft Core Module MAUI edition is the base class of all types of captured results.
+title: CapturedResultBase - Dynamsoft Capture Vision MAUI Edition API Reference
+description: The class CapturedResultBase of Dynamsoft Capture Vision MAUI edition is the base class of all types of captured results.
 keywords: captured result base, MAUI
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

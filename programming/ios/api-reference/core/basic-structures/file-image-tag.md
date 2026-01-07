@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSFileImageTag - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSFileImageTag of Dynamsoft Core Module represents an image tag that is associated with a file, which contains the file path, page number, and total page number.
+title: DSFileImageTag - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSFileImageTag of Dynamsoft Capture Vision iOS represents an image tag that is associated with a file, which contains the file path, page number, and total page number.
 keywords: image tag, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

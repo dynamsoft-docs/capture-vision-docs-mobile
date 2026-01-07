@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Quadrilateral - Dynamsoft Core Module Android Edition API Reference
-description: The class Quadrilateral of Dynamsoft Core Module represents a quadrilateral shape in 2D space, which contains an array of four points, representing the vertices of the quadrilateral.
+title: Quadrilateral - Dynamsoft Capture Vision Android Edition API Reference
+description: The class Quadrilateral of Dynamsoft Capture Vision Android represents a quadrilateral shape in 2D space, which contains an array of four points, representing the vertices of the quadrilateral.
 keywords: quadrilateral, shape, 2D space, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

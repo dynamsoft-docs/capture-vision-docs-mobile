@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSCapturedResultFilter - Dynamsoft Core Module iOS Edition API Reference
-description: The protocol DSCapturedResultFilter of Dynamsoft Core Module represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+title: DSCapturedResultFilter - Dynamsoft Capture Vision iOS Edition API Reference
+description: The protocol DSCapturedResultFilter of Dynamsoft Capture Vision iOS represents a captured result filter, which is responsible for filtering different types of captured results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 keywords: captured result filter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

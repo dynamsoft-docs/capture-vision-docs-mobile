@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: FilterType - Dynamsoft Utility iOS Enumerations
-description: The enumeration FilterType of Dynamsoft Utility iOS edition describes the specified image filter applied to an input image.
+title: FilterType - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration FilterType of Dynamsoft Capture Vision iOS edition describes the specified image filter applied to an input image.
 keywords: image filter
 codeAutoHeight: true
 ---

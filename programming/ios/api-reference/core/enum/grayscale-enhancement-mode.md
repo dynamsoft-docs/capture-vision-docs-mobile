@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: GrayscaleEnhancementMode - Dynamsoft Core Enumerations
-description: The enumeration GrayscaleEnhancementMode of Dynamsoft Core describes all available grayscale enhancement modes.
+title: GrayscaleEnhancementMode - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration GrayscaleEnhancementMode of Dynamsoft Capture Vision iOS describes all available grayscale enhancement modes.
 keywords: Grayscale enhancement modes
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

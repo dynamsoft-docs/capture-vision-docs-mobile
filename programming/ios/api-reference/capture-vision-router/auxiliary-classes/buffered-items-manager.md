@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: BufferedItemsManager - Dynamsoft Capture Vision Router Module iOS Edition API Reference
+title: BufferedItemsManager - Dynamsoft Capture Vision iOS API Reference
 description: The BufferedItemsManager class of DCV iOS edition is used to manage the buffered items.
 keywords: buffered items, manager, Objc, Objective-C, Swift
 needGenerateH3Content: true

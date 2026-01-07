@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: RasterDataSource - Dynamsoft Core Enumerations
-description: The enumeration RasterDataSource of Dynamsoft Core describes raster data source types.
+title: RasterDataSource - Dynamsoft Capture Vision Android Enumerations
+description: The enumeration RasterDataSource of Dynamsoft Capture Vision Android describes raster data source types.
 keywords: Target type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

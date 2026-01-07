@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CapturedResultBase - Dynamsoft Capture Vision Flutter
-description: The class CapturedResultBase of Dynamsoft Core Module Flutter edition is the base class of all types of captured results.
+description: The class CapturedResultBase of Dynamsoft Capture Vision Flutter edition is the base class of all types of captured results.
 keywords: captured result base, Flutter
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

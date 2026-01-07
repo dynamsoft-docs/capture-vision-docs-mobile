@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSContour - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSContour of Dynamsoft Core Module represents a contour in 2D space, which contains an array of CPoint objects, representing the vertices of the contour.
+title: DSContour - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSContour of Dynamsoft Capture Vision iOS represents a contour in 2D space, which contains an array of CPoint objects, representing the vertices of the contour.
 keywords: contour, 2D space, CPoint, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

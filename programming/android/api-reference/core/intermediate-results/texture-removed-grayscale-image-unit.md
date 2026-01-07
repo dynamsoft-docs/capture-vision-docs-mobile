@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TextureRemovedGrayscaleImageUnit - Dynamsoft Core Module Android Edition API Reference
-description: The class TextureRemovedGrayscaleImageUnit of Dynamsoft Core Module represents a unit that contains a texture-removed grayscale image. It is derived from the IntermediateResultUnit class.
+title: TextureRemovedGrayscaleImageUnit - Dynamsoft Capture Vision Android Edition API Reference
+description: The class TextureRemovedGrayscaleImageUnit of Dynamsoft Capture Vision Android represents a unit that contains a texture-removed grayscale image. It is derived from the IntermediateResultUnit class.
 keywords: texture-removed grayscale image, unit, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

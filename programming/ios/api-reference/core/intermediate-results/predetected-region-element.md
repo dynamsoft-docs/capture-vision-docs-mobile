@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSPredetectedRegionElement - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSPredetectedRegionElement of Dynamsoft Core Module represents a pre-detected region element, which is a subclass of DSRegionObjectElement.
+title: DSPredetectedRegionElement - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSPredetectedRegionElement of Dynamsoft Capture Vision iOS represents a pre-detected region element, which is a subclass of DSRegionObjectElement.
 keywords: pre-detected region element, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

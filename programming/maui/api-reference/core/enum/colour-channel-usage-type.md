@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumColourChannelUsageType - Dynamsoft Vision Router MAUI Edition
+title: EnumColourChannelUsageType - Dynamsoft Vision Router MAUI Enumerations
 description: The enumeration ColourChannelUsageType of Dynamsoft Vision Router describes the type of CapturedResultItem.
 keywords: capture result item type, multi-frame cross filter
 needGenerateH3Content: true

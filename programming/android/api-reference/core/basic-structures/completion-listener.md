@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CompletionListener - Dynamsoft Capture Vision Router Module Android Edition API Reference
-description: The interface CompletionListener of Dynamsoft Capture Vision Router Module defines the methods for handling callback when startCapturing is finished.
+title: CompletionListener - Dynamsoft Capture Vision Android Edition API Reference
+description: The interface CompletionListener of Dynamsoft Capture Vision Android defines the methods for handling callback when startCapturing is finished.
 keywords: startCapturing, completion, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSMultiFrameResultCrossFilter - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The class DSMultiFrameResultCrossFilter of Dynamsoft Capture Vision Router Module is responsible for filtering captured results.
+title: DSMultiFrameResultCrossFilter - Dynamsoft Capture Vision iOS API Reference
+description: The class DSMultiFrameResultCrossFilter of Dynamsoft Capture Vision iOS is responsible for filtering captured results.
 keywords: multi-frame result cross filter, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

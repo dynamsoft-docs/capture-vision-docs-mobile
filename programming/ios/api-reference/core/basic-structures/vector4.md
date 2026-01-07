@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSVector4 - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSVector4 of Dynamsoft Core Module represents a a four-dimensional vector.
+title: DSVector4 - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSVector4 of Dynamsoft Capture Vision iOS represents a a four-dimensional vector.
 keywords: vector4, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

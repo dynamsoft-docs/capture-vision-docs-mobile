@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: VideoFrameTag - Dynamsoft Core Module Android Edition API Reference
-description: The class VideoFrameTag of Dynamsoft Core Module represents a video frame tag, which is a type of image tag that is used to store additional information about a video frame. It inherits from the ImageTag class and adds additional attributes and methods specific to video frames.
+title: VideoFrameTag - Dynamsoft Capture Vision Android Edition API Reference
+description: The class VideoFrameTag of Dynamsoft Capture Vision Android represents a video frame tag, which is a type of image tag that is used to store additional information about a video frame. It inherits from the ImageTag class and adds additional attributes and methods specific to video frames.
 keywords: video frame tag, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSTextRemovedBinaryImageUnit - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSTextRemovedBinaryImageUnit of Dynamsoft Core Module represents a unit that contains a text-removed binary image.
+title: DSTextRemovedBinaryImageUnit - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSTextRemovedBinaryImageUnit of Dynamsoft Capture Vision iOS represents a unit that contains a text-removed binary image.
 keywords: text-removed binary image, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

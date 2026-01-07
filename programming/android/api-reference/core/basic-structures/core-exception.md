@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: extends CoreException - Dynamsoft Core Module Android Edition API Reference
-description: The class CameraEnhancerModule of Dynamsoft Core Module defines the camera enhancer exception.
+title: extends CoreException - Dynamsoft Capture Vision Android Edition API Reference
+description: The class CameraEnhancerModule of Dynamsoft Capture Vision Android defines the camera enhancer exception.
 keywords: camera enhancer, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

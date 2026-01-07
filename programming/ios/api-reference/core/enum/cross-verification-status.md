@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CrossVerificationStatus - Dynamsoft Core Enumerations
-description: The enumeration CrossVerificationStatus of Dynamsoft Core describes the status of the captured results.
+title: CrossVerificationStatus - Dynamsoft Capture Vision iOS Enumerations
+description: The enumeration CrossVerificationStatus of Dynamsoft Capture Vision iOS describes the status of the captured results.
 keywords: cross verification status
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumCapturedResultItemType - Dynamsoft Barcode Reader Flutter
+title: EnumCapturedResultItemType - Dynamsoft Capture Vision Flutter Enumerations
 description: Enumeration EnumCapturedResultItemType of DBR Flutter Edition defines the accepted result types that the Capture Vision instance will output
 keywords: captured result, flutter, capture vision, settings, barcode reader
 needAutoGenerateSidebar: true

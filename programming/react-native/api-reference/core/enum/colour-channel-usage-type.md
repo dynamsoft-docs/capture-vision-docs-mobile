@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: EnumColourChannelUsageType - Dynamsoft Capture Vision React Native
+title: EnumColourChannelUsageType - Dynamsoft Capture Vision React Native Enumerations
 description: Enumeration EnumColourChannelUsageType of Dynamsoft Capture Vision React Native Edition defines the available colour channels for the image source to use when capturing images or frames
 keywords: colour channel, capture vision, camera, enhancer, pixel, format
 needAutoGenerateSidebar: true

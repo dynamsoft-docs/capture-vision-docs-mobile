@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ImageIO - Dynamsoft Capture Vision Router Module iOS Edition API Reference
-description: The class ImageIO of Dynamsoft Capture Vision Router Module is a utility class for managing the image data. It provides functionality for saving images to files and reading images from files.
+title: ImageIO - Dynamsoft Capture Vision iOS API Reference
+description: The class ImageIO of Dynamsoft Capture Vision iOS is a utility class for managing the image data. It provides functionality for saving images to files and reading images from files.
 keywords: image io, image manager, Objective-C, OC, Swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

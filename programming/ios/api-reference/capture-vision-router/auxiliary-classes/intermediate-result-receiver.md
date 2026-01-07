@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DSIntermediateResultReceiver - Dynamsoft Core Module iOS Edition API Reference
+title: DSIntermediateResultReceiver - Dynamsoft Capture Vision iOS Edition API Reference
 description: The protocol DSIntermediateResultReceiver includes methods for monitoring the output of intermediate results.
 keywords: protocol, objective-c, swift
 needGenerateH3Content: true

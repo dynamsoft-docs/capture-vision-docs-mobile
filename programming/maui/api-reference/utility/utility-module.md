@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: UtilityModule - Dynamsoft Capture Vision Router Module MAUI Edition API Reference
+title: UtilityModule - Dynamsoft Capture Vision MAUI API Reference
 description: The class UtilityModule of Dynamsoft Capture Vision MAUI Module represents general functions of the utility module.
 keywords: utility module, MAUI
 needGenerateH3Content: true

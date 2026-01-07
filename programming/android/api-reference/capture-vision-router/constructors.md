@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Constructors of CaptureVisionRouter - Dynamsoft Capture Vision Router Module Android Edition API Reference
+title: Constructors of CaptureVisionRouter - Dynamsoft Capture Vision Android Edition API Reference
 description: The API references of the constructors of CaptureVisionRouter.
 keywords: capture vision, Java, Kotlin
 needGenerateH3Content: true

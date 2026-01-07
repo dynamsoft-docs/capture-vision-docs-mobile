@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DSCapturedResultItem - Dynamsoft Core Module iOS Edition API Reference
-description: The class DSCapturedResultItem of Dynamsoft Core Module represents an item in a captured result, such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
+title: DSCapturedResultItem - Dynamsoft Capture Vision iOS Edition API Reference
+description: The class DSCapturedResultItem of Dynamsoft Capture Vision iOS represents an item in a captured result, such as barcode, text line, detected quad, normalized image, original image, parsed item, etc.
 keywords: captured result item, objective-c, swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
