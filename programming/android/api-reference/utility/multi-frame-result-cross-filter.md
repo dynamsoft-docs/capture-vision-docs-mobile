@@ -37,6 +37,8 @@ class MultiFrameResultCrossFilter implements CapturedResultFilter
 | [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if deduplication is active for a given result item type. |
 | [`setDuplicateForgetTime`](#setduplicateforgettime) | Sets the interval during which duplicates are disregarded for specific result item types. |
 | [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Set the maximum overlapping frames count for a given result item type. |
+| [`setResultCrossVerificationCriteria`](#setresultcrossverificationcriteria) | Sets the cross-verification criteria for specified result item types. |
+| [`getResultCrossVerificationCriteria`](#getresultcrossverificationcriteria) | Gets the cross-verification criteria for a specified result item type. |
 
 ### MultiFrameResultCrossFilter
 
@@ -198,3 +200,33 @@ int getMaxOverlappingFrames(@EnumCapturedResultItemType int type);
 **Return Value**
 
 The maximum overlapping frame count for the overlapping.
+
+### setResultCrossVerificationCriteria
+
+Sets the cross-verification criteria for specified result item types. This function allows customization of the multi-frame verification parameters, controlling how many frames are analyzed and how many consistent results are required.
+
+```java
+void setResultCrossVerificationCriteria(int resultItemTypes, CrossVerificationCriteria criteria);
+```
+
+**Parameters**
+
+`[in] resultItemTypes`: Specifies the result item types with [`CapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html).
+
+`[in] criteria`: Specifies the cross-verification criteria with a [`CrossVerificationCriteria`]({{ site.dcv_android_api }}utility/cross-verification-criteria.html) object.
+
+### getResultCrossVerificationCriteria
+
+Gets the cross-verification criteria for a specified result item type.
+
+```java
+CrossVerificationCriteria getResultCrossVerificationCriteria(CapturedResultItemType resultItemType);
+```
+
+**Parameters**
+
+`[in] resultItemType`: Specifies the result item type with [`CapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html).
+
+**Return Value**
+
+The cross-verification criteria for the specified result item type, of type [`CrossVerificationCriteria`]({{ site.dcv_android_api }}utility/cross-verification-criteria.html).

@@ -9,6 +9,70 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision iOS v3.x
 
+## 3.4.1000 (02/05/2026)
+
+### Highlights
+
+#### AI-Powered Barcode Detection and Decoding
+
+- **PDF417 Localization Model** – Introduces the `PDF417Localization` neural network model for improved detection of PDF417 barcodes, especially in challenging conditions.
+- **Code39/ITF Decoding Model** – Adds the `Code39ITFDecoder` model for enhanced decoding of Code 39 and ITF barcodes under blur or low-resolution conditions.
+- **Deblur Models for 2D Barcodes** – New `DataMatrixQRCodeDeblur` and `PDF417Deblur` models provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
+
+#### ECI (Extended Channel Interpretation) Support
+
+- **ECI Information Return** – Added support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`DSECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class along with [`getECISegments`]({{ site.dbr_ios_api }}barcode-result-item.html#getecisegments) method in [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class enable access to character encoding information embedded in barcodes.
+- **Automatic UTF-8 Conversion** – Barcode text is now automatically converted to UTF-8 based on ECI segments when available, improving compatibility with international character sets.
+
+#### Performance Improvements
+
+- **On-Demand Model Loading** – Implemented lazy loading for AI models, reducing initialization time by loading models only when first needed.
+- **Smart Model Selection** – Models are now loaded based on configured barcode formats, minimizing memory usage by excluding unused models.
+- **Improved Confidence Scoring** – Enhanced confidence score calculation for results from neural network models, providing more accurate quality indicators.
+- **DPM Barcode Optimization** – Improved recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
+
+#### Identity Document Processing
+
+- **Enhanced Passport Processing** – Improved document edge detection accuracy for passport documents through optimized processing workflows.
+- **Portrait Zone Detection** – The `MRZLocalization` model now supports detecting portrait zone on identity documents, enabling automatic extraction of photo regions.
+- **New DynamsoftIdentityUtility Module** – Introduces a dedicated module for identity document processing, including the [`DSIdentityProcessor`]({{ site.dcv_ios_api }}identity-utility/identity-processor.html) class with `findPortraitZone` method for precise portrait positioning from passports and ID cards.
+
+### New
+
+- Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
+- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`DSMultiFrameResultCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
+- Added [`DSAuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class for representing additional region information detected during processing (e.g., MRZ (Machine Readable Zone), portrait zones).
+- Added `ROET_AUXILIARY_REGION` to [`DSRegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html) enumeration for the new [`DSAuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class.
+- Added auxiliary region element management methods to [`DSLocalizedTextLinesUnit`]({{ site.dlr_ios_api }}localized-text-lines-unit.html):
+  - `getAuxiliaryRegionElementsCount`
+  - `getAuxiliaryRegionElement`
+  - `getAuxiliaryRegionElements`
+  - `setAuxiliaryRegionElement`
+  - `addAuxiliaryRegionElement`
+  - `removeAuxiliaryRegionElement`
+  - `removeAllAuxiliaryRegionElements`
+- Added new error code [`EC_PORTRAIT_ZONE_NOT_FOUND`]({{ site.dcv_ios_api }}core/enum/error-code.html) for identity document processing.
+- Added a new resolution [`RESOLUTION_MAX`]({{ site.dce_ios_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
+- Added a new listener [`DSFocusListener`]({{ site.dce_ios_api }}auxiliary-api/interface-focus-listener.html) for receiving callback when the camera focus is completed. You can register the listener via [`DSCameraEnhancer.setFocusListener`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html#setfocuslistener).
+
+### Changed
+
+- Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
+- Improved license binding stability on MacOS devices.
+- Updated default value of `compensation` parameter in [`DSImageProcessor.convertToBinaryLocal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
+- [`DSImageProcessor.convertToBinaryGlobal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinarylocal) now support color and binary images as input in addition to grayscale images.
+
+### Deprecated
+
+- `DataMatrixModuleIsotropic` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+- `MinRatioOfBarcodeZoneWidthToHeight` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+
+### Fixed
+
+- Fixed incorrect coordinate in barcode result when using neural network models with a specified region.
+- Fixed crash and hang issues that could occur in certain scenarios.
+- Fixed various minor bugs and improved overall stability.
+
 ## 3.2.5000 (12/16/2025)
 
 This release includes security maintenance updates to ensure continued protection of the product.
@@ -44,21 +108,21 @@ This release focuses on practical performance gains for production environments 
 
 #### AI-Powered Barcode Detection and Decoding
 
-- New Localization Models – Introduces [`OneDLocalization`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) and [`DataMatrixQRCodeLocalization`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) neural network models for improved detection of **blurred / low-resolution 1D codes**, or **partially damaged DataMatrix/QR codes**.
-- Specialized Decoders – Adds [`EAN13Decoder`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) and [`Code128Decoder`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) models optimized for **long-distance** and **motion-blurred** decoding scenarios.
-- Redesigned Deblur Model – The [`OneDDeblur`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) model now provides more effective recovery from **motion and focus blur**.
+- New Localization Models – Introduces [`OneDLocalization`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) and [`DataMatrixQRCodeLocalization`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) neural network models for improved detection of **blurred / low-resolution 1D codes**, or **partially damaged DataMatrix/QR codes**.
+- Specialized Decoders – Adds [`EAN13Decoder`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) and [`Code128Decoder`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) models optimized for **long-distance** and **motion-blurred** decoding scenarios.
+- Redesigned Deblur Model – The [`OneDDeblur`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) model now provides more effective recovery from **motion and focus blur**.
 - Configurable Model Selection – The new `ModelNameArray` parameter supports flexible model loading and fine-grained control for specific barcode types.
 
 #### Precision and Processing Control
 
-- Enhanced Deblur Methods – [`DM_DEEP_ANALYSIS`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#dm_deep_analysis) now includes sub-level control with `OneDGeneral`, `TwoDGeneral`, and `EAN13Enhanced` options.
-- Barcode Count Expectation – The new [`ExpectedBarcodesCount`]({{ site.dcvb_parameters_reference }}barcode-format-specification/expected-barcodes-count.html) parameter enables **format-specific quantity control** and **early termination** in fixed-count workflows.
-- Improved Region Detection – The new [`RPM_GRAY_CONSISTENCY`]({{ site.dcvb_parameters_reference }}image-parameter/region-predetection-modes.html#rpm_gray_consistency) mode provides more precise region extraction based on **grayscale uniformity** and **local consistency** for document and label processing.
+- Enhanced Deblur Methods – [`DM_DEEP_ANALYSIS`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#dm_deep_analysis) now includes sub-level control with `OneDGeneral`, `TwoDGeneral`, and `EAN13Enhanced` options.
+- Barcode Count Expectation – The new [`ExpectedBarcodesCount`]({{ site.dcv_parameters_reference }}barcode-format-specification/expected-barcodes-count.html) parameter enables **format-specific quantity control** and **early termination** in fixed-count workflows.
+- Improved Region Detection – The new [`RPM_GRAY_CONSISTENCY`]({{ site.dcv_parameters_reference }}image-parameter/region-predetection-modes.html#rpm_gray_consistency) mode provides more precise region extraction based on **grayscale uniformity** and **local consistency** for document and label processing.
 
 #### AI-Powered MRZ Detection
 
-- Neural MRZ Localization – The new [`MRZLocalization`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/localization-modes.html#modelnamearray) model improves region detection accuracy and delivers up to **42.7%** faster processing for MRZ-based document workflows.
-- Configurable Localization Control – The new [`LocalizationModes`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/localization-modes.html) parameter allows configuration for text line detection.
+- Neural MRZ Localization – The new [`MRZLocalization`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/localization-modes.html#modelnamearray) model improves region detection accuracy and delivers up to **42.7%** faster processing for MRZ-based document workflows.
+- Configurable Localization Control – The new [`LocalizationModes`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/localization-modes.html) parameter allows configuration for text line detection.
 
 #### Smart Document Capture
 
