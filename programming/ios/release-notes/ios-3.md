@@ -21,7 +21,7 @@ noTitleIndex: true
 
 #### ECI (Extended Channel Interpretation) Support
 
-- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class, along with [`getECISegments`]({{ site.dbr_ios_api }}barcode-result-item.html#getecisegments) method in [`BarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class, enables access to character encoding information embedded in barcodes.
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class, along with [`eciSegments`]({{ site.dbr_ios_api }}barcode-result-item.html#ecisegments) property in [`BarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class, enables access to character encoding information embedded in barcodes.
 - **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
 
 #### Performance Improvements
@@ -51,8 +51,8 @@ noTitleIndex: true
   - `addAuxiliaryRegionElement`
   - `removeAuxiliaryRegionElement`
   - `removeAllAuxiliaryRegionElements`
-- Added new error code [`EC_PORTRAIT_ZONE_NOT_FOUND`]({{ site.dcv_ios_api }}core/enum/error-code.html) for identity document processing.
-- Added a new resolution [`RESOLUTION_MAX`]({{ site.dce_ios_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
+- Added new error code `DSErrorPortraitZoneNotFound` for identity document processing.
+- Added a new resolution [`DSResolutionMax`]({{ site.dce_ios_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
 - Added a new listener [`FocusListener`]({{ site.dce_ios_api }}auxiliary-api/interface-focus-listener.html) for receiving callback when the camera focus is completed. You can register the listener via [`CameraEnhancer.setFocusListener`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html#setfocuslistener).
 
 ### Changed

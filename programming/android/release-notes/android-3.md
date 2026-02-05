@@ -51,7 +51,7 @@ noTitleIndex: true
   - `addAuxiliaryRegionElement`
   - `removeAuxiliaryRegionElement`
   - `removeAllAuxiliaryRegionElements`
-- Added new error code [`EC_PORTRAIT_ZONE_NOT_FOUND`]({{ site.dcv_android_api }}core/enum/error-code.html) for identity document processing.
+- Added new error code `EC_PORTRAIT_ZONE_NOT_FOUND` for identity document processing.
 - Added a new resolution [`RESOLUTION_MAX`]({{ site.dce_android_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
 - Added a new listener [`FocusListener`]({{ site.dce_android_api }}auxiliary-api/interface-focus-listener.html) for receiving callback when the camera focus is completed. You can register the listener via [`CameraEnhancer.setFocusListener`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#setfocuslistener).
 
