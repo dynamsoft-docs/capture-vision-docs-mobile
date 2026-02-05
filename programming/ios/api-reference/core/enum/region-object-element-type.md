@@ -38,6 +38,8 @@ typedef NS_ENUM(NSInteger, DSRegionObjectElementType)
    DSRegionObjectElementTypeDeskewedImage,
    /**The type of subclass EnhancedImageElement.*/
    DSRegionObjectElementTypeEnhancedImage
+   /**The type of subclass AuxiliaryRegionElement.*/
+   DSRegionObjectElementTypeAuxiliaryRegion
 };
 ```
 >
@@ -60,5 +62,7 @@ public enum RegionObjectElementType : Int
    case deskewedImag
    /**The type of subclass EnhancedImageElement.*/
    case enhancedImage
+   /**The type of subclass AuxiliaryRegionElement.*/
+   case auxiliaryRegion
 }
 ```

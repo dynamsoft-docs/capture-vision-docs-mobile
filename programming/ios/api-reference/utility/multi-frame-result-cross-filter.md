@@ -43,6 +43,8 @@ class MultiFrameResultCrossFilter: NSObject, CapturedResultFilter
 | [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Set the maximum overlapping frames count for a given result item type. |
 | [`getMaxOverlappingFrames`](#getmaxoverlappingframes) | Get the maximum overlapping frames count for a given result item type. |
 | [`isLatestOverlappingEnabled`](#islatestoverlappingenabled) | Checks if to-the-latest overlapping is active for a given result item type. |
+| [`setResultCrossVerificationCriteria`](#setresultcrossverificationcriteria) | Sets the cross-verification criteria for specified result item types. |
+| [`getResultCrossVerificationCriteria`](#getresultcrossverificationcriteria) | Gets the cross-verification criteria for a specified result item type. |
 
 ### enableResultCrossVerification
 
@@ -283,8 +285,57 @@ func isLatestOverlappingEnabled(resultItemType: DSCapturedResultItemType) -> Boo
 
 **Parameters**
 
-`[in] type`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+`[in] resultItemTypes`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 **Return Value**
 
 Boolean indicating the to-the-latest overlapping status for the specified type.
+
+### setResultCrossVerificationCriteria
+
+Sets the cross-verification criteria for specified result item types. This function allows customization of the multi-frame verification parameters, controlling how many frames are analyzed and how many consistent results are required.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setResultCrossVerificationCriteria:(DSCrossVerificationCriteria *)criteria
+                           resultItemTypes:(NSInteger)resultItemTypes;
+```
+2. 
+```swift
+func setResultCrossVerificationCriteria(criteria: CrossVerificationCriteria, resultItemTypes: CapturedResultItemType)
+```
+
+**Parameters**
+
+`[in] criteria`: Specifies the cross-verification criteria with a [`DSCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/cross-verification-criteria.html) object.
+
+`[in] resultItemTypes`: Specifies the result item types with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+### getResultCrossVerificationCriteria
+
+Gets the cross-verification criteria for a specified result item type.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (DSCrossVerificationCriteria *)getResultCrossVerificationCriteria:(DSCapturedResultItemType)resultItemType;
+```
+2. 
+```swift
+func getResultCrossVerificationCriteria(resultItemType: CapturedResultItemType) -> CrossVerificationCriteria
+```
+
+**Parameters**
+
+`[in] resultItemType`: Specifies the result item type with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+**Return Value**
+
+The cross-verification criteria for the specified result item type, of type [`DSCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/cross-verification-criteria.html).
