@@ -42,7 +42,7 @@ noTitleIndex: true
 - Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
 - Added [`setResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
 - Added [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class for representing additional region information detected during processing (e.g., MRZ (Machine Readable Zone), portrait zones).
-- Added `ROET_AUXILIARY_REGION` to [`RegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html) enumeration for the new [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class.
+- Added `DSRegionObjectElementTypeAuxiliaryRegion` to [`RegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html) enumeration for the new [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class.
 - Added auxiliary region element management methods to [`LocalizedTextLinesUnit`]({{ site.dlr_ios_api }}localized-text-lines-unit.html):
   - `getAuxiliaryRegionElementsCount`
   - `getAuxiliaryRegionElement`
