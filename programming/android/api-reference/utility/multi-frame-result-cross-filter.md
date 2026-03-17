@@ -62,6 +62,10 @@ void enableResultCrossVerification(@EnumCapturedResultItemType int resultItemTyp
 
 `[in] enable`: Boolean to toggle verification on or off.
 
+> [!Note]
+> 
+> The verification is enabled by default for `CRIT_TEXT_LINE` & `CRIT_DETECTED_QUAD` type result items.
+
 ### isResultCrossVerificationEnabled
 
 Checks if verification is active for a given result item type.

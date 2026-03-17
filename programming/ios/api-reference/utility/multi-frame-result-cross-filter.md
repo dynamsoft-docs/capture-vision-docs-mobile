@@ -70,6 +70,10 @@ func enableResultCrossVerification(resultItemType: DSCapturedResultItemType, isE
 
 `isEnabled`: A BOOL value that indicates whether to enable the result cross verification feature.
 
+> [!Note]
+> 
+> The verification is enabled by default for `textLine` & `detectedQuad` type result items.
+
 ### isResultCrossVerificationEnabled
 
 Checks if verification is active for a given result item type.

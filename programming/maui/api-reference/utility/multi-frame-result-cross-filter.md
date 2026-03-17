@@ -60,6 +60,10 @@ void EnableResultCrossVerification(EnumCapturedResultItemType resultItemTypes, b
 
 `enable`: A BOOL value that indicates whether to enable the result cross verification feature.
 
+> [!Note]
+> 
+> The verification is enabled by default for `TextLine` & `DetectedQuad` type result items.
+
 ### IsResultCrossVerificationEnabled
 
 Checks if verification is active for a given result item type.

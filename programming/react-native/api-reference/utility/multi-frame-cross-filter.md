@@ -82,6 +82,10 @@ enableResultCrossVerification(resultItemTypes: number, enable: boolean): void
 
 `enable`: Whether to enable the result cross verification.
 
+> [!Note]
+> 
+> The verification is enabled by default for `CRIT_TEXT_LINE` & `CRIT_DETECTED_QUAD` type result items.
+
 ### enableResultDeduplication
 
 Enables or disables result deduplication for the specified result item types (represented as a combination of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md)). If this filter is activated, the library will not scan a barcode for an amount of time again after it is scanned successfully for the first time. In order to set the amount of time that the barcode is remembered, please refer to `setDuplicateForgetTime`.
