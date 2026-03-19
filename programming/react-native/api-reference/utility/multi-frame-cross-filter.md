@@ -45,6 +45,8 @@ new MultiFrameResultCrossFilter(): MultiFrameResultCrossFilter
 | [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if the deduplication filter is on for the specified result item type(s). |
 | [`setDuplicateForgetTime`](#setduplicateforgettime) | Defines the amount of time that the deduplication filter takes effect for the specified result item type(s). |
 | [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Sets the maximum number of overlapping frames to check when the latest overlap filter is on. |
+| [`setResultCrossVerificationCriteria`](#setresultcrossverificationcriteria) | Sets the cross-verification criteria for specified result item types. |
+| [`getResultCrossVerificationCriteria`](#getresultcrossverificationcriteria) | Gets the cross-verification criteria for a specified result item type. |
 
 ### destroy
 
@@ -187,3 +189,41 @@ setMaxOverlappingFrames(types: number, maxOverlappingFrames: number): void
 `resultItemTypes`: [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md) value that specifies one or multiple specific result item types.
 
 `maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.
+
+### setResultCrossVerificationCriteria
+
+Sets the cross-verification criteria for specified result item types. This function allows customization of the multi-frame verification parameters, controlling how many frames are analyzed and how many consistent results are required.
+
+```js
+setResultCrossVerificationCriteria(types: EnumCapturedResultItemType | number, criteria: CrossVerificationCriteria)
+```
+
+**Parameters**
+
+`[in] resultItemTypes`: Specifies the result item types with [`CapturedResultItemType`]({{ site.dcv_react_native_api }}core/enum/captured-result-item-type.html).
+
+`[in] criteria`: Specifies the cross-verification criteria with a [`CrossVerificationCriteria`]({{ site.dcv_react_native_api }}utility/cross-verification-criteria.html) object.
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
+
+### getResultCrossVerificationCriteria
+
+Gets the cross-verification criteria for a specified result item type.
+
+```js
+getResultCrossVerificationCriteria(type: EnumCapturedResultItemType | number): Promise<CrossVerificationCriteria>
+```
+
+**Parameters**
+
+`[in] resultItemType`: Specifies the result item type with [`CapturedResultItemType`]({{ site.dcv_react_native_api }}core/enum/captured-result-item-type.html).
+
+**Return Value**
+
+The cross-verification criteria for the specified result item type, of type [`CrossVerificationCriteria`]({{ site.dcv_react_native_api }}utility/cross-verification-criteria.html).
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.

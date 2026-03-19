@@ -127,7 +127,7 @@ Remarks
 Converts the image (as an [`ImageData`](../core/image-data.md) object) to a binary (black and white) format using local adaptive thresholding.
 
 ```js
-convertToBinaryLocal(imageData: ImageData | null | undefined, blockSize: number = 0, compensation: number = 0, invert: boolean = false)
+convertToBinaryLocal(imageData: ImageData | null | undefined, blockSize: number = 0, compensation: number = 10, invert: boolean = false)
 ```
 
 **Remarks**

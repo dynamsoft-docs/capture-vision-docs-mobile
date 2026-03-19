@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Capture Vision React Native SDK - Release Notes
 
+- [3.4.1000 (03/19/2026)]({{ site.dcv_react_native }}release-notes/react-native-3.html#341000-03192026)
 - [3.2.5001 (12/25/2025)]({{ site.dcv_react_native }}release-notes/react-native-3.html#325001-12252025)
 - [3.2.5000 (12/18/2025)]({{ site.dcv_react_native }}release-notes/react-native-3.html#325000-12182025)
 - [3.2.3000 (12/04/2025)]({{ site.dcv_react_native }}release-notes/react-native-3.html#323000-12042025)
