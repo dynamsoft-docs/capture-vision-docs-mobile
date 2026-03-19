@@ -72,6 +72,10 @@ Future<void> enableResultCrossVerification(int resultItemTypes, bool enable)
 
 `resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
 
+> [!Note]
+> 
+> The verification is enabled by default for `textLine` & `detectedQuad` type result items.
+
 ### enableResultDeduplication
 
 Enables or disables result deduplication for the specified result item types (represented as a combination of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md)). If this filter is activated, the library will not scan a barcode for an amount of time again after it is scanned successfully for the first time. In order to set the amount of time that the barcode is remembered, please refer to `setDuplicateForgetTime`.
