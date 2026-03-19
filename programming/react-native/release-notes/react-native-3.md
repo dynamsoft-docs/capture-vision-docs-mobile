@@ -21,7 +21,7 @@ noTitleIndex: true
 
 #### ECI (Extended Channel Interpretation) Support
 
-- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_react_native_api }}barcode-reader/eci-segment.html) class, along with [`getECISegments`]({{ site.dbr_react_native_api }}barcode-reader/barcode-result-item.html#getecisegments) method in [`BarcodeResultItem`]({{ site.dbr_react_native_api }}barcode-reader/barcode-result-item.html) class, enables access to character encoding information embedded in barcodes.
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_react_native_api }}barcode-reader/eci-segment.html) class, along with [`eciSegments`]({{ site.dbr_react_native_api }}barcode-reader/barcode-result-item.html#ecisegments) method in [`BarcodeResultItem`]({{ site.dbr_react_native_api }}barcode-reader/barcode-result-item.html) class, enables access to character encoding information embedded in barcodes.
 - **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
 
 #### Performance Improvements
