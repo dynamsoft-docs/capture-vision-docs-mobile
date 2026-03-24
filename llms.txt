@@ -1,0 +1,47 @@
+---
+layout: null
+sitemap: false
+---
+
+# Workflow Layer - Mobile Editions (v11.x)
+
+> Root Documentation: https://www.dynamsoft.com/barcode-reader/docs/llms.txt
+> This Layer URL: https://www.dynamsoft.com/capture-vision/docs/mobile/
+
+This documentation covers Dynamsoft Barcode Reader SDK v11.x. It defines the Workflow Layer APIs for mobile platform editions.
+
+**Language Editions:**
+- Android: https://www.dynamsoft.com/capture-vision/docs/mobile/programming/android/
+- iOS: https://www.dynamsoft.com/capture-vision/docs/mobile/programming/ios/
+- MAUI: https://www.dynamsoft.com/capture-vision/docs/mobile/programming/maui/
+- React Native: https://www.dynamsoft.com/capture-vision/docs/mobile/programming/react-native/
+- Flutter: https://www.dynamsoft.com/capture-vision/docs/mobile/programming/flutter/
+
+## LLM Guidance
+
+- This layer contains the SDK entry point (CaptureVisionRouter) and shared infrastructure for mobile platforms. Users cannot perform barcode/text/document tasks using this layer alone - Feature Layer modules must also be loaded.
+- CaptureVisionRouter.capture() / CaptureVisionRouter.startCapturing() are the primary APIs; they require a template name (defined in the Core Concepts & Parameter Layer) to know what tasks to execute.
+- ImageSourceAdapter is the abstract interface for image input; CameraEnhancer (from DynamsoftCameraEnhancer package) is the primary concrete implementation for camera-based scanning on mobile.
+- CapturedResultReceiver provides callbacks for final results; IntermediateResultReceiver provides in-process data access.
+- Android uses Java/Kotlin APIs, iOS uses Objective-C/Swift APIs, MAUI uses C# APIs, React Native and Flutter use their respective wrapper APIs - all are functionally equivalent.
+- Mobile editions include platform-specific guides for resource setup, camera permissions, ProGuard rules (Android), and framework-specific integration (Xamarin-to-MAUI migration, Expo guide for React Native).
+
+## Related Layers
+
+**Barcode Recognition Feature Layer APIs:**
+- Server Editions: https://www.dynamsoft.com/barcode-reader/docs/server/llms.txt
+- Web Edition: https://www.dynamsoft.com/barcode-reader/docs/web/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/barcode-reader/docs/mobile/llms.txt
+
+**Core Concepts & Parameter Layer:**
+- Parameter & Architecture Reference: https://www.dynamsoft.com/capture-vision/docs/core/llms.txt
+- Barcode Knowledge Base: https://www.dynamsoft.com/barcode-reader/docs/core/llms.txt
+
+**Other Workflow Layer Language Editions:**
+- Server Editions: https://www.dynamsoft.com/capture-vision/docs/server/llms.txt
+- Web Edition: https://www.dynamsoft.com/capture-vision/docs/web/llms.txt
+
+## Pages
+
+{% for article in site.pages %}{% if article.title %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url }}): {{ article.description }}{% endif %}
+{% endfor %}
