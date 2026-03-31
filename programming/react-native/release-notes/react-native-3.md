@@ -13,7 +13,7 @@ noTitleIndex: true
 
 - Fixed a symbol conflict issue.
 - Added new methods to class `LicenseManager`:
-  - [`getDeviceUUID`]({{ site.dcv_react_native_api }}license/license-manager.html#setlicensepath)
+  - [`getDeviceUUID`]({{ site.dcv_react_native_api }}license/license-manager.html#getdeviceuuid)
   - [`setDeviceFriendlyName`]({{ site.dcv_react_native_api }}license/license-manager.html#setdevicefriendlyname)
 
 ## 3.4.1000 (03/19/2026)
