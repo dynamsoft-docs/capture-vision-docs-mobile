@@ -25,6 +25,8 @@ class LicenseManager
 | Method | Description |
 | ------ | ----------- |
 | [`initLicense`](#initlicense) | Initializes the license for the application using the provided license key. |
+| [`setDeviceFriendlyName`](#setdevicefriendlyname) | Assigns a distinctive name to the device, correlating it with its UUID. |
+| [`getDeviceUUID`](#getdeviceuuid) | Returns the unique identifier of the device. |
 
 ### initLicense
 
@@ -42,3 +44,27 @@ LicenseManager.initLicense(License).catch(e => {
   Alert.alert('License error', e.message);
 });
 ```
+
+### setDeviceFriendlyName
+
+Assigns a distinctive name to the device, correlating it with its UUID.
+
+```js
+static setDeviceFriendlyName(name: string)
+```
+
+**Parameters**
+
+`name`: User defined device name.
+
+### getDeviceUUID
+
+Returns the unique identifier of the device.
+
+```js
+static getDeviceUUID(): Promise<string>
+```
+
+**Return Value**
+
+The device UUID.

@@ -9,6 +9,13 @@ noTitleIndex: true
 
 # Release Notes v3.x - dynamsoft-capture-vision-react-native
 
+## 3.4.1100 (03/26/2026)
+
+- Fixed a symbol conflict issue.
+- Added new methods to class `LicenseManager`:
+  - [`getDeviceUUID`]({{ site.dcv_react_native_api }}license/license-manager.html#getdeviceuuid)
+  - [`setDeviceFriendlyName`]({{ site.dcv_react_native_api }}license/license-manager.html#setdevicefriendlyname)
+
 ## 3.4.1000 (03/19/2026)
 
 ### Highlights
