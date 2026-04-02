@@ -38,7 +38,7 @@ left: number;
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### top
 
@@ -49,7 +49,7 @@ top: number;
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### right
 
@@ -60,7 +60,7 @@ right: number;
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### bottom
 
@@ -71,7 +71,7 @@ bottom: number;
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### measuredInPercentage
 

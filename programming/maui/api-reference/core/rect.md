@@ -45,7 +45,7 @@ float Top { get; set; }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### Left
 
@@ -56,7 +56,7 @@ float Left { get; set; }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### Right
 
@@ -67,7 +67,7 @@ float Right { get; set; }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### Bottom
 
@@ -78,7 +78,7 @@ float Bottom { get; set; }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### MeasuredInPercentage
 

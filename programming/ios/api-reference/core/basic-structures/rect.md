@@ -61,7 +61,7 @@ var top: CGFloat { get set }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### left
 
@@ -81,7 +81,7 @@ var left: CGFloat { get set }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### right
 
@@ -101,7 +101,7 @@ var right: CGFloat { get set }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### bottom
 
@@ -121,7 +121,7 @@ var bottom: CGFloat { get set }
 ```
 
 > [!Note]
-> Value range is [0.0, 1.0] when measuredInPercentage is true.
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### measuredInPercentage
 
