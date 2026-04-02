@@ -46,6 +46,9 @@ The distance between the top of the rect and the x-axis. If measuredInPercentage
 float top;
 ```
 
+> [!Note]
+> Value range is [0.0f, 1.0f] when measuredInPercentage is true.
+
 ### left
 
 The distance between the left of the rect and the y-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the width of the parent. If measuredInPercentage = 0, the value specifies a pixel length.
@@ -53,6 +56,9 @@ The distance between the left of the rect and the y-axis. If measuredInPercentag
 ```java
 float left;
 ```
+
+> [!Note]
+> Value range is [0.0f, 1.0f] when measuredInPercentage is true.
 
 ### right
 
@@ -62,6 +68,9 @@ The distance between the right of the rect and the y-axis. If measuredInPercenta
 float right;
 ```
 
+> [!Note]
+> Value range is [0.0f, 1.0f] when measuredInPercentage is true.
+
 ### bottom
 
 The distance between the bottom of the rect and the x-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the height of the parent. If measuredInPercentage = 0, the value specifies a pixel length.
@@ -69,6 +78,9 @@ The distance between the bottom of the rect and the x-axis. If measuredInPercent
 ```java
 float bottom;
 ```
+
+> [!Note]
+> Value range is [0.0f, 1.0f] when measuredInPercentage is true.
 
 ### measuredInPercentage
 

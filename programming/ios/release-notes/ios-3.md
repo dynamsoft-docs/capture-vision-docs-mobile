@@ -9,6 +9,14 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision iOS v3.x
 
+## 3.4.1200 (04/02/2026)
+
+### Fixed
+
+- Fixed an issue where downloading deep learning models could fail.
+- Fixed an issue where the [`switchCapturingTemplate`]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate) method could fail to load deep learning models.
+- Fixed a symbol conflict issue.
+
 ## 3.4.1000 (02/05/2026)
 
 ### Highlights

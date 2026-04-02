@@ -37,6 +37,9 @@ The left edge of the rectangle, set in pixels or as a percentage of the width of
 left: number;
 ```
 
+> [!Note]
+> Value range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### top
 
 The top edge of the rectangle, set in pixels or as a percentage of the length of the frame.
@@ -44,6 +47,9 @@ The top edge of the rectangle, set in pixels or as a percentage of the length of
 ```js
 top: number;
 ```
+
+> [!Note]
+> Value range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### right
 
@@ -53,6 +59,9 @@ The right edge of the rectangle, set in pixels or as a percentage of the width o
 right: number;
 ```
 
+> [!Note]
+> Value range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### bottom
 
 The bottom edge of the rectangle, set in pixels or as a percentage of the length of the frame.
@@ -60,6 +69,9 @@ The bottom edge of the rectangle, set in pixels or as a percentage of the length
 ```js
 bottom: number;
 ```
+
+> [!Note]
+> Value range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### measuredInPercentage
 
