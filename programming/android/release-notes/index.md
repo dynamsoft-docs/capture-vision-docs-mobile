@@ -9,6 +9,7 @@ noTitleIndex: true
 
 # Release Notes Index - DynamsoftCaptureVisionBundle Android
 
+- [3.4.1200 (04/02/2026)](android-3.html#341200-04022026)
 - [3.4.1000 (02/05/2026)](android-3.html#341000-02052026)
 - [3.2.5000 (12/16/2025)](android-3.html#325000-12162025)
 - [3.2.3000 (11/05/2025)](android-3.html#323000-11052025)

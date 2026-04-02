@@ -44,6 +44,9 @@ The distance between the top of the rect and the x-axis. If measuredInPercentage
 float Top { get; set; }
 ```
 
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### Left
 
 The distance between the left of the rect and the y-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the width of the parent. If measuredInPercentage = 0, the value specifies a pixel length.
@@ -51,6 +54,9 @@ The distance between the left of the rect and the y-axis. If measuredInPercentag
 ```csharp
 float Left { get; set; }
 ```
+
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### Right
 
@@ -60,6 +66,9 @@ The distance between the right of the rect and the y-axis. If measuredInPercenta
 float Right { get; set; }
 ```
 
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### Bottom
 
 The distance between the bottom of the rect and the x-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the height of the parent. If measuredInPercentage = 0, the value specifies a pixel length.
@@ -67,6 +76,9 @@ The distance between the bottom of the rect and the x-axis. If measuredInPercent
 ```csharp
 float Bottom { get; set; }
 ```
+
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### MeasuredInPercentage
 

@@ -30,6 +30,9 @@ The left edge of the rectangle, set in pixels or as a percentage of the width of
 double left;
 ```
 
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### top
 
 The top edge of the rectangle, set in pixels or as a percentage of the length of the frame.
@@ -37,6 +40,9 @@ The top edge of the rectangle, set in pixels or as a percentage of the length of
 ```dart
 double top;
 ```
+
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### right
 
@@ -46,6 +52,9 @@ The right edge of the rectangle, set in pixels or as a percentage of the width o
 double right;
 ```
 
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### bottom
 
 The bottom edge of the rectangle, set in pixels or as a percentage of the length of the frame.
@@ -53,6 +62,9 @@ The bottom edge of the rectangle, set in pixels or as a percentage of the length
 ```dart
 double bottom;
 ```
+
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### measuredInPercentage
 

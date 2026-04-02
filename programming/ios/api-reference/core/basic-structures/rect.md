@@ -60,6 +60,9 @@ The distance between the top of the rect and the x-axis. If measuredInPercentage
 var top: CGFloat { get set }
 ```
 
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### left
 
 The distance between the left of the rect and the y-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the width of the parent. If measuredInPercentage = 0, the value specifies a pixel length.
@@ -76,6 +79,9 @@ The distance between the left of the rect and the y-axis. If measuredInPercentag
 ```swift
 var left: CGFloat { get set }
 ```
+
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### right
 
@@ -94,6 +100,9 @@ The distance between the right of the rect and the y-axis. If measuredInPercenta
 var right: CGFloat { get set }
 ```
 
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
+
 ### bottom
 
 The distance between the bottom of the rect and the x-axis. If measuredInPercentage = 1, the value specifies the percentage comparing with the height of the parent. If measuredInPercentage = 0, the value specifies a pixel length.
@@ -110,6 +119,9 @@ The distance between the bottom of the rect and the x-axis. If measuredInPercent
 ```swift
 var bottom: CGFloat { get set }
 ```
+
+> [!Note]
+> The valid range is [0.0, 1.0] when measuredInPercentage is true.
 
 ### measuredInPercentage
 
