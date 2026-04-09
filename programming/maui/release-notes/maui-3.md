@@ -35,7 +35,6 @@ noTitleIndex: true
 
 - **Enhanced Passport Processing** – Improves document edge detection accuracy for passport documents through optimized processing workflows.
 - **Portrait Zone Detection** – The `MRZLocalization` model now supports detecting portrait zone on identity documents, enabling automatic extraction of photo regions.
-- **New DynamsoftIdentityUtility Module** – Introduces a dedicated module for identity document processing, including the [`IdentityProcessor`]({{ site.dcv_maui_api }}identity-utility/identity-processor.html) class with `findPortraitZone` method for precise portrait positioning from passports and ID cards.
 
 ### New
 
