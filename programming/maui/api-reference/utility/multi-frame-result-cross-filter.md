@@ -37,6 +37,8 @@ class MultiFrameResultCrossFilter
 | [`IsLatestOverlappingEnabled`](#islatestoverlappingenabled) | Checks if to-the-latest overlapping is active for a given result item type. |
 | [`GetMaxOverlappingFrames`](#getmaxoverlappingframes) | Get the maximum overlapping frames count for a given result item type. |
 | [`SetMaxOverlappingFrames`](#setmaxoverlappingframes) | Set the maximum overlapping frames count for a given result item type. |
+| [`SetResultCrossVerificationCriteria`](#setresultcrossverificationcriteria) | Sets the cross-verification criteria for specified result item types. |
+| [`GetResultCrossVerificationCriteria`](#getresultcrossverificationcriteria) | Gets the cross-verification criteria for a specified result item type. |
 
 ### MultiFrameResultCrossFilter
 
@@ -199,3 +201,41 @@ void SetMaxOverlappingFrames(int type, int maxOverlappingFrames);
 `[in] type`: Specifies the result item type with [`EnumCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=maui).
 
 `[in] maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.
+
+### SetResultCrossVerificationCriteria
+
+Sets the cross-verification criteria for specified result item types. This function allows customization of the multi-frame verification parameters, controlling how many frames are analyzed and how many consistent results are required.
+
+```csharp
+void SetResultCrossVerificationCriteria(int resultItemTypes, CrossVerificationCriteria criteria);
+```
+
+**Parameters**
+
+`[in] resultItemTypes`: Specifies the result item types with [`CapturedResultItemType`]({{ site.dcv_maui_api }}core/enum/captured-result-item-type.html).
+
+`[in] criteria`: Specifies the cross-verification criteria with a [`CrossVerificationCriteria`]({{ site.dcv_maui_api }}utility/cross-verification-criteria.html) object.
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1200 and Dynamsoft Capture Vision version 3.4.1200.
+
+### GetResultCrossVerificationCriteria
+
+Gets the cross-verification criteria for a specified result item type.
+
+```csharp
+CrossVerificationCriteria GetResultCrossVerificationCriteria(EnumCapturedResultItemType resultItemType);
+```
+
+**Parameters**
+
+`[in] resultItemType`: Specifies the result item type with [`CapturedResultItemType`]({{ site.dcv_maui_api }}core/enum/captured-result-item-type.html).
+
+**Return Value**
+
+The cross-verification criteria for the specified result item type, of type [`CrossVerificationCriteria`]({{ site.dcv_maui_api }}utility/cross-verification-criteria.html).
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1200 and Dynamsoft Capture Vision version 3.4.1200.
