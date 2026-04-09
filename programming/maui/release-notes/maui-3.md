@@ -9,6 +9,59 @@ noTitleIndex: true
 
 # Release Notes v3.x - DynamsoftCaptureVisionRouter Module
 
+## 3.4.1200 (04/09/2026)
+
+### Highlights
+
+#### AI-Powered Barcode Detection and Decoding
+
+- **PDF417 Localization Model** – Introduces the `PDF417Localization` neural network model for improved detection of PDF417 barcodes, especially under challenging conditions.
+- **Code39/ITF Decoding Model** – Adds the `Code39ITFDecoder` model for enhanced decoding of Code 39 and ITF barcodes under blurred or low-resolution conditions.
+- **Deblur Models for 2D Barcodes** – Adds the `DataMatrixQRCodeDeblur` and `PDF417Deblur` models provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
+
+#### ECI (Extended Channel Interpretation) Support
+
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_maui_api }}eci-segment.html) class, along with [`ECISegments`]({{ site.dbr_maui_api }}barcode-result-item.html#ecisegments) property in [`BarcodeResultItem`]({{ site.dbr_maui_api }}barcode-result-item.html) class, enables access to character encoding information embedded in barcodes.
+- **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
+
+#### Performance Improvements
+
+- **On-Demand Model Loading** – Implements lazy loading for AI models, reducing initialization time by loading models only when first needed.
+- **Smart Model Selection** – Models are now loaded based on configured barcode formats, minimizing memory usage by excluding unused models.
+- **Improved Confidence Scoring** – Enhances confidence score calculation for results from neural network models, providing more accurate quality indicators.
+- **DPM Barcode Optimization** – Improves recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
+
+#### Identity Document Processing
+
+- **Enhanced Passport Processing** – Improves document edge detection accuracy for passport documents through optimized processing workflows.
+- **Portrait Zone Detection** – The `MRZLocalization` model now supports detecting portrait zone on identity documents, enabling automatic extraction of photo regions.
+- **New DynamsoftIdentityUtility Module** – Introduces a dedicated module for identity document processing, including the [`IdentityProcessor`]({{ site.dcv_maui_api }}identity-utility/identity-processor.html) class with `findPortraitZone` method for precise portrait positioning from passports and ID cards.
+
+### New
+
+- Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
+- Added [`SetResultCrossVerificationCriteria`]({{ site.dcv_maui_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`GetResultCrossVerificationCriteria`]({{ site.dcv_maui_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_maui_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
+- Added new error code `EC_PORTRAIT_ZONE_NOT_FOUND` for identity document processing.
+- Added a new resolution [`RESOLUTION_MAX`]({{ site.dce_maui_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
+
+### Changed
+
+- Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
+- Improved license binding stability on MacOS devices.
+- Updated default value of `compensation` parameter in [`ImageProcessor.ConvertToBinaryLocal`]({{ site.dcv_maui_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
+- [`ConvertToBinaryGlobal`]({{ site.dcv_maui_api }}utility/image-processor.html#converttobinaryglobal) and [`ConvertToBinaryLocal`]({{ site.dcv_maui_api }}utility/image-processor.html#converttobinarylocal) of `ImageProcessor` class now support color and binary images as input in addition to grayscale images.
+
+### Removed
+
+- Removed `DataMatrixModuleIsotropic` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+- Removed `MinRatioOfBarcodeZoneWidthToHeight` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+
+### Fixed
+
+- Fixed incorrect coordinate in barcode result when using neural network models with a specified region.
+- Fixed crash and hang issues that could occur in certain scenarios.
+- Fixed various minor bugs and improved overall stability.
+
 ## 3.2.5000 (12/18/2025)
  
 This release includes security maintenance updates to ensure continued protection of the product.
