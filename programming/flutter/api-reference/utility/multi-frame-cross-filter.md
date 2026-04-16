@@ -39,6 +39,8 @@ class MultiFrameResultCrossFilter
 | [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if the deduplication filter is on for the specified result item type(s). |
 | [`setDuplicateForgetTime`](#setduplicateforgettime) | Defines the amount of time that the deduplication filter takes effect for the specified result item type(s). |
 | [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Sets the maximum number of overlapping frames to check when the latest overlap filter is on. |
+| [`setResultCrossVerificationCriteria`](#setresultcrossverificationcriteria) | Sets the cross-verification criteria for specified result item types. |
+| [`getResultCrossVerificationCriteria`](#getresultcrossverificationcriteria) | Gets the cross-verification criteria for a specified result item type. |
 
 ### destroy
 
@@ -160,6 +162,7 @@ Future<void> setDuplicateForgetTime(int resultItemTypes, int time)
 
 `resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `time` specifies the target time in *milliseconds*.
 
+### setMaxOverlappingFrames
 
 Sets the maximum number of overlapping frames to check when the latest overlap filter is on for the specified result item type(s).
 
@@ -182,3 +185,33 @@ _multiFilter.setMaxOverlappingFrames(EnumCapturedResultItemType.barcode.value, 5
 _multiFilter.setDuplicateForgetTime(EnumCapturedResultItemType.barcode.value, 5000);
 _cvr.addResultFilter(_multiFilter);
 ```
+
+### setResultCrossVerificationCriteria
+
+Sets the cross-verification criteria for specified result item types. This function allows customization of the multi-frame verification parameters, controlling how many frames are analyzed and how many consistent results are required.
+
+```dart
+Future<void> setResultCrossVerificationCriteria(int resultItemTypes, CrossVerificationCriteria criteria);
+```
+
+**Parameters**
+
+`[in] resultItemTypes`: Specifies the result item types with [`CapturedResultItemType`]({{ site.dcv_flutter_api }}core/enum/captured-result-item-type.html).
+
+`[in] criteria`: Specifies the cross-verification criteria with a [`CrossVerificationCriteria`]({{ site.dcv_flutter_api }}utility/cross-verification-criteria.html) object.
+
+### getResultCrossVerificationCriteria
+
+Gets the cross-verification criteria for a specified result item type.
+
+```dart
+Future<CrossVerificationCriteria> getResultCrossVerificationCriteria(int type) async;
+```
+
+**Parameters**
+
+`[in] type`: Specifies the result item type with [`CapturedResultItemType`]({{ site.dcv_flutter_api }}core/enum/captured-result-item-type.html).
+
+**Return Value**
+
+The cross-verification criteria for the specified result item type, of type [`CrossVerificationCriteria`]({{ site.dcv_flutter_api }}utility/cross-verification-criteria.html).
