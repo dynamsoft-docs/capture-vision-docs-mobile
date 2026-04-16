@@ -23,6 +23,7 @@ enum EnumResolution {
   hd720p,
   fhd1080p,
   uhd4k,
+  max
 }
 ```
 
@@ -35,3 +36,4 @@ enum EnumResolution {
 | `hd720p` | High Definition 720p. |
 | `fhd1080p` | Full High Definition 1080p. |
 | `uhd4k` | Ultra High Definition 4K. |
+| `max` | Maximum available resolution supported by the device. |
