@@ -19,6 +19,7 @@ noTitleIndex: true
 
 - Fixed an issue where downloading deep learning models could fail.
 - Fixed an issue where the [`switchCapturingTemplate`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate) method could fail to load deep learning models.
+- Fixed an issue where nullable MRZ result fields could cause errors or inconsistent values when being bridged from iOS native code to React Native.
 
 ## 3.4.1100 (03/26/2026)
 
