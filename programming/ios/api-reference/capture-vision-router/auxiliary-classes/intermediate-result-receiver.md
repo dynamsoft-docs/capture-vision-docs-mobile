@@ -34,7 +34,7 @@ protocol IntermediateResultReceiver: NSObjectProtocol
 
 | Method | Description |
 | ------ | ----------- |
-| [getObservationParameters](#getobservationparameters) | Gets the observed parameters of the intermediate result receiver. |
+| [`getObservationParameters`](#getobservationparameters) | Gets the observed parameters of the intermediate result receiver. |
 | [`onTargetROIResultsReceived`](#ontargetroiresultsreceived) | The callback triggered when the processing of a target-ROI is finished. |
 | [`onTaskResultsReceived`](#ontaskresultsreceived) | The callback triggered when the processing of a task is finished. |
 | [`onPredetectedRegionsReceived`](#onpredetectedregionsreceived) | The callback triggered when pre-detected regions are received. |
