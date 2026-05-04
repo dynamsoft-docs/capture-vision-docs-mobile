@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CrossVerificationCriteria - Dynamsoft Utility Module MAUI Edition API Reference
-description: The class CrossVerificationCriteria of Dynamsoft Utility Module defines the cross-verification criteria for multi-frame result verification.
+description: "Learn what CrossVerificationCriteria does in Dynamsoft Capture Vision .NET MAUI API, including its purpose, key data, and how it supports capture workflows."
 keywords: cross-verification, criteria, MAUI
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CaptureVisionRouter - Dynamsoft Capture Vision React Native
-description: CaptureVisionRouter class of Dynamsoft Capture Vision Router contains all of the core methods to use Dynamsoft Capture Vision.
+description: "Learn what CaptureVisionRouter does in Dynamsoft Capture Vision React Native API, including its purpose, key data, and how it supports capture workflows."
 keywords: CaptureVisionRouter, Barcode Reader, capture, react native, foundational
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

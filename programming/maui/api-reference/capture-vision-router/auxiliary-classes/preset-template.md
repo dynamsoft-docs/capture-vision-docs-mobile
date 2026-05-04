@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumPresetTemplate - Dynamsoft Vision Router MAUI Edition
-description: The enumeration PresetTemplate of Dynamsoft Vision Router describes the preset template.
+description: "Explore PresetTemplate values in Dynamsoft Capture Vision .NET MAUI API and learn how they define status, configuration, and processing behavior for modern web."
 keywords: CaptureVisionTemplate, PresetTemplate, single barcode template, speed first, read-rate first
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
