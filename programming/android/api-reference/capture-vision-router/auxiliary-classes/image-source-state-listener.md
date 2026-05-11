@@ -38,4 +38,4 @@ void onImageSourceStateReceived(@EnumImageSourceState int status);
 
 **Parameters**
 
-`[in] state`: One of the [`EnumImageSourceState`]({{ site.dcv_android_api }}core/enum/image-source-state.html)` that indicates the state of the ImageSourceAdapter.
+`[in] state`: One of the [`EnumImageSourceState`]({{ site.dcv_android_api }}core/enum/image-source-state.html) that indicates the state of the ImageSourceAdapter.

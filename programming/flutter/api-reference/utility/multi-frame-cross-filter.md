@@ -90,6 +90,8 @@ Future<void> enableResultDeduplication(int resultItemTypes, bool enable)
 
 `resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `enable` determines whether to enable or disable the filter process.
 
+Result deduplication is disabled by default. You can enable it and adjust the `DuplicateForgetTime` based on your requirements.
+
 ### getDuplicateForgetTime
 
 Returns the amount of time, in *milliseconds*, that the deduplication filter takes effect for the specified result item type(s).
@@ -162,6 +164,8 @@ Future<void> setDuplicateForgetTime(int resultItemTypes, int time)
 
 `resultItemTypes` is a bitmask representing the result item types to apply the filter to - this value can be a combined value of [`EnumCapturedResultItemType`](../core/enum/captured-result-item-type.md). `time` specifies the target time in *milliseconds*.
 
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default. The maximum allowed value is 180,000 milliseconds.
+
 ### setMaxOverlappingFrames
 
 Sets the maximum number of overlapping frames to check when the latest overlap filter is on for the specified result item type(s).
@@ -199,6 +203,16 @@ Future<void> setResultCrossVerificationCriteria(int resultItemTypes, CrossVerifi
 `[in] resultItemTypes`: Specifies the result item types with [`CapturedResultItemType`]({{ site.dcv_flutter_api }}core/enum/captured-result-item-type.html).
 
 `[in] criteria`: Specifies the cross-verification criteria with a [`CrossVerificationCriteria`]({{ site.dcv_flutter_api }}utility/cross-verification-criteria.html) object.
+
+**Remarks**
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| Barcode (DBR) | 5 | 2 |
+| Text Line (DLR) | 5 | 2 |
+| Detected Quad / Deskewed Image (DDN) | 6 | 4 |
 
 ### getResultCrossVerificationCriteria
 

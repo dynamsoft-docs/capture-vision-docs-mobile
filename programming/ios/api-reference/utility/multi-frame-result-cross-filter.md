@@ -123,6 +123,10 @@ func enableResultDeduplication(resultItemType: DSCapturedResultItemType, isEnabl
 
 `isEnabled`: A BOOL value that indicates whether to enable the result deduplication feature.
 
+**Remarks**
+
+Result deduplication is disabled by default. You can enable it and adjust the `duplicateForgetTime` based on your requirements.
+
 ### setDuplicateForgetTime
 
 Sets the interval during which duplicates are disregarded for specific result item types.
@@ -146,6 +150,10 @@ func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateF
 `resultItemType`: Specifies one or multiple specific result item types, which can be defined using [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
 
 `duplicateForgetTime`: The duplicate forget time of the specified capture result type.
+
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default. The maximum allowed value is 180,000 milliseconds.
 
 ### getDuplicateForgetTime
 
@@ -318,6 +326,16 @@ func setResultCrossVerificationCriteria(criteria: CrossVerificationCriteria, res
 `[in] criteria`: Specifies the cross-verification criteria with a [`DSCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/cross-verification-criteria.html) object.
 
 `[in] resultItemTypes`: Specifies the result item types with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+**Remarks**
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| Barcode (DBR) | 5 | 2 |
+| Text Line (DLR) | 5 | 2 |
+| Detected Quad / Deskewed Image (DDN) | 6 | 4 |
 
 ### getResultCrossVerificationCriteria
 

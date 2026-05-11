@@ -96,6 +96,10 @@ void EnableResultDeduplication(EnumCapturedResultItemType resultItemTypes, bool 
 
 `enable`: A BOOL value that indicates whether to enable the result deduplication feature.
 
+**Remarks**
+
+Result deduplication is disabled by default. You can enable it and adjust the `DuplicateForgetTime` based on your requirements.
+
 ### IsResultDeduplicationEnabled
 
 Checks if deduplication is active for a given result item type.
@@ -125,6 +129,10 @@ void SetDuplicateForgetTime(EnumCapturedResultItemType resultItemTypes, int time
 `resultItemTypes`: Specifies one or multiple specific result item types, which can be defined using [`EnumCapturedResultItemType`]({{ site.dcv_maui_api }}core/enum/captured-result-item-type.html).
 
 `time`: The duplicate forget time of the specified capture result type.
+
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default. The maximum allowed value is 180,000 milliseconds.
 
 ### GetDuplicateForgetTime
 
@@ -219,6 +227,14 @@ void SetResultCrossVerificationCriteria(int resultItemTypes, CrossVerificationCr
 **Remarks**
 
 - Introduced in Dynamsoft Barcode Reader SDK version 11.4.1200 and Dynamsoft Capture Vision version 3.4.1200.
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| Barcode (DBR) | 5 | 2 |
+| Text Line (DLR) | 5 | 2 |
+| Detected Quad / Deskewed Image (DDN) | 6 | 4 |
 
 ### GetResultCrossVerificationCriteria
 
