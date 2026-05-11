@@ -96,6 +96,10 @@ void enableResultDeduplication(@EnumCapturedResultItemType int resultItemTypes, 
 
 `[in] enable`: Boolean to toggle deduplication on or off.
 
+**Remarks**
+
+Result deduplication is disabled by default. You can enable it and adjust the `DuplicateForgetTime` based on your requirements.
+
 ### isResultDeduplicationEnabled
 
 Checks if deduplication is active for a given result item type.
@@ -128,7 +132,7 @@ void setDuplicateForgetTime(@EnumCapturedResultItemType int resultItemTypes, int
 
 **Remarks**
 
-The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default. The maximum allowed value is 180,000 milliseconds.
 
 ### getDuplicateForgetTime
 

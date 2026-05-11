@@ -102,6 +102,10 @@ enableResultDeduplication(resultItemTypes: number, enable: boolean): void
 
 `enable`: Whether to enable the result deduplication.
 
+**Remarks**
+
+Result deduplication is disabled by default. You can enable it and adjust the `DuplicateForgetTime` based on your requirements.
+
 ### getDuplicateForgetTime
 
 Returns the amount of time, in *milliseconds*, that the deduplication filter takes effect for the specified result item type.
@@ -178,7 +182,7 @@ setDuplicateForgetTime(types: number, time: number): void
 
 **Remarks**
 
-The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default. The maximum allowed value is 180,000 milliseconds.
 
 ### setMaxOverlappingFrames
 

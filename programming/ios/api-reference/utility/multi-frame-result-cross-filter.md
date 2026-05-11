@@ -123,6 +123,10 @@ func enableResultDeduplication(resultItemType: DSCapturedResultItemType, isEnabl
 
 `isEnabled`: A BOOL value that indicates whether to enable the result deduplication feature.
 
+**Remarks**
+
+Result deduplication is disabled by default. You can enable it and adjust the `duplicateForgetTime` based on your requirements.
+
 ### setDuplicateForgetTime
 
 Sets the interval during which duplicates are disregarded for specific result item types.
@@ -149,7 +153,7 @@ func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateF
 
 **Remarks**
 
-The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default. The maximum allowed value is 180,000 milliseconds.
 
 ### getDuplicateForgetTime
 
