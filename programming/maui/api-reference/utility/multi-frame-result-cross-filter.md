@@ -126,6 +126,10 @@ void SetDuplicateForgetTime(EnumCapturedResultItemType resultItemTypes, int time
 
 `time`: The duplicate forget time of the specified capture result type.
 
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+
 ### GetDuplicateForgetTime
 
 Gets the interval during which duplicates are disregarded for specific result item types.
@@ -219,6 +223,14 @@ void SetResultCrossVerificationCriteria(int resultItemTypes, CrossVerificationCr
 **Remarks**
 
 - Introduced in Dynamsoft Barcode Reader SDK version 11.4.1200 and Dynamsoft Capture Vision version 3.4.1200.
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| Barcode (DBR) | 5 | 2 |
+| Text Line (DLR) | 5 | 2 |
+| Detected Quad / Deskewed Image (DDN) | 6 | 4 |
 
 ### GetResultCrossVerificationCriteria
 

@@ -176,6 +176,10 @@ setDuplicateForgetTime(types: number, time: number): void
 
 `time`: Time in milliseconds during which duplicates are disregarded.
 
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+
 ### setMaxOverlappingFrames
 
 Sets the maximum number of overlapping frames to check when the latest overlap filter is on for the specified result item type(s).
@@ -207,6 +211,14 @@ setResultCrossVerificationCriteria(types: EnumCapturedResultItemType | number, c
 **Remarks**
 
 - Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| Barcode (DBR) | 5 | 2 |
+| Text Line (DLR) | 5 | 2 |
+| Detected Quad / Deskewed Image (DDN) | 6 | 4 |
 
 ### getResultCrossVerificationCriteria
 

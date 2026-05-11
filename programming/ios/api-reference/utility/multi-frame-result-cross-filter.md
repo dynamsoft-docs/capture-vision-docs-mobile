@@ -147,6 +147,10 @@ func setDuplicateForgetTime(resultItemType: DSCapturedResultItemType, duplicateF
 
 `duplicateForgetTime`: The duplicate forget time of the specified capture result type.
 
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+
 ### getDuplicateForgetTime
 
 Gets the interval during which duplicates are disregarded for a given result item type.
@@ -318,6 +322,16 @@ func setResultCrossVerificationCriteria(criteria: CrossVerificationCriteria, res
 `[in] criteria`: Specifies the cross-verification criteria with a [`DSCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/cross-verification-criteria.html) object.
 
 `[in] resultItemTypes`: Specifies the result item types with [`DSCapturedResultItemType`]({{ site.dcv_ios_api }}core/enum/captured-result-item-type.html?lang=objc,swift).
+
+**Remarks**
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| Barcode (DBR) | 5 | 2 |
+| Text Line (DLR) | 5 | 2 |
+| Detected Quad / Deskewed Image (DDN) | 6 | 4 |
 
 ### getResultCrossVerificationCriteria
 

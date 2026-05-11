@@ -126,6 +126,10 @@ void setDuplicateForgetTime(@EnumCapturedResultItemType int resultItemTypes, int
 
 `[in] time`: Time in milliseconds during which duplicates are disregarded.
 
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+
 ### getDuplicateForgetTime
 
 Gets the interval during which duplicates are disregarded for a given result item type.
@@ -218,6 +222,16 @@ void setResultCrossVerificationCriteria(int resultItemTypes, CrossVerificationCr
 `[in] resultItemTypes`: Specifies the result item types with [`CapturedResultItemType`]({{ site.dcv_android_api }}core/enum/captured-result-item-type.html).
 
 `[in] criteria`: Specifies the cross-verification criteria with a [`CrossVerificationCriteria`]({{ site.dcv_android_api }}utility/cross-verification-criteria.html) object.
+
+**Remarks**
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| Barcode (DBR) | 5 | 2 |
+| Text Line (DLR) | 5 | 2 |
+| Detected Quad / Deskewed Image (DDN) | 6 | 4 |
 
 ### getResultCrossVerificationCriteria
 
