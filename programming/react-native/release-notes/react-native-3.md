@@ -9,6 +9,13 @@ noTitleIndex: true
 
 # Release Notes v3.x - dynamsoft-capture-vision-react-native
 
+## 3.4.1300 (05/20/2026)
+
+### Fixed
+
+- Fixed potential issues that could occur on devices running a kernel with a 16KB page size.
+- Fixed crash and hang issues that could occur in certain scenarios.
+
 ## 3.4.1200 (04/22/2026)
 
 ### Improved
