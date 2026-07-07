@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision Android v3.x
 
+## 3.4.3000 (07/07/2026)
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 3.4.1300 (05/20/2026)
 
 ### Fixed
