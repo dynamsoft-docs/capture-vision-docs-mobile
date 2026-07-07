@@ -9,6 +9,16 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision iOS v3.x
 
+## 3.4.3000 (07/07/2026)
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
+### Fixed
+
+- Fixed crash issues that could occur on iOS devices.
+
 ## 3.4.1200 (04/02/2026)
 
 ### Fixed
