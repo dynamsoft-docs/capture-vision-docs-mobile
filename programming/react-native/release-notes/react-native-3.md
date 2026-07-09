@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes v3.x - dynamsoft-capture-vision-react-native
 
-## 3.4.3000 (07/08/2026)
+## 3.4.3010 (07/09/2026)
 
 ### Security Updates
 
