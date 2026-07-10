@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Capture Vision Flutter SDK - Release Notes
 
+- [3.4.3000 (07/10/2026)]({{ site.dcv_flutter }}release-notes/flutter-3.html#343000-07102026)
 - [3.4.1300 (05/20/2026)]({{ site.dcv_flutter }}release-notes/flutter-3.html#341300-05202026)
 - [3.4.1200 (04/16/2026)]({{ site.dcv_flutter }}release-notes/flutter-3.html#341200-04162026)
 - [3.2.5000 (12/18/2025)]({{ site.dcv_flutter }}release-notes/flutter-3.html#325000-12182025)
