@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Can I build an iOS app for armv7?
-keywords: Dynamsoft Barcode Reader, FAQ, IOS, Mobile, building error, archetecture, armv7
+keywords: Dynamsoft Barcode Reader, FAQ, iOS, Mobile, building error, architecture, armv7
 description: Can I build an iOS app for armv7?
 needAutoGenerateSidebar: false
 ---

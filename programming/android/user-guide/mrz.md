@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Scan & Parse MRZ - Dynamsoft Capture Vision Android Edition
-description: This page introduce how to scan and parse a MRZ with Dynamsoft Capture Vision Android Edition.
+description: This page introduces how to scan and parse a MRZ with Dynamsoft Capture Vision Android Edition.
 keywords: Android, MRZ, passport, id card, visa
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -51,7 +51,7 @@ The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containi
 
 ### ID (TD2 Size)
 
-The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
+The MRZ (Machine Readable Zone) in TD2 format consists of 2 lines, with each line containing 36 characters.
 
 <div>
    <img src="../../assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
@@ -62,7 +62,7 @@ The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each li
 The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
 
 <div>
-   <img src="../../assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+   <img src="../../assets/td3-passport.png" alt="Example of MRZ in TD3 format" width="88%" />
 </div>
 
 ## Requirements

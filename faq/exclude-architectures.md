@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How to fix building errors related to IOS archetecture?
-keywords: Dynamsoft Barcode Reader, FAQ, IOS, Mobile, building error, archetecture, arm64
-description: How to fix building errors related to IOS archetecture?
+title: How to fix building errors related to iOS architecture?
+keywords: Dynamsoft Barcode Reader, FAQ, iOS, Mobile, building error, architecture, arm64
+description: How to fix building errors related to iOS architecture?
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: Exclude Architecture
@@ -12,7 +12,7 @@ breadcrumbText: Exclude Architecture
 
 [<< Back to FAQ index](index.md)
 
-Dynamsoft framework can be used to build an app for arm64 iOS. If you build the app for arm64 simulator and you are migrate your app from older versions to Xcode 12 or higher, the following error message may pops up:  
+Dynamsoft framework can be used to build an app for arm64 iOS. If you build the app for arm64 simulator and you are migrating your app from older versions to Xcode 12 or higher, the following error message may pop up:  
 
 > ld: "Building for iOS Simulator, but linking in dylib built for iOS, file '/ios/Pods/DynamsoftBarcodeReader/DynamsoftBarcodeReader.xcframework/DynamsoftBarcodeReader' for architecture arm64"  
 
@@ -21,7 +21,7 @@ Dynamsoft framework can be used to build an app for arm64 iOS. If you build the 
 **To fix the error:**  
 
 1. Set *Build Settings* > *Build Options* > *VALIDATE_WORKSPACE* to "YES" and then rebuild your project  
-2. Set *Build Settings* > *Archetectures* > *Build Active Architecture Only* to "YES" and choose iPhone device run  
+2. Set *Build Settings* > *Architectures* > *Build Active Architecture Only* to "YES" and run on an iPhone device
 3. Set *Build Settings* >  *Architectures* -> $(ARCHS_STANDARD)  
 
 <br />

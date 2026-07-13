@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Scan & Parse MRZ - Dynamsoft Capture Vision MAUI Edition
-description: This page introduce how to scan and parse a MRZ with Dynamsoft Capture Vision MAUI Edition.
+description: This page introduces how to scan and parse a MRZ with Dynamsoft Capture Vision MAUI Edition.
 keywords: MAUI, MRZ, passport, id card, visa
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -19,7 +19,7 @@ noTitleIndex: true
     - [ID (TD2 Size)](#id-td2-size)
     - [Passport (TD3 Size)](#passport-td3-size)
   - [System Requirements](#system-requirements)
-    - [.Net](#net)
+    - [.NET](#net)
     - [Android](#android)
     - [iOS](#ios)
   - [Installation](#installation)
@@ -59,7 +59,7 @@ The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containi
 
 ### ID (TD2 Size)
 
-The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
+The MRZ (Machine Readable Zone) in TD2 format consists of 2 lines, with each line containing 36 characters.
 
 <div>
    <img src="{{ site.dcvb_root }}programming/assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
@@ -70,12 +70,12 @@ The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each li
 The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
 
 <div>
-   <img src="{{ site.dcvb_root }}programming/assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+   <img src="{{ site.dcvb_root }}programming/assets/td3-passport.png" alt="Example of MRZ in TD3 format" width="88%" />
 </div>
 
 ## System Requirements
 
-### .Net
+### .NET
 
 - 8.0 and 9.0.
 
@@ -122,8 +122,8 @@ You need to add the library via the project file and complete additional steps f
 
 > [!Note]
 >
-> - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.200\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
-> - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
+> - Windows has a limitation of 260 characters in the path. If you don't use console to install the package, you will receive an error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.200\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
+> - The library only supports Android and iOS platforms. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
 
 ## Build Your MRZ Scanner App
 
@@ -299,4 +299,4 @@ When getting started with MRZ Scanner, we recommend getting your own 30-day tria
 
 {% include trialLicense.html %}
 
-If you have any questions about the trial license or would like to inquire about acquiring a full license, do not hesitate to [contact us](https://www.dynamsoft.com/company/contact/){:target="_blank"}.
+If you have any questions about the trial license or would like to inquire about acquiring a full license, do not hesitate to [contact us](https://www.dynamsoft.com/company/contact/){:target="_blank"}

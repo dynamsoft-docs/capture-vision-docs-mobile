@@ -14,7 +14,7 @@ breadcrumbText: Add Proguard
 
 This page provides you a possible solution when your project build fails after implementing the code obfuscation.
 
-Generally, you don’t have to add any configurations when shrinking your code because proguard rule is already configured in the library. If you still build failed after shrinking code, you can try enabling proguard in your project and add the following code in your **proguard_xamarin.cfg** file.
+Generally, you don't have to add any configurations when shrinking your code because ProGuard rules are already configured in the library. If your build still fails after shrinking code, you can try enabling ProGuard in your project and add the following code in your **proguard_xamarin.cfg** file.
 
 ```bash
 -keepclasseswithmembernames class * {    
@@ -24,4 +24,4 @@ Generally, you don’t have to add any configurations when shrinking your code b
 -keep class com.dynamsoft.dce.** { *; }
 ```
 
-You can view the <a href="https://learn.microsoft.com/en-us/xamarin/android/deploy-test/release-prep/proguard?tabs=macos" target="_blank">official documents</a> for how to enable proguard.
+You can view the <a href="https://learn.microsoft.com/en-us/xamarin/android/deploy-test/release-prep/proguard?tabs=macos" target="_blank">official documents</a> for how to enable ProGuard.

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Use multi-frame cross filter - Dynamsoft Capture Vision Android Edition
-description: This page introduce how to use the multi-frame cross filter feature of Dynamsoft Capture Vision Android Edition.
+description: This page introduces how to use the multi-frame cross filter feature of Dynamsoft Capture Vision Android Edition.
 keywords: Android, multi-frame, filter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -9,7 +9,7 @@ needGenerateH3Content: true
 
 # How to Use Multi-Frame Cross Filter
 
-[`MultiFrameCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-cross-filter.html) is a class under `DynamsoftUtility` library. It provides APIs for users to implement filter features based on the neighbouring video frames.
+[`MultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-cross-filter.html) is a class under `DynamsoftUtility` library. It provides APIs for users to implement filter features based on the neighbouring video frames.
 
 | Filter Type | Description |
 | ----------- | ----------- |

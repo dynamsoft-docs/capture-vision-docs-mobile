@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Add Resource Files - Dynamsoft Capture Vision Android Edition
-description: This page introduce how to add additional resource files for Dynamsoft Capture Vision Android Edition.
+description: This page introduces how to add additional resource files for Dynamsoft Capture Vision Android Edition.
 keywords: Android, resource files
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -10,9 +10,9 @@ noTitleIndex: true
 
 # Setup Resources
 
-This page is the guide of how to setup resources for Dynamsoft Capture Vision Android Edition.
+This page is the guide on how to set up resources for Dynamsoft Capture Vision Android Edition.
 
-1. Right click on your project folder, select **New**, then select **Directory** and select the **src\main\assets** to create an assets folder.
+1. Right-click on your project folder, select **New**, then select **Directory** and select the **src\main\assets** to create an assets folder.
 
 2. Under the **assets** folder create a new folder and name it based on the type of your resource file.
 

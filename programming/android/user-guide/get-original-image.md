@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Get Original Image - Dynamsoft Capture Vision Android Edition
-description: This page introduce how to get original image for Dynamsoft Capture Vision Android Edition.
+description: This page introduces how to get original image for Dynamsoft Capture Vision Android Edition.
 keywords: Android, original image
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Obtain Original Image
 
-This page is the guide of how to obtain the original image that used for data capturing.
+This page is the guide on how to obtain the original image used for data capture.
 
 ## Use Original Image Hash ID
 

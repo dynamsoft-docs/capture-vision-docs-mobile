@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResultFilter
 
-The `CapturedResultFilter` interface for users to implement result filtering feature. [`MultiFrameResultCrossFilter`]({{ site.dcv_maui_api }}utility/multi-frame-result-cross-filter.html) is provided as an default implementation.
+The `CapturedResultFilter` interface for users to implement result filtering feature. [`MultiFrameResultCrossFilter`]({{ site.dcv_maui_api }}utility/multi-frame-result-cross-filter.html) is provided as a default implementation.
 
 ## Definition
 
