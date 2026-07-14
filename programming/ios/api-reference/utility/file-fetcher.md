@@ -26,7 +26,7 @@ The `DSFileFetcher` class is a utility class that partitions a multi-page image 
 ```
 2. 
 ```swift
-class FileFetcher : DSImageSourceAdapter
+class FileFetcher : ImageSourceAdapter
 ```
 
 ## Methods

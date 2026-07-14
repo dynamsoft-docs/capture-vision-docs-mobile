@@ -135,5 +135,5 @@ DSFileImageTag *fileImageTag = [[DSFileImageTag alloc] initWithImageId:123 fileP
 ```
 2. 
 ```swift
-let fileImageTag = DSFileImageTag(imageId: 123, filePath: filePath, pageNumber: 1, totalPages: 10)
+let fileImageTag = FileImageTag(imageId: 123, filePath: filePath, pageNumber: 1, totalPages: 10)
 ```

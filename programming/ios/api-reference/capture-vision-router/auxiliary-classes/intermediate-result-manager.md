@@ -52,7 +52,7 @@ Adds a [DSIntermediateResultReceiver](intermediate-result-receiver.md) object as
 ```
 2. 
 ```swift
-func addResultReceiver(_ receiver: DSIntermediateResultReceiver)
+func addResultReceiver(_ receiver: IntermediateResultReceiver)
 ```
 
 **Parameters**
@@ -92,7 +92,7 @@ Removes the specified [DSIntermediateResultReceiver](intermediate-result-receive
 ```
 2. 
 ```swift
-func removeResultReceiver(_ receiver: DSIntermediateResultReceiver)
+func removeResultReceiver(_ receiver: IntermediateResultReceiver)
 ```
 
 **Parameters**

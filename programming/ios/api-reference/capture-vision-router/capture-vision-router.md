@@ -62,10 +62,10 @@ class CaptureVisionRouter : NSObject
 | [`resumeCapturing`](multiple-file-processing.md#resumecapturing) | Resumes the Capture Vision Router. |
 | [`addCaptureStateListener`](multiple-file-processing.md#addcapturestatelistener) | Registers a DSCaptureStateListener to get callback when capture state changes. |
 | [`removeCaptureStateListener`](multiple-file-processing.md#removecapturestatelistener) | Removes a DSCaptureStateListener. |
-| [`removeAllCaptureStateListeners`](#removeallcapturestatelisteners) | Removes all user-added [`CaptureStateListeners`](auxiliary-classes/capture-state-listener.html). |
-| [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Adds a `CaptureResultFilter` object to filter non-essential results. |
-| [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes the specified `CaptureResultFilter` object. |
-| [`removeAllResultFilters`](#removeallresultfilters) | Removes all user-added `CapturedResultFilters`. |
+| [`removeAllCaptureStateListeners`](#removeallcapturestatelisteners) | Removes all user-added [`DSCaptureStateListeners`](auxiliary-classes/capture-state-listener.html). |
+| [`addResultFilter`](multiple-file-processing.md#addresultfilter) | Adds a `DSCapturedResultFilter` object to filter non-essential results. |
+| [`removeResultFilter`](multiple-file-processing.md#removeresultfilter) | Removes the specified `DSCapturedResultFilter` object. |
+| [`removeAllResultFilters`](#removeallresultfilters) | Removes all user-added `DSCapturedResultFilters`. |
 | [`switchCapturingTemplate`](multiple-file-processing.md#switchcapturingtemplate) | Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow. |
 
 ## Settings

@@ -64,7 +64,7 @@ var outputOriginalImage: Bool { get set }
 
 The property determines:
 
-1. Whether the [`CapturedResult`](captured-result.html) object contains the original image.
+1. Whether the [`DSCapturedResult`](captured-result.html) object contains the original image.
 2. Whether you can receive the original image via [`onOriginalImageResultReceived`](captured-result-receiver.md#onoriginalimageresultreceived).
 
 ### roi

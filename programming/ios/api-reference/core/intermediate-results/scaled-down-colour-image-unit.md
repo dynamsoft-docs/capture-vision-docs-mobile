@@ -26,7 +26,7 @@ The `ScaledDownColourImageUnit` class extends the `IntermediateResultUnit` class
 ```
 2. 
 ```swift
-class ScaledDownColourImageUnit : DSIntermediateResultUnit
+class ScaledDownColourImageUnit : IntermediateResultUnit
 ```
 
 ## Methods

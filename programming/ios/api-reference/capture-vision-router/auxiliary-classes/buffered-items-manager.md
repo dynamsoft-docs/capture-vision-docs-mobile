@@ -26,7 +26,7 @@ The `DSBufferedItemsManager` class is used to manage the buffered items.
 ```
 2. 
 ```swift
-class DSBufferedItemsManager : NSObject
+class BufferedItemsManager : NSObject
 ```
 
 ## Methods

@@ -56,7 +56,7 @@ The method for monitoring the output of `DSCapturedResult`.
 ```
 2. 
 ```swift
-func onCapturedResultReceived(_ result: DSCapturedResult)
+func onCapturedResultReceived(_ result: CapturedResult)
 ```
 
 **Parameters**
@@ -77,7 +77,7 @@ The method for monitoring the output of `DSOriginalImageResultItem`.
 ```
 2. 
 ```swift
-func onOriginalImageResultReceived(_ result: DSOriginalImageResultItem)
+func onOriginalImageResultReceived(_ result: OriginalImageResultItem)
 ```
 
 **Parameters**
@@ -98,7 +98,7 @@ The method for monitoring the output of `DSDecodedBarcodesResult`.
 ```
 2. 
 ```swift
-func onDecodedBarcodesReceived(_ result: DSDecodedBarcodesResult)
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult)
 ```
 
 **Parameters**
@@ -119,7 +119,7 @@ The method for monitoring the output of `DSRecognizedTextLinesResult`.
 ```
 2. 
 ```swift
-func onRecognizedTextLinesReceived(_ result: DSRecognizedTextLinesResult)
+func onRecognizedTextLinesReceived(_ result: RecognizedTextLinesResult)
 ```
 
 **Parameters**
@@ -140,7 +140,7 @@ The method for monitoring the output of `DSDetectedQuadsResult`.
 ```
 2. 
 ```swift
-func onDetectedQuadsReceived(_ result: DSDetectedQuadsResult)
+func onDetectedQuadsReceived(_ result: DetectedQuadsResult)
 ```
 
 **Parameters**
@@ -161,7 +161,7 @@ The method for monitoring the output of `DSNormalizedImagesResult`.
 ```
 2. 
 ```swift
-func onNormalizedImagesReceived(_ result: DSNormalizedImagesResult)
+func onNormalizedImagesReceived(_ result: NormalizedImagesResult)
 ```
 
 **Parameters**
@@ -182,7 +182,7 @@ The method for monitoring the output of `DSParsedResult`.
 ```
 2. 
 ```swift
-func onParsedResultsReceived(_ result: DSParsedResult)
+func onParsedResultsReceived(_ result: ParsedResult)
 ```
 
 **Parameters**

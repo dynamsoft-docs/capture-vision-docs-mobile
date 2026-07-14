@@ -88,7 +88,7 @@ func getObservationParameters() -> ObservationParameters
 
 **Return Value**
 
-An `ObservationParameters` object.
+An `DSObservationParameters` object.
 
 ### onTargetROIResultsReceived
 
@@ -219,7 +219,7 @@ The callback triggered when localized text lines are received.
 ```
 2. 
 ```swift
-func onLocalizedTextLinesReceived(_ unit: DSLocalizedTextLinesUnit, info: IntermediateResultExtraInfo)
+func onLocalizedTextLinesReceived(_ unit: LocalizedTextLinesUnit, info: IntermediateResultExtraInfo)
 ```
 
 **Parameters**
