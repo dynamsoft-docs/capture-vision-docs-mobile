@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ImageProcessor - Dynamsoft Capture Vision Android Edition API Reference
-description: The class ImageProcessor of Dynamsoft Capture Vision Android is a utility class for processing images. It provides functionality like croping or converting images.
+description: The class ImageProcessor of Dynamsoft Capture Vision Android is a utility class for processing images. It provides functionality like cropping or converting images.
 keywords: image io, image manager, Java, Kotlin
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

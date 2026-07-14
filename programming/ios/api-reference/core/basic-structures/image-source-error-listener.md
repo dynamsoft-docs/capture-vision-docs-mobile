@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # ImageSourceErrorListener
 
-The `ImageSourceErrorListener` protocol defines methods for monitoring the errors that occur in the [`ImageSourceAdapter`](image-source-adapter.md).
+The `DSImageSourceErrorListener` protocol defines methods for monitoring the errors that occur in the [`DSImageSourceAdapter`](image-source-adapter.md).
 
 ## Definition
 
@@ -33,11 +33,11 @@ protocol ImageSourceErrorListener: NSObjectProtocol
 
 | Method | Description |
 |------- |-------------|
-| [`onErrorReceived`](#onerrorreceived) | The callback method for monitoring the errors that occur in the [`ImageSourceAdapter`](image-source-adapter.md). |
+| [`onErrorReceived`](#onerrorreceived) | The callback method for monitoring the errors that occur in the [`DSImageSourceAdapter`](image-source-adapter.md). |
 
 ### onErrorReceived
 
-The callback method for monitoring the errors that occur in the [`ImageSourceAdapter`](image-source-adapter.md).
+The callback method for monitoring the errors that occur in the [`DSImageSourceAdapter`](image-source-adapter.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

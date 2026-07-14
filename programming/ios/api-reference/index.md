@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Capture Vision iOS  API Reference - Main Page
+title: Dynamsoft Capture Vision iOS API Reference - Main Page
 description: This is the main page of Dynamsoft Capture Vision SDK API Reference for iOS.
 keywords: api reference, iOS
 needAutoGenerateSidebar: true
@@ -18,7 +18,7 @@ This page provides an overview of the various modules and highlights the most es
 
 <div align="center">
     <p><img src="../../../assets/img/dcv-dependencies.png" width="70%" alt="dependencies"></p>
-    <p>Modules hierarchical of the DCV SDK</p>
+    <p>Module hierarchy of the DCV SDK</p>
 </div>
 
 The table below describes details the functionalities of these modules:
@@ -27,7 +27,7 @@ The table below describes details the functionalities of these modules:
 |:-----|:------------|
 | `DynamsoftCaptureVisionRouter` (CVR) | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. |
 | `DynamsoftBarcodeReader`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |
-| `DynamsoftDocumentNormalizer`(DBR) | The Dynamsoft Document Normalizer module extracts structural information from document images, including document boundaries, shadow areas, and text areas. It uses this information to generate normalized document images through processes such as deskewing, shadow removal, and distortion correction. |
+| `DynamsoftDocumentNormalizer`(DDN) | The Dynamsoft Document Normalizer module extracts structural information from document images, including document boundaries, shadow areas, and text areas. It uses this information to generate normalized document images through processes such as deskewing, shadow removal, and distortion correction. |
 | `DynamsoftLabelRecognizer` (DLR) | The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. |
 | `DynamsoftCore` (Core) | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs.|
 | `DynamsoftImageProcessing` (DIP) | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer.  |
@@ -42,7 +42,7 @@ The table below describes details the functionalities of these modules:
 
 ### Capture Vision Router
 
-The main class [`CaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
+The main class [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
 - [Set input]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#setinput)
 - [Config capture vision settings]({{ site.dcv_ios_api }}capture-vision-router/settings.html)
@@ -51,24 +51,24 @@ The main class [`CaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-rout
 
 ### Image Source Adapter
 
-The [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) or implement your own.
+The [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) or implement your own.
 
-Class [`CameraEnhancer`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+Class [`DSCameraEnhancer`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html) is one of the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enables you to improve the video quality by adjusting the camera settings.
 
 ### Captured Result Receiver
 
-Implement the callback methods of [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive the corresponding results you required. The callbacks are triggered when the processing of an image/vide frame is finished or timeout.
+Implement the callback methods of [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive the corresponding results you required. The callbacks are triggered when the processing of an image/video frame is finished or times out.
 
 #### Barcode Decoding
 
 Callback methods that are related to barcode decoding:
 
-- [`onDecodedBarcodesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback of barcode decoding. The result you received in the callback method is a [`DecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html) object, which contains all the decoded barcodes from the processed image.
+- [`onDecodedBarcodesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback of barcode decoding. The result you received in the callback method is a [`DSDecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html) object, which contains all the decoded barcodes from the processed image.
 
 Related APIs:
 
-- [`DecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html): All barcodes that decoded from the processed image.
-- [`BarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html): The barcode decoding result of a single barcode.
+- [`DSDecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html): All barcodes that were decoded from the processed image.
+- [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html): The barcode decoding result of a single barcode.
 
 #### Document Scanning
 
@@ -87,16 +87,16 @@ Related APIs:
 
 Callback methods that are related to MRZ scanning:
 
-- [`onParsedResultsReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onparsedresultsreceived): The callback of content parsing. The result you received in the callback method is a [`ParsedResult`]({{ site.dcp_ios_api }}parsed-result.html) object, which contains all the parsed results from the processed image.
-- [`onRecognizedTextLinesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived): The callback of text recognition. The result you received in the callback method is a [`RecognizedTextLinesResult`]({{ site.dlr_ios_api }}recognized-text-lines-result.html) object, which contains all the original MRZ text of the processed image.
+- [`onParsedResultsReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onparsedresultsreceived): The callback of content parsing. The result you received in the callback method is a [`DSParsedResult`]({{ site.dcp_ios_api }}parsed-result.html) object, which contains all the parsed results from the processed image.
+- [`onRecognizedTextLinesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived): The callback of text recognition. The result you received in the callback method is a [`DSRecognizedTextLinesResult`]({{ site.dlr_ios_api }}recognized-text-lines-result.html) object, which contains all the original MRZ text of the processed image.
 
 Related APIs:
 
-- [`ParsedResult`]({{ site.dcp_ios_api }}parsed-result.html): All parsed results that captured from the processed image.
-- [`ParsedResultItem`]({{ site.dcp_ios_api }}parsed-result-item.html): The parsing result of a single parsable content.
-- [`RecognizedTextLinesResult`]({{ site.dlr_ios_api }}recognized-text-lines-result.html): All text lines that recognized from the processed image.
-- [`TextLineResultItem`]({{ site.dlr_ios_api }}text-line-result-item.html): The text recognition result of a single text line.
+- [`DSParsedResult`]({{ site.dcp_ios_api }}parsed-result.html): All parsed results that were captured from the processed image.
+- [`DSParsedResultItem`]({{ site.dcp_ios_api }}parsed-result-item.html): The parsing result of a single parsable content.
+- [`DSRecognizedTextLinesResult`]({{ site.dlr_ios_api }}recognized-text-lines-result.html): All text lines that were recognized from the processed image.
+- [`DSTextLineResultItem`]({{ site.dlr_ios_api }}text-line-result-item.html): The text recognition result of a single text line.
 
 ### Camera View
 
-[`CameraView`]({{ site.dce_ios_api }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_ios_api }}auxiliary-api/dcecameraview.html).
+[`DSCameraView`]({{ site.dce_ios_api }}auxiliary-api/dcecameraview.html) is a view class that is designed for visualizing the real time video streaming and the barcode decoding result. If the [`DSCameraEnhancer`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`DSCameraView`]({{ site.dce_ios_api }}auxiliary-api/dcecameraview.html).

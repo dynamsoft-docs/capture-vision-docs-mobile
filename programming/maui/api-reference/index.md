@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Capture Vision MAUI  API Reference - Main Page
+title: Dynamsoft Capture Vision MAUI API Reference - Main Page
 description: This is the main page of Dynamsoft Capture Vision SDK API Reference for MAUI.
 keywords: api reference, MAUI
 needAutoGenerateSidebar: true
@@ -18,7 +18,7 @@ This page provides an overview of the various modules and highlights the most es
 
 <div align="center">
     <p><img src="../../../assets/img/dcv-dependencies.png" width="70%" alt="dependencies"></p>
-    <p>Modules hierarchical of the DCV SDK</p>
+    <p>Module hierarchy of the DCV SDK</p>
 </div>
 
 The table below describes details the functionalities of these modules:
@@ -27,7 +27,7 @@ The table below describes details the functionalities of these modules:
 |:-----|:------------|
 | `Dynamsoft.CaptureVisionRouter.Maui` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. |
 | `Dynamsoft.BarcodeReader.Maui`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |
-| `Dynamsoft.DocumentNormalizer.Maui`(DBR) | The Dynamsoft Document Normalizer module extracts structural information from document images, including document boundaries, shadow areas, and text areas. It uses this information to generate normalized document images through processes such as deskewing, shadow removal, and distortion correction. |
+| `Dynamsoft.DocumentNormalizer.Maui`(DDN) | The Dynamsoft Document Normalizer module extracts structural information from document images, including document boundaries, shadow areas, and text areas. It uses this information to generate normalized document images through processes such as deskewing, shadow removal, and distortion correction. |
 | `Dynamsoft.LabelRecognizer.Maui` (DLR) | The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. |
 | `Dynamsoft.Core.Maui` | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs.|
 | `Dynamsoft.ImageProcessing.Maui` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer.  |
@@ -53,11 +53,11 @@ The main class [`CaptureVisionRouter`]({{ site.dcv_maui_api }}capture-vision-rou
 
 The [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcv_maui_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html) or implement your own.
 
-Class [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+Class [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enables you to improve the video quality by adjusting the camera settings.
 
 ### Captured Result Receiver
 
-Implement the callback methods of [`CapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive the corresponding results you required. The callbacks are triggered when the processing of an image/vide frame is finished or timeout.
+Implement the callback methods of [`CapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive the corresponding results you required. The callbacks are triggered when the processing of an image/video frame is finished or times out.
 
 #### Barcode Decoding
 
@@ -67,7 +67,7 @@ Callback methods that are related to barcode decoding:
 
 Related APIs:
 
-- [`DecodedBarcodesResult`]({{ site.dbr_maui_api }}decoded-barcodes-result.html): All barcodes that decoded from the processed image.
+- [`DecodedBarcodesResult`]({{ site.dbr_maui_api }}decoded-barcodes-result.html): All barcodes that were decoded from the processed image.
 - [`BarcodeResultItem`]({{ site.dbr_maui_api }}barcode-result-item.html): The barcode decoding result of a single barcode.
 
 #### Document Scanning
@@ -93,11 +93,11 @@ Callback methods that are related to MRZ scanning:
 
 Related APIs:
 
-- [`ParsedResult`]({{ site.dcp_maui_api }}parsed-result.html): All parsed results that captured from the processed image.
+- [`ParsedResult`]({{ site.dcp_maui_api }}parsed-result.html): All parsed results that were captured from the processed image.
 - [`ParsedResultItem`]({{ site.dcp_maui_api }}parsed-result-item.html): The parsing result of a single parsable content.
-- [`RecognizedTextLinesResult`]({{ site.dlr_maui_api }}recognized-text-lines-result.html): All text lines that recognized from the processed image.
+- [`RecognizedTextLinesResult`]({{ site.dlr_maui_api }}recognized-text-lines-result.html): All text lines that were recognized from the processed image.
 - [`TextLineResultItem`]({{ site.dlr_maui_api }}text-line-result-item.html): The text recognition result of a single text line.
 
 ### Camera View
 
-[`CameraView`]({{ site.dce_maui_api }}camera-view.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_maui_api }}camera-view.html).
+[`CameraView`]({{ site.dce_maui_api }}camera-view.html) is a view class that is designed for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_maui_api }}camera-view.html).

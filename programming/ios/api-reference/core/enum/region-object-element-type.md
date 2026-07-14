@@ -12,7 +12,7 @@ codeAutoHeight: true
 
 # Enumeration RegionObjectElementType
 
-`RegionObjectElementType` specifies the exact subclass type within the `RegionObjectElement` hierarchy. This enumeration facilitates the identification and differentiation of various processed elements in an image.
+`DSRegionObjectElementType` specifies the exact subclass type within the `DSRegionObjectElement` hierarchy. This enumeration facilitates the identification and differentiation of various processed elements in an image.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

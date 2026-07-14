@@ -53,7 +53,7 @@ ImageSourceAdapter GetInput();
 
 **Return Value**
 
-The `ImageSourceAdapter` object that is bind with this `CaptureVisionRouter` object.
+The `ImageSourceAdapter` object that is bound to this `CaptureVisionRouter` object.
 
 ## AddResultReceiver
 

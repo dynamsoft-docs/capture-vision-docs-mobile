@@ -39,7 +39,7 @@ noTitleIndex: true
 
 #### ECI (Extended Channel Interpretation) Support
 
-- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class, along with [`eciSegments`]({{ site.dbr_ios_api }}barcode-result-item.html#ecisegments) property in [`BarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class, enables access to character encoding information embedded in barcodes.
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`DSECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class, along with [`eciSegments`]({{ site.dbr_ios_api }}barcode-result-item.html#ecisegments) property in [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class, enables access to character encoding information embedded in barcodes.
 - **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
 
 #### Performance Improvements
@@ -53,15 +53,15 @@ noTitleIndex: true
 
 - **Enhanced Passport Processing** – Improves document edge detection accuracy for passport documents through optimized processing workflows.
 - **Portrait Zone Detection** – The `MRZLocalization` model now supports detecting portrait zone on identity documents, enabling automatic extraction of photo regions.
-- **New DynamsoftIdentityUtility Module** – Introduces a dedicated module for identity document processing, including the [`IdentityProcessor`]({{ site.dcv_ios_api }}identity-utility/identity-processor.html) class with `findPortraitZone` method for precise portrait positioning from passports and ID cards.
+- **New DynamsoftIdentityUtility Module** – Introduces a dedicated module for identity document processing, including the [`DSIdentityProcessor`]({{ site.dcv_ios_api }}identity-utility/identity-processor.html) class with `findPortraitZone` method for precise portrait positioning from passports and ID cards.
 
 ### New
 
 - Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
-- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
-- Added [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class for representing additional region information detected during processing (e.g., MRZ (Machine Readable Zone), portrait zones).
-- Added `DSRegionObjectElementTypeAuxiliaryRegion` to [`RegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html) enumeration for the new [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class.
-- Added auxiliary region element management methods to [`LocalizedTextLinesUnit`]({{ site.dlr_ios_api }}localized-text-lines-unit.html):
+- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`DSMultiFrameResultCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
+- Added [`DSAuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class for representing additional region information detected during processing (e.g., MRZ (Machine Readable Zone), portrait zones).
+- Added `DSRegionObjectElementTypeAuxiliaryRegion` to [`DSRegionObjectElementType`]({{ site.dcv_ios_api }}core/enum/region-object-element-type.html) enumeration for the new [`DSAuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html) class.
+- Added auxiliary region element management methods to [`DSLocalizedTextLinesUnit`]({{ site.dlr_ios_api }}localized-text-lines-unit.html):
   - `getAuxiliaryRegionElementsCount`
   - `getAuxiliaryRegionElement`
   - `getAuxiliaryRegionElements`
@@ -71,14 +71,14 @@ noTitleIndex: true
   - `removeAllAuxiliaryRegionElements`
 - Added new error code `DSErrorPortraitZoneNotFound` for identity document processing.
 - Added a new resolution [`DSResolutionMax`]({{ site.dce_ios_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
-- Added a new listener [`FocusListener`]({{ site.dce_ios_api }}auxiliary-api/interface-focus-listener.html) for receiving callback when the camera focus is completed. You can register the listener via [`CameraEnhancer.setFocusListener`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html#setfocuslistener).
+- Added a new listener [`DSFocusListener`]({{ site.dce_ios_api }}auxiliary-api/interface-focus-listener.html) for receiving callback when the camera focus is completed. You can register the listener via [`DSCameraEnhancer.setFocusListener`]({{ site.dce_ios_api }}primary-api/camera-enhancer.html#setfocuslistener).
 
 ### Changed
 
 - Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
 - Improved license binding stability on MacOS devices.
 - Updated default value of `compensation` parameter in [`ImageProcessor.convertToBinaryLocal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
-- [`convertToBinaryGlobal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinarylocal) of `ImageProcessor` class now support color and binary images as input in addition to grayscale images.
+- [`convertToBinaryGlobal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal`]({{ site.dcv_ios_api }}utility/image-processor.html#converttobinarylocal) of `DSImageProcessor` class now support color and binary images as input in addition to grayscale images.
 
 ### Removed
 
@@ -172,7 +172,7 @@ This release focuses on practical performance gains for production environments 
 - Added a new method, [`switchCapturingTemplate`]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
 - Added a new method, [`clearDLModelBuffers`]({{ site.dcv_ios_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
 - Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_ios_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
-- Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
+- Added a new button, `cameraToggleButton`, to the `DSCameraView`, allowing users to switch between the front and back cameras.
 The following APIs are provided for configuring the `cameraToggleButton`:
   - [`setCameraToggleButton`]({{ site.dce_ios_api }}auxiliary-api/dcecameraview.html#setcameratogglebuttonwithframe)
   - [`cameraToggleButtonVisible`]({{ site.dce_ios_api }}auxiliary-api/dcecameraview.html#cameratogglebuttonvisible)

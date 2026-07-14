@@ -51,7 +51,7 @@ Initializes the license for the application using a license key.
 ```
 2. 
 ```swift
-class func initLicense(_ license: String, verificationDelegate delegate: DSLicenseVerificationListener?)
+class func initLicense(_ license: String, verificationDelegate delegate: LicenseVerificationListener?)
 ```
 
 **Parameters**

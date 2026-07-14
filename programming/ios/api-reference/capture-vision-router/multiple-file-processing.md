@@ -14,22 +14,22 @@ noTitleIndex: true
 | ------ | ----------- |
 | [`setInput`](#setinput) | Sets up an image source to provide images for continuous processing. |
 | [`getInput`](#getinput) | Returns the image source object. |
-| [`addResultReceiver`](#addresultreceiver) | Adds a [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object as the receiver of captured results. |
-| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object. |
-| [`removeAllResultReceivers`](#removeallresultreceivers) | Removes all user-added [`CapturedResultReceivers`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html). |
+| [`addResultReceiver`](#addresultreceiver) | Adds a [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object as the receiver of captured results. |
+| [`removeResultReceiver`](#removeresultreceiver) | Removes the specified [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object. |
+| [`removeAllResultReceivers`](#removeallresultreceivers) | Removes all user-added [`DSCapturedResultReceivers`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html). |
 | [`startCapturing`](#startcapturing) | Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source. |
 | [`stopCapturing`](#stopcapturing) | Stops the capturing process. |
 | [`pauseCapturing`](#pausecapturing) | Pauses the Capture Vision Router. |
 | [`resumeCapturing`](#resumecapturing) | Resumes the Capture Vision Router. |
-| [`addCaptureStateListener`](#addcapturestatelistener) | Registers a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html) to be used as a callback when capture state is received. |
-| [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a [`CaptureStateListener`](auxiliary-classes/capture-state-listener.html) that has been configured for the Capture Vision Router. |
-| [`removeAllCaptureStateListeners`](#removeallcapturestatelisteners) | Removes all user-added [`CaptureStateListeners`](auxiliary-classes/capture-state-listener.html). |
-| [`addResultFilter`](#addresultfilter) | Adds a `CapturedResultFilter` object to filter non-essential results. |
-| [`removeResultFilter`](#removeresultfilter) | Removes the specified `CapturedResultFilter` object. |
-| [`removeAllResultFilters`](#removeallresultfilters) | Removes all user-added `CapturedResultFilters`. |
-| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) to get callback when the status of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) received. |
-| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`ImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) from the Capture Vision Router. |
-| [`removeAllImageSourceStateListeners`](#removeallimagesourcestatelisteners) | Removes all user-added [`ImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html). |
+| [`addCaptureStateListener`](#addcapturestatelistener) | Registers a [`DSCaptureStateListener`](auxiliary-classes/capture-state-listener.html) to be used as a callback when capture state is received. |
+| [`removeCaptureStateListener`](#removecapturestatelistener) | Removes a [`DSCaptureStateListener`](auxiliary-classes/capture-state-listener.html) that has been configured for the Capture Vision Router. |
+| [`removeAllCaptureStateListeners`](#removeallcapturestatelisteners) | Removes all user-added [`DSCaptureStateListeners`](auxiliary-classes/capture-state-listener.html). |
+| [`addResultFilter`](#addresultfilter) | Adds a `DSCapturedResultFilter` object to filter non-essential results. |
+| [`removeResultFilter`](#removeresultfilter) | Removes the specified `DSCapturedResultFilter` object. |
+| [`removeAllResultFilters`](#removeallresultfilters) | Removes all user-added `DSCapturedResultFilters`. |
+| [`addImageSourceStateListener`](#addimagesourcestatelistener) | Register a [`DSImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) to get callback when the status of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) received. |
+| [`removeImageSourceStateListener`](#removeimagesourcestatelistener) | Removes a [`DSImageSourceStateListener`](auxiliary-classes/image-source-state-listener.html) from the Capture Vision Router. |
+| [`removeAllImageSourceStateListeners`](#removeallimagesourcestatelisteners) | Removes all user-added [`DSImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html). |
 | [`switchCapturingTemplate`](#switchcapturingtemplate) | Switch the image processing settings with the CaptureVisionTemplate name during the image processing workflow. |
 
 
@@ -53,7 +53,7 @@ func setInput(_ adapter: ImageSourceAdapter) throws -> BOOL
 
 **Parameters**
 
-`adapter`: An object of [`DSImageSourceAdapter`](../core/basic-structures/image-source-adapter.md). You can use an internally implemented `ImageSourceAdapter` such as `CameraEnhancer`, `DirectoryFetcher` or `FileFetcher`.  
+`adapter`: An object of [`DSImageSourceAdapter`](../core/basic-structures/image-source-adapter.md). You can use an internally implemented `DSImageSourceAdapter` such as `DSCameraEnhancer`, `DSDirectoryFetcher` or `DSFileFetcher`.  
 `error`: An `NSError` pointer. If an error occurs, it will represent the error information.
 
 **Error**
@@ -148,7 +148,7 @@ func removeAllImageSourceStateListeners()
 
 ## addResultReceiver
 
-Adds a [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object as the receiver of captured results.
+Adds a [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object as the receiver of captured results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -169,7 +169,7 @@ func addResultReceiver(_ listener:CapturedResultReceiver)
 
 ## removeResultReceiver
 
-Removes the specified [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object.
+Removes the specified [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -194,7 +194,7 @@ A BOOL value that indicates whether the result receiver is removed successfully.
 
 ## removeAllResultReceivers
 
-Removes all user-added [`CapturedResultReceivers`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
+Removes all user-added [`DSCapturedResultReceivers`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

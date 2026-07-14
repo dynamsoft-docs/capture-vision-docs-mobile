@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Does DCV support .NET MAUI?
-keywords: Dynamsoft Barcode Reader, FAQ, IOS, Android, Mobile, building error, archetecture, arm64
+keywords: Dynamsoft Barcode Reader, FAQ, iOS, Android, Mobile, building error, architecture, arm64
 description: Does DCV support .NET MAUI?
 needAutoGenerateSidebar: false
 noTitleIndex: true

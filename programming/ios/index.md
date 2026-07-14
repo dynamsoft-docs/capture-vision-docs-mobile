@@ -39,7 +39,7 @@ While the guide covers common APIs, more detailed explanations of these and othe
 
 Using DCV in iOS involves:
 
-1. Creating a `CaptureVisionRouter` instance.
+1. Creating a `DSCaptureVisionRouter` instance.
 2. Defining and binding an image source and a result receiver to the instance.
 3. Specifying a template which defines how to process images.
 

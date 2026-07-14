@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSImageSourceAdapter
 
-The `ImageSourceAdapter` class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. Implementations must provide specific mechanisms for image retrieval and handling.
+The `DSImageSourceAdapter` class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. Implementations must provide specific mechanisms for image retrieval and handling.
 
 ## Definition
 
@@ -48,8 +48,8 @@ class ImageSourceAdapter : NSObject
 | [`setErrorListener`](#seterrorlistener) | Sets an error listener to receive notifications about errors that occur during image source operations. |
 | [`setImageFetchState`](#setimagefetchstate) | Determines whether there are more images left to fetch. |
 | [`setNextImageToReturn`](#setnextimagetoreturn) | Sets the processing priority of a specific image. This can affect the order in which images are returned by `getImage`. |
-| [`startFetching`](#startfetching) | Start fetching images from the source to the Video Buffer of ImageSourceAdapter. |
-| [`stopFetching`](#stopfetching) | Stop fetching images from the source to the Video Buffer of ImageSourceAdapter. |
+| [`startFetching`](#startfetching) | Start fetching images from the source to the Video Buffer of `DSImageSourceAdapter`. |
+| [`stopFetching`](#stopfetching) | Stop fetching images from the source to the Video Buffer of `DSImageSourceAdapter`. |
 
 ### bufferEmpty
 
@@ -259,7 +259,7 @@ func setErrorListener(_ listener: ImageSourceErrorListener?)
 
 **Parameters**
 
-`[in] listener`: A delegate object of [`DSImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to receive the errors that occurs in the `ImageSourceAdapter`.
+`[in] listener`: A delegate object of [`DSImageSourceErrorListener`]({{ site.dcv_ios_api }}core/basic-structures/image-source-error-listener.html) to receive the errors that occurs in the `DSImageSourceAdapter`.
 
 ### setImageFetchState
 
@@ -311,7 +311,7 @@ A BOOL value that indicates whether the specified image is successfully set as t
 
 ### startFetching
 
-Start fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
+Start fetching images from the source to the Video Buffer of `DSImageSourceAdapter`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -328,7 +328,7 @@ func startFetching()
 
 ### stopFetching
 
-Stop fetching images from the source to the Video Buffer of `ImageSourceAdapter`.
+Stop fetching images from the source to the Video Buffer of `DSImageSourceAdapter`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -26,7 +26,7 @@ The `DSCaptureStateListener` protocol defines the methods for monitoring the cap
 ```
 2. 
 ```swift
-protocol DSCaptureStateListener : NSObjectProtocol
+protocol CaptureStateListener : NSObjectProtocol
 ```
 
 ## Methods

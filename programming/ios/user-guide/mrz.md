@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Scan & Parse MRZ - Dynamsoft Capture Vision iOS Edition
-description: This page introduce how to scan and parse a MRZ with Dynamsoft Capture Vision iOS Edition.
+description: This page introduces how to scan and parse a MRZ with Dynamsoft Capture Vision iOS Edition.
 keywords: iOS, MRZ, passport, id card, visa
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -55,7 +55,7 @@ The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containi
 
 ### ID (TD2 Size)
 
-The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
+The MRZ (Machine Readable Zone) in TD2 format consists of 2 lines, with each line containing 36 characters.
 
 <div>
    <img src="../../assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
@@ -66,7 +66,7 @@ The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each li
 The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
 
 <div>
-   <img src="../../assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+   <img src="../../assets/td3-passport.png" alt="Example of MRZ in TD3 format" width="88%" />
 </div>
 
 ## Requirements
@@ -162,7 +162,7 @@ To add the SDK to your new project, please read [Add the SDK](#add-the-sdk) sect
 
 ### Initialize the Camera Module
 
-Create the instances of `CameraEnhancer` and `CameraView` in **ViewController**.
+Create the instances of `DSCameraEnhancer` and `DSCameraView` in **ViewController**.
 
 ```swift
 import DynamsoftCameraEnhancer
@@ -188,7 +188,7 @@ class ViewController: UIViewController {
 
 ### Initialize the Capture Vision Router
 
-Create an instance of `CaptureVisionRouter` and bind it with the already created instance of `DynamsoftCameraEnhancer`.
+Create an instance of `DSCaptureVisionRouter` and bind it with the already created instance of `DynamsoftCameraEnhancer`.
 
 ```swift
 import DynamsoftCaptureVisionRouter

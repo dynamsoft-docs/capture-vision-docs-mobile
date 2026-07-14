@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Add Resource Files - Dynamsoft Capture Vision iOS Edition
-description: This page introduce how to add additional resource files for Dynamsoft Capture Vision iOS Edition.
+description: This page introduces how to add additional resource files for Dynamsoft Capture Vision iOS Edition.
 keywords: iOS, resource files
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -10,9 +10,9 @@ noTitleIndex: true
 
 # Setup Resources
 
-This page is the guide of how to setup resources for Dynamsoft Capture Vision iOS Edition.
+This page is the guide on how to set up resources for Dynamsoft Capture Vision iOS Edition.
 
-1. Create a **DynamsoftResources** folder in the finder. Under the **DynamsoftResources** folder create a new folder and name it based on the type of your resource file.
+1. Create a **DynamsoftResources** folder in Finder. Under the **DynamsoftResources** folder create a new folder and name it based on the type of your resource file.
 
    For example, if you want to setup a template file `ReadVIN.json`, you have to create a new folder named **Templates**. If you want to setup a model file `VINCharRecognition.data` and a template file `ReadVIN.json` at the same time, you have to create two new folders, **Models** and **Templates**.
 

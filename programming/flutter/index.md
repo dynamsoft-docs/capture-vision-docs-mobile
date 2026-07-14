@@ -22,14 +22,14 @@ The hierarchical structure diagram below illustrates the various modules of the 
 
 <div align="center">
     <p><img src="../../assets/img/dcv-dependencies.png" width="70%" alt="dcv-dependencies"></p>
-    <p>Modules hierarchical of the DBR SDK</p>
+    <p>Module hierarchy of the DBR SDK</p>
 </div>
 
 ## API Overview
 
 ### Capture Vision Router
 
-The Dynamsoft Capture Vision Router class is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides API for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. Dynamsoft Capture Vision helps connects the functional products of Dynamsoft under the same umbrella - allowing for easier integration and interchangeable API to control them all.
+The Dynamsoft Capture Vision Router class is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. Dynamsoft Capture Vision helps connect the functional products of Dynamsoft under the same umbrella - allowing for easier integration and interchangeable API to control them all.
 
 You can find the CaptureVisionRouter API [here](./api-reference/capture-vision-router/capture-vision-router.md).
 

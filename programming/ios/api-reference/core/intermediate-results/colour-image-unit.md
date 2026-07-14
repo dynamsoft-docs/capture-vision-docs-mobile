@@ -26,7 +26,7 @@ The `DSColourImageUnit` interface extends the `DSIntermediateResultUnit` interfa
 ```
 2. 
 ```swift
-class ColourImageUnit : DSIntermediateResultUnit
+class ColourImageUnit : IntermediateResultUnit
 ```
 
 ## Methods

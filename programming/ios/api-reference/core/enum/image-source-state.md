@@ -14,7 +14,7 @@ ignore: true
 
 # Enumeration ImageSourceState
 
-`ImageSourceState` describes the state of `ImageSourceAdapter`.
+`DSImageSourceState` describes the state of `DSImageSourceAdapter`.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

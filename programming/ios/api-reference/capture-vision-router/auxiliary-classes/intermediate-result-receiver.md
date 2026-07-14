@@ -88,7 +88,7 @@ func getObservationParameters() -> ObservationParameters
 
 **Return Value**
 
-An `ObservationParameters` object.
+An `DSObservationParameters` object.
 
 ### onTargetROIResultsReceived
 
@@ -224,7 +224,7 @@ func onLocalizedTextLinesReceived(_ unit: LocalizedTextLinesUnit, info: Intermed
 
 **Parameters**
 
-`unit`: The intermediate result that contains the localized text lines, of type `LocalizedTextLinesUnit`.
+`unit`: The intermediate result that contains the localized text lines, of type `DSLocalizedTextLinesUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
