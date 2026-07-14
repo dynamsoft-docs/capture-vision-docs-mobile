@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Enumeration PresetTemplate
 
-`PresetTemplate` describes the preset template names.
+`DSPresetTemplate` describes the preset template names.
 
 ## Members
 

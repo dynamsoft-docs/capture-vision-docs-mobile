@@ -33,7 +33,7 @@ class CaptureVisionRouter : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`init`](constructors.md#init) | Creates an instance of `CaptureVisionRouter`. |
+| [`init`](constructors.md#init) | Creates an instance of `DSCaptureVisionRouter`. |
 
 ## Single-File Processing
 
@@ -52,10 +52,10 @@ class CaptureVisionRouter : NSObject
 | [`getInput`](multiple-file-processing.md#getinput) | Returns the image source object. |
 | [`addImageSourceStateListener`](multiple-file-processing.md#addimagesourcestatelistener) | Registers a DSImageSourceStateListener to get callback when the status of DSImageSourceAdapter changes. |
 | [`removeImageSourceStateListener`](multiple-file-processing.md#removeimagesourcestatelistener) | Removes a DSImageSourceStateListener. |
-| [`removeAllImageSourceStateListeners`](#removeallimagesourcestatelisteners) | Removes all user-added [`ImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html). |
+| [`removeAllImageSourceStateListeners`](#removeallimagesourcestatelisteners) | Removes all user-added [`DSImageSourceStateListeners`](auxiliary-classes/image-source-state-listener.html). |
 | [`addResultReceiver`](multiple-file-processing.md#addresultreceiver) | Registers a DSCapturedResultReceiver to get callback when DSCapturedResult output. |
 | [`removeResultReceiver`](multiple-file-processing.md#removeresultreceiver) | Removes a DSCapturedResultReceiver. |
-| [`removeAllResultReceivers`](#removeallresultreceivers) | Removes all user-added [`CapturedResultReceivers`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html). |
+| [`removeAllResultReceivers`](#removeallresultreceivers) | Removes all user-added [`DSCapturedResultReceivers`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html). |
 | [`startCapturing`](multiple-file-processing.md#startcapturing) | Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source. |
 | [`stopCapturing`](multiple-file-processing.md#stopcapturing) | Stops the capturing process. |
 | [`pauseCapturing`](multiple-file-processing.md#pausecapturing) | Pauses the Capture Vision Router. |
@@ -87,10 +87,10 @@ class CaptureVisionRouter : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-|  [`getIntermediateResultManager`](intermediate-result.md#getintermediateresultmanager) | Gets the object of `IntermediateResultManager`. |
+|  [`getIntermediateResultManager`](intermediate-result.md#getintermediateresultmanager) | Gets the object of `DSIntermediateResultManager`. |
 
 ## Buffered Items
 
 | Method | Description |
 | ------ | ----------- |
-|  [`getBufferedItemsManager`](buffered-items.md#getbuffereditemsmanager) | Gets the object of `BufferedItemsManager`. |
+|  [`getBufferedItemsManager`](buffered-items.md#getbuffereditemsmanager) | Gets the object of `DSBufferedItemsManager`. |

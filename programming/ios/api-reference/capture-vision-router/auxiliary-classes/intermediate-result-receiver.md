@@ -219,12 +219,12 @@ The callback triggered when localized text lines are received.
 ```
 2. 
 ```swift
-func onLocalizedTextLinesReceived(_ unit: LocalizedTextLinesUnit, info: IntermediateResultExtraInfo)
+func onLocalizedTextLinesReceived(_ unit: DSLocalizedTextLinesUnit, info: IntermediateResultExtraInfo)
 ```
 
 **Parameters**
 
-`unit`: The intermediate result that contains the localized text lines, of type `LocalizedTextLinesUnit`.
+`unit`: The intermediate result that contains the localized text lines, of type `DSLocalizedTextLinesUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 

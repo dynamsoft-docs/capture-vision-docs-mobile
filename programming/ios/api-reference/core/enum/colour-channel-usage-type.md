@@ -12,7 +12,7 @@ codeAutoHeight: true
 
 # Enumeration ColourChannelUsageType
 
-`ColourChannelUsageType` enumerates the different ways color channels can be utilized in image processing. This allows for flexible image analysis and manipulation by specifying how color data should be handled.
+`DSColourChannelUsageType` enumerates the different ways color channels can be utilized in image processing. This allows for flexible image analysis and manipulation by specifying how color data should be handled.
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C

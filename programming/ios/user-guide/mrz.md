@@ -162,7 +162,7 @@ To add the SDK to your new project, please read [Add the SDK](#add-the-sdk) sect
 
 ### Initialize the Camera Module
 
-Create the instances of `CameraEnhancer` and `CameraView` in **ViewController**.
+Create the instances of `DSCameraEnhancer` and `DSCameraView` in **ViewController**.
 
 ```swift
 import DynamsoftCameraEnhancer
@@ -188,7 +188,7 @@ class ViewController: UIViewController {
 
 ### Initialize the Capture Vision Router
 
-Create an instance of `CaptureVisionRouter` and bind it with the already created instance of `DynamsoftCameraEnhancer`.
+Create an instance of `DSCaptureVisionRouter` and bind it with the already created instance of `DynamsoftCameraEnhancer`.
 
 ```swift
 import DynamsoftCaptureVisionRouter

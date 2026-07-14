@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # ImageProcessor
 
-The class `ImageProcessor` is a utility class for managing the image data. It provides functionality for saving images to files and reading images from files.
+The class `DSImageProcessor` is a utility class for managing the image data. It provides functionality for saving images to files and reading images from files.
 
 ## Definition
 

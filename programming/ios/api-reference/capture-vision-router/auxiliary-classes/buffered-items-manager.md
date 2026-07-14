@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: BufferedItemsManager - Dynamsoft Capture Vision iOS API Reference
-description: The BufferedItemsManager class of DCV iOS edition is used to manage the buffered items.
+title: DSBufferedItemsManager - Dynamsoft Capture Vision iOS API Reference
+description: The DSBufferedItemsManager class of DCV iOS edition is used to manage the buffered items.
 keywords: buffered items, manager, Objc, Objective-C, Swift
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# BufferedItemsManager
+# DSBufferedItemsManager
 
-The `BufferedItemsManager` class is used to manage the buffered items.
+The `DSBufferedItemsManager` class is used to manage the buffered items.
 
 ## Definition
 
@@ -26,7 +26,7 @@ The `BufferedItemsManager` class is used to manage the buffered items.
 ```
 2. 
 ```swift
-class BufferedItemsManager : NSObject
+class DSBufferedItemsManager : NSObject
 ```
 
 ## Methods
