@@ -16,6 +16,9 @@ noTitleIndex: true
 | [`captureFromFileBytes`](#capturefromfilebytes) | Capture data from a given file in memory. |
 | [`captureFromBuffer`](#capturefrombuffer) | Capture data from the memory buffer via a `DSImageData` object. |
 | [`captureFromImage`](#capturefromimage) | Capture data from the given image. |
+| [`captureMultiPagesFromFile`](#capturemultipagesfromfile) | Capture data from a multi-page file specified by the file path. |
+| [`captureMultiPagesFromFileBytes`](#capturemultipagesfromfilebytes) | Capture data from a multi-page file in memory. |
+| [`captureMultiPagesFromFileFetcher`](#capturemultipagesfromfilefetcher) | Capture data from a multi-page file via a `DSFileFetcher`. |
 
 ## captureFromFile
 
@@ -191,3 +194,99 @@ Possible errors:
 | EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 | EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
+
+## captureMultiPagesFromFile
+
+Capture data from a multi-page file specified by the file path.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSArray<DSCapturedResult *> *)captureMultiPagesFromFile:(NSString *)file
+                                              templateName:(NSString *)templateName;
+```
+2. 
+```swift
+func captureMultiPagesFromFile(_ file: String, templateName: String) -> [CapturedResult]
+```
+
+**Parameters**
+
+`file`: The file path and name that you want to capture data from.
+
+`templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/enum/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) objects.
+
+## captureMultiPagesFromFileBytes
+
+Capture data from a multi-page file in memory.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSArray<DSCapturedResult *> *)captureMultiPagesFromFileBytes:(NSData *)fileBytes
+                                                   templateName:(NSString *)templateName;
+```
+2. 
+```swift
+func captureMultiPagesFromFileBytes(_ fileBytes: Data, templateName: String) -> [CapturedResult]
+```
+
+**Parameters**
+
+`fileBytes`: A `NSData` object that points to a file in memory.
+
+`templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/enum/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) objects.
+
+## captureMultiPagesFromFileFetcher
+
+Capture data from a multi-page file via a [`DSFileFetcher`]({{ site.dcv_ios_api }}utility/file-fetcher.html).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSArray<DSCapturedResult *> *)captureMultiPagesFromFileFetcher:(DSFileFetcher *)fetcher
+                                                     templateName:(NSString *)templateName;
+```
+2. 
+```swift
+func captureMultiPagesFromFileFetcher(_ fetcher: FileFetcher, templateName: String) -> [CapturedResult]
+```
+
+**Parameters**
+
+`fetcher`: A [`DSFileFetcher`]({{ site.dcv_ios_api }}utility/file-fetcher.html) object.
+
+`templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/enum/preset-template.html?lang=objc,swift) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`DSCapturedResult`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) objects.
