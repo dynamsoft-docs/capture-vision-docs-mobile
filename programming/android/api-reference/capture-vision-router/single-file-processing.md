@@ -23,6 +23,9 @@ This page introduces the `capture` APIs of the `CaptureVisionRouter` that design
 | [`capture(fileBytes,templateName)`](#capturefilebytestemplatename) | Processes a single image or a file containing a single image to derive important information with the file bytes in the memory. |
 | [`capture(imageData,templateName)`](#captureimagedatatemplatename) | Processes a single image or a file containing a single image to derive important information with an [`ImageData`](../core/basic-structures/image-data.md) object. |
 | [`capture(bitmap,templateName)`](#capturebitmaptemplatename) | Processes a single image or a file containing a single image to derive important information with a `Bitmap`. |
+| [`captureMultiPages(filePath,templateName)`](#capturemultipagesfilepathtemplatename) | Processes a multi-page file to derive important information with the file path. |
+| [`captureMultiPages(fileBytes,templateName)`](#capturemultipagesfilebytestemplatename) | Processes a multi-page file to derive important information with the file bytes in the memory. |
+| [`captureMultiPages(fileFetcher,templateName)`](#capturemultipagesfilefetchertemplatename) | Processes a multi-page file to derive important information with a `FileFetcher`. |
 
 ## capture(filePath,templateName)
 
@@ -158,3 +161,69 @@ Possible errors:
 | EC_TEMPLATE_NAME_INVALID | -10036 | The target template name is invalid. |
 | EC_CALL_REJECTED_WHEN_CAPTURING  | -10062 | Function call is rejected when capturing in progress. |
 | EC_MULTI_PAGES_NOT_SUPPORTED | -10066 | The api does not support multi-page files. Please use FileFetcher instead. |
+
+## captureMultiPages(filePath,templateName)
+
+Processes a multi-page file to derive important information with the file path.
+
+```java
+CapturedResult[] captureMultiPages(String filePath, String templateName);
+```
+
+**Parameters**
+
+`[in] filePath`: The file path and name that you want to capture data from.
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_android_api }}capture-vision-router/enum/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) objects which contains the derived information from each page of the file.
+
+## captureMultiPages(fileBytes,templateName)
+
+Processes a multi-page file to derive important information with the file bytes in the memory.
+
+```java
+CapturedResult[] captureMultiPages(byte[] fileBytes, String templateName);
+```
+
+**Parameters**
+
+`[in] fileBytes`: A byte array that points to a file in memory.
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_android_api }}capture-vision-router/enum/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) objects which contains the derived information from each page of the file.
+
+## captureMultiPages(fileFetcher,templateName)
+
+Processes a multi-page file to derive important information with a [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html).
+
+```java
+CapturedResult[] captureMultiPages(FileFetcher fileFetcher, String templateName);
+```
+
+**Parameters**
+
+`[in] fileFetcher`: A [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html) object.
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_android_api }}capture-vision-router/enum/preset-template.html?lang=android) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`CapturedResult`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) objects which contains the derived information from each page of the file.

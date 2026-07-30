@@ -39,6 +39,7 @@ class Quadrilateral
 | [`transformByMatrix`](#transformbymatrix) | Transforms the coordinates of the quadrilateral by a transformation matrix. |
 | [`getBoundingRect`](#getboundingrect) | Get the bounding rectangle of the quadrilateral. |
 | [`getArea`](#getarea) | Get the area of the quadrilateral. |
+| [`getCentrePoint`](#getcentrepoint) | Get the centre point of the quadrilateral. |
 
 ### points
 
@@ -156,3 +157,15 @@ int getArea();
 **Return Value**
 
 The area of the quadrilateral.
+
+### getCentrePoint
+
+Gets the centre point of the quadrilateral.
+
+```java
+Point getCentrePoint();
+```
+
+**Return Value**
+
+The centre point of the quadrilateral.
