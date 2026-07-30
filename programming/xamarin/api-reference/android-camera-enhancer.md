@@ -21,7 +21,7 @@ namespace DCVXamarin.Droid
         public DCVCameraEnhancer(Activity context);
 
         public Region ScanRegion { get; set; }
-        public bool ScanRegionVisible { get；set; }
+        public bool ScanRegionVisible { get; set; }
 
         public void Close();
         public Region GetScanRegion();
