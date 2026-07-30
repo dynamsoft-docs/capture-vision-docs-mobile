@@ -48,11 +48,11 @@ breadcrumbText: API Index
 | Classes | Description |
 | ------- | ----------- |
 | [`DCVCameraEnhancer`](android-camera-enhancer.md) | Implements IDCVCameraEnhancer on Android. |
-| [`DCVBarcodeRader`](android-barcode-reader.md) | Implements IDCVBarcodeReader on Android. |
+| [`DCVBarcodeReader`](android-barcode-reader.md) | Implements IDCVBarcodeReader on Android. |
 
 ## namespace DCVXamarin.iOS
 
 | Classes | Description |
 | ------- | ----------- |
 | [`DCVCameraEnhancer`](ios-camera-enhancer.md) | Implements IDCVCameraEnhancer on iOS. |
-| [`DCVBarcodeRader`](ios-barcode-reader.md) | Implements IDCVBarcodeReader on iOS. |
+| [`DCVBarcodeReader`](ios-barcode-reader.md) | Implements IDCVBarcodeReader on iOS. |
