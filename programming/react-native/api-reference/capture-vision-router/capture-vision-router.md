@@ -46,6 +46,8 @@ Capture from an Image
 | [`capture`](#capture) | Processes an image using the specified template and outputs a CapturedResult. |
 | [`captureFile`](#capturefile) | Processes an image from a file path using the specified template. |
 | [`captureFileBytes`](#capturefilebytes) | Processes an image from a byte array using the specified template. |
+| [`captureMultiPages`](#capturemultipages) | Processes a multi-page file and returns results for each page. |
+| [`captureMultiPagesFromFileBytes`](#capturemultipagesfromfilebytes) | Processes a multi-page file from byte array and returns results for each page. |
 
 Process Multiple Images
 
@@ -157,6 +159,56 @@ captureFileBytes(
 - One of the [`EnumPresetTemplate`]({{ site.dcv_react_native_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+### captureMultiPages
+
+Processes a multi-page file and returns results for each page.
+
+```js
+captureMultiPages(
+    filePath: string,
+    template?: string,
+): undefined | null | CapturedResult[]
+```
+
+**Parameters**
+
+`[in] filePath`: The file path of the multi-page file to process.
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_react_native_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`CapturedResult`](captured-result.md) objects which contains the derived information from each page of the file.
+
+### captureMultiPagesFromFileBytes
+
+Processes a multi-page file from byte array and returns results for each page.
+
+```js
+captureMultiPagesFromFileBytes(
+    fileBytes: ArrayBuffer,
+    template?: string,
+): undefined | null | CapturedResult[]
+```
+
+**Parameters**
+
+`[in] fileBytes`: A byte array that points to a multi-page file in memory.
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_react_native_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+An array of [`CapturedResult`](captured-result.md) objects which contains the derived information from each page of the file.
 
 ### addFilter
 
