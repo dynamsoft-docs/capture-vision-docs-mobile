@@ -37,3 +37,21 @@ points: Point[];
 **Remarks**
 
 The coordinates are typically set in pixels. However, if you are setting a region via the [`SimplifiedCaptureVisionSettings`](../capture-vision-router/simplified-capture-vision-settings.md), you can set the coordinates of the Quadrilateral as percentages (of the frame dimensions) instead of pixels if `roiMeasuredInPercentage` is set to true.
+
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`getCentrePoint`](#getcentrepoint) | Gets the centre point of the quadrilateral. |
+
+### getCentrePoint
+
+Gets the centre point of the quadrilateral.
+
+```js
+getCentrePoint(): Point
+```
+
+**Return Value**
+
+The centre point of the quadrilateral.

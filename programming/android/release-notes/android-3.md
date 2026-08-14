@@ -9,6 +9,16 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision Android v3.x
 
+## 3.6.2000 (08/14/2026)
+
+### New
+
+- Added support for Micro PDF417-specific decoding mode.
+
+### Fixed
+
+- Fixed several known crash issues.
+
 ## 3.6.1000 (07/30/2026)
 
 ### Highlights
