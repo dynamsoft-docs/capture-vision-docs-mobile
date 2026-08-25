@@ -21,10 +21,6 @@ noTitleIndex: true
 
 - **Handle normal and inverted DataMatrix more efficiently** - Added [`AutoDetectColorInversion`]({{ site.dcv_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) to automatically handle both normal and inverted DataMatrix barcodes. Instead of processing the whole image twice, the SDK applies dual-polarity handling only to localized DataMatrix regions, which makes processing faster in dual-polarity scenarios.
 
-#### Barcode Layout Analysis
-
-- **Decode dense grid barcodes more completely** - Added [`LayoutAnalyzer`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html) to organize barcode locations into logical line or matrix layouts and infer unrecognized barcode regions when gaps exist, enabling workflows such as fast first-pass decoding, missing-region inference, and targeted second-pass decoding on dense N*M barcode layouts.
-
 #### Cross-Version License Support
 
 - **Use a single license across SDK versions** - Full License 1.0 keys (starting with "f") that are non-perpetual are no longer version-checked, so the same key can be used across SDK versions without reactivation.
@@ -39,18 +35,6 @@ noTitleIndex: true
 - Added support for Micro PDF417-specific decoding mode.
 
 - Added [`AutoDetectColorInversion`]({{ site.dcv_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) parameter for `BarcodeFormatSpecification` to support automatic color-inversion detection for DataMatrix barcodes.
-
-- Added [`LayoutAnalyzer`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html) class with [`analyze()`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html#analyze) static method for quadrilateral layout analysis.
-
-- Added [`LayoutPattern`]({{ site.dcv_react_native_api }}utility/enum-layout-pattern.html) enumeration with values `LP_UNKNOWN`, `LP_LINES`, and `LP_MATRIX`.
-
-- Added [`LayoutElementSource`]({{ site.dcv_react_native_api }}utility/enum-layout-element-source.html) enumeration with values `LES_NONE`, `LES_INPUT`, and `LES_INFERRED`.
-
-- Added [`MeasureUnit`]({{ site.dcv_react_native_api }}core/enum-measure-unit.html) enumeration with values `MU_PIXEL` and `MU_PERCENTAGE`.
-
-- Added [`LayoutAxis`]({{ site.dcv_react_native_api }}utility/layout-axis.html), [`LayoutAnalysisParameter`]({{ site.dcv_react_native_api }}utility/layout-analysis-parameter.html), [`LayoutElement`]({{ site.dcv_react_native_api }}utility/layout-element.html), and [`LayoutAnalysisResult`]({{ site.dcv_react_native_api }}utility/layout-analysis-result.html) for layout analysis configuration and results.
-
-- Added a new `GridBarcodeScanner` sample (with `sample_grid.png`) to demonstrate how to use [`LayoutAnalyzer`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html) for barcode grid layout detection and logical row/column mapping.
 
 - Added [`OrientationDetectionModes`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/orientation-detection-modes.html) parameter for the [`SST_LOCALIZE_TEXT_LINES`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/stage-localize-text-lines.html) stage with two supported modes: `ODM_SPATIAL_REFERENCES` and `ODM_CHARS_ORIENTATION_NEURAL_NETWORK`.
 
