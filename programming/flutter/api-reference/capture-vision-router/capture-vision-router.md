@@ -40,6 +40,8 @@ Capture from an Image
 | [`capture`](#capture) | Processes an image using the specified template and outputs a CapturedResult. |
 | [`captureFile`](#capturefile) | Processes an image from a file path using the specified template. |
 | [`captureFileBytes`](#capturefilebytes) | Processes an image from a byte array using the specified template. |
+| [`captureMultiPages`](#capturemultipages) | Processes multiple pages from a file using the specified template. |
+| [`captureMultiPagesFromFileBytes`](#capturemultipagesfromfilebytes) | Processes multiple pages from a byte array using the specified template. |
 
 Process Multiple Images
 
@@ -130,6 +132,50 @@ Future<CapturedResult> captureFileBytes(Uint8List bytes, String templateName) as
 - One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
 - A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
 - "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+### captureMultiPages
+
+Processes multiple pages from a file (specified by a file path) using the specified template.
+
+```dart
+Future<List<CapturedResult>> captureMultiPages(String filePath, String templateName) async
+```
+
+**Parameters**
+
+`[in] filePath`: The file path and name that you want to capture data from. You have to specify the file name with extension name in the `filePath`. Supported file type includes ".pdf" and multi-page ".tiff".
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+A list of [`CapturedResult`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result.html) objects, one for each page processed.
+
+### captureMultiPagesFromFileBytes
+
+Processes multiple pages from a byte array using the specified template.
+
+```dart
+Future<List<CapturedResult>> captureMultiPagesFromFileBytes(Uint8List bytes, String templateName) async
+```
+
+**Parameters**
+
+`[in] bytes`: A byte array that points to a file in memory. Supported file type includes ".pdf" and multi-page ".tiff".
+
+`[in] templateName`: Specifies a "CaptureVisionTemplate" to use. The following value are available for this parameter:
+
+- One of the [`EnumPresetTemplate`]({{ site.dcv_flutter_api }}core/enum/preset-template.html) member. This is available only if you have never upload a new template via `initSettings` or `initSettingsFromFile`.
+- A string that represents one of the template name that you have uploaded via `initSettings` or `initSettingsFromFile`.
+- "" (empty string) to use the default template. The first template will be used if you have uploaded a template file via `initSettingsFromFile` or `initSettings`.
+
+**Return Value**
+
+A list of [`CapturedResult`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result.html) objects, one for each page processed.
 
 ### addResultFilter
 
