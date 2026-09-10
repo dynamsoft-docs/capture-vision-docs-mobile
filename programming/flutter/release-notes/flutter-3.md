@@ -34,7 +34,7 @@ noTitleIndex: true
 
 - Added support for Micro PDF417-specific decoding mode.
 
-- Added [`getCentrePoint`]({{ site.dcv_flutter_api }}core/quadrilateral.html#getcentrepoint) method to `Quadrilateral`.
+- Added [`centrePoint`]({{ site.dcv_flutter_api }}core/quadrilateral.html#centrepoint) method to `Quadrilateral`.
 
 - Added [`AutoDetectColorInversion`]({{ site.dcv_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) parameter for `BarcodeFormatSpecification` to support automatic color-inversion detection for DataMatrix barcodes.
 
