@@ -31,6 +31,7 @@ Quadrilateral({required this.points});
 | Property | Type | Description |
 | --------- | ---- | ----------- |
 | [`points`](#points) | *List\<Point\>* | A list of four points that make up the quadrilateral. |
+| [`centrePoint`](#centrepoint) | `Point<int>` | Gets the centre point of the Quadrilateral. |
 
 ### points
 
@@ -43,3 +44,15 @@ List<Point<int>> points;
 **Remarks**
 
 The coordinates are typically set in pixels. However, if you are setting a region via the [`SimplifiedCaptureVisionSettings`](../capture-vision-router/simplified-capture-vision-settings.md), you can set the coordinates of the Quadrilateral as percentages (of the frame dimensions) instead of pixels if `roiMeasuredInPercentage` is set to true.
+
+### centrePoint
+
+Gets the centre point of the Quadrilateral.
+
+```dart
+Point<int> centrePoint()
+```
+
+**Return Value**
+
+A `Point<int>` object representing the centre point of the quadrilateral.
