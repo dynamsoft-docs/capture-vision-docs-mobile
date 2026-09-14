@@ -34,6 +34,7 @@ class Quadrilateral
 | [`Contains`](#contains) | Check whether the input point is contained by the quadrilateral. |
 | [`GetBoundingRect`](#getboundingrect) | Get the bounding rectangle of the quadrilateral. |
 | [`GetArea`](#getarea) | Get the area of the quadrilateral. |
+| [`GetCentrePoint`](#getcentrepoint) | Get the centre point of the quadrilateral. |
 
 ### Points
 
@@ -90,3 +91,15 @@ int GetArea();
 **Return Value**
 
 The area of the quadrilateral.
+
+### GetCentrePoint
+
+Get the centre point of the quadrilateral.
+
+```csharp
+Microsoft.Maui.Graphics.Point GetCentrePoint();
+```
+
+**Return Value**
+
+The centre point of the quadrilateral.
