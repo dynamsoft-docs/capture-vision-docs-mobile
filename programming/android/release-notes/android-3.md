@@ -50,11 +50,11 @@ noTitleIndex: true
 
 - Added [`LayoutAnalyzer`]({{ site.dcvb_android_api }}utility/layout-analyzer.html) class with [`analyze()`]({{ site.dcvb_android_api }}utility/layout-analyzer.html#analyze) static method for quadrilateral layout analysis.
 
-- Added [`LayoutPattern`]({{ site.dcvb_android_api }}utility/enum-layout-pattern.html) enumeration with values `LP_UNKNOWN`, `LP_LINES`, and `LP_MATRIX`.
+- Added [`LayoutPattern`]({{ site.dcvb_android_api }}utility/enum/layout-pattern.html) enumeration with values `LP_UNKNOWN`, `LP_LINES`, and `LP_MATRIX`.
 
-- Added [`LayoutElementSource`]({{ site.dcvb_android_api }}utility/enum-layout-element-source.html) enumeration with values `LES_NONE`, `LES_INPUT`, and `LES_INFERRED`.
+- Added [`LayoutElementSource`]({{ site.dcvb_android_api }}utility/enum/layout-element-source.html) enumeration with values `LES_NONE`, `LES_INPUT`, and `LES_INFERRED`.
 
-- Added [`MeasureUnit`]({{ site.dcvb_android_api }}core/enum-measure-unit.html) enumeration with values `MU_PIXEL` and `MU_PERCENTAGE`.
+- Added [`MeasureUnit`]({{ site.dcvb_android_api }}core/enum/measure-unit.html) enumeration with values `MU_PIXEL` and `MU_PERCENTAGE`.
 
 - Added [`LayoutAxis`]({{ site.dcvb_android_api }}utility/layout-axis.html), [`LayoutAnalysisParameter`]({{ site.dcvb_android_api }}utility/layout-analysis-parameter.html), [`LayoutElement`]({{ site.dcvb_android_api }}utility/layout-element.html), and [`LayoutAnalysisResult`]({{ site.dcvb_android_api }}utility/layout-analysis-result.html) for layout analysis configuration and results.
 
@@ -68,7 +68,7 @@ noTitleIndex: true
 
 - [`MaxParallelTasks`]({{ site.dcvb_parameters_reference }}capture-vision-template/max-parallel-tasks.html) now controls the total number of Work-level threads in the CVR thread pool. For DBR tasks, each Localization Work and Decoding Work occupies one thread slot. DLR and DDN tasks continue to occupy one thread per task.
 
-- [`set_device_friendly_name()`]({{ site.dcvb_android_api }}license/license-manager.html#set_device_friendly_name) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns [`EC_PARAMETER_VALUE_INVALID`]({{ site.dcvb_android_api }}core/enum-error-code.html) if constraints are not met.
+- [`set_device_friendly_name()`]({{ site.dcvb_android_api }}license/license-manager.html#set_device_friendly_name) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns [`EC_PARAMETER_VALUE_INVALID`]({{ site.dcvb_android_api }}core/enum/error-code.html) if constraints are not met.
 
 - Improved the default display behavior of corner adjustment points in `ImageEditorView`. Previously, users had to tap the view before the corner adjustment points became visible.
 

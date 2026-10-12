@@ -50,11 +50,11 @@ noTitleIndex: true
 
 - Added [`DSLayoutAnalyzer`]({{ site.dcvb_ios_api }}utility/layout-analyzer.html) class with [`analyze()`]({{ site.dcvb_ios_api }}utility/layout-analyzer.html#analyze) static method for quadrilateral layout analysis.
 
-- Added [`DSLayoutPattern`]({{ site.dcvb_ios_api }}utility/enum-layout-pattern.html) enumeration with values `DSLayoutPatternUnknown`, `DSLayoutPatternLines`, and `DSLayoutPatternMatrix`.
+- Added [`DSLayoutPattern`]({{ site.dcvb_ios_api }}utility/enum/layout-pattern.html) enumeration with values `DSLayoutPatternUnknown`, `DSLayoutPatternLines`, and `DSLayoutPatternMatrix`.
 
-- Added [`DSLayoutElementSource`]({{ site.dcvb_ios_api }}utility/enum-layout-element-source.html) enumeration with values `DSLayoutElementSourceNone`, `DSLayoutElementSourceInput`, and `DSLayoutElementSourceInferred`.
+- Added [`DSLayoutElementSource`]({{ site.dcvb_ios_api }}utility/enum/layout-element-source.html) enumeration with values `DSLayoutElementSourceNone`, `DSLayoutElementSourceInput`, and `DSLayoutElementSourceInferred`.
 
-- Added [`DSMeasureUnit`]({{ site.dcvb_ios_api }}core/enum-measure-unit.html) enumeration with values `DSMeasureUnitPixel` and `DSMeasureUnitPercentage`.
+- Added [`DSMeasureUnit`]({{ site.dcvb_ios_api }}core/enum/measure-unit.html) enumeration with values `DSMeasureUnitPixel` and `DSMeasureUnitPercentage`.
 
 - Added [`DSLayoutAxis`]({{ site.dcvb_ios_api }}utility/layout-axis.html), [`DSLayoutAnalysisParameter`]({{ site.dcvb_ios_api }}utility/layout-analysis-parameter.html), [`DSLayoutElement`]({{ site.dcvb_ios_api }}utility/layout-element.html), and [`DSLayoutAnalysisResult`]({{ site.dcvb_ios_api }}utility/layout-analysis-result.html) for layout analysis configuration and results.
 
@@ -68,7 +68,7 @@ noTitleIndex: true
 
 - [`MaxParallelTasks`]({{ site.dcvb_parameters_reference }}capture-vision-template/max-parallel-tasks.html) now controls the total number of Work-level threads in the CVR thread pool. For DBR tasks, each Localization Work and Decoding Work occupies one thread slot. DLR and DDN tasks continue to occupy one thread per task.
 
-- [`set_device_friendly_name()`]({{ site.dcvb_ios_api }}license/license-manager.html#set_device_friendly_name) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns [`EC_PARAMETER_VALUE_INVALID`]({{ site.dcvb_ios_api }}core/enum-error-code.html) if constraints are not met.
+- [`set_device_friendly_name()`]({{ site.dcvb_ios_api }}license/license-manager.html#set_device_friendly_name) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns [`EC_PARAMETER_VALUE_INVALID`]({{ site.dcvb_ios_api }}core/enum/error-code.html) if constraints are not met.
 
 - Replaced `ONNX` model format with `CoreML` model format, resulting in a smaller package size. Note: barcode localization using neural network models now requires a minimum deployment target of iOS 16.
 

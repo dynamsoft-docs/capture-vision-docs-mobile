@@ -194,3 +194,10 @@ defaults:
       docHomePage: "/capture-vision/docs/mobile/programming/cordova/"
 
 url: "https://www.dynamsoft.com" # sitemap root
+
+# Link variables used in pages/sidebars but previously undefined (rendered as broken relative links; GSC 404s, Oct 2026)
+parameters: /capture-vision/docs/core/parameters/
+dcvb_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcvb_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
+faq_general: /barcode-reader/docs/core/faq/general/
