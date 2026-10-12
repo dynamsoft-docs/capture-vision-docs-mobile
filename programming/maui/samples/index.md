@@ -14,7 +14,6 @@ noTitleIndex: true
 	- [Barcode Decoding Samples](#barcode-decoding-samples)
 	- [ID Scanning Samples](#id-scanning-samples)
 		- [Scan a passport or an ID card (via MRZ)](#scan-a-passport-or-an-id-card-via-mrz)
-	- [VIN Scanner Sample](#vin-scanner-sample)
 	- [Document Scanner Samples](#document-scanner-samples)
 
 ## Demos
@@ -39,12 +38,6 @@ Please visit the [Barcode Decoding Samples]({{site.dbr_maui}}samples/index.html)
 Scan the MRZ code of a passport or an ID card and parse the information.
 
 [Check code on GitHub](https://github.com/Dynamsoft/mrz-scanner-mobile-maui/tree/main/ScanMRZ){:target="_blank"}
-
-## VIN Scanner Sample
-
-Scan the vin barcode or text and extract the vehicle information.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-maui-samples/tree/main/ScanVIN){:target="_blank"}
 
 ## Document Scanner Samples
 

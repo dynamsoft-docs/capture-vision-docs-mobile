@@ -17,8 +17,6 @@ noTitleIndex: true
 		- [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
 	- [Document Scanner Samples](#document-scanner-samples)
 		- [DocumentScanner](#documentscanner)
-	- [Other Use Case Samples](#other-use-case-samples)
-		- [Scan VIN Barcode or Text](#scan-vin-barcode-or-text)
 
 ## Demos
 
@@ -44,7 +42,7 @@ Scan the MRZ code of a passport or an ID card and parse the information.
 
 Scan the PDF417 barcodes on a drivers' license and extract the drivers information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DriversLicenseScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/ReadDriversLicense){:target="_blank"}
 
 ## Document Scanner Samples
 
@@ -52,12 +50,4 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 Detect & Deskew the document pages. You can edit the document boundaries if required.
 
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DocumentScanner){:target="_blank"}
-
-## Other Use Case Samples
-
-### Scan VIN Barcode or Text
-
-Scan the vin barcode or text and extract the vehicle information.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/VINScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/ScanDocument){:target="_blank"}
