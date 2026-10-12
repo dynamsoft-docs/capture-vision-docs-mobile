@@ -31,18 +31,6 @@ Detect & Deskew the document pages. You can edit the document boundaries if requ
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/main/ScanDocument)
 
-## Scan MRZ
-
-Scan the MRZ code of a passport or an ID card and parse the information.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/main/ScanMRZ)
-
-## Scan VIN
-
-Scan the vin barcode or text and extract the vehicle information.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-react-native-samples/tree/main/ScanVIN)
-
 ## Demos
 
 If you would like to see the Capture Vision in action before starting the development journey, we have a demo app available on both the App Store as well as the Google Play Store.
