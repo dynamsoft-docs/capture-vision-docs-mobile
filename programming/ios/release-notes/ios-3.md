@@ -9,6 +9,23 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision iOS v3.x
 
+## 3.6.4000 (10/22/2026)
+
+### Improved
+
+- Improved GS1 Composite decoding success rate in challenging black-on-dark-background scenarios.
+- Improved passport front-side document extraction accuracy.
+
+### Fixed
+
+- Fixed several known crash issues.
+- Removed absolute paths containing internal developer information from resource files.
+- Fixed an issue where `RecognizedTextLineElement` in `IntermediateResultReceiver` returned an incorrect `characterH` value. The `characterH` values returned by `CapturedResultReceiver` and `Capturefile` were already correct.
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 3.6.2000 (08/14/2026)
 
 ### New
