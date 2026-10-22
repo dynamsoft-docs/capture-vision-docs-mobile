@@ -9,6 +9,23 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVision Android v3.x
 
+## 3.6.4000 (10/22/2026)
+
+### Fixed
+
+- Fixed several known crash issues.
+- Fixed a build error caused by an outdated NDK by upgrading the NDK to version 28.
+- Removed absolute paths containing internal developer information from native `.so` files.
+- Fixed an issue where `RecognizedTextLineElement` in `IntermediateResultReceiver` returned an incorrect `characterH` value. The `characterH` values returned by `CapturedResultReceiver` and `Capturefile` were already correct.
+- Fixed a potential main thread blocking issue by making `initLicense` fully asynchronous. It no longer performs synchronous native calls on the calling thread.
+- Fixed a background thread leak caused by repeatedly creating and stopping `CaptureVisionRouter`. 
+- Fixed multiple object and native (C++) resource leaks to reduce memory growth during long-running use.
+- Fixed an issue where `getOriginalImage` could not retrieve the image after `ImageEditorView.setOriginalImage` was called.
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 3.6.2000 (08/14/2026)
 
 ### New
