@@ -11,6 +11,11 @@ noTitleIndex: true
 
 ## 3.6.4000 (10/22/2026)
 
+### Improved
+
+- Improved GS1 Composite decoding success rate in challenging black-on-dark-background scenarios.
+- Improved passport front-side document extraction accuracy.
+
 ### Fixed
 
 - Fixed several known crash issues.
