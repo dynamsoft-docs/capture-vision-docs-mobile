@@ -34,6 +34,7 @@ interface CapturedResultBase
 | Properties | Types | Description |
 | ---------- | ----- | ----------- |
 | [`originalImageHashId`](#originalimagehashid) | *string* | The hash id of the original image. |
+| [`originalImageTag`](#originalimagetag) | [*ImageTag*](image-tag.md) \| *null* | The tag of the original image that produced this result. |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *number[]* | The rotation transformation matrix of the original image relative to the rotated image. |
 | [`errorCode`](#errorcode) | *number* | The error code of this result. |
 | [`errorMessage`](#errormessage) | *string* | The error message of this result. |
@@ -45,6 +46,18 @@ The hash id of the original image.
 ```js
 originalImageHashId: string;
 ```
+
+### originalImageTag
+
+The tag of the original image that produced this result. It is null/undefined when the input image carried no tag.
+
+```js
+originalImageTag?: ImageTag | null;
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.6.5000 and Dynamsoft Capture Vision version 3.6.5000.
 
 ### rotationTransformMatrix
 
