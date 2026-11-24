@@ -27,6 +27,7 @@ class CapturedResultBase
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`OriginalImageHashId`](#originalimagehashid) | *string* | Gets the hash id of the original image. |
+| [`OriginalImageTag`](#originalimagetag) | [*ImageTag?*](image-tag.md) | The tag of the original image that produced this result. |
 | [`RotationTransformMatrix`](#rotationtransformmatrix) | *Matrix* | Gets the rotation transformation matrix of the original image relative to the rotated image. |
 | [`ErrorCode`](#errorcode) | *int* | Gets the error code of this result. |
 | [`ErrorMessage`](#errormessage) | *string* | Gets the error message of this result. |
@@ -38,6 +39,14 @@ Gets the hash id of the original image.
 ```csharp
 string OriginalImageHashId { get; }
 ```
+
+### OriginalImageTag
+
+The tag of the original image that produced this result, as an [`ImageTag`](image-tag.md). It is `null` when the input image carried no tag.
+
+**Remarks**
+
+- Introduced in Dynamsoft Capture Vision version 3.6.5000.
 
 ### RotationTransformMatrix
 

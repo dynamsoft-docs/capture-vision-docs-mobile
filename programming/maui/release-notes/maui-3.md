@@ -9,6 +9,29 @@ noTitleIndex: true
 
 # Release Notes v3.x - DynamsoftCaptureVisionRouter Module
 
+## 3.6.5000 (11/24/2026)
+
+### New
+
+- Added [`EnumImageTagType`]({{ site.dcv_maui_api }}core/enum/image-tag-type.html), [`EnumVideoFrameQuality`]({{ site.dcv_maui_api }}core/enum/video-frame-quality.html), [`ImageTag`]({{ site.dcv_maui_api }}core/image-tag.html), [`FileImageTag`]({{ site.dcv_maui_api }}core/file-image-tag.html) and [`VideoFrameTag`]({{ site.dcv_maui_api }}core/video-frame-tag.html) for image tag metadata.
+- Added [`OriginalImageTag`]({{ site.dcv_maui_api }}core/captured-result-base.html#originalimagetag) to [`CapturedResultBase`]({{ site.dcv_maui_api }}core/captured-result-base.html).
+- Added [`ImageTag`]({{ site.dcv_maui_api }}core/image-data.html#imagetag) and a constructor accepting an image tag to [`ImageData`]({{ site.dcv_maui_api }}core/image-data.html).
+
+### Improved
+
+- Improved GS1 Composite decoding success rate in challenging black-on-dark-background scenarios.
+
+### Fixed
+
+- Fixed several known crash issues.
+- Removed absolute paths containing internal developer information from resource files.
+- Fixed a potential main thread blocking issue by making `initLicense` fully asynchronous. It no longer performs synchronous native calls on the calling thread.
+- Fixed an issue where `getOriginalImage` could not retrieve the image after `ImageEditorView.setOriginalImage` was called.
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 3.6.2000 (09/14/2026)
 
 ### Highlights

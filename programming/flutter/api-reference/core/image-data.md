@@ -43,6 +43,7 @@ ImageData({
 | [`orientation`](#orientation) | *int* | Represents the orientation of the image as an angle. |
 | [`format`](#format) | *EnumImagePixelFormat* | Represents the pixel format of the image as a [`EnumImagePixelFormat`](enum/image-pixel-format.md). |
 | [`stride`](#stride) | *int* | Represents the number of bytes in a single row of the image. |
+| [`imageTag`](#imagetag) | [*ImageTag?*](image-tag.md) | The tag attached to the image. |
 
 ### bytes
 
@@ -91,3 +92,15 @@ Represents the number of bytes in a single row of the image.
 ```dart
 int stride;
 ```
+
+### imageTag
+
+The tag attached to the image.
+
+```dart
+ImageTag? imageTag;
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Capture Vision version 3.6.5000.
