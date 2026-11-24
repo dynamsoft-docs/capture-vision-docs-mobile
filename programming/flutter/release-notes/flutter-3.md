@@ -25,8 +25,6 @@ noTitleIndex: true
 
 - Fixed several known crash issues.
 - Removed absolute paths containing internal developer information from resource files.
-- Fixed a potential main thread blocking issue by making `initLicense` fully asynchronous. It no longer performs synchronous native calls on the calling thread.
-- Fixed an issue where `getOriginalImage` could not retrieve the image after `ImageEditorView.setOriginalImage` was called.
 
 ### Security Updates
 
