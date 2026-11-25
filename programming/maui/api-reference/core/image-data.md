@@ -32,6 +32,7 @@ class ImageData
 | [`Stride`](#stride) | *int* | The stride (or scan width) of the image. |
 | [`Format`](#format) | *[EnumImagePixelFormat]({{ site.dcv_maui_api }}core/enum/image-pixel-format.html)* | The image pixel format used in the image byte array. |
 | [`Orientation`](#orientation) | *int* | The orientation information of the image. The library is able to read the orientation information from the EXIF data of the image file. |
+| [`ImageTag`](#imagetag) | [*ImageTag?*](image-tag.md) | The optional tag attached to the image. |
 
 | Method | Description |
 | ------ | ----------- |
@@ -85,6 +86,18 @@ The orientation information of the image. The library is able to read the orient
 int Orientation { get; set; }
 ```
 
+### ImageTag
+
+The optional tag attached to the image.
+
+```csharp
+public ImageTag? ImageTag { get; set; }
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Capture Vision version 3.6.5000.
+
 ### ImageData
 
 The constructor.
@@ -92,3 +105,14 @@ The constructor.
 ```csharp
 ImageData(byte[] bytes, int width, int height, int stride, EnumImagePixelFormat format, int orientation);
 ```
+
+```csharp
+public ImageData(IList<byte> bytes, int width, int height, int stride,
+    EnumImagePixelFormat format, int orientation, ImageTag? imageTag);
+```
+
+The `imageTag` argument is required and may be `null` if there is no tag attached to the image.
+
+**Remarks**
+
+- The constructor accepting `imageTag` was introduced in Dynamsoft Capture Vision version 3.6.5000.
